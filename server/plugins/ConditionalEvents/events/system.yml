@@ -1,0 +1,667 @@
+Events:
+  player_nickname:
+    type: entity_interact
+    conditions:
+    - '%entity% == PLAYER'
+    actions:
+      default:
+      - 'actionbar: &6%target:player%;60'
+  # eye_target_info:
+    # type: repetitive
+    # repetitive_time: 5
+    # # conditions:
+    # # - '%entity% == PLAYER'
+    # actions:
+      # default:
+      # - 'player_command_as_op: mm test cast -s eye_raycast'
+
+  player_join:
+    type: player_join
+    conditions:
+    - '%servervariables_value_player_first_join% == 0 execute fist_join'
+    - '%player_food_level% == 20 execute actions1'
+    actions:
+      default:
+      - 'console_command: epicfight mode battle %player%'
+      - 'give_potion_effect: HEALTH_BOOST;1000000000;5;false'
+      - 'to_all: playsound: BLOCK_NOTE_BLOCK_CHIME;1;1'
+      - 'call_event: variable_reset'
+      fist_join:
+      - 'console_command: epicfight skill add %player% guard epicfight:guard'
+      - 'console_command: epicfight skill add %player% dodge epicfight:roll'
+      - 'console_command: svar set player_first_join 1 %player%'
+      - 'console_command: epicfight mode battle %player%'
+      actions1:
+      - 'console_command: epicfight mode battle %player%'
+      - 'console_command: effect give %player% minecraft:health_boost infinite 4 true'
+      - 'give_potion_effect: HEAL;20;10;false'
+      - 'call_event: level_set'
+      - 'to_all: playsound: BLOCK_NOTE_BLOCK_CHIME;1;1'
+      - 'call_event: variable_reset'
+      
+  variable_reset:
+    type: call
+    actions:
+      default:
+      - 'console_command: svar set is_mining 0 %player%'
+      - 'console_command: svar set duel_player 0 %player%'
+      - 'console_command: svar set cooking_point 0 %player%'
+      - 'console_command: svar set cooking_active 0 %player%'
+      - 'console_command: svar set cooking_point_direction 1 %player%'
+      - 'console_command: svar set fishing_point 0 %player%'
+      - 'console_command: svar set fishing_finish 0 %player%'
+      - 'console_command: svar set fishing_active 0 %player%'
+      - 'console_command: svar set fishing_point_direction 1 %player%'
+      - 'console_command: svar set fishing_progress 0 %player%'
+  
+  player_leave:
+    type: player_leave
+    actions:
+      default:
+      - 'to_all: playsound: BLOCK_NOTE_BLOCK_CHIME;1;1'
+
+  respawn_event:
+    type: player_respawn
+    actions:
+      default:
+      - 'wait: 1'
+      - 'console_command: effect give %player% minecraft:health_boost infinite 4 true'
+      - 'give_potion_effect: HEAL;20;10;false'
+      - 'call_event: level_set'
+
+  bed_blocked:
+    type: player_bed_enter
+    actions:
+      default:
+      - 'cancel_event: true'
+ 
+  coin_pick_up:
+    type: item_pickup
+    conditions:
+    - '%item% == GOLD_NUGGET and %item_name% == Монета execute actions1'
+    actions:
+      actions1:
+      - 'console_command: svar add player_money %item_amount% %player%'
+      - 'wait_ticks: 1'
+      - 'remove_item: GOLD_NUGGET;%checkitem_amount_mat:GOLD_NUGGET,nameequals:&eМонета%;name: Монета'
+      - 'message: &fВы подняли &e%item_amount%Ⓒ'
+  coin_get:
+    type: player_command
+    conditions:
+    - '%main_command% == /money and %args_length% == 1 and %is_number_{arg_1}% == true and %arg_1% <= %servervariables_value_player_money% and %arg_1% > 0 execute actions1'
+    - '%main_command% == /money and %args_length% == 1 and %is_number_{arg_1}% == true and %arg_1% <= %servervariables_value_player_money% and %arg_1% > 0 execute deny3'
+    - '%main_command% == /money and %args_length% == 1 and %arg_1% > %servervariables_value_player_money% execute deny1'
+    - '%main_command% == /money and %args_length% == 1 and %is_number_{arg_1}% != true execute deny3'
+    - '%main_command% == /money and %args_length% == 0 execute deny2'
+    actions:
+      actions1:
+      - 'cancel_event: true'
+      - 'console_command: svar add player_money -%math_0:DOWN_{arg_1}% %player%'
+      - 'message: &fВы изъяли из своего кошелька &e%math_0:DOWN_{arg_1}%Ⓒ'
+      - 'give_item: id:GOLD_NUGGET;amount:1;name:&eМонеты;lore:&7Количество монет:|&r%math_0:DOWN_{arg_1}%'
+      deny1:
+      - 'cancel_event: true'
+      - 'message: &cУ вас недостаточно средств!'
+      - 'playsound: ENTITY_VILLAGER_NO;1;1'
+      deny2:
+      - 'cancel_event: true'
+      - 'message: &cВы не написали кол-во монет!'
+      - 'playsound: ENTITY_VILLAGER_NO;1;1'
+      deny3:
+      - 'cancel_event: true'
+      - 'message: &cНеправильный аргумент!'
+      - 'playsound: ENTITY_VILLAGER_NO;1;1'
+  coin_add:
+    type: item_interact
+    conditions:
+    - '%item% == GOLD_NUGGET and %item_name% == Монеты execute actions1'
+    actions:
+      actions1:
+      - 'message: &fВы подняли &e%math_0:DOWN_{checkitem_getinfo:mainhand_lorecontains:1}*{checkitem_getinfo:mainhand_amt:0}%Ⓒ'
+      - 'console_command: svar add player_money %math_0:DOWN_{checkitem_getinfo:mainhand_lorecontains:1}*{checkitem_getinfo:mainhand_amt:0}% %player%'
+      - 'remove_item: %checkitem_remove_:GOLD_NUGGET,nameequals:&eМонеты,inhand:main%'
+
+  recipe_blocked:
+    type: custom
+    custom_event_data:
+      event: org.bukkit.event.player.PlayerRecipeDiscoverEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%recipe%;getRecipe()'
+    conditions:
+    - '%recipe% != customrecipes:quest1 execute actions1'
+    actions:
+      actions1:
+      #- 'message: &f%recipe%'
+      - 'cancel_event: true'
+
+  help:
+    type: player_command
+    conditions:
+    - '%main_command% == /help execute actions1'
+    actions:
+      actions1:
+      - 'cancel_event: true'
+      - 'message: &f'
+      - 'message: &f/money <Кол-во> &7- Снять деньги.'
+      #- 'message: &f/role <Discord индификатор> &7- Получить особую роль в дс.'
+      - 'message: &f/sponsor <Discord индификатор> &7- Получить роль спонсора в дс.'
+      - 'message: &f/promo <Промокод> &7- Активировать промокод.'
+      - 'message: &f/sit &7- Сесть.'
+      - 'message: &f/lay &7- Лечь.'
+      - 'message: &f/msg <Ник> <Сообщение> &7- Отправить личное сообщение.'
+      - 'message: &f/suicide &7- Убить самого себя.'
+      - 'message: &f/pets &7- Открыть меню питомцев'
+      - 'message: &f/protect &7- Вкл/Выкл защиту новичка.'
+      - 'message: &f/daily &7- Открыть меню ежедневных наград.'
+      - 'message: &f'
+      
+  promo:
+    type: player_command
+    conditions:
+    - '%main_command% == /promo and %args_length% == 0 execute deny1'
+    - '%main_command% == /promo and %args_length% == 1 and %arg_1% == HORIZON and %player_has_permission_promo_horizon% != yes execute horizon'
+    - '%main_command% == /promo and %args_length% == 1 execute deny2'
+    actions:
+      deny1:
+      - 'cancel_event: true'
+      - 'message: &c/promo <Промокод> &7- Активировать промокод.'
+      - 'playsound: ENTITY_VILLAGER_NO;1;1'
+      deny2:
+      - 'cancel_event: true'
+      - 'message: &cЭтот промокод не действителен!'
+      - 'playsound: ENTITY_VILLAGER_NO;1;1'
+      horizon:
+      - 'cancel_event: true'
+      - 'message: &fПромокод &e%arg_1% &fбыл активирован!'
+      - 'playsound: BLOCK_NOTE_BLOCK_BANJO;1;1'
+      - 'console_command: svar add player_money 500 %player%'
+      - 'console_command: ii give %player% bag_eat 5'
+      - 'console_command: ii give %player% bag_materials 5'
+      - 'console_command: lp user %player_name% permission set titul_17'
+      - 'console_command: lp user %player_name% permission set promo_horizon'
+      - 'call_event: notify_titul'
+
+  vault_open:
+    type: block_interact
+    conditions:
+    - '%block_world% == world and %block% == ENDER_CHEST and %action_type% == RIGHT_CLICK execute actions1'
+    actions:
+      actions1:
+      - 'cancel_event: true'
+      - 'console_command: dm open vault %player%'
+      #- 'player_command_as_op: str'
+  vault:
+    type: custom
+    custom_event_data:
+      event: svar.ajneb97.api.VariableChangeEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%variable_type%;getVariable().getVariableType()'
+      - '%variable_name%;getVariable().getName()'
+      - '%new_value%;getNewValue()'
+    allow_math_formulas_in_conditions: true
+    conditions:
+    - '%variable_name% == player_vault and %new_value% == 1 execute action1'
+    - '%variable_name% == player_vault and %new_value% == 2 execute action2'
+    - '%variable_name% == player_vault and %new_value% == 3 execute action3'
+    - '%variable_name% == player_vault and %new_value% == 4 execute action4'
+    - '%variable_name% == player_vault and %new_value% == 5 execute action5'
+    - '%variable_name% == player_vault and %new_value% == 6 execute action6'
+    - '%variable_name% == player_vault and %new_value% == 7 execute action7'
+    - '%variable_name% == player_vault and %new_value% == 8 execute action8'
+    - '%variable_name% == player_vault and %new_value% == 9 execute action9'
+    actions:
+      action1:
+      - 'player_command_as_op: vaultadmin view %player% 1'
+      action2:
+      - 'player_command_as_op: vaultadmin view %player% 2'
+      action3:
+      - 'player_command_as_op: vaultadmin view %player% 3'
+      action4:
+      - 'player_command_as_op: vaultadmin view %player% 4'
+      action5:
+      - 'player_command_as_op: vaultadmin view %player% 5'
+      action6:
+      - 'player_command_as_op: vaultadmin view %player% 6'
+      action7:
+      - 'player_command_as_op: vaultadmin view %player% 7'
+      action8:
+      - 'player_command_as_op: vaultadmin view %player% 8'
+      action9:
+      - 'player_command_as_op: vaultadmin view %player% 9'
+
+
+  arrow_pickup:
+    type: custom
+    custom_event_data:
+      event: org.bukkit.event.player.PlayerPickupArrowEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%arrow%;getArrow()'
+    actions:
+      default:
+      - 'cancel_event: true'
+
+  pick_item_chicken:
+    type: custom
+    custom_event_data:
+      event: org.bukkit.event.player.PlayerPickupItemEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%item%;getItem().getItemStack().getType()'
+      - '%amount%;getItem().getItemStack().getAmount()'
+    conditions:
+    - '%item% == CHICKEN or %item% == FEATHER'
+    actions:
+      default:
+      - 'wait_ticks: 1'
+      - 'remove_item: %item%;%amount%'
+
+  player_protect_activate:
+    type: player_damage
+    conditions:
+    - '%servervariables_value_player_protect% > 0 and %damager_type% == PLAYER and %servervariables_value_protect_enable% == 1 execute damage_ignore'
+    - '%servervariables_value_player_protect% > 0 and %damager_type% == ARROW and %servervariables_value_protect_enable% == 1 execute damage_ignore'
+    actions:
+      damage_ignore:
+      - 'cancel_event: true'
+      - 'to_target: call_event: notify_protect_other'
+  player_protect_other:
+    type: player_attack
+    conditions:
+    - '%servervariables_value_player_protect% > 0 and %victim% == PLAYER and %servervariables_value_protect_enable% == 1 execute damage_ignore'
+    actions:
+      damage_ignore:
+      - 'cancel_event: true'
+      - 'call_event: notify_protect'
+  player_protect_time:
+    type: repetitive
+    repetitive_time: 20
+    conditions:
+    - '%servervariables_value_player_protect% > 0 and %servervariables_value_protect_enable% == 1 execute action1'
+    actions:
+      action1:
+      - 'console_command: svar add player_protect -1 %player%'
+
+
+
+
+  player_kd_kills:
+    type: player_kill
+    conditions:
+    - '%victim% == PLAYER execute action1'
+    actions:
+      action1:
+      - 'console_command: svar add player_kills 1 %player%'
+      - 'to_target: console_command: svar add player_death 1 %target:player%'
+
+
+
+
+
+
+
+
+
+  block_block:
+    type: block_interact
+    conditions:
+    - '%block% == FARMLAND and %player_gamemode% != CREATIVE execute block'
+    #- '%player% == NilsCoy execute test'
+    - '%player_gamemode% == ADVENTURE and %block% == GRINDSTONE execute grindstone'
+    - '%player_gamemode% == ADVENTURE and %block% == BREWING_STAND and %block_x% == 1698 and %block_y% == 77 and %block_z% == -1287 execute brewing_stand'
+    - '%player_gamemode% == ADVENTURE and %block% == WATER_CAULDRON and %item% != AIR and %block_x% == 1699 and %block_y% == 76 and %block_z% == -1284 execute cauldron'
+    - '%player_gamemode% == ADVENTURE and %block% == ANVIL execute ignore'
+    - '%player_gamemode% == ADVENTURE and %block% == BLAST_FURNACE execute ignore'
+    - '%player_gamemode% == ADVENTURE and %block% == SMITHING_TABLE execute ignore'
+    - '%player_gamemode% == ADVENTURE and %block% == WATER_CAULDRON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BREWING_STAND execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CHIPPED_ANVIL execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == DAMAGED_ANVIL execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CRAFTING_TABLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == STONECUTTER execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CARTOGRAPHY_TABLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == FLETCHING execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == LOOM execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == FURNACE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == SMOKER execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CAMPFIRE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == SOUL_CAMPFIRE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == COMPOSTER execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == NOTE_BLOCK execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == JUKEBOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == ENCHANTING_TABLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == END_CRYSTAL execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CAULDRON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BELL execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BEACON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CONDUIT execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == LODESTONE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BEE_NEST execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BEEHIVE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == SUSPICIOUS_SAND execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == SUSPICIOUS_GRAVEL execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == FLOWER_POT execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == DECORATED_POT execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == ARMOR_STAND execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == ITEM_FRAME execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == GLOW_ITEM_FRAME execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CHISELED_BOOKSHELF execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == LECTERN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == OAK_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == OAK_HANGING_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == SPRUCE_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == SPRUCE_HANGING_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BIRCH_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BIRCH_HANGING_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == JUNGLE_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == JUNGLE_HANGING_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == ACACIA_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == ACACIA_HANGING_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == DARK_OAK_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == DARK_OAK_HANGING_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == MANGROVE_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == MANGROVE_HANGING_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CHERRY_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CHERRY_HANGING_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BAMBOO_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BAMBOO_HANGING_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CRIMSON_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CRIMSON_HANGING_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == WARPED_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == WARPED_HANGING_SIGN execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CHEST execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BARREL execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == ENDER_CHEST execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == WHITE_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == LIGHT_GRAY_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == GRAY_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BLACK_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BROWN_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == RED_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == ORANGE_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == YELLOW_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == LIME_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == GREEN_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CYAN_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == LIGHT_BLUE_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BLUE_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == PURPLE_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == MAGENTA_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == PINK_SHULKER_BOX execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == RESPAWN_ANCHOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == WHITE_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == LIGHT_GRAY_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == GRAY_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BLACK_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BROWN_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == RED_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == ORANGE_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == YELLOW_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == LIME_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == GREEN_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CYAN_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == LIGHT_BLUE_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BLUE_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == PURPLE_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == MAGENTA_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == PINK_BED execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == WHITE_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == LIGHT_GRAY_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == GRAY_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BLACK_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BROWN_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == RED_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == ORANGE_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == YELLOW_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == LIME_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == GREEN_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CYAN_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == LIGHT_BLUE_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BLUE_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == PURPLE_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == MAGENTA_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == PINK_CANDLE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == DRAGON_EGG execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == END_PORTAL_FRAME execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == LEVER execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == OAK_BUTTON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == STONE_BUTTON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == OAK_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == STONE_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == LIGHT_WEIGHTED_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == HEAVY_WEIGHTED_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == DISPENSER execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == DROPPER execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == HOPPER execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == TRAPPED_CHEST execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == OBSERVER execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == OAK_DOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == IRON_DOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == OAK_FENCE_GATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == OAK_TRAPDOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == IRON_TRAPDOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == SPRUCE_DOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BIRCH_DOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == JUNGLE_DOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == ACACIA_DOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == DARK_OAK_DOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == MANGROVE_DOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CHERRY_DOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BAMBOO_DOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CRIMSON_DOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == WARPED_DOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == SPRUCE_BUTTON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BIRCH_BUTTON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == JUNGLE_BUTTON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == ACACIA_BUTTON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == DARK_OAK_BUTTON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == MANGROVE_BUTTON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CHERRY_BUTTON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BAMBOO_BUTTON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CRIMSON_BUTTON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == WARPED_BUTTON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == POLISHED_BLACKSTONE_BUTTON execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == SPRUCE_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BIRCH_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == JUNGLE_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == ACACIA_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == DARK_OAK_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == MANGROVE_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CHERRY_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BAMBOO_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CRIMSON_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == WARPED_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == POLISHED_BLACKSTONE_PRESSURE_PLATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == SPRUCE_FENCE_GATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BIRCH_FENCE_GATE execute block execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == JUNGLE_FENCE_GATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == ACACIA_FENCE_GATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == DARK_OAK_FENCE_GATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == MANGROVE_FENCE_GATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CHERRY_FENCE_GATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BAMBOO_FENCE_GATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CRIMSON_FENCE_GATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == WARPED_FENCE_GATE execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == SPRUCE_TRAPDOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BIRCH_TRAPDOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == JUNGLE_TRAPDOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == ACACIA_TRAPDOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == DARK_OAK_TRAPDOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == MANGROVE_TRAPDOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CHERRY_TRAPDOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == BAMBOO_TRAPDOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == CRIMSON_TRAPDOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == WARPED_TRAPDOOR execute block'
+    - '%player_gamemode% == ADVENTURE and %block% == GLOW_BERRIES execute block'
+    #- '%action_type% == RIGHT_CLICK and %player_gamemode% == ADVENTURE'
+    actions:
+      block:
+      - 'cancel_event: true'
+      #- 'message: %block%'
+      grindstone:
+      - 'cancel_event: true'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1'
+      brewing_stand:
+      - 'cancel_event: true'
+      - 'playsound: BLOCK_BREWING_STAND_BREW;1;1'
+      - 'console_command: dm open reagent_craft_1 %player%'
+      cauldron:
+      - 'cancel_event: true'
+      - 'playsound: ITEM_BOTTLE_FILL;1;1'
+
+
+
+
+  day_reward:
+    type: player_join
+    allow_math_formulas_in_conditions: true
+    conditions: #365 - 0 день награды не будет)))
+    - '%servervariables_value_rewards_day_reward_last% == %server_time_D%-1 and %servervariables_value_rewards_day_reward_can% != 7 and %servervariables_value_rewards_day_reward_have% == 1 execute actions1'
+    - '%servervariables_value_rewards_day_reward_last% == %server_time_D%-1 and %servervariables_value_rewards_day_reward_have% == 0 execute actions4'
+    - '%servervariables_value_rewards_day_reward_last% == %server_time_D%-1 and %servervariables_value_rewards_day_reward_can% >= 7 and %servervariables_value_rewards_day_reward_have% == 1 execute actions2'
+    - '%servervariables_value_rewards_day_reward_last% != %server_time_D%-1 and %servervariables_value_rewards_day_reward_last% != %server_time_D% execute actions3'
+    actions:
+      #default:
+      #- 'message: none %server_time_D% %servervariables_value_rewards_day_reward_last%'
+      actions1:
+      #- 'message: 1 %server_time_D% %servervariables_value_rewards_day_reward_last%'
+      - 'console_command: svar set rewards_day_reward_last %server_time_D% %player%'
+      - 'console_command: svar add rewards_day_reward_can 1 %player%'
+      - 'console_command: svar set rewards_day_reward_have 0 %player%'
+      - 'console_command: svar add rewards_day_reward_stack 1 %player%'
+      - 'wait: 60'
+      - 'console_command: dm open day_reward %player%'
+      actions2:
+      #- 'message: 2 %server_time_D% %servervariables_value_rewards_day_reward_last%'
+      - 'console_command: svar set rewards_day_reward_last %server_time_D% %player%'
+      - 'console_command: svar set rewards_day_reward_can 1 %player%'
+      - 'console_command: svar set rewards_day_reward_have 0 %player%'
+      - 'console_command: svar add rewards_day_reward_stack 1 %player%'
+      - 'wait: 60'
+      - 'console_command: dm open day_reward %player%'
+      actions3:
+      #- 'message: 3 %server_time_D% %servervariables_value_rewards_day_reward_last%'
+      - 'console_command: svar set rewards_day_reward_last %server_time_D% %player%'
+      - 'console_command: svar set rewards_day_reward_can 1 %player%'
+      - 'console_command: svar set rewards_day_reward_have 0 %player%'
+      - 'console_command: svar set rewards_day_reward_stack 1 %player%'
+      - 'wait: 60'
+      - 'console_command: dm open day_reward %player%'
+      actions4:
+      #- 'message: 4 %server_time_D% %servervariables_value_rewards_day_reward_last%'
+      - 'console_command: svar set rewards_day_reward_last %server_time_D% %player%'
+      - 'wait: 60'
+      - 'console_command: dm open day_reward %player%'
+
+
+
+
+  crawl:
+    type: player_sneak
+    conditions:
+    - '%is_sneaking% == true and %servervariables_value_player_sneak% >= 1 and %servervariables_value_player_sneak_enable% == 1 execute action2'
+    - '%is_sneaking% == true and %servervariables_value_player_sneak% < 2 and %servervariables_value_player_sneak_enable% == 1 execute action1'
+    actions:
+      action1:
+      - 'console_command: svar add player_sneak 1 %player%'
+      action2:
+      - 'console_command: svar set player_sneak 0 %player%'
+      - 'player_command: crawl'
+  crawl_time:
+    type: repetitive
+    repetitive_time: 20
+    conditions:
+    - '%servervariables_value_player_sneak% > 0 execute action1'
+    actions:
+      action1:
+      - 'console_command: svar set player_sneak 0 %player%'
+
+  weapon_equip:
+    type: repetitive
+    repetitive_time: 10
+    conditions:
+    - '%player_item_in_hand% == EPICFIGHT_IRON_DAGGER or %player_item_in_hand% == EPICFIGHT_GOLDEN_DAGGER or %player_item_in_hand% == EPICFIGHT_DIAMOND_DAGGER or %player_item_in_hand% == EPICFIGHT_NETHERITE_DAGGER execute dagger'
+    - '%player_item_in_hand% == BOW execute bow'
+    actions:
+      dagger:
+      - 'give_potion_effect: SPEED;20;1;false'
+      bow:
+      - 'give_potion_effect: SLOW;20;3;false'
+
+  # repetitive_commands:
+    # type: repetitive_server
+    # repetitive_time: 20
+    # actions:
+      # default:
+      # #- 'console_command: effect give @e[tag=npc] minecraft:instant_health infinite 100 true'
+      # - 'console_command: kill @e[type=minecraft:chicken]'
+
+
+
+
+  item_held_event:
+    type: custom
+    custom_event_data:
+      event: org.bukkit.event.player.PlayerItemHeldEvent
+      player_variable: getPlayer()
+      # variables_to_capture:
+      # - '%item%;getItem().getItemStack().getType()'
+      # - '%amount%;getItem().getItemStack().getAmount()'
+    conditions:
+    - '%servervariables_value_is_mining% == 1 or %servervariables_value_fishing_active% == 1 or %servervariables_value_cooking_active% == 1'
+    actions:
+      default:
+      - 'cancel_event: true'
+
+
+
+
+  combat_system_activate_attack:
+    type: player_attack
+    conditions:
+    - '%servervariables_value_player_combat_system_wait% == 0'
+    - '%player_gamemode% == ADVENTURE or %player_gamemode% == SURVIVAL'
+    - '%victim% == PLAYER'
+    actions:
+      default:
+      - 'console_command: svar set player_combat_system_wait 1 %player%'
+      - 'actionbar: &cВы вошли в режим PVP! Не выходите в течение 15 секунд.;240'
+      - 'wait: 15'
+      - 'console_command: svar set player_combat_system_wait 0 %player%'
+      - 'actionbar: &cВы вышли из режима PVP!;240'
+
+  combat_system_activate_damage:
+    type: player_damage
+    conditions:
+    - '%servervariables_value_player_combat_system_wait% == 0'
+    - '%player_gamemode% == ADVENTURE or %player_gamemode% == SURVIVAL'
+    - '%damager_type% == PLAYER'
+    actions:
+      default:
+      - 'console_command: svar set player_combat_system_wait 1 %player%'
+      - 'actionbar: &cВы вошли в режим PVP! Не выходите в течение 15 секунд.;240'
+      - 'wait: 15'
+      - 'console_command: svar set player_combat_system_wait 0 %player%'
+      - 'actionbar: &cВы вышли из режима PVP!;240'
+
+  combat_system_detect:
+    type: player_leave
+    conditions:
+    - '%servervariables_value_player_combat_system_wait% == 1'
+    actions:
+      default:
+      - 'console_command: svar set player_combat_system_detect 1 %player%'
+      - 'console_command: svar set player_combat_system_wait 0 %player%'
+
+  combat_system_kill:
+    type: player_join
+    conditions:
+    - '%servervariables_value_player_combat_system_detect% == 1'
+    actions:
+      default:
+      - 'console_command: svar set player_combat_system_detect 0 %player%'
+      - 'console_command: kill %player%'

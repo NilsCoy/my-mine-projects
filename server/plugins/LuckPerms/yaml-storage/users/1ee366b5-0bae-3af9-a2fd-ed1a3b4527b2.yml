@@ -1,0 +1,10 @@
+uuid: 1ee366b5-0bae-3af9-a2fd-ed1a3b4527b2
+name: YUANWEI_
+primary-group: default
+permissions:
+- promo_horizon
+- skill_strength1
+- titul_17
+- titul_2
+parents:
+- default

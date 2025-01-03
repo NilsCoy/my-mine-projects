@@ -1,0 +1,298 @@
+hat1:
+  material: CARVED_PUMPKIN
+  display-name: '&bЗолотой нимб'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 1
+  lore:
+    - '&7By NilsCoy'
+hat2:
+  material: CARVED_PUMPKIN
+  display-name: '&bБелый нимб'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 2
+  lore:
+    - '&7By NilsCoy'
+hat3:
+  material: CARVED_PUMPKIN
+  display-name: '&bЦилиндр'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 3
+  lore:
+    - '&7By NilsCoy'
+hat4:
+  material: CARVED_PUMPKIN
+  display-name: '&bРогатый шлем'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 4
+  lore:
+    - '&7By N1XER__'
+hat5:
+  material: CARVED_PUMPKIN
+  display-name: '&bСоломенная шляпа'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 5
+  lore:
+    - '&7By PepoDisc'
+hat6:
+  material: CARVED_PUMPKIN
+  display-name: '&bШлем-бочка'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 6
+  lore:
+    - '&7By N1XER__'
+hat7:
+  material: CARVED_PUMPKIN
+  display-name: '&bЛуна'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 7
+  lore:
+    - '&7By N1XER__'
+hat8:
+  material: CARVED_PUMPKIN
+  display-name: '&bРога'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 8
+  lore:
+    - '&7By NilsCoy'
+hat9:
+  material: CARVED_PUMPKIN
+  display-name: '&bКрылатый шлем'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 9
+  lore:
+    - '&7By N1XER__'
+hat10:
+  material: CARVED_PUMPKIN
+  display-name: '&bМедвежья шапка'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 10
+  lore:
+    - '&7By N1XER__'
+hat11:
+  material: CARVED_PUMPKIN
+  display-name: '&bРунический шлем'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 11
+  lore:
+    - '&7By N1XER__'
+hat12:
+  material: CARVED_PUMPKIN
+  display-name: '&bШляпа гриб'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 12
+  lore:
+    - '&7By N1XER__'
+hat13:
+  material: CARVED_PUMPKIN
+  display-name: '&bКолпак колдуна'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 13
+  lore:
+    - '&7By N1XER__'
+hat14:
+  material: CARVED_PUMPKIN
+  display-name: '&bКрасный гало'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 14
+  lore:
+    - '&7By NilsCoy'
+hat15:
+  material: CARVED_PUMPKIN
+  display-name: '&bДвухцветный нимб'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 15
+  lore:
+    - '&7By NilsCoy'
+hat16:
+  material: CARVED_PUMPKIN
+  display-name: '&bПовязка на глаза'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 16
+  lore:
+    - '&7By NilsCoy'
+hat17:
+  material: CARVED_PUMPKIN
+  display-name: '&bШлем неонового самурая'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 17
+  lore:
+    - '&7By NilsCoy & N1XER__'
+hat18:
+  material: CARVED_PUMPKIN
+  display-name: '&bШляпа синий гриб'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 18
+  lore:
+    - '&7By N1XER__'
+
+hat19:
+  material: CARVED_PUMPKIN
+  display-name: '&bКобальтовый шлем'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 19
+  lore:
+    - '&7By NilsCoy'
+hat20:
+  material: CARVED_PUMPKIN
+  display-name: '&bМаска Татануа'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 20
+  lore:
+    - '&7By N1XER__'
+hat21:
+  material: CARVED_PUMPKIN
+  display-name: '&bМаска Татануа'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 21
+  lore:
+    - '&7By N1XER__'
+hat22:
+  material: CARVED_PUMPKIN
+  display-name: '&bМаска Татануа'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 22
+  lore:
+    - '&7By N1XER__'
+hat23:
+  material: CARVED_PUMPKIN
+  display-name: '&bЗолотая корона'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 23
+  lore:
+    - '&7By N1XER__'
+hat24:
+  material: CARVED_PUMPKIN
+  display-name: '&bШляпа искателя'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 24
+  lore:
+    - '&7By N1XER__'
+hat25:
+  material: CARVED_PUMPKIN
+  display-name: '&bШлем викинга'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 25
+  lore:
+    - '&7By N1XER__'
+hat26:
+  material: CARVED_PUMPKIN
+  display-name: '&bНовогодняя шапка'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 26
+  lore:
+    - '&7By N1XER__'
+hat27:
+  material: CARVED_PUMPKIN
+  display-name: '&bМаска'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  custom-model-data: 27
+  lore:
+    - '&7By MOHOLITH'

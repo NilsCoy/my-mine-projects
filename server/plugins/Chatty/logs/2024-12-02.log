@@ -1,0 +1,9 @@
+[15:29:29] NilsCoy (4a24e6bd-ea3a-3318-8f49-61b87de854d0): text1 <gold>Лисья пещера\n<while>Сложность: <yellow>?\n<while>Открытие через: <yellow>%servervariables_globalvalue_dungeon1_cooldown%
+[15:29:45] NilsCoy (4a24e6bd-ea3a-3318-8f49-61b87de854d0): animation1
+[15:30:35] NilsCoy (4a24e6bd-ea3a-3318-8f49-61b87de854d0): text1 <gold>Лисья пещера\n<white>Сложность: <yellow>?\n<white>Открытие через: <yellow>%servervariables_globalvalue_dungeon1_cooldown% сек.
+[15:30:43] NilsCoy (4a24e6bd-ea3a-3318-8f49-61b87de854d0): text <gold>Лисья пещера\n<white>Сложность: <yellow>?\n<white>Открытие через: <yellow>%servervariables_globalvalue_dungeon1_cooldown% сек.
+[15:30:52] NilsCoy (4a24e6bd-ea3a-3318-8f49-61b87de854d0): text1
+[15:32:13] NilsCoy (4a24e6bd-ea3a-3318-8f49-61b87de854d0): text
+[15:32:20] NilsCoy (4a24e6bd-ea3a-3318-8f49-61b87de854d0): cancel
+[15:32:32] NilsCoy (4a24e6bd-ea3a-3318-8f49-61b87de854d0): text <gold>Лисья пещера\n\n<white>Сложность: <yellow>?\n<white>Открытие через: <yellow>%servervariables_globalvalue_dungeon1_cooldown% сек.
+[15:32:40] NilsCoy (4a24e6bd-ea3a-3318-8f49-61b87de854d0): empty

@@ -1,0 +1,65 @@
+Events:
+  stealth:
+    type: player_sneak
+    conditions:
+    - '%player_gamemode% == ADVENTURE and %is_sneaking% == true and %servervariables_value_stealth_enable%
+      == 1 execute actions1'
+    - '%player_gamemode% == ADVENTURE and %is_sneaking% == false and %servervariables_value_stealth_enable%
+      == 1 and %servervariables_value_stealth_state% == 1 execute actions2'
+    actions:
+      actions1:
+      - 'console_command: svar set stealth_state 1 %player%'
+      - 'console_command: svar set stealth_visible 0 %player%'
+      actions2:
+      - 'console_command: svar set stealth_state 0 %player%'
+      - 'console_command: svar set stealth_visible 0 %player%'
+      - 'title: 20;60;20;&f;&7❬ &f&l👁 &7❭'
+      - 'actionbar: &fВас видно;60'
+  stealth_timer:
+    type: repetitive
+    repetitive_time: 20
+    conditions:
+    - '%servervariables_value_stealth_state% == 1 and %checkitem_mat:TORCH,inhand:main% == yes execute action2'
+    - '%servervariables_value_stealth_state% == 1 and %checkitem_mat:LANTERN,inhand:main% == yes execute action2'
+    - '%servervariables_value_stealth_state% == 1 and %checkitem_mat:TORCH,inhand:off% == yes execute action2'
+    - '%servervariables_value_stealth_state% == 1 and %checkitem_mat:LANTERN,inhand:off% == yes execute action2'
+    - '%servervariables_value_stealth_state% == 1 and %servervariables_value_stealth_visible% == 1 execute action2'
+    - '%servervariables_value_stealth_state% == 1 and %player_light_level% > 7 execute action2'
+    - '%servervariables_value_stealth_state% == 1 and %player_light_level% <= 7 execute action1'
+    - '%checkitem_mat:TORCH,inhand:main% == yes execute action3'
+    - '%checkitem_mat:LANTERN,inhand:main% == yes execute action3'
+    - '%checkitem_mat:TORCH,inhand:off% == yes execute action3'
+    - '%checkitem_mat:LANTERN,inhand:off% == yes execute action3'
+    actions:
+      action1:
+      - 'title: 0;60;20;&f;&7❬  &f&l&m &7  ❭'
+      - 'actionbar: &fВас не видно;18'
+      - 'give_potion_effect: INVISIBILITY;25;1;false'
+      - 'give_potion_effect: SPEED;25;1;false'
+      action2:
+      - 'console_command: svar set stealth_state 0 %player%'
+      - 'title: 20;60;20;&f;&7❬ &f&l👁 &7❭'
+      - 'actionbar: &fВас видно;60'
+      action3:
+      - 'to_range: 4;false: console_command: svar set stealth_visible 1 %to:player%'
+  
+  stealth_deactivate1:
+    type: player_attack
+    conditions:
+    - '%servervariables_value_stealth_state% == 1 execute action1'
+    actions:
+      action1:
+      - 'title: 20;60;20;&f;&7❬ &f&l👁 &7❭'
+      - 'console_command: svar set stealth_state 0 %player%'
+      - 'console_command: svar set stealth_visible 0 %player%'
+      - 'actionbar: &fВас видно;60'
+  stealth_deactivate2:
+    type: player_damage
+    conditions:
+    - '%servervariables_value_stealth_state% == 1 execute action1'
+    actions:
+      action1:
+      - 'title: 20;60;20;&f;&7❬ &f&l👁 &7❭'
+      - 'console_command: svar set stealth_state 0 %player%'
+      - 'console_command: svar set stealth_visible 0 %player%'
+      - 'actionbar: &fВас видно;60'

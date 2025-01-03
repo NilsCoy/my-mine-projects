@@ -1,0 +1,75 @@
+menu_title: '&6Справочник: FAQ'
+open_commands:
+  - '[sound] ITEM_BOOK_PAGE_TURN 1 1'
+size: 27
+items:
+  'mechanics':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTk0YjVlM2RkYzdhOGYzM2M3OTM0Njg2MGQzOTIzYzcxYTU4MmZkYTE2YWNkYmY0YWQzYzBjYzQ2NWZkOTI2In19fQ==
+    slot: 10
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fМеханики'
+    lore:
+      - '&7Поясняем за игру.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы открыть страницу!'
+    click_commands:
+      - '[openguimenu] manual_faq_mechanics'
+      - '[refresh]'
+  'questions':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDZiYTYzMzQ0ZjQ5ZGQxYzRmNTQ4OGU5MjZiZjNkOWUyYjI5OTE2YTZjNTBkNjEwYmI0MGE1MjczZGM4YzgyIn19fQ==
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fЧастые вопросы'
+    lore:
+      - '&7Что-то хотите узнать?'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы открыть страницу!'
+    click_commands:
+      - '[openguimenu] manual_faq_questions'
+      - '[refresh]'
+  'recommend':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGM0ZTQ0MWVhYzg4NGRlMzM0N2E4Nzc1YTA3YTY2YmJjNGM4MmEyNGVkMmQwY2ZlYjFhY2FmNmNlOTlkNTNiNiJ9fX0=
+    slot: 16
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fСоветы'
+    lore:
+      - '&7Обязательно к прочтению для новичков.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы открыть страницу!'
+    click_commands:
+      - '[openguimenu] manual_faq_recommend'
+      - '[refresh]'
+
+
+
+  'home':
+    material: PAPER
+    slot: 18
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:13
+    display_name: '&fВернуться назад'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы вернуться.'
+    click_commands:
+      - '[openguimenu] manual'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+    display_name: ' '
+    nbt_int: CustomModelData:1

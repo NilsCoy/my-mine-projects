@@ -1,0 +1,33 @@
+Id: pet_horse5
+MythicMob: pet_horse5
+Permission: mcpets.pet_horse5
+Mountable: true
+# DespawnSkill: Nocsy_Otter_Despawn
+Distance: 6
+SpawnRange: 1
+ComingBackRange: 3
+Icon:
+  Name: §bМедведь
+  Material: SADDLE
+  # CustomModelData: 77312
+  Description:
+  - §7Средняя скорость и средний грузоподъем.
+Levels:
+  lvl_1:
+    Name: Начальный
+    ExperienceThreshold: 0
+    MaxHealth: 20
+    # The regeneration of HP in heart per second
+    Regeneration: 0.1
+    # Says how much reduced damaged the pet should be taking 
+    # It's a division factor to the damages (1 = +0% resistance, 2 = +100%)
+    ResistanceModifier: 1
+    # Same goes for damage modifiers : how much more damages the pet should inflict
+    # It's a multiplication factor (1 = +0%, 0.5 = -50%)
+    DamageModifier: 1
+    # The power modifier is an additional placeholder to use in skills to affect the power of skills.
+    Power: 1
+    Cooldowns:
+      Respawn: 30
+      Revoke: 10
+    InventoryExtension: 18

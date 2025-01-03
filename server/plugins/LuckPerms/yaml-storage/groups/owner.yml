@@ -1,0 +1,9 @@
+name: owner
+permissions:
+- bukkit.command.plugins
+- weight.10
+parents:
+- default
+prefixes:
+- '&6👑 &7| &f':
+    priority: 2

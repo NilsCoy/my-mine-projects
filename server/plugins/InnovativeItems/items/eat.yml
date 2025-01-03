@@ -1,0 +1,21 @@
+
+cookie:
+  material: 'COOKIE'
+  display-name: '&aПеченье'
+  update-item: true
+bread:
+  material: 'BREAD'
+  display-name: '&aХлеб'
+  update-item: true
+beef:
+  material: 'COOKED_BEEF'
+  display-name: '&aСтейк'
+  update-item: true
+golden_apple:
+  material: 'GOLDEN_APPLE'
+  display-name: '&aЗолотое яблоко'
+  update-item: true
+cooked_mutton:
+  material: 'COOKED_MUTTON'
+  display-name: '&aПриготовленное мясо'
+  update-item: true

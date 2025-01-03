@@ -1,0 +1,109 @@
+menu_title: '&6Кузнец'
+open_commands:
+  - '[sound] ENTITY_VILLAGER_TRADE 1 0.8'
+size: 9
+items:
+
+
+  'blast_furnace':
+    material: BLAST_FURNACE
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cПлавильная печь'
+    lore:
+      - '&fЦена покупки: &c1000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы купить.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 1000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] svar add player_money -1000 %player_name%'
+      - '[console] mm i give %player_name% blast_furnace 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'anvil':
+    material: ANVIL
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cНаковальня'
+    lore:
+      - '&fЦена покупки: &c1000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы купить.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 1000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] svar add player_money -1000 %player_name%'
+      - '[console] mm i give %player_name% anvil 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'hammer':
+    material: BRICK
+    slot: 6
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:11
+    display_name: '&cКузнечный молот'
+    lore:
+      - '&fЦена покупки: &c1000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы купить.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 1000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] svar add player_money -1000 %player_name%'
+      - '[console] ii give %player_name% hammer 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+
+  'back':
+    material: PAPER
+    slot: 0
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:13
+    display_name: '&fВернуться назад'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы вернуться.'
+    click_commands:
+      - '[openguimenu] menu_buy_smith'
+      - '[refresh]'
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8]
+    display_name: ' '
+    nbt_int: CustomModelData:1

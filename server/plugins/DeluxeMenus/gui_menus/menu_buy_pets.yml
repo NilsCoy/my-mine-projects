@@ -1,0 +1,45 @@
+menu_title: '&6Покупка'
+open_commands:
+  - '[sound] ENTITY_VILLAGER_TRADE 1 0.8'
+size: 45
+items:
+
+
+
+  'hat1':
+    material: CARVED_PUMPKIN
+    slot: 10
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:1
+    display_name: '&fЗолотой нимб'
+    lore:
+      - '&7By NilsCoy'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat1 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,37,38,39,40,41,42,43,44]
+    display_name: ' '
+    nbt_int: CustomModelData:1

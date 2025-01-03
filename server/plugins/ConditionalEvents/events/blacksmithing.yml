@@ -1,0 +1,818 @@
+Events:
+  anvil_place:
+    type: block_place
+    conditions:
+    - '%player_gamemode% == ADVENTURE and %item% == ANVIL and %player_world% == world and %servervariables_value_anvil_state% == 0'
+    actions:
+      default:
+      - 'console_command: svar set anvil_state 1 %player%'
+      - 'console_command: svar set anvil_x %block_x% %player%'
+      - 'console_command: svar set anvil_y %block_y% %player%'
+      - 'console_command: svar set anvil_z %block_z% %player%'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      - 'call_event: block_check'
+  block_check:
+    type: call
+    conditions:
+    - '%javascript_block% == AIR'
+    actions:
+      default:
+      - 'set_block: location:%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world;id:AIR'
+      - 'console_command: svar set anvil_state 0 %player%'
+      - 'console_command: svar set anvil_x 0 %player%'
+      - 'console_command: svar set anvil_y 0 %player%'
+      - 'console_command: svar set anvil_z 0 %player%'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      - 'wait_ticks: 1'
+      - 'console_command: mm items give %player% anvil'
+  
+  anvil_interact:
+    type: block_interact
+    conditions:
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == yes and %servervariables_value_anvil_item% == 0 execute pick_up'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:BRICK,nameequals:&bЖелезный слиток,inhand:main% == yes and %servervariables_value_anvil_item% == 0 execute iron_ingot'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:BRICK,nameequals:&bЖелезное колечко,inhand:main% == yes and %servervariables_value_anvil_item% == 0 execute iron_ring'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:BRICK,nameequals:&bСтальной слиток,inhand:main% == yes and %servervariables_value_anvil_item% == 0 execute steel_ingot'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:BRICK,nameequals:&bКобальтовый слиток,inhand:main% == yes and %servervariables_value_anvil_item% == 0 execute cobald_ingot'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:BRICK,nameequals:&cКузнечный молот,inhand:main% == yes and %servervariables_value_anvil_item% != 0 and %servervariables_value_anvil_item_finish% == 0 execute hammer_use'
+
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 1 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_1'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 2 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_2'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 3 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_3'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 4 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_4'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 5 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_5'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 6 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_6'
+    
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 7 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_7'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 8 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_8'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 9 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_9'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 10 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_10'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 11 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_11'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 12 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_12'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 13 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_13'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 14 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_14'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 15 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_15'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 16 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_16'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 17 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_17'
+    
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 18 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_18'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 19 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_19'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 20 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_20'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 21 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_21'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 22 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_22'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 23 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_23'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 24 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_24'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 25 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_25'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 26 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_26'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 27 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_27'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_anvil_state% == 1 and %servervariables_value_anvil_x% == %block_x% and %servervariables_value_anvil_y% == %block_y% and %servervariables_value_anvil_z% == %block_z% and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no and %checkitem_mat:AIR,inhand:main% == yes and %servervariables_value_anvil_item% == 28 and %servervariables_value_anvil_item_finish% == 1 execute pick_item_28'
+    
+    - '%player_gamemode% == ADVENTURE and %block% == ANVIL and %player_world% == world and %player_is_sneaking% == no execute deny'
+    actions:
+      pick_up:
+      - 'cancel_event: true'
+      - 'set_block: location:%block_x%,%block_y%,%block_z%,world;id:AIR'
+      - 'wait_ticks: 5'
+      - 'console_command: mm items give %player% anvil'
+      - 'wait_ticks: 5'
+      - 'playsound: ENTITY_ITEM_PICKUP;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'console_command: svar set anvil_state 0 %player%'
+      - 'console_command: svar set anvil_x 0 %player%'
+      - 'console_command: svar set anvil_y 0 %player%'
+      - 'console_command: svar set anvil_z 0 %player%'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      iron_ingot:
+      - 'cancel_event: true'
+      - 'console_command: dm open blacksmithing_iron_ingot %player%'
+      iron_ring:
+      - 'cancel_event: true'
+      - 'console_command: dm open blacksmithing_iron_ring %player%'
+      steel_ingot:
+      - 'cancel_event: true'
+      - 'console_command: dm open blacksmithing_steel_ingot %player%'
+      cobald_ingot:
+      - 'cancel_event: true'
+      - 'console_command: dm open blacksmithing_cobald_ingot %player%'
+      hammer_use:
+      - 'cancel_event: true'
+      - 'playsound: BLOCK_ANVIL_USE;1;0.7;%block_x%,%block_y%,%block_z%,world'
+      - 'particle: effect:CRIT offset:0;0;0 speed:0.1 amount:10 location:%math_{block_x}+0.5%;%math_{block_y}+1.5%;%math_{block_z}+0.5%;world'
+      - 'wait_ticks: 10'
+      - 'particle: effect:CRIT offset:0;0;0 speed:0.1 amount:10 location:%math_{block_x}+0.5%;%math_{block_y}+1.5%;%math_{block_z}+0.5%;world'
+      - 'wait_ticks: 10'
+      - 'particle: effect:CRIT offset:0;0;0 speed:0.1 amount:10 location:%math_{block_x}+0.5%;%math_{block_y}+1.5%;%math_{block_z}+0.5%;world'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: svar set anvil_item_finish 1 %player%'
+      pick_item_1:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% iron_ring 4'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_2:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% iron_plate'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_3:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% steel_ingot'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_4:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% chainmail1'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_5:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% chainmail2'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_6:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% chainmail3'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      
+      pick_item_7:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% steel_plate'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_8:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% iron1'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_9:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% iron2'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_10:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% iron3'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_11:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% sword3'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_12:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% dagger1'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_13:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% longsword1'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_14:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% tachi1'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_15:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% spear2'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_16:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% axe3'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_17:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% greatsword2'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      
+      pick_item_18:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% cobald_plate'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_19:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% diamond1'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_20:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% diamond2'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_21:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% diamond3'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_22:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% sword5'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_23:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% dagger3'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_24:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% longsword3'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_25:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% tachi3'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_26:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% spear4'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_27:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% axe5'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      pick_item_28:
+      - 'cancel_event: true'
+      - 'console_command: execute positioned %block_x% %block_y% %block_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'playsound: ENTITY_VILLAGER_WORK_TOOLSMITH;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: ii give %player% greatsword4'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+      
+      deny:
+      - 'cancel_event: true'
+
+  anvil_delete:
+    type: player_leave
+    conditions:
+    - '%servervariables_value_anvil_state% == 1'
+    actions:
+      default:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'set_block: location:%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world;id:AIR'
+
+  anvil_return:
+    type: player_join
+    conditions:
+    - '%servervariables_value_anvil_state% == 1'
+    actions:
+      default:
+      - 'wait_ticks: 5'
+      - 'console_command: mm items give %player% anvil'
+      - 'wait_ticks: 5'
+      - 'console_command: svar set anvil_state 0 %player%'
+      - 'console_command: svar set anvil_x 0 %player%'
+      - 'console_command: svar set anvil_y 0 %player%'
+      - 'console_command: svar set anvil_z 0 %player%'
+      - 'console_command: svar set anvil_item 0 %player%'
+      - 'console_command: svar set anvil_item_finish 0 %player%'
+
+  anvil_craft:
+    type: custom
+    custom_event_data:
+      event: svar.ajneb97.api.VariableChangeEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%variable_type%;getVariable().getVariableType()'
+      - '%variable_name%;getVariable().getName()'
+      - '%new_value%;getNewValue()'
+    conditions:
+    - '%variable_name% == anvil_item and %new_value% == 1 execute iron_ring_start'
+    - '%servervariables_value_anvil_item% == 1 and %variable_name% == anvil_item_finish and %new_value% == 1 execute iron_ring_finish'
+    - '%variable_name% == anvil_item and %new_value% == 2 execute iron_plate_start'
+    - '%servervariables_value_anvil_item% == 2 and %variable_name% == anvil_item_finish and %new_value% == 1 execute iron_plate_finish'
+    - '%variable_name% == anvil_item and %new_value% == 3 execute steel_ingot_start'
+    - '%servervariables_value_anvil_item% == 3 and %variable_name% == anvil_item_finish and %new_value% == 1 execute steel_ingot_finish'
+    - '%variable_name% == anvil_item and %new_value% == 4 execute chainmail1_start'
+    - '%servervariables_value_anvil_item% == 4 and %variable_name% == anvil_item_finish and %new_value% == 1 execute chainmail1_finish'
+    - '%variable_name% == anvil_item and %new_value% == 5 execute chainmail2_start'
+    - '%servervariables_value_anvil_item% == 5 and %variable_name% == anvil_item_finish and %new_value% == 1 execute chainmail2_finish'
+    - '%variable_name% == anvil_item and %new_value% == 6 execute chainmail3_start'
+    - '%servervariables_value_anvil_item% == 6 and %variable_name% == anvil_item_finish and %new_value% == 1 execute chainmail3_finish'
+    
+    - '%variable_name% == anvil_item and %new_value% == 7 execute steel_plate_start'
+    - '%servervariables_value_anvil_item% == 7 and %variable_name% == anvil_item_finish and %new_value% == 1 execute steel_plate_finish'
+    - '%variable_name% == anvil_item and %new_value% == 8 execute iron1_start'
+    - '%servervariables_value_anvil_item% == 8 and %variable_name% == anvil_item_finish and %new_value% == 1 execute iron1_finish'
+    - '%variable_name% == anvil_item and %new_value% == 9 execute iron2_start'
+    - '%servervariables_value_anvil_item% == 9 and %variable_name% == anvil_item_finish and %new_value% == 1 execute iron2_finish'
+    - '%variable_name% == anvil_item and %new_value% == 10 execute iron3_start'
+    - '%servervariables_value_anvil_item% == 10 and %variable_name% == anvil_item_finish and %new_value% == 1 execute iron3_finish'
+    - '%variable_name% == anvil_item and %new_value% == 11 execute sword3_start'
+    - '%servervariables_value_anvil_item% == 11 and %variable_name% == anvil_item_finish and %new_value% == 1 execute sword3_finish'
+    - '%variable_name% == anvil_item and %new_value% == 12 execute dagger1_start'
+    - '%servervariables_value_anvil_item% == 12 and %variable_name% == anvil_item_finish and %new_value% == 1 execute dagger1_finish'
+    - '%variable_name% == anvil_item and %new_value% == 13 execute longsword1_start'
+    - '%servervariables_value_anvil_item% == 13 and %variable_name% == anvil_item_finish and %new_value% == 1 execute longsword1_finish'
+    - '%variable_name% == anvil_item and %new_value% == 14 execute tachi1_start'
+    - '%servervariables_value_anvil_item% == 14 and %variable_name% == anvil_item_finish and %new_value% == 1 execute tachi1_finish'
+    - '%variable_name% == anvil_item and %new_value% == 15 execute spear2_start'
+    - '%servervariables_value_anvil_item% == 15 and %variable_name% == anvil_item_finish and %new_value% == 1 execute spear2_finish'
+    - '%variable_name% == anvil_item and %new_value% == 16 execute axe3_start'
+    - '%servervariables_value_anvil_item% == 16 and %variable_name% == anvil_item_finish and %new_value% == 1 execute axe3_finish'
+    - '%variable_name% == anvil_item and %new_value% == 17 execute greatsword2_start'
+    - '%servervariables_value_anvil_item% == 17 and %variable_name% == anvil_item_finish and %new_value% == 1 execute greatsword2_finish'
+    
+    - '%variable_name% == anvil_item and %new_value% == 18 execute cobald_plate_start'
+    - '%servervariables_value_anvil_item% == 18 and %variable_name% == anvil_item_finish and %new_value% == 1 execute cobald_plate_finish'
+    - '%variable_name% == anvil_item and %new_value% == 19 execute diamond1_start'
+    - '%servervariables_value_anvil_item% == 19 and %variable_name% == anvil_item_finish and %new_value% == 1 execute diamond1_finish'
+    - '%variable_name% == anvil_item and %new_value% == 20 execute diamond2_start'
+    - '%servervariables_value_anvil_item% == 20 and %variable_name% == anvil_item_finish and %new_value% == 1 execute diamond2_finish'
+    - '%variable_name% == anvil_item and %new_value% == 21 execute diamond3_start'
+    - '%servervariables_value_anvil_item% == 21 and %variable_name% == anvil_item_finish and %new_value% == 1 execute diamond3_finish'
+    - '%variable_name% == anvil_item and %new_value% == 22 execute sword5_start'
+    - '%servervariables_value_anvil_item% == 22 and %variable_name% == anvil_item_finish and %new_value% == 1 execute sword5_finish'
+    - '%variable_name% == anvil_item and %new_value% == 23 execute dagger3_start'
+    - '%servervariables_value_anvil_item% == 23 and %variable_name% == anvil_item_finish and %new_value% == 1 execute dagger3_finish'
+    - '%variable_name% == anvil_item and %new_value% == 24 execute longsword3_start'
+    - '%servervariables_value_anvil_item% == 24 and %variable_name% == anvil_item_finish and %new_value% == 1 execute longsword3_finish'
+    - '%variable_name% == anvil_item and %new_value% == 25 execute tachi3_start'
+    - '%servervariables_value_anvil_item% == 25 and %variable_name% == anvil_item_finish and %new_value% == 1 execute tachi3_finish'
+    - '%variable_name% == anvil_item and %new_value% == 26 execute spear4_start'
+    - '%servervariables_value_anvil_item% == 26 and %variable_name% == anvil_item_finish and %new_value% == 1 execute spear4_finish'
+    - '%variable_name% == anvil_item and %new_value% == 27 execute axe5_start'
+    - '%servervariables_value_anvil_item% == 27 and %variable_name% == anvil_item_finish and %new_value% == 1 execute axe5_finish'
+    - '%variable_name% == anvil_item and %new_value% == 28 execute greatsword4_start'
+    - '%servervariables_value_anvil_item% == 28 and %variable_name% == anvil_item_finish and %new_value% == 1 execute greatsword4_finish'
+    actions:
+      iron_ring_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_iron_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bЖелезный слиток%'
+      iron_ring_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_iron_ring 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      iron_plate_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_iron_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:2,nameequals:&bЖелезный слиток%'
+      iron_plate_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_iron_plate 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      steel_ingot_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_iron_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:2,nameequals:&bЖелезный слиток%'
+      steel_ingot_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_steel_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      chainmail1_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_iron_ring 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_iron_plate 1 world,%math_{servervariables_value_anvil_x}+1.2%,%math_{servervariables_value_anvil_y}+0.21%,%math_{servervariables_value_anvil_z}+0.7%'
+      - 'console_command: mm m s anvil_leather_chestplate 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}+0.22%,%math_{servervariables_value_anvil_z}+0.8%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:40,nameequals:&bЖелезное колечко%'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:20,nameequals:&bЖелезная пластина%'
+      - 'remove_item: %checkitem_remove_mat:LEATHER_CHESTPLATE,amt:1,nameequals:&cКожаная куртка%'
+      chainmail1_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_chainmail_chestplate 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      chainmail2_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_iron_ring 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_iron_plate 1 world,%math_{servervariables_value_anvil_x}+1.2%,%math_{servervariables_value_anvil_y}+0.21%,%math_{servervariables_value_anvil_z}+0.7%'
+      - 'console_command: mm m s anvil_leather_leggings 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}+0.22%,%math_{servervariables_value_anvil_z}+0.8%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:50,nameequals:&bЖелезное колечко%'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:6,nameequals:&bЖелезная пластина%'
+      - 'remove_item: %checkitem_remove_mat:LEATHER_LEGGINGS,amt:1,nameequals:&cКожаные штаны%'
+      chainmail2_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_chainmail_leggings 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      chainmail3_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_iron_ring 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_iron_plate 1 world,%math_{servervariables_value_anvil_x}+1.2%,%math_{servervariables_value_anvil_y}+0.21%,%math_{servervariables_value_anvil_z}+0.7%'
+      - 'console_command: mm m s anvil_leather_boots 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}+0.22%,%math_{servervariables_value_anvil_z}+0.8%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:20,nameequals:&bЖелезное колечко%'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:5,nameequals:&bЖелезная пластина%'
+      - 'remove_item: %checkitem_remove_mat:LEATHER_BOOTS,amt:1,nameequals:&cКожаные ботинки%'
+      chainmail3_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_chainmail_boots 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      
+      steel_plate_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_steel_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:2,nameequals:&bСтальной слиток%'
+      steel_plate_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_steel_plate 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      iron1_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_steel_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_steel_plate 1 world,%math_{servervariables_value_anvil_x}+1.2%,%math_{servervariables_value_anvil_y}+0.21%,%math_{servervariables_value_anvil_z}+0.7%'
+      - 'console_command: mm m s anvil_chainmail_chestplate 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}+0.22%,%math_{servervariables_value_anvil_z}+0.8%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:20,nameequals:&bСтальной слиток%'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:30,nameequals:&bСтальная пластина%'
+      - 'remove_item: %checkitem_remove_mat:CHAINMAIL_CHESTPLATE,amt:1,nameequals:&cКольчуга%'
+      iron1_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_iron_chestplate 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      iron2_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_steel_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_steel_plate 1 world,%math_{servervariables_value_anvil_x}+1.2%,%math_{servervariables_value_anvil_y}+0.21%,%math_{servervariables_value_anvil_z}+0.7%'
+      - 'console_command: mm m s anvil_chainmail_leggings 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}+0.22%,%math_{servervariables_value_anvil_z}+0.8%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:10,nameequals:&bСтальной слиток%'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:20,nameequals:&bСтальная пластина%'
+      - 'remove_item: %checkitem_remove_mat:CHAINMAIL_LEGGINGS,amt:1,nameequals:&cКольчужные поножи%'
+      iron2_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_iron_leggings 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      iron3_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_steel_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_steel_plate 1 world,%math_{servervariables_value_anvil_x}+1.2%,%math_{servervariables_value_anvil_y}+0.21%,%math_{servervariables_value_anvil_z}+0.7%'
+      - 'console_command: mm m s anvil_chainmail_boots 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}+0.22%,%math_{servervariables_value_anvil_z}+0.8%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:10,nameequals:&bСтальной слиток%'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:10,nameequals:&bСтальная пластина%'
+      - 'remove_item: %checkitem_remove_mat:CHAINMAIL_BOOTS,amt:1,nameequals:&cКольчужные ботинки%'
+      iron3_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_iron_boots 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      sword3_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_steel_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_sword2 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:40,nameequals:&bСтальной слиток%'
+      - 'remove_item: %checkitem_remove_mat:STONE_SWORD,amt:1,nameequals:&cКаменный меч%'
+      sword3_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_sword3 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      dagger1_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_steel_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_glove 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}+0.3%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:20,nameequals:&bСтальной слиток%'
+      - 'remove_item: %checkitem_remove_mat:EPICFIGHT_GLOVE,amt:1,nameequals:&cПерчатки%'
+      dagger1_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_dagger1 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}+0.3%'
+      longsword1_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_steel_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:55,nameequals:&bСтальной слиток%'
+      longsword1_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_longsword1 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      tachi1_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_steel_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:50,nameequals:&bСтальной слиток%'
+      tachi1_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_tachi1 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      spear2_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_steel_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_spear1 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:50,nameequals:&bСтальной слиток%'
+      - 'remove_item: %checkitem_remove_mat:EPICFIGHT_STONE_SPEAR,amt:1,nameequals:&cКаменное копье%'
+      spear2_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_spear2 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      axe3_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_steel_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_axe2 1 world,%math_{servervariables_value_anvil_x}+1.5%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}+0.5%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:30,nameequals:&bСтальной слиток%'
+      - 'remove_item: %checkitem_remove_mat:STONE_AXE,amt:1,nameequals:&cКаменный топор%'
+      axe3_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_axe3 1 world,%math_{servervariables_value_anvil_x}+1.5%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}+0.5%'
+      greatsword2_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_steel_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_greatsword1 1 world,%math_{servervariables_value_anvil_x}+1.5%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:60,nameequals:&bСтальной слиток%'
+      - 'remove_item: %checkitem_remove_mat:EPICFIGHT_STONE_GREATSWORD,amt:1,nameequals:&cКаменный большой меч%'
+      greatsword2_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_greatsword2 1 world,%math_{servervariables_value_anvil_x}+1.5%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      
+      cobald_plate_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bКобальтовый слиток%'
+      cobald_plate_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_plate 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      diamond1_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_cobald_plate 1 world,%math_{servervariables_value_anvil_x}+1.2%,%math_{servervariables_value_anvil_y}+0.21%,%math_{servervariables_value_anvil_z}+0.7%'
+      - 'console_command: mm m s anvil_iron_chestplate 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}+0.22%,%math_{servervariables_value_anvil_z}+0.8%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:10,nameequals:&bКобальтовый слиток%'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:15,nameequals:&bКобальтовая пластина%'
+      - 'remove_item: %checkitem_remove_mat:IRON_CHESTPLATE,amt:1,nameequals:&cСтальной нагрудник%'
+      diamond1_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_chestplate 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      diamond2_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_cobald_plate 1 world,%math_{servervariables_value_anvil_x}+1.2%,%math_{servervariables_value_anvil_y}+0.21%,%math_{servervariables_value_anvil_z}+0.7%'
+      - 'console_command: mm m s anvil_iron_leggings 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}+0.22%,%math_{servervariables_value_anvil_z}+0.8%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:5,nameequals:&bКобальтовый слиток%'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:10,nameequals:&bКобальтовая пластина%'
+      - 'remove_item: %checkitem_remove_mat:IRON_LEGGINGS,amt:1,nameequals:&cСтальные поножи%'
+      diamond2_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_leggings 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      diamond3_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_cobald_plate 1 world,%math_{servervariables_value_anvil_x}+1.2%,%math_{servervariables_value_anvil_y}+0.21%,%math_{servervariables_value_anvil_z}+0.7%'
+      - 'console_command: mm m s anvil_iron_boots 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}+0.22%,%math_{servervariables_value_anvil_z}+0.8%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:5,nameequals:&bКобальтовый слиток%'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:5,nameequals:&bКобальтовая пластина%'
+      - 'remove_item: %checkitem_remove_mat:IRON_BOOTS,amt:1,nameequals:&cСтальные ботинки%'
+      diamond3_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_boots 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      sword5_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_sword3 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:20,nameequals:&bКобальтовый слиток%'
+      - 'remove_item: %checkitem_remove_mat:IRON_SWORD,amt:1,nameequals:&cСтальной меч%'
+      sword5_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_sword5 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      dagger3_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_dagger1 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}+0.3%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:10,nameequals:&bКобальтовый слиток%'
+      - 'remove_item: %checkitem_remove_mat:EPICFIGHT_IRON_DAGGER,amt:1,nameequals:&cСтальной кинжал%'
+      dagger3_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_dagger3 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}+0.3%'
+      longsword3_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_longsword1 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:25,nameequals:&bКобальтовый слиток%'
+      - 'remove_item: %checkitem_remove_mat:EPICFIGHT_IRON_LONGSWORD,amt:1,nameequals:&cСтальной длинный меч%'
+      longsword3_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_longsword3 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      tachi3_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_tachi1 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:25,nameequals:&bКобальтовый слиток%'
+      - 'remove_item: %checkitem_remove_mat:EPICFIGHT_IRON_TACHI,amt:1,nameequals:&cСтальной тати%'
+      tachi3_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_tachi3 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      spear4_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_spear2 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:25,nameequals:&bКобальтовый слиток%'
+      - 'remove_item: %checkitem_remove_mat:EPICFIGHT_IRON_SPEAR,amt:1,nameequals:&cСтальное копье%'
+      spear4_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_spear4 1 world,%math_{servervariables_value_anvil_x}+1.3%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      axe5_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_axe3 1 world,%math_{servervariables_value_anvil_x}+1.5%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}+0.5%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:15,nameequals:&bКобальтовый слиток%'
+      - 'remove_item: %checkitem_remove_mat:IRON_AXE,amt:1,nameequals:&cСтальной топор%'
+      axe5_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_axe5 1 world,%math_{servervariables_value_anvil_x}+1.5%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}+0.5%'
+      greatsword4_start:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..1,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_cobald_ingot 1 world,%math_{servervariables_value_anvil_x}+1.1%,%math_{servervariables_value_anvil_y}+0.2%,%math_{servervariables_value_anvil_z}+0.6%'
+      - 'console_command: mm m s anvil_greatsword2 1 world,%math_{servervariables_value_anvil_x}+1.5%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+      - 'playsound: BLOCK_GRINDSTONE_USE;1;1;%servervariables_value_anvil_x%,%servervariables_value_anvil_y%,%servervariables_value_anvil_z%,world'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:30,nameequals:&bКобальтовый слиток%'
+      - 'remove_item: %checkitem_remove_mat:EPICFIGHT_IRON_GREATSWORD,amt:1,nameequals:&cСтальной большой меч%'
+      greatsword4_finish:
+      - 'console_command: execute positioned %servervariables_value_anvil_x% %servervariables_value_anvil_y% %servervariables_value_anvil_z% run kill @e[distance=..2,type=minecraft:armor_stand]'
+      - 'console_command: mm m s anvil_greatsword4 1 world,%math_{servervariables_value_anvil_x}+1.5%,%math_{servervariables_value_anvil_y}-0.42%,%math_{servervariables_value_anvil_z}%'
+
+
+
+
+
+
+
+
+  blast_furnace_delete:
+    type: player_leave
+    conditions:
+    - '%servervariables_value_blast_furnace_state% == 1'
+    actions:
+      default:
+      - 'set_block: location:%servervariables_value_blast_furnace_x%,%servervariables_value_blast_furnace_y%,%servervariables_value_blast_furnace_z%,world;id:AIR'
+
+  blast_furnace_return:
+    type: player_join
+    conditions:
+    - '%servervariables_value_blast_furnace_state% == 1'
+    actions:
+      default:
+      - 'wait_ticks: 5'
+      - 'console_command: mm items give %player% blast_furnace'
+      - 'wait_ticks: 5'
+      - 'console_command: svar set blast_furnace_state 0 %player%'
+      - 'console_command: svar set blast_furnace_x 0 %player%'
+      - 'console_command: svar set blast_furnace_y 0 %player%'
+      - 'console_command: svar set blast_furnace_z 0 %player%'
+      - 'console_command: svar set blast_furnace_item 0 %player%'
+      - 'console_command: svar set blast_furnace_fire 0 %player%'
+      - 'console_command: svar set blast_furnace_item_in 0 %player%'
+  blast_furnace_place:
+    type: block_place
+    conditions:
+    - '%player_gamemode% == ADVENTURE and %item% == BLAST_FURNACE and %player_world% == world and %servervariables_value_blast_furnace_state% == 0 execute place'
+    - '%player_gamemode% == ADVENTURE and %item% == BLAST_FURNACE and %player_world% == world and %servervariables_value_blast_furnace_state% == 1 execute deny'
+    actions:
+      place:
+      - 'console_command: svar set blast_furnace_state 1 %player%'
+      - 'console_command: svar set blast_furnace_x %block_x% %player%'
+      - 'console_command: svar set blast_furnace_y %block_y% %player%'
+      - 'console_command: svar set blast_furnace_z %block_z% %player%'
+      - 'console_command: svar set blast_furnace_item 0 %player%'
+      - 'console_command: svar set blast_furnace_fire 0 %player%'
+      - 'console_command: svar set blast_furnace_item_in 0 %player%'
+      - 'set_block: location:%block_x%,%block_y%,%block_z%,world;id:BLAST_FURNACE;block_data:lit=false'
+      deny:
+      - 'cancel_event: true'
+  blast_furnace_interact:
+    type: block_interact
+    conditions:
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_blast_furnace_state% == 1 and %servervariables_value_blast_furnace_x% == %block_x% and %servervariables_value_blast_furnace_y% == %block_y% and %servervariables_value_blast_furnace_z% == %block_z% and %block% == BLAST_FURNACE and %player_world% == world and %player_is_sneaking% == yes and %servervariables_value_blast_furnace_item% == 0 and %servervariables_value_blast_furnace_item_in% == 0 execute pick_up'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_blast_furnace_state% == 1 and %servervariables_value_blast_furnace_x% == %block_x% and %servervariables_value_blast_furnace_y% == %block_y% and %servervariables_value_blast_furnace_z% == %block_z% and %block% == BLAST_FURNACE and %player_world% == world and %player_is_sneaking% == no and %servervariables_value_blast_furnace_item% == 0 and %checkitem_mat:BRICK,nameequals:&bУголь,inhand:main,amt:10% == yes and %servervariables_value_blast_furnace_fire% == 0 and %servervariables_value_blast_furnace_item_in% == 0 execute coal'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_blast_furnace_state% == 1 and %servervariables_value_blast_furnace_x% == %block_x% and %servervariables_value_blast_furnace_y% == %block_y% and %servervariables_value_blast_furnace_z% == %block_z% and %block% == BLAST_FURNACE and %player_world% == world and %player_is_sneaking% == no and %servervariables_value_blast_furnace_item% == 0 and %checkitem_mat:BRICK,nameequals:&bУголь,inhand:main,amt:10% != yes and %servervariables_value_blast_furnace_fire% == 0 and %servervariables_value_blast_furnace_item_in% == 0 execute coal_deny'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_blast_furnace_state% == 1 and %servervariables_value_blast_furnace_x% == %block_x% and %servervariables_value_blast_furnace_y% == %block_y% and %servervariables_value_blast_furnace_z% == %block_z% and %block% == BLAST_FURNACE and %player_world% == world and %player_is_sneaking% == no and %servervariables_value_blast_furnace_item% == 0 and %checkitem_mat:BRICK,nameequals:&bЖелезная руда,inhand:main,amt:10% == yes and %servervariables_value_blast_furnace_fire% == 1 and %servervariables_value_blast_furnace_item_in% == 0 execute iron_ore'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_blast_furnace_state% == 1 and %servervariables_value_blast_furnace_x% == %block_x% and %servervariables_value_blast_furnace_y% == %block_y% and %servervariables_value_blast_furnace_z% == %block_z% and %block% == BLAST_FURNACE and %player_world% == world and %player_is_sneaking% == no and %servervariables_value_blast_furnace_item% == 0 and %checkitem_mat:BRICK,nameequals:&bКобальтовая руда,inhand:main,amt:10% == yes and %servervariables_value_blast_furnace_fire% == 1 and %servervariables_value_blast_furnace_item_in% == 0 execute cobalt_ore'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_blast_furnace_state% == 1 and %servervariables_value_blast_furnace_x% == %block_x% and %servervariables_value_blast_furnace_y% == %block_y% and %servervariables_value_blast_furnace_z% == %block_z% and %block% == BLAST_FURNACE and %player_world% == world and %player_is_sneaking% == no and %servervariables_value_blast_furnace_item% == 0 and %checkitem_mat:BRICK,nameequals:&bЖелезная руда,inhand:main,amt:10% != yes and %servervariables_value_blast_furnace_fire% == 1 and %servervariables_value_blast_furnace_item_in% == 0 execute ore_deny'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_blast_furnace_state% == 1 and %servervariables_value_blast_furnace_x% == %block_x% and %servervariables_value_blast_furnace_y% == %block_y% and %servervariables_value_blast_furnace_z% == %block_z% and %block% == BLAST_FURNACE and %player_world% == world and %player_is_sneaking% == no and %servervariables_value_blast_furnace_item% == 0 and %checkitem_mat:BRICK,nameequals:&bКобальтовая руда,inhand:main,amt:10% != yes and %servervariables_value_blast_furnace_fire% == 1 and %servervariables_value_blast_furnace_item_in% == 0 execute ore_deny'
+    
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_blast_furnace_state% == 1 and %servervariables_value_blast_furnace_x% == %block_x% and %servervariables_value_blast_furnace_y% == %block_y% and %servervariables_value_blast_furnace_z% == %block_z% and %block% == BLAST_FURNACE and %player_world% == world and %player_is_sneaking% == no and %servervariables_value_blast_furnace_item% == 1 and %servervariables_value_blast_furnace_fire% == 0 and %servervariables_value_blast_furnace_item_in% == 1 execute iron_ore_pickup'
+    - '%player_gamemode% == ADVENTURE and %servervariables_value_blast_furnace_state% == 1 and %servervariables_value_blast_furnace_x% == %block_x% and %servervariables_value_blast_furnace_y% == %block_y% and %servervariables_value_blast_furnace_z% == %block_z% and %block% == BLAST_FURNACE and %player_world% == world and %player_is_sneaking% == no and %servervariables_value_blast_furnace_item% == 1 and %servervariables_value_blast_furnace_fire% == 0 and %servervariables_value_blast_furnace_item_in% == 2 execute cobalt_ore_pickup'
+    
+    - '%player_gamemode% == ADVENTURE and %block% == BLAST_FURNACE and %player_world% == world execute deny'
+    actions:
+      pick_up:
+      - 'cancel_event: true'
+      - 'set_block: location:%block_x%,%block_y%,%block_z%,world;id:AIR'
+      - 'wait_ticks: 5'
+      - 'console_command: mm items give %player% blast_furnace'
+      - 'wait_ticks: 5'
+      - 'playsound: ENTITY_ITEM_PICKUP;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: svar set blast_furnace_state 0 %player%'
+      - 'console_command: svar set blast_furnace_x 0 %player%'
+      - 'console_command: svar set blast_furnace_y 0 %player%'
+      - 'console_command: svar set blast_furnace_z 0 %player%'
+      - 'console_command: svar set blast_furnace_item 0 %player%'
+      - 'console_command: svar set blast_furnace_fire 0 %player%'
+      - 'console_command: svar set blast_furnace_item_in 0 %player%'
+      coal:
+      - 'cancel_event: true'
+      - 'set_block: location:%block_x%,%block_y%,%block_z%,world;id:BLAST_FURNACE;block_data:lit=true'
+      - 'playsound: ITEM_FIRECHARGE_USE;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: svar set blast_furnace_fire 1 %player%'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:10,nameequals:&bУголь%'
+      coal_deny:
+      - 'cancel_event: true'
+      - 'message: &cДля разжега требуется 10 угля!'
+      iron_ore:
+      - 'cancel_event: true'
+      - 'console_command: svar set blast_furnace_item_in 1 %player%'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:10,nameequals:&bЖелезная руда%'
+      - 'playsound: ITEM_FIRECHARGE_USE;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'wait_ticks: 100'
+      - 'console_command: svar set blast_furnace_fire 0 %player%'
+      - 'set_block: location:%block_x%,%block_y%,%block_z%,world;id:BLAST_FURNACE;block_data:lit=false'
+      - 'console_command: svar set blast_furnace_item 1 %player%'
+      - 'playsound: ITEM_FIRECHARGE_USE;1;0.1;%block_x%,%block_y%,%block_z%,world'
+      cobalt_ore:
+      - 'cancel_event: true'
+      - 'console_command: svar set blast_furnace_item_in 2 %player%'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:10,nameequals:&bКобальтовая руда%'
+      - 'playsound: ITEM_FIRECHARGE_USE;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'wait_ticks: 100'
+      - 'console_command: svar set blast_furnace_fire 0 %player%'
+      - 'set_block: location:%block_x%,%block_y%,%block_z%,world;id:BLAST_FURNACE;block_data:lit=false'
+      - 'console_command: svar set blast_furnace_item 1 %player%'
+      - 'playsound: ITEM_FIRECHARGE_USE;1;0.1;%block_x%,%block_y%,%block_z%,world'
+      ore_deny:
+      - 'cancel_event: true'
+      - 'message: &cДля плавки требуется 10 металла!'
+
+      iron_ore_pickup:
+      - 'cancel_event: true'
+      - 'playsound: ENTITY_ITEM_PICKUP;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: svar set blast_furnace_item_in 0 %player%'
+      - 'console_command: svar set blast_furnace_item 0 %player%'
+      - 'console_command: ii give %player% iron_ingot'
+      cobalt_ore_pickup:
+      - 'cancel_event: true'
+      - 'playsound: ENTITY_ITEM_PICKUP;1;1;%block_x%,%block_y%,%block_z%,world'
+      - 'console_command: svar set blast_furnace_item_in 0 %player%'
+      - 'console_command: svar set blast_furnace_item 0 %player%'
+      - 'console_command: ii give %player% cobald_ingot'
+      
+      deny:
+      - 'cancel_event: true'

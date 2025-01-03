@@ -1,0 +1,18 @@
+Events:
+  battle_pass_level_up:
+    type: custom
+    custom_event_data:
+      event: svar.ajneb97.api.VariableChangeEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%variable_type%;getVariable().getVariableType()'
+      - '%variable_name%;getVariable().getName()'
+      - '%new_value%;getNewValue()'
+    conditions:
+    - '%variable_name% == rewards_battle_pass_xp and %new_value% >= %servervariables_value_rewards_battle_pass_max_xp% execute action1'
+    actions:
+      action1:
+      - 'call_event: level_set'
+      - 'console_command: svar add rewards_battle_pass_level 1 %player%'
+      - 'console_command: svar set rewards_battle_pass_xp %math_0:UNNECESSARY_{servervariables_value_rewards_battle_pass_xp}-{servervariables_value_rewards_battle_pass_max_xp}% %player%'
+      - 'call_event: notify_battle_pass_level_up'

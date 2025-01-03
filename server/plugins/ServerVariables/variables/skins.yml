@@ -1,0 +1,13 @@
+variables:
+  skins_selected_skin:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  skins_selected_type:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  skins_selected_material:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0

@@ -1,0 +1,24 @@
+custom-overrides:
+  regular:
+    wolfhound_boss: '&c☠'
+    pillager_boss: '&c☠'
+    key_guard: '&c☠'
+    key_guard_2: '&c☠'
+    sword_master_random_boss: '&c☠'
+    summoner_random_boss: '&c☠'
+    hunter_random_boss: '&c☠'
+    slimeA_random_boss: '&c☠'
+  hovered:
+    wolfhound_boss: '&c☠'
+    pillager_boss: '&c☠'
+    key_guard: '&c☠'
+    key_guard_2: '&c☠'
+    sword_master_random_boss: '&c☠'
+    summoner_random_boss: '&c☠'
+    hunter_random_boss: '&c☠'
+    slimeA_random_boss: '&c☠'
+default-settings:
+  show-all-mobs-by-default: false
+  default-symbol-regular: '&4&l !! '
+  default-symbol-hovered: '&b&l !! '
+  mob-detection-range: 100

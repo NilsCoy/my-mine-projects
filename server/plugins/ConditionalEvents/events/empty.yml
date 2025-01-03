@@ -1,0 +1,8 @@
+# Events:
+  # ...:
+    # type: ...
+    # conditions:
+    # - '... execute actions1'
+    # actions:
+      # actions1:
+      # - '...'

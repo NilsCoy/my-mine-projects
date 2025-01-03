@@ -1,0 +1,714 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+random_boss_level_check: #учитывается только 0-23, но не 23-0
+  Conditions:
+  - variableInRange{var=caster.time_load;value=<%server_time_k%} true
+  - level{l=1to4} true
+  Skills:
+  #- message{m="<caster.var.time_load>, %server_time_m%"} @Server
+  - setvariable{var=caster.time_load_new;type=INTEGER;value="%server_time_k%"} @self
+  - setvariable{var=caster.new_level;type=INTEGER;value="0"} @self
+  - variableMath{var=caster.new_level;equation="<caster.var.time_load_new> - <caster.var.time_load>"} @self
+  - setlevel{a=add;l="<caster.var.new_level>"} @self
+  - setvariable{var=caster.time_load;type=INTEGER;value="%server_time_k%"} @self
+  - setname{name="<caster.name>"} @self
+  - skill{s=level_check} @self
+
+level_check:
+  Conditions:
+  - level{l=>5} true
+  Skills:
+  - setlevel{a=set;l=5} @self
+
+
+boss_reload:
+  Skills:
+  - message{m="&6Вы чувствуете давящую на вас силу."} @PIR{r=200}
+  - skill{s=random_boss_level_check} @self
+  - skill{s=level_check} @self
+  - delay 20
+  - summon{type="<caster.mythic_type>";amount=1;radius=0;level="<caster.level>"} @self
+  - remove @self
+
+
+boss_spawner:
+  Skills:
+  - randomskill{skills=boss_spawner1,boss_spawner2,boss_spawner3,boss_spawner4} @self
+boss_spawner1:
+  Skills:
+  - summon{type=sword_master_random_boss;amount=1;radius=1;level=1} @self
+boss_spawner2:
+  Skills:
+  - summon{type=summoner_random_boss;amount=1;radius=1;level=1} @self
+boss_spawner3:
+  Skills:
+  - summon{type=hunter_random_boss;amount=1;radius=1;level=1} @self
+boss_spawner4:
+  Skills:
+  - summon{type=slimeA_random_boss;amount=1;radius=1;level=1} @self
+
+
+
+
+
+
+arrow_block_sound:
+  Conditions:
+  - damagecause{cause=PROJECTILE} true
+  Skills:
+  - sound{s=epicfight:entity.hit.clash;p=2} @self
+block_sound:
+  Conditions:
+  - variableEquals{var=caster.skill1;value="1"} true
+  Skills:
+  - sound{s=epicfight:entity.hit.clash} @self
+
+leap_for_player:
+  CancelIfNoTargets: true
+  Skills:
+  - particleline{particle=crit;amount=5;syo=1.5;tyo=1.5} @target
+  - delay 10
+  - particleline{particle=crit;amount=5;syo=1.5;tyo=1.5} @target
+  - delay 10
+  - particleline{particle=crit;amount=5;syo=1.5;tyo=1.5} @target
+  - delay 10
+  - particleline{particle=crit;amount=5;syo=1.5;tyo=1.5} @target
+  - delay 10
+  - propel{v=1.5;delay=1} @trigger
+  - sound{s=entity.bat.takeoff;p=0.8} @self
+
+sword_master_skill_cast:
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - setAI{ai=false} @self
+  - particleorbital{p=reddust;color=#FFEF00;r=0.8;points=16;t=40;i=1;vy=15;y=2.3} @self
+  - delay 50
+  - setAI{ai=true} @self
+  - randomskill{skills=sword_master_skill1,sword_master_skill2}
+
+sword_master_skill1:
+  Conditions:
+  - health{h=<50} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=100;level=100;p=false} @self
+  - setvariable{var=caster.skill1;type=INTEGER;value=1} @self
+  - setAI{ai=false} @self
+  - healpercent{m=0.05} @self
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - healpercent{m=0.05} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - healpercent{m=0.05} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - delay 5
+  - skill{s=sword_master_skill1-particle} @self
+  - healpercent{m=0.05} @self
+  - setAI{ai=true} @self
+  - setvariable{var=caster.skill1;type=INTEGER;value=0} @self
+
+sword_master_skill1-particle:
+  Skills:
+  - particles{p=reddust;color=#C4DAFC;a=20;hs=0.05;vs=0.4;y=1;sfo=1;sso=0} @self
+  - particles{p=reddust;color=#C4DAFC;a=20;hs=0.05;vs=0.4;y=1;sfo=0.9;sso=0.2} @self
+  - particles{p=reddust;color=#C4DAFC;a=20;hs=0.05;vs=0.4;y=1;sfo=0.9;sso=-0.2} @self
+  - particles{p=reddust;color=#C4DAFC;a=20;hs=0.05;vs=0.4;y=1;sfo=0.8;sso=0.4} @self
+  - particles{p=reddust;color=#C4DAFC;a=20;hs=0.05;vs=0.4;y=1;sfo=0.8;sso=-0.4} @self
+  - particles{p=heart;a=1;hs=0.2;vs=0.1;y=0.5} @self
+
+sword_master_skill2:
+  Skills:
+  - propel{v=1} @RTTL
+  - sound{s=entity.bat.takeoff;p=0.8} @self
+  - particles{p=Sweep_Attack;a=1;hs=0.5;vs=0.5;y=1} @self
+  - damage{amount=6;ignoreArmor=true} @PIR{r=2}
+  - delay 5
+  - propel{v=1} @RTTL
+  - sound{s=entity.bat.takeoff;p=0.8} @self
+  - particles{p=Sweep_Attack;a=1;hs=0.5;vs=0.5;y=1} @self
+  - damage{amount=6;ignoreArmor=true} @PIR{r=2}
+  - delay 5
+  - propel{v=1} @RTTL
+  - sound{s=entity.bat.takeoff;p=0.8} @self
+  - particles{p=Sweep_Attack;a=1;hs=0.5;vs=0.5;y=1} @self
+  - damage{amount=6;ignoreArmor=true} @PIR{r=2}
+  - delay 5
+  - propel{v=1} @RTTL
+  - sound{s=entity.bat.takeoff;p=0.8} @self
+  - particles{p=Sweep_Attack;a=1;hs=0.5;vs=0.5;y=1} @self
+  - damage{amount=6;ignoreArmor=true} @PIR{r=2}
+  - delay 5
+  - propel{v=1} @RTTL
+  - sound{s=entity.bat.takeoff;p=0.8} @self
+  - particles{p=Sweep_Attack;a=1;hs=0.5;vs=0.5;y=1} @self
+  - damage{amount=6;ignoreArmor=true} @PIR{r=2}
+  - delay 5
+  - propel{v=1} @RTTL
+  - sound{s=entity.bat.takeoff;p=0.8} @self
+  - particles{p=Sweep_Attack;a=1;hs=0.5;vs=0.5;y=1} @self
+  - damage{amount=6;ignoreArmor=true} @PIR{r=2}
+  - delay 5
+  - propel{v=1} @RTTL
+  - sound{s=entity.bat.takeoff;p=0.8} @self
+  - particles{p=Sweep_Attack;a=1;hs=0.5;vs=0.5;y=1} @self
+  - damage{amount=6;ignoreArmor=true} @PIR{r=2}
+  - delay 5
+  - propel{v=1} @RTTL
+  - sound{s=entity.bat.takeoff;p=0.8} @self
+  - particles{p=Sweep_Attack;a=1;hs=0.5;vs=0.5;y=1} @self
+  - damage{amount=6;ignoreArmor=true} @PIR{r=2}
+
+sword_master_berserk:
+  Cooldown: 100
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=2000;level=0;p=false} @self
+  - Aura{auraName=agr_mode;onTick=sword_master_berserk-particle;onEnd=sword_master_berserk-end;interval=1;duration=2000} @self
+  - setspeed{speed=2;type=walking} @self
+
+sword_master_berserk-particle:
+  Skills:
+  - particles{p=reddust;color=#AB0000;a=2;hs=0.2;vs=0.3;y=1} @self
+
+sword_master_berserk-end:
+  Skills:
+  - setspeed{speed=1;type=walking} @self
+
+
+
+
+
+summoner_skill_cast:
+  Conditions:
+  - targetwithin{d=50} true
+  Skills:
+  - sound{s=entity.evoker.celebrate;p=0.5} @self
+  - setAI{ai=false} @self
+  - particleorbital{p=reddust;color=#FFEF00;r=0.8;points=16;t=40;i=1;vy=15;y=2.3} @self
+  - delay 50
+  - setAI{ai=true} @self
+  - randomskill{skills=summoner_skill1 2,summoner_skill2 2,summoner_skill3 2,summoner_skill4 2,summoner_skill6 1}
+
+summoner_skill1:
+  Conditions:
+  - health{h=>50} true
+  - playerwithin{d=10} true
+  Skills:
+  - setAI{ai=false} @self
+  - particleline{p=reddust;color=#41904E;amount=5;syo=1.5;tyo=1.5} @target
+  - feed{amount=-1} @target
+  - healpercent{m=0.05} @self
+  - sound{s=entity.generic.eat;p=0.2} @self
+  - delay 10
+  - particleline{p=reddust;color=#41904E;amount=5;syo=1.5;tyo=1.5} @target
+  - feed{amount=-1} @target
+  - healpercent{m=0.02} @self
+  - sound{s=entity.generic.eat;p=0.5} @self
+  - delay 10
+  - particleline{p=reddust;color=#41904E;amount=5;syo=1.5;tyo=1.5} @target
+  - feed{amount=-1} @target
+  - healpercent{m=0.02} @self
+  - sound{s=entity.generic.eat;p=0.5} @self
+  - delay 10
+  - particleline{p=reddust;color=#41904E;amount=5;syo=1.5;tyo=1.5} @target
+  - feed{amount=-1} @target
+  - healpercent{m=0.02} @self
+  - sound{s=entity.generic.eat;p=0.5} @self
+  - delay 10
+  - particleline{p=reddust;color=#41904E;amount=5;syo=1.5;tyo=1.5} @target
+  - feed{amount=-1} @target
+  - healpercent{m=0.02} @self
+  - sound{s=entity.generic.eat;p=0.5} @self
+  - delay 10
+  - particleline{p=reddust;color=#41904E;amount=5;syo=1.5;tyo=1.5} @target
+  - feed{amount=-1} @target
+  - healpercent{m=0.02} @self
+  - sound{s=entity.generic.eat;p=0.5} @self
+  - setAI{ai=true} @self
+
+summoner_skill2:
+  Conditions:
+  - health{h=<50} true
+  - playerwithin{d=10} true
+  Skills:
+  - setAI{ai=false} @self
+  - particleline{p=reddust;color=#41904E;amount=5;syo=1.5;tyo=1.5} @target
+  - feed{amount=-2} @target
+  - healpercent{m=0.05} @self
+  - sound{s=entity.generic.eat;p=0.5} @self
+  - delay 10
+  - particleline{p=reddust;color=#41904E;amount=5;syo=1.5;tyo=1.5} @target
+  - feed{amount=-2} @target
+  - healpercent{m=0.05} @self
+  - sound{s=entity.generic.eat;p=0.5} @self
+  - delay 10
+  - particleline{p=reddust;color=#41904E;amount=5;syo=1.5;tyo=1.5} @target
+  - feed{amount=-2} @target
+  - healpercent{m=0.05} @self
+  - sound{s=entity.generic.eat;p=0.5} @self
+  - delay 10
+  - particleline{p=reddust;color=#41904E;amount=5;syo=1.5;tyo=1.5} @target
+  - feed{amount=-2} @target
+  - healpercent{m=0.05} @self
+  - sound{s=entity.generic.eat;p=0.5} @self
+  - delay 10
+  - particleline{p=reddust;color=#41904E;amount=5;syo=1.5;tyo=1.5} @target
+  - feed{amount=-2} @target
+  - healpercent{m=0.05} @self
+  - sound{s=entity.generic.eat;p=0.5} @self
+  - delay 10
+  - particleline{p=reddust;color=#41904E;amount=5;syo=1.5;tyo=1.5} @target
+  - feed{amount=-2} @target
+  - healpercent{m=0.05} @self
+  - sound{s=entity.generic.eat;p=0.5} @self
+  - setAI{ai=true} @self
+
+summoner_skill3:
+  Skills:
+  - setAI{ai=false} @self
+  - particles{p=smoke;a=200;hs=2;vs=0.2;y=0.2} @self
+  - summon{type=skelet_summoned;amount=<random.1to2>;radius=4} @self
+  - sound{s=entity.warden.listening_angry;p=1} @self
+  - delay 10
+  - particles{p=smoke;a=200;hs=2;vs=0.2;y=0.2} @self
+  - summon{type=skelet_summoned;amount=<random.1to2>;radius=4} @self
+  - sound{s=entity.warden.listening_angry;p=1} @self
+  - delay 10
+  - particles{p=smoke;a=200;hs=2;vs=0.2;y=0.2} @self
+  - summon{type=skelet_summoned;amount=<random.1to2>;radius=4} @self
+  - sound{s=entity.warden.listening_angry;p=1} @self
+  - delay 10
+  - particles{p=smoke;a=200;hs=2;vs=0.2;y=0.2} @self
+  - summon{type=skelet_summoned;amount=<random.1to2>;radius=4} @self
+  - sound{s=entity.warden.listening_angry;p=1} @self
+  - setAI{ai=true} @self
+
+summoner_skill4:
+  Conditions:
+  - variableEquals{var=caster.skull;value=0} true
+  Skills:
+  - setvariable{var=caster.skull;type=INTEGER;value=1} @self
+  - particles{p=smoke;a=100;hs=0.5;vs=0.2;y=0.2} @self
+  - summon{type=skull_summoned;amount=1;radius=1} @self
+  - sound{s=entity.evoker.prepare_summon;p=1} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=20000000;level=100;p=false} @self
+
+summoner_skull_die:
+  Conditions:
+  - variableEquals{var=caster.skull;value=1} true
+  Skills:
+  - potionclear{type=DAMAGE_RESISTANCE} @self
+  - setvariable{var=caster.skull;type=INTEGER;value=0} @self
+
+summoner_skull:
+  Conditions:
+  - variableEquals{var=caster.skull;value=1} true
+  Skills:
+  - signal{s=SKULL_PROTECT} @MobsInRadius{r=20;t=skull_summoned}
+  - setAI{ai=true} @self
+
+summoner_skill5:
+  Conditions:
+  - variableEquals{var=caster.guard;value=0} true
+  Skills:
+  - setvariable{var=caster.guard;type=INTEGER;value=1} @self
+  - setAI{ai=false} @self
+  - sound{s=entity.warden.dig;p=1.5} @self
+  - particles{p=smoke;a=100;hs=1;vs=0.2;y=0.2} @self
+  - delay 20
+  - particles{p=smoke;a=100;hs=1;vs=0.2;y=0.2} @self
+  - delay 20
+  - particles{p=smoke;a=100;hs=1;vs=0.2;y=0.2} @self
+  - summon{type=skelet_guard_summoned;amount=2;radius=2} @self
+  - setAI{ai=true} @self
+
+summoner_skill6:
+  Skills:
+  - setAI{ai=false} @self
+  - command{c="summon minecraft:evoker_fangs";op=true;target=true} @TT
+  - particles{p=reddust;color=#46D15D;a=50;hs=0.3;vs=0.3;y=1} @self
+  - sound{s=epicfight:sfx.entity_move;p=0.5} @self
+  - delay 10
+  - command{c="summon minecraft:evoker_fangs";op=true;target=true} @TT
+  - particles{p=reddust;color=#46D15D;a=50;hs=0.3;vs=0.3;y=1} @self
+  - sound{s=epicfight:sfx.entity_move;p=0.5} @self
+  - delay 10
+  - command{c="summon minecraft:evoker_fangs";op=true;target=true} @TT
+  - particles{p=reddust;color=#46D15D;a=50;hs=0.3;vs=0.3;y=1} @self
+  - sound{s=epicfight:sfx.entity_move;p=0.5} @self
+  - delay 10
+  - command{c="summon minecraft:evoker_fangs";op=true;target=true} @TT
+  - particles{p=reddust;color=#46D15D;a=50;hs=0.3;vs=0.3;y=1} @self
+  - sound{s=epicfight:sfx.entity_move;p=0.5} @self
+  - delay 10
+  - command{c="summon minecraft:evoker_fangs";op=true;target=true} @TT
+  - particles{p=reddust;color=#46D15D;a=50;hs=0.3;vs=0.3;y=1} @self
+  - sound{s=epicfight:sfx.entity_move;p=0.5} @self
+  - setAI{ai=true} @self
+
+
+
+hunter_leap:
+  Conditions:
+  - targetinlineofsight true
+  - targetwithin{d=3} true
+  Skills:
+  - particles{p=smoke;a=20;hs=0.2;vs=0.1;y=0.1} @self
+  - sound{s=epicfight:sfx.entity_move;p=1} @self
+  - propel{v=0.7} @target
+
+hunter_equip:
+  Skills:
+  - skill{s=hunter_equip_bow} @self
+  - skill{s=hunter_equip_weapon} @self
+
+hunter_equip_weapon:
+  Conditions:
+  - targetwithin{d=5} true
+  Skills:
+  - equip{item=EPICFIGHT_IRON_DAGGER HAND} @self
+  - equip{item=EPICFIGHT_IRON_DAGGER OFFHAND} @self
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=meleeattack} @self
+  - sound{s=item.armor.equip_iron;p=1} @self
+
+hunter_equip_bow:
+  Conditions:
+  - targetwithin{d=50} true
+  Skills:
+  - equip{item=BOW HAND} @self
+  - equip{item=AIR OFFHAND} @self
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=bowattack} @self
+  - sound{s=item.armor.equip_iron;p=1} @self
+
+hunter_skill_cast:
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - setAI{ai=false} @self
+  - particleorbital{p=reddust;color=#FFEF00;r=0.8;points=16;t=40;i=1;vy=15;y=2.3} @self
+  - delay 50
+  - setAI{ai=true} @self
+  - randomskill{skills=hunter_skill1,hunter_skill2,hunter_skill3}
+
+hunter_skill1:
+  Skills:
+  - sound{s=entity.wolf.howl;p=1} @self
+  - particles{p=End_Rod;a=50;hs=1;vs=0.3;y=1} @self
+  - summon{type=wolf_summoned;amount=<random.5to10>;radius=0} @self
+
+hunter_skill2:
+  Skills:
+  - sound{s=entity.wither.shoot;p=0.5} @self
+  - particles{p=cloud;a=1000;hs=0.1;vs=0.1;y=2;s=1} @self
+  - particles{p=flash;a=10;hs=0.5;vs=0.5;y=2} @self
+  - delay 5
+  - freeze{ticks=200} @PIR{r=20}
+  - potion{type=SLOW;duration=80;level=1;p=false} @PIR{r=15}
+  - potion{type=BLINDNESS;duration=80;level=1;p=false} @PIR{r=15}
+  - particles{p=flash;a=10;hs=0.5;vs=0.5;y=2} @self
+  - delay 5
+  - particles{p=flash;a=10;hs=0.5;vs=0.5;y=2} @self
+
+hunter_skill3:
+  Skills:
+  - setAI{ai=false} @self
+  - sound{s=block.glass.break;p=0.5} @self
+  - summon{type=ice_wall_summoned;amount=1;radius=5;yRadius=1} @self
+  - delay 10
+  - sound{s=block.glass.break;p=0.5} @self
+  - summon{type=ice_wall_summoned;amount=1;radius=5;yRadius=1} @self
+  - delay 10
+  - sound{s=block.glass.break;p=0.5} @self
+  - summon{type=ice_wall_summoned;amount=1;radius=5;yRadius=1} @self
+  - delay 10
+  - setAI{ai=true} @self
+  - skill{s=hunter_skill_cast} @self
+
+
+
+
+
+
+slimeA_skill_cast:
+  Conditions:
+  - targetwithin{d=40} true
+  - variableEquals{var=caster.cast;value="1"} true
+  Skills:
+  - setAI{ai=false} @self
+  - particleorbital{p=reddust;color=#FFEF00;r=0.8;points=16;t=40;i=1;vy=15;y=2.3} @self
+  - delay 50
+  - setAI{ai=true} @self
+  - randomskill{skills=slimeA_skill1,slimeA_skill2,slimeA_skill3}
+  - setvariable{var=caster.cast;value="0";type=INTEGER} @self
+  - setvariable{var=target.cast;value="1";type=INTEGER} @Children
+
+slimeA_skill1:
+  Skills:
+  - setAI{ai=false} @self
+  - particlesphere{particle=Glow_Squid_Ink;amount=200;radius=2;y=0.5} @self
+  - delay 10
+  - particlesphere{particle=Glow_Squid_Ink;amount=200;radius=2;y=0.5} @self
+  - delay 10
+  - particlesphere{particle=Glow_Squid_Ink;amount=200;radius=2;y=0.5} @self
+  - delay 10
+  - particlesphere{particle=Glow_Squid_Ink;amount=200;radius=2;y=0.5} @self
+  - delay 10
+  - particlesphere{particle=Glow_Squid_Ink;amount=200;radius=2;y=0.5} @self
+  - delay 10
+  - particlesphere{particle=Glow_Squid_Ink;amount=200;radius=2;y=0.5;s=1} @self
+  - delay 5
+  - potion{type=SLOW;duration=200;level=2;p=false} @PIR{r=15}
+  - potion{type=POISON;duration=200;level=3;p=false} @PIR{r=15}
+  - setAI{ai=true} @self
+
+slimeA_skill2:
+  Conditions:
+  - targetwithin{d=10} false
+  - targetwithin{d=40} true
+  Skills:
+  - setAI{ai=false} @self
+  - projectile{onTick=slimeA_skill2-Tick;onHit=slimeA_skill2-Hit;v=20;i=1;hR=1;vR=1;hnp=true}  @PIR{r=40}
+  - delay 10
+  - projectile{onTick=slimeA_skill2-Tick;onHit=slimeA_skill2-Hit;v=20;i=1;hR=1;vR=1;hnp=true}  @PIR{r=40}
+  - delay 10
+  - projectile{onTick=slimeA_skill2-Tick;onHit=slimeA_skill2-Hit;v=20;i=1;hR=1;vR=1;hnp=true}  @PIR{r=40}
+  - setAI{ai=true} @self
+slimeA_skill2-Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#00CC00;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+slimeA_skill2-Hit:
+  Skills:
+  - damage{a=5}
+  - potion{type=BLINDNESS;duration=200;level=0;p=false}
+  - potion{type=POISON;duration=200;level=3;p=false}
+
+slimeA_skill3:
+  Conditions:
+  - variableEquals{var=caster.brother;value="1"} true
+  Skills:
+  - skill{s=slimeA_skill3_self}
+  - skill{s=slimeA_skill3_brother}
+
+slimeA_skill3_self:
+  Conditions:
+  - variableInRange{var=caster.brother_health;value=><caster.hp>}
+  Skills:
+  #- message{m="1 - <caster.var.brother_health> / <caster.hp>"} @PIR{r=30}
+  - setAI{ai=false} @self
+  - signal{s=BROTHER_HEAL} @Children
+  - setvariable{var=caster.heal;value="<caster.var.brother_health>-<caster.hp>";type=INTEGER} @self
+  - particleline{particle=reddust;color=#00CC00;amount=1;fromOrigin=false;syo=1;tyo=1;sso=1;zz=true} @Children
+  - heal{amount=<caster.var.heal>/5} @self
+  - delay 10
+  - particleline{particle=reddust;color=#00CC00;amount=1;fromOrigin=false;syo=1;tyo=1;sso=1;zz=true} @Children
+  - heal{amount=<caster.var.heal>/5} @self
+  - delay 10
+  - particleline{particle=reddust;color=#00CC00;amount=1;fromOrigin=false;syo=1;tyo=1;sso=1;zz=true} @Children
+  - heal{amount=<caster.var.heal>/5} @self
+  - delay 10
+  - particleline{particle=reddust;color=#00CC00;amount=1;fromOrigin=false;syo=1;tyo=1;sso=1;zz=true} @Children
+  - heal{amount=<caster.var.heal>/5} @self
+  - delay 10
+  - particleline{particle=reddust;color=#00CC00;amount=1;fromOrigin=false;syo=1;tyo=1;sso=1;zz=true} @Children
+  - heal{amount=<caster.var.heal>/5} @self
+  - setAI{ai=true} @self
+  - setvariable{var=caster.brother_health;value="<caster.hp>";type=INTEGER} @self
+slimeA_skill3_brother:
+  Conditions:
+  - variableInRange{var=caster.brother_health;value=<<caster.hp>}
+  Skills:
+  #- message{m="2 - <caster.var.brother_health> / <caster.hp>"} @PIR{r=30}
+  - setAI{ai=false} @self
+  - signal{s=BROTHER_HEAL} @Children
+  - setvariable{var=caster.heal;value="<caster.hp>-<caster.var.brother_health>";type=INTEGER} @self
+  - particleline{particle=reddust;color=#00CC00;amount=1;fromOrigin=false;syo=1;tyo=1;sso=1;zz=true} @Children
+  - heal{amount=<caster.var.heal>/5} @Children
+  - delay 10
+  - particleline{particle=reddust;color=#00CC00;amount=1;fromOrigin=false;syo=1;tyo=1;sso=1;zz=true} @Children
+  - heal{amount=<caster.var.heal>/5} @Children
+  - delay 10
+  - particleline{particle=reddust;color=#00CC00;amount=1;fromOrigin=false;syo=1;tyo=1;sso=1;zz=true} @Children
+  - heal{amount=<caster.var.heal>/5} @Children
+  - delay 10
+  - particleline{particle=reddust;color=#00CC00;amount=1;fromOrigin=false;syo=1;tyo=1;sso=1;zz=true} @Children
+  - heal{amount=<caster.var.heal>/5} @Children
+  - delay 10
+  - particleline{particle=reddust;color=#00CC00;amount=1;fromOrigin=false;syo=1;tyo=1;sso=1;zz=true} @Children
+  - heal{amount=<caster.var.heal>/5} @Children
+  - setAI{ai=true} @self
+  - setvariable{var=caster.brother_health;value="<caster.hp>";type=INTEGER} @self
+
+slime_brother_die:
+  Skills:
+  - setvariable{var=caster.brother;value="0";type=INTEGER} @self
+
+boss_level_drop_slime:
+  Conditions:
+  - variableEquals{var=caster.brother;value="0"} true
+  Skills:
+  - skill{s=boss_level_drop} @self
+
+slimeA_angry:
+  Conditions:
+  - variableEquals{var=caster.brother;value="0"} true
+  Skills:
+  - blockmask{material=SLIME_BLOCK;r=3;duration=100} @self
+
+slimeB_skill_cast:
+  Conditions:
+  - targetwithin{d=40} true
+  - variableEquals{var=caster.cast;value="1"} true
+  Skills:
+  - setAI{ai=false} @self
+  - particleorbital{p=reddust;color=#FFEF00;r=0.8;points=16;t=40;i=1;vy=15;y=2.3} @self
+  - delay 50
+  - setAI{ai=true} @self
+  - randomskill{skills=slimeB_skill1,slimeB_skill2,slimeB_skill4}
+  - setvariable{var=caster.cast;value="0";type=INTEGER} @self
+  - setvariable{var=target.cast;value="1";type=INTEGER} @Parent
+
+slimeB_skill1:
+  Skills:
+  - setAI{ai=false} @self
+  - particlesphere{particle=flame;amount=200;radius=2;y=0.5} @self
+  - delay 10
+  - particlesphere{particle=flame;amount=200;radius=2;y=0.5} @self
+  - delay 10
+  - particlesphere{particle=flame;amount=200;radius=2;y=0.5} @self
+  - delay 10
+  - particlesphere{particle=flame;amount=200;radius=2;y=0.5} @self
+  - delay 10
+  - particlesphere{particle=flame;amount=200;radius=2;y=0.5} @self
+  - delay 10
+  - particlesphere{particle=flame;amount=200;radius=2;y=0.5;s=1} @self
+  - delay 5
+  - ignite{ticks=200} @PIR{r=15}
+  - damage{a=10} @PIR{r=15}
+  - setAI{ai=true} @self
+
+slimeB_skill2:
+  Conditions:
+  - variableEquals{var=caster.brother;value="1"} true
+  Skills:
+  - signal{s=BROTHER_HEAL} @Parent
+
+slimeB_skill3:
+  Skills:
+  - setAI{ai=false} @self
+  - particleline{particle=flame;amount=1;fromOrigin=false;syo=1;tyo=1;sso=-1;zz=true} @Parent
+  - delay 10
+  - particleline{particle=flame;amount=1;fromOrigin=false;syo=1;tyo=1;sso=-1;zz=true} @Parent
+  - delay 10
+  - particleline{particle=flame;amount=1;fromOrigin=false;syo=1;tyo=1;sso=-1;zz=true} @Parent
+  - delay 10
+  - particleline{particle=flame;amount=1;fromOrigin=false;syo=1;tyo=1;sso=-1;zz=true} @Parent
+  - delay 10
+  - particleline{particle=flame;amount=1;fromOrigin=false;syo=1;tyo=1;sso=-1;zz=true} @Parent
+  - setAI{ai=true} @self
+
+slimeB_skill4:
+  Conditions:
+  - targetwithin{d=10} false
+  - targetwithin{d=40} true
+  Skills:
+  - setAI{ai=false} @self
+  - projectile{onTick=slimeB_skill4-Tick;onHit=slimeB_skill4-Hit;v=20;i=1;hR=1;vR=1;hnp=true} @PIR{r=40}
+  - delay 10
+  - projectile{onTick=slimeB_skill4-Tick;onHit=slimeB_skill4-Hit;v=20;i=1;hR=1;vR=1;hnp=true} @PIR{r=40}
+  - delay 10
+  - projectile{onTick=slimeB_skill4-Tick;onHit=slimeB_skill4-Hit;v=20;i=1;hR=1;vR=1;hnp=true} @PIR{r=40}
+  - setAI{ai=true} @self
+slimeB_skill4-Tick:
+  Skills:
+  - effect:particles{p=fire;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+slimeB_skill4-Hit:
+  Skills:
+  - damage{a=10}
+  - ignite{ticks=200} @PIR{r=15}
+
+slimeB_angry:
+  Conditions:
+  - variableEquals{var=caster.brother;value="0"} true
+  Skills:
+  - blockmask{material=MAGMA_BLOCK;r=3;duration=100} @self
+
+
+
+
+
+witch_attack:
+  Conditions:
+  - variableEquals{var=caster.casting;value="0"} true
+  Skills:
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=meleeattack} @self
+  - setvariable{var=caster.attack_ready;value="1";type=INTEGER} @self
+witch_attack_ready:
+  Conditions:
+  - targetwithin{d=10} true
+  - variableEquals{var=caster.attack_ready;value="1"} true
+  - variableEquals{var=caster.casting;value="0"} true
+  Skills:
+  - shootpotion{type=SLOW;duration=200;level=4;velocity=1} @TargetLocation
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=fleeConditional{distance=5;speed=1.2;safespeed=1;conditions=[ - targetwithin{d=5} true ]}} @self
+  - setvariable{var=caster.attack_ready;value="0";type=INTEGER} @self
+
+witch_skill_cast:
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - setvariable{var=caster.casting;value="0";type=INTEGER} @self
+  - setAI{ai=false} @self
+  - particleorbital{p=reddust;color=#FFEF00;r=0.8;points=16;t=40;i=1;vy=15;y=2.3} @self
+  - delay 50
+  - setAI{ai=true} @self
+  - randomskill{skills=witch_skill1}
+
+witch_skill1:
+  Skills:
+  - projectile{bulletType=ITEM;material=LINGERING_POTION;onEndSkill=witch_skill1-Hit;v=15;i=1;hR=1;vR=1;hnp=true;y=1.5;gravity=1;tyo=20} @PIR{r=20}
+witch_skill1-Hit:
+  Skills:
+  - damage{a=10} @PIR{r=10}
+  - potion{type=SLOW;duration=100;lvl=2} @PIR{r=10}
+  - summonareaeffectcloud{d=200;r=20;rrot=1}
+

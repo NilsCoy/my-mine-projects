@@ -1,0 +1,300 @@
+# Download it here: https://black-minecraft.com/resources/552/
+Sync:
+  General:
+    # Enable or disable syncing function
+    enable: true
+    # Enable debug messages, when something not work as expected
+    debug: false
+  Tasks:
+    Save:
+      # Enable or disable automatic saving task
+      enable: true
+      # Save all players every x amount of seconds
+      every: 300
+  Data:
+    # Sync inventory
+    inventory: true
+    # Sync enderchest
+    enderchest: true
+    # Sync player location
+    location: true
+    # Sync hotbar slot
+    hotBarSlot: true
+    # Sync xp
+    xp: true
+    # Sync xp level
+    xpLevel: true
+    # Sync gamemode
+    gamemode: true
+    # Sync potions
+    potions: true
+    # Sync bed location
+    bedLocation: true
+    # Sync compass location
+    compassLocation: true
+    # Sync flying
+    flying: true
+    # Sync sneaking
+    sneaking: true
+    # Sync fly speed
+    flySpeed: true
+    # Sync walk speed
+    walkSpeed: true
+    # Sync health
+    health: true
+    # Sync max health
+    maxHealth: false
+    # Sync food
+    food: true
+    # Sync saturation
+    saturation: true
+    # Sync money accounts (only when vault is installed)
+    vault: false
+  Message:
+    # Message to player when player sync is complete
+    Complete:
+      # Enable/disable sync complete message, message is editable in messages.yml file
+      enable: true
+  Database:
+    # Define database engine, can by: mysql
+    engine: mysql
+    MySQL:
+      host: localhost
+      port: 3306
+      database: database
+      user: user
+      password: password
+      # Hight recommended for common usage to set true.
+      ssl: true
+      # Database prefix for tables.
+      prefix: invsave
+  # MysqlPlayerDataBridge database configuration for migration
+  Migrate:
+    # Enable or disable database connection to MPDB database. When you finish migration, it's recommended to disable this
+    enable: false
+    Database:
+      MySQL:
+        host: localhost
+        port: 3306
+        database: database
+        user: user
+        password: password
+        ssl: false
+      # Tables and migration configuration for MPDB tables
+      Tables:
+        Inventory:
+          name: mpdb_inventory
+          # Enable or disable migrate inventories to InventorySaver Sync database
+          migrate: true
+        Enderchest:
+          name: mpdb_enderchest
+          # Enable or disable migrate enderchests to InventorySaver Sync database
+          migrate: true
+        Experience:
+          name: mpdb_experience
+          # Enable or disable migrate exp potions and level to InventorySaver Sync database
+          migrate: true
+        PotionEffects:
+          name: mpdb_potionEffects
+          # Enable or disable migrate potion effects to InventorySaver Sync database
+          migrate: true
+        OtherData:
+          name: mpdb_health_food_air
+          # Enable or disable migrate health, food and air to InventorySaver Sync database
+          migrate: true
+        Location:
+          name: mpdb_location
+          # Enable or disable migrate locations to InventorySaver Sync database
+          migrate: true
+        Economy:
+          name: mpdb_economy
+          # Enable or disable migrate economy to InventorySaver Sync database
+          migrate: false
+
+Database:
+  # Define database engine, can by: sqllite, mysql
+  engine: sqllite
+  # Configure connection to MySQL dabatase.
+  MySQL:
+    host: localhost
+    port: 3306
+    database: database
+    user: user
+    password: password
+    # Hight recommended for common usage to set true.
+    ssl: true
+    # Database prefix for tables.
+    prefix: invsave
+  SQLLite:
+    prefix: invsave
+
+General:
+  # Set timezone, when database and minecraft server were in different timezones, set default to not change this
+  timezone: default
+  dateTimeFormat: yyyy-MM-dd HH:mm:ss
+  # Use offline players on tab-complete. If you have a lots of offline players and the delay of tam-complete is big, please set to false
+  useOfflinePlayers: true
+  # Used for server identification when you use same database on multiple server instances
+  server: node-1
+
+Inventory:
+  # When save player inventories?
+  Save:
+    # Autosave every x seconds/minutes/hours...
+    autosave: true
+    # Save inventory every login.
+    login: true
+    # Save inventory every logout.
+    logout: true
+    # Save inventory every player death.
+    death: true
+    # Save inventory when player world switch.
+    WorldChange:
+      # Save the inventory before player change world. When player teleport from world ONE to world TWO, inventory from world ONE is saved
+      beforeTeleport: true
+      # Save the inventory after player change world. When player teleport from world ONE to world TWO, inventory from world TWO is saved
+      afterTeleport: false
+  # Configure autosaving inventories.
+  Autosave:
+    # Interval autosaving, default to 10 minutes. Put value in seconds.
+    interval: 600
+  # Deleting saved inventories, only if you wish
+  Backup:
+    # Delete all inventories with login cause after 30 days or set false to disable automatic delete
+    Login:
+      deleteAfter: 30
+    # Delete all inventories with logout cause after 30 days or set false to disable automatic delete
+    Logout:
+      deleteAfter: 30
+    # Delete all inventories with autosave cause after 7 days or set false to disable automatic delete
+    Autosave:
+      deleteAfter: 7
+    # Delete all inventories with death cause after 30 days or set false to disable automatic delete
+    Death:
+      deleteAfter: 30
+    # Delete all inventories with manual cause after 356 days or set false to disable automatic delete
+    Manual:
+      deleteAfter: 356
+    # Delete all inventories with world change cause after 30 days or set false to disable automatic delete
+    WorldChange:
+      deleteAfter: 30
+  # Disable saving in configured worlds
+  disabled-worlds:
+  - custom_world
+  # General configuration for menus
+  Menu:
+    # Configuration of custom items for every cause of history menu
+    History:
+      Cause:
+        Login:
+          # Values in https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html can by used
+          material: PLAYER_HEAD
+          # Texture of player had can by used
+          texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTliZjMyOTJlMTI2YTEwNWI1NGViYTcxM2FhMWIxNTJkNTQxYTFkODkzODgyOWM1NjM2NGQxNzhlZDIyYmYifX19
+          # Player head can by used by name or by a variable %playerUUID%
+          # player: MrFiliper
+          # player: %playerUUID%
+          # The number of items
+          count: 1
+        Logout:
+          material: PLAYER_HEAD
+          texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ2OWUwNmU1ZGFkZmQ4NGU1ZjNkMWMyMTA2M2YyNTUzYjJmYTk0NWVlMWQ0ZDcxNTJmZGM1NDI1YmMxMmE5In19fQ==
+          count: 1
+        AutoSave:
+          material: PLAYER_HEAD
+          texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTY3ZDgxM2FlN2ZmZTViZTk1MWE0ZjQxZjJhYTYxOWE1ZTM4OTRlODVlYTVkNDk4NmY4NDk0OWM2M2Q3NjcyZSJ9fX0=
+          count: 1
+        Death:
+          material: PLAYER_HEAD
+          texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzM2ZmViZWNhN2M0ODhhNjY3MWRjMDcxNjU1ZGRlMmExYjY1YzNjY2IyMGI2ZThlYWY5YmZiMDhlNjRiODAifX19
+          count: 1
+        Manual:
+          material: PLAYER_HEAD
+          texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2VkZDIwYmU5MzUyMDk0OWU2Y2U3ODlkYzRmNDNlZmFlYjI4YzcxN2VlNmJmY2JiZTAyNzgwMTQyZjcxNiJ9fX0=
+          count: 1
+        WorldChange:
+          material: PLAYER_HEAD
+          texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2U0MWM2MDU3MmM1MzNlOTNjYTQyMTIyODkyOWU1NGQ2Yzg1NjUyOTQ1OTI0OWMyNWMzMmJhMzNhMWIxNTE3In19fQ==
+          count: 1
+
+Enderchest:
+  # When save enderchest inventories?
+  Save:
+    # Autosave every x seconds/minutes/hours...
+    autosave: false
+    # Save inventory every login.
+    login: false
+    # Save inventory every logout.
+    logout: false
+    # Save inventory every player death.
+    death: false
+    # Save inventory when player world switch.
+    WorldChange:
+      # Save the inventory before player change world. When player teleport from world ONE to world TWO, inventory from world ONE is saved
+      beforeTeleport: true
+      # Save the inventory after player change world. When player teleport from world ONE to world TWO, inventory from world TWO is saved
+      afterTeleport: false
+    # If saves the empty enderchest or not, by default its true, manual enderchest saving ignore this settings
+    saveEmpty: true
+  # Configure autosaving inventories.
+  Autosave:
+    # Interval autosaving, default to 10 minutes. Put value in seconds.
+    interval: 600
+  # Deleting saved enderchest inventories, only if you wish
+  Backup:
+    # Delete all inventories with login cause after 30 days or set false to disable automatic delete
+    Login:
+      deleteAfter: 30
+    # Delete all inventories with logout cause after 30 days or set false to disable automatic delete
+    Logout:
+      deleteAfter: 30
+    # Delete all inventories with autosave cause after 7 days or set false to disable automatic delete
+    Autosave:
+      deleteAfter: 7
+    # Delete all inventories with death cause after 30 days or set false to disable automatic delete
+    Death:
+      deleteAfter: 30
+    # Delete all inventories with manual cause after 356 days or set false to disable automatic delete
+    Manual:
+      deleteAfter: 356
+    # Delete all inventories with world change cause after 30 days or set false to disable automatic delete
+    WorldChange:
+      deleteAfter: 30
+  # Disable saving in configured worlds
+  disabled-worlds:
+  - custom_world
+  # General configuration for menus
+  Menu:
+    # Configuration of custom items for every cause of history menu
+    History:
+      Cause:
+        Login:
+          # Values in https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html can by used
+          material: PLAYER_HEAD
+          # Texture of player had can by used
+          texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTliZjMyOTJlMTI2YTEwNWI1NGViYTcxM2FhMWIxNTJkNTQxYTFkODkzODgyOWM1NjM2NGQxNzhlZDIyYmYifX19
+          # Player head can by used by name or by a variable %playerUUID%
+          # player: MrFiliper
+          # player: %playerUUID%
+          # The number of items
+          count: 1
+        Logout:
+          material: PLAYER_HEAD
+          texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ2OWUwNmU1ZGFkZmQ4NGU1ZjNkMWMyMTA2M2YyNTUzYjJmYTk0NWVlMWQ0ZDcxNTJmZGM1NDI1YmMxMmE5In19fQ==
+          count: 1
+        AutoSave:
+          material: PLAYER_HEAD
+          texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTY3ZDgxM2FlN2ZmZTViZTk1MWE0ZjQxZjJhYTYxOWE1ZTM4OTRlODVlYTVkNDk4NmY4NDk0OWM2M2Q3NjcyZSJ9fX0=
+          count: 1
+        Death:
+          material: PLAYER_HEAD
+          texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzM2ZmViZWNhN2M0ODhhNjY3MWRjMDcxNjU1ZGRlMmExYjY1YzNjY2IyMGI2ZThlYWY5YmZiMDhlNjRiODAifX19
+          count: 1
+        Manual:
+          material: PLAYER_HEAD
+          texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2VkZDIwYmU5MzUyMDk0OWU2Y2U3ODlkYzRmNDNlZmFlYjI4YzcxN2VlNmJmY2JiZTAyNzgwMTQyZjcxNiJ9fX0=
+          count: 1
+        WorldChange:
+          material: PLAYER_HEAD
+          texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2U0MWM2MDU3MmM1MzNlOTNjYTQyMTIyODkyOWU1NGQ2Yzg1NjUyOTQ1OTI0OWMyNWMzMmJhMzNhMWIxNTE3In19fQ==
+          count: 1

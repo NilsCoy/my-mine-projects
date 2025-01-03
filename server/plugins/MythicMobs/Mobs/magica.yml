@@ -1,0 +1,48 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+spell1:
+  Type: silverfish
+  Display: '&7Заклинание'
+  Health: 10000
+  Skills:
+  - model{m=spell1;n=nametag;d=false;h=false} @self ~onSpawn
+  #- teleportY{y="<caster.l.y>+0.3"} @self ~onSpawn
+  - skill{s=remove_spell} @self ~onSpawn
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+spell2:
+  Type: silverfish
+  Display: '&7Заклинание'
+  Health: 10000
+  Skills:
+  - model{m=spell2;n=nametag;d=false;h=false} @self ~onSpawn
+  #- teleportY{y="<caster.l.y>+0.3"} @self ~onSpawn
+  - skill{s=remove_spell} @self ~onSpawn
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+

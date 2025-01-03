@@ -1,0 +1,5 @@
+objectives:
+  #smith_q3: mobkill SKELETON 10 name:&eВосставший_скелет events:smith_q3_reward
+  smith_q3: mmobkill skelet amount:10 events:smith_q3_reward
+  variables: variable no-chat
+  horse_quest: mmobkill wolfhound_boss amount:1 events:horse_quest_finish,horse_quest_state2,horse_compass_off

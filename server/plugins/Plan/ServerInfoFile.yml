@@ -1,0 +1,6 @@
+# Changing the UUID in this file will make Plan regard your server as a completely new server
+# Tread with caution.
+Server:
+    ID: 1
+    UUID: "1afcf64b-f03c-4389-882f-e718beae29c5"
+    Web_address: "https://ger-01-b.leavehosting.com:20058"

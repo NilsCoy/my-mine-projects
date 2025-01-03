@@ -1,0 +1,745 @@
+menu_title: '&6Продажа'
+open_commands:
+  - '[sound] ENTITY_VILLAGER_TRADE 1 0.8'
+size: 45
+items:
+
+  'fish1':
+    material: SALMON
+    slot: 10
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:4
+    display_name: '&bАмур белый'
+    lore:
+      - '&fЦена продажи: &c10Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bАмур белый'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bАмур белый'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 23 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 24 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'fish2':
+    material: SALMON
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:5
+    display_name: '&bАмур черный'
+    lore:
+      - '&fЦена продажи: &c10Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bАмур черный'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bАмур черный'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 25 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 26 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'fish3':
+    material: SALMON
+    slot: 12
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:6
+    display_name: '&bРыба-усач'
+    lore:
+      - '&fЦена продажи: &c10Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bРыба-усач'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bРыба-усач'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 27 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 28 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'fish4':
+    material: SALMON
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:2
+    display_name: '&bРыба-нил'
+    lore:
+      - '&fЦена продажи: &c10Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bРыба-нил'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bРыба-нил'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 29 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 30 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'fish5':
+    material: SALMON
+    slot: 14
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:9
+    display_name: '&bВьюн'
+    lore:
+      - '&fЦена продажи: &c25Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bВьюн'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bВьюн'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 31 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 32 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'fish6':
+    material: SALMON
+    slot: 15
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:11
+    display_name: '&bОбычный карп'
+    lore:
+      - '&fЦена продажи: &c25Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bОбычный карп'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bОбычный карп'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 33 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 34 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'fish7':
+    material: SALMON
+    slot: 16
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:3
+    display_name: '&bГолый карп'
+    lore:
+      - '&fЦена продажи: &c25Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bГолый карп'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bГолый карп'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 35 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 36 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'fish8':
+    material: SALMON
+    slot: 19
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:7
+    display_name: '&bКарп - красный'
+    lore:
+      - '&fЦена продажи: &c25Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bКарп - красный'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bКарп - красный'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 37 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 38 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'fish9':
+    material: SALMON
+    slot: 20
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:1
+    display_name: '&bРыба-скелет'
+    lore:
+      - '&fЦена продажи: &c25Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bРыба-скелет'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bРыба-скелет'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 39 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 40 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'fish10':
+    material: SALMON
+    slot: 21
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:8
+    display_name: '&bКарп - призрак'
+    lore:
+      - '&fЦена продажи: &c50Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bКарп - призрак'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bКарп - призрак'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 41 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 42 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'fish11':
+    material: SALMON
+    slot: 22
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:10
+    display_name: '&bКунджа'
+    lore:
+      - '&fЦена продажи: &c50Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bКунджа'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SALMON'
+          name: '&bКунджа'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 43 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 44 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'treasure1':
+    material: BRICK
+    slot: 23
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:18
+    display_name: '&bРыболовная леска'
+    lore:
+      - '&fЦена продажи: &c10Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bРыболовная леска'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bРыболовная леска'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 45 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 46 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'treasure2':
+    material: BRICK
+    slot: 24
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:19
+    display_name: '&bКоралл'
+    lore:
+      - '&fЦена продажи: &c10Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bКоралл'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bКоралл'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 47 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 48 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'treasure3':
+    material: BRICK
+    slot: 25
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:20
+    display_name: '&bНеобычная раковина'
+    lore:
+      - '&fЦена продажи: &c30Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bНеобычная раковина'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bНеобычная раковина'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 49 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 50 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'treasure4':
+    material: BRICK
+    slot: 28
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:17
+    display_name: '&bСтаринная монета'
+    lore:
+      - '&fЦена продажи: &c20Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bСтаринная монета'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bСтаринная монета'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 51 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 52 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'treasure5':
+    material: BRICK
+    slot: 29
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:32
+    display_name: '&bСундук с сокровищами'
+    lore:
+      - '&fЦена продажи: &c400Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bСундук с сокровищами'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bСундук с сокровищами'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 53 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 54 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'treasure6':
+    material: BRICK
+    slot: 30
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:29
+    display_name: '&bКартошка'
+    lore:
+      - '&fЦена продажи: &c50Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bКартошка'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bКартошка'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 55 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 56 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,37,38,39,40,41,42,43,44]
+    display_name: ' '
+    nbt_int: CustomModelData:1

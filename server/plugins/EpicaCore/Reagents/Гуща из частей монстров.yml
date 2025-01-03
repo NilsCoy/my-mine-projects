@@ -1,0 +1,8 @@
+PositiveEffect_1:
+  Name: REGENERATION
+  Duraction: 200
+  Level: 2
+NegativeEffect_1:
+  Name: HARM
+  Duraction: 300
+  Level: 1

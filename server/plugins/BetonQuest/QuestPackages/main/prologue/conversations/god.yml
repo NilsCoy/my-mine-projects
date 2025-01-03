@@ -1,0 +1,115 @@
+conversations:
+  god:
+    quester: '&fГолос смерти'
+    first: 'npc_node_1'
+    stop: 'true'
+    NPC_options:
+      npc_node_1:
+        text: '&7Вы видите нечто, оно не поддается описанию, однако через мгновение превращается в статую.&f\n\nАх, вот и ты, бедная, слабая душа, которой повезло оказаться не в то время ни в том месте...'
+        condition: ''
+        event: ''
+        pointers: player_node_1
+
+      npc_node_2:
+        text: '&7Вы пытаетесь что-то сказать, однако понимаете, что не можете издать и звука.'
+        condition: ''
+        event: ''
+        pointers: player_node_2
+
+      npc_node_3:
+        text: 'Ты мог бы стать успешным торговцем, а может быть сильнейшим воином. Как бы то ни было, теперь ты лишь мертвец с несчастной судьбой. Однако! Тебе повезло, я решила, что ты станешь моим первым человеком, который воплотит мою мечту. '
+        condition: ''
+        event: ''
+        pointers: player_node_3
+
+      npc_node_4:
+        text: '&7Вы, чуть пошатнувшись, делаете шаг назад.&f\n\nТебе не стоит бояться! Ты вновь увидишь свет, а не растворишься в небытие.'
+        condition: ''
+        event: ''
+        pointers: player_node_4
+
+      npc_node_5:
+        text: '&7Вы пытаетесь задать вопрос, однако все что можете это показать интерес своим выражение лица.&f\n\nЯ, та что владеет смертью и я ищу человека, что станет моим путеводным огнем. Я не смогу вернуть тебя в тот мир, да и не осталось у тебя больше ничего, что могло связывать с ним.'
+        condition: ''
+        event: ''
+        pointers: player_node_5
+
+      npc_node_6:
+        text: 'Я подарю тебе новое тело в новом мире, под названием "Epica". В качестве платы я лишь попрошу тебя выполнить мою просьбу, когда мы вновь встретимся. Это равноценный обмен, так как ты первый кто проходит через это.'
+        condition: ''
+        event: ''
+        pointers: player_node_6
+
+      npc_node_7:
+        text: '&7Вас смущают условия договора, однако воскреснуть в новом теле и в новом, до селя не виданном месте, вас радует и вы покорно соглашаетесь, как бы то ни было, разве у вас есть выбор?&f\n\nЧто же, да будет так.'
+        condition: ''
+        event: ''
+        pointers: player_node_7
+
+      npc_node_8:
+        text: '&7Ваше сознание вновь мутнеет...&f\n\nБуду ждать тебя на той стороне.'
+        condition: ''
+        event: 'god_effect'
+        pointers: player_node_8
+
+      npc_node_9:
+        text: '&7Вы внезапно просыпаетесь от боли в груди.'
+        condition: ''
+        event: ''
+        pointers: player_node_9
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Где я?'
+        condition: ''
+        event: ''
+        pointers: npc_node_2
+
+      player_node_2:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_3:
+        text: ' [ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_4
+
+      player_node_4:
+        text: 'Кто ты?'
+        condition: ''
+        event: ''
+        pointers: npc_node_5
+
+      player_node_5:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_6
+
+      player_node_6:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_7
+
+      player_node_7:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_8
+
+      player_node_8:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_9
+
+      player_node_9:
+        text: '[ ... ]'
+        condition: ''
+        event: 'god_teleport,god_spawn,quest_finished'

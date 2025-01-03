@@ -1,0 +1,64 @@
+menu_title: '&6Справочник: Бестиарий'
+open_commands:
+  - '[sound] ITEM_BOOK_PAGE_TURN 1 1'
+size: 27
+items:
+  'mobs':
+    material: PUFFERFISH_SPAWN_EGG
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fСущества'
+    lore:
+      - '&7Посмотреть список мобов в мире,'
+      - '&7что с них падает и где их можно'
+      - '&7найти?'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы открыть страницу!'
+    click_commands:
+      - '[openguimenu] manual_bestiary_mobs1'
+      - '[refresh]'
+  'bosses':
+    material: MAGMA_CUBE_SPAWN_EGG
+    slot: 15
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fБоссы'
+    lore:
+      - '&7Посмотреть список боссов,'
+      - '&7где они обитают и что можно'
+      - '&7получить победив их?'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы открыть страницу!'
+    click_commands:
+      - '[openguimenu] manual_bestiary_bosses1'
+      - '[refresh]'
+
+
+
+  'home':
+    material: PAPER
+    slot: 18
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:13
+    display_name: '&fВернуться назад'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы вернуться.'
+    click_commands:
+      - '[openguimenu] manual'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+    display_name: ' '
+    nbt_int: CustomModelData:1

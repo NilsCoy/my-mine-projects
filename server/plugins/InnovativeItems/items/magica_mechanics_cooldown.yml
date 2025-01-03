@@ -1,0 +1,7 @@
+spell:
+  material: BLAZE_ROD
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true

@@ -1,0 +1,370 @@
+menu_title: '&6Наковальня'
+open_commands:
+  - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+size: 27
+items:
+  'cobalt_plate':
+    material: BRICK
+    slot: 0
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:4
+    display_name: '&bКобальтовая пластина'
+    lore:
+      - '&fТребования:'
+      - '&7Кобальтовый слиток: &f2'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:2,nameequals:&bКобальтовый слиток%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 18 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'
+
+  'diamond1':
+    material: DIAMOND_CHESTPLATE
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:10
+    display_name: '&cКобальтовый нагрудник'
+    lore:
+      - '&fТребования:'
+      - '&7Стальной нагрудник: &f1'
+      - '&7Кобальтовый слиток: &f10'
+      - '&7Кобальтовая пластина: &f15'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+      - ''
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:10,nameequals:&bКобальтовый слиток%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:15,nameequals:&bКобальтовая пластина%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:IRON_CHESTPLATE,amt:1,nameequals:&cСтальной нагрудник%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 19 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'
+  'diamond2':
+    material: DIAMOND_LEGGINGS
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:10
+    display_name: '&cКобальтовые поножи'
+    lore:
+      - '&fТребования:'
+      - '&7Стальные поножи: &f1'
+      - '&7Кобальтовый слиток: &f5'
+      - '&7Кобальтовая пластина: &f10'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+      - ''
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:5,nameequals:&bКобальтовый слиток%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:10,nameequals:&bКобальтовая пластина%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:IRON_LEGGINGS,amt:1,nameequals:&cСтальные поножи%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 20 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'
+  'diamond3':
+    material: DIAMOND_BOOTS
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:10
+    display_name: '&cКобальтовые ботинки'
+    lore:
+      - '&fТребования:'
+      - '&7Стальные ботинки: &f1'
+      - '&7Кобальтовый слиток: &f5'
+      - '&7Кобальтовая пластина: &f5'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+      - ''
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:5,nameequals:&bКобальтовый слиток%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:5,nameequals:&bКобальтовая пластина%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:IRON_BOOTS,amt:1,nameequals:&cСтальные ботинки%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 21 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'
+
+  'sword5':
+    material: DIAMOND_SWORD
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:10
+    display_name: '&cКобальтовый меч'
+    lore:
+      - '&fТребования:'
+      - '&7Стальной меч: &f1'
+      - '&7Кобальтовый слиток: &f20'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+      - ''
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:20,nameequals:&bКобальтовый слиток%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:IRON_SWORD,amt:1,nameequals:&cСтальной меч%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 22 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'
+  'dagger3':
+    material: EPICFIGHT_DIAMOND_DAGGER
+    slot: 5
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:10
+    display_name: '&cКобальтовый кинжал'
+    lore:
+      - '&fТребования:'
+      - '&7Стальной кинжал: &f1'
+      - '&7Кобальтовый слиток: &f10'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+      - ''
+      - '&7При ношении в руке дает'
+      - '&7эффект скорости 1 уровня.'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:10,nameequals:&bКобальтовый слиток%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:EPICFIGHT_IRON_DAGGER,amt:1,nameequals:&cСтальной кинжал%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 23 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'
+  'longsword3':
+    material: EPICFIGHT_DIAMOND_LONGSWORD
+    slot: 6
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:10
+    display_name: '&cКобальтовый длинный меч'
+    lore:
+      - '&fТребования:'
+      - '&7Стальной длинный меч: &f1'
+      - '&7Кобальтовый слиток: &f25'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+      - ''
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:25,nameequals:&bКобальтовый слиток%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:EPICFIGHT_IRON_LONGSWORD,amt:1,nameequals:&cСтальной длинный меч%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 24 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'
+  'tachi3':
+    material: EPICFIGHT_DIAMOND_TACHI
+    slot: 7
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:10
+    display_name: '&cКобальтовый тати'
+    lore:
+      - '&fТребования:'
+      - '&7Стальной тати: &f1'
+      - '&7Кобальтовый слиток: &f25'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+      - ''
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:25,nameequals:&bКобальтовый слиток%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:EPICFIGHT_IRON_TACHI,amt:1,nameequals:&cСтальной тати%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 25 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'
+  'spear3':
+    material: EPICFIGHT_DIAMOND_SPEAR
+    slot: 8
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:10
+    display_name: '&cКобальтовое копье'
+    lore:
+      - '&fТребования:'
+      - '&7Стальное копье: &f1'
+      - '&7Кобальтовый слиток: &f25'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+      - ''
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:25,nameequals:&bКобальтовый слиток%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:EPICFIGHT_IRON_SPEAR,amt:1,nameequals:&cСтальное копье%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 26 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'
+  'axe4':
+    material: DIAMOND_AXE
+    slot: 9
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:10
+    display_name: '&cКобальтовый топор'
+    lore:
+      - '&fТребования:'
+      - '&7Стальной топор: &f1'
+      - '&7Кобальтовый слиток: &f15'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+      - ''
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:15,nameequals:&bКобальтовый слиток%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:IRON_AXE,amt:1,nameequals:&cСтальной топор%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 27 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'
+  'greatsword4':
+    material: EPICFIGHT_DIAMOND_GREATSWORD
+    slot: 10
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:10
+    display_name: '&cКобальтовый большой меч'
+    lore:
+      - '&fТребования:'
+      - '&7Стальной большой меч: &f1'
+      - '&7Кобальтовый слиток: &f30'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+      - ''
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:30,nameequals:&bКобальтовый слиток%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:EPICFIGHT_IRON_GREATSWORD,amt:1,nameequals:&cСтальной большой меч%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 28 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'

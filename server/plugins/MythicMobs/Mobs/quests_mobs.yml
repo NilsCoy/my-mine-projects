@@ -1,0 +1,134 @@
+
+chest_tutorial:
+  Type: IRON_GOLEM
+  Display: '&fСундук'
+  Health: 100
+  Skills:
+  - skill{s=chest_spawn} @self ~onSpawn
+  - skill{s=chest_open2} @self ~onDamaged
+  - skill{s=chest_idle} @self ~onTimer:10
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  
+tutorial_skelet:
+  Type: SKELETON
+  Display: '&eВосставший скелет'
+  Health: 15
+  #Damage: 8
+  Faction: undead
+  Drops:
+  - bone1 1-5 1
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=despawn} @self ~onTimer:10
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - WOODEN_SWORD HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction ork
+  Modules:
+    ThreatTable: true
+
+pillager_warrior_quest:
+  Type: PILLAGER
+  Display: '&eРазбойник'
+  Health: 30
+  #Damage: 8
+  Faction: pillager
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    Collidable: false
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - CHAINMAIL_HELMET HEAD
+  - CHAINMAIL_CHESTPLATE CHEST
+  - CHAINMAIL_LEGGINGS LEGS
+  - CHAINMAIL_BOOTS FEET
+  - IRON_SWORD HAND
+  - LANTERN OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - goToSpawn{speed=1.3;max=1;min=1}
+  - lookatplayers
+  - randomlookaround
+  - float
+  AITargetSelectors:
+  - clear
+  - nearestconditionaltarget{mr=true;ms=true;conditions=[ - stringequals{val1="%betonquest_main-prologue:condition.prisoner_trigger2%";val2="true"} true ]}
+  Modules:
+    ThreatTable: true
+
+  
+guild_instructor:
+  Type: SKELETON
+  Display: '&eИнструктор'
+  Health: 50
+  #Damage: 8
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    Silent: true
+  Skills:
+  - skill{s=guild_instructor_skill} @target ~onDeath
+  
+  - skill{s=block_sound} @self ~onDamaged
+  - randomskill{skills=guild_instructor_sound3 1,guild_instructor_sound4 1} @self ~onDamaged
+  - randomskill{skills=guild_instructor_sound1 1,guild_instructor_sound2 1} @self ~onTimer:120
+  #- skill{s=leap_for_player} @trigger ~onDamaged ?~distance{d=>2}
+  - skill{s=sword_master_skill_cast} @self ~onTimer:300
+  Equipment:
+  - PLAYER_HEAD{skullTexture=e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjZhZDJlNGFhMTZmOWU5ODg5OTY4Zjc3NDlkMDkxNmIxM2U2MDMyNmNjNGM2ZmNhYTUyNTM2ZGZjOGZiYTJjZSJ9fX0=} HEAD
+  - IRON_CHESTPLATE CHEST
+  - CHAINMAIL_LEGGINGS LEGS
+  - IRON_BOOTS FEET
+  - EPICFIGHT_IRON_GREATSWORD HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  Modules:
+    ThreatTable: true

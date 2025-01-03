@@ -1,0 +1,25 @@
+variables:
+  fishing_progress:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  fishing_max_progress:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 2
+  fishing_point:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  fishing_finish:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  fishing_point_direction:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  fishing_active:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0

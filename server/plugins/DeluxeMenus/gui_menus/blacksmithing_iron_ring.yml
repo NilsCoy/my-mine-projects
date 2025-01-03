@@ -1,0 +1,116 @@
+menu_title: '&6Наковальня'
+open_commands:
+  - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+size: 27
+items:
+  'chainmail1':
+    material: CHAINMAIL_CHESTPLATE
+    slot: 0
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&cКольчуга'
+    lore:
+      - '&fТребования:'
+      - '&7Кожаная куртка: &f1'
+      - '&7Железное колечко: &f40'
+      - '&7Железная пластина: &f20'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+      - ''
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:40,nameequals:&bЖелезное колечко%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:20,nameequals:&bЖелезная пластина%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:LEATHER_CHESTPLATE,amt:1,nameequals:&cКожаная куртка%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 4 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'
+  'chainmail2':
+    material: CHAINMAIL_LEGGINGS
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:2
+    display_name: '&cКольчужные поножи'
+    lore:
+      - '&fТребования:'
+      - '&7Кожаные штаны: &f1'
+      - '&7Железное колечко: &f50'
+      - '&7Железная пластина: &f6'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+      - ''
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:50,nameequals:&bЖелезное колечко%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЖелезная пластина%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:LEATHER_LEGGINGS,amt:1,nameequals:&cКожаные штаны%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 5 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'
+  'chainmail3':
+    material: CHAINMAIL_BOOTS
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКольчужные ботинки'
+    lore:
+      - '&fТребования:'
+      - '&7Кожаные ботинки: &f1'
+      - '&7Железное колечко: &f20'
+      - '&7Железная пластина: &f5'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+      - ''
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:20,nameequals:&bЖелезное колечко%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:5,nameequals:&bЖелезная пластина%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:LEATHER_BOOTS,amt:1,nameequals:&cКожаные ботинки%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 6 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'

@@ -1,0 +1,54 @@
+variables:
+  anvil_state:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  anvil_x:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  anvil_y:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  anvil_z:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  anvil_item:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  anvil_item_finish:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+
+  blast_furnace_state:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  blast_furnace_x:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  blast_furnace_y:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  blast_furnace_z:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  blast_furnace_item:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  blast_furnace_fire:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  blast_furnace_item_in:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0

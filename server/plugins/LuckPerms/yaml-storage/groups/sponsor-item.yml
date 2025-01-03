@@ -1,0 +1,17 @@
+name: sponsor-item
+permissions:
+- axvaults.vault.2
+- axvaults.vault.3
+- axvaults.vault.4
+- axvaults.vault.5
+- axvaults.vault.6
+- axvaults.vault.7
+- axvaults.vault.8
+- axvaults.vault.9
+- sponsor
+- weight.1
+parents:
+- default
+prefixes:
+- '&a🍪 &7| &f':
+    priority: 2

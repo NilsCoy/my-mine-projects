@@ -1,0 +1,376 @@
+Commands:
+  Invsave:
+    History:
+      ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Shows player inventory/enderchest
+        history.'
+      HELP: |-
+        &6❱&e❱ &6&lCommand help &e❱&6❱ &e/invsave history &6❱
+        &6❱ &6/invsave history &eplayer &6❱ &6Shows player &eplayer &6inventory history.
+         &6❱ &6/invsave history &eplayer enderchest &6❱ &6Shows player &eplayer &6enderchest history.
+    Save:
+      ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Manual save player inventory/enderchest.'
+      HELP: |-
+        &6❱&e❱ &6&lCommand help &e❱&6❱ &e/invsave save &6❱
+        &6❱ &6/invsave save &eplayer &6❱ &6Manual save player &eplayer &6inventory.
+         &6❱ &6/invsave save &eplayer enderchest &6❱ &6Manual save player &eplayer &6enderchest.
+    Clear:
+      ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Clear player inventory or
+        enderchest.'
+      HELP: |-
+        &6❱&e❱ &6&lCommand help &e❱&6❱ &e/invsave clear &6❱
+        &6❱ &6/invsave clear &eplayer &6❱ &6Clear player &eplayer &6inventory even when it is offline or online.
+        &6❱ &6/invsave clear &eplayer &6enderchest &6❱ &6Clear player &eplayer &6enderchest even when it is offline or online.
+    Delete:
+      ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Delete inventory or enderchest.'
+      HELP: |-
+        &6❱&e❱ &6&lCommand help &e❱&6❱ &e/invsave delete &6❱
+        &6❱ &6/invsave delete &eid &6❱ &6Delete inventory or enderchest with &eid &6.
+    View:
+      ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Open offline inventory/enderchest.'
+      HELP: |-
+        &6❱&e❱ &6&lCommand help &e❱&6❱ &e/invsave view &6❱
+        &6❱ &6/invsave view &eplayer &6❱ &6Open actual (offline) player &eplayer &6inventory.
+        &6❱ &6/invsave view &eplayer &6enderchest &6❱ &6Open actual (offline) player &eplayer &6enderchest inventory.
+    Load:
+      ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Load inventory to player.'
+      HELP: |-
+        &6❱&e❱ &6&lCommand help &e❱&6❱ &e/invsave load &6❱
+        &6❱ &6/invsave load &eplayer inventory &6❱ &6Load inventory with id &einventory &6 to player &eplayer &6inventory.
+    Edit:
+      ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Open inventory/enderchest
+        and edit.'
+      HELP: |-
+        &6❱&e❱ &6&lCommand help &e❱&6❱ &e/invsave edit &6❱
+        &6❱ &6/invsave edit &eplayer &6❱ &6Open player &eplayer &6inventory and edit it when player is online.
+        &6❱ &6/invsave edit &eplayer enderchest &6❱ &6Open player &eplayer &6enderchest and edit it when player is online.
+    Search:
+      ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Search item in player inventories.'
+      HELP: |-
+        &6❱&e❱ &6&lCommand help &e❱&6❱ &e/invsave search &6❱
+        &6❱ &6/invsave search online item &6❱ &6Search item in your hand in players online inventories.
+        &6❱ &6/invsave search online material &6❱ &6Search material typing in your chat in players online inventories.
+        &6❱ &6/invsave search offline item &6❱ &6Search item in your hand in players offline inventories.
+        &6❱ &6/invsave search offline material &6❱ &6Search material typing in your chat in players offline inventories.
+        &4❱ &cWarning! Searching in players offline inventories may cause server lagging when you are lots of offline players.
+        &4❱ &cWarning! If you have a trouble with searching, type command &6/invsave tasks stop&e.
+    Reload:
+      ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Reload plugin configuration.'
+    Tasks:
+      ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Control all currently running
+        tasks by plugin.'
+      Stop:
+        ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Stops all currently running
+          tasks.'
+      List:
+        ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6List all pending and active
+          tasks.'
+    Sync:
+      ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Control import data to the
+        plugin.'
+      Edit:
+        ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Edit offline inventory/enderchest
+          on whole network.'
+        HELP: |-
+          &6❱&e❱ &6&lCommand help &e❱&6❱ &e/invsave sync edit &6❱
+          &6❱ &6/invsave sync edit &eplayer &6❱ &6Open player &eplayer &6offline network inventory.
+          &6❱ &6/invsave sync edit &eplayer enderchest &6❱ &6Open player &eplayer &6offline network enderchest.
+      Import:
+        ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Import data from server
+          folder to plugin.'
+      Migrate:
+        ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Migrate data from MysqlPlayerDataBridge
+          to plugin.'
+      Save:
+        ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Saving player data across
+          servers.'
+        Kickallinsync:
+          ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Save all players and
+            kick it from server in sync. Be careful! This command is designed to run
+            before servers stop/restart only.'
+      Locks:
+        ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Display all active syncing
+          locks.'
+      Unlock:
+        ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Release player syncing
+          locks. Be careful!'
+        Player:
+          ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Release syncing lock
+            for specific player.'
+          HELP: |-
+            &6❱&e❱ &6&lCommand help &e❱&6❱ &e/invsave sync unlock player &6❱
+            &6❱ &6/invsave sync unlock player &eplayer &6❱ &6Release syncing lock for player &eplayer&6.
+        All:
+          ITEM: '&6❱ &6/%command_name% &e%command_arg% &6❱ &6Release all syncing locks.'
+Sync:
+  Edit:
+    PLAYER_NOT_FOUND: '&4❰&c❰ &cInvSave &c❱&4❱ &cPlayer &4%playerName% &cnot found
+      in the whole database. Played on this network?'
+    SAME_PLAYER_AS_VIEWER: '&4❰&c❰ &cInvSave &c❱&4❱ &cYou can''t open and edit your
+      own inventory.'
+    LOCKED: '&4❰&c❰ &cInvSave &c❱&4❱ &cFailed to save &4%playerName% &cinventory,
+      because player is connected to the network.'
+    LOCKED_ENDERCHEST: '&4❰&c❰ &cInvSave &c❱&4❱ &cFailed to save &4%playerName% &cenderchest,
+      because player is connected to the network.'
+    OPEN: '&e❰&6❰ &eInvSave &6❱&e❱ &6Opening &e%playerName% &6synchronized inventory.'
+    OPEN_ENDERCHEST: '&e❰&6❰ &eInvSave &6❱&e❱ &6Opening &e%playerName% &6synchronized
+      enderchest inventory.'
+    SAVED: '&e❰&6❰ &eInvSave &6❱&e❱ &6Saving &e%playerName% &6synchronized inventory
+      is successful.'
+    SAVED_ENDERCHEST: '&e❰&6❰ &eInvSave &6❱&e❱ &6Saving &e%playerName% &6synchronized
+      enderchest inventory is successful.'
+    ERROR: '&4❰&c❰ &cInvSave &c❱&4❱ &cFailed to save &4%playerName% &cinventory, check
+      the console for errors.'
+    ERROR_ENDERCHEST: '&4❰&c❰ &cInvSave &c❱&4❱ &cFailed to save &4%playerName% &cenderchest,
+      check the console for errors.'
+  Locks:
+    NO_ACTIVE_LOCKS: '&e❰&6❰ &eInvSave &6❱&e❱ &6There is no active syncing locks.'
+    ACTIVE_LOCKS: '&e❰&6❰ &eInvSave &6❱&e❱ &6There is &e%count% &6active syncing locks,
+      check the table below.'
+    PLAYER_LOCK: '&6❱&e❱ &6%playerUUID% &e- &6%playerName% &e- &6%state%'
+    ERROR: '&4❰&c❰ &cInvSave &c❱&4❱ &cThere was an error when getting active syncing
+      locks, please check the console.'
+    ONLINE_PLACEHOLDER: online on this server
+    OFFLINE_PLACEHOLDER: offline on this server
+Inventory:
+  Save:
+    PLAYER_NOT_ONLINE: '&4❰&c❰ &cInvSave &c❱&4❱ &4%playerName% &cmust by online to
+      manual save inventory.'
+    SAVED: '&e❰&6❰ &eInvSave &6❱&e❱ &6You saved &e%playerName% &6inventory.'
+    ENDERCHEST_SAVED: '&e❰&6❰ &eInvSave &6❱&e❱ &6You saved &e%playerName% &6enderchest.'
+  Clear:
+    CLEARED_ONLINE: '&e❰&6❰ &eInvSave &6❱&e❱ &6You cleared &e%playerName% &6inventory.'
+    CLEARED_OFFLINE: '&e❰&6❰ &eInvSave &6❱&e❱ &6You cleared &e%playerName% &6inventory
+      when is offline.'
+    ENDERCHEST_CLEARED_ONLINE: '&e❰&6❰ &eInvSave &6❱&e❱ &6You cleared &e%playerName%
+      &6enderchest.'
+    ENDERCHEST_CLEARED_OFFLINE: '&e❰&6❰ &eInvSave &6❱&e❱ &6You cleared &e%playerName%
+      &6enderchest when is offline.'
+    OFFLINE_PLAYER_NOT_FOUND: '&4❰&c❰ &cInvSave &c❱&4❱ &4%playerName% &cis not online
+      and not found on the server as offline player.'
+    UNKNOWN_ERROR_MESSAGE: '&4❰&c❰ &cInvSave &c❱&4❱ &cThere was an error while loading
+      offline player to clear the inventory. Maybe, error message can help you: &4%error_message%'
+  Delete:
+    INVALID_ID: '&4❰&c❰ &cInvSave &c❱&4❱ &cYou choose wrong inventory id. Inventory
+      id can by only numbers.'
+    FAILED_TO_DELETE_INVENTORY: '&4❰&c❰ &cInvSave &c❱&4❱ &cThere was an error while
+      deleting inventory.'
+    FAILED_TO_DELETE_ENDERCHEST_INVENTORY: '&4❰&c❰ &cInvSave &c❱&4❱ &cThere was an
+      error while deleting enderchest inventory.'
+    INVENTORY_NOT_EXIST: '&4❰&c❰ &cInvSave &c❱&4❱ &cInventory with that id not exist.'
+    ENDERCHEST_NOT_EXIST: '&4❰&c❰ &cInvSave &c❱&4❱ &cEnderchest with that id not exist.'
+    INVENTORY_DELETED: '&e❰&6❰ &eInvSave &6❱&e❱ &6Inventory successfully deleted.'
+    ENDERCHEST_DELETED: '&e❰&6❰ &eInvSave &6❱&e❱ &6Enderchest inventory successfully
+      deleted.'
+  Reload:
+    RELOADED: '&e❰&6❰ &eInvSave &6❱&e❱ &6Plugin configurations loaded and cache cleared.'
+  View:
+    UNKNOWN_ERROR_MESSAGE: '&4❰&c❰ &cInvSave &c❱&4❱ &cThere was an error while opening
+      player offline inventory. Maybe, error message can help you: &4%error_message%'
+    PLAYER_NOT_FOUND: '&4❰&c❰ &cInvSave &c❱&4❱ &cPlayer &4%playerName% &cnot found
+      on this server. Played here?'
+    PLAYER_DATA_SAVED_ERROR_ONLINE: '&4❰&c❰ &cInvSave &c❱&4❱ &cPlayer &4%playerName%
+      &cis online! Failed to save offline inventory. Please use /invsave edit instead.'
+    OPEN: '&e❰&6❰ &eInvSave &6❱&e❱ &6Opening &e%playerName% &6actual offline inventory.'
+    OPEN_ENDERCHEST: '&e❰&6❰ &eInvSave &6❱&e❱ &6Opening &e%playerName% &6actual offline
+      enderchest inventory.'
+  Edit:
+    PLAYER_NOT_ONLINE: '&4❰&c❰ &cInvSave &c❱&4❱ &4%playerName% &cmust by online to
+      open and edit player inventory.'
+    PLAYER_NOT_FOUND: '&4❰&c❰ &cInvSave &c❱&4❱ &cPlayer &4%playerName% &cnot found
+      on this server. Played here?'
+    SAME_PLAYER_AS_VIEWER: '&4❰&c❰ &cInvSave &c❱&4❱ &cYou can''t open and edit your
+      own inventory.'
+    OPEN: '&e❰&6❰ &eInvSave &6❱&e❱ &6Opening &e%playerName% &6inventory.'
+    OPEN_ENDERCHEST: '&e❰&6❰ &eInvSave &6❱&e❱ &6Opening &e%playerName% &6enderchest
+      inventory.'
+  Load:
+    UNKNOWN_ERROR_MESSAGE: '&4❰&c❰ &cInvSave &c❱&4❱ &cThere was an error while getting
+      player offline inventory. Maybe, error message can help you: &4%error_message%'
+    PLAYER_NOT_FOUND: '&4❰&c❰ &cInvSave &c❱&4❱ &cPlayer &4%playerName% &cnot found
+      on this server. Played here?'
+    INVALID_ID: '&4❰&c❰ &cInvSave &c❱&4❱ &cYou choose wrong inventory id. Inventory
+      id can by only numbers.'
+    FAILED: '&4❰&c❰ &cInvSave &c❱&4❱ &cThere was an error occurred when loading player
+      inventory. Maybe, you choose a bed id of inventory?'
+    FAILED_ENDERCHEST: '&4❰&c❰ &cInvSave &c❱&4❱ &cThere was an error occurred when
+      loading player enderchest inventory. Maybe, you choose a bed id of inventory?'
+    LOADED: '&e❰&6❰ &eInvSave &6❱&e❱ &6Load inventory id &e%inventoryID% &6to player
+      &e%playerName%&6.'
+    LOADED_ENDERCHEST: '&e❰&6❰ &eInvSave &6❱&e❱ &6Load enderchest inventory id &e%inventoryID%
+      &6to player &e%playerName%&6.'
+  Search:
+    STARTED: '&e❰&6❰ &eInvSave &6❱&e❱ &6Searching your item in players inventories.
+      It may take a while...'
+    STARTED_ENDERCHEST: '&e❰&6❰ &eInvSave &6❱&e❱ &6Searching your item in players
+      enderchest inventories. It may take a while...'
+    RESULT_EMPTY: '&e❰&6❰ &eInvSave &6❱&e❱ &6Your searched item was not found in any
+      player inventory on server.'
+    RESULT_EMPTY_ENDERCHEST: '&e❰&6❰ &eInvSave &6❱&e❱ &6Your searched item was not
+      found in any player enderchest on server.'
+    RESULT: '&e❰&6❰ &eInvSave &6❱&e❱ &6Total &e%playerCount% &6players found with
+      this item.'
+    RESULT_ITEM: '&e%playerName%'
+    WRONG_MATERIAL: '&4❰&c❰ &cInvSave &c❱&4❱ &cMaterial with that name not exists.'
+    RESULT_ITEM_SPACE: '&6, '
+    RESULT_ITEM_HOVER: '&6Click to open &e%playerName% &6offline inventory and edit
+      items.'
+    PROGRESS: '&e❰&6❰ &eInvSave &6❱&e❱ &6Searched thought &e%count% &6players, &e%remain%
+      &6players remain... (&e%percentage%% &6finished).'
+  Tasks:
+    Stop:
+      STOPPED: '&e❰&6❰ &eInvSave &6❱&e❱ &6All running tasks was stopped.'
+    List:
+      HEADER_ACTIVE: '&e❰&6❰ &eInvSave &6❱&e❱ &6Active and running tasks for InventorySaver.'
+      HEADER_PENDING: '&e❰&6❰ &eInvSave &6❱&e❱ &6Pending tasks for InventorySaver.'
+      ITEM_PENDING: '&6&l>&e&l>&r &6ID &e&l>&r &6%id%'
+      ITEM_ACTIVE: '&6&l>&e&l>&r &6ID &e&l>&r &6%id%&r &6Thread &e&l>&r &6%thread%'
+  Sync:
+    Import:
+      STARTED: '&e❰&6❰ &eInvSave &6❱&e❱ &6Saving &e%players% &6players from server
+        to plugin.'
+      FAILED_TO_LOAD_PLAYER: '&4❰&c❰ &cInvSave &c❱&4❱ &cFailed to load &4%playerName%
+        &cplayer data. Check the console for more information.'
+      FAILED_TO_SAVE_PLAYER: '&4❰&c❰ &cInvSave &c❱&4❱ &cFailed to save &4%playerName%
+        &cplayer data. Check the console for more information.'
+      FINISHED: '&e❰&6❰ &eInvSave &6❱&e❱ &6Importing players is finished. &e%players%
+        &6players was imported.'
+      PARTLY_FINISHED: '&e❰&6❰ &eInvSave &6❱&e❱ &6Importing players... &e%players%
+        &6of &e%totalPlayers% &6imported.'
+      NEED_EMPTY_SERVER: '&4❰&c❰ &cInvSave &c❱&4❱ &cFailed to start import player
+        data, because server is not empty.'
+      CONSOLE_USE_ONLY: '&4❰&c❰ &cInvSave &c❱&4❱ &cThis command must be executed thought
+        console, because no one must be on server during import.'
+    Migrate:
+      STARTED: '&e❰&6❰ &eInvSave &6❱&e❱ &6Migrating data from MysqlPlayerDataBridge
+        started.'
+      PROGRESS: '&e❰&6❰ &eInvSave &6❱&e❱ &6Migrating data from MysqlPlayerDataBridge...
+        %step%/%finalStep%.'
+      SAVING: '&e❰&6❰ &eInvSave &6❱&e❱ &6Saving data from MysqlPlayerDataBridge is
+        in process. &e%players% &6player/s was found in MysqlPlayerDataBridge and
+        converted. Saving all converted data started. Some errors could be displayed
+        in the console.'
+      SAVING_UNKNOWN_PLAYERS: '&e❰&6❰ &eInvSave &6❱&e❱ &6Saving data from MysqlPlayerDataBridge
+        is in process. &e%players% &6player/s was found in MysqlPlayerDataBridge and
+        converted, &e%unknownPlayers% &6player/s was skipped, because they have not
+        valid UUID, check the console for skipped players. Saving all converted data
+        started. Some errors could be displayed in the console.'
+      FINISHED: '&e❰&6❰ &eInvSave &6❱&e❱ &6Saving data from MysqlPlayerDataBridge
+        is finished. &e%players% &6player/s was migrated and &e%playersFailed% &6player/s
+        failed to migrate or migrated only part of data. Check the console for failed
+        players.'
+      RUNNING: '&4❰&c❰ &cInvSave &c❱&4❱ &cFailed to start migration from MysqlPlayerDataBridge,
+        because previous migration is not finished.'
+      MPDB_REQUIRED: '&4❰&c❰ &cInvSave &c❱&4❱ &cFailed to start migration from MysqlPlayerDataBridge.
+        MysqlPlayerDataBridge plugin is required to run migration.'
+      NO_DATABASE_CONNECTION: '&4❰&c❰ &cInvSave &c❱&4❱ &cFailed to start migration
+        from MysqlPlayerDataBridge, because database connection to MysqlPlayerDataBridge
+        is not created.'
+      NEED_EMPTY_SERVER: '&4❰&c❰ &cInvSave &c❱&4❱ &cFailed to start migration from
+        MysqlPlayerDataBridge, because server is not empty.'
+      CONSOLE_USE_ONLY: '&4❰&c❰ &cInvSave &c❱&4❱ &cThis command must be executed thought
+        console, because no one must be on server during migration.'
+      NOT_ENABLED: '&4❰&c❰ &cInvSave &c❱&4❱ &cMigration from MysqlPlayerDataBridge
+        is not enabled or configured. Please check config before run this command.'
+    Save:
+      KickAllInSync:
+        SAVING: '&e❰&6❰ &eInvSave &6❱&e❱ &6Saving all &e%players% &6players data with
+          sync! This command is designed to run only before server start/restart because
+          can cause LAG!'
+        SAVED: '&e❰&6❰ &eInvSave &6❱&e❱ &6All &e%players% &6players is saved!'
+    Unlock:
+      Player:
+        RELEASED: '&e❰&6❰ &eInvSave &6❱&e❱ &6Player lock is released successful. But
+          be careful! Be releasing player syncing locks, there could by potential
+          data loss!'
+        PLAYER_NOT_LOCKED: '&4❰&c❰ &cInvSave &c❱&4❱ &cPlayer don''t have any active
+          syncing lock.'
+        FAILED_TO_RELEASE: '&4❰&c❰ &cInvSave &c❱&4❱ &cThere was an error when trying
+          to release player syncing lock. Please check console.'
+      All:
+        RELEASED: '&e❰&6❰ &eInvSave &6❱&e❱ &6All player syncing locks released successful.
+          But be careful! Be releasing player syncing locks, there could by potential
+          data loss!'
+        FAILED_TO_RELEASE: '&4❰&c❰ &cInvSave &c❱&4❱ &cThere was an error when trying
+          to release syncing locks. Please check console.'
+  History:
+    Open:
+      OPEN: '&e❰&6❰ &eInvSave &6❱&e❱ &6Opening &e%playerName% &6inventory history.'
+      OPEN_ENDERCHEST: '&e❰&6❰ &eInvSave &6❱&e❱ &6Opening &e%playerName% &6enderchest
+        history.'
+    Item:
+      TITLE: '&6❰&e❰ &6%time% &e❱&6❱'
+      UNKNOWN_DEATH_REASON: Unknown
+      LORE:
+      - ''
+      - '&6&l>&e&l>&r &6ID &e&l>&6&l>&r &e%id%'
+      - '&6&l>&e&l>&r &6Time & Date &e&l>&6&l>&r &e%time%'
+      - '&6&l>&e&l>&r &6Cause &e&l>&6&l>&r &e%cause%'
+      - '&6&l>&e&l>&r &6Position - World &e&l>&6&l>&r &e%world%'
+      - '&6&l>&e&l>&r &6Position - X &e&l>&6&l>&r &e%loc_x%'
+      - '&6&l>&e&l>&r &6Position - Y &e&l>&6&l>&r &e%loc_y%'
+      - '&6&l>&e&l>&r &6Position - Z &e&l>&6&l>&r &e%loc_z%'
+      - '&6&l>&e&l>&r &6Position - Pitch &e&l>&6&l>&r &e%pitch%'
+      - '&6&l>&e&l>&r &6Position - Yaw &e&l>&6&l>&r &e%yaw%'
+      - '&6&l>&e&l>&r &6Food &e&l>&6&l>&r &e%food%'
+      - '&6&l>&e&l>&r &6Health &e&l>&6&l>&r &e%health%'
+      - '&6&l>&e&l>&r &6Fly &e&l>&6&l>&r &e%fly%'
+      - '&6&l>&e&l>&r &6XP Level &e&l>&6&l>&r &e%xp_level%'
+      - '&6&l>&e&l>&r &6XP Points &e&l>&6&l>&r &e%xp%'
+      - '&6&l>&e&l>&r &6Gamemode &e&l>&6&l>&r &e%gamemode%'
+      - '&6&l>&e&l>&r &6Server &e&l>&6&l>&r &e%server%'
+      - ''
+      - '&6&l>&e&l>&r &6Left click to show saved inventory'
+      - '&6&l>&e&l>&r &6Right click to show inventory details'
+      LORE_DEATH:
+      - ''
+      - '&6&l>&e&l>&r &6ID &e&l>&6&l>&r &e%id%'
+      - '&6&l>&e&l>&r &6Time & Date &e&l>&6&l>&r &e%time%'
+      - '&6&l>&e&l>&r &6Cause &e&l>&6&l>&r &e%cause%'
+      - '&6&l>&e&l>&r &6Position - World &e&l>&6&l>&r &e%world%'
+      - '&6&l>&e&l>&r &6Position - X &e&l>&6&l>&r &e%loc_x%'
+      - '&6&l>&e&l>&r &6Position - Y &e&l>&6&l>&r &e%loc_y%'
+      - '&6&l>&e&l>&r &6Position - Z &e&l>&6&l>&r &e%loc_z%'
+      - '&6&l>&e&l>&r &6Position - Pitch &e&l>&6&l>&r &e%pitch%'
+      - '&6&l>&e&l>&r &6Position - Yaw &e&l>&6&l>&r &e%yaw%'
+      - '&6&l>&e&l>&r &6Food &e&l>&6&l>&r &e%food%'
+      - '&6&l>&e&l>&r &6Health &e&l>&6&l>&r &e%health%'
+      - '&6&l>&e&l>&r &6Fly &e&l>&6&l>&r &e%fly%'
+      - '&6&l>&e&l>&r &6XP Level &e&l>&6&l>&r &e%xp_level%'
+      - '&6&l>&e&l>&r &6XP Points &e&l>&6&l>&r &e%xp%'
+      - '&6&l>&e&l>&r &6Gamemode &e&l>&6&l>&r &e%gamemode%'
+      - '&6&l>&e&l>&r &6Server &e&l>&6&l>&r &e%server%'
+      - '&6&l>&e&l>&r &6Death cause &e&l>&6&l>&r &e%death_cause%'
+      - ''
+      - '&6&l>&e&l>&r &6Left click to show saved inventory'
+      - '&6&l>&e&l>&r &6Right click to show inventory details'
+      ENDERCHEST_LORE:
+      - ''
+      - '&6&l>&e&l>&r &6ID &e&l>&6&l>&r &e%id%'
+      - '&6&l>&e&l>&r &6Time & Date &e&l>&6&l>&r &e%time%'
+      - '&6&l>&e&l>&r &6Cause &e&l>&6&l>&r &e%cause%'
+      - '&6&l>&e&l>&r &6Position - World &e&l>&6&l>&r &e%world%'
+      - '&6&l>&e&l>&r &6Server &e&l>&6&l>&r &e%server%'
+      - ''
+      - '&6&l>&e&l>&r &6Click to show saved enderchest'
+General:
+  PLAYER_ONLY_USE: '&cThis command is not available through the console!'
+  PLAYER_NOT_PERMISSION: '&4❰&c❰ &cInvSave &c❱&4❱ &cYou do not have permissions to
+    use this command.'
+  PLAYER_UUID_NOT_FOUND: '&4❰&c❰ &cInvSave &c❱&4❱ &cThe player record was not found.'
+  PLAYER_UUID_ERROR: '&4❰&c❰ &cInvSave &c❱&4❱ &cFailed to get player.'
+  PLAYER_UNKNOWN_USERNAME: Unknown
+  PLAYER_NOT_ONLINE: '&4❰&c❰ &cInvSave &c❱&4❱ &cPlayer is not online.'
+  SYNC_NOT_ENABLED: '&4❰&c❰ &cInvSave &c❱&4❱ &cSync function is not enabled in the
+    config file.'
+CommandHelper:
+  HEADER: '&6❱&e❱ &6&lCommand help &e❱&6❱ &e/%command_name% &e❱&6❱ &ePage &6%page%&e/&6%max_page%
+    &e❱'
+  NO_PERMISSION: '&4❰&c❰ &cInvSave &c❱&4❱ &cYou do not have permissions to display
+    command help.'
+Notify:
+  SYNC_COMPLETE: '&e❰&6❰ &eInvSave &6❱&e❱ &6Your inventory and player data loaded.'
+  INVENTORY_RESTORE: '&e❰&6❰ &eInvSave &6❱&e❱ &6Your inventory was restored from &e%time%&6.'
+Kick:
+  SAVE_ALL_IN_SYNC: '&eThe server has been restarted. Please recconect.'
+  SYNC_FAILED: '&eFailed to sync data! Pleas try again.'
+  TOO_FAST_RECONNECT: '&eToo fast recconect! Pleas try again.'

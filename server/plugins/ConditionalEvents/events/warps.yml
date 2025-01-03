@@ -1,0 +1,31 @@
+Events:
+  warps:
+    type: player_command
+    conditions:
+    - '%player_has_permission_admin.warp% == yes and %main_command% == /warps execute warps'
+    - '%player_has_permission_admin.warp% == yes and %main_command% == /warp and %args_length% == 0 execute warps'
+    - '%player_has_permission_admin.warp% == yes and %main_command% == /warp and %arg_1% == village1 execute village1'
+    - '%player_has_permission_admin.warp% == yes and %main_command% == /warp and %arg_1% == start execute start'
+    - '%player_has_permission_admin.warp% == yes and %main_command% == /warp and %arg_1% == tutorial execute tutorial'
+    - '%player_has_permission_admin.warp% == yes and %main_command% == /warp and %arg_1% == cave1 execute cave1'
+    actions:
+      warps:
+      - 'cancel_event: true'
+      - 'message: &f'
+      - 'message: &f village1'
+      - 'message: &f start'
+      - 'message: &f tutorial'
+      - 'message: &f cave1'
+      - 'message: &f'
+      village1:
+      - 'cancel_event: true'
+      - 'teleport: world;752;74;192;50;0'
+      start:
+      - 'cancel_event: true'
+      - 'teleport: world;9513;88;10026;180;0'
+      tutorial:
+      - 'cancel_event: true'
+      - 'teleport: world;79;70;171;90;0'
+      cave1:
+      - 'cancel_event: true'
+      - 'teleport: world;605;76;-459;130;0'

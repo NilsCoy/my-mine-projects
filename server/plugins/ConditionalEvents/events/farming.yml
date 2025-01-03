@@ -1,0 +1,205 @@
+Events:
+  farming:
+    type: entity_interact
+    conditions:
+    - '%servervariables_value_is_mining% == 0 and %entity_name% == Куст and %player_is_sneaking% == no and %player_is_inside_vehicle% == no execute bush'
+    - '%servervariables_value_is_mining% == 0 and %entity_name% == Цветок and %player_is_sneaking% == no and %player_is_inside_vehicle% == no execute flower'
+    - '%servervariables_value_is_mining% == 0 and %entity_name% == Коричневый гриб and %player_is_sneaking% == no and %player_is_inside_vehicle% == no execute brown_mushroom'
+    - '%servervariables_value_is_mining% == 0 and %entity_name% == Подарок and %player_is_sneaking% == no and %player_is_inside_vehicle% == no execute gift_box'
+    actions:
+      bush: 
+      - 'console_command: svar set is_mining 1 %player%'
+      - 'give_potion_effect: JUMP;200;200;false'
+      - 'give_potion_effect: SLOW;200;200;false'
+      - 'playsound: BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES;1;1'
+      - 'title: 5;40;10;none;&7[&f ○ ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ● &7]'
+      - 'call_event: bush_reward'
+      - 'console_command: mm m s kill_mob 1 %entity_world%,%math_{entity_x}+0.5%,%entity_y%,%math_{entity_z}+0.5%'
+      - 'remove_potion_effect: JUMP'
+      - 'remove_potion_effect: SLOW'
+      - 'wait_ticks: 5'
+      - 'console_command: svar set is_mining 0 %player%'
+      flower: 
+      - 'console_command: svar set is_mining 1 %player%'
+      - 'give_potion_effect: JUMP;200;200;false'
+      - 'give_potion_effect: SLOW;200;200;false'
+      - 'playsound: BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES;1;1'
+      - 'title: 5;40;10;none;&7[&f ○ ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ● &7]'
+      - 'call_event: flower_reward'
+      - 'console_command: mm m s kill_mob 1 %entity_world%,%math_{entity_x}+0.5%,%entity_y%,%math_{entity_z}+0.5%'
+      - 'remove_potion_effect: JUMP'
+      - 'remove_potion_effect: SLOW'
+      - 'wait_ticks: 5'
+      - 'console_command: svar set is_mining 0 %player%'
+      brown_mushroom: 
+      - 'console_command: svar set is_mining 1 %player%'
+      - 'give_potion_effect: JUMP;200;200;false'
+      - 'give_potion_effect: SLOW;200;200;false'
+      - 'playsound: BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES;1;1'
+      - 'title: 5;40;10;none;&7[&f ○ ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ● &7]'
+      - 'call_event: brown_mushroom_reward'
+      - 'console_command: mm m s kill_mob 1 %entity_world%,%math_{entity_x}+0.5%,%entity_y%,%math_{entity_z}+0.5%'
+      - 'remove_potion_effect: JUMP'
+      - 'remove_potion_effect: SLOW'
+      - 'wait_ticks: 5'
+      - 'console_command: svar set is_mining 0 %player%'
+      gift_box: 
+      - 'console_command: svar set is_mining 1 %player%'
+      - 'give_potion_effect: JUMP;200;200;false'
+      - 'give_potion_effect: SLOW;200;200;false'
+      - 'playsound: ENTITY_ITEM_PICKUP;2;1'
+      - 'title: 5;40;10;none;&7[&f ○ ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: ITEM_SPYGLASS_USE;2;1.5'
+      - 'title: 0;40;10;none;&7[&f ● ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: ENTITY_PLAYER_ATTACK_SWEEP;2;2'
+      - 'title: 0;40;10;none;&7[&f ● ● ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: ITEM_BOOK_PAGE_TURN;2;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ● &7]'
+      - 'call_event: gift_box_reward'
+      - 'console_command: mm m s kill_mob 1 %entity_world%,%math_{entity_x}+0.5%,%entity_y%,%math_{entity_z}+0.5%'
+      - 'remove_potion_effect: JUMP'
+      - 'remove_potion_effect: SLOW'
+      - 'wait_ticks: 5'
+      - 'console_command: svar set is_mining 0 %player%'
+  # farming:
+    # type: entity_interact
+    # conditions:
+    # - '%entity_name% == Куст execute actions1'
+    # actions:
+      # actions1:
+      # - 'console_command: dm open farming %player%'
+      # - 'console_command: mm m s kill_mob 1 %entity_world%,%math_{entity_x}+0.5%,%entity_y%,%math_{entity_z}+0.5%'
+
+  # farming_menu:
+    # type: custom
+    # custom_event_data:
+      # event: org.bukkit.event.inventory.InventoryClickEvent
+      # player_variable: getPlayer()
+      # variables_to_capture:
+      # - '%slot%;getSlot()'
+      # - '%slot_type%;getSlotType()'
+    # conditions:
+    # - '%slot_type% == CONTAINER execute actions1'
+    # actions:
+      # actions1:
+      # - 'to_player: %player_name%: call_event: farming_event;slot=%slot%'
+
+  # farming_event:
+    # type: call
+    # conditions:
+    # - '%servervariables_value_farming_start% == 1 and %servervariables_value_farming_slot1% == -1 execute action1'
+    # - '%servervariables_value_farming_start% == 1 and %servervariables_value_farming_slot2% == -1 and %servervariables_value_farming_slot1% != %slot% execute action2'
+    # - '%servervariables_value_farming_start% == 1 and %servervariables_value_farming_slot3% == -1 and %servervariables_value_farming_slot1% != %slot% and %servervariables_value_farming_slot2% != %slot% execute action3'
+    # actions:
+      # action1:
+      # - 'message: %slot% = farming_slot1'
+      # - 'console_command: svar set farming_slot1 %slot% %player%'
+      # action2:
+      # - 'message: %slot% = farming_slot2'
+      # - 'console_command: svar set farming_slot2 %slot% %player%'
+      # action3:
+      # - 'message: %slot% = farming_slot3'
+      # - 'console_command: svar set farming_slot3 %slot% %player%'
+
+  bush_reward:
+    type: call
+    conditions:
+    - '%player_has_permission_sponsor% == yes execute action1'
+    - '%player_has_permission_sponsor% == no execute action2'
+    actions:
+      action1:
+      - 'player_command_as_op: mm test cast -s farming1'
+      - 'wait_ticks: 10'
+      - 'player_command_as_op: mm test cast -s farming1'
+      - 'console_command: svar add player_exp 2 %player%'
+      - 'call_event: notify_farming'
+      - 'call_event: notify_exp;%exp%=2'
+      action2:
+      - 'player_command_as_op: mm test cast -s farming1'
+      - 'console_command: svar add player_exp 1 %player%'
+      - 'call_event: notify_farming'
+      - 'call_event: notify_exp;%exp%=1'
+  flower_reward:
+    type: call
+    conditions:
+    - '%player_has_permission_sponsor% == yes execute action1'
+    - '%player_has_permission_sponsor% == no execute action2'
+    actions:
+      action1:
+      - 'player_command_as_op: mm test cast -s farming2'
+      - 'wait_ticks: 10'
+      - 'player_command_as_op: mm test cast -s farming2'
+      - 'console_command: svar add player_exp 2 %player%'
+      - 'call_event: notify_farming'
+      - 'call_event: notify_exp;%exp%=2'
+      action2:
+      - 'player_command_as_op: mm test cast -s farming2'
+      - 'console_command: svar add player_exp 1 %player%'
+      - 'call_event: notify_farming'
+      - 'call_event: notify_exp;%exp%=1'
+  brown_mushroom_reward:
+    type: call
+    conditions:
+    - '%player_has_permission_sponsor% == yes execute action1'
+    - '%player_has_permission_sponsor% == no execute action2'
+    actions:
+      action1:
+      - 'player_command_as_op: mm test cast -s farming3'
+      - 'wait_ticks: 10'
+      - 'player_command_as_op: mm test cast -s farming3'
+      - 'console_command: svar add player_exp 2 %player%'
+      - 'call_event: notify_farming'
+      - 'call_event: notify_exp;%exp%=2'
+      action2:
+      - 'player_command_as_op: mm test cast -s farming3'
+      - 'console_command: svar add player_exp 1 %player%'
+      - 'call_event: notify_farming'
+      - 'call_event: notify_exp;%exp%=1'
+  gift_box_reward:
+    type: call
+    conditions:
+    - '%player_has_permission_sponsor% == yes execute action1'
+    - '%player_has_permission_sponsor% == no execute action2'
+    actions:
+      action1:
+      - 'player_command_as_op: mm test cast -s farming3'
+      - 'wait_ticks: 10'
+      - 'player_command_as_op: mm test cast -s farming3'
+      - 'console_command: svar add player_exp 2 %player%'
+      - 'call_event: notify_gift_box'
+      - 'call_event: notify_exp;%exp%=2'
+      action2:
+      - 'player_command_as_op: mm test cast -s farming3'
+      - 'console_command: svar add player_exp 1 %player%'
+      - 'call_event: notify_gift_box'
+      - 'call_event: notify_exp;%exp%=1'

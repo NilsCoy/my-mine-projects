@@ -1,0 +1,823 @@
+menu_title: '&6Кузня > Крафт оружия'
+open_commands:
+  - '[sound] BLOCK_ANVIL_LAND 1 1.5'
+size: 45
+items:
+
+
+
+  'sword1':
+    material: IRON_SWORD
+    slot: 10
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cСтальной меч'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c1000Ⓒ'
+      - '&f● &bУголь &f- 50'
+      - '&f● &bСтальной слиток &f- 30'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 50
+        anything_here_2:
+          type: has item
+          material: 'IRON_INGOT'
+          name: '&bСтальной слиток'
+          amount: 30
+        anything_here_3:
+          type: has money
+          amount: 1000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 1 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+  'sword2':
+    material: DIAMOND_SWORD
+    slot: 19
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКобальтовый меч'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c2000Ⓒ'
+      - '&f● &bУголь &f- 100'
+      - '&f● &bКобальтовый слиток &f- 30'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 100
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bКобальтовый слиток'
+          amount: 30
+        anything_here_3:
+          type: has money
+          amount: 2000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 2 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+  'sword3':
+    material: NETHERITE_SWORD
+    slot: 28
+    priority: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cДревний меч'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c3000Ⓒ'
+      - '&f● &bУголь &f- 150'
+      - '&f● &bДревний слиток &f- 30'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 150
+        anything_here_2:
+          type: has item
+          material: 'NETHERITE_INGOT'
+          name: '&bДревний слиток'
+          amount: 30
+        anything_here_3:
+          type: has money
+          amount: 3000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 3 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+
+  'axe1':
+    material: IRON_AXE
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cСтальной топор'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c1000Ⓒ'
+      - '&f● &bУголь &f- 50'
+      - '&f● &bСтальной слиток &f- 25'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 50
+        anything_here_2:
+          type: has item
+          material: 'IRON_INGOT'
+          name: '&bСтальной слиток'
+          amount: 25
+        anything_here_3:
+          type: has money
+          amount: 1000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 4 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+  'axe2':
+    material: DIAMOND_AXE
+    slot: 20
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКобальтовый топор'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c2000Ⓒ'
+      - '&f● &bУголь &f- 100'
+      - '&f● &bКобальтовый слиток &f- 25'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 100
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bКобальтовый слиток'
+          amount: 25
+        anything_here_3:
+          type: has money
+          amount: 2
+        anything_here_3:
+          type: has money
+          amount: 1000000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 5 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+  'axe3':
+    material: NETHERITE_AXE
+    slot: 29
+    priority: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cДревний топор'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c3000Ⓒ'
+      - '&f● &bУголь &f- 150'
+      - '&f● &bДревний слиток &f- 25'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 150
+        anything_here_2:
+          type: has item
+          material: 'NETHERITE_INGOT'
+          name: '&bДревний слиток'
+          amount: 25
+        anything_here_3:
+          type: has money
+          amount: 3000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 6 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+  'longsword1':
+    material: EPICFIGHT_IRON_LONGSWORD
+    slot: 12
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cСтальной длинный меч'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c1000Ⓒ'
+      - '&f● &bУголь &f- 50'
+      - '&f● &bСтальной слиток &f- 40'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 50
+        anything_here_2:
+          type: has item
+          material: 'IRON_INGOT'
+          name: '&bСтальной слиток'
+          amount: 40
+        anything_here_3:
+          type: has money
+          amount: 1000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 7 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+  'longsword2':
+    material: EPICFIGHT_DIAMOND_LONGSWORD
+    slot: 21
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКобальтовый длинный меч'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c2000Ⓒ'
+      - '&f● &bУголь &f- 100'
+      - '&f● &bКобальтовый слиток &f- 40'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 100
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bКобальтовый слиток'
+          amount: 40
+        anything_here_3:
+          type: has money
+          amount: 2000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 8 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+  'longsword3':
+    material: EPICFIGHT_NETHERITE_LONGSWORD
+    slot: 30
+    priority: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cДревний длинный меч'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c3000Ⓒ'
+      - '&f● &bУголь &f- 150'
+      - '&f● &bДревний слиток &f- 40'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 150
+        anything_here_2:
+          type: has item
+          material: 'NETHERITE_INGOT'
+          name: '&bДревний слиток'
+          amount: 40
+        anything_here_3:
+          type: has money
+          amount: 3000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 9 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+  'greatsword1':
+    material: EPICFIGHT_IRON_GREATSWORD
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cСтальной большой меч'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c1000Ⓒ'
+      - '&f● &bУголь &f- 50'
+      - '&f● &bСтальной слиток &f- 50'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 50
+        anything_here_2:
+          type: has item
+          material: 'IRON_INGOT'
+          name: '&bСтальной слиток'
+          amount: 50
+        anything_here_3:
+          type: has money
+          amount: 1000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 10 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+  'greatsword2':
+    material: EPICFIGHT_DIAMOND_GREATSWORD
+    slot: 22
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКобальтовый большой меч'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c2000Ⓒ'
+      - '&f● &bУголь &f- 100'
+      - '&f● &bКобальтовый слиток &f- 50'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 100
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bКобальтовый слиток'
+          amount: 50
+        anything_here_3:
+          type: has money
+          amount: 2000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 11 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+  'greatsword3':
+    material: EPICFIGHT_NETHERITE_GREATSWORD
+    slot: 31
+    priority: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cДревний большой меч'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c3000Ⓒ'
+      - '&f● &bУголь &f- 150'
+      - '&f● &bДревний слиток &f- 50'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 150
+        anything_here_2:
+          type: has item
+          material: 'NETHERITE_INGOT'
+          name: '&bДревний слиток'
+          amount: 50
+        anything_here_3:
+          type: has money
+          amount: 3000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 12 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+  'spear1':
+    material: EPICFIGHT_IRON_SPEAR
+    slot: 14
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cСтальное копье'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c1000Ⓒ'
+      - '&f● &bУголь &f- 50'
+      - '&f● &bСтальной слиток &f- 35'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 50
+        anything_here_2:
+          type: has item
+          material: 'IRON_INGOT'
+          name: '&bСтальной слиток'
+          amount: 35
+        anything_here_3:
+          type: has money
+          amount: 1000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 13 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+  'spear2':
+    material: EPICFIGHT_DIAMOND_SPEAR
+    slot: 23
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКобальтовое копье'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c2000Ⓒ'
+      - '&f● &bУголь &f- 100'
+      - '&f● &bКобальтовый слиток &f- 35'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 100
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bКобальтовый слиток'
+          amount: 35
+        anything_here_3:
+          type: has money
+          amount: 2000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 14 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+  'spear3':
+    material: EPICFIGHT_NETHERITE_SPEAR
+    slot: 32
+    priority: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cДревнее копье'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c3000Ⓒ'
+      - '&f● &bУголь &f- 150'
+      - '&f● &bДревний слиток &f- 35'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 150
+        anything_here_2:
+          type: has item
+          material: 'NETHERITE_INGOT'
+          name: '&bДревний слиток'
+          amount: 35
+        anything_here_3:
+          type: has money
+          amount: 3000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 15 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+  'tachi1':
+    material: EPICFIGHT_IRON_TACHI
+    slot: 15
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cСтальной тати'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c1000Ⓒ'
+      - '&f● &bУголь &f- 50'
+      - '&f● &bСтальной слиток &f- 40'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 50
+        anything_here_2:
+          type: has item
+          material: 'IRON_INGOT'
+          name: '&bСтальной слиток'
+          amount: 40
+        anything_here_3:
+          type: has money
+          amount: 1000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 16 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+  'tachi2':
+    material: EPICFIGHT_DIAMOND_TACHI
+    slot: 24
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКобальтовый тати'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c2000Ⓒ'
+      - '&f● &bУголь &f- 100'
+      - '&f● &bКобальтовый слиток &f- 40'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 100
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bКобальтовый слиток'
+          amount: 40
+        anything_here_3:
+          type: has money
+          amount: 2000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 17 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+  'tachi3':
+    material: EPICFIGHT_NETHERITE_TACHI
+    slot: 33
+    priority: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cДревний тати'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c3000Ⓒ'
+      - '&f● &bУголь &f- 150'
+      - '&f● &bДревний слиток &f- 40'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 150
+        anything_here_2:
+          type: has item
+          material: 'NETHERITE_INGOT'
+          name: '&bДревний слиток'
+          amount: 40
+        anything_here_3:
+          type: has money
+          amount: 3000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 18 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+  'dagger1':
+    material: EPICFIGHT_IRON_DAGGER
+    slot: 16
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cСтальной кинжал'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c1000Ⓒ'
+      - '&f● &bУголь &f- 50'
+      - '&f● &bСтальной слиток &f- 15'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 50
+        anything_here_2:
+          type: has item
+          material: 'IRON_INGOT'
+          name: '&bСтальной слиток'
+          amount: 15
+        anything_here_3:
+          type: has money
+          amount: 1000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 19 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+  'dagger2':
+    material: EPICFIGHT_DIAMOND_DAGGER
+    slot: 25
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКобальтовый кинжал'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c2000Ⓒ'
+      - '&f● &bУголь &f- 100'
+      - '&f● &bКобальтовый слиток &f- 15'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 100
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bКобальтовый слиток'
+          amount: 15
+        anything_here_3:
+          type: has money
+          amount: 2000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 20 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+  'dagger3':
+    material: EPICFIGHT_NETHERITE_DAGGER
+    slot: 34
+    priority: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cДревний кинжал'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c3000Ⓒ'
+      - '&f● &bУголь &f- 150'
+      - '&f● &bДревний слиток &f- 15'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 150
+        anything_here_2:
+          type: has item
+          material: 'NETHERITE_INGOT'
+          name: '&bДревний слиток'
+          amount: 15
+        anything_here_3:
+          type: has money
+          amount: 1000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 21 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,37,38,39,40,41,42,43,44]
+    display_name: ' '
+    nbt_int: CustomModelData:1

@@ -1,0 +1,15 @@
+uuid: aa0a0929-d6c9-315d-a7e1-07e1c4a01258
+name: Predator265
+primary-group: default
+permissions:
+- promo_horizon
+- skill_dodge2
+- skill_strength1
+- titul_1
+- titul_11
+- titul_12
+- titul_14
+- titul_17
+- titul_2
+parents:
+- default

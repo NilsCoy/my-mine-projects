@@ -1,0 +1,16 @@
+wolfhound_boss1:
+  MobName: wolfhound_boss
+  Cooldown: 900
+  Warmup: 0
+  World: world
+  X: 463
+  Y: 76
+  Z: -16
+  Yaw: 0.0
+  Pitch: 0.0
+  MobLevel: '1'
+  ActivationRange: 50.0
+  LeashRange: 50.0
+  MaxMobs: '1'
+  CooldownTimer: 1
+  ActiveMobs: 1

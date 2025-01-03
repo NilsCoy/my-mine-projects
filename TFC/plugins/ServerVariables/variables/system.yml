@@ -1,0 +1,5 @@
+variables:
+  player_first_join:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0

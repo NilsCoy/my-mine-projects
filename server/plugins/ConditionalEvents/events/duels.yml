@@ -1,0 +1,227 @@
+Events:
+  duel_update:
+    type: repetitive
+    repetitive_time: 60
+    conditions:
+    - '%epica_len_array_DuelList% > 1 and %servervariables_globalvalue_duel_is_started% != 1 execute pvp'
+    - '%epica_len_array_DuelListNpc% > 0 and %servervariables_globalvalue_duel_npc_is_started% != 1 and %servervariables_value_duel_npc% == 1 execute npc'
+    actions:
+      pvp:
+      - 'console_command: svar set duel_is_started 1'
+      - 'to_player: %epica_array_DuelList_0%: teleport: world;1349.5;74;-1140.5;90;0'
+      - 'to_player: %epica_array_DuelList_1%: teleport: world;1327.5;74;-1140.5;-90;0'
+      - 'to_player: %epica_array_DuelList_0%: title: 10;60;10;&eВ бой!;none'
+      - 'to_player: %epica_array_DuelList_1%: title: 10;60;10;&eВ бой!;none'
+      - 'call_event: duel_player_leave_in_array'
+      
+      - 'console_command: svar set duel_player 1 %epica_array_DuelList_0%'
+      - 'console_command: svar set duel_player 1 %epica_array_DuelList_1%'
+      npc:
+      - 'console_command: svar set duel_npc_is_started 1'
+      - 'to_player: %epica_array_DuelListNpc_0%: teleport: world;9068.5;128;10165.5;90;0'
+      - 'to_player: %epica_array_DuelListNpc_0%: title: 10;60;10;&eВ бой!;none'
+      
+      - 'console_command: svar set duel_player 1 %epica_array_DuelListNpc_0%'
+      - 'wait: 2'
+      - 'call_event: npc_summon;%npc%=1'
+      - 'call_event: duel_player_leave_in_array_npc'
+  npc_summon:
+    type: call
+    conditions:
+    - '%npc% == 1 and %servervariables_value_duel_player% == 1 execute npc1'
+    actions:
+      npc1:
+      - 'console_command: spawnmob guild_instructor 1 world,9043.5,128,10165.5,-90,0'
+  
+  duel_player_leave_in_array_npc:
+    type: call
+    conditions:
+    - '%parseother_unsafe_{epica_array_DuelList_0}_{player_online}% == no execute DuelList_1'
+    actions:
+      DuelList_0:
+      - 'console_command: core array remove DuelListNpc 0'
+      - 'console_command: svar set duel_npc_is_started 0'
+  duel_player_leave_in_array:
+    type: call
+    conditions:
+    - '%parseother_unsafe_{epica_array_DuelList_0}_{player_online}% == no execute DuelList_1'
+    - '%parseother_unsafe_{epica_array_DuelList_1}_{player_online}% == no execute DuelList_0'
+    actions:
+      DuelList_0:
+      - 'to_player: %epica_array_DuelList_0%: title: 10;60;10;&aВы выиграли!;none'
+      - 'to_player: %epica_array_DuelList_0%: teleport: world;1360.5;74;-1140.5;90;0'
+      - 'to_player: %epica_array_DuelList_0%: give_potion_effect: HEAL;1;100;false'
+      - 'to_player: %epica_array_DuelList_0%: give_potion_effect: SATURATION;1;100;false'
+      - 'console_command: svar set duel_player 0 %epica_array_DuelList_0%'
+      - 'console_command: core array remove DuelList 0'
+      - 'console_command: core array remove DuelList 0'
+      - 'console_command: svar set duel_is_started 0'
+      DuelList_1:
+      - 'to_player: %epica_array_DuelList_1%: title: 10;60;10;&aВы выиграли!;none'
+      - 'to_player: %epica_array_DuelList_1%: teleport: world;1360.5;74;-1140.5;90;0'
+      - 'to_player: %epica_array_DuelList_1%: give_potion_effect: HEAL;1;100;false'
+      - 'to_player: %epica_array_DuelList_1%: give_potion_effect: SATURATION;1;100;false'
+      - 'console_command: svar set duel_player 0 %epica_array_DuelList_1%'
+      - 'console_command: core array remove DuelList 0'
+      - 'console_command: core array remove DuelList 0'
+      - 'console_command: svar set duel_is_started 0'
+      
+  duel_player_damage:
+    type: player_damage
+    conditions:
+    - '%servervariables_value_duel_player% == 1 and %damage% >= %player_health% and %player% == %epica_array_DuelList_1% and %servervariables_value_duel_npc% == 0 execute pvp1'
+    - '%servervariables_value_duel_player% == 1 and %damage% >= %player_health% and %player% == %epica_array_DuelList_0% and %servervariables_value_duel_npc% == 0 execute pvp2'
+    - '%servervariables_value_duel_player% == 1 and %damage% >= %player_health% and %player% == %epica_array_DuelListNpc_0% and %servervariables_value_duel_npc% == 1 execute npc1'
+    actions:
+      pvp1:
+      - 'cancel_event: true'
+      
+      - 'playsound: ENTITY_EVOKER_PREPARE_SUMMON;1;1;1360,74,-1140,world'
+      - 'title: 10;60;10;&cВы проиграли!;none'
+      - 'teleport: world;1360.5;74;-1140.5;90;0'
+      - 'give_potion_effect: HEAL;1;100;false'
+      - 'give_potion_effect: SATURATION;1;100;false'
+      
+      
+      - 'to_player: %epica_array_DuelList_0%: title: 10;60;10;&aВы выиграли!;none'
+      - 'to_player: %epica_array_DuelList_0%: teleport: world;1360.5;74;-1140.5;90;0'
+      - 'to_player: %epica_array_DuelList_0%: give_potion_effect: HEAL;1;100;false'
+      - 'to_player: %epica_array_DuelList_0%: give_potion_effect: SATURATION;1;100;false'
+      
+      - 'console_command: svar set duel_player 0 %player%'
+      - 'console_command: svar set duel_player 0 %epica_array_DuelList_0%'
+      - 'console_command: core array remove DuelList 0'
+      - 'console_command: core array remove DuelList 0'
+      - 'console_command: svar set duel_is_started 0'
+      pvp2:
+      - 'cancel_event: true'
+      
+      - 'playsound: ENTITY_EVOKER_PREPARE_SUMMON;1;1;1360,74,-1140,world'
+      - 'title: 10;60;10;&cВы проиграли!;none'
+      - 'teleport: world;1360.5;74;-1140.5;90;0'
+      - 'give_potion_effect: HEAL;1;100;false'
+      - 'give_potion_effect: SATURATION;1;100;false'
+      
+      
+      - 'to_player: %epica_array_DuelList_1%: title: 10;60;10;&aВы выиграли!;none'
+      - 'to_player: %epica_array_DuelList_1%: teleport: world;1360.5;74;-1140.5;90;0'
+      - 'to_player: %epica_array_DuelList_1%: give_potion_effect: HEAL;1;100;false'
+      - 'to_player: %epica_array_DuelList_1%: give_potion_effect: SATURATION;1;100;false'
+      
+      - 'console_command: svar set duel_player 0 %epica_array_DuelList_1%'
+      - 'console_command: svar set duel_player 0 %player%'
+      - 'console_command: core array remove DuelList 0'
+      - 'console_command: core array remove DuelList 0'
+      - 'console_command: svar set duel_is_started 0'
+      npc1:
+      - 'cancel_event: true'
+      
+      - 'to_player: %epica_array_DuelListNpc_0%: playsound: ENTITY_EVOKER_PREPARE_SUMMON;1;1;1360,74,-1140,world'
+      - 'to_player: %epica_array_DuelListNpc_0%: title: 10;60;10;&cВы проиграли!;none'
+      - 'to_player: %epica_array_DuelListNpc_0%: teleport: world;1360.5;74;-1140.5;90;0'
+      - 'to_player: %epica_array_DuelListNpc_0%: give_potion_effect: HEAL;1;100;false'
+      - 'to_player: %epica_array_DuelListNpc_0%: give_potion_effect: SATURATION;1;100;false'
+      
+      - 'console_command: svar set duel_player 0 %epica_array_DuelListNpc_0%'
+      - 'console_command: svar set duel_npc 0 %epica_array_DuelListNpc_0%'
+      - 'console_command: core array remove DuelListNpc 0'
+      - 'console_command: svar set duel_npc_is_started 0'
+      
+      - 'console_command: bq event %player% main-town1.guild_quest_failed'
+      #- 'player_command_as_op: execute positioned 1336.70 73.94 -1139.22 run kill @e[type=!minecraft:player,distance=..20]'
+      
+  duel_player_death:
+    type: player_death
+    conditions:
+    - '%servervariables_value_duel_player% == 1 and %player% == %epica_array_DuelListNpc_0% and %servervariables_value_duel_npc% == 1 execute npc1'
+    actions:
+      npc1:
+      - 'cancel_event: true'
+      - 'wait_ticks: 10'
+      
+      - 'to_player: %epica_array_DuelListNpc_0%: playsound: ENTITY_EVOKER_PREPARE_SUMMON;1;1;1360,74,-1140,world'
+      - 'to_player: %epica_array_DuelListNpc_0%: title: 10;60;10;&cВы проиграли!;none'
+      - 'to_player: %epica_array_DuelListNpc_0%: teleport: world;1360.5;74;-1140.5;90;0'
+      - 'to_player: %epica_array_DuelListNpc_0%: give_potion_effect: HEAL;1;100;false'
+      - 'to_player: %epica_array_DuelListNpc_0%: give_potion_effect: SATURATION;1;100;false'
+      
+      - 'console_command: svar set duel_player 0 %epica_array_DuelListNpc_0%'
+      - 'console_command: svar set duel_npc 0 %epica_array_DuelListNpc_0%'
+      - 'console_command: core array remove DuelListNpc 0'
+      - 'console_command: svar set duel_npc_is_started 0'
+      
+     # - 'console_command: bq event %player% main-town1.guild_quest_failed'
+      
+  duel_player_leave:
+    type: player_leave
+    conditions:
+    - '%servervariables_value_duel_player% == 1 and %player% == %epica_array_DuelList_1% and %servervariables_value_duel_npc% == 0 execute pvp1'
+    - '%servervariables_value_duel_player% == 1 and %player% == %epica_array_DuelList_0% and %servervariables_value_duel_npc% == 0 execute pvp2'
+    - '%servervariables_value_duel_player% == 1 and %player% == %epica_array_DuelListNpc_0% and %servervariables_value_duel_npc% == 1 execute npc'
+    actions:
+      pvp1:
+      #- 'teleport: world;1360.5;74;-1140.5;90;0'
+      #- 'give_potion_effect: HEAL;1;100;false'
+      #- 'give_potion_effect: SATURATION;1;100;false'
+      
+      - 'to_player: %epica_array_DuelList_0%: title: 10;60;10;&aВы выиграли!;none'
+      - 'to_player: %epica_array_DuelList_0%: teleport: world;1360.5;74;-1140.5;90;0'
+      - 'to_player: %epica_array_DuelList_0%: give_potion_effect: HEAL;1;100;false'
+      - 'to_player: %epica_array_DuelList_0%: give_potion_effect: SATURATION;1;100;false'
+      
+      #- 'console_command: svar set duel_player 0 %player%'
+      - 'console_command: svar set duel_player 0 %epica_array_DuelList_0%'
+      - 'console_command: core array remove DuelList 0'
+      - 'console_command: core array remove DuelList 0'
+      #- 'console_command: bq event %player% main-town1.cornerman_array_remove'
+      - 'console_command: svar set duel_is_started 0'
+      pvp2:
+      - 'teleport: world;1360.5;74;-1140.5;90;0'
+      - 'give_potion_effect: HEAL;1;100;false'
+      - 'give_potion_effect: SATURATION;1;100;false'
+      
+      - 'to_player: %epica_array_DuelList_1%: title: 10;60;10;&aВы выиграли!;none'
+      - 'to_player: %epica_array_DuelList_1%: teleport: world;1360.5;74;-1140.5;90;0'
+      - 'to_player: %epica_array_DuelList_1%: give_potion_effect: HEAL;1;100;false'
+      - 'to_player: %epica_array_DuelList_1%: give_potion_effect: SATURATION;1;100;false'
+      
+      - 'console_command: svar set duel_player 0 %epica_array_DuelList_1%'
+      #- 'console_command: svar set duel_player 0 %player%'
+      - 'console_command: core array remove DuelList 0'
+      - 'console_command: core array remove DuelList 0'
+      #- 'console_command: bq event %player% main-town1.cornerman_array_remove'
+      - 'console_command: svar set duel_is_started 0'
+      npc:
+      #- 'teleport: world;1360.5;74;-1140.5;90;0'
+      #- 'give_potion_effect: HEAL;1;100;false'
+      #- 'give_potion_effect: SATURATION;1;100;false'
+      
+      #- 'console_command: svar set duel_player 0 %epica_array_DuelListNpc_0%'
+      - 'console_command: svar set duel_npc 0  %epica_array_DuelListNpc_0%'
+      - 'console_command: core array remove DuelListNpc 0'
+      - 'console_command: svar set duel_npc_is_started 0'
+      
+      #- 'console_command: bq event %player% main-town1.guild_quest_failed'
+      #- 'player_command_as_op: execute positioned 1336.70 73.94 -1139.22 run kill @e[type=!minecraft:player,distance=..20]'
+      
+  duel_player_join:
+    type: player_join
+    conditions:
+    - '%servervariables_value_duel_player% == 1 execute pvp1'
+    actions:
+      pvp1:
+      - 'teleport: world;1360.5;74;-1140.5;90;0'
+      - 'give_potion_effect: HEAL;1;100;false'
+      - 'give_potion_effect: SATURATION;1;100;false'
+      
+      #- 'to_player: %epica_array_DuelList_0%: title: 10;60;10;&aВы выиграли!;none'
+      #- 'to_player: %epica_array_DuelList_0%: teleport: world;1360.5;74;-1140.5;90;0'
+      #- 'to_player: %epica_array_DuelList_0%: give_potion_effect: HEAL;1;100;false'
+      #- 'to_player: %epica_array_DuelList_0%: give_potion_effect: SATURATION;1;100;false'
+      
+      - 'console_command: svar set duel_player 0 %player%'
+      #- 'console_command: svar set duel_player 0 %epica_array_DuelList_0%'
+      #- 'console_command: core array remove DuelList 0'
+      #- 'console_command: core array remove DuelList 0'
+      #- 'console_command: bq event %epica_array_DuelList_0% main-town1.cornerman_array_remove'
+      #- 'console_command: svar set duel_is_started 0'

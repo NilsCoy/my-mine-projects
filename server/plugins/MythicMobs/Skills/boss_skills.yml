@@ -1,0 +1,158 @@
+
+
+pillager_boss_skill_cast:
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - setAI{ai=false} @self
+  - particleorbital{p=reddust;color=#FFEF00;r=0.8;points=16;t=40;i=1;vy=15;y=2.3} @self
+  - delay 50
+  - setAI{ai=true} @self
+  - randomskill{skills=pillager_boss_skill1, pillager_boss_skill2, pillager_boss_skill3, pillager_boss_skill4}
+
+pillager_boss_skill1:
+  Cooldown: 120
+  Skills:
+  - sound{s=item.goat_horn.sound.6;p=1} @self
+  - setAI{ai=false} @self
+  - particles{p=smoke;a=200;hs=2;vs=0.2;y=0.2} @self
+  - summon{type=summoned_pillager;amount=1;radius=4;y=1} @self
+  - delay 10
+  - particles{p=smoke;a=200;hs=2;vs=0.2;y=0.2} @self
+  - summon{type=summoned_pillager;amount=1;radius=4;y=1} @self
+  - delay 10
+  - particles{p=smoke;a=200;hs=2;vs=0.2;y=0.2} @self
+  - summon{type=summoned_pillager;amount=1;radius=4;y=1} @self
+  - delay 10
+  - particles{p=smoke;a=200;hs=2;vs=0.2;y=0.2} @self
+  - summon{type=summoned_pillager;amount=1;radius=4;y=1} @self
+  - setAI{ai=true} @self
+
+pillager_boss_skill2:
+  Skills:
+  - sound{s=item.goat_horn.sound.3;p=1} @self
+  - signal{s=BUFF} @Children
+  - skill{s=pillager_boss_buff} @self
+
+pillager_boss_skill3:
+  Skills:
+  - sound{s=epicfight:entity.weapon.whoosh_hard;p=1} @self
+  - particles{p=falling_dust;material=STONE;a=200;hs=1;vs=0.1;y=0.5;s=0.1} @self
+  - velocity{m=ADD;x=0;y=0;z=-1;relative=true} @PIR{r=3}
+  - damage{a=6} @PIR{r=3}
+  - delay 5
+  - sound{s=epicfight:entity.weapon.whoosh_hard;p=1} @self
+  - particles{p=falling_dust;material=STONE;a=500;hs=2;vs=0.1;y=0.5;s=0.1} @self
+  - velocity{m=ADD;x=0;y=0;z=-1.5;relative=true} @PIR{r=6}
+  - damage{a=6} @PIR{r=6}
+  - delay 5
+  - sound{s=epicfight:entity.weapon.whoosh_hard;p=1} @self
+  - particles{p=falling_dust;material=STONE;a=1000;hs=3;vs=0.1;y=0.5;s=0.1} @self
+  - velocity{m=ADD;x=0;y=0;z=-2;relative=true} @PIR{r=9}
+  - damage{a=6} @PIR{r=9}
+
+pillager_boss_skill4:
+  Conditions:
+  - targetwithin{d=10} false
+  - targetwithin{d=40} true
+  Skills:
+  - setAI{ai=false} @self
+  - projectile{b=ARROW;arrowType=NORMAL;onTick=pillager_boss_skill4-Tick;onHit=slimeB_skill4-Hit;v=20;i=1;hR=0.5;vR=0.5;hnp=true} @PIR{r=40}
+  - setAI{ai=true} @self
+pillager_boss_skill4-Tick:
+  Skills:
+  - effect:particles{p=Falling_Honey;amount=5;speed=0;hS=0.1;vS=0.1} @origin
+pillager_boss_skill4-Hit:
+  Skills:
+  - damage{a=10}
+  - potion{type=POISON;duration=200;level=1;p=false}
+
+pillager_boss_buff:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=1200;level=0;p=false} @self
+  - Aura{auraName=agr_mode;onTick=pillager_boss_buff-particle;onEnd=pillager_boss_buff-end;interval=1;duration=1200} @self
+  - setspeed{speed=1.5;type=walking} @self
+
+pillager_boss_buff-particle:
+  Skills:
+  - particles{p=reddust;color=#AB0000;a=2;hs=0.2;vs=0.3;y=1} @self
+
+pillager_boss_buff-end:
+  Skills:
+  - setspeed{speed=1;type=walking} @self
+
+
+
+
+key_guard_skill_cast:
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - setAI{ai=false} @self
+  - particleorbital{p=reddust;color=#FFEF00;r=0.8;points=16;t=40;i=1;vy=15;y=2.3} @self
+  - delay 50
+  - setAI{ai=true} @self
+  - randomskill{skills=key_guard_skill1, key_guard_skill2, key_guard_skill3, key_guard_skill4}
+
+key_guard_skill1:
+  Skills:
+  - sound{s=entity.wither.shoot;p=0.5} @self
+  - particles{p=Large_Smoke;a=1000;hs=0.1;vs=0.1;y=2;s=1} @self
+  - delay 5
+  - potion{type=SLOW;duration=80;level=1;p=false} @PIR{r=15}
+  - potion{type=BLINDNESS;duration=80;level=1;p=false} @PIR{r=15}
+  - particles{p=Large_Smoke;a=500;hs=0.1;vs=0.1;y=2;s=1} @self
+  - delay 5
+  - particles{p=Large_Smoke;a=500;hs=0.1;vs=0.1;y=2;s=1} @self
+
+key_guard_skill2:
+  Skills:
+  - particleline{particle=crit;amount=5;syo=1.5;tyo=1.5} @target
+  - potion{type=SLOW;duration=20;level=10;p=false} @target
+  - delay 10
+  - particleline{particle=crit;amount=5;syo=1.5;tyo=1.5} @target
+  - potion{type=SLOW;duration=20;level=10;p=false} @target
+  - delay 10
+  - particleline{particle=crit;amount=5;syo=1.5;tyo=1.5} @target
+  - potion{type=SLOW;duration=20;level=10;p=false} @target
+  - delay 10
+  - particleline{particle=crit;amount=5;syo=1.5;tyo=1.5} @target
+  - potion{type=SLOW;duration=10;level=10;p=false} @target
+
+key_guard_skill3:
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=300;level=100;p=false} @self
+  - Aura{auraName=resistance_mode;onTick=key_guard_buff1-particle;interval=1;duration=300} @self
+key_guard_buff1-particle:
+  Skills:
+  - particles{p=Soul;a=2;hs=0.2;vs=0.3;y=1} @self
+
+key_guard_skill4:
+  Skills:
+  - sound{s=entity.warden.listening_angry;p=1} @self
+  - particles{p=Large_Smoke;a=20;hs=0.3;vs=0.1;y=0.5;s=0} @self
+  - summon{type=ghost1;amount=1;radius=0} @self
+  - summon{type=ghost2;amount=1;radius=0} @self
+  - summon{type=ghost3;amount=1;radius=0} @self
+
+key_guard_spell:
+  Skills:
+  - particles{p=Enchant;a=80;hs=0.4;vs=0.5;y=1;s=0} @self
+  - delay 40
+  - summon{type=key_guard_spell;amount=1;radius=0} @self
+
+key_guard_remove_spell:
+  Skills:
+  - delay 200
+  - skill{s=key_guard_skill1} @self
+  - delay 5
+  - summon{type=key_guard_2;amount=1;radius=0} @self
+  - remove @self
+
+key_guard_reward:
+  Skills:
+  - sendtitle{title="Выход!";subtitle="Вы покинете эту зону через 10 сек.";d=200}
+  - delay 200
+  - command{c="tp <target.name> 1747.5 75 -212.5 0 0"}
+  - sound{s=block.wooden_door.open;p=1}
+

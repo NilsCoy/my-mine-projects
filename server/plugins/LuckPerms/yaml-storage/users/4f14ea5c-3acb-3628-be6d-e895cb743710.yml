@@ -1,0 +1,20 @@
+uuid: 4f14ea5c-3acb-3628-be6d-e895cb743710
+name: Astrill3r
+primary-group: default
+permissions:
+- mcpets.pet_horse1
+- mcpets.pet_horse2
+- mcpets.pet_horse3
+- promo_horizon
+- skill_guard3
+- skill_strength1
+- skill_strength2
+- skill_strength3
+- titul_14
+- titul_15
+- titul_17
+- titul_2
+- titul_3
+- titul_5
+parents:
+- default

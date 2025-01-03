@@ -1,0 +1,203 @@
+menu_title: '&6Настройки'
+open_commands:
+  - '[sound] UI_BUTTON_CLICK 1 1'
+size: 9
+items:
+  'music1':
+    material: PAPER
+    slot: 0
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:40
+    display_name: '&fМузыка в игре'
+    lore:
+      - '&7Переключает музыку в игре.'
+      - ''
+      - '&7Статус: &aON'
+      - '&f[ ЛКМ ] &7чтобы переключить!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%servervariables_value_music_state% > 0'
+    left_click_commands:
+      - '[console] svar set music_state 0 %player_name%'
+      - '[console] stopsound %player_name% * epica:ambient.a_side_effect'
+      - '[console] stopsound %player_name% * epica:ambient.additional_bonuses'
+      - '[console] stopsound %player_name% * epica:ambient.an_arts_score'
+      - '[console] stopsound %player_name% * epica:ambient.the_large_catalog'
+      - '[sound] UI_BUTTON_CLICK 1 0.5'
+      - '[refresh]'
+  'music2':
+    material: PAPER
+    slot: 0
+    priority: 5
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:42
+    display_name: '&fМузыка в игре'
+    lore:
+      - '&7Переключает музыку в игре.'
+      - ''
+      - '&7Статус: &cOFF'
+      - '&f[ ЛКМ ] &7чтобы переключить!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%servervariables_value_music_state% == 0'
+    left_click_commands:
+      - '[console] svar set music_state 1 %player_name%'
+      - '[sound] UI_BUTTON_CLICK 1 0.5'
+      - '[refresh]'
+
+  'stealth1':
+    material: PAPER
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:40
+    display_name: '&fСкрытность'
+    lore:
+      - '&7Переключает режим скрытности.'
+      - ''
+      - '&7Статус: &aON'
+      - '&f[ ЛКМ ] &7чтобы переключить!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%servervariables_value_stealth_enable% > 0'
+    left_click_commands:
+      - '[console] svar set stealth_enable 0 %player_name%'
+      - '[sound] UI_BUTTON_CLICK 1 0.5'
+      - '[refresh]'
+  'stealth2':
+    material: PAPER
+    slot: 1
+    priority: 5
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:42
+    display_name: '&fСкрытность'
+    lore:
+      - '&7Переключает режим скрытности.'
+      - ''
+      - '&7Статус: &cOFF'
+      - '&f[ ЛКМ ] &7чтобы переключить!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%servervariables_value_stealth_enable% == 0'
+    left_click_commands:
+      - '[console] svar set stealth_enable 1 %player_name%'
+      - '[sound] UI_BUTTON_CLICK 1 0.5'
+      - '[refresh]'
+
+  'notify':
+    material: PAPER
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:41
+    display_name: '&fУведомления'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы открыть страницу!'
+    click_commands:
+      - '[openguimenu] settings_notify'
+      - '[refresh]'
+  # 'notify1':
+    # material: EMERALD_BLOCK
+    # slot: 2
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # #nbt_int: CustomModelData:81
+    # display_name: '&fУведомления'
+    # lore:
+      # - '&7Переключает отправку уведомлений.'
+      # - ''
+      # - '&7Статус: &aON'
+      # - '&f[ ЛКМ ] &7чтобы переключить!'
+    # view_requirement:
+      # requirements:
+        # req1:
+          # type: 'javascript'
+          # expression: '%servervariables_value_notify_enable% > 0'
+    # left_click_commands:
+      # - '[console] svar set notify_enable 0 %player_name%'
+      # - '[sound] UI_BUTTON_CLICK 1 0.5'
+      # - '[refresh]'
+  # 'notify2':
+    # material: REDSTONE_BLOCK
+    # slot: 2
+    # priority: 5
+    # update: true
+    # hide_attributes: false
+    # #nbt_int: CustomModelData:81
+    # display_name: '&fУведомления'
+    # lore:
+      # - '&7Переключает отправку уведомлений.'
+      # - ''
+      # - '&7Статус: &cOFF'
+      # - '&f[ ЛКМ ] &7чтобы переключить!'
+    # view_requirement:
+      # requirements:
+        # req1:
+          # type: 'javascript'
+          # expression: '%servervariables_value_notify_enable% == 0'
+    # left_click_commands:
+      # - '[console] svar set notify_enable 1 %player_name%'
+      # - '[sound] UI_BUTTON_CLICK 1 0.5'
+      # - '[refresh]'
+
+  'sneak1':
+    material: PAPER
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:40
+    display_name: '&fРежим лежа'
+    lore:
+      - '&7Переключает возможность переходить'
+      - '&7в режим лежа.'
+      - ''
+      - '&7Статус: &aON'
+      - '&f[ ЛКМ ] &7чтобы переключить!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%servervariables_value_player_sneak_enable% > 0'
+    left_click_commands:
+      - '[console] svar set player_sneak_enable 0 %player_name%'
+      - '[sound] UI_BUTTON_CLICK 1 0.5'
+      - '[refresh]'
+  'sneak2':
+    material: PAPER
+    slot: 3
+    priority: 5
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:42
+    display_name: '&fРежим лежа'
+    lore:
+      - '&7Переключает возможность переходить'
+      - '&7в режим лежа.'
+      - ''
+      - '&7Статус: &cOFF'
+      - '&f[ ЛКМ ] &7чтобы переключить!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%servervariables_value_player_sneak_enable% == 0'
+    left_click_commands:
+      - '[console] svar set player_sneak_enable 1 %player_name%'
+      - '[sound] UI_BUTTON_CLICK 1 0.5'
+      - '[refresh]'

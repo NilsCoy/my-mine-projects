@@ -1,0 +1,36 @@
+conversations:
+  equip:
+    quester: '&aСкупщик'
+    first: 'npc_node_1'
+    stop: 'false'
+    NPC_options:
+      npc_node_1:
+        text: '&7За стойкой стоит хмурый мужик, осматривающий вас сверху вниз.&f\n\nА ты неплохо одет, что же тебе надобно в моем магазинчике?'
+        condition: ''
+        event: ''
+        pointers: player_node_1, player_node_2, player_node_3
+
+      npc_node_2:
+        text: 'Если ты собрался языком чесать, то уходи, мне не о чем с тобой разговаривать!'
+        condition: ''
+        event: ''
+        pointers: player_node_1, player_node_3
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Я хочу приобрести несколько твоих товаров. [ Торговля ]'
+        condition: ''
+        event: 'equip'
+
+      player_node_2:
+        text: 'Я хочу кое о чём спросить.'
+        condition: ''
+        event: ''
+        pointers: npc_node_2
+
+      player_node_3:
+        text: 'Я тут мимо проходил, и решил зайти посмотреть на ассортимент. [ Уйти ]'
+        condition: ''
+        event: ''

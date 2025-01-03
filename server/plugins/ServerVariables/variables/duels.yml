@@ -1,0 +1,17 @@
+variables:
+  duel_is_started:
+    variable_type: GLOBAL
+    value_type: INTEGER
+    initial_value: 0
+  duel_player:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  duel_npc:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  duel_npc_is_started:
+    variable_type: GLOBAL
+    value_type: INTEGER
+    initial_value: 0

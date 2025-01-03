@@ -1,0 +1,8 @@
+uuid: 7280115a-c999-3795-b207-156aa6b5d73b
+name: Sigma228
+primary-group: default
+permissions:
+- promo_horizon
+- titul_17
+parents:
+- default

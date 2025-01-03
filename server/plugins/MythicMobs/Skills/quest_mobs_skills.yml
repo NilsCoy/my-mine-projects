@@ -1,0 +1,31 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+guild_instructor_sound1:
+  Skills:
+  - sound{s=entity.vindicator.celebrate;p=1} @self
+guild_instructor_sound2:
+  Skills:
+  - sound{s=entity.vindicator.ambient;p=1} @self
+guild_instructor_sound3:
+  Skills:
+  - sound{s=entity.vindicator.death;p=1} @self
+guild_instructor_sound4:
+  Skills:
+  - sound{s=entity.vindicator.hurt;p=1} @self
+guild_instructor_skill:
+  #Conditions:
+  #- variableEquals{var=caster.kill;value=0} true
+  Skills:
+  - command{c="bq event <target.name> main-town1.guild_quest_completed"} @target
+  - command{c="bq event <target.name> main-town1.quest_updated"} @target
+  - command{c="tp <target.name> 1360.5 74 -1140.5 90 0"} @target
+  - delay 10
+  - potion{type=HEAL;duration=1;level=100} @target
+  - potion{type=SATURATION;duration=1;level=100} @target
+  - sendtitle{title="&aВы выиграли!";d=60;fi=10;fo=10} @target
+  - command{c="svar set duel_player 0 <target.name>"} @target
+  - command{c="svar set duel_npc 0 <target.name>"} @target
+  - command{c="core array remove DuelListNpc 0"} @target
+  - command{c="svar set duel_npc_is_started 0"} @target

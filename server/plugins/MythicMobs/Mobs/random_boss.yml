@@ -1,0 +1,647 @@
+boss_spawner:
+  Type: silverfish
+  Display: '&cБосс'
+  Health: 1
+  Faction: npc
+  Skills:
+  - model{m=air;n=nametag;d=false} @self ~onSpawn
+  - skill{s=boss_spawner} @self ~onSpawn
+  - remove @self ~onSpawn
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+
+sword_master_random_boss:
+  Type: SKELETON
+  Display: '&cВосставший мастер меча &7[ &e<caster.level> &7]'
+  Health: 100
+  Faction: undead
+  Drops:
+  - bone1 1-5 1
+  - cmd{c="ii give <trigger.name> ingredient13"} 1 0.3
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    Despawn: false
+    Glowing: false
+    NoAI: false
+  Skills:
+  #- setlevel{a=set;l=1} @self ~onSpawn
+  #- message{m="&6Появился босс<&co> <caster.name>"} @Server ~onSpawn
+  #- message{m="&6Вы чувствуете давящую на вас силу."} @PIR{r=100} ~onLoad
+  - skill{s=boss_reload} @self ~onLoad
+  - message{m="&6Босс <caster.name> &6был повержен <trigger.name>"} @Server ~onDeath
+  
+  - setvariable{var=caster.time_load;type=INTEGER;value="%server_time_k%"} @self ~onSpawn
+  - skill{s=random_boss_level_check} @self ~onTimer:200
+  - skill{s=level_check} @self ~onTimer:200
+  #- healpercent{m=1} @self ~onLoad
+  - skill{s=boss_level_drop} @self ~onDeath
+  - skill{s=savezone_remove} @self ~onTimer:10
+  
+  - skill{s=arrow_block_sound} @self ~onDamaged
+  - skill{s=block_sound} @self ~onDamaged
+  - skill{s=leap_for_player} @trigger ~onDamaged ?~distance{d=>2}
+  - skill{s=sword_master_skill_cast} @self ~onTimer:300
+  - skill{s=sword_master_berserk} @trigger ~onDamaged <30%
+  Equipment:
+  - CARVED_PUMPKIN{model=4} HEAD
+  - IRON_CHESTPLATE CHEST
+  - IRON_LEGGINGS LEGS
+  - IRON_BOOTS FEET
+  - IRON_SWORD HAND
+  - SHIELD OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction ork
+  Modules:
+    ThreatTable: true
+  LevelModifiers:
+    Health: 100
+    KnockbackResistance: 0.2
+    MovementSpeed: 0.015
+  DamageModifiers:
+  - PROJECTILE 0.25
+  - FIRE_TICK 0
+  BossBar:
+    Enabled: true
+    Title: '<caster.name>'
+    Range: 50
+    Color: RED
+    Style: SEGMENTED_6
+
+
+
+summoner_random_boss:
+  Type: ZOMBIE
+  Display: '&cВосставший владыка мертвых &7[ &e<caster.level> &7]'
+  Health: 150
+  Faction: undead
+  Drops:
+  - bone1 1-5 1
+  - cmd{c="ii give <trigger.name> ingredient13"} 1 0.3
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.3
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    Despawn: false
+    Glowing: false
+    NoAI: false
+    Silent: true
+  Skills:
+  #- setlevel{a=set;l=1} @self ~onSpawn
+  #- message{m="&6Появился босс<&co> <caster.name>"} @Server ~onSpawn
+  #- message{m="&6Вы чувствуете давящую на вас силу."} @PIR{r=100} ~onLoad
+  - skill{s=boss_reload} @self ~onLoad
+  - message{m="&6Босс <caster.name> &6был повержен <trigger.name>"} @Server ~onDeath
+  
+  - setvariable{var=caster.time_load;type=INTEGER;value="%server_time_k%"} @self ~onSpawn
+  - skill{s=random_boss_level_check} @self ~onTimer:200
+  - skill{s=level_check} @self ~onTimer:200
+  #- healpercent{m=1} @self ~onLoad
+  - skill{s=boss_level_drop} @self ~onDeath
+  - skill{s=savezone_remove} @self ~onTimer:10
+  
+  - sound{s=entity.evoker.hurt;p=0.5} @self ~onDamaged
+  - sound{s=entity.evoker.death;p=0.5} @self ~onDeath
+  
+  - setvariable{var=caster.skull;type=INTEGER;value=0} @self ~onSpawn
+  - setvariable{var=caster.guard;type=INTEGER;value=0} @self ~onSpawn
+  - skill{s=summoner_skill_cast} @self ~onTimer:300 #180
+  - runaigoalselector{goal=clear} @self ~onDamaged
+  - runaigoalselector{goal=fleeConditional{distance=3;speed=1.2;safespeed=0.8;conditions=[ - targetwithin{d=5} true ]}} @self ~onDamaged
+  - skill{s=summoner_skull} @self ~onDamaged
+  - skill{s=summoner_skull_die} @self ~onSignal:SKULL_DIE
+  - skill{s=summoner_skill5} @trigger ~onDamaged <30%
+  - equip{item=LEATHER_HELMET{color=#845590} HEAD} @self ~onTimer:2000
+  Equipment:
+  - LEATHER_HELMET{data=Unbreakable=1;color=#845590} HEAD
+  - LEATHER_CHESTPLATE{data=Unbreakable=1;color=#845590} CHEST
+  - LEATHER_LEGGINGS{data=Unbreakable=1;color=#845590} LEGS
+  - AIR FEET
+  - BLAZE_ROD{model=1} HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - fleeConditional{distance=3;speed=1.2;safespeed=0.8;conditions=[ - targetwithin{d=5} true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction ork
+  Modules:
+    ThreatTable: true
+  LevelModifiers:
+    Health: 80
+    KnockbackResistance: 0.2
+    MovementSpeed: 0.015
+  DamageModifiers:
+  - FIRE_TICK 0
+  BossBar:
+    Enabled: true
+    Title: '<caster.name>'
+    Range: 50
+    Color: RED
+    Style: SEGMENTED_6
+skelet_summoned:
+  Type: SKELETON
+  Display: '&eПризванный скелет'
+  Health: 15
+  Faction: undead
+  Options:
+    MovementSpeed: 0.23
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - WOODEN_SWORD HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - gotoparent
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction ork
+  Modules:
+    ThreatTable: true
+skull_summoned:
+  Type: SKELETON
+  Display: '&eПоглощатель'
+  Health: 50
+  Faction: undead
+  Options:
+    MovementSpeed: 0.23
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    Despawn: false
+  Skills:
+  - potion{type=INVISIBILITY;duration=20000000;level=1;p=false} @self ~onSpawn
+  - particles{p=Soul_Fire_Flame;a=5;hs=0.3;vs=0.3;y=2;speed=0.01} @self ~onTimer:10
+  - signal{s=SKULL_DIE} @Parent ~onDeath
+  - damage{amount=1} @self ~onSignal:SKULL_PROTECT
+  - particles{p=Sweep_Attack;a=1;hs=0.5;vs=0.5;y=1} @self ~onSignal:SKULL_PROTECT
+  - runaigoalselector{goal=clear} @self ~onDamaged
+  - runaigoalselector{goal=gotoparent} @self ~onDamaged
+  - skill{s=savezone_remove} @self ~onTimer:10
+  Equipment:
+  - SKELETON_SKULL HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  AIGoalSelectors:
+  - clear
+  - gotoparent
+  - float
+  AITargetSelectors:
+  - clear
+  Modules:
+    ThreatTable: true
+skelet_guard_summoned:
+  Type: SKELETON
+  Display: '&eПризванный скелет-воин'
+  Health: 50
+  Faction: undead
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - CARVED_PUMPKIN{model=4} HEAD
+  - CHAINMAIL_CHESTPLATE CHEST
+  - CHAINMAIL_LEGGINGS LEGS
+  - CHAINMAIL_BOOTS FEET
+  - IRON_SWORD HAND
+  - SHIELD OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - gotoparent
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction ork
+  Modules:
+    ThreatTable: true
+
+
+
+hunter_random_boss:
+  Type: STRAY
+  Display: '&cВосставший охотник льда &7[ &e<caster.level> &7]'
+  Health: 150
+  Faction: undead
+  Drops:
+  - bone1 1-5 1
+  - cmd{c="ii give <trigger.name> ingredient13"} 1 0.3
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    Despawn: false
+    Glowing: false
+    NoAI: false
+  Skills:
+  #- setlevel{a=set;l=1} @self ~onSpawn
+  #- message{m="&6Появился босс<&co> <caster.name>"} @Server ~onSpawn
+  #- message{m="&6Вы чувствуете давящую на вас силу."} @PIR{r=100} ~onLoad
+  - skill{s=boss_reload} @self ~onLoad
+  - message{m="&6Босс <caster.name> &6был повержен <trigger.name>"} @Server ~onDeath
+  
+  - setvariable{var=caster.time_load;type=INTEGER;value="%server_time_k%"} @self ~onSpawn
+  - skill{s=random_boss_level_check} @self ~onTimer:200
+  - skill{s=level_check} @self ~onTimer:200
+  #- healpercent{m=1} @self ~onLoad
+  - skill{s=boss_level_drop} @self ~onDeath
+  - skill{s=savezone_remove} @self ~onTimer:10
+  
+  - skill{s=hunter_leap} @self ~onTimer:10
+  - skill{s=hunter_skill_cast} @self ~onTimer:200
+  - skill{s=hunter_equip} @self ~onTimer:10
+  - freeze{ticks=200} @target ~onAttack
+  - potion{type=SLOW;duration=80;level=1;p=false} @target ~onAttack
+  Equipment:
+  - CARVED_PUMPKIN{model=6} HEAD
+  - EPICFIGHT_STRAY_ROBE CHEST
+  - EPICFIGHT_STRAY_PANTS LEGS
+  - AIR FEET
+  - EPICFIGHT_IRON_DAGGER HAND
+  - EPICFIGHT_IRON_DAGGER OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - bowattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction ork
+  Modules:
+    ThreatTable: true
+  LevelModifiers:
+    Health: 100
+    KnockbackResistance: 0.2
+    #MovementSpeed: 0.015
+  DamageModifiers:
+  - PROJECTILE 0.5
+  - FIRE_TICK 0
+  BossBar:
+    Enabled: true
+    Title: '<caster.name>'
+    Range: 50
+    Color: RED
+    Style: SEGMENTED_6
+wolf_summoned:
+  Type: WOLF
+  Display: '&eФантомный волк'
+  Health: 1
+  Damage: 5
+  Faction: undead
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    Angry: true
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - particles{p=Sculk_Soul;a=5;hs=0.3;vs=0.3;y=0.5;speed=0.01} @self ~onTimer:10
+  - remove @self ~onAttack
+  - suicide @self ~onTimer:1200
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - gotoparent
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction ork
+  Modules:
+    ThreatTable: true
+ice_wall_summoned:
+  Type: SKELETON
+  Display: '&aЛедяная стена'
+  Health: 25
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    Despawn: true
+    NoAI: false
+    Silent: true
+  Skills:
+  - sound{s=block.glass.break;p=0.5} @self ~onDamaged
+  - setAI{ai=false} @self ~onTimer:60
+  - model{m=ice_wall;n=false;damagetint=false} @self ~onSpawn
+  - setvariable{var=caster.yaw;type=INTEGER;value="<random.0to360>"} @self ~onSpawn
+  - setrotation{relative=false;yaw="<caster.var.yaw>"} @self ~onTimer:1
+  - particles{p=End_Rod;a=50;hs=0.5;vs=0.1;y=0.1;sfo=0;sso=-2} @self ~onTimer:10
+  - particles{p=End_Rod;a=50;hs=0.5;vs=0.1;y=0.4;sfo=0;sso=2} @self ~onTimer:10
+  - particles{p=End_Rod;a=50;hs=0.5;vs=0.1;y=0.3;sfo=0;sso=0} @self ~onTimer:10
+  - suicide @self ~onTimer:1200
+  - freeze{ticks=200} @PIR{r=2} ~onTimer:10
+  - potion{type=SLOW;duration=80;level=1;p=false} @PIR{r=2} ~onTimer:10
+  - skill{s=savezone_remove} @self ~onTimer:10
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  DamageModifiers:
+  - FIRE_TICK 0
+
+
+
+slimeA_random_boss:
+  Type: RABBIT
+  Disguise: SLIME setSize 3
+  Display: '&cВеномий &7[ &e<caster.level> &7]'
+  Health: 50
+  Faction: animal
+  # Drops:
+  # - bone1 1-5 1
+  # - cmd{c="ii give <trigger.name> ingredient13"} 1 0.3
+  Options:
+    MovementSpeed: 1
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 25
+    Despawn: false
+    Glowing: false
+    NoAI: false
+  Skills:
+  #- setlevel{a=set;l=1} @self ~onSpawn
+  #- message{m="&6Появился босс<&co> <caster.name>"} @Server ~onSpawn
+  #- message{m="&6Вы чувствуете давящую на вас силу."} @PIR{r=100} ~onLoad
+  - skill{s=boss_reload} @self ~onLoad
+  - message{m="&6Босс <caster.name> &6был повержен <trigger.name>"} @Server ~onDeath
+  
+  - setvariable{var=caster.time_load;type=INTEGER;value="%server_time_k%"} @self ~onSpawn
+  - skill{s=random_boss_level_check} @self ~onTimer:200
+  - skill{s=level_check} @self ~onTimer:200
+  #- healpercent{m=1} @self ~onLoad
+  #- skill{s=boss_level_drop} @self ~onDeath
+  - skill{s=boss_level_drop_slime} @self ~onDeath
+  - skill{s=savezone_remove} @self ~onTimer:10
+  
+  - summon{type=slimeB_random_boss;amount=1;radius=0} @self ~onSpawn
+  - potion{type=POISON;duration=200;level=0} @target ~onAttack
+  - skill{s=slimeA_skill_cast} @self ~onTimer:200
+  - skill{s=slime_brother_die} @self ~onSignal:BROTHER_DIE
+  - skill{s=slimeA_skill3} @self ~onSignal:BROTHER_HEAL
+  - setvariable{var=caster.brother;value="1";type=INTEGER} @self ~onSpawn
+  - setvariable{var=caster.cast;value="1";type=INTEGER} @self ~onSpawn
+  - skill{s=slimeA_angry} @self ~onTimer:20
+  - signal{s=BROTHER_DIE} @Children ~onDeath
+  #- setvariable{var=caster.brother_health;value="<caster.hp>";type=INTEGER} @Children ~onDamaged
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction ork
+  Modules:
+    ThreatTable: true
+  LevelModifiers:
+    Health: 50
+    KnockbackResistance: 0.2
+  DamageModifiers:
+  - PROJECTILE 0
+  BossBar:
+    Enabled: true
+    Title: '<caster.name>'
+    Range: 50
+    Color: RED
+    Style: SEGMENTED_6
+
+slimeB_random_boss:
+  Type: RABBIT
+  Disguise: MAGMA_CUBE setSize 3
+  Display: '&cИнферий &7[ &e<caster.level> &7]'
+  Health: 50
+  Faction: animal
+  # Drops:
+  # - bone1 1-5 1
+  # - cmd{c="ii give <trigger.name> ingredient13"} 1 0.3
+  Options:
+    MovementSpeed: 1
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 25
+    Despawn: false
+    Glowing: false
+    NoAI: false
+  Skills:
+  #- setlevel{a=set;l=1} @self ~onSpawn
+  #- message{m="&6Появился босс<&co> <caster.name>"} @Server ~onSpawn
+  #- message{m="&6Вы чувствуете давящую на вас силу."} @PIR{r=100} ~onLoad
+  #- skill{s=boss_reload} @self ~onLoad
+  - remove @self ~onLoad
+  - message{m="&6Босс <caster.name> &6был повержен <trigger.name>"} @Server ~onDeath
+  
+  - setvariable{var=caster.time_load;type=INTEGER;value="%server_time_k%"} @self ~onSpawn
+  - skill{s=random_boss_level_check} @self ~onTimer:200
+  - skill{s=level_check} @self ~onTimer:200
+  #- healpercent{m=1} @self ~onLoad
+  #- skill{s=boss_level_drop} @self ~onDeath
+  - skill{s=boss_level_drop_slime} @self ~onDeath
+  - skill{s=savezone_remove} @self ~onTimer:10
+  
+  - ignite{ticks=200} @target ~onAttack
+  - signal{s=BROTHER_DIE} @Parent ~onDeath
+  - skill{s=slimeB_skill3} @self ~onSignal:BROTHER_HEAL
+  - setvariable{var=target.brother_health;value="<caster.hp>";type=INTEGER} @Parent ~onDamaged
+  - setvariable{var=target.brother_health;value="<caster.hp>";type=INTEGER} @Parent ~onSpawn
+  - setvariable{var=target.brother_health;value="<caster.hp>";type=INTEGER} @Parent ~onLoad
+  - setvariable{var=caster.brother;value="1";type=INTEGER} @self ~onSpawn
+  - setvariable{var=caster.cast;value="0";type=INTEGER} @self ~onSpawn
+  - skill{s=slime_brother_die} @self ~onSignal:BROTHER_DIE
+  - skill{s=slimeB_angry} @self ~onTimer:20
+  - skill{s=slimeB_skill_cast} @self ~onTimer:200
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction ork
+  Modules:
+    ThreatTable: true
+  LevelModifiers:
+    Health: 50
+    KnockbackResistance: 0.2
+  DamageModifiers:
+  - PROJECTILE 0
+  BossBar:
+    Enabled: true
+    Title: '<caster.name>'
+    Range: 50
+    Color: RED
+    Style: SEGMENTED_6
+
+witch_random_boss:
+  Type: WITCH
+  #Disguise: MAGMA_CUBE setSize 3
+  Display: '&cОбезумевшая ведьма &7[ &e<caster.level> &7]'
+  Health: 100
+  Faction: animal
+  # Drops:
+  # - bone1 1-5 1
+  # - cmd{c="ii give <trigger.name> ingredient13"} 1 0.3
+  Options:
+    MovementSpeed: 0.26
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 25
+    Despawn: false
+    Glowing: false
+    NoAI: false
+  Skills:
+  #- message{m="&6Появился босс<&co> <caster.name>"} @Server ~onSpawn
+  #- message{m="&6Вы чувствуете давящую на вас силу."} @PIR{r=100} ~onLoad
+  - skill{s=boss_reload} @self ~onLoad
+  - message{m="&6Босс <caster.name> &6был повержен <trigger.name>"} @Server ~onDeath
+  
+  - setvariable{var=caster.time_load;type=INTEGER;value="%server_time_k%"} @self ~onSpawn
+  - skill{s=random_boss_level_check} @self ~onTimer:200
+  - skill{s=level_check} @self ~onTimer:200
+  #- healpercent{m=1} @self ~onLoad
+  #- skill{s=boss_level_drop} @self ~onDeath
+  - skill{s=boss_level_drop_slime} @self ~onDeath
+  - skill{s=savezone_remove} @self ~onTimer:10
+  
+  - skill{s=witch_attack} @self ~onTimer:100
+  - skill{s=witch_attack_ready} @self ~onTimer:25
+  - skill{s=witch_skill_cast} @self ~onTimer:200
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  #- fleeConditional{distance=3;speed=1;safespeed=0.8;conditions=[ - targetwithin{d=5} true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction ork
+  Modules:
+    ThreatTable: true
+  LevelModifiers:
+    Health: 100
+    KnockbackResistance: 0.2
+  #DamageModifiers:
+  #- PROJECTILE 0
+  BossBar:
+    Enabled: true
+    Title: '<caster.name>'
+    Range: 50
+    Color: RED
+    Style: SEGMENTED_6

@@ -1,0 +1,9 @@
+uuid: 2a98fbf6-70b9-32c8-8357-1d8a6920c621
+name: sovakill1
+primary-group: default
+permissions:
+- promo_horizon
+- titul_17
+- titul_2
+parents:
+- default

@@ -1,0 +1,206 @@
+menu_title: '&6Настройки'
+open_commands:
+  - '[sound] UI_BUTTON_CLICK 1 1'
+size: 9
+items:
+  'home':
+    material: PAPER
+    slot: 0
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:13
+    display_name: '&fВернуться назад'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы вернуться.'
+    click_commands:
+      - '[openguimenu] settings'
+      - '[refresh]'
+
+  'notify_xp1':
+    material: PAPER
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:40
+    display_name: '&fУведомления о опыте'
+    lore:
+      - '&7Переключает отправку уведомлений'
+      - '&7о получаемом опыте.'
+      - ''
+      - '&7Статус: &aON'
+      - '&f[ ЛКМ ] &7чтобы переключить!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%servervariables_value_notify_xp_enable% > 0'
+    left_click_commands:
+      - '[console] svar set notify_xp_enable 0 %player_name%'
+      - '[sound] UI_BUTTON_CLICK 1 0.5'
+      - '[refresh]'
+  'notify_xp2':
+    material: PAPER
+    slot: 1
+    priority: 5
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:42
+    display_name: '&fУведомления о опыте'
+    lore:
+      - '&7Переключает отправку уведомлений'
+      - '&7о получаемом опыте.'
+      - ''
+      - '&7Статус: &cOFF'
+      - '&f[ ЛКМ ] &7чтобы переключить!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%servervariables_value_notify_xp_enable% == 0'
+    left_click_commands:
+      - '[console] svar set notify_xp_enable 1 %player_name%'
+      - '[sound] UI_BUTTON_CLICK 1 0.5'
+      - '[refresh]'
+
+  'notify_level1':
+    material: PAPER
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:40
+    display_name: '&fУведомления о уровне'
+    lore:
+      - '&7Переключает отправку уведомлений'
+      - '&7о получаемом уровне и токене.'
+      - ''
+      - '&7Статус: &aON'
+      - '&f[ ЛКМ ] &7чтобы переключить!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%servervariables_value_notify_level_enable% > 0'
+    left_click_commands:
+      - '[console] svar set notify_level_enable 0 %player_name%'
+      - '[sound] UI_BUTTON_CLICK 1 0.5'
+      - '[refresh]'
+  'notify_level2':
+    material: PAPER
+    slot: 2
+    priority: 5
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:42
+    display_name: '&fУведомления о уровне'
+    lore:
+      - '&7Переключает отправку уведомлений'
+      - '&7о получаемом уровне и токене.'
+      - ''
+      - '&7Статус: &cOFF'
+      - '&f[ ЛКМ ] &7чтобы переключить!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%servervariables_value_notify_level_enable% == 0'
+    left_click_commands:
+      - '[console] svar set notify_level_enable 1 %player_name%'
+      - '[sound] UI_BUTTON_CLICK 1 0.5'
+      - '[refresh]'
+
+  'notify_cycle1':
+    material: PAPER
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:40
+    display_name: '&fУведомления о смене суток'
+    lore:
+      - '&7Переключает отправку уведомлений'
+      - '&7о смене дня и ночи.'
+      - ''
+      - '&7Статус: &aON'
+      - '&f[ ЛКМ ] &7чтобы переключить!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%servervariables_value_notify_cycle_enable% > 0'
+    left_click_commands:
+      - '[console] svar set notify_cycle_enable 0 %player_name%'
+      - '[sound] UI_BUTTON_CLICK 1 0.5'
+      - '[refresh]'
+  'notify_cycle2':
+    material: PAPER
+    slot: 3
+    priority: 5
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:42
+    display_name: '&fУведомления о смене суток'
+    lore:
+      - '&7Переключает отправку уведомлений'
+      - '&7о смене дня и ночи.'
+      - ''
+      - '&7Статус: &cOFF'
+      - '&f[ ЛКМ ] &7чтобы переключить!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%servervariables_value_notify_cycle_enable% == 0'
+    left_click_commands:
+      - '[console] svar set notify_cycle_enable 1 %player_name%'
+      - '[sound] UI_BUTTON_CLICK 1 0.5'
+      - '[refresh]'
+
+  'notify_other1':
+    material: PAPER
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:40
+    display_name: '&fУведомления'
+    lore:
+      - '&7Переключает отправку прочих'
+      - '&7уведомлений.'
+      - ''
+      - '&7Статус: &aON'
+      - '&f[ ЛКМ ] &7чтобы переключить!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%servervariables_value_notify_other_enable% > 0'
+    left_click_commands:
+      - '[console] svar set notify_other_enable 0 %player_name%'
+      - '[sound] UI_BUTTON_CLICK 1 0.5'
+      - '[refresh]'
+  'notify_other2':
+    material: PAPER
+    slot: 4
+    priority: 5
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:42
+    display_name: '&fУведомления'
+    lore:
+      - '&7Переключает отправку прочих'
+      - '&7уведомлений.'
+      - ''
+      - '&7Статус: &cOFF'
+      - '&f[ ЛКМ ] &7чтобы переключить!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%servervariables_value_notify_other_enable% == 0'
+    left_click_commands:
+      - '[console] svar set notify_other_enable 1 %player_name%'
+      - '[sound] UI_BUTTON_CLICK 1 0.5'
+      - '[refresh]'

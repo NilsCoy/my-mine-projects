@@ -1,0 +1,8 @@
+uuid: b1925449-97b6-316c-8c57-89f1bc9a6b2e
+name: xifamox
+primary-group: default
+permissions:
+- promo_horizon
+- titul_17
+parents:
+- default

@@ -1,0 +1,1280 @@
+menu_title: '&6Продажа'
+open_commands:
+  - '[sound] ENTITY_VILLAGER_TRADE 1 0.8'
+size: 45
+items:
+
+
+
+  'coal':
+    material: BRICK
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:13
+    display_name: '&bУголь'
+    lore:
+      - '&fЦена продажи: &c6Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bУголь'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bУголь'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 1 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 2 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'iron_raw':
+    material: BRICK
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:28
+    display_name: '&bЖелезная руда'
+    lore:
+      - '&fЦена продажи: &c9Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bЖелезная руда'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bЖелезная руда'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 3 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 4 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'cobald_raw':
+    material: BRICK
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:6
+    display_name: '&bКобальтовая руда'
+    lore:
+      - '&fЦена продажи: &c100Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bКобальтовая руда'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bКобальтовая руда'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 5 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 6 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ancient_scrap':
+    material: BRICK
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:15
+    display_name: '&bДревний лом'
+    lore:
+      - '&fЦена продажи: &c500Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bДревний лом'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bДревний лом'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 7 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 8 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+
+
+  'pigfang':
+    material: BRICK
+    slot: 5
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:7
+    display_name: '&bКлык кабана'
+    lore:
+      - '&fЦена продажи: &c25Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bКлык кабана'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bКлык кабана'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 9 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 10 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ork_amulet':
+    material: BRICK
+    slot: 6
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:8
+    display_name: '&bОжерелье из костей'
+    lore:
+      - '&fЦена продажи: &c15Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bОжерелье из костей'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bОжерелье из костей'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 11 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 12 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'little_skin':
+    material: BRICK
+    slot: 7
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:16
+    display_name: '&bМаленькая шкура'
+    lore:
+      - '&fЦена продажи: &c12Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bМаленькая шкура'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bМаленькая шкура'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 13 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 14 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'mid_skin':
+    material: BRICK
+    slot: 10
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:16
+    display_name: '&bСредняя шкура'
+    lore:
+      - '&fЦена продажи: &c24Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bСредняя шкура'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bСредняя шкура'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 15 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 16 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'big_skin':
+    material: BRICK
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:16
+    display_name: '&bБольшая шкура'
+    lore:
+      - '&fЦена продажи: &c48Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bБольшая шкура'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bБольшая шкура'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 17 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 18 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'meat':
+    material: MUTTON
+    slot: 12
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:6
+    display_name: '&bСырое мясо'
+    lore:
+      - '&fЦена продажи: &c6Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'MUTTON'
+          name: '&bСырое мясо'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'MUTTON'
+          name: '&bСырое мясо'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 19 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 20 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'bone':
+    material: BRICK
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:27
+    display_name: '&bКость'
+    lore:
+      - '&fЦена продажи: &c3Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bКость'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bКость'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 21 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 22 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient1':
+    material: BRICK
+    slot: 14
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:24
+    display_name: '&bЛепесток тысячелистника'
+    lore:
+      - '&fЦена продажи: &c24Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bЛепесток тысячелистника'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bЛепесток тысячелистника'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 57 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 58 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient2':
+    material: BRICK
+    slot: 15
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:75
+    display_name: '&bКорень горькоцвета'
+    lore:
+      - '&fЦена продажи: &c24Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bКорень горькоцвета'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bКорень горькоцвета'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 59 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 60 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient3':
+    material: BRICK
+    slot: 16
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:21
+    display_name: '&bСемена полыни'
+    lore:
+      - '&fЦена продажи: &c24Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bСемена полыни'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bСемена полыни'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 61 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 62 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient4':
+    material: BRICK
+    slot: 19
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:77
+    display_name: '&bПобеги наперстянки'
+    lore:
+      - '&fЦена продажи: &c72Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bПобеги наперстянки'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bПобеги наперстянки'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 63 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 64 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient5':
+    material: BRICK
+    slot: 20
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:85
+    display_name: '&bХаустония'
+    lore:
+      - '&fЦена продажи: &c96Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bХаустония'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bХаустония'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 65 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 66 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient6':
+    material: SWEET_BERRIES
+    slot: 21
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:27
+    display_name: '&bЛесные ягоды'
+    lore:
+      - '&fЦена продажи: &c12Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SWEET_BERRIES'
+          name: '&bЛесные ягоды'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'SWEET_BERRIES'
+          name: '&bЛесные ягоды'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 67 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 68 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient7':
+    material: BRICK
+    slot: 22
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:87
+    display_name: '&bБлудроз'
+    lore:
+      - '&fЦена продажи: &c48Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bБлудроз'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bБлудроз'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 69 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 70 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient8':
+    material: BRICK
+    slot: 23
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:86
+    display_name: '&bЖелтоцвет'
+    lore:
+      - '&fЦена продажи: &c48Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bЖелтоцвет'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bЖелтоцвет'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 71 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 72 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient9':
+    material: BRICK
+    slot: 24
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:76
+    display_name: '&bГрибы'
+    lore:
+      - '&fЦена продажи: &c48Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bГрибы'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bГрибы'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 73 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 74 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient10':
+    material: BRICK
+    slot: 25
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:84
+    display_name: '&bСвето-трава'
+    lore:
+      - '&fЦена продажи: &c60Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bСвето-трава'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bСвето-трава'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 75 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 76 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient11':
+    material: BRICK
+    slot: 28
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:79
+    display_name: '&bМед мега-пчел'
+    lore:
+      - '&fЦена продажи: &c60Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bМед мега-пчел'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bМед мега-пчел'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 77 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 78 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient12':
+    material: BRICK
+    slot: 29
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:73
+    display_name: '&bЗеленый мох'
+    lore:
+      - '&fЦена продажи: &c48Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bЗеленый мох'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bЗеленый мох'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 79 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 80 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient13':
+    material: BRICK
+    slot: 30
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:81
+    display_name: '&bКостяная мука'
+    lore:
+      - '&fЦена продажи: &c60Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bКостяная мука'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bКостяная мука'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 81 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 82 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient14':
+    material: BRICK
+    slot: 31
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:82
+    display_name: '&bПлоть'
+    lore:
+      - '&fЦена продажи: &c24Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bПлоть'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bПлоть'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 83 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 84 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient15':
+    material: BRICK
+    slot: 32
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:74
+    display_name: '&bЛоскут тени'
+    lore:
+      - '&fЦена продажи: &c192Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bЛоскут тени'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bЛоскут тени'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 85 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 86 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient16':
+    material: BRICK
+    slot: 33
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:83
+    display_name: '&bРыбная икра'
+    lore:
+      - '&fЦена продажи: &c48Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bРыбная икра'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bРыбная икра'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 87 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 88 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient17':
+    material: BRICK
+    slot: 34
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:80
+    display_name: '&bБлестящая чешуя'
+    lore:
+      - '&fЦена продажи: &c48Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bБлестящая чешуя'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bБлестящая чешуя'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 89 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 90 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'ingredient18':
+    material: BRICK
+    slot: 37
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:78
+    display_name: '&bСтранный порошок'
+    lore:
+      - '&fЦена продажи: &c192Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bСтранный порошок'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bСтранный порошок'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 91 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 92 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'gems':
+    material: BRICK
+    slot: 38
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:88
+    display_name: '&bДрагоценные камни'
+    lore:
+      - '&fЦена продажи: &c96Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы продать 1 ед.'
+      - '&7[ЛКМ + Shift] чтобы продать все!'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bДрагоценные камни'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'BRICK'
+          name: '&bДрагоценные камни'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас нет такого предмета!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set player_selled_item 93 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar set player_selled_item 94 %player_name%'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,8,9,17,18,26,27,35,36,44]
+    display_name: ' '
+    nbt_int: CustomModelData:1

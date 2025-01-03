@@ -1,0 +1,21 @@
+JVM info: Oracle Corporation - 17.0.5 - 17.0.5+9-LTS-191
+java.net.preferIPv4Stack=true
+Current Time: 18/03/2024 16:29:06
+Host: files.minecraftforge.net [51.79.83.165]
+Host: maven.minecraftforge.net [51.79.83.165]
+Host: libraries.minecraft.net [13.107.213.45, 13.107.246.45]
+Host: launchermeta.mojang.com [13.107.213.45, 13.107.246.45]
+Host: piston-meta.mojang.com [13.107.246.45, 13.107.213.45]
+java.net.UnknownHostException: Этот хост неизвестен (authserver.mojang.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1529)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1377)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at net.minecraftforge.installer.DownloadUtils.getIps(DownloadUtils.java:290)
+	at net.minecraftforge.installer.SimpleInstaller.main(SimpleInstaller.java:120)
+Exception in thread "main" 
+java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "net.minecraftforge.installer.DownloadUtils.getIps(String)" is null
+	at net.minecraftforge.installer.SimpleInstaller.main(SimpleInstaller.java:120)

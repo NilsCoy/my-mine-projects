@@ -1,0 +1,270 @@
+Events:
+  alchemy_craft:
+    type: custom
+    custom_event_data:
+      event: svar.ajneb97.api.VariableChangeEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%variable_type%;getVariable().getVariableType()'
+      - '%variable_name%;getVariable().getName()'
+      - '%new_value%;getNewValue()'
+    conditions:
+    - "%variable_name% == alchemy_craft and %new_value% == 1 execute id_1"
+    - "%variable_name% == alchemy_craft and %new_value% == 2 execute id_2"
+    - "%variable_name% == alchemy_craft and %new_value% == 3 execute id_3"
+    - "%variable_name% == alchemy_craft and %new_value% == 4 execute id_4"
+    - "%variable_name% == alchemy_craft and %new_value% == 5 execute id_5"
+    - "%variable_name% == alchemy_craft and %new_value% == 6 execute id_6"
+    - "%variable_name% == alchemy_craft and %new_value% == 7 execute id_7"
+    - "%variable_name% == alchemy_craft and %new_value% == 8 execute id_8"
+    - "%variable_name% == alchemy_craft and %new_value% == 9 execute id_9"
+    - "%variable_name% == alchemy_craft and %new_value% == 10 execute id_10"
+    - "%variable_name% == alchemy_craft and %new_value% == 11 execute id_11"
+    - "%variable_name% == alchemy_craft and %new_value% == 12 execute id_12"
+    - "%variable_name% == alchemy_craft and %new_value% == 13 execute id_13"
+    - "%variable_name% == alchemy_craft and %new_value% == 14 execute id_14"
+    - "%variable_name% == alchemy_craft and %new_value% == 15 execute id_15"
+    - "%variable_name% == alchemy_craft and %new_value% == 16 execute id_16"
+    - "%variable_name% == alchemy_craft and %new_value% == 17 execute id_17"
+    - "%variable_name% == alchemy_craft and %new_value% == 18 execute id_18"
+    - "%variable_name% == alchemy_craft and %new_value% == 19 execute id_19"
+    - "%variable_name% == alchemy_craft and %new_value% == 20 execute id_20"
+    - "%variable_name% == alchemy_craft and %new_value% == 21 execute id_21"
+    - "%variable_name% == alchemy_craft and %new_value% == 22 execute id_22"
+    - "%variable_name% == alchemy_craft and %new_value% == 23 execute id_23"
+    - "%variable_name% == alchemy_craft and %new_value% == 24 execute id_24"
+    - "%variable_name% == alchemy_craft and %new_value% == 25 execute id_25"
+    - "%variable_name% == alchemy_craft and %new_value% == 26 execute id_26"
+    - "%variable_name% == alchemy_craft and %new_value% == 27 execute id_27"
+    - "%variable_name% == alchemy_craft and %new_value% == 28 execute id_28"
+    - "%variable_name% == alchemy_craft and %new_value% == 29 execute id_29"
+    - "%variable_name% == alchemy_craft and %new_value% == 30 execute id_30"
+    - "%variable_name% == alchemy_craft and %new_value% == 31 execute id_31"
+    - "%variable_name% == alchemy_craft"
+    actions:
+      default:
+      - 'console_command: svar set alchemy_craft 0 %player_name%'
+
+      id_1:
+      - 'remove_item: BRICK;3;name: Рыбная икра'
+      - 'remove_item: BRICK;3;name: Плоть'
+      - 'remove_item: BRICK;3;name: Мед мега-пчел'
+      - 'console_command: ii give %player_name% reagent11 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_2:
+      - 'remove_item: BRICK;3;name: Лепесток тысячелистника'
+      - 'remove_item: BRICK;3;name: Корень горькоцвета'
+      - 'remove_item: BRICK;3;name: Побеги наперстянки'
+      - 'console_command: ii give %player_name% reagent16 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_3:
+      - 'remove_item: BRICK;3;name: Свето-трава'
+      - 'remove_item: BRICK;3;name: Семена полыни'
+      - 'remove_item: BRICK;3;name: Желтоцвет'
+      - 'console_command: ii give %player_name% reagent20 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_4:
+      - 'remove_item: BRICK;3;name: Свето-трава'
+      - 'remove_item: BRICK;3;name: Костяная мука'
+      - 'remove_item: BRICK;3;name: Блестящая чешуя'
+      - 'console_command: ii give %player_name% reagent30 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_5:
+      - 'remove_item: BRICK;3;name: Побеги наперстянки'
+      - 'remove_item: BRICK;1;name: Странный порошок'
+      - 'remove_item: BRICK;1;name: Хаустония'
+      - 'console_command: ii give %player_name% reagent24 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_6:
+      - 'remove_item: BRICK;3;name: Плоть'
+      - 'remove_item: BRICK;3;name: Зеленый мох'
+      - 'remove_item: BRICK;3;name: Побеги наперстянки'
+      - 'console_command: ii give %player_name% reagent15 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_7:
+      - 'remove_item: BRICK;3;name: Блудроз'
+      - 'remove_item: BRICK;3;name: Желтоцвет'
+      - 'remove_item: BRICK;3;name: Корень горькоцвета'
+      - 'console_command: ii give %player_name% reagent21 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_8:
+      - 'remove_item: BRICK;3;name: Плоть'
+      - 'remove_item: BRICK;3;name: Зеленый мох'
+      - 'remove_item: BRICK;3;name: Семена полыни'
+      - 'console_command: ii give %player_name% reagent17 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_9:
+      - 'remove_item: BRICK;3;name: Блестящая чешуя'
+      - 'remove_item: BRICK;3;name: Костяная мука'
+      - 'remove_item: BRICK;3;name: Побеги наперстянки'
+      - 'console_command: ii give %player_name% reagent31 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_10:
+      - 'remove_item: BRICK;3;name: Плоть'
+      - 'remove_item: SWEET_BERRIES;6;name: Лесные ягоды'
+      - 'remove_item: BRICK;3;name: Блудроз'
+      - 'console_command: ii give %player_name% reagent4 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_11:
+      - 'remove_item: BRICK;3;name: Костяная мука'
+      - 'remove_item: BRICK;1;name: Странный порошок'
+      - 'remove_item: BRICK;1;name: Хаустония'
+      - 'console_command: ii give %player_name% reagent14 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_12:
+      - 'remove_item: BRICK;3;name: Семена полыни'
+      - 'remove_item: BRICK;3;name: Зеленый мох'
+      - 'remove_item: BRICK;3;name: Мед мега-пчел'
+      - 'console_command: ii give %player_name% reagent18 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_13:
+      - 'remove_item: BRICK;1;name: Хаустония'
+      - 'remove_item: BRICK;1;name: Лоскут тени'
+      - 'remove_item: BRICK;3;name: Рыбная икра'
+      - 'console_command: ii give %player_name% reagent23 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_14:
+      - 'remove_item: BRICK;3;name: Блудроз'
+      - 'remove_item: SWEET_BERRIES;6;name: Лесные ягоды'
+      - 'remove_item: BRICK;3;name: Мед мега-пчел'
+      - 'console_command: ii give %player_name% reagent19 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_15:
+      - 'remove_item: BRICK;3;name: Грибы'
+      - 'remove_item: SWEET_BERRIES;6;name: Лесные ягоды'
+      - 'remove_item: BRICK;3;name: Костяная мука'
+      - 'console_command: ii give %player_name% reagent22 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_16:
+      - 'remove_item: BRICK;3;name: Блестящая чешуя'
+      - 'remove_item: BRICK;1;name: Хаустония'
+      - 'remove_item: BRICK;1;name: Странный порошок'
+      - 'console_command: ii give %player_name% reagent26 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+      id_17:
+      - 'remove_item: BRICK;3;name: Грибы'
+      - 'remove_item: BRICK;3;name: Побеги наперстянки'
+      - 'remove_item: BRICK;3;name: Зеленый мох'
+      - 'console_command: ii give %player_name% reagent8 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+
+      id_18:
+      - 'remove_item: BRICK;1;name: Странный порошок'
+      - 'remove_item: BRICK;3;name: Желтоцвет'
+      - 'remove_item: BRICK;3;name: Блудроз'
+      - 'console_command: ii give %player_name% reagent10 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+
+      id_19:
+      - 'remove_item: BRICK;3;name: Плоть'
+      - 'remove_item: BRICK;3;name: Зеленый мох'
+      - 'remove_item: BRICK;1;name: Странный порошок'
+      - 'console_command: ii give %player_name% reagent7 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+
+      id_20:
+      - 'remove_item: BRICK;3;name: Лепесток тысячелистника'
+      - 'remove_item: BRICK;3;name: Свето-трава'
+      - 'remove_item: BRICK;3;name: Семена полыни'
+      - 'console_command: ii give %player_name% reagent6 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+
+      id_21:
+      - 'remove_item: BRICK;3;name: Корень горькоцвета'
+      - 'remove_item: BRICK;3;name: Свето-трава'
+      - 'remove_item: BRICK;3;name: Желтоцвет'
+      - 'console_command: ii give %player_name% reagent2 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+
+      id_22:
+      - 'remove_item: BRICK;3;name: Рыбная икра'
+      - 'remove_item: BRICK;3;name: Зеленый мох'
+      - 'remove_item: BRICK;1;name: Странный порошок'
+      - 'console_command: ii give %player_name% reagent25 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+
+      id_23:
+      - 'remove_item: BRICK;3;name: Свето-трава'
+      - 'remove_item: BRICK;1;name: Хаустония'
+      - 'remove_item: BRICK;1;name: Странный порошок'
+      - 'console_command: ii give %player_name% reagent12 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+
+      id_24:
+      - 'remove_item: BRICK;3;name: Зеленый мох'
+      - 'remove_item: SWEET_BERRIES;6;name: Лесные ягоды'
+      - 'remove_item: BRICK;3;name: Костяная мука'
+      - 'console_command: ii give %player_name% reagent5 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+
+      id_25:
+      - 'remove_item: BRICK;3;name: Блестящая чешуя'
+      - 'remove_item: BRICK;3;name: Плоть'
+      - 'remove_item: BRICK;3;name: Блудроз'
+      - 'console_command: ii give %player_name% reagent29 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+
+      id_26:
+      - 'remove_item: SWEET_BERRIES;6;name: Лесные ягоды'
+      - 'remove_item: BRICK;3;name: Лепесток тысячелистника'
+      - 'remove_item: BRICK;3;name: Желтоцвет'
+      - 'console_command: ii give %player_name% reagent1 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+
+      id_27:
+      - 'remove_item: BRICK;3;name: Побеги наперстянки'
+      - 'remove_item: BRICK;3;name: Корень горькоцвета'
+      - 'remove_item: BRICK;3;name: Мед мега-пчел'
+      - 'console_command: ii give %player_name% reagent9 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+
+      id_28:
+      - 'remove_item: BRICK;1;name: Лоскут тени'
+      - 'remove_item: BRICK;1;name: Хаустония'
+      - 'remove_item: BRICK;3;name: Свето-трава'
+      - 'console_command: ii give %player_name% reagent27 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+
+      id_29:
+      - 'remove_item: BRICK;3;name: Побеги наперстянки'
+      - 'remove_item: BRICK;3;name: Лепесток тысячелистника'
+      - 'remove_item: BRICK;3;name: Зеленый мох'
+      - 'console_command: ii give %player_name% reagent3 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+
+
+      id_30:
+      - 'remove_item: BRICK;3;name: Грибы'
+      - 'remove_item: BRICK;1;name: Странный порошок'
+      - 'remove_item: BRICK;3;name: Костяная мука'
+      - 'console_command: ii give %player_name% reagent13 1'
+      - 'console_command: svar add alchemy_craft_count 1 %player_name%'
+

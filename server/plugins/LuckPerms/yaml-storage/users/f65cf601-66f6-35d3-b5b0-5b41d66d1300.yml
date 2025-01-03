@@ -1,0 +1,8 @@
+uuid: f65cf601-66f6-35d3-b5b0-5b41d66d1300
+name: Ichi_667
+primary-group: default
+permissions:
+- promo_horizon
+- titul_17
+parents:
+- default

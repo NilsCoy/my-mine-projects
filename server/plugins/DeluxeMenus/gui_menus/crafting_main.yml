@@ -1,0 +1,50 @@
+menu_title: '&6Кузня'
+open_commands:
+  - '[sound] ENTITY_VILLAGER_TRADE 1 0.8'
+size: 27
+items:
+  'weapon':
+    material: PAPER
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:2
+    display_name: '&fКрафт оружия'
+    lore:
+      - ''
+      - '&7[ЛКМ] чтобы открыть!'
+    click_commands:
+      - '[openguimenu] crafting_swords'
+  'armor':
+    material: CHAINMAIL_CHESTPLATE
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: true
+    #nbt_int: CustomModelData:81
+    display_name: '&fКрафт брони'
+    lore:
+      - ''
+      - '&7[ЛКМ] чтобы открыть!'
+    click_commands:
+      - '[openguimenu] crafting_armors'
+  'material':
+    material: RAW_IRON
+    slot: 15
+    priority: 4
+    update: true
+    hide_attributes: true
+    #nbt_int: CustomModelData:81
+    display_name: '&fКрафт материалов'
+    lore:
+      - ''
+      - '&7[ЛКМ] чтобы открыть!'
+    click_commands:
+      - '[openguimenu] crafting_materials'
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+    display_name: ' '
+    nbt_int: CustomModelData:1

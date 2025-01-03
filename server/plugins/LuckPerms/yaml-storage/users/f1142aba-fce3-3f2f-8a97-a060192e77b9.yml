@@ -1,0 +1,13 @@
+uuid: f1142aba-fce3-3f2f-8a97-a060192e77b9
+name: Nehakariii
+primary-group: default
+permissions:
+- promo_horizon
+- skill_strength1
+- skill_strength2
+- titul_14
+- titul_15
+- titul_17
+- titul_2
+parents:
+- default

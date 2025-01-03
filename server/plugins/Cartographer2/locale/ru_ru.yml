@@ -1,0 +1,232 @@
+# Cтандартный файл локали
+# Все локальные файлы требуют кода локали. В нем не должно быть пробелов.
+# Имя, язык и местоположение указывать необязательно, но рекомендуется.
+# Информация взята из https://minecraft.gamepedia.com/Language#Available_languages
+# Сами сообщения имеют обычное форматирование строк Java.
+# Если вы хотите получать случайные сообщения, составьте список строк вместо одной строки.
+# Например:
+# random-message-list:
+# - "Случайное сообщение 1"
+# - "Случайное сообщение 2"
+# - "Случайное сообщение 3"
+# Эти файлы локали также поддерживают заполнители, если это сообщение для игрока.
+# Чтобы использовать пользовательские цветные сообщения, используйте непосредственно символ раздела (§).
+# Если это не сработает и отображается с каким-то случайным символом, используйте вместо него код \u00a7.
+# Translated by: GEEKY__ and Vydumka
+name: "Русский (Russkiĭ)"
+language: "Russian"
+location: "Russia"
+locale-code: "ru_ru"
+messages:
+  locale:
+    loaded-internal-locale: "Успешно загружен внутренний языковой стандарт(%s)"
+    loaded-locale: "Загружен язык %s(%s) как %s"
+    default-locale-changed: "Локаль по умолчанию изменена на %s"
+    error-loading-file: "Не удалось загрузить файл локали '%s'"
+    invalid-locale: "'%s' не допустимая локаль!"
+  core:
+    enable:
+      config:
+        added-blacklisted-inventory: "'%s' добавлен в черный список инвентарей"
+        unknown-inventory-type: "Нет такого типа инвентаря '%s'"
+      palette:
+        creating-vanilla-palette: "Создаем ванильную палитру..."
+        vanilla-palette-missing: "Ванильная палитра не найдена, сохранение..."
+        found-materials: "%d материалов нанесено на карту для ваниллы"
+        loading-palettes: "Загрузка локальных файлов палитры..."
+        successfully-loaded-palette: "Палитра '%s' успешно загружена!"
+        palette-folder-missing: "Папка палитры не обнаружена!"
+      image:
+        overlay-found: "Оверлей обнаружен!"
+        overlay-missing: "Изображение оверлея не существует!"
+        background-found: "Фон обнаружен!"
+        background-missing: "Фоновое изображение не существует!"
+        missing-map-found: "Изображение отсутствующей карты обнаружено!"
+        missing-map-missing: "Изображение отсутствующей карты не существует!"
+        disabled-map-found: "Изображение выключенной карты обнаружено!"
+        disabled-map-missing: "Изображение выключенной карты не существует!"
+      enabling-modules: "Включение модулей..."
+      loading-config: "Загрузка конфигурации..."
+      loading-images: "Загрузка изображений..."
+      loading-palettes: "Загрузка палитр..."
+      loading-data: "Загрузка миникарты и данных..."
+    disable:
+      disabling-modules: "Отключение модулей..."
+      saving-map-data-start: "Сохранение данных карт. Это может занять некоторое время..."
+      saving-map-data-finish: "Сохранение данных карт завершено!"
+      saving-player-data-start: "Сохранение данных игрока..."
+      saving-player-data-finish: "Сохранение данных игрока завершено!"
+    command:
+      cartographer:
+        reload:
+          usage: "§cИспользование: /cartographer reload <карта>"
+          reloaded-plugin: "§bПерезагружены настройки Cartographer2"
+          reloaded-minimap: "§bПерезагружена миникарта '§e%s§b'"
+        list:
+          usage: "§cИспользование: /cartographer list"
+          no-minimaps: "§bВ настоящее время нет загруженных миникарт!"
+          list: "§bCartographer2 Миникарты (%d): %s"
+        get:
+          usage: "§cИспользование: /cartographer get <карта> <игрок> [слот]"
+          success-self: "Выдал себе миникарту(%s)"
+          success-other: "Выдал миникарту(%s) игроку %s"
+        create:
+          usage: "§cИспользование: /cartographer create <id>"
+          success: "§bСоздал и зарегистрировал новую миникарту с id '§e%s§b'"
+        delete:
+          usage: "§cИспользование: /cartographer delete <id>"
+          success: "§bУдалена миникарта '§e%s§b'"
+        load:
+          usage: "§cИспользование: /cartographer load <id>"
+          success: "§bЗагружена миникарта '§e%s§b'"
+        unload:
+          usage: "§cИспользование: /cartographer unload <id>"
+          success: "§bВыгружена миникарта '§e%s§b'"
+        help:
+          usage: "§cИспользование: /cartographer help"
+          help-0: "§b=== Команды Cartographer ==="
+          help-1: "§e/cartographer reload [карта]§6 - Перезагрузить Cartographer2 или миникарту"
+          help-2: "§e/cartographer list§6 - Просмотреть все загруженные миникарты"
+          help-3: "§e/cartographer get <карта> [игрок] [слот]§6 - Получить или выдать миникарту"
+          help-4: "§e/cartographer create <карта>§6 - Создать новую миникарту"
+          help-5: "§e/cartographer delete <карта>§6 - Удалить миникарту"
+          help-6: "§e/cartographer load <карта>§6 - Загрузить миникарту"
+          help-7: "§e/cartographer unload <карта>§6 - Выгрузить миникарту"
+          help-8: "§e/cartographer help§6 - Показать команды"
+          help-9: ""
+          help-10: ""
+          help-11: ""
+          help-12: ""
+          help-13: ""
+          help-14: ""
+          help-15: ""
+          help-16: ""
+          help-17: ""
+          help-18: ""
+          help-19: ""
+      module:
+        list:
+          no-modules: "§6В настоящее время модули не загружены!"
+          list: "§6Cartographer2 Модули (%d): %s" 
+        reload:
+          success: "§6Перезагрузил все модули!"
+        enable:
+          usage: "§cИспользование: /cartographer module enable <модуль>"
+          success: "§6Включен модуль '§e%s§6'!"
+          already-enabled: "§cМодуль '%s' уже включен!"
+          error-loading: "§cНе удалось загрузить модуль '%s', Подробности смотрите в журнале сервера. (Отсутствуют зависимости?)"
+        disable:
+          usage: "§cИспользование: /cartographer module disable <модуль>"
+          already-disabled: "§cМодуль '%s' уже отключен!"
+          success: "§6Отключен модуль '§e%s§6'!"
+        load:
+          usage: "§cИспользование: /cartographer module load <файл>"
+          success: "§6Загружен и включен модуль '§e%s§6'!"
+          error-loading: "§cНевозможно загрузить файл '%s', Подробности смотрите в журнале сервера."
+          error-enabling: "§cНе удалось загрузить модуль '%s', Подробности смотрите в журнале сервера. (Отсутствуют зависимости?)"
+        unload:
+          usage: "§cИспользование: /cartographer module unload <модуль>"
+          success: "§6Выгружен модуль '§e%s§6'!"
+          error-unloading: "§6Не удалось выгрузить модуль '§e%s§6'! Он не был загружен в Cartographer2!"
+        help:
+          usage: "§cИспользование: /cartographer module help"
+          help-0: "§b=== Команды Модуля Cartographer ==="
+          help-1: "§e/cartographer module list§6 - Посмотреть все загруженные модули"
+          help-2: "§e/cartographer module reload§6 - Перезагрузить все модули"
+          help-3: "§e/cartographer module enable <модуль>§6 - Включить модуль"
+          help-4: "§e/cartographer module disable <модуль>§6 - Отключить модуль"
+          help-5: "§e/cartographer module load <модуль>§6 - Загружен модуль"
+          help-6: "§e/cartographer module unload <модуль>§6 - Выгружен модуль"
+          help-7: "§e/cartographer module help§6 - Показать команды"
+          help-8: ""
+          help-9: ""
+          help-10: ""
+          help-11: ""
+          help-12: ""
+          help-13: ""
+          help-14: ""
+          help-15: ""
+          help-16: ""
+          help-17: ""
+          help-18: ""
+          help-19: ""
+        file-already-loaded-or-not-real: "§cЭтот файл уже загружен или не существует!"
+        module-already-enabled-or-not-real: "§cЭтот модуль уже включен или не существует!"
+        module-already-disabled-or-not-real: "§cЭтот модуль уже отключен или не существует!"
+        module-not-real: "§cЭтот модуль не существует!"
+      settings:
+        set:
+          console-usage: "§cИспользование: /cartographer settings set <игрок> <параметр> <значение>"
+          success: "§aУстановлено '%s' как §d%s§a."
+        get:
+          console-usage: "§cИспользование: /cartographer settings get <игрок> <параметр>"
+          success: "§a'%s' установлен на §d%s§a."
+        setother:
+          usage: "§cИспользование: /cartographer settings setother <игрок> <параметр> <значение>"
+          success: "§aУстановлено '%s' как §d%s§a для §d%s§a."
+        getother:
+          usage: "§cИспользование: /cartographer settings getother <игрок> <параметр>"
+          success: "§d%s§a имеет '%s' установленное как §d%s§a."
+        help:
+          usage: "§cИспользование: /cartographer settings help"
+          help-0: "§b=== Команды Параметров Cartographer ==="
+          help-1: "§e/cartographer settings set <свойство> <значение>§6 - Установить свойство"
+          help-2: "§e/cartographer settings get <свойство>§6 - Получить значение свойства"
+          help-3: "§e/cartographer settings setother <игрок> <свойства> <значение>§6 - Установить свойство игроку"
+          help-4: "§e/cartographer settings getother <игрок> <свойство>§6 - Получить значение свойства игрока"
+          help-5: ""
+          help-6: ""
+          help-7: ""
+          help-8: ""
+          help-9: ""
+          help-10: ""
+          help-11: ""
+          help-12: ""
+          help-13: ""
+          help-14: ""
+          help-15: ""
+          help-16: ""
+          help-17: ""
+          help-18: ""
+          help-19: ""
+        invalid-value: "§cНеверное значение! (%s)"
+        must-provide-values: "§cВы должны указать значение! (%s)"
+        not-implemented: "§c'%s' еще не реализовано! Обратитесь за помощью к разработчикам!"
+      player-not-found: "§cЭтого игрока нет в сети!"
+      minimap-already-exists: "§cМиникарта с таким id уже существует!"
+      invalid-minimap: "§cНеверная миникарта!"
+      invalid-slot: "§cНеверный слот! (0-40)"
+      invalid-argument: "§cНеверный аргумент!"
+      invalid-setting: "§cНеверный параметр!"
+      must-provide-minimap: "§cВы должны указать миникарту!"
+      must-provide-player: "§cВы должны указать игрока!"
+      must-provide-argument: "§cВы должны указать аргумент!"
+      must-provide-setting: "§cВы должны указать параметр!"
+    manager:
+      minimap:
+        loading-minimap: "Загрузка миникарты '%s'"
+        unloading-minimap: "Выгрузка миникарты '%s'"
+        deleting-minimap: "Удаление миникарты '%s'"
+      module:
+        reloading-modules-start: "Перезагрузка модулей..."
+        reloading-modules-finish: "Перезагрузка модулей завершена"
+        loading-module: "Загружен %s v%s от %s"
+        unloading-module: "Выгружен %s"
+        enabling-module: "Включен %s v%s от %s"
+        disabling-module: "Отключен %s v%s от %s"
+        missing-dependencies: "Невозможно включить %s из-за отсутствия зависимостей: %s"
+    minimap:
+      default-rotation: "Вращение по умолчанию установлено на %s"
+      default-showname: "Отображаемое имя установлено на %s"
+      auto-update: "Автообновление установлено на %b"
+      circular-zoom: "Круговой масштаб установлен на %b"
+      render-out-of-border: "Рендеринг вне границы установлен на %b"
+      default-zoom: "Масштаб по умолчанию установлен на %f"
+      allowed-zooms: "Допустимые масштабы: %s"
+      whitelisted-worlds: "Миры в белом списке: %s"
+      blacklisted-worlds: "Миры в черном списке: %s"
+      loaded-overlay: "Загружено изображение оверлея '%s'"
+      loaded-background: "Загружено фоновое изображение '%s'"
+      loaded-disabled: "Загружено изображение отключения карты '%s'"
+    unsupported-version: "Эта версия(%s) в настоящее время не поддерживается!"
+    disabling-plugin: "Отключение плагина..."

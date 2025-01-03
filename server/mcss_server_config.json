@@ -1,0 +1,26 @@
+{
+  "guid": "c5c4423c-bac9-465c-ab40-215d7fbfe1aa",
+  "serverTypeGuid": "8e3aecd7-b81b-4827-a3e2-93a701cdd3b4",
+  "name": "Epica",
+  "description": "",
+  "creationDate": "2023-12-18T05:31:16.4581123+03:00",
+  "autostart": false,
+  "forceSaveOnStop": true,
+  "stopPrevention": "None",
+  "startupMethode": "JavaStartupLine",
+  "allocatedMemory": 3072,
+  "allocatedMemorySuffix": "GB",
+  "startupLine": "java -Xms256M -Xmx[RAM]M -jar [SERVERTYPE.NAME].jar",
+  "startupBatFilename": "",
+  "serverFileChecksum": "3062934c2194f669485264ace9755582f01fd528fa87fbf7fcbf3686452e17eb",
+  "serverFileVersion": "",
+  "javaPathOverride": "",
+  "tasks": {
+    "scheduledTasks": []
+  },
+  "backups": {
+    "backupTemplates": [],
+    "backupHistory": []
+  },
+  "subServers": []
+}

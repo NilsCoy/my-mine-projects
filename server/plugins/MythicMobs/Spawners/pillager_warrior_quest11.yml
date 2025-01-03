@@ -1,0 +1,28 @@
+pillager_warrior_quest11:
+  World: world
+  X: 9446
+  Y: 100
+  Z: 10029
+  Yaw: 0.0
+  Pitch: 0.0
+  Breakable: false
+  MobName: pillager_warrior_quest
+  Radius: 0.0
+  RadiusY: 1.0
+  UseTimer: true
+  MaxMobs: '1'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 1
+  Warmup: 0
+  ActivationRange: 100.0
+  ScalingRange: 32.0
+  LeashRange: 100.0
+  HealOnLeash: true
+  ResetThreatOnLeash: true
+  CheckForPlayers: true
+  ShowFlames: false
+  Conditions: &id006 []
+  SpawnConditions: *id006
+  ActiveMobs: 1
+  CooldownTimer: 1

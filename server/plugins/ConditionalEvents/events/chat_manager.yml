@@ -1,0 +1,225 @@
+Events:
+  gm_toggle:
+    type: player_command
+    conditions:
+    - '%player_has_permission_admin.gm% == yes and %main_command% == /gm and %player_gamemode% == ADVENTURE execute creative'
+    - '%player_has_permission_admin.gm% == yes and %main_command% == /gm and %player_gamemode% == CREATIVE execute adventure'
+    actions:
+      creative:
+      - 'cancel_event: true'
+      - 'gamemode: CREATIVE'
+      - 'message: &6Креатив'
+      adventure:
+      - 'cancel_event: true'
+      - 'gamemode: ADVENTURE'
+      - 'message: &6Приключение'
+
+  heal:
+    type: player_command
+    conditions:
+    - '%player_has_permission_admin.heal% == yes and %main_command% == /heal execute heal_self'
+    actions:
+      heal_self:
+      - 'cancel_event: true'
+      - 'give_potion_effect: HEAL;1;100;false'
+      - 'give_potion_effect: SATURATION;1;100;false'
+      - 'message: &6Вы были исцелены!'
+
+  epicfight:
+    type: player_command
+    conditions:
+    - '%player_has_permission_admin.epicfight% == yes and %main_command% == /mine execute mine_self'
+    - '%player_has_permission_admin.epicfight% == yes and %main_command% == /battle execute battle_self'
+    actions:
+      mine_self:
+      - 'cancel_event: true'
+      - 'console_command: epicfight mode mining %player%'
+      - 'message: &6Вы включили режим строительства!'
+      battle_self:
+      - 'cancel_event: true'
+      - 'console_command: epicfight mode battle %player%'
+      - 'message: &6Вы включили режим боя!'
+
+  god:
+    type: player_command
+    conditions:
+    - '%player_has_permission_admin.god% == yes and %main_command% == /god and %servervariables_value_god_state% == 0 execute god_on_self'
+    - '%player_has_permission_admin.god% == yes and %main_command% == /god and %servervariables_value_god_state% == 1 execute god_off_self'
+    actions:
+      god_on_self:
+      - 'cancel_event: true'
+      - 'console_command: svar set god_state 1 %player%'
+      - 'give_potion_effect: HEAL;1;100;false'
+      - 'give_potion_effect: SATURATION;1;100;false'
+      - 'message: &aРежим бога включен!'
+      god_off_self:
+      - 'cancel_event: true'
+      - 'console_command: svar set god_state 0 %player%'
+      - 'message: &cРежим бога выключен!'
+  god_activate:
+    type: player_damage
+    conditions:
+    - '%servervariables_value_god_state% == 1 execute damage_ignore'
+    actions:
+      damage_ignore:
+      - 'cancel_event: true'
+
+  mute:
+    type: player_command
+    conditions:
+    - '%player_has_permission_admin.mute% == yes and %main_command% == /mute and %servervariables_value_mute_state% == 0 and %args_length% == 2 execute mute_on'
+    - '%player_has_permission_admin.mute% == yes and %main_command% == /mute and %servervariables_value_mute_state% == 1 and %args_length% == 1 execute mute_off'
+    actions:
+      mute_on:
+      - 'cancel_event: true'
+      - 'console_command: svar set mute_state 1 %arg_1%'
+      - 'console_command: svar set mute_time %arg_2% %arg_1%'
+      - 'to_player: %arg_1%: message: &cВы были замучены на %arg_2% мин.'
+      mute_off:
+      - 'cancel_event: true'
+      - 'console_command: svar set mute_state 0 %arg_1%'
+      - 'console_command: svar set mute_time 0 %arg_1%'
+      - 'to_player: %arg_1%: message: &aВы были разамучены.'
+  mute_timer:
+    type: repetitive_server
+    repetitive_time: 1200
+    conditions:
+    - '%servervariables_value_mute_state% == 1 and %servervariables_value_mute_time% > 0 execute mute_time_out'
+    - '%servervariables_value_mute_state% == 1 and %servervariables_value_mute_time% == 0 execute unmute'
+    actions:
+      mute_time_out:
+      - 'console_command: svar add mute_time -1 %player%'
+      unmute:
+      - 'console_command: svar set mute_state 0 %player%'
+  mute_activate:
+    type: player_chat
+    conditions:
+    - '%servervariables_value_mute_state% == 1 execute message_ignore'
+    actions:
+      message_ignore:
+      - 'cancel_event: true'
+      - 'message: &cВы не можете говорить, на вас наложили великую печать мута!'
+
+  suicide:
+    type: player_command
+    conditions:
+    - '%main_command% == /suicide and %betonquest_main-prologue:condition.pillagers_trigger% == true and %servervariables_value_duel_player% == 0 execute kill'
+    actions:
+      kill:
+      - 'console_command: kill %player%'
+
+
+  protect_toggle:
+    type: player_command
+    conditions:
+    #- '%main_command% == /protect and %servervariables_value_protect_enable% == 0 execute protect_on'
+    - '%main_command% == /protect and %servervariables_value_protect_enable% == 1 execute protect_off'
+    actions:
+      protect_on:
+      - 'cancel_event: true'
+      - 'message: &aВы включили защиту новичка.'
+      - 'console_command: svar set protect_enable 1 %player%'
+      protect_off:
+      - 'cancel_event: true'
+      - 'message: &cВы выключили защиту новичка.'
+      - 'console_command: svar set protect_enable 0 %player%'
+      
+  clans:
+    type: player_command
+    conditions:
+    - '%main_command% == /clan and %args_length% >= 1 and %arg_1% == create execute deny4'
+    - '%main_command% == /create and %args_length% == 2 and %arg_1% == clan and %servervariables_value_player_money% >= 10000 execute actions1'
+    - '%main_command% == /create and %args_length% == 2 and %arg_1% == clan and %servervariables_value_player_money% < 10000 execute deny1'
+    - '%main_command% == /create and %args_length% == 1 and %arg_1% == clan execute deny2'
+    - '%main_command% == /create and %args_length% == 0 execute deny3'
+    actions:
+      actions1:
+      - 'cancel_event: true'
+      - 'player_command_as_op: clan create %arg_2%'
+      - 'console_command: svar add player_money -10000 %player%'
+      #- 'message: &fВы изъяли из своего кошелька &e3000Ⓒ'
+      #- 'give_item: id:GOLD_NUGGET;amount:1;name:&eМонеты;lore:&7Количество монет:|&r%arg_1%'
+      deny1:
+      - 'cancel_event: true'
+      - 'message: &cУ вас недостаточно средств! Требуется: 10 000Ⓒ'
+      - 'playsound: ENTITY_VILLAGER_NO;1;1'
+      deny2:
+      - 'cancel_event: true'
+      - 'message: &cВы не написали тег калана!'
+      - 'playsound: ENTITY_VILLAGER_NO;1;1'
+      deny3:
+      - 'cancel_event: true'
+      - 'message: &cНеправильный аргумент!'
+      - 'message: &c/create clan *тег*'
+      - 'playsound: ENTITY_VILLAGER_NO;1;1'
+      deny4:
+      - 'cancel_event: true'
+      - 'message: &cЭта команда не доступна!'
+      - 'playsound: ENTITY_VILLAGER_NO;1;1'
+
+  gamerule_server:
+    type: player_command
+    conditions:
+    - '%player_has_permission_admin.gamerule_server% == yes and %main_command% == /gamerule_server execute gamerule_server'
+    actions:
+      gamerule_server:
+      - 'cancel_event: true'
+      - 'console_command: gamerule canSwitchCombat false'
+      - 'console_command: gamerule doDaylightCycle true'
+      - 'console_command: gamerule disableEntityUI true'
+      - 'console_command: gamerule reducedDebugInfo true'
+      - 'console_command: gamerule doVanillaAttack false'
+      - 'console_command: gamerule doTileDrops false'
+      - 'console_command: gamerule announceAdvancements false'
+      - 'console_command: gamerule commandBlockOutput false'
+      - 'console_command: gamerule disableRaids true'
+      - 'console_command: gamerule doFireTick false'
+      - 'console_command: gamerule doLimitedCrafting true'
+      - 'console_command: gamerule spawnRadius 1'
+      - 'console_command: gamerule doImmediateRespawn true'
+      - 'console_command: gamerule showDeathMessages true'
+      - 'console_command: gamerule sendCommandFeedback false'
+      - 'console_command: gamerule randomTickSpeed 0'
+      - 'console_command: gamerule mobGriefing false'
+      - 'console_command: gamerule doTraderSpawning false'
+      - 'console_command: gamerule doMobSpawning false'
+      - 'console_command: gamerule doWardenSpawning false'
+      - 'console_command: gamerule keepInventory false'
+      - 'console_command: gamerule weightPenalty 50'
+      - 'message: &6Gamerule настроен!'
+
+      
+  manual_waypoint:
+    type: player_command
+    conditions:
+    - '%main_command% == /manual_waypoint and %args_length% == 2 and %arg2% == enable execute enable'
+    - '%main_command% == /manual_waypoint and %args_length% == 2 and %arg2% == disable execute disable'
+    actions:
+      enable:
+      - 'cancel_event: true'
+      - 'console_command: calcomp toggle %player% %arg1% enable'
+      disable:
+      - 'cancel_event: true'
+      - 'console_command: calcomp toggle %player% %arg1% disable'
+
+  manual_waypoint_call:
+    type: call
+    actions:
+      default:
+      - 'call_event: manual_waypoint_disable_call'
+      - 'console_command: calcomp toggle %player% %arg% enable'
+
+  manual_waypoint_disable_call:
+    type: call
+    actions:
+      default:
+      - 'console_command: calcomp toggle %player% save1 disable'
+      - 'console_command: calcomp toggle %player% save2 disable'
+      - 'console_command: calcomp toggle %player% cave1 disable'
+      - 'console_command: calcomp toggle %player% cave2 disable'
+      - 'console_command: calcomp toggle %player% cave3 disable'
+      - 'console_command: calcomp toggle %player% pillagers1 disable'
+      - 'console_command: calcomp toggle %player% pillagers2 disable'
+      - 'console_command: calcomp toggle %player% wolf1 disable'
+      - 'console_command: calcomp toggle %player% grave1 disable'
+      - 'console_command: calcomp toggle %player% grave2 disable'

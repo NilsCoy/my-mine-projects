@@ -1,0 +1,10 @@
+uuid: f0386677-1dc5-38a6-a1bf-c04c637d7bcb
+name: V_F_H
+primary-group: default
+permissions:
+- skill_strength1
+- skill_strength2
+- titul_14
+- titul_2
+parents:
+- default

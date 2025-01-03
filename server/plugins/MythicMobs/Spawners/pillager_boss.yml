@@ -1,0 +1,19 @@
+pillager_boss:
+  MobName: pillager_boss
+  World: world
+  X: 790
+  Y: 77
+  Z: -1023
+  Yaw: 0.0
+  Pitch: 0.0
+  MobLevel: '1'
+  Cooldown: 900
+  ActivationRange: 100.0
+  LeashRange: 100.0
+  CooldownTimer: 1
+  Warmup: 0
+  ActiveMobs: 1
+key_guard:
+  MobName: ''
+  Cooldown: 0
+  Warmup: 0

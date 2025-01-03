@@ -1,0 +1,743 @@
+menu_title: '&6Навыки'
+open_commands:
+  - '[sound] UI_BUTTON_CLICK 1 1'
+size: 27
+items:
+  'guard1':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 0
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:guard'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Используйте правую кнопку мыши, чтобы'
+      - '&7защищаться от фронтальных атак.'
+      - '&7Постоянное блокирование будет потреблять'
+      - '&7больше выносливости. Если блокирование'
+      - '&7израсходует всю выносливость до нуля,'
+      - '&7то вы падете на землю и откроетесь'
+      - '&7для врага.'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Меч, Топор, Длинный меч, Большой меч,'
+      - '&8Тати, Копье, Утигатана.'
+      - ''
+      - '&fДоступен всем с самого начала!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% > 0'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_guard1%'
+          output: 'no'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_guard1 true'
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] epicfight skill add %player_name% guard epicfight:guard'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'guard2':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 9
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:impact_guard'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Снижает расход выносливости при'
+      - '&7блокировании. Теперь вы можете'
+      - '&7блокировать взрывы, огонь, магию'
+      - '&7и снаряды с 80% эффективностью.'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Длинный меч, Большой меч, Тати,'
+      - '&8Копье.'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c1Ⓢ'
+      - '&7◆ &cНавык: Блок'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% > 0'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_guard2%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_guard1%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_guard2 true'
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] epicfight skill add %player_name% guard epicfight:impact_guard'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'guard3':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 18
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:parrying'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Парирование позволяет вам отражать'
+      - '&7атаки, не используя выносливость и'
+      - '&7даёт возможность начинать свой ход.'
+      - '&7Найдите окно атаки врага, когда вы почти'
+      - '&7вот-вот получите урон и совершите'
+      - '&7парирование. Вы также можете отражать'
+      - '&7дальние атаки.'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Меч, Большой меч, Тати,'
+      - '&8Утигатана.'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c1Ⓢ'
+      - '&7◆ &cНавык: Усиленная защита'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% > 0'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_guard3%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_guard2%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_guard3 true'
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] epicfight skill add %player_name% guard epicfight:parrying'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+
+
+
+  'dodge1':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 1
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:roll'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Совершайте перекаты в направлении движения.'
+      - '&7Уклоняясь от всех входящих атак.'
+      - ''
+      - '&8Выносливость: 4'
+      - ''
+      - '&fДоступен всем с самого начала!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% > 0'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_dodge1%'
+          output: 'no'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_dodge1 true'
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] epicfight skill add %player_name% dodge epicfight:roll'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'dodge2':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 10
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:step'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Совершайте рывки на короткие расстояния'
+      - '&7в направлении движения.'
+      - '&7Уклоняясь от всех входящих атак.'
+      - ''
+      - '&8Выносливость: 3'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c2Ⓢ'
+      - '&7◆ &cНавык: Перекат'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 2'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_dodge2%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_dodge1%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_dodge2 true'
+      - '[console] svar add player_skill_point -2 %player_name%'
+      - '[console] epicfight skill add %player_name% dodge epicfight:step'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+
+
+
+  'special1':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 12
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:revelation'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&8Ярость ястреба, наблюдающего за слабыми'
+      - '&8местами врагов.'
+      - ''
+      - '&7Блокирование, парирование и уклонение дает'
+      - '&7множество откровений.'
+      - '&7Обучение указанному количеству стеков позволит'
+      - '&7вам провести ошеломляющую контратаку, которая'
+      - '&7собьет врага с ног.'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c5Ⓢ'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% > 5'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_special1%'
+          output: 'no'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_special1 true'
+      - '[console] svar add player_skill_point -5 %player_name%'
+      - '[console] epicfight skill add %player_name% identity epicfight:revelation'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'special2':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 13
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:meteor_slam'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Совершите мощный удар с высоты на землю,'
+      - '&7уничтожая всё вокруг. Урон увеличивается'
+      - '&7в зависимости от высоты с которого'
+      - '&7совершается навык, а также расход'
+      - '&7выносливости. Если урон от падения'
+      - '&7превышает предел шкалы выносливости,'
+      - '&7вы получаете урон.'
+      - ''
+      - '&8Выносливость: зависит от урона от падения.'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Длинный меч, Большой меч, Тати,'
+      - '&8Копье.'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c5Ⓢ'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 5'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_special2%'
+          output: 'no'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_special2 true'
+      - '[console] svar add player_skill_point -5 %player_name%'
+      - '[console] epicfight skill add %player_name% identity epicfight:meteor_slam'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+
+
+
+  'passive1':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 6
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:endurance'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Получите сопротивление к оглушению на 12 секунд'
+      - '&7за количество потраченной выносливости, которую'
+      - '&7вы израсходуете в зависимости от атак врагов.'
+      - ''
+      - '&8Выносливость: 3%'
+      - '&8Восстановление: 30 сек.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +4 выносливости'
+      - '&8  +2 макс. здоровья'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c1Ⓢ'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% > 0'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_passive1%'
+          output: 'no'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_passive1 true'
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] epicfight skill add %player_name% passive1 epicfight:endurance'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'passive2':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 15
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:stamina_pillager'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Восстанавливает 30% от недостающей'
+      - '&7выносливости при убийстве вашей цели.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +10% урона.'
+      - '&8  +3 выносливости'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c1Ⓢ'
+      - '&7◆ &cНавык: Выносливость'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% > 0'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_passive2%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_passive1%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_passive2 true'
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] epicfight skill add %player_name% passive1 epicfight:stamina_pillager'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'passive3':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 24
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:emergency_escape'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Теперь вы можете отменять, свои атаки'
+      - '&7с помощью уклонения. Позволяет'
+      - '&7уклоняться, даже когда вы без выносливости.'
+      - ''
+      - '&8Восстановление: 15 сек.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +0.3 восcтановления выносливости'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Меч, Утигатана, Кинжал.'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c1Ⓢ'
+      - '&7◆ &cНавык: Похищение выносливости'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% > 0'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_passive3%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_passive2%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_passive3 true'
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] epicfight skill add %player_name% passive1 epicfight:emergency_escape'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+
+  'passive4':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 7
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:technician'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Если вы уклонитесь от атаки в последний'
+      - '&7момент перед тем, как она попадет'
+      - '&7по вам, то вы вернёте потраченную'
+      - '&7выносливость от уклонения.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +0.4 восcтановления выносливости'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c1Ⓢ'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% > 0'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_passive4%'
+          output: 'no'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_passive4 true'
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] epicfight skill add %player_name% passive2 epicfight:technician'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'passive5':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 16
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:swordmaster'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Получите 30% дополнительной'
+      - '&7скорости атаки.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +4 выносливости'
+      - '&8  +0.2 восcтановления выносливости'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Длинный меч, Меч, Тати,'
+      - '&8Утигатана.'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c1Ⓢ'
+      - '&7◆ &cНавык: Техничный'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% > 0'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_passive5%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_passive4%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_passive5 true'
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] epicfight skill add %player_name% passive2 epicfight:swordmaster'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'passive6':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 25
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:hypervitality'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Позволяет использовать выносливость'
+      - '&7для специальных атак оружия.'
+      - ''
+      - '&8Восстановление: 20% от спец. атаки'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +2 выносливости'
+      - '&8  +4 макс. здоровья'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c1Ⓢ'
+      - '&7◆ &cНавык: Мастер меча'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% > 0'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_passive6%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_passive5%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_passive6 true'
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] epicfight skill add %player_name% passive2 epicfight:hypervitality'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+
+  'passive7':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 8
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:berserker'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Получите 0.5% дополнительного урона'
+      - '&7и скорости атаки на 0.3% за'
+      - '&7каждый 1% потерянного здоровья.'
+      - '&8Скорость атаки не может превышать 5!'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +6 выносливости'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c1Ⓢ'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% > 0'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_passive7%'
+          output: 'no'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_passive7 true'
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] epicfight skill add %player_name% passive3 epicfight:berserker'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'passive9':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 17
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:forbidden_strength'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Используйте своё здоровье в качестве'
+      - '&7выносливости, если у вас она отсутствует'
+      - '&7или вы истощены.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +5% урона'
+      - '&8  +4 макс. здоровья'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c1Ⓢ'
+      - '&7◆ &cНавык: Берсерк'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% > 0'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_passive9%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_passive7%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_passive9 true'
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] epicfight skill add %player_name% passive3 epicfight:forbidden_strength'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'passive8':
+    material: EPICFIGHT_SKILLBOOK
+    slot: 26
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_strings:
+      - 'skill:epicfight:death_harvest'
+    display_name: '&6Книга навыков'
+    lore:
+      - ''
+      - '&7Если вы убьете сущность специальным ударом'
+      - '&7своего оружия - вы восстановите'
+      - '&7потраченный заряд, специальной атаки.'
+      - '&7Однако количество возвращаемого заряда'
+      - '&7зависит от урона вашего оружия и количества'
+      - '&7убитых врагов за раз.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +15% урона'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c1Ⓢ'
+      - '&7◆ &cНавык: Запретная мощь'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% > 0'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_passive8%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_passive9%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_passive8 true'
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] epicfight skill add %player_name% passive3 epicfight:death_harvest'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+    display_name: ' '
+    nbt_int: CustomModelData:1

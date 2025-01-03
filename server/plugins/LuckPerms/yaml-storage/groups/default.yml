@@ -1,0 +1,57 @@
+name: default
+permissions:
+- gsit.*:
+    value: false
+- axvaults.vault.1
+- betonquest.backpack:
+    value: false
+- betonquest.compass:
+    value: false
+- betonquest.journal:
+    value: false
+- betonquest.language:
+    value: false
+- bukkit.command.plugins:
+    value: false
+- chatty.chat.global
+- chatty.chat.local
+- chatty.command.msg
+- clans.accept
+- clans.base:
+    value: false
+- clans.create
+- clans.delete
+- clans.invite
+- clans.kick
+- clans.leave
+- clans.list
+- clans.setbase:
+    value: false
+- clans.stats
+- clans.topstats
+- gsit.crawl
+- gsit.lay
+- gsit.sit
+- mcpets.use
+- minecraft.command.me
+- minecraft.command.msg
+- skinsrestorer.command.clear
+- skinsrestorer.command.favourite
+- skinsrestorer.command.gui
+- skinsrestorer.command.random
+- skinsrestorer.command.search
+- skinsrestorer.command.set
+- skinsrestorer.command.set.url
+- skinsrestorer.command.update
+- tradesystem.trade
+- weight.0
+- worldedit.chunkinfo:
+    value: false
+- worldedit.tool.info:
+    value: false
+prefixes:
+- '&7':
+    priority: 0
+suffixes:
+- ' &e%servervariables_value_player_level% &7| %javascript_check_voice%':
+    priority: 0

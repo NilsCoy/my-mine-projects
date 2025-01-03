@@ -1,0 +1,372 @@
+conversations:
+  guild:
+    quester: '&aРаботница гильдии'
+    first: 'npc_node_1, npc_node_13, npc_node_22'
+    stop: 'true'
+    NPC_options:
+      npc_node_1:
+        text: '&7Подойдя ближе, девушка, что просматривала какие-то бумаги, обращает на вас внимание.&f\n\nЗдравствуйте, по какому вы к нам делу?'
+        condition: '!guild_start'
+        event: 'guild_start'
+        pointers: player_node_1
+
+      npc_node_2:
+        text: 'Так вы недавно к нам прибыли, тогда добро пожаловать в Вудленд! Cейчас вы находитесь в Гильдии авантюристов.'
+        condition: ''
+        event: ''
+        pointers: player_node_2
+
+      npc_node_3:
+        text: 'Хорошо, здесь люди берут задания и в зависимости от сложности получают награду. Так же мы присваиваем каждому авантюристу его ранг, от бронзового до кобальтового.'
+        condition: ''
+        event: ''
+        pointers: player_node_3
+
+      npc_node_4:
+        text: 'Не совсем, наемники, больше похожи на наемных рабочих, которым платят почасовые. Мы же платим в единоразовой выплатой, после работы, и в основном занимаемся истреблением монстров, а не сражениями с людьми.'
+        condition: ''
+        event: ''
+        pointers: player_node_4
+
+      npc_node_5:
+        text: 'Может вы хотите оставить свой запрос на задание или сами стать авантюристом?'
+        condition: ''
+        event: ''
+        pointers: player_node_5, player_node_6
+
+      npc_node_6:
+        text: 'Тогда давайте заполним вашу анкету авантюриста? Ваше имя?'
+        condition: ''
+        event: ''
+        pointers: player_node_7
+
+      npc_node_7:
+        text: 'Необычное имя, хорошо. Сколько вам полных лет? '
+        condition: ''
+        event: ''
+        pointers: player_node_8
+
+      npc_node_8:
+        text: 'Откуда вы прибыли?'
+        condition: ''
+        event: ''
+        pointers: player_node_9
+
+      npc_node_9:
+        text: 'Владеете-ли вы какими-нибудь боевыми искусствами?'
+        condition: ''
+        event: ''
+        pointers: player_node_10, player_node_11, player_node_12, player_node_13
+
+      npc_node_10:
+        text: 'Хм, ладно, имеется ли у вас родство с магией?'
+        condition: ''
+        event: ''
+        pointers: player_node_14
+
+      npc_node_11:
+        text: 'Так, ну тогда мы закончили. Теперь вам нужно проследовать к ристалищу, где инструктор проведет испытательный бой с вами.'
+        condition: ''
+        event: ''
+        pointers: player_node_15
+
+      npc_node_12:
+        text: 'Удачи Вам в бою!'
+        condition: ''
+        event: ''
+
+      npc_node_13:
+        text: 'Здравствуйте, по какому вы к нам делу на этот раз?'
+        condition: 'guild_start,!guild_quest'
+        event: ''
+        pointers: player_node_5, player_node_17, player_node_18, player_node_20
+
+      npc_node_14:
+        text: 'Что же, давай посмотрим, что вы выполнили.'
+        condition: ''
+        event: ''
+        pointers: player_node_40, player_node_41, player_node_42, player_node_43, player_node_44, player_node_45, player_node_46, player_node_47, player_node_48, player_node_49, player_node_50, player_node_51, player_node_52, player_node_53, player_node_55, player_node_56, player_node_19
+
+      npc_node_15:
+        text: 'Благодарю вас за вашу работу!'
+        condition: ''
+        event: ''
+        pointers: player_node_19
+
+      npc_node_20:
+        text: 'Для создания своего отряда, вам нужно заплатить 10 000 монет за регистрацию. &7( Для создания клана вы можете использовать команду /create clan *тег клана* )'
+        condition: ''
+        event: ''
+        pointers: player_node_21
+
+      npc_node_22:
+        text: '&7Подойдя к работнице гильдии вы начинаете с ней разговор.&f\n\nВы вернулись, как все прошло?'
+        condition: 'guild_start,guild_quest,!guild_quest_finish'
+        event: ''
+        pointers: player_node_29, player_node_31
+
+      # npc_node_23:
+        # text: 'Не отчаивайтесь, вы всегда можете повторить свою попытку вновь.'
+        # condition: ''
+        # event: 'guild_quest_failed_remove,guild_quest_remove'
+
+      npc_node_24:
+        text: 'Это прекрасная новость, тогда мы регистрируем вас как официального авантюриста с бронзовым рангом. С ним вы можете брать только задания с доски, как только достигните железного ранга, то сможете брать личные запросы.'
+        condition: ''
+        event: 'guild_quest_finish'
+        pointers: player_node_32
+
+      npc_node_25:
+        text: 'Вы можете подойти ко мне в любое время. Если вы получите повышение, то я уведомлю вас об этом.'
+        condition: ''
+        event: ''
+        pointers: player_node_33
+
+      npc_node_26:
+        text: 'До свидания.'
+        condition: ''
+        event: ''
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Я просто осматриваюсь в городе, что это за место?'
+        condition: ''
+        event: ''
+        pointers: npc_node_2
+
+      player_node_2:
+        text: 'Я мало что знаю о вашей организации, не могли бы мне рассказать по подробнее?'
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_3:
+        text: 'Понятно, значит это как работа наемника?'
+        condition: ''
+        event: ''
+        pointers: npc_node_4
+
+      player_node_4:
+        text: 'Ясно, спасибо за объяснение.'
+        condition: ''
+        event: ''
+        pointers: npc_node_5
+
+      player_node_5:
+        text: 'Да, я бы хотел зарегистрироваться как авантюрист.'
+        condition: '!guild_quest_completed'
+        event: 'guild_quest,quest_objective,guild1_state1,instructor_compass_on,quest_started'
+        pointers: npc_node_6
+
+      player_node_6:
+        text: 'Мне пока это не интересно. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_7:
+        text: '%player.display%'
+        condition: ''
+        event: ''
+        pointers: npc_node_7
+
+      player_node_8:
+        text: 'Эм, 19?'
+        condition: ''
+        event: ''
+        pointers: npc_node_8
+
+      player_node_9:
+        text: 'Из деревни Фрирест.'
+        condition: ''
+        event: ''
+        pointers: npc_node_9
+
+      player_node_10:
+        text: 'Я неплохо машу мечом.'
+        condition: ''
+        event: ''
+        pointers: npc_node_10
+
+      player_node_11:
+        text: 'Я неплохо орудую топором.'
+        condition: ''
+        event: ''
+        pointers: npc_node_10
+
+      player_node_12:
+        text: 'Кинжалы моя стезя.'
+        condition: ''
+        event: ''
+        pointers: npc_node_10
+
+      player_node_13:
+        text: 'Я последователь стиля железного кулака.'
+        condition: ''
+        event: ''
+        pointers: npc_node_10
+
+      player_node_14:
+        text: 'Нет вроде, я не пробовал.'
+        condition: ''
+        event: ''
+        pointers: npc_node_11
+
+      player_node_15:
+        text: 'Благодарю за помощь.'
+        condition: ''
+        event: ''
+        pointers: npc_node_12
+
+      player_node_17:
+        text: 'Я брал некоторые поручения с доски, хочу сдать их.'
+        condition: '_-quest_table.any_quest_completed'
+        #event: '_-quest_table.boss1_reward_give,_-quest_table.boss2_reward_give,_-quest_table.boss3_reward_give,_-quest_table.animal1_reward_give,_-quest_table.animal2_reward_give,_-quest_table.animal3_reward_give,_-quest_table.animal4_reward_give,_-quest_table.mob1_reward_give,_-quest_table.mob2_reward_give,_-quest_table.farming1_reward_give,_-quest_table.farming2_reward_give,_-quest_table.farming3_reward_give,_-quest_table.farming4_reward_give,_-quest_table.farming5_reward_give,_-quest_table.mining1_reward_give,_-quest_table.mining2_reward_give,_-quest_table.quest_complete'
+        pointers: npc_node_14
+
+      player_node_40:
+        text: 'Я победил Восставший мастер меча.'
+        condition: '_-quest_table.boss1_kill_condition_check'
+        event: '_-quest_table.boss1_reward_give,_-quest_table.boss1_kill_reward,'
+        pointers: npc_node_15
+
+      player_node_41:
+        text: 'Я победил Восставший владыка мертвых.'
+        condition: '_-quest_table.boss2_kill_condition_check'
+        event: '_-quest_table.boss2_reward_give,_-quest_table.boss2_kill_reward,'
+        pointers: npc_node_15
+
+      player_node_42:
+        text: 'Я победил Восставший охотник льда.'
+        condition: '_-quest_table.boss3_kill_condition_check'
+        event: '_-quest_table.boss3_reward_give,_-quest_table.boss3_kill_reward,'
+        pointers: npc_node_15
+
+      player_node_43:
+        text: 'Я избавился от кабанов.'
+        condition: '_-quest_table.animal1_kill_condition_check'
+        event: '_-quest_table.animal1_reward_give,_-quest_table.animal1_kill_reward,'
+        pointers: npc_node_15
+
+      player_node_44:
+        text: 'Я избавился от коров.'
+        condition: '_-quest_table.animal2_kill_condition_check'
+        event: '_-quest_table.animal2_reward_give,_-quest_table.animal2_kill_reward,'
+        pointers: npc_node_15
+
+      player_node_45:
+        text: 'Я избавился от овец.'
+        condition: '_-quest_table.animal3_kill_condition_check'
+        event: '_-quest_table.animal3_reward_give,_-quest_table.animal3_kill_reward,'
+        pointers: npc_node_15
+
+      player_node_46:
+        text: 'Я избавился от волков.'
+        condition: '_-quest_table.animal4_kill_condition_check'
+        event: '_-quest_table.animal4_reward_give,_-quest_table.animal4_kill_reward,'
+        pointers: npc_node_15
+
+      player_node_47:
+        text: 'Я избавился от скелетов.'
+        condition: '_-quest_table.mob1_kill_condition_check'
+        event: '_-quest_table.mob1_reward_give,_-quest_table.mob1_kill_reward,'
+        pointers: npc_node_15
+
+      player_node_48:
+        text: 'Я избавился от разбойников.'
+        condition: '_-quest_table.mob2_kill_condition_check'
+        event: '_-quest_table.mob2_reward_give,_-quest_table.mob2_kill_reward,'
+        pointers: npc_node_15
+
+      player_node_49:
+        text: 'Я насобирал лепестки тысячелистника.'
+        condition: '_-quest_table.farming1_condition'
+        event: '_-quest_table.farming1_reward_give,_-quest_table.farming1_reward,'
+        pointers: npc_node_15
+
+      player_node_50:
+        text: 'Я насобирал корни горькоцвета.'
+        condition: '_-quest_table.farming2_condition'
+        event: '_-quest_table.farming2_reward_give,_-quest_table.farming2_reward,'
+        pointers: npc_node_15
+
+      player_node_51:
+        text: 'Я насобирал семена полыни.'
+        condition: '_-quest_table.farming3_condition'
+        event: '_-quest_table.farming3_reward_give,_-quest_table.farming3_reward,'
+        pointers: npc_node_15
+
+      player_node_52:
+        text: 'Я насобирал цветы Блудроз.'
+        condition: '_-quest_table.farming4_condition'
+        event: '_-quest_table.farming4_reward_give,_-quest_table.farming4_reward,'
+        pointers: npc_node_15
+
+      player_node_53:
+        text: 'Я насобирал цветы Желтоцвет.'
+        condition: '_-quest_table.farming5_condition'
+        event: '_-quest_table.farming5_reward_give,_-quest_table.farming5_reward,'
+        pointers: npc_node_15
+
+      player_node_55:
+        text: 'Я добыл угля.'
+        condition: '_-quest_table.mining1_condition'
+        event: '_-quest_table.mining1_reward_give,_-quest_table.mining1_reward,'
+        pointers: npc_node_15
+
+      player_node_56:
+        text: 'Я добыл железа.'
+        condition: '_-quest_table.mining2_condition'
+        event: '_-quest_table.mining2_reward_give,_-quest_table.mining2_reward,'
+        pointers: npc_node_15
+
+      player_node_18:
+        text: 'Извините, просто мимо проходил. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_20:
+        text: 'Я хочу создать отряд.'
+        condition: ''
+        event: ''
+        pointers: npc_node_20
+
+      player_node_21:
+        text: 'Спасибо, за информацию. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_19:
+        text: 'Тогда до встречи. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_29:
+        text: 'Я прошел испытание инструктора.'
+        condition: 'guild_quest_completed'
+        event: 'adventurer,guild_quest_remove,instructor_compass_off,quest_finished'
+        pointers: npc_node_24
+
+      # player_node_30:
+        # text: 'Я не смог с ним совладать.'
+        # condition: 'guild_quest_failed'
+        # event: ''
+        # pointers: npc_node_23
+
+      player_node_31:
+        text: 'Пока никак, еще в процессе. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_32:
+        text: 'Как мне понять, что я достиг железного ранга?'
+        condition: ''
+        event: ''
+        pointers: npc_node_25
+
+      player_node_33:
+        text: 'Хорошо, тогда я пожалуй пойду. [ Уйти ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_26

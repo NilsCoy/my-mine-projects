@@ -1,0 +1,322 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2024-03-26 15:28:36 +0300"
+    },
+    "done": true
+  },
+  "firmalife:story/root": {
+    "criteria": {
+      "in_game_condition": "2024-03-26 15:28:36 +0300"
+    },
+    "done": true
+  },
+  "tfc:story/root": {
+    "criteria": {
+      "in_game_condition": "2024-03-26 15:28:36 +0300"
+    },
+    "done": true
+  },
+  "tfc:world/root": {
+    "criteria": {
+      "in_game_condition": "2024-03-26 15:28:36 +0300"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:beach": "2024-03-26 15:28:37 +0300",
+      "minecraft:plains": "2024-03-26 15:29:04 +0300"
+    },
+    "done": false
+  },
+  "mcw_tfc_aio:recipes/hedge": {
+    "criteria": {
+      "has_birch": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/blackstone": {
+    "criteria": {
+      "has_blackstone": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/end": {
+    "criteria": {
+      "has_end_brick": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/kapok": {
+    "criteria": {
+      "has_kapok": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/acacia": {
+    "criteria": {
+      "has_acacia": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/sandstone": {
+    "criteria": {
+      "has_sand": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/thatch": {
+    "criteria": {
+      "has_planks": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "astikorcarts:recipes/supply_cart": {
+    "criteria": {
+      "has_wheel": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/rosewood": {
+    "criteria": {
+      "has_rosewood": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/deepslate": {
+    "criteria": {
+      "has_deepslate": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/hickory": {
+    "criteria": {
+      "has_hickory": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/stone": {
+    "criteria": {
+      "has_stone": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/oak": {
+    "criteria": {
+      "has_oak": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/gutters": {
+    "criteria": {
+      "has_planks": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/palm": {
+    "criteria": {
+      "has_palm": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/spruce": {
+    "criteria": {
+      "has_spruce": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/bricks": {
+    "criteria": {
+      "has_planks": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "astikorcarts:recipes/plow": {
+    "criteria": {
+      "has_wheel": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/sequoia": {
+    "criteria": {
+      "has_sequoia": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/pine": {
+    "criteria": {
+      "has_pine": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/quartz": {
+    "criteria": {
+      "has_qq": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/birch": {
+    "criteria": {
+      "has_birch": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/sycamore": {
+    "criteria": {
+      "has_sycamore": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/maple": {
+    "criteria": {
+      "has_maple": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/awning": {
+    "criteria": {
+      "has_planks": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/ash": {
+    "criteria": {
+      "has_ash": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/concrete": {
+    "criteria": {
+      "has_planks": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/chestnut": {
+    "criteria": {
+      "has_chestnut": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/prismarine": {
+    "criteria": {
+      "has_qq": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/nether": {
+    "criteria": {
+      "has_nether_brick": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/bamboo": {
+    "criteria": {
+      "has_bamboo": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/douglas_fir": {
+    "criteria": {
+      "has_douglas_fir": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/blackwood": {
+    "criteria": {
+      "has_blackwood": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "astikorcarts:recipes/animal_cart": {
+    "criteria": {
+      "has_wheel": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/mangrove": {
+    "criteria": {
+      "has_mangrove": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/aspen": {
+    "criteria": {
+      "has_aspen": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "farmersdelight:main/root": {
+    "criteria": {
+      "seeds": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/willow": {
+    "criteria": {
+      "has_willow": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/white_cedar": {
+    "criteria": {
+      "has_white_cedar": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "mcw_tfc_aio:recipes/terracotta": {
+    "criteria": {
+      "has_planks": "2024-03-26 15:31:03 +0300"
+    },
+    "done": true
+  },
+  "tfc:crafting/wood/douglas_fir_trapped_chest": {
+    "criteria": {
+      "has_item": "2024-03-26 15:31:05 +0300"
+    },
+    "done": true
+  },
+  "tfc:crafting/wattle": {
+    "criteria": {
+      "has_item": "2024-03-26 15:42:22 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/barrel": {
+    "criteria": {
+      "has_wood_slab": "2024-03-26 15:42:28 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/composter": {
+    "criteria": {
+      "has_wood_slab": "2024-03-26 15:42:28 +0300"
+    },
+    "done": true
+  },
+  "tfc:story/logging": {
+    "criteria": {
+      "logs": "2024-03-26 15:42:22 +0300"
+    },
+    "done": true
+  },
+  "tfc:crafting/wood/chestnut_lumber_log": {
+    "criteria": {
+      "has_item": "2024-03-26 15:42:37 +0300"
+    },
+    "done": true
+  },
+  "tfc:crafting/wood/chestnut_slab_undo": {
+    "criteria": {
+      "has_item": "2024-03-26 15:42:28 +0300"
+    },
+    "done": true
+  },
+  "tfc:crafting/wood/chestnut_wood": {
+    "criteria": {
+      "has_item": "2024-03-26 15:42:37 +0300"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}

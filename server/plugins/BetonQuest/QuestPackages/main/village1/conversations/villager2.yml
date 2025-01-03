@@ -1,0 +1,93 @@
+conversations:
+  villager2:
+    quester: '&aФермерша'
+    first: 'npc_node_1, npc_node_5'
+    stop: 'false'
+    NPC_options:
+      npc_node_1:
+        text: '&7Вы видите женщину, которая что-то готовит на своей кухне.'
+        condition: '!villager2_quest'
+        event: ''
+        pointers: player_node_1, player_node_8
+
+      npc_node_2:
+        text: '&7На вас обращают внимание и спрашивают.&f\n\nКто ты такой? Ты приезжий?'
+        condition: ''
+        event: ''
+        pointers: player_node_2
+
+      npc_node_3:
+        text: 'Работу говоришь? Может мне тогда поможешь? В лесу растут съедобные ягоды, не мог бы ты насобирать для меня их?'
+        condition: ''
+        event: ''
+        pointers: player_node_3, player_node_4
+
+      npc_node_4:
+        text: 'Ягоды растут на кустиках, которые можно найти в лесу. В них можно так же найти и другие травы.'
+        condition: ''
+        event: ''
+        pointers: player_node_5
+
+      npc_node_5:
+        text: '&7Вы видите, что женщина все еще что-то готовит на своей кухне.&f\n\nЗакончил?'
+        condition: 'villager2_quest,!villager2_quest_completed'
+        event: ''
+        pointers: player_node_6, player_node_7
+
+      npc_node_6:
+        text: 'Хорошая работа, в качестве награды могу предложить немного еды и денег.\n\n&7Вам протягивают небольшую сумку с едой и с мешком денег.&f\n\nЧто-то нужное еще?'
+        condition: ''
+        event: 'villager2_quest_item2_give,villager2_quest_item3_give'
+        pointers: player_node_8, player_node_9
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Извините, не против если я зайду к вам?'
+        condition: '!villager2_quest_completed'
+        event: ''
+        pointers: npc_node_2
+
+      player_node_2:
+        text: 'Можно и так сказать, я осматриваюсь в деревне, ищу себе работу какую-нибудь.'
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_3:
+        text: 'Хорошо, я поищу их, но как они выглядят?'
+        condition: ''
+        event: 'villager2_quest,quest_objective,villager2_state1,quest_started'
+        pointers: npc_node_4
+
+      player_node_4:
+        text: 'Прошу прощения, но пожалуй откажусь. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_5:
+        text: 'Тогда я вернусь как насобираю их. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_6:
+        text: '*Передать лесные ягоды.*'
+        condition: 'villager2_quest_item1'
+        event: 'villager2_quest_completed,villager2_quest_remove,villager2_quest_item1_remove,quest_finished'
+        pointers: npc_node_6
+
+      player_node_7:
+        text: 'Нет, еще в процессе. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_8:
+        text: 'Я хочу задать несколько вопросов.'
+        condition: 'hide'
+        event: ''
+
+      player_node_9:
+        text: 'Нет, ничего, спасибо большое. [ Уйти ]'
+        condition: ''
+        event: ''

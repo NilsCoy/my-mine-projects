@@ -1,0 +1,11 @@
+Menu:
+  title: '&e&lInventory &6&l| &e&l%playerName%'
+  size: 54
+
+Items:
+  item-49:
+    title: '&c❰&4❰ &cClose &4❱&c❱'
+    material: BARRIER
+    count: 1
+    close: true
+    position: 49

@@ -1,0 +1,77 @@
+pickaxe1:
+  material: STONE_PICKAXE
+  display-name: '&cКаменная кирка'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  lore:
+    - '&7Используется для добычи руды.'
+    - '&7Может копать только уголь.'
+pickaxe2:
+  material: IRON_PICKAXE
+  display-name: '&cЖелезная кирка'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  lore:
+    - '&7Используется для добычи руды.'
+    - '&7Может копать уголь и железо.'
+lantern:
+  material: LANTERN
+  display-name: '&cЛампа'
+  unbreakable: false
+  placeable: true
+  soulbound: true
+  wearable: true
+  update-item: true
+  lore:
+    - '&7Освещает ваш путь и'
+    - '&7защищает от теней.'
+fishing_rod:
+  material: FISHING_ROD
+  display-name: '&cУдочка'
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  lore:
+    - '&7Используется для ловли рыбы'
+    - '&7в любом источнике воды.'
+campfire:
+  material: CAMPFIRE
+  display-name: '&cКостер'
+  unbreakable: false
+  placeable: false
+  soulbound: false
+  wearable: true
+  update-item: true
+  lore:
+    - '&7Заженный костер дает эффект'
+    - '&7регенерации в радиусе 5 метров.'
+    - '&7'
+    - '&7Дает возможность жарить еду.'
+anvil:
+  material: ANVIL
+  display-name: '&cНаковальня'
+  unbreakable: false
+  placeable: false
+  soulbound: false
+  wearable: true
+  update-item: true
+hammer:
+  material: BRICK
+  display-name: '&cКузнечный молот'
+  unbreakable: true
+  placeable: false
+  soulbound: false
+  wearable: true
+  update-item: true
+  custom-model-data: 11
+  lore:
+    - '&7При использовании на наковальне'
+    - '&7с предметом, выковывает крафт.'

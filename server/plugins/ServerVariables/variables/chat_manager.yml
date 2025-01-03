@@ -1,0 +1,13 @@
+variables:
+  god_state:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  mute_state:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  mute_time:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0

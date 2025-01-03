@@ -1,0 +1,90 @@
+pickaxe1:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2975
+    type: STONE_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"italic":false,"extra":[{"text":""},{"color":"red","text":"Каменная
+        кирка"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBk4HJOzHNJLS4pyq/kYGBgYGQQys3MS00uSkwrsUrOT8yJzy9KZQAAAGS9pioAAAA=
+      forgeCaps: H4sIAAAAAAAA/+NiYGAAAHg/+U4EAAAA
+pickaxe2:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2975
+    type: IRON_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"italic":false,"extra":[{"text":""},{"color":"red","text":"Железная
+        кирка"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBk4HJOzHNJLS4pyq/kYGBgYGIQys3MS00uSkwrsUrOT8yJzy9KRRbLLMrPA4sBAAAypAo+AAAA
+      forgeCaps: H4sIAAAAAAAA/+NiYGAAAHg/+U4EAAAA
+campfire:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: CAMPFIRE
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Костер"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBk4HJOzAvISUxO9c/jYGBgYGQQzc3MS00uSkwrsUovSiwujk/KyU/OZgAA/77lAS0AAAA=
+      blockMaterial: CAMPFIRE
+anvil:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: ANVIL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"italic":false,"extra":[{"text":""},{"color":"red","text":"Наковальня"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBk4HJOzAvISUxO9c/jYGBgYGQQzc3MS00uSkwrsUovSiwujk/KyU/OZgAA/77lAS0AAAA=
+blast_furnace:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: BLAST_FURNACE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"italic":false,"extra":[{"text":""},{"color":"red","text":"Плавильная печь"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBk4HJOzAvISUxO9c/jYGBgYGQQzc3MS00uSkwrsUovSiwujk/KyU/OZgAA/77lAS0AAAA=
+horn1:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: GOAT_HORN
+    meta:
+      ==: ItemMeta
+      meta-type: MUSIC_INSTRUMENT
+      display-name: '{"italic":false,"extra":[{"text":""},{"color":"red","text":"Козий
+        рог"}],"text":""}'
+      instrument: minecraft:ponder_goat_horn
+horn3:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: GOAT_HORN
+    meta:
+      ==: ItemMeta
+      meta-type: MUSIC_INSTRUMENT
+      display-name: '{"italic":false,"extra":[{"text":""},{"color":"red","text":"Козий
+        рог"}],"text":""}'
+      instrument: minecraft:dream_goat_horn
+horn2:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: GOAT_HORN
+    meta:
+      ==: ItemMeta
+      meta-type: MUSIC_INSTRUMENT
+      display-name: '{"italic":false,"extra":[{"text":""},{"color":"red","text":"Козий
+        рог"}],"text":""}'
+      instrument: minecraft:seek_goat_horn
+
+

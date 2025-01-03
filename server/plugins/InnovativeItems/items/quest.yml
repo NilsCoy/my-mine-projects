@@ -1,0 +1,23 @@
+
+lucky_coin:
+  material: 'BRICK'
+  display-name: '&bСчастливая монета'
+  custom-model-data: 31
+  update-item: true
+  lore:
+    - '&f[ ПКМ ] &7чтобы использовать!'
+fisher_fishing_rod:
+  material: 'FISHING_ROD'
+  display-name: '&bСломанная удачка рыбака'
+  update-item: true
+  lore:
+    - '&7Возможно ее можно заменить'
+    - '&7или починить.'
+fisher_fishing_rod_new:
+  material: 'FISHING_ROD'
+  display-name: '&bПочиненная удачка рыбака'
+  update-item: true
+  lore:
+    - '&7Исправленный крючек у кузнеца,'
+    - '&7вновь вдохнул в сломанную'
+    - '&7удочку жизнь.'

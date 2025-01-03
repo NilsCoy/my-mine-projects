@@ -1,0 +1,1129 @@
+menu_title: '&f七七七七七七七七ㇺ' # 七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七&8Навыки
+open_commands:
+  - '[sound] UI_BUTTON_CLICK 1 1'
+size: 54
+items:
+  'strength1':
+    material: PAPER
+    slot: 1
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:14
+    display_name: '&6Метеоритный удар'
+    lore:
+      - '&7Совершите мощный удар с высоты на землю,'
+      - '&7уничтожая всё вокруг. Урон увеличивается'
+      - '&7в зависимости от высоты с которого'
+      - '&7совершается навык, а также расход'
+      - '&7выносливости. Если урон от падения'
+      - '&7превышает предел шкалы выносливости,'
+      - '&7вы получаете урон.'
+      - ''
+      - '&8Выносливость: зависит от урона от падения.'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Длинный меч, Большой меч, Тати,'
+      - '&8Копье.'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c1Ⓢ'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_strength1%'
+          output: 'no'
+      deny_commands:
+        - '[message] &cТребования не выполнены!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_strength1 true'
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] epicfight skill add %player_name% identity epicfight:meteor_slam'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'strength1_opened':
+    material: PAPER
+    slot: 1
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:14
+    display_name: '&6Метеоритный удар'
+    lore:
+      - '&7Совершите мощный удар с высоты на землю,'
+      - '&7уничтожая всё вокруг. Урон увеличивается'
+      - '&7в зависимости от высоты с которого'
+      - '&7совершается навык, а также расход'
+      - '&7выносливости. Если урон от падения'
+      - '&7превышает предел шкалы выносливости,'
+      - '&7вы получаете урон.'
+      - ''
+      - '&8Выносливость: зависит от урона от падения.'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Длинный меч, Большой меч, Тати,'
+      - '&8Копье.'
+      - ''
+      - '&fВы уже изучили этот навык!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_skill_strength1%'
+          output: 'yes'
+  'strength2':
+    material: PAPER
+    slot: 9
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:15
+    display_name: '&6Запретная мощь'
+    lore:
+      - '&7Используйте своё здоровье в качестве'
+      - '&7выносливости, если у вас она отсутствует'
+      - '&7или вы истощены.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +5% урона'
+      - '&8  +4 макс. здоровья'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c2Ⓢ'
+      - '&7◆ &cНавык: Метеоритный удар'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 2'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_strength2%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_strength1%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_strength2 true'
+      - '[console] svar add player_skill_point -2 %player_name%'
+      - '[console] epicfight skill add %player_name% passive1 epicfight:forbidden_strength'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'strength2_opened':
+    material: PAPER
+    slot: 9
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:15
+    display_name: '&6Запретная мощь'
+    lore:
+      - '&7Используйте своё здоровье в качестве'
+      - '&7выносливости, если у вас она отсутствует'
+      - '&7или вы истощены.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +5% урона'
+      - '&8  +4 макс. здоровья'
+      - ''
+      - '&fВы уже изучили этот навык!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_skill_strength2%'
+          output: 'yes'
+  'strength3':
+    material: PAPER
+    slot: 19
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:16
+    display_name: '&6Мастер меча'
+    lore:
+      - '&7Получите 30% дополнительной'
+      - '&7скорости атаки.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +4 выносливости'
+      - '&8  +0.2 восcтановления выносливости'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Длинный меч, Меч, Тати,'
+      - '&8Утигатана.'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c4Ⓢ'
+      - '&7◆ &cНавык: Запретная мощь'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 4'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_strength3%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_strength2%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_strength3 true'
+      - '[console] svar add player_skill_point -4 %player_name%'
+      - '[console] epicfight skill add %player_name% passive1 epicfight:swordmaster'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'strength3_opened':
+    material: PAPER
+    slot: 19
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:16
+    display_name: '&6Мастер меча'
+    lore:
+      - '&7Получите 30% дополнительной'
+      - '&7скорости атаки.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +4 выносливости'
+      - '&8  +0.2 восcтановления выносливости'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Длинный меч, Меч, Тати,'
+      - '&8Утигатана.'
+      - ''
+      - '&fВы уже изучили этот навык!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_skill_strength3%'
+          output: 'yes'
+  'strength4':
+    material: PAPER
+    slot: 29
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:17
+    display_name: '&6Похищение выносливости'
+    lore:
+      - '&7Восстанавливает 30% от недостающей'
+      - '&7выносливости при убийстве вашей цели.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +10% урона.'
+      - '&8  +3 выносливости'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c4Ⓢ'
+      - '&7◆ &cНавык: Мастер меча'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 4'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_strength4%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_strength3%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_strength4 true'
+      - '[console] svar add player_skill_point -4 %player_name%'
+      - '[console] epicfight skill add %player_name% passive1 epicfight:stamina_pillager'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'strength4_opened':
+    material: PAPER
+    slot: 29
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:17
+    display_name: '&6Похищение выносливости'
+    lore:
+      - '&7Восстанавливает 30% от недостающей'
+      - '&7выносливости при убийстве вашей цели.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +10% урона.'
+      - '&8  +3 выносливости'
+      - ''
+      - '&fВы уже изучили этот навык!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_skill_strength4%'
+          output: 'yes'
+  'strength5':
+    material: PAPER
+    slot: 37
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:18
+    display_name: '&6Урожай смерти'
+    lore:
+      - '&7Если вы убьете сущность специальным ударом'
+      - '&7своего оружия - вы восстановите'
+      - '&7потраченный заряд, специальной атаки.'
+      - '&7Однако количество возвращаемого заряда'
+      - '&7зависит от урона вашего оружия и количества'
+      - '&7убитых врагов за раз.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +15% урона'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c5Ⓢ'
+      - '&7◆ &cНавык: Похищение выносливости'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 5'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_strength5%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_strength4%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_strength5 true'
+      - '[console] svar add player_skill_point -5 %player_name%'
+      - '[console] epicfight skill add %player_name% passive1 epicfight:death_harvest'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'strength5_opened':
+    material: PAPER
+    slot: 37
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:18
+    display_name: '&6Урожай смерти'
+    lore:
+      - '&7Если вы убьете сущность специальным ударом'
+      - '&7своего оружия - вы восстановите'
+      - '&7потраченный заряд, специальной атаки.'
+      - '&7Однако количество возвращаемого заряда'
+      - '&7зависит от урона вашего оружия и количества'
+      - '&7убитых врагов за раз.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +15% урона'
+      - ''
+      - '&fВы уже изучили этот навык!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_skill_strength5%'
+          output: 'yes'
+  'strength6':
+    material: PAPER
+    slot: 45
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:19
+    display_name: '&6Берсерк'
+    lore:
+      - '&7Получите 0.5% дополнительного урона'
+      - '&7и скорости атаки на 0.3% за'
+      - '&7каждый 1% потерянного здоровья.'
+      - '&8Скорость атаки не может превышать 5!'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +6 выносливости'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c5Ⓢ'
+      - '&7◆ &cНавык: Урожай смерти'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 5'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_strength6%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_strength5%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_strength6 true'
+      - '[console] svar add player_skill_point -5 %player_name%'
+      - '[console] epicfight skill add %player_name% passive1 epicfight:berserker'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'strength6_opened':
+    material: PAPER
+    slot: 45
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:19
+    display_name: '&6Берсерк'
+    lore:
+      - '&7Получите 0.5% дополнительного урона'
+      - '&7и скорости атаки на 0.3% за'
+      - '&7каждый 1% потерянного здоровья.'
+      - '&8Скорость атаки не может превышать 5!'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +6 выносливости'
+      - ''
+      - '&fВы уже изучили этот навык!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_skill_strength6%'
+          output: 'yes'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  'guard1':
+    material: PAPER
+    slot: 4
+    priority: 3
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:20
+    display_name: '&6Блок'
+    lore:
+      - '&7Используйте правую кнопку мыши, чтобы'
+      - '&7защищаться от фронтальных атак.'
+      - '&7Постоянное блокирование будет потреблять'
+      - '&7больше выносливости. Если блокирование'
+      - '&7израсходует всю выносливость до нуля,'
+      - '&7то вы падете на землю и откроетесь'
+      - '&7для врага.'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Меч, Топор, Длинный меч, Большой меч,'
+      - '&8Тати, Копье, Утигатана.'
+      - ''
+      - '&fДоступен всем с самого начала!'
+  'guard2':
+    material: PAPER
+    slot: 12
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:21
+    display_name: '&6Усиленная защита'
+    lore:
+      - '&7Снижает расход выносливости при'
+      - '&7блокировании. Теперь вы можете'
+      - '&7блокировать взрывы, огонь, магию'
+      - '&7и снаряды с 80% эффективностью.'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Длинный меч, Большой меч, Тати,'
+      - '&8Копье.'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c3Ⓢ'
+      - '&7◆ &cНавык: Блок'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 3'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_guard2%'
+          output: 'no'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_guard2 true'
+      - '[console] svar add player_skill_point -3 %player_name%'
+      - '[console] epicfight skill add %player_name% guard epicfight:impact_guard'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'guard2_opened':
+    material: PAPER
+    slot: 12
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:21
+    display_name: '&6Усиленная защита'
+    lore:
+      - '&7Снижает расход выносливости при'
+      - '&7блокировании. Теперь вы можете'
+      - '&7блокировать взрывы, огонь, магию'
+      - '&7и снаряды с 80% эффективностью.'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Длинный меч, Большой меч, Тати,'
+      - '&8Копье.'
+      - ''
+      - '&fВы уже изучили этот навык!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_skill_guard2%'
+          output: 'yes'
+  'guard3':
+    material: PAPER
+    slot: 14
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:22
+    display_name: '&6Парирование'
+    lore:
+      - '&7Парирование позволяет вам отражать'
+      - '&7атаки, не используя выносливость и'
+      - '&7даёт возможность начинать свой ход.'
+      - '&7Найдите окно атаки врага, когда вы почти'
+      - '&7вот-вот получите урон и совершите'
+      - '&7парирование. Вы также можете отражать'
+      - '&7дальние атаки.'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Меч, Длинный меч, Тати,'
+      - '&8Утигатана.'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c2Ⓢ'
+      - '&7◆ &cНавык: Блок'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 2'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_guard3%'
+          output: 'no'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_guard3 true'
+      - '[console] svar add player_skill_point -2 %player_name%'
+      - '[console] epicfight skill add %player_name% guard epicfight:parrying'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'guard3_opened':
+    material: PAPER
+    slot: 14
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:22
+    display_name: '&6Парирование'
+    lore:
+      - '&7Парирование позволяет вам отражать'
+      - '&7атаки, не используя выносливость и'
+      - '&7даёт возможность начинать свой ход.'
+      - '&7Найдите окно атаки врага, когда вы почти'
+      - '&7вот-вот получите урон и совершите'
+      - '&7парирование. Вы также можете отражать'
+      - '&7дальние атаки.'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Меч, Длинный меч, Тати,'
+      - '&8Утигатана.'
+      - ''
+      - '&fВы уже изучили этот навык!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_skill_guard3%'
+          output: 'yes'
+  'guard4':
+    material: PAPER
+    slot: 30
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:23
+    display_name: '&6Выносливость'
+    lore:
+      - '&7Получите сопротивление к оглушению на 12 секунд'
+      - '&7за количество потраченной выносливости, которую'
+      - '&7вы израсходуете в зависимости от атак врагов.'
+      - ''
+      - '&8Выносливость: 3%'
+      - '&8Восстановление: 30 сек.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +4 выносливости'
+      - '&8  +2 макс. здоровья'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c4Ⓢ'
+      - '&7◆ &cНавык: Усиленная защита'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 4'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_guard4%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_guard2%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_guard4 true'
+      - '[console] svar add player_skill_point -4 %player_name%'
+      - '[console] epicfight skill add %player_name% passive1 epicfight:endurance'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'guard4_opened':
+    material: PAPER
+    slot: 30
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:23
+    display_name: '&6Выносливость'
+    lore:
+      - '&7Получите сопротивление к оглушению на 12 секунд'
+      - '&7за количество потраченной выносливости, которую'
+      - '&7вы израсходуете в зависимости от атак врагов.'
+      - ''
+      - '&8Выносливость: 3%'
+      - '&8Восстановление: 30 сек.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +4 выносливости'
+      - '&8  +2 макс. здоровья'
+      - ''
+      - '&fВы уже изучили этот навык!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_skill_guard4%'
+          output: 'yes'
+  'guard5':
+    material: PAPER
+    slot: 32
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:24
+    display_name: '&6Откровение'
+    lore:
+      - '&8Ярость ястреба, наблюдающего за слабыми'
+      - '&8местами врагов.'
+      - ''
+      - '&7Блокирование, парирование и уклонение дает'
+      - '&7множество откровений.'
+      - '&7Обучение указанному количеству стеков позволит'
+      - '&7вам провести ошеломляющую контратаку, которая'
+      - '&7собьет врага с ног.'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c2Ⓢ'
+      - '&7◆ &cНавык: Парирование'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 2'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_guard5%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_guard3%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_guard5 true'
+      - '[console] svar add player_skill_point -2 %player_name%'
+      - '[console] epicfight skill add %player_name% identity epicfight:revelation'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'guard5_opened':
+    material: PAPER
+    slot: 32
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:24
+    display_name: '&6Откровение'
+    lore:
+      - '&8Ярость ястреба, наблюдающего за слабыми'
+      - '&8местами врагов.'
+      - ''
+      - '&7Блокирование, парирование и уклонение дает'
+      - '&7множество откровений.'
+      - '&7Обучение указанному количеству стеков позволит'
+      - '&7вам провести ошеломляющую контратаку, которая'
+      - '&7собьет врага с ног.'
+      - ''
+      - '&fВы уже изучили этот навык!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_skill_guard5%'
+          output: 'yes'
+  'guard6':
+    material: PAPER
+    slot: 40
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:25
+    display_name: '&6Гипер стойкость'
+    lore:
+      - '&7Позволяет использовать выносливость'
+      - '&7для специальных атак оружия.'
+      - ''
+      - '&8Восстановление: 20% от спец. атаки'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +2 выносливости'
+      - '&8  +4 макс. здоровья'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c5Ⓢ'
+      - '&7◆ &cНавык: Выносливость'
+      - '&7◆ &cНавык: Откровение'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 5'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_guard6%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_guard5%'
+          output: 'yes'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_guard4%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_guard6 true'
+      - '[console] svar add player_skill_point -5 %player_name%'
+      - '[console] epicfight skill add %player_name% passive1 epicfight:hypervitality'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'guard6_opened':
+    material: PAPER
+    slot: 40
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:25
+    display_name: '&6Гипер стойкость'
+    lore:
+      - '&7Позволяет использовать выносливость'
+      - '&7для специальных атак оружия.'
+      - ''
+      - '&8Восстановление: 20% от спец. атаки'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +2 выносливости'
+      - '&8  +4 макс. здоровья'
+      - ''
+      - '&fВы уже изучили этот навык!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_skill_guard6%'
+          output: 'yes'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  'dodge1':
+    material: PAPER
+    slot: 7
+    priority: 3
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:26
+    display_name: '&6Перекат'
+    lore:
+      - '&7Совершайте перекаты в направлении движения.'
+      - '&7Уклоняясь от всех входящих атак.'
+      - ''
+      - '&8Выносливость: 4'
+      - ''
+      - '&fДоступен всем с самого начала!'
+  'dodge2':
+    material: PAPER
+    slot: 17
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:27
+    display_name: '&6Отшаг'
+    lore:
+      - '&7Совершайте рывки на короткие расстояния'
+      - '&7в направлении движения.'
+      - '&7Уклоняясь от всех входящих атак.'
+      - ''
+      - '&8Выносливость: 3'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c2Ⓢ'
+      - '&7◆ &cНавык: Перекат'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 2'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_dodge2%'
+          output: 'no'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_dodge2 true'
+      - '[console] svar add player_skill_point -2 %player_name%'
+      - '[console] epicfight skill add %player_name% dodge epicfight:step'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'dodge2_opened':
+    material: PAPER
+    slot: 17
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:27
+    display_name: '&6Отшаг'
+    lore:
+      - '&7Совершайте рывки на короткие расстояния'
+      - '&7в направлении движения.'
+      - '&7Уклоняясь от всех входящих атак.'
+      - ''
+      - '&8Выносливость: 3'
+      - ''
+      - '&fВы уже изучили этот навык!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_skill_dodge2%'
+          output: 'yes'
+  'dodge3':
+    material: PAPER
+    slot: 25
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:28
+    display_name: '&6Выброс адреналина'
+    lore:
+      - '&7Теперь вы можете отменять, свои атаки'
+      - '&7с помощью уклонения. Позволяет'
+      - '&7уклоняться, даже когда вы без выносливости.'
+      - ''
+      - '&8Восстановление: 15 сек.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +0.3 восcтановления выносливости'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Меч, Утигатана, Кинжал.'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c4Ⓢ'
+      - '&7◆ &cНавык: Отшаг'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 4'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_dodge3%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_dodge2%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_dodge3 true'
+      - '[console] svar add player_skill_point -4 %player_name%'
+      - '[console] epicfight skill add %player_name% passive1 epicfight:emergency_escape'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'dodge3_opened':
+    material: PAPER
+    slot: 25
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:28
+    display_name: '&6Выброс адреналина'
+    lore:
+      - '&7Теперь вы можете отменять, свои атаки'
+      - '&7с помощью уклонения. Позволяет'
+      - '&7уклоняться, даже когда вы без выносливости.'
+      - ''
+      - '&8Восстановление: 15 сек.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +0.3 восcтановления выносливости'
+      - ''
+      - '&8Доступные типы оружия:'
+      - '&8Меч, Утигатана, Кинжал.'
+      - ''
+      - '&fВы уже изучили этот навык!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_skill_dodge3%'
+          output: 'yes'
+  'dodge4':
+    material: PAPER
+    slot: 43
+    priority: 3
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:29
+    display_name: '&6Техничный'
+    lore:
+      - '&7Если вы уклонитесь от атаки в последний'
+      - '&7момент перед тем, как она попадет'
+      - '&7по вам, то вы вернёте потраченную'
+      - '&7выносливость от уклонения.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +0.4 восcтановления выносливости'
+      - ''
+      - '&7Требования к изучению:'
+      - '&7◆ &c3Ⓢ'
+      - '&7◆ &cНавык: Выброс адреналина'
+      - ''
+      - '&f[ЛКМ] &7чтобы разблокировать.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 3'
+        anything_here_2:
+          type: string equals
+          input: '%player_has_permission_skill_dodge4%'
+          output: 'no'
+        anything_here_3:
+          type: string equals
+          input: '%player_has_permission_skill_dodge3%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cТребования не выполнены или навык уже изучен!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] lp user %player_name% permission set skill_dodge4 true'
+      - '[console] svar add player_skill_point -3 %player_name%'
+      - '[console] epicfight skill add %player_name% passive1 epicfight:technician'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 0.8'
+      - '[refresh]'
+  'dodge4_opened':
+    material: PAPER
+    slot: 43
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:29
+    display_name: '&6Техничный'
+    lore:
+      - '&7Если вы уклонитесь от атаки в последний'
+      - '&7момент перед тем, как она попадет'
+      - '&7по вам, то вы вернёте потраченную'
+      - '&7выносливость от уклонения.'
+      - ''
+      - '&8Дополнительные характеристики:'
+      - '&8  +0.4 восcтановления выносливости'
+      - ''
+      - '&fВы уже изучили этот навык!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_skill_dodge4%'
+          output: 'yes'

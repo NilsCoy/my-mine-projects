@@ -1,0 +1,25 @@
+# Innovative Items Config#
+
+# If this value is true, whenever the plugin is enabled it will check if a new update is available#
+check-for-updates: false
+
+# If this value is true, whenever the plugin is reloaded it will generate default config files if they do not exist
+generate-default-configs: true
+
+# If this value is true, if an ability is executed without proper context, it will fail to load, if false, the plugin will infer and use potentially unsafe fallback values instead#
+strict: true
+
+# This text will be sent to a player that tried to place down an unplaceable custom item, it will send nothing if the text equals "null"#
+failed-item-place: 'null'
+
+# The higher the debug level, the more information displayed in console. Good for bug fixing#
+debug-level: 2
+
+# The garbage collector will update items in inventories so they match updates in the configs#
+garbage-collector:
+  should-update: true # if true, when a custom item does not match the values in the config, will update the item to match config
+  should-delete: true # if true, when a custom item is not present in the cache, the garbage collector will delete the item
+
+# The item defender will ensure that custom items are not used in unintended ways that could destroy the item#
+item-defender:
+  enabled: true # if false the item defender system will not function at all

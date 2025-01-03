@@ -1,0 +1,89 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+grave:
+  Action: ADD
+  MobType: skelet
+  Chance: 0.7
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=4} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=grave1,grave2} true
+  - mobsinchunk{a=<1} true
+  - inside false
+  PositionType: LAND
+wolf:
+  Action: ADD
+  MobType: wild_wolf
+  Chance: 0.1
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=4} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=wolf1} true
+  - mobsinchunk{a=<1} true
+  - inside false
+  PositionType: LAND
+pillager_camp1:
+  Action: ADD
+  MobType: pillager_warrior
+  Chance: 0.1
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=4} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=pillager_camp1,pillager_camp2} true
+  - mobsinchunk{a=<1} true
+  - inside false
+  PositionType: LAND
+pillager_camp2:
+  Action: ADD
+  MobType: pillager_guard
+  Chance: 0.05
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=4} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=pillager_camp1,pillager_camp2} true
+  - mobsinchunk{a=<1} true
+  - inside false
+  PositionType: LAND
+pillager_camp3:
+  Action: ADD
+  MobType: pillager_archer
+  Chance: 0.1
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=4} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=pillager_camp1,pillager_camp2} true
+  - mobsinchunk{a=<1} true
+  - inside false
+  PositionType: LAND
+pillager_camp4:
+  Action: ADD
+  MobType: pillager_executioner
+  Chance: 0.01
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=4} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=pillager_camp1,pillager_camp2} true
+  - mobsinchunk{a=<1} true
+  - inside false
+  PositionType: LAND
+

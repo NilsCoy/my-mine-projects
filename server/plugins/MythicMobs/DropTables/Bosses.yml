@@ -1,0 +1,23 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+boss_1:
+  Drops:
+  - coin 100-200 1
+boss_2:
+  Drops:
+  - coin 150-250 1
+  - coin_boss 1 0.2
+boss_3:
+  Drops:
+  - coin 200-300 1
+  - coin_boss 1 0.4
+boss_4:
+  Drops:
+  - coin 250-350 1
+  - coin_boss 1 0.6
+boss_5:
+  Drops:
+  - coin 300-400 1
+  - coin_boss 1 0.8

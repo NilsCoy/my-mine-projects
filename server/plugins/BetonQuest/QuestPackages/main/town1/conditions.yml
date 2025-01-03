@@ -1,0 +1,12 @@
+conditions:
+  guild_start: tag guild_start
+  guild_quest: tag guild_quest
+  guild_quest_finish: tag guild_quest_finish
+  guild_quest_completed: tag guild_quest_completed
+  guild_quest_failed: tag guild_quest_failed
+  guild_quest_check: "or guild_quest_completed,guild_quest_failed"
+  instructor_start: tag instructor_start
+  instructor_quest: tag instructor_quest
+  cornerman_array: variable %ph.world_contains_array_DuelList_{player_name}% true
+  guild_quest_array: variable %ph.world_contains_array_DuelListNpc_{player_name}% true
+  cornerman_start: tag cornerman_start

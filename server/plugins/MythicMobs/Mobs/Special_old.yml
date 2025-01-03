@@ -1,0 +1,376 @@
+
+
+
+
+ancient_skelet:
+  Type: SKELETON
+  Display: '&eДревний скелет'
+  Health: 20
+  #Damage: 8
+  Faction: undead
+  Drops:
+  - bone1 1-5 1
+  - cmd{c="ii give <trigger.name> ingredient13"} 1 0.3
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - WOODEN_SWORD HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - gotolocation -66,63,130
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction ork
+  #- SpecificFaction animal
+  Modules:
+    ThreatTable: true
+ancient_warrior:
+  Type: SKELETON
+  Display: '&eДревний воин'
+  Health: 40
+  #Damage: 8
+  Faction: undead
+  Drops:
+  - bone1 1-5 1
+  - cmd{c="ii give <trigger.name> ingredient13"} 1 0.3
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+  Equipment:
+  - CHAINMAIL_HELMET{data=Unbreakable:1} HEAD
+  - CHAINMAIL_CHESTPLATE CHEST
+  - CHAINMAIL_LEGGINGS LEGS
+  - CHAINMAIL_BOOTS FEET
+  - IRON_SWORD HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - gotolocation -66,63,130
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction ork
+  #- SpecificFaction animal
+  Modules:
+    ThreatTable: true
+ancient_knight:
+  Type: SKELETON
+  Display: '&cДревний рыцарь'
+  Health: 40
+  #Damage: 8
+  Faction: undead
+  Drops:
+  - bone1 1-5 1
+  - cmd{c="ii give <trigger.name> ingredient13"} 1 0.3
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+  Equipment:
+  - DIAMOND_HELMET HEAD
+  - DIAMOND_CHESTPLATE CHEST
+  - DIAMOND_LEGGINGS LEGS
+  - DIAMOND_BOOTS FEET
+  - EPICFIGHT_DIAMOND_LONGSWORD HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction ork
+  #- SpecificFaction animal
+  Modules:
+    ThreatTable: true
+ancient_king:
+  Type: SKELETON
+  Display: '&4Древний король'
+  Health: 40
+  #Damage: 8
+  Faction: undead
+  Drops:
+  - bone1 1-5 1
+  - cmd{c="ii give <trigger.name> ingredient13"} 1 0.3
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+  Equipment:
+  - NETHERITE_HELMET HEAD
+  - NETHERITE_CHESTPLATE CHEST
+  - NETHERITE_LEGGINGS LEGS
+  - NETHERITE_BOOTS FEET
+  - EPICFIGHT_NETHERITE_GREATSWORD HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction ork
+  #- SpecificFaction animal
+  Modules:
+    ThreatTable: true
+
+
+
+guard_warrior:
+  Type: ZOMBIE
+  Disguise: guard
+  Display: '&7Страж'
+  Health: 40
+  #Damage: -4
+  Faction: guard
+  Skills:
+  - skill{s=GuardSelector} @self ~onDamaged
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    FoыllowRange: 20
+    Silent: true
+    PreventSunburn: true
+  Equipment:
+  - CHAINMAIL_HELMET HEAD
+  - CHAINMAIL_CHESTPLATE CHEST
+  - CHAINMAIL_LEGGINGS LEGS
+  - CHAINMAIL_BOOTS FEET
+  - guard_sword1 HAND
+  - SHIELD OFFHAND
+  AIGoalSelectors:
+  - clear
+  - float
+  AITargetSelectors:
+  - clear
+  - nearestConditionalTarget{conditions=[- isPlayer{} false - faction{faction=undead} true]}
+  Modules:
+    ThreatTable: true
+
+
+
+
+
+summoned_horse:
+  Type: HORSE
+  Display: '&aЛошадь'
+  Health: 10
+  Faction: animal
+  Skills:
+  - suicide @self ~onTimer:7000
+  Options: 
+    Saddled: true
+    HorseType: HORSE
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  - players
+
+
+
+
+
+cannon1:
+  Type: ARMOR_STAND
+  Display: '&7Пушка'
+  Health: 10
+  Skills:
+  - skill{s=Cannon1} @self ~onTimer:10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+cannon2:
+  Type: ARMOR_STAND
+  Display: '&7Пушка'
+  Health: 10
+  Skills:
+  - skill{s=Cannon2} @self ~onTimer:10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+cannon3:
+  Type: ARMOR_STAND
+  Display: '&7Пушка'
+  Health: 10
+  Skills:
+  - skill{s=Cannon3} @self ~onTimer:10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+cannon4:
+  Type: ARMOR_STAND
+  Display: '&7Пушка'
+  Health: 10
+  Skills:
+  - skill{s=Cannon4} @self ~onTimer:10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+
+gate1:
+  Type: IRON_GOLEM
+  Display: '&6Защитник врат'
+  Health: 1000
+  Faction: guard
+  Skills:
+  - command{c="svar set server_siege_event 0"} @self ~onDeath
+  BossBar:
+    Enabled: true
+    Title: 'Ворота'
+    Range: 50
+    Color: RED
+    Style: SOLID
+  Options:
+    Despawn: false
+    Invisible: false
+    NoAI: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+
+training_dummy:
+  Type: iron_golem
+  Disguise: armor_stand
+  Display: '&7Тренировочный манекен'
+  Health: 1000
+  Equipment:
+  - HAY_BLOCK HEAD
+  - AIR CHEST
+  - LEATHER_LEGGINGS LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  Options:
+    KnockbackResistance: 1
+    Invisible: false
+    NoAI: true
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  AIGoalSelectors:
+  - clear
+  - goToSpawn{speed=1;max=1;min=1}
+  AITargetSelectors:
+  - clear
+
+training_enemy:
+  Type: SKELETON
+  Display: '&eТренировочный противник'
+  Health: 20
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - WOODEN_SWORD HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  Modules:
+    ThreatTable: true

@@ -1,0 +1,36 @@
+Events:
+  ambient_music_start:
+    type: player_join
+    conditions:
+    - '%servervariables_value_music_state% > 0 execute actions1'
+    actions:
+      actions1:
+      - 'call_event: ambient_music'
+  ambient_music:
+    type: call
+    conditions:
+    - '%servervariables_value_music_state% == 1 execute actions1'
+    - '%servervariables_value_music_state% == 2 execute actions2'
+    - '%servervariables_value_music_state% == 3 execute actions3'
+    - '%servervariables_value_music_state% == 4 execute actions4'
+    actions:
+      actions1:
+      - 'playsound_resource_pack: world:ambient.additional_bonuses;0.1;1'
+      - 'console_command: svar set music_state 2 %player%'
+      - 'wait: 185'
+      - 'call_event: ambient_music'
+      actions2:
+      - 'playsound_resource_pack: world:ambient.an_arts_score;0.1;1'
+      - 'console_command: svar set music_state 3 %player%'
+      - 'wait: 185'
+      - 'call_event: ambient_music'
+      actions3:
+      - 'playsound_resource_pack: world:ambient.the_large_catalog;0.1;1'
+      - 'console_command: svar set music_state 4 %player%'
+      - 'wait: 185'
+      - 'call_event: ambient_music'
+      actions4:
+      - 'playsound_resource_pack: world:ambient.a_side_effect;0.1;1'
+      - 'console_command: svar set music_state 1 %player%'
+      - 'wait: 185'
+      - 'call_event: ambient_music'

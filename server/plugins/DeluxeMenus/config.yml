@@ -1,0 +1,96 @@
+# DeluxeMenus 1.14.0-Release main configuration file
+#
+# A full wiki on how to use this plugin can be found at:
+# https://wiki.helpch.at/clips-plugins/deluxemenus
+
+debug: HIGHEST
+check_updates: false
+gui_menus:
+  crafting_main:
+    file: crafting_main.yml
+  crafting_swords:
+    file: crafting_swords.yml
+  crafting_armors:
+    file: crafting_armors.yml
+  crafting_materials:
+    file: crafting_materials.yml
+  menu_sell:
+    file: menu_sell.yml
+  menu_buy_equip:
+    file: menu_buy_equip.yml
+  menu_buy_eat:
+    file: menu_buy_eat.yml
+  skills:
+    file: skills.yml
+  settings:
+    file: settings.yml
+  quests_page1:
+    file: quests_page1.yml
+  blacksmithing_iron_ingot:
+    file: blacksmithing_iron_ingot.yml
+  blacksmithing_iron_ring:
+    file: blacksmithing_iron_ring.yml
+  blacksmithing_steel_ingot:
+    file: blacksmithing_steel_ingot.yml
+  blacksmithing_cobald_ingot:
+    file: blacksmithing_cobald_ingot.yml
+  vault:
+    file: vault.yml
+  menu_sell_fish:
+    file: menu_sell_fish.yml
+  menu_buy_hats:
+    file: menu_buy_hats.yml
+  menu_buy_horse:
+    file: menu_buy_horse.yml
+  menu_buy_blacksmith:
+    file: menu_buy_blacksmith.yml
+  menu_buy_smith:
+    file: menu_buy_smith.yml
+  menu_buy_skin:
+    file: menu_buy_skin.yml
+  manual:
+    file: manual.yml
+  manual_locations:
+    file: manual_locations.yml
+  manual_locations_tetra1:
+    file: manual_locations_tetra1.yml
+  manual_bestiary:
+    file: manual_bestiary.yml
+  manual_bestiary_mobs1:
+    file: manual_bestiary_mobs1.yml
+  manual_bestiary_bosses1:
+    file: manual_bestiary_bosses1.yml
+  manual_faq:
+    file: manual_faq.yml
+  manual_faq_mechanics:
+    file: manual_faq_mechanics.yml
+  manual_faq_questions:
+    file: manual_faq_questions.yml
+  manual_faq_recommend:
+    file: manual_faq_recommend.yml
+  farming:
+    file: farming.yml
+  day_reward:
+    file: day_reward.yml
+  battle_pass_1:
+    file: battle_pass_1.yml
+  battle_pass_2:
+    file: battle_pass_2.yml
+  battle_pass_3:
+    file: battle_pass_3.yml
+  battle_pass_4:
+    file: battle_pass_4.yml
+  battle_pass_5:
+    file: battle_pass_5.yml
+  tituls_1:
+    file: tituls_1.yml
+  reagent_craft_1:
+    file: reagent_craft_1.yml
+  quest_table:
+    file: quest_table.yml
+  donate_pack:
+    file: donate_pack.yml
+  menu_buy_horse2:
+    file: menu_buy_horse2.yml
+  settings_notify:
+    file: settings_notify.yml

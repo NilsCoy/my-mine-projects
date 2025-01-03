@@ -1,0 +1,36 @@
+# variables:
+  # smith_quest.QuestName1: ''
+
+npcs:
+  '2': trader1
+  '0': smith
+  '7': guard
+  '22': fisher1
+  '27': trader2
+  '25': horse
+  '59': villager2
+  '46': trader2
+
+menu_conv_io:
+    line_length: 50 
+    refresh_delay: 180 
+    selectionCooldown: 10 
+
+    npc_wrap: '&l &r' 
+    npc_text: '&l &r&f{npc_text}' 
+    npc_text_reset: '&f' 
+    option_wrap: '&r&l &l &l &l &r' 
+    option_text: '&l &l &l &l &r&7{option_text}' 
+    option_text_reset: '&b' 
+    option_selected: '&l &r &r&f→&r   &f{option_text}' 
+    option_selected_reset: '&f' 
+    option_selected_wrap: '&r&l &l &l &l &r&f&n' 
+
+    control_select: jump,left_click 
+    control_cancel: sneak 
+    control_move: scroll,move 
+
+    npc_name_type: chat 
+    npc_name_align: center 
+    npc_name_format: '&f{npc_name}&r' 
+    npc_name_newline_separator: true

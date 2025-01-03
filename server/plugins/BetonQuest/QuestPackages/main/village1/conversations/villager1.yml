@@ -1,0 +1,108 @@
+conversations:
+  villager1:
+    quester: '&aЖитель'
+    first: 'npc_node_1'
+    stop: 'true'
+    NPC_options:
+      npc_node_1:
+        text: 'Ты чего творишь парень?'
+        condition: ''
+        event: ''
+        pointers: player_node_1
+
+      npc_node_2:
+        text: 'А чего ты в лесу делал по ту сторону реки? Туда дороги не ведут. &7\n\n( Используйте кнопки W и S для переходами между ответами. )'
+        condition: ''
+        event: ''
+        pointers: player_node_2, player_node_3
+
+      npc_node_3:
+        text: '&7После ваших слов старик внимательно осматривает вас.&f\n\nВот значит как.\n\n&7Старик призадумывается.&f\n\nА знаешь что, шел бы ты с моей лодки по добру по здорову, странный ты, видно не договариваешь ты что-то.'
+        condition: ''
+        event: ''
+        pointers: player_node_4
+
+      npc_node_4:
+        text: '&7Вы сходите с лодки, пока старец провожает недоверчивым взглядом.'
+        condition: ''
+        event: 'villager1'
+        pointers: player_node_6
+
+      npc_node_5:
+        text: '&7На лице старика появляется улыбка, а после и смешок.&f\n\nХа! Да ты погляди на себя, какой из тебя авантюрист? С таким оружием тебе даже кролика не поймать. Ты смешной малый, так что пади ты лучше к нашему кузнецу. Он недавно жаловался на нехватку рук, если поработаешь у него, то сможешь свой трухлявый меч поменять на что-то более стающее.'
+        condition: ''
+        event: ''
+        pointers: player_node_5
+
+      npc_node_6:
+        text: 'Не за что, но не зазнавайся сильно. Я помог лишь потому что показался мне славным малым. Многие здесь относятся с недоверием к приезжим, а ты ещё и из леса вышел, где в последнее совсем не безопасно стало.'
+        condition: ''
+        event: 'villager1'
+        pointers: player_node_6, player_node_7
+
+      npc_node_7:
+        text: '&7Старик грустно вздыхает.&f\n\nЕсли бы мы знали. В нашем лесу опасная стая волков появилась, что крадёт скот и буянит в самом лесу. Скоро и на нас нападки начнутся.'
+        condition: ''
+        event: ''
+        pointers: player_node_8
+
+      npc_node_8:
+        text: 'К тому же говорят, что везде стали появляться скопления нежити, это даже нас не обошло стороной, теперь хоронить на кладбище не безопасно, знакомые и родственники встают из своих могил и не ведают что творят. В общем, ужас.'
+        condition: ''
+        event: ''
+        pointers: player_node_9
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Да мне просто через реку перебраться надо.'
+        condition: ''
+        event: ''
+        pointers: npc_node_2
+
+      player_node_2:
+        text: 'А мне откуда знать, я там случайно очутился.'
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_3:
+        text: 'Я странствующий авантюрист, что заплутал в местных лесах, пока охотился на всякую живность.'
+        condition: ''
+        event: ''
+        pointers: npc_node_5
+
+      player_node_4:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_4
+
+      player_node_5:
+        text: 'Спасибо большое за наводку!'
+        condition: ''
+        event: ''
+        pointers: npc_node_6
+
+      player_node_6:
+        text: '[ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_7:
+        text: 'Что происходит?'
+        condition: ''
+        event: ''
+        pointers: npc_node_7
+
+      player_node_8:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_8
+
+      player_node_9:
+        text: 'Спасибо, что рассказал, до свидания!'
+        condition: ''
+        event: ''

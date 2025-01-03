@@ -1,0 +1,139 @@
+menu_title: '&6Справочник: Механики'
+open_commands:
+  - '[sound] ITEM_BOOK_PAGE_TURN 1 1'
+size: 27
+items:
+  'mining':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmRjMzE3MmMzMWJjY2YwNjg0N2Q2Nzk0NDBkMjMyNTlkNTAxNDc5ZWU5ZTEzZGI0ODU5NDUzNTRiM2YifX19
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fШахтерство'
+    lore:
+      - '&7Добыча ресурсов, это дело не легкое'
+      - '&7и кропотливое. Для ее вам потребуется'
+      - '&7купить кирку нужного уровня у торговца,'
+      - '&7все зависит от того, что вы собираетесь'
+      - '&7копать, например, если вам нужен уголь,'
+      - '&7то хватит и каменной кирки, а если'
+      - '&7требуется железо, то нужно купить железную.'
+      - '&7Обычно руды встречаются в шахтах, но'
+      - '&7могут быть исключения в виде особых мест.'
+      - '&7Как только вы прибудете в рудное место,'
+      - '&7то вам нужно будет найти руду, она выглядит'
+      - '&7как небольшая кучка камней на земле похожего'
+      - '&7ресурса соответствующего цвета. Для добычи'
+      - '&7нужно нажать &f[ ПКМ ] &7с киркой в руках.'
+  'blacksmith':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTgzMDZiZjhlZTQwMzZhNmZkYjQ4NDE2NzBiMzE3Mjg5NDg1MDMxYjU2NTQ1ZDNkMWE1YzBlNTc0ZWNmZDFkNCJ9fX0=
+    slot: 12
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fКузнечное дело'
+    lore:
+      - '&7Кузнечное дело, это один из способов получить'
+      - '&7снаряжение для игрока. Для работы вам'
+      - '&7потребуется полный набор предметов: плавильная'
+      - '&7печь, наковальня и кузнечный молот. Плавильня'
+      - '&7используется для плавки металлов. Для'
+      - '&7использования вам нужно сначала поставить его'
+      - '&7на землю, потом положить 10 угля и в конце'
+      - '&7добавить 10 металла. Через пару секунд плавка'
+      - '&7закончится, и вы ещё одним нажатием &f[ ПКМ ]'
+      - '&7по блоку сможете достать обработанный ресурс.'
+      - '&7Теперь нажатием &f[ ПКМ ] &7по заранее установленной'
+      - '&7наковальне с ингредиентом крафта вы можете'
+      - '&7выбрать интересующий вас крафт и начать ковку,'
+      - '&7для этого нужно нажать &f[ ПКМ ] &7кузнечным молотом'
+      - '&7по наковальне. Аналогично, если нажать другим'
+      - '&7доступным материалом по наковальне, появятся'
+      - '&7крафты для него. Вот и все! Вы научились'
+      - '&7обрабатывать метал и его ковать! Кстати,'
+      - '&7чтобы подобрать установленные станки,'
+      - '&7используя &f[ SHIFT + ПКМ ] &7рукой или перезайдя'
+      - '&7на сервер.'
+  'fishing':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzlkZWQzNmEwYmQ1ZmI2N2IyNmQwMTllNmVmZTc5Yjc3OTM1YTg5ZTI3YzNjMzAzMGUzMDk1YzA4NzJkZmMifX19
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fРыболовство'
+    lore:
+      - '&7Рыбалка на сервере работает по принципу нажатии в'
+      - '&7нужный момент. Для начала вам нужно приобрести'
+      - '&7 удочку у торговца. После забросить поплавок в'
+      - '&7реку и ждать рыбу. Как только начнет клевать,'
+      - '&7тянем и начинается мини-игра на реакцию. Как только'
+      - '&7белый ползунок соединится с голубым, можно нажимать'
+      - '&f[ ПКМ ]&7. Так вам нужно сделать серию из 3 раз,'
+      - '&7после чего вы сможете выловить заветную рыбу. Если'
+      - '&7вы допустите ошибку, то вас ждёт провал и рыба уплывёт.'
+      - '&7Саму рыбу можно сдать любому рыбаку в безопасных зонах.'
+  'farming':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTA0ZjFhNTU5NDNjNTk0ZTcxMTllODg0YzVkYTJhMmJjYThlN2U2NTE2YTA2NDlhYTdlNTU2NThlMGU5In19fQ==
+    slot: 14
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fСобирательство'
+    lore:
+      - '&7Собирательство, это хорошая возможность для алхимии'
+      - '&7или заработка новичка. Для нее не требуются никакие'
+      - '&7инструменты. Все что вам нужно, так только найти'
+      - '&7небольшие кустики, которые вы можете осмотреть'
+      - '&7нажатием &f[ ПКМ ] &7по ним. Как только вы'
+      - '&7провзаимодействуете с ними и дождавшись сбора'
+      - '&7вы получите рандомную награду, в зависимости от того,'
+      - '&7что вы собирали, обычный куст, цветы или грибы.'
+  'alchemy':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmQ0ZWFkMWVmZTBjZjc3NjAxNWJmZDJjMjM2ZGRmN2MwZDMzMDllYjU5OWIzOWQ2YWMxMGQ3ZmExMWEzZTA3NSJ9fX0=
+    slot: 15
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fАлхимия'
+    lore:
+      - '&7Собирая ингредиенты с растений, монстров и рыбалки'
+      - '&7можно создать реагенты на специальной стойке.'
+      - '&7После чего их можно кинуть в котел. '
+      - '&7Каждый реагент имеет свой набор эффектов, как'
+      - '&7положительных, так и отрицательных.'
+      - '&7Бросая в чан разные реагенты, вы смешиваете их эффекты,'
+      - '&7после чего они вызывают реакции взаимодействия с друг'
+      - '&7другом, благодаря этому получается подавить, или'
+      - '&7усилить получаемые эффекты зелья.'
+      - '&7Когда прекратите кидать реагенты в котел, то'
+      - '&7бутылочкой можно собрать зелье.'
+
+
+
+  'home':
+    material: PAPER
+    slot: 18
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:13
+    display_name: '&fВернуться назад'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы вернуться.'
+    click_commands:
+      - '[openguimenu] manual_faq'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+    display_name: ' '
+    nbt_int: CustomModelData:1

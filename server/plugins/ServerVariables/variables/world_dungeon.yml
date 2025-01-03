@@ -1,0 +1,5 @@
+variables:
+  dungeon1_cooldown:
+    variable_type: GLOBAL
+    value_type: INTEGER
+    initial_value: 0

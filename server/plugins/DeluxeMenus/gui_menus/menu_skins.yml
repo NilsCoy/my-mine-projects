@@ -1,0 +1,58 @@
+menu_title: '&6Кузнец'
+open_commands:
+  - '[sound] ENTITY_VILLAGER_TRADE 1 0.8'
+size: 9
+items:
+
+
+
+  'skin_buy':
+    material: PAPER
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:2
+    display_name: '&fКупить облики'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы открыть!'
+    click_commands:
+      - '[openguimenu] menu_buy_skin'
+      - '[refresh]'
+  'skin':
+    material: SMITHING_TABLE
+    slot: 5
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:2
+    display_name: '&fНаложить облики'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы открыть!'
+    click_commands:
+      - '[openguimenu] skins'
+      - '[refresh]'
+
+
+  'back':
+    material: PAPER
+    slot: 0
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:13
+    display_name: '&fВернуться назад'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы вернуться.'
+    click_commands:
+      - '[openguimenu] menu_buy_smith'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8]
+    display_name: ' '
+    nbt_int: CustomModelData:1

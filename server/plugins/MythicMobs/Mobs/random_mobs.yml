@@ -1,0 +1,1281 @@
+
+
+
+skelet_leader:
+  Type: SKELETON
+  Display: '&eВосставший скелет'
+  Health: 15
+  #Damage: 8
+  Faction: undead
+  Drops:
+  - bone1 1-5 1
+  - cmd{c="ii give <trigger.name> ingredient13"} 1 0.15
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - summon{type=skelet;amount=<random.1to2>;radius=4} @self ~onSpawn
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - WOODEN_SWORD HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+skelet:
+  Type: SKELETON
+  Display: '&eВосставший скелет'
+  Health: 15
+  #Damage: 8
+  Faction: undead
+  Drops:
+  - bone1 1-5 1
+  - cmd{c="ii give <trigger.name> ingredient13"} 1 0.15
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - WOODEN_SWORD HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - gotoparent
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+    
+coal_rat:
+  Type: ZOMBIE
+  Disguise: silverfish
+  Display: '&eУгольная крыса'
+  Health: 5
+  Damage: 2
+  Faction: animal
+  Options:
+    MovementSpeed: 0.23
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Drops:
+  - cmd{c="ii give <trigger.name> coal 1"} 1 1
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - model{m=coal_rat;n=false} @self ~onSpawn
+  - state{mid=coal_rat;s=attack} @self ~onAttack
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction undead
+  Modules:
+    ThreatTable: true
+    
+iron_rat:
+  Type: ZOMBIE
+  Disguise: silverfish
+  Display: '&eЖелезная крыса'
+  Health: 10
+  Damage: 4
+  Faction: animal
+  Options:
+    MovementSpeed: 0.23
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Drops:
+  - cmd{c="ii give <trigger.name> iron_raw 1"} 1 1
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - model{m=iron_rat;n=false} @self ~onSpawn
+  - state{mid=iron_rat;s=attack} @self ~onAttack
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction undead
+  Modules:
+    ThreatTable: true
+
+shadow:
+  Type: ZOMBIE
+  Display: '&cТень'
+  Health: 1
+  Damage: 20
+  Options:
+    MovementSpeed: 0.4
+    PreventOtherDrops: true
+    FollowRange: 50
+    Silent: true
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - model{m=shadow;n=nametag;d=false} @self ~onSpawn
+  - effect:particles{p=reddust;color=#000000;a=50;y=0;hs=0.5;vs=0.2} @self ~onTimer:10
+  - randomskill{skills=shadow_sound1 1,shadow_sound2 1} @self ~onTimer:120
+  - sound{s=entity.allay.death;v=1;p=0.1} @self ~onDeath
+  - skill{s=shadow_atack} @self ~onAttack
+  - skill{s=shadow_light1} @PIR{r=4} ~onTimer:5
+  - skill{s=shadow_light2} @PIR{r=4} ~onTimer:5
+  - skill{s=shadow_unlight} @self ~onTimer:20
+  Drops:
+  - cmd{c="ii give <trigger.name> ingredient15"} 1 0.8
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  Modules:
+    ThreatTable: true
+
+wild_wolf_leader:
+  Type: WOLF
+  Disguise: wolf setAngry true
+  Display: '&eДикий волк'
+  Health: 20
+  Damage: 5
+  Faction: animal
+  Options:
+    MovementSpeed: 0.35
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - summon{type=wild_wolf;amount=<random.1to2>;radius=4} @self ~onSpawn
+  # - skill{s=spawn} @self ~onSpawn
+  #- command{c="svar add mob_active -1"} @self ~onDeath
+  Drops:
+  - bone1 1-5 1
+  - meat 1-3 0.5
+  - mid_skin 1 0.5
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.1
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - leapattarget{s=0.5}
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction undead
+  Modules:
+    ThreatTable: true
+
+wild_wolf:
+  Type: WOLF
+  Disguise: wolf setAngry true
+  Display: '&eДикий волк'
+  Health: 20
+  Damage: 5
+  Faction: animal
+  Options:
+    MovementSpeed: 0.35
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  # - skill{s=spawn} @self ~onSpawn
+  #- command{c="svar add mob_active -1"} @self ~onDeath
+  Drops:
+  - bone1 1-5 1
+  - meat 1-3 0.5
+  - mid_skin 1 0.5
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.1
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - leapattarget{s=0.5}
+  - meleeattack
+  - gotoparent
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction undead
+  Modules:
+    ThreatTable: true
+
+wild_boar_leader:
+  Type: PIG
+  Display: '&eДикий кабан'
+  Health: 10
+  #Damage: 8
+  Faction: animal
+  Drops:
+  - bone1 1-5 1
+  - meat 1-3 0.5
+  - little_skin 1 0.5
+  - pig_fang 1 0.3
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.1
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: false
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - model{m=boar;n=false} @self ~onSpawn
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - summon{type=wild_boar;amount=<random.1to2>;radius=4} @self ~onSpawn
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - fleeConditional{distance=10;speed=1.5;safespeed=1;conditions=[ - inlineofsight true - targetwithin{d=5} true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction undead
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+
+wild_boar:
+  Type: PIG
+  Display: '&eДикий кабан'
+  Health: 10
+  #Damage: 8
+  Faction: animal
+  Drops:
+  - bone1 1-5 1
+  - meat 1-3 0.5
+  - little_skin 1 0.5
+  - pig_fang 1 0.3
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.1
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: false
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - model{m=boar;n=false} @self ~onSpawn
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - gotoparent
+  - fleeConditional{distance=10;speed=1.5;safespeed=1;conditions=[ - inlineofsight true - targetwithin{d=5} true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction undead
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+
+wild_cow_leader:
+  Type: COW
+  Display: '&eДикая корова'
+  Health: 20
+  #Damage: 8
+  Faction: animal
+  Drops:
+  - bone1 1-5 1
+  - meat 1-3 0.5
+  - mid_skin 1 0.5
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.1
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: false
+    PreventSunburn: true
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - summon{type=wild_cow;amount=<random.1to2>;radius=4} @self ~onSpawn
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - fleeConditional{distance=10;speed=1.5;safespeed=1;conditions=[ - inlineofsight true - targetwithin{d=5} true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction undead
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+
+wild_cow:
+  Type: COW
+  Display: '&eДикая корова'
+  Health: 20
+  #Damage: 8
+  Faction: animal
+  Drops:
+  - bone1 1-5 1
+  - meat 1-3 0.5
+  - mid_skin 1 0.5
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.1
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: false
+    PreventSunburn: true
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - gotoparent
+  - fleeConditional{distance=10;speed=1.5;safespeed=1;conditions=[ - inlineofsight true - targetwithin{d=5} true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction undead
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+
+wild_sheep_leader:
+  Type: SHEEP
+  Display: '&eДикая овца'
+  Health: 15
+  #Damage: 8
+  Faction: animal
+  Drops:
+  - bone1 1-5 1
+  - meat 1-3 0.5
+  - little_skin 1 0.5
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.1
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: false
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - summon{type=wild_sheep;amount=<random.1to2>;radius=4} @self ~onSpawn
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - fleeConditional{distance=10;speed=1.5;safespeed=1;conditions=[ - inlineofsight true - targetwithin{d=5} true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction undead
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+
+wild_sheep:
+  Type: SHEEP
+  Display: '&eДикая овца'
+  Health: 15
+  #Damage: 8
+  Faction: animal
+  Drops:
+  - bone1 1-5 1
+  - meat 1-3 0.5
+  - little_skin 1 0.5
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.1
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: false
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - gotoparent
+  - fleeConditional{distance=10;speed=1.5;safespeed=1;conditions=[ - inlineofsight true - targetwithin{d=5} true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction undead
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+
+wild_chicken_leader:
+  Type: PIG
+  Disguise: CHICKEN
+  Display: '&eДикая курица'
+  Health: 10
+  Faction: animal
+  Drops:
+  - bone1 1 1
+  - meat 1 1
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.1
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: false
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - summon{type=wild_chicken;amount=<random.1to2>;radius=4} @self ~onSpawn
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - fleeConditional{distance=10;speed=1.5;safespeed=1;conditions=[ - inlineofsight true - targetwithin{d=5} true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction undead
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+
+wild_chicken:
+  Type: PIG
+  Disguise: CHICKEN
+  Display: '&eДикая курица'
+  Health: 10
+  Faction: animal
+  Drops:
+  - bone1 1 1
+  - meat 1 1
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.1
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: false
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - gotoparent
+  - fleeConditional{distance=10;speed=2;safespeed=1;conditions=[ - inlineofsight true - targetwithin{d=5} true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction undead
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+
+wild_rabbit_leader:
+  Type: RABBIT
+  Display: '&eДикий кролик'
+  Health: 10
+  Faction: animal
+  Drops:
+  - bone1 1 1
+  - meat 1 1
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.1
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: false
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - summon{type=wild_rabbit;amount=<random.2to4>;radius=4} @self ~onSpawn
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - fleeConditional{distance=10;speed=3;safespeed=1;conditions=[ - inlineofsight true - targetwithin{d=5} true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction undead
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+
+wild_rabbit:
+  Type: RABBIT
+  Display: '&eДикий кролик'
+  Health: 10
+  Faction: animal
+  Drops:
+  - bone1 1 1
+  - meat 1 1
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.1
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: false
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - gotoparent
+  - fleeConditional{distance=10;speed=3;safespeed=1;conditions=[ - inlineofsight true - targetwithin{d=5} true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction undead
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+
+wild_hog_leader:
+  Type: HOGLIN
+  Display: '&cБоров'
+  Health: 20
+  Damage: 3
+  Faction: animal
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    ImmuneToZombification: true
+    Huntable: false
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - summon{type=wild_hog;amount=<random.1to2>;radius=4} @self ~onSpawn
+  Drops:
+  - bone1 1-5 1
+  - meat 1-3 0.5
+  - big_skin 1 0.5
+  - pig_fang 1 0.8
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.1
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction undead
+  Modules:
+    ThreatTable: true
+
+wild_hog:
+  Type: HOGLIN
+  Display: '&eБоров'
+  Health: 20
+  Damage: 3
+  Faction: animal
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    ImmuneToZombification: true
+    Huntable: false
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Drops:
+  - bone1 1-5 1
+  - meat 1-3 0.5
+  - big_skin 1 0.5
+  - pig_fang 1 0.8
+  - cmd{c="ii give <trigger.name> ingredient14"} 1 0.1
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - gotoparent
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction undead
+  Modules:
+    ThreatTable: true
+
+pillager_warrior_leader:
+  Type: PILLAGER
+  Display: '&eРазбойник'
+  Health: 30
+  #Damage: 8
+  Faction: pillager
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Drops:
+  - bag_of_coins 1 0.5
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - summon{type=pillager_warrior;amount=1;radius=4} @self ~onSpawn
+  - summon{type=pillager_archer;amount=1;radius=4} @self ~onSpawn
+  Equipment:
+  - CHAINMAIL_HELMET HEAD
+  - CHAINMAIL_CHESTPLATE CHEST
+  - CHAINMAIL_LEGGINGS LEGS
+  - CHAINMAIL_BOOTS FEET
+  - IRON_SWORD HAND
+  - LANTERN OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction guard
+  - SpecificFaction undead
+  - SpecificFaction animal
+  Modules:
+    ThreatTable: true
+
+pillager_warrior:
+  Type: PILLAGER
+  Display: '&eРазбойник'
+  Health: 30
+  #Damage: 8
+  Faction: pillager
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Drops:
+  - bag_of_coins 1 0.5
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - CHAINMAIL_HELMET HEAD
+  - CHAINMAIL_CHESTPLATE CHEST
+  - CHAINMAIL_LEGGINGS LEGS
+  - CHAINMAIL_BOOTS FEET
+  - IRON_SWORD HAND
+  - LANTERN OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - gotoparent
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction guard
+  - SpecificFaction undead
+  - SpecificFaction animal
+  Modules:
+    ThreatTable: true
+
+pillager_archer:
+  Type: PILLAGER
+  Display: '&eРазбойник-арбалетчик'
+  Health: 30
+  #Damage: 8
+  Faction: pillager
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Drops:
+  - bag_of_coins 1 0.5
+  - arrows 1-15 0.8
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - IRON_HELMET HEAD
+  - IRON_CHESTPLATE CHEST
+  - IRON_LEGGINGS LEGS
+  - IRON_BOOTS FEET
+  - CROSSBOW HAND
+  - LANTERN OFFHAND
+  AIGoalSelectors:
+  - clear
+  - fleeConditional{distance=3;speed=1.2;safespeed=1;conditions=[ - inlineofsight true ]}
+  - crossbowAttack
+  - gotoparent
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction guard
+  - SpecificFaction undead
+  - SpecificFaction animal
+  Modules:
+    ThreatTable: true
+
+pillager_guard:
+  Type: PILLAGER
+  Display: '&eРазбойник-страж'
+  Health: 40
+  #Damage: 8
+  Faction: pillager
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Drops:
+  - bag_of_coins 1-2 0.5
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - IRON_HELMET HEAD
+  - IRON_CHESTPLATE CHEST
+  - IRON_LEGGINGS LEGS
+  - IRON_BOOTS FEET
+  - EPICFIGHT_IRON_LONGSWORD HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - gotoparent
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction guard
+  - SpecificFaction undead
+  - SpecificFaction animal
+  Modules:
+    ThreatTable: true
+
+pillager_executioner:
+  Type: VINDICATOR
+  Display: '&cРазбойник-палач'
+  Health: 50
+  #Damage: 8
+  Faction: pillager
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Drops:
+  - bag_of_coins 1-3 0.5
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - IRON_HELMET HEAD
+  - IRON_CHESTPLATE CHEST
+  - IRON_LEGGINGS LEGS
+  - IRON_BOOTS FEET
+  - EPICFIGHT_IRON_GREATSWORD HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - gotoparent
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction guard
+  - SpecificFaction undead
+  - SpecificFaction animal
+  Modules:
+    ThreatTable: true
+
+
+traveling_merchant:
+  Type: silverfish
+  Display: '&aТаинственный торговец'
+  Health: 1
+  Faction: npc
+  Skills:
+  - model{m=air;n=nametag;d=false} @self ~onSpawn
+  - skill{s=traveling_merchant_summon} @self ~onSpawn
+  - remove @self ~onSpawn
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+traveling_merchant1:
+  Type: SKELETON
+  Display: '&aТаинственный торговец 1'
+  Health: 40
+  #Damage: 8
+  Faction: npc
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    Silent: true
+  Skills:
+  - model{m=npc_trader3;n=false} @self ~onSpawn
+  - sound{s=entity.evoker.hurt;p=1} @self ~onDamaged
+  - sound{s=entity.villager.celebrate;p=0.6} @self ~onTimer:200
+  - particles{p=Cloud;a=100;hs=0.3;vs=0.5;y=1} @self ~onDamaged
+  - particles{p=Angry_Villager;a=5;hs=0.2;vs=0.3;y=2} @self ~onDamaged
+  - remove @self ~onDamaged
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - lookatplayers
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  Modules:
+    ThreatTable: true
+traveling_merchant2:
+  Type: SKELETON
+  Display: '&aТаинственный торговец 2'
+  Health: 40
+  #Damage: 8
+  Faction: npc
+  Drops:
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    Silent: true
+  Skills:
+  - model{m=npc_trader3;n=false} @self ~onSpawn
+  - sound{s=entity.evoker.hurt;p=1} @self ~onDamaged
+  - sound{s=entity.villager.celebrate;p=0.6} @self ~onTimer:200
+  - particles{p=Cloud;a=100;hs=0.3;vs=0.5;y=1} @self ~onDamaged
+  - particles{p=Angry_Villager;a=5;hs=0.2;vs=0.3;y=2} @self ~onDamaged
+  - remove @self ~onDamaged
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - lookatplayers
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  Modules:
+    ThreatTable: true
+traveling_merchant3:
+  Type: SKELETON
+  Display: '&aТаинственный торговец 3'
+  Health: 40
+  #Damage: 8
+  Faction: npc
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    Silent: true
+  Skills:
+  - model{m=npc_trader3;n=false} @self ~onSpawn
+  - sound{s=entity.evoker.hurt;p=1} @self ~onDamaged
+  - sound{s=entity.villager.celebrate;p=0.6} @self ~onTimer:200
+  - particles{p=Cloud;a=100;hs=0.3;vs=0.5;y=1} @self ~onDamaged
+  - particles{p=Angry_Villager;a=5;hs=0.2;vs=0.3;y=2} @self ~onDamaged
+  - remove @self ~onDamaged
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - lookatplayers
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  Modules:
+    ThreatTable: true
+traveling_merchant4:
+  Type: SKELETON
+  Display: '&aТаинственный торговец 4'
+  Health: 40
+  #Damage: 8
+  Faction: npc
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    Silent: true
+  Skills:
+  - model{m=npc_trader3;n=false} @self ~onSpawn
+  - sound{s=entity.evoker.hurt;p=1} @self ~onDamaged
+  - sound{s=entity.villager.celebrate;p=0.6} @self ~onTimer:200
+  - particles{p=Cloud;a=100;hs=0.3;vs=0.5;y=1} @self ~onDamaged
+  - particles{p=Angry_Villager;a=5;hs=0.2;vs=0.3;y=2} @self ~onDamaged
+  - remove @self ~onDamaged
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - lookatplayers
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  Modules:
+    ThreatTable: true
+
+mushrooman:
+  Type: PIG
+  Display: '&eГрибочел'
+  Health: 5
+  #Damage: 8
+  Faction: animal
+  Drops:
+  - farming3 1 1
+  - cmd{c="ii give <trigger.name> hat12"} 1 0.05
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - model{m=mushroom;n=nametag;d=false} @self ~onSpawn
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - gotoparent
+  - fleeConditional{distance=10;speed=1.5;safespeed=1;conditions=[ - inlineofsight true - targetwithin{d=5} true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction undead
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+
+blue_mushrooman:
+  Type: PIG
+  Display: '&eГрибочел'
+  Health: 5
+  #Damage: 8
+  Faction: animal
+  Drops:
+  - farming3 1 1
+  - cmd{c="ii give <trigger.name> hat18"} 1 0.1
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - model{m=blue_mushroom;n=nametag;d=false} @self ~onSpawn
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - gotoparent
+  - fleeConditional{distance=10;speed=1.5;safespeed=1;conditions=[ - inlineofsight true - targetwithin{d=5} true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction undead
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+
+wild_bee:
+  Type: BEE
+  Display: '&eМега-пчела'
+  Health: 10
+  Damage: 3
+  Faction: animal
+  Drops:
+  - cmd{c="ii give <trigger.name> ingredient11"} 1 0.6
+  Options:
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    #Anger: 200
+    HasNectar: true
+    PreventStingerLoss: false
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  #- gotoparent
+  #- fleeConditional{distance=10;speed=1.5;safespeed=1;conditions=[ - inlineofsight true - targetwithin{d=5} true ]}
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction undead
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true

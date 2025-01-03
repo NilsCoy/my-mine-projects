@@ -1,0 +1,58 @@
+conversations:
+  instructor:
+    quester: '&eИнструктор'
+    first: 'npc_node_1, npc_node_5, npc_node_3'
+    stop: 'false'
+    NPC_options:
+      npc_node_1:
+        text: '&7У костра сидит седой мужчина со знаменем гильдии авантюристов. Видимо он и есть ваш инструктор.&f\n\nТы тот новичок, что сегодня проходил регистрацию? '
+        condition: '!instructor_start,guild_quest'
+        event: 'instructor_start'
+        pointers: player_node_1
+
+      npc_node_2:
+        text: 'Мне уже сказали о тебе. В общем, мы проведем с тобой один бой, если сможешь меня одолеть, то станешь авантюристом. Ты можешь использовать любое оружие против меня, не стесняйся использовать даже подлые трюки, в бою все средства хороши.'
+        condition: ''
+        event: ''
+        pointers: player_node_2
+
+      npc_node_3:
+        text: 'Ну что, готов?'
+        condition: 'instructor_start,!guild_quest_array'
+        event: ''
+        pointers: player_node_3, player_node_4
+
+      #npc_node_4:
+      #  text: '&7Вы бились отважно, но удача была не вашей стороне, вы не смогли победить поддававшегося вам инструктора.&f\n\nТы неплохо сражался, но этого не достаточно. Тебе нужно больше тренироваться! Приходи как станешь сильнее, а пока не стать тебе авантюристом.'
+      #  condition: 'guild_quest_failed,!guild_quest_finish'
+      #  event: ''
+
+      npc_node_5:
+        text: '&7Ваша воля была неукротима и вы смогли доказать, что ваши навыки хороши, а вы достойны носить титул авантюриста.&f\n\nЧто же, теперь я уверен в твоих силах! Можешь возвращаться в гильдию и сказать, что прошел мой тест.'
+        condition: 'guild_quest_completed,!guild_quest_finish'
+        event: ''
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Так и есть.'
+        condition: ''
+        event: ''
+        pointers: npc_node_2
+
+      player_node_2:
+        text: 'Вас понял, сэр.'
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_3:
+        text: 'Да, можем начинать. [ Телепорт ]'
+        condition: ''
+        event: 'instructor_quest,instructor_quest_command1,instructor_quest_command2,instructor_quest_command4'
+
+      player_node_4:
+        text: 'Мне нужно время на подготовку. [ Уйти ]'
+        condition: ''
+        event: ''

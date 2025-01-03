@@ -1,0 +1,237 @@
+menu_title: '&6Хранилище'
+open_commands:
+  - '[sound] BLOCK_BARREL_OPEN 1 1'
+size: 9
+items:
+  'vault1':
+    material: CHEST
+    slot: 0
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fХранилище №1'
+    lore:
+      - '&7Ваше личное хранилище.'
+      - '&7Доступно с самого начала.'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы открыть!'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set player_vault 1 %player_name%'
+  'vault2':
+    material: ENDER_CHEST
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fХранилище №2'
+    lore:
+      - '&7Ваше личное хранилище.'
+      - '&7Доступно только для &fSponsor'
+      - '&7'
+      - '&7Можно приобрести на сайте:'
+      - '&f&nshop.mc-epica.ru'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы открыть!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has permission
+          permission: sponsor
+      deny_commands:
+        - '[message] &cУ вас недостаточно прав!'
+        - '[sound] BLOCK_CHEST_LOCKED 1 0.8'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set player_vault 2 %player_name%'
+  'vault3':
+    material: ENDER_CHEST
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fХранилище №3'
+    lore:
+      - '&7Ваше личное хранилище.'
+      - '&7Доступно только для &fSponsor'
+      - '&7'
+      - '&7Можно приобрести на сайте:'
+      - '&f&nshop.mc-epica.ru'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы открыть!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has permission
+          permission: sponsor
+      deny_commands:
+        - '[message] &cУ вас недостаточно прав!'
+        - '[sound] BLOCK_CHEST_LOCKED 1 0.8'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set player_vault 3 %player_name%'
+  'vault4':
+    material: ENDER_CHEST
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fХранилище №4'
+    lore:
+      - '&7Ваше личное хранилище.'
+      - '&7Доступно только для &fSponsor'
+      - '&7'
+      - '&7Можно приобрести на сайте:'
+      - '&f&nshop.mc-epica.ru'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы открыть!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has permission
+          permission: sponsor
+      deny_commands:
+        - '[message] &cУ вас недостаточно прав!'
+        - '[sound] BLOCK_CHEST_LOCKED 1 0.8'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set player_vault 4 %player_name%'
+  'vault5':
+    material: ENDER_CHEST
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fХранилище №5'
+    lore:
+      - '&7Ваше личное хранилище.'
+      - '&7Доступно только для &fSponsor'
+      - '&7'
+      - '&7Можно приобрести на сайте:'
+      - '&f&nshop.mc-epica.ru'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы открыть!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has permission
+          permission: sponsor
+      deny_commands:
+        - '[message] &cУ вас недостаточно прав!'
+        - '[sound] BLOCK_CHEST_LOCKED 1 0.8'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set player_vault 5 %player_name%'
+  'vault6':
+    material: ENDER_CHEST
+    slot: 5
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fХранилище №6'
+    lore:
+      - '&7Ваше личное хранилище.'
+      - '&7Доступно только для &fSponsor'
+      - '&7'
+      - '&7Можно приобрести на сайте:'
+      - '&f&nshop.mc-epica.ru'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы открыть!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has permission
+          permission: sponsor
+      deny_commands:
+        - '[message] &cУ вас недостаточно прав!'
+        - '[sound] BLOCK_CHEST_LOCKED 1 0.8'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set player_vault 6 %player_name%'
+  'vault7':
+    material: ENDER_CHEST
+    slot: 6
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fХранилище №7'
+    lore:
+      - '&7Ваше личное хранилище.'
+      - '&7Доступно только для &fSponsor'
+      - '&7'
+      - '&7Можно приобрести на сайте:'
+      - '&f&nshop.mc-epica.ru'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы открыть!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has permission
+          permission: sponsor
+      deny_commands:
+        - '[message] &cУ вас недостаточно прав!'
+        - '[sound] BLOCK_CHEST_LOCKED 1 0.8'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set player_vault 7 %player_name%'
+  'vault8':
+    material: ENDER_CHEST
+    slot: 7
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fХранилище №8'
+    lore:
+      - '&7Ваше личное хранилище.'
+      - '&7Доступно только для &fSponsor'
+      - '&7'
+      - '&7Можно приобрести на сайте:'
+      - '&f&nshop.mc-epica.ru'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы открыть!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has permission
+          permission: sponsor
+      deny_commands:
+        - '[message] &cУ вас недостаточно прав!'
+        - '[sound] BLOCK_CHEST_LOCKED 1 0.8'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set player_vault 8 %player_name%'
+  'vault9':
+    material: ENDER_CHEST
+    slot: 8
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fХранилище №9'
+    lore:
+      - '&7Ваше личное хранилище.'
+      - '&7Доступно только для &fSponsor'
+      - '&7'
+      - '&7Можно приобрести на сайте:'
+      - '&f&nshop.mc-epica.ru'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы открыть!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has permission
+          permission: sponsor
+      deny_commands:
+        - '[message] &cУ вас недостаточно прав!'
+        - '[sound] BLOCK_CHEST_LOCKED 1 0.8'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set player_vault 9 %player_name%'

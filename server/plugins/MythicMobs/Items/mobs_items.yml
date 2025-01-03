@@ -1,0 +1,5 @@
+guard_sword1:
+  Id: iron_sword
+  Attributes:
+    All:
+      Damage: 2

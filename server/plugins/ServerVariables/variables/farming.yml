@@ -1,0 +1,17 @@
+variables:
+  farming_start:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  farming_slot1:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: -1
+  farming_slot2:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: -1
+  farming_slot3:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: -1

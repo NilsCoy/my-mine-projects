@@ -1,0 +1,71 @@
+menu_title: '&6Покупка'
+open_commands:
+  - '[sound] ENTITY_VILLAGER_TRADE 1 0.8'
+size: 9
+items:
+
+
+
+  'horse1':
+    material: SADDLE
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсел'
+    lore:
+      - '&7Медленная скорость и малый грузоподъем.'
+      - ''
+      - '&fЦена покупки: &e5 000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 5000'
+        anything_here_2:
+          type: '!has permission'
+          permission: mcpets.pet_horse1
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет или вы уже его приобрили!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -5000 %player_name%'
+      - '[console] lp user %player_name% permission set mcpets.pet_horse1 true'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'horse1_open':
+    material: SADDLE
+    slot: 4
+    priority: 3
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсел'
+    lore:
+      - '&7Медленная скорость и малый грузоподъем.'
+      - ''
+      - '&fВы уже приобрили этот товар.'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_mcpets.pet_horse1%'
+          output: 'yes'
+
+
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8]
+    display_name: ' '
+    nbt_int: CustomModelData:1

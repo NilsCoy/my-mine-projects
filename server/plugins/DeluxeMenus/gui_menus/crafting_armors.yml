@@ -1,0 +1,508 @@
+menu_title: '&6Кузня > Крафт брони'
+open_commands:
+  - '[sound] BLOCK_ANVIL_LAND 1 1.5'
+size: 45
+items:
+
+
+
+  'chainmail1':
+    material: CHAINMAIL_CHESTPLATE
+    slot: 10
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКольчуга'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c1500Ⓒ'
+      - '&f● &bУголь &f- 50'
+      - '&f● &bЖелезное колечко &f- 150'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 50
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bЖелезное колечко'
+          amount: 150
+        anything_here_3:
+          type: has money
+          amount: 1500
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[takemoney] 1500'
+      - '[console] svar set player_craft_item 101 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+  'chainmail2':
+    material: CHAINMAIL_LEGGINGS
+    slot: 19
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКольчужные поножи'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c1500Ⓒ'
+      - '&f● &bУголь &f- 50'
+      - '&f● &bЖелезное колечко &f- 100'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 50
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bЖелезное колечко'
+          amount: 100
+        anything_here_3:
+          type: has money
+          amount: 1500
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[takemoney] 1500'
+      - '[console] svar set player_craft_item 102 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+  'chainmail3':
+    material: CHAINMAIL_BOOTS
+    slot: 28
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКольчужные ботинки'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c1500Ⓒ'
+      - '&f● &bУголь &f- 50'
+      - '&f● &bЖелезное колечко &f- 50'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 50
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bЖелезное колечко'
+          amount: 50
+        anything_here_3:
+          type: has money
+          amount: 1500
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[takemoney] 1500'
+      - '[console] svar set player_craft_item 103 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+  'iron1':
+    material: IRON_CHESTPLATE
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cCтальной нагрудник'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c3000Ⓒ'
+      - '&f● &bУголь &f- 100'
+      - '&f● &bСтальная пластина &f- 75'
+      - '&f● &cКольчуга &f- 1'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 100
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bСтальная пластина'
+          amount: 75
+        anything_here_3:
+          type: has item
+          material: 'CHAINMAIL_CHESTPLATE'
+          name: '&cКольчуга'
+          amount: 1
+        anything_here_4:
+          type: has money
+          amount: 3000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[takemoney] 3000'
+      - '[console] svar set player_craft_item 104 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+  'iron2':
+    material: IRON_LEGGINGS
+    slot: 20
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cCтальные поножи'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c3000Ⓒ'
+      - '&f● &bУголь &f- 100'
+      - '&f● &bСтальная пластина &f- 50'
+      - '&f● &cКольчужные поножи &f- 1'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 100
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bСтальная пластина'
+          amount: 50
+        anything_here_3:
+          type: has item
+          material: 'CHAINMAIL_LEGGINGS'
+          name: '&cКольчужные поножи'
+          amount: 1
+        anything_here_4:
+          type: has money
+          amount: 3000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[takemoney] 3000'
+      - '[console] svar set player_craft_item 105 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+  'iron3':
+    material: IRON_BOOTS
+    slot: 29
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cCтальные ботинки'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c3000Ⓒ'
+      - '&f● &bУголь &f- 100'
+      - '&f● &bСтальная пластина &f- 25'
+      - '&f● &cКольчужные ботинки &f- 1'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 100
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bСтальная пластина'
+          amount: 25
+        anything_here_3:
+          type: has item
+          material: 'CHAINMAIL_BOOTS'
+          name: '&cКольчужные ботинки'
+          amount: 1
+        anything_here_4:
+          type: has money
+          amount: 3000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[takemoney] 3000'
+      - '[console] svar set player_craft_item 106 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+  'diamond1':
+    material: DIAMOND_CHESTPLATE
+    slot: 12
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКобальтовый нагрудник'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c6000Ⓒ'
+      - '&f● &bУголь &f- 150'
+      - '&f● &bКобальтовая пластина &f- 50'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 150
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bКобальтовая пластина'
+          amount: 50
+        anything_here_3:
+          type: has money
+          amount: 6000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[takemoney] 6000'
+      - '[console] svar set player_craft_item 107 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+  'diamond2':
+    material: DIAMOND_LEGGINGS
+    slot: 21
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКобальтовые поножи'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c6000Ⓒ'
+      - '&f● &bУголь &f- 150'
+      - '&f● &bКобальтовая пластина &f- 35'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 150
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bКобальтовая пластина'
+          amount: 35
+        anything_here_3:
+          type: has money
+          amount: 6000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[takemoney] 6000'
+      - '[console] svar set player_craft_item 108 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+  'diamond3':
+    material: DIAMOND_BOOTS
+    slot: 30
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКобальтовые ботинки'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c6000Ⓒ'
+      - '&f● &bУголь &f- 150'
+      - '&f● &bКобальтовая пластина &f- 20'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 150
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bКобальтовая пластина'
+          amount: 20
+        anything_here_3:
+          type: has money
+          amount: 6000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[takemoney] 6000'
+      - '[console] svar set player_craft_item 109 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+  'netherite1':
+    material: NETHERITE_CHESTPLATE
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cДревний нагрудник'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c12000Ⓒ'
+      - '&f● &bУголь &f- 200'
+      - '&f● &bДревняя пластина &f- 50'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 200
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bДревняя пластина'
+          amount: 50
+        anything_here_3:
+          type: has money
+          amount: 12000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[takemoney] 12000'
+      - '[console] svar set player_craft_item 110 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+  'netherite2':
+    material: NETHERITE_LEGGINGS
+    slot: 22
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cДревние поножи'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c12000Ⓒ'
+      - '&f● &bУголь &f- 200'
+      - '&f● &bДревняя пластина &f- 35'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 200
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bДревняя пластина'
+          amount: 35
+        anything_here_3:
+          type: has money
+          amount: 12000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[takemoney] 12000'
+      - '[console] svar set player_craft_item 111 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+  'netherite3':
+    material: NETHERITE_BOOTS
+    slot: 31
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cДревние ботинки'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &c12000Ⓒ'
+      - '&f● &bУголь &f- 200'
+      - '&f● &bДревняя пластина &f- 20'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 200
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bДревняя пластина'
+          amount: 20
+        anything_here_3:
+          type: has money
+          amount: 12000
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[takemoney] 12000'
+      - '[console] svar set player_craft_item 112 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,37,38,39,40,41,42,43,44]
+    display_name: ' '
+    nbt_int: CustomModelData:1

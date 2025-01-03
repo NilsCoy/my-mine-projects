@@ -1,0 +1,349 @@
+axe1:
+  display-name: '&cДеревянный топор'
+  material: 'WOODEN_AXE'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+axe2:
+  display-name: '&cКаменный топор'
+  material: 'STONE_AXE'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+axe3:
+  display-name: '&cСтальной топор'
+  material: 'IRON_AXE'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+axe4:
+  display-name: '&cЗолотой топор'
+  material: 'GOLDEN_AXE'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+axe5:
+  display-name: '&cКобальтовый топор'
+  material: 'DIAMOND_AXE'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+axe6:
+  display-name: '&cДревний топор'
+  material: 'NETHERITE_AXE'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+
+sword1:
+  display-name: '&cДеревянный меч'
+  material: 'WOODEN_SWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+sword2:
+  display-name: '&cКаменный меч'
+  material: 'STONE_SWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+sword3:
+  display-name: '&cСтальной меч'
+  material: 'IRON_SWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+sword4:
+  display-name: '&cЗолотой меч'
+  material: 'GOLDEN_SWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+sword5:
+  display-name: '&cКобальтовый меч'
+  material: 'DIAMOND_SWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+sword6:
+  display-name: '&cДревний меч'
+  material: 'NETHERITE_SWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+
+greatsword1:
+  display-name: '&cКаменный большой меч'
+  material: 'EPICFIGHT_STONE_GREATSWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+greatsword2:
+  display-name: '&cСтальной большой меч'
+  material: 'EPICFIGHT_IRON_GREATSWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+greatsword3:
+  display-name: '&cЗолотой большой меч'
+  material: 'EPICFIGHT_GOLDEN_GREATSWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+greatsword4:
+  display-name: '&cКобальтовый большой меч'
+  material: 'EPICFIGHT_DIAMOND_GREATSWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+greatsword5:
+  display-name: '&cДревний большой меч'
+  material: 'EPICFIGHT_NETHERITE_GREATSWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+
+spear1:
+  display-name: '&cКаменное копье'
+  material: 'EPICFIGHT_STONE_SPEAR'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+spear2:
+  display-name: '&cСтальное копье'
+  material: 'EPICFIGHT_IRON_SPEAR'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+spear3:
+  display-name: '&cЗолотое копье'
+  material: 'EPICFIGHT_GOLDEN_SPEAR'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+spear4:
+  display-name: '&cКобальтовое копье'
+  material: 'EPICFIGHT_DIAMOND_SPEAR'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+spear5:
+  display-name: '&cДревнее копье'
+  material: 'EPICFIGHT_NETHERITE_SPEAR'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+
+tachi1:
+  display-name: '&cСтальной тати'
+  material: 'EPICFIGHT_IRON_TACHI'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+tachi2:
+  display-name: '&cЗолотой тати'
+  material: 'EPICFIGHT_GOLDEN_TACHI'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+tachi3:
+  display-name: '&cКобальтовый тати'
+  material: 'EPICFIGHT_DIAMOND_TACHI'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+tachi4:
+  display-name: '&cДревний тати'
+  material: 'EPICFIGHT_NETHERITE_TACHI'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+
+longsword1:
+  display-name: '&cСтальной длинный меч'
+  material: 'EPICFIGHT_IRON_LONGSWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+longsword2:
+  display-name: '&cЗолотой длинный меч'
+  material: 'EPICFIGHT_GOLDEN_LONGSWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+longsword3:
+  display-name: '&cКобальтовый длинный меч'
+  material: 'EPICFIGHT_DIAMOND_LONGSWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+longsword4:
+  display-name: '&cДревнее длинный меч'
+  material: 'EPICFIGHT_NETHERITE_LONGSWORD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+
+dagger1:
+  display-name: '&cСтальной кинжал'
+  material: 'EPICFIGHT_IRON_DAGGER'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  lore:
+    - '&7При ношении в руке дает'
+    - '&7эффект скорости 1 уровня.'
+dagger2:
+  display-name: '&cЗолотой кинжал'
+  material: 'EPICFIGHT_GOLDEN_DAGGER'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&7При ношении в руке дает'
+    - '&7эффект скорости 1 уровня.'
+dagger3:
+  display-name: '&cКобальтовый кинжал'
+  material: 'EPICFIGHT_DIAMOND_DAGGER'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&7При ношении в руке дает'
+    - '&7эффект скорости 1 уровня.'
+dagger4:
+  display-name: '&cДревнее кинжал'
+  material: 'EPICFIGHT_NETHERITE_DAGGER'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&7При ношении в руке дает'
+    - '&7эффект скорости 1 уровня.'
+
+glove:
+  display-name: '&cПерчатки'
+  material: 'EPICFIGHT_GLOVE'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+
+uchigatana:
+  display-name: '&cУтигатана'
+  material: 'EPICFIGHT_UCHIGATANA'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+
+trident:
+  display-name: '&cТризубец'
+  material: 'TRIDENT'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+
+bow:
+  display-name: '&cЛук'
+  material: 'BOW'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+
+crossbow:
+  display-name: '&cАрбалет'
+  material: 'CROSSBOW'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+
+shield:
+  display-name: '&cЩит'
+  material: 'SHIELD'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true
+  attributes:
+    OFF_HAND:
+      GENERIC_ARMOR_TOUGHNESS: 3
+      GENERIC_ARMOR: 2
+      GENERIC_KNOCKBACK_RESISTANCE: 0.5

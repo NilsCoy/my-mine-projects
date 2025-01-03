@@ -1,0 +1,157 @@
+
+# skeleton1:
+  # Type: skeleton
+  # Display: '&cСкелет'
+  # #Disguise: silverfish
+  # Health: 20
+  # Damage: 4
+  # Faction: monster
+  # Equipment:
+  # - STONE_BUTTON HEAD
+  # - AIR CHEST
+  # - AIR LEGS
+  # - AIR FEET
+  # - WOODEN_SWORD HAND
+  # - AIR OFFHAND
+  # #Drops:
+  # #- RatDrops1
+  # #Skills:
+  # #- sound{s=entity.skeleton.death;p=1} @self ~onDeath
+  # #- sound{s=entity.skeleton.hurt;p=1} @self ~onDamaged
+  # #- sound{s=entity.skeleton.ambient;p=1} @self ~onTimer:100
+  # #- skill{s=Despawn} @self ~onTimer:100
+  # #- skill{s=expDropTable} @Target ~onDeath
+  # Options:
+    # PreventOtherDrops: true
+    # FollowRange: 10
+    # Silent: false
+    # PreventSunburn: true
+  # AIGoalSelectors:
+  # - clear
+  # - meleeattack
+  # - randomstroll
+  # - float
+  # AITargetSelectors:
+  # - clear
+  # - players
+  # - SpecificFaction thief
+  # - SpecificFaction villager
+  # - SpecificFaction animal
+  # Modules:
+    # ThreatTable: true
+ork_warrior:
+  Type: ZOMBIE
+  Display: '&eОрк-мечник'
+  Health: 25
+  #Damage: 8
+  Faction: ork
+  Drops:
+  - ork_amulet 1 1
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - LEATHER_HELMET HEAD
+  - LEATHER_CHESTPLATE CHEST
+  - LEATHER_LEGGINGS LEGS
+  - LEATHER_BOOTS FEET
+  - STONE_SWORD HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction undead
+  - SpecificFaction animal
+  Modules:
+    ThreatTable: true
+ork_archer:
+  Type: SKELETON
+  Disguise: ZOMBIE
+  Display: '&eОрк-лучник'
+  Health: 25
+  #Damage: 8
+  Faction: ork
+  Drops:
+  - ork_amulet 1 1
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - LEATHER_HELMET HEAD
+  - LEATHER_CHESTPLATE CHEST
+  - LEATHER_LEGGINGS LEGS
+  - LEATHER_BOOTS FEET
+  - BOW HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - bowattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction undead
+  - SpecificFaction animal
+  Modules:
+    ThreatTable: true
+pillager_evoker:
+  Type: EVOKER
+  Display: '&4Разбойник-некромант'
+  Health: 100
+  #Damage: 8
+  Faction: pillager
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Equipment:
+  - DIAMOND_HELMET HEAD
+  - DIAMOND_CHESTPLATE CHEST
+  - DIAMOND_LEGGINGS LEGS
+  - DIAMOND_BOOTS FEET
+  - AIR HAND
+  - AIR OFFHAND
+  BossBar:
+    Enabled: true
+    Title: '&4Разбойник-некромант'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  AIGoalSelectors:
+  - clear
+  - fleeConditional{distance=3;speed=1.5;safespeed=1;conditions=[ - inlineofsight true ]}
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction ork
+  - SpecificFaction guard
+  - SpecificFaction undead
+  - SpecificFaction animal
+  Modules:
+    ThreatTable: true

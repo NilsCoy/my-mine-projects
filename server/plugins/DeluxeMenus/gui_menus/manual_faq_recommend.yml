@@ -1,0 +1,54 @@
+menu_title: '&6Справочник: Советы'
+open_commands:
+  - '[sound] ITEM_BOOK_PAGE_TURN 1 1'
+size: 27
+items:
+  'mechanics':
+    material: head-N1XER__
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fN1XER__'
+    lore:
+      - '&f1. &7Исследуйте мир, в нем может быть скрыто'
+      - '&7множество интересных мест.'
+      - '&f2. &7Чтобы отпугнуть теней, используйте'
+      - '&7источники света.'
+      - '&f3. &7Не пропускайте диалогов с NPC, иногда там'
+      - '&7встречаются подсказки по игре, а так же'
+      - '&7важные сюжетные повороты.'
+      - '&f4. &7Вы можете использовать костры у торговца,'
+      - '&7чтобы восстановить свое здоровье.'
+      - '&f5. &7Находите и собирайте кусты, с них вы можете'
+      - '&7получать полезные предметы а так же ягоды.'
+      - '&f6. &7Чтобы узнать какие команды вам доступны,'
+      - '&7используйте команду /help.'
+      - '&f7. &7По миру появляются сундуки с монетами'
+      - '&7и ресурсами.'
+
+
+
+  'home':
+    material: PAPER
+    slot: 18
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:13
+    display_name: '&fВернуться назад'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы вернуться.'
+    click_commands:
+      - '[openguimenu] manual_faq'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+    display_name: ' '
+    nbt_int: CustomModelData:1

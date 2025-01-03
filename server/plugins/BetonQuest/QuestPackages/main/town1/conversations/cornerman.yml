@@ -1,0 +1,77 @@
+conversations:
+  cornerman:
+    quester: '&aСекундант'
+    first: 'npc_node_1'
+    stop: 'false'
+    NPC_options:
+      npc_node_1:
+        text: '&7Подойдя к мужчине, к вам сразу же обращаются.&f\n\nУчастник?'
+        condition: ''
+        event: ''
+        pointers: player_node_1, player_node_2, player_node_3
+
+      npc_node_2:
+        text: 'Значит, нет, тогда не задерживай меня.'
+        condition: ''
+        event: ''
+        pointers: player_node_4
+
+      npc_node_3:
+        text: 'Это Ристалище, арена для боев 1 на 1. А я, секундант, слежу чтобы все сражались в порядке очереди и случайно не поубивали друг друга.'
+        condition: ''
+        event: ''
+        pointers: player_node_5
+
+      npc_node_4:
+        text: 'Вы подходите ко мне, записывайтесь, и как только соберется 2 участника, то начинается бой, если арена не занята.'
+        condition: ''
+        event: ''
+        pointers: player_node_2, player_node_3
+
+      npc_node_5:
+        text: 'Да, секунду.\n\n&7Секундант, что-то чиркает на бумаге.&f\n\nГотово, я добавил вас в список.'
+        condition: ''
+        event: ''
+
+      #npc_node_6:
+        #text: 'Да, секунду.\n\n&7Секундант, что-то чиркает на бумаге.&f\n\nГотово, я убрал вас из списка.'
+        #condition: ''
+        #event: ''
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Чего?'
+        condition: '!cornerman_start'
+        event: 'cornerman_start'
+        pointers: npc_node_2
+
+      player_node_2:
+        text: 'Я могу записаться?'
+        condition: '!cornerman_array,cornerman_start'
+        event: 'cornerman_array,cornerman_add_array'
+        pointers: npc_node_5
+
+      player_node_3:
+        text: 'Спасибо за внимание, до свидания. [ Уйти ]'
+        condition: 'cornerman_start'
+        event: ''
+
+      player_node_4:
+        text: 'Прошу прощения, но что это за место?'
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_5:
+        text: 'Как это работает?'
+        condition: ''
+        event: ''
+        pointers: npc_node_4
+
+      #player_node_6:
+        #text: 'Я хочу выйти из списка'
+        #condition: 'cornerman_array,cornerman_start'
+        #event: 'cornerman_array_remove,cornerman_remove_array'
+        #pointers: npc_node_6

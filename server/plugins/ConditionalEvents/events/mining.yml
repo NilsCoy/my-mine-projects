@@ -1,0 +1,177 @@
+Events:
+  mining:
+    type: entity_interact
+    conditions:
+    - '%servervariables_value_is_mining% == 0 and %entity_name% == Руда угля and %player_is_sneaking% == no and %checkitem_inhand:main,mat:STONE_PICKAXE% == yes and %player_is_inside_vehicle% == no execute coal'
+    - '%servervariables_value_is_mining% == 0 and %entity_name% == Руда угля and %player_is_sneaking% == no and %checkitem_inhand:main,mat:IRON_PICKAXE% == yes and %player_is_inside_vehicle% == no execute coal'
+    - '%servervariables_value_is_mining% == 0 and %entity_name% == Крупная руда угля and %player_is_sneaking% == no and %checkitem_inhand:main,mat:STONE_PICKAXE% == yes and %player_is_inside_vehicle% == no execute big_coal'
+    - '%servervariables_value_is_mining% == 0 and %entity_name% == Крупная руда угля and %player_is_sneaking% == no and %checkitem_inhand:main,mat:IRON_PICKAXE% == yes and %player_is_inside_vehicle% == no execute big_coal'
+    - '%servervariables_value_is_mining% == 0 and %entity_name% == Руда железа and %player_is_sneaking% == no and %checkitem_inhand:main,mat:IRON_PICKAXE% == yes and %player_is_inside_vehicle% == no execute iron'
+    - '%servervariables_value_is_mining% == 0 and %entity_name% == Крупная руда железа and %player_is_sneaking% == no and %checkitem_inhand:main,mat:IRON_PICKAXE% == yes and %player_is_inside_vehicle% == no execute big_iron'
+    actions:
+      coal:
+      - 'console_command: svar set is_mining 1 %player%'
+      - 'give_potion_effect: JUMP;200;200;false'
+      - 'give_potion_effect: SLOW;200;200;false'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 5;40;10;none;&7[&f ○ ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ● &7]'
+      - 'call_event: mining_reward_coal'
+      - 'console_command: mm m s kill_mob 1 %entity_world%,%math_{entity_x}+0.5%,%entity_y%,%math_{entity_z}+0.5%'
+      - 'remove_potion_effect: JUMP'
+      - 'remove_potion_effect: SLOW'
+      - 'wait_ticks: 5'
+      - 'console_command: svar set is_mining 0 %player%'
+      iron:
+      - 'console_command: svar set is_mining 1 %player%'
+      - 'give_potion_effect: JUMP;200;200;false'
+      - 'give_potion_effect: SLOW;200;200;false'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 5;40;10;none;&7[&f ○ ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ● &7]'
+      - 'call_event: mining_reward_iron'
+      - 'console_command: mm m s kill_mob 1 %entity_world%,%math_{entity_x}+0.5%,%entity_y%,%math_{entity_z}+0.5%'
+      - 'remove_potion_effect: JUMP'
+      - 'remove_potion_effect: SLOW'
+      - 'wait_ticks: 5'
+      - 'console_command: svar set is_mining 0 %player%'
+      big_coal:
+      - 'console_command: svar set is_mining 1 %player%'
+      - 'give_potion_effect: JUMP;200;200;false'
+      - 'give_potion_effect: SLOW;200;200;false'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 5;40;10;none;&7[&f ○ ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ● &7]'
+      - 'call_event: mining_reward_big_coal'
+      - 'console_command: mm m s kill_mob 1 %entity_world%,%math_{entity_x}+0.5%,%entity_y%,%math_{entity_z}+0.5%'
+      - 'remove_potion_effect: JUMP'
+      - 'remove_potion_effect: SLOW'
+      - 'wait_ticks: 5'
+      - 'console_command: svar set is_mining 0 %player%'
+      big_iron:
+      - 'console_command: svar set is_mining 1 %player%'
+      - 'give_potion_effect: JUMP;200;200;false'
+      - 'give_potion_effect: SLOW;200;200;false'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 5;40;10;none;&7[&f ○ ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ○ ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ○ &7]'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_STONE_BREAK;1;1'
+      - 'title: 0;40;10;none;&7[&f ● ● ● &7]'
+      - 'call_event: mining_reward_big_iron'
+      - 'console_command: mm m s kill_mob 1 %entity_world%,%math_{entity_x}+0.5%,%entity_y%,%math_{entity_z}+0.5%'
+      - 'remove_potion_effect: JUMP'
+      - 'remove_potion_effect: SLOW'
+      - 'wait_ticks: 5'
+      - 'console_command: svar set is_mining 0 %player%'
+
+  mining_reward_coal:
+    type: call
+    conditions:
+    - '%player_has_permission_sponsor% == yes execute action1'
+    - '%player_has_permission_sponsor% == no execute action2'
+    actions:
+      action1:
+      - 'console_command: ii give %player% coal %random_1_3%'
+      - 'wait_ticks: 10'
+      - 'console_command: ii give %player% coal %random_1_3%'
+      - 'console_command: svar add player_exp 2 %player%'
+      - 'console_command: svar add statistics_mining 1 %player%'
+      - 'call_event: notify_mining_coal'
+      - 'call_event: notify_exp;%exp%=2'
+      action2:
+      - 'console_command: ii give %player% coal %random_1_3%'
+      - 'console_command: svar add player_exp 1 %player%'
+      - 'console_command: svar add statistics_mining 1 %player%'
+      - 'call_event: notify_mining_coal'
+      - 'call_event: notify_exp;%exp%=1'
+  mining_reward_iron:
+    type: call
+    conditions:
+    - '%player_has_permission_sponsor% == yes execute action1'
+    - '%player_has_permission_sponsor% == no execute action2'
+    actions:
+      action1:
+      - 'console_command: ii give %player% iron_raw %random_1_3%'
+      - 'wait_ticks: 10'
+      - 'console_command: ii give %player% iron_raw %random_1_3%'
+      - 'console_command: svar add player_exp 2 %player%'
+      - 'console_command: svar add statistics_mining 1 %player%'
+      - 'call_event: notify_mining_iron'
+      - 'call_event: notify_exp;%exp%=2'
+      action2:
+      - 'console_command: ii give %player% iron_raw %random_1_3%'
+      - 'console_command: svar add player_exp 1 %player%'
+      - 'console_command: svar add statistics_mining 1 %player%'
+      - 'call_event: notify_mining_iron'
+      - 'call_event: notify_exp;%exp%=1'
+
+  mining_reward_big_coal:
+    type: call
+    conditions:
+    - '%player_has_permission_sponsor% == yes execute action1'
+    - '%player_has_permission_sponsor% == no execute action2'
+    actions:
+      action1:
+      - 'console_command: ii give %player% coal %random_5_10%'
+      - 'wait_ticks: 10'
+      - 'console_command: ii give %player% coal %random_5_10%'
+      - 'console_command: svar add player_exp 4 %player%'
+      - 'console_command: svar add statistics_mining 1 %player%'
+      - 'call_event: notify_mining_coal'
+      - 'call_event: notify_exp;%exp%=4'
+      action2:
+      - 'console_command: ii give %player% coal %random_5_10%'
+      - 'console_command: svar add player_exp 2 %player%'
+      - 'console_command: svar add statistics_mining 1 %player%'
+      - 'call_event: notify_mining_coal'
+      - 'call_event: notify_exp;%exp%=2'
+  mining_reward_big_iron:
+    type: call
+    conditions:
+    - '%player_has_permission_sponsor% == yes execute action1'
+    - '%player_has_permission_sponsor% == no execute action2'
+    actions:
+      action1:
+      - 'console_command: ii give %player% iron_raw %random_5_10%'
+      - 'wait_ticks: 10'
+      - 'console_command: ii give %player% iron_raw %random_5_10%'
+      - 'console_command: svar add player_exp 4 %player%'
+      - 'console_command: svar add statistics_mining 1 %player%'
+      - 'call_event: notify_mining_iron'
+      - 'call_event: notify_exp;%exp%=4'
+      action2:
+      - 'console_command: ii give %player% iron_raw %random_5_10%'
+      - 'console_command: svar add player_exp 2 %player%'
+      - 'console_command: svar add statistics_mining 1 %player%'
+      - 'call_event: notify_mining_iron'
+      - 'call_event: notify_exp;%exp%=2'

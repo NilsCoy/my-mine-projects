@@ -1,0 +1,36 @@
+Menu:
+  title: '&e&lInventory - %inventoryId% &6&l| &e&l%playerName%'
+  size: 54
+
+Items:
+  item-45:
+    title: '&6❰&e❰ &6Back &e❰&6❰'
+    material: SUNFLOWER
+    count: 1
+    position: 45
+  item-46:
+    title: '&6❰&e❰ &6Previous inventory &e❰&6❰'
+    material: SUNFLOWER
+    count: 1
+    position: 46
+  item-48:
+    title: '&6❰&e❰ &6Set up my inventory &e❱&6❱'
+    material: HOPPER
+    count: 1
+    position: 48
+  item-49:
+    title: '&c❰&4❰ &cClose &4❱&c❱'
+    material: BARRIER
+    count: 1
+    close: true
+    position: 49
+  item-50:
+    title: '&6❰&e❰ &6Set up %playerName% enderchest &e❱&6❱'
+    material: HOPPER
+    count: 1
+    position: 50
+  item-52:
+    title: '&6❱&e❱ &6Next inventory &e❱&6❱'
+    material: SUNFLOWER
+    count: 1
+    position: 52

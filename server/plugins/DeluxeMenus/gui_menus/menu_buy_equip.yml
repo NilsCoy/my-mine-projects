@@ -1,0 +1,711 @@
+menu_title: '&6Покупка'
+open_commands:
+  - '[sound] ENTITY_VILLAGER_TRADE 1 0.8'
+size: 45
+items:
+
+
+
+  'stone_sword':
+    material: STONE_SWORD
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКаменный меч'
+    lore:
+      - '&fЦена покупки: &c500Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+      - ''
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 500'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -500 %player_name%'
+      - '[console] ii give %player_name% sword2 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'stone_greatsword':
+    material: EPICFIGHT_STONE_GREATSWORD
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКаменный большой меч'
+    lore:
+      - '&fЦена покупки: &c500Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+      - ''
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 500'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -500 %player_name%'
+      - '[console] ii give %player_name% greatsword1 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'stone_axe':
+    material: STONE_AXE
+    slot: 10
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКаменный топор'
+    lore:
+      - '&fЦена покупки: &c400Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+      - ''
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 400'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -400 %player_name%'
+      - '[console] ii give %player_name% axe2 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'stone_spear':
+    material: EPICFIGHT_STONE_SPEAR
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКаменное копье'
+    lore:
+      - '&fЦена покупки: &c600Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+      - ''
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 600'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -600 %player_name%'
+      - '[console] ii give %player_name% spear1 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'glove':
+    material: EPICFIGHT_GLOVE
+    slot: 19
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cПерчатки'
+    lore:
+      - '&fЦена покупки: &c400Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+      - ''
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 400'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -400 %player_name%'
+      - '[console] ii give %player_name% glove 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'shield':
+    material: SHIELD
+    slot: 20
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cЩит'
+    lore:
+      - '&fЦена покупки: &c500Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 500'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -500 %player_name%'
+      - '[console] ii give %player_name% shield 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'bow':
+    material: BOW
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cЛук'
+    lore:
+      - '&fЦена покупки: &c3000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 3000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -3000 %player_name%'
+      - '[console] ii give %player_name% bow 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'crossbow':
+    material: CROSSBOW
+    slot: 12
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cАрбалет'
+    lore:
+      - '&fЦена покупки: &c1000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 1000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -1000 %player_name%'
+      - '[console] ii give %player_name% crossbow 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'arrow':
+    material: ARROW
+    amount: 16
+    slot: 21
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&bСтрелы'
+    lore:
+      - '&7Требуется для стрельбы из'
+      - '&7лука или арбалета.'
+      - ''
+      - '&fЦена покупки: &c100Ⓒ&7 за 16'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить 16 шт.'
+      - '&7[ЛКМ + Shift] чтобы купить 64 шт.'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 100'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 400'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -100 %player_name%'
+      - '[console] ii give %player_name% arrow 16'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar add player_money -400 %player_name%'
+      - '[console] ii give %player_name% arrow 64'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'leather1':
+    material: LEATHER_CHESTPLATE
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКожаная куртка'
+    lore:
+      - '&fЦена покупки: &c900Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+      - ''
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 900'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -900 %player_name%'
+      - '[console] ii give %player_name% leather1 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'leather2':
+    material: LEATHER_LEGGINGS
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКожаные штаны'
+    lore:
+      - '&fЦена покупки: &c700Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+      - ''
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 700'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -700 %player_name%'
+      - '[console] ii give %player_name% leather2 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'leather3':
+    material: LEATHER_BOOTS
+    slot: 22
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКожаные ботинки'
+    lore:
+      - '&fЦена покупки: &c500Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+      - ''
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 500'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -500 %player_name%'
+      - '[console] ii give %player_name% leather3 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'pickaxe1':
+    material: STONE_PICKAXE
+    slot: 6
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКаменная кирка'
+    lore:
+      - '&7Используется для добычи руды.'
+      - '&7Может копать только уголь.'
+      - ''
+      - '&fЦена покупки: &c500Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+      - ''
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 500'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -500 %player_name%'
+      - '[console] ii give %player_name% pickaxe1 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'pickaxe2':
+    material: IRON_PICKAXE
+    slot: 7
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cЖелезная кирка'
+    lore:
+      - '&7Используется для добычи руды.'
+      - '&7Может копать уголь и железо.'
+      - ''
+      - '&fЦена покупки: &c2000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+      - ''
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 2000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -2000 %player_name%'
+      - '[console] ii give %player_name% pickaxe2 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'fishing_rod':
+    material: FISHING_ROD
+    slot: 15
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cУдочка'
+    lore:
+      - '&7Используется для ловли рыбы'
+      - '&7в любом источнике воды.'
+      - ''
+      - '&fЦена покупки: &c1500Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 1500'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -1500 %player_name%'
+      - '[console] ii give %player_name% fishing_rod 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'lantern':
+    material: LANTERN
+    slot: 16
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cЛампа'
+    lore:
+      - '&7Освещает ваш путь и'
+      - '&7защищает от теней.'
+      - ''
+      - '&fЦена покупки: &c300Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 300'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -300 %player_name%'
+      - '[console] ii give %player_name% lantern 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'campfire':
+    material: CAMPFIRE
+    slot: 25
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКостер'
+    lore:
+      - '&7Заженный костер дает эффект'
+      - '&7регенерации в радиусе 5 метров.'
+      - ''
+      - '&fЦена покупки: &c300Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 300'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -300 %player_name%'
+      - '[console] mm items give %player_name% campfire 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'stick':
+    material: STICK
+    slot: 24
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&bДрова'
+    lore:
+      - '&7Требуется для розжига костра.'
+      - ''
+      - '&fЦена покупки: &c50Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 50'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -50 %player_name%'
+      - '[console] ii give %player_name% stick 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'horn1':
+    material: GOAT_HORN
+    slot: 5
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКозий рог'
+    nbt_strings:
+      - 'instrument:minecraft:ponder_goat_horn'
+    lore:
+      - ''
+      - '&fЦена покупки: &c5000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 5000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -5000 %player_name%'
+      - '[console] mm i give %player_name% horn1 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'horn2':
+    material: GOAT_HORN
+    slot: 14
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКозий рог'
+    nbt_strings:
+      - 'instrument:minecraft:seek_goat_horn'
+    lore:
+      - ''
+      - '&fЦена покупки: &c5000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 5000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -5000 %player_name%'
+      - '[console] mm i give %player_name% horn2 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'horn3':
+    material: GOAT_HORN
+    slot: 23
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cКозий рог'
+    nbt_strings:
+      - 'instrument:minecraft:dream_goat_horn'
+    lore:
+      - ''
+      - '&fЦена покупки: &c5000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 5000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -5000 %player_name%'
+      - '[console] mm i give %player_name% horn3 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'bottle':
+    material: GLASS_BOTTLE
+    slot: 34
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&bБутылочка'
+    lore:
+      - '&7Используется для создания'
+      - '&7зелий.'
+      - ''
+      - '&fЦена покупки: &c50Ⓒ&7 за 1'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить 1 шт.'
+      - '&7[ЛКМ + Shift] чтобы купить 64 шт.'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 50'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 200'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -50 %player_name%'
+      - '[console] ii give %player_name% bottle 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar add player_money -3200 %player_name%'
+      - '[console] ii give %player_name% bottle 64'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'writable_book':
+    material: WRITABLE_BOOK
+    slot: 33
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&bРукопись'
+    lore:
+      - '&7Используется для написания'
+      - '&7книг игроками.'
+      - ''
+      - '&fЦена покупки: &c150Ⓒ&7 за 1'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить 1 шт.'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 150'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -150 %player_name%'
+      - '[console] ii give %player_name% writable_book 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,8,9,17,18,26,27,35,36,44]
+    display_name: ' '
+    nbt_int: CustomModelData:1

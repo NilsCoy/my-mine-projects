@@ -1,0 +1,25 @@
+variables:
+  campfire_place:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  campfire_place_x:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  campfire_place_y:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  campfire_place_z:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  campfire_time:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: -1
+  campfire_time_life:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: -1

@@ -1,0 +1,8 @@
+uuid: f535664a-5baf-369d-8c8c-0ee540cd9452
+name: nameus
+primary-group: default
+permissions:
+- promo_horizon
+- titul_17
+parents:
+- default

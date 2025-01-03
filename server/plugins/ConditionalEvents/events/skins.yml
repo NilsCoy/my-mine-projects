@@ -1,0 +1,51 @@
+Events:
+  weapon_skin:
+    type: player_attack
+    conditions:
+    - '%item_color_format_lore_line_1% ==  &8Невозможно использовать execute block'
+    - '%checkitem_mat:SHIELD,nameequals:&cЩит,inhand:off% == yes and %checkitem_mat:EPICFIGHT_UCHIGATANA,nameequals:&cУтигатана,inhand:main% == yes execute shield'
+    - '%checkitem_mat:SHIELD,nameequals:&cЩит,inhand:off% == yes and %checkitem_mat:EPICFIGHT_IRON_TACHI,nameequals:&cСтальной тати,inhand:main% == yes execute shield'
+    - '%checkitem_mat:SHIELD,nameequals:&cЩит,inhand:off% == yes and %checkitem_mat:EPICFIGHT_GOLDEN_TACHI,nameequals:&cЗолотой тати,inhand:main% == yes execute shield'
+    - '%checkitem_mat:SHIELD,nameequals:&cЩит,inhand:off% == yes and %checkitem_mat:EPICFIGHT_DIAMOND_TACHI,nameequals:&cКобальтовый тати,inhand:main% == yes execute shield'
+    - '%checkitem_mat:SHIELD,nameequals:&cЩит,inhand:off% == yes and %checkitem_mat:EPICFIGHT_NETHERITE_TACHI,nameequals:&cДревний тати,inhand:main% == yes execute shield'
+    - '%checkitem_mat:SHIELD,nameequals:&cЩит,inhand:off% == yes and %checkitem_mat:EPICFIGHT_STONE_GREATSWORD,nameequals:&cКаменный большой меч,inhand:main% == yes execute shield'
+    - '%checkitem_mat:SHIELD,nameequals:&cЩит,inhand:off% == yes and %checkitem_mat:EPICFIGHT_IRON_GREATSWORD,nameequals:&cСтальной большой меч,inhand:main% == yes execute shield'
+    - '%checkitem_mat:SHIELD,nameequals:&cЩит,inhand:off% == yes and %checkitem_mat:EPICFIGHT_GOLDEN_GREATSWORD,nameequals:&cЗолотой большой меч,inhand:main% == yes execute shield'
+    - '%checkitem_mat:SHIELD,nameequals:&cЩит,inhand:off% == yes and %checkitem_mat:EPICFIGHT_DIAMOND_GREATSWORD,nameequals:&cКобальтовый большой меч,inhand:main% == yes execute shield'
+    - '%checkitem_mat:SHIELD,nameequals:&cЩит,inhand:off% == yes and %checkitem_mat:EPICFIGHT_NETHERITE_GREATSWORD,nameequals:&cДревний большой меч,inhand:main% == yes execute shield'
+    - '%checkitem_mat:SHIELD,nameequals:&cЩит,inhand:off% == yes and %checkitem_mat:EPICFIGHT_NETHERITE_GREATSWORD,nameequals:&cДревний большой меч,inhand:main% == yes execute shield'
+    actions:
+      block:
+      - 'message: &cЭтот предмет невозможно использовать!'
+      - 'cancel_event: true'
+      shield:
+      - 'message: &cЭтот предмет невозможно использовать с щитом в руках!'
+      - 'cancel_event: true'
+  # skin_get:
+    # type: custom
+    # custom_event_data:
+      # event: svar.ajneb97.api.VariableChangeEvent
+      # player_variable: getPlayer()
+      # variables_to_capture:
+      # - '%variable_type%;getVariable().getVariableType()'
+      # - '%variable_name%;getVariable().getName()'
+      # - '%new_value%;getNewValue()'
+    # conditions:
+    # #- "%variable_name% == skins_selected_skin and %new_value% == 1 and %checkitem_mat:BRICK,nameequals:&bМалый ящик с едой,inhand:main% == yes execute skin_1"
+    # - "%variable_name% == skins_selected_skin and %new_value% == 1 execute skin_1"
+    # actions:
+      # #default:
+      # #- 'console_command: svar set player_selled_item 0 %player_name%'
+
+      # skin_1:
+      # - 'remove_item: BRICK;1;name: Уголь'
+      # - 'console_command: svar add player_money 6 %player_name%'
+      # - 'call_event: skin_get_type;%exp%=1'
+
+  # skin_get_type:
+    # type: call
+    # conditions:
+    # - '%servervariables_value_notify_enable% == 1 execute actions1'
+    # actions:
+      # actions1:
+      # - 'message: &eВы получили %exp% опыта!'

@@ -1,0 +1,227 @@
+Events:
+  campfire_place:
+    type: block_place
+    conditions:
+    - '%player_gamemode% == ADVENTURE and %block_world% == world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 0 execute action1'
+    - '%block_world% != world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 execute deny'
+    - '%block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 execute deny'
+    actions:
+      action1:
+      - 'console_command: svar set campfire_time_life 60 %player%'
+      - 'console_command: svar set campfire_place 1 %player%'
+      - 'console_command: svar set campfire_place_x %block_x% %player%'
+      - 'console_command: svar set campfire_place_y %block_y% %player%'
+      - 'console_command: svar set campfire_place_z %block_z% %player%'
+      - 'set_block: location:%block_x%,%block_y%,%block_z%,%block_world%;id:%block%;block_data:lit=false'
+      - 'call_event: notify_campfire'
+      deny:
+      - 'cancel_event: true'
+
+  campfire_fire:
+    type: block_interact
+    conditions:
+    - '%block_world% == world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 and %block_x% == %servervariables_value_campfire_place_x% and %block_y% == %servervariables_value_campfire_place_y% and %block_z% == %servervariables_value_campfire_place_z% and %action_type% == RIGHT_CLICK and %item% == STICK and %servervariables_value_campfire_time% == -1 execute action1'
+    - '%block_world% == world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 and %block_x% == %servervariables_value_campfire_place_x% and %block_y% == %servervariables_value_campfire_place_y% and %block_z% == %servervariables_value_campfire_place_z% and %action_type% == RIGHT_CLICK and %item% == STICK and %servervariables_value_campfire_time% != -1 execute action2'
+    #- '%block_world% == world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 and %block_x% == %servervariables_value_campfire_place_x% and %block_y% == %servervariables_value_campfire_place_y% and %block_z% == %servervariables_value_campfire_place_z% and %checkitem_inhand:main,mat:MUTTON% == yes and %servervariables_value_campfire_time% != -1 execute mutton'
+    
+    - '%servervariables_value_cooking_active% == 0 and %block_world% == world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 and %block_x% == %servervariables_value_campfire_place_x% and %block_y% == %servervariables_value_campfire_place_y% and %block_z% == %servervariables_value_campfire_place_z% and %checkitem_inhand:main,mat:MUTTON% == yes and %servervariables_value_campfire_time% != -1 and %player_is_inside_vehicle% == no execute cooking1'
+    - '%servervariables_value_cooking_active% == 1 and %servervariables_value_cooking_point% == 2 and %block_world% == world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 and %block_x% == %servervariables_value_campfire_place_x% and %block_y% == %servervariables_value_campfire_place_y% and %block_z% == %servervariables_value_campfire_place_z% and %checkitem_inhand:main,mat:MUTTON% == yes and %servervariables_value_campfire_time% != -1 execute cooking5'
+    - '%servervariables_value_cooking_active% == 1 and %servervariables_value_cooking_point% == 3 and %block_world% == world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 and %block_x% == %servervariables_value_campfire_place_x% and %block_y% == %servervariables_value_campfire_place_y% and %block_z% == %servervariables_value_campfire_place_z% and %checkitem_inhand:main,mat:MUTTON% == yes and %servervariables_value_campfire_time% != -1 execute cooking5'
+    - '%servervariables_value_cooking_active% == 1 and %servervariables_value_cooking_point% == 4 and %block_world% == world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 and %block_x% == %servervariables_value_campfire_place_x% and %block_y% == %servervariables_value_campfire_place_y% and %block_z% == %servervariables_value_campfire_place_z% and %checkitem_inhand:main,mat:MUTTON% == yes and %servervariables_value_campfire_time% != -1 execute cooking5'
+    - '%servervariables_value_cooking_active% == 1 and %servervariables_value_cooking_point% == 7 and %block_world% == world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 and %block_x% == %servervariables_value_campfire_place_x% and %block_y% == %servervariables_value_campfire_place_y% and %block_z% == %servervariables_value_campfire_place_z% and %checkitem_inhand:main,mat:MUTTON% == yes and %servervariables_value_campfire_time% != -1 execute cooking5'
+    - '%servervariables_value_cooking_active% == 1 and %servervariables_value_cooking_point% == 8 and %block_world% == world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 and %block_x% == %servervariables_value_campfire_place_x% and %block_y% == %servervariables_value_campfire_place_y% and %block_z% == %servervariables_value_campfire_place_z% and %checkitem_inhand:main,mat:MUTTON% == yes and %servervariables_value_campfire_time% != -1 execute cooking5'
+    - '%servervariables_value_cooking_active% == 1 and %servervariables_value_cooking_point% == 9 and %block_world% == world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 and %block_x% == %servervariables_value_campfire_place_x% and %block_y% == %servervariables_value_campfire_place_y% and %block_z% == %servervariables_value_campfire_place_z% and %checkitem_inhand:main,mat:MUTTON% == yes and %servervariables_value_campfire_time% != -1 execute cooking5'
+    - '%servervariables_value_cooking_active% == 1 and %servervariables_value_cooking_point% == 5 and %block_world% == world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 and %block_x% == %servervariables_value_campfire_place_x% and %block_y% == %servervariables_value_campfire_place_y% and %block_z% == %servervariables_value_campfire_place_z% and %checkitem_inhand:main,mat:MUTTON% == yes and %servervariables_value_campfire_time% != -1 execute cooking3'
+    - '%servervariables_value_cooking_active% == 1 and %servervariables_value_cooking_point% == 6 and %block_world% == world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 and %block_x% == %servervariables_value_campfire_place_x% and %block_y% == %servervariables_value_campfire_place_y% and %block_z% == %servervariables_value_campfire_place_z% and %checkitem_inhand:main,mat:MUTTON% == yes and %servervariables_value_campfire_time% != -1 execute cooking3'
+    - '%servervariables_value_cooking_active% == 1 and %block_world% == world and %block% == CAMPFIRE and %servervariables_value_campfire_place% == 1 and %block_x% == %servervariables_value_campfire_place_x% and %block_y% == %servervariables_value_campfire_place_y% and %block_z% == %servervariables_value_campfire_place_z% and %checkitem_inhand:main,mat:MUTTON% == yes and %servervariables_value_campfire_time% != -1 execute cooking2'
+    - '%servervariables_value_cooking_active% == 1 execute cooking4'
+    actions:
+      action1:
+      - 'console_command: svar set campfire_time_life -1 %player%'
+      - 'console_command: svar set campfire_time 30 %player%'
+      - 'set_block: location:%block_x%,%block_y%,%block_z%,%block_world%;id:%block%;block_data:lit=true'
+      - 'remove_item: STICK;1;name: Дрова'
+      - 'playsound: ITEM_FIRECHARGE_USE;1;1'
+      - 'call_event: notify_campfire_fire'
+      action2:
+      - 'console_command: svar add campfire_time 30 %player%'
+      - 'remove_item: STICK;1;name: Дрова'
+      - 'playsound: ITEM_FIRECHARGE_USE;1;1'
+      - 'call_event: notify_campfire_fire'
+      # mutton:
+      # - 'console_command: svar set is_mining 1 %player%'
+      # - 'give_potion_effect: JUMP;200;200;false'
+      # - 'give_potion_effect: SLOW;200;200;false'
+      # - 'playsound: BLOCK_STONE_BREAK;1;1'
+      # - 'title: 5;40;10;none;&7[&c 🔥 🔥 🔥 &7]'
+      # - 'wait_ticks: 10'
+      # - 'playsound: BLOCK_STONE_BREAK;1;1'
+      # - 'title: 0;40;10;none;&7[&6 🍖 &c🔥 🔥 &7]'
+      # - 'wait_ticks: 10'
+      # - 'playsound: BLOCK_STONE_BREAK;1;1'
+      # - 'title: 0;40;10;none;&7[&6 🍖 🍖 &c🔥 &7]'
+      # - 'wait_ticks: 10'
+      # - 'playsound: BLOCK_STONE_BREAK;1;1'
+      # - 'title: 0;40;10;none;&7[&6 🍖 🍖 🍖 &7]'
+      # - 'call_event: cooking_reward_mutton'
+      # - 'remove_potion_effect: JUMP'
+      # - 'remove_potion_effect: SLOW'
+      # - 'wait_ticks: 5'
+      # - 'console_command: svar set is_mining 0 %player%'
+      cooking1:
+      - 'cancel_event: true'
+      - 'console_command: svar set cooking_active 1 %player%'
+      - 'console_command: svar set cooking_point 1 %player%'
+      cooking2:
+      - 'console_command: svar set cooking_point 0 %player%'
+      - 'console_command: svar set cooking_active 0 %player%'
+      - 'console_command: svar set cooking_point_direction 1 %player%'
+      - 'playsound: ENTITY_VILLAGER_HURT;1;1'
+      - 'remove_potion_effect: JUMP'
+      - 'remove_potion_effect: SLOW'
+      - 'call_event: notify_cooking_close'
+      cooking3:
+      - 'console_command: svar set cooking_point 0 %player%'
+      - 'console_command: svar set cooking_active 0 %player%'
+      - 'console_command: svar set cooking_point_direction 1 %player%'
+      - 'playsound: ENTITY_PLAYER_LEVELUP;1;2'
+      - 'remove_potion_effect: JUMP'
+      - 'remove_potion_effect: SLOW'
+      - 'remove_item: MUTTON;1;name: Сырое мясо'
+      - 'call_event: cooking_reward_mutton'
+      cooking4:
+      - 'cancel_event: true'
+      cooking5:
+      - 'console_command: svar set cooking_point 0 %player%'
+      - 'console_command: svar set cooking_active 0 %player%'
+      - 'console_command: svar set cooking_point_direction 1 %player%'
+      - 'playsound: ITEM_FIRECHARGE_USE;1;1'
+      - 'remove_potion_effect: JUMP'
+      - 'remove_potion_effect: SLOW'
+      - 'remove_item: MUTTON;1;name: Сырое мясо'
+      - 'call_event: notify_cooking_falied'
+
+  cooking_reward_mutton:
+    type: call
+    conditions:
+    - '%player_has_permission_sponsor% == yes execute action1'
+    - '%player_has_permission_sponsor% == no execute action2'
+    actions:
+      action1:
+      - 'console_command: ii give %player% cooked_mutton 1'
+      - 'console_command: svar add player_exp 2 %player%'
+      - 'console_command: svar add statistics_cooking 1 %player%'
+      - 'call_event: notify_cooking_mutton'
+      - 'call_event: notify_exp;%exp%=2'
+      action2:
+      - 'console_command: ii give %player% cooked_mutton 1'
+      - 'console_command: svar add player_exp 1 %player%'
+      - 'console_command: svar add statistics_cooking 1 %player%'
+      - 'call_event: notify_cooking_mutton'
+      - 'call_event: notify_exp;%exp%=1'
+
+  campfire_fire_time:
+    type: repetitive
+    repetitive_time: 20
+    conditions:
+    - '%servervariables_value_campfire_time% > 0 execute action1'
+    - '%servervariables_value_campfire_time% == 0 execute action2'
+    actions:
+      action1:
+      - 'console_command: svar add campfire_time -1 %player%'
+      - 'player_command_as_op: execute positioned %servervariables_value_campfire_place_x% %servervariables_value_campfire_place_y% %servervariables_value_campfire_place_z% run effect give @a[distance=..5] minecraft:regeneration 5 0 true'
+      action2:
+      - 'console_command: svar set campfire_time -1 %player%'
+      - 'console_command: svar set campfire_time_life 60 %player%'
+      - 'set_block: location:%servervariables_value_campfire_place_x%,%servervariables_value_campfire_place_y%,%servervariables_value_campfire_place_z%,world;id:CAMPFIRE;block_data:lit=false'
+      - 'call_event: notify_campfire'
+
+  campfire_fire_time_life:
+    type: repetitive
+    repetitive_time: 20
+    conditions:
+    - '%servervariables_value_campfire_time_life% > 0 execute action1'
+    - '%servervariables_value_campfire_time_life% == 0 execute action2'
+    actions:
+      action1:
+      - 'console_command: svar add campfire_time_life -1 %player%'
+      action2:
+      - 'console_command: svar set campfire_time_life -1 %player%'
+      - 'console_command: svar reset campfire_place %player%'
+      - 'set_block: location:%servervariables_value_campfire_place_x%,%servervariables_value_campfire_place_y%,%servervariables_value_campfire_place_z%,world;id:AIR'
+      - 'console_command: svar reset campfire_place_x %player%'
+      - 'console_command: svar reset campfire_place_y %player%'
+      - 'console_command: svar reset campfire_place_z %player%'
+
+
+  campfire_fire_delete:
+    type: player_leave
+    conditions:
+    - '%servervariables_value_campfire_place% == 1'
+    actions:
+      default:
+      - 'set_block: location:%servervariables_value_campfire_place_x%,%servervariables_value_campfire_place_y%,%servervariables_value_campfire_place_z%,world;id:AIR'
+
+  campfire_fire_return:
+    type: player_join
+    conditions:
+    - '%servervariables_value_campfire_place% == 1'
+    actions:
+      default:
+      - 'console_command: svar set campfire_place 0 %player%'
+      - 'console_command: svar set campfire_time_life -1 %player%'
+      - 'console_command: svar set campfire_place_x 0 %player%'
+      - 'console_command: svar set campfire_place_y 0 %player%'
+      - 'console_command: svar set campfire_place_z 0 %player%'
+      - 'console_command: svar set campfire_time -1 %player%'
+
+  # campfire_fire_regen:
+    # type: repetitive_server
+    # repetitive_time: 20
+    # allow_math_formulas_in_conditions: true
+    # conditions:
+    # - '%servervariables_value_campfire_time% > 0 and %player_x% > %servervariables_value_campfire_place_x%-5 and %player_x% < %servervariables_value_campfire_place_x%+5 and %player_y% > %servervariables_value_campfire_place_y%-5 and %player_y% < %servervariables_value_campfire_place_y%+5 and %player_z% > %servervariables_value_campfire_place_z%-5 and %player_z% < %servervariables_value_campfire_place_z%+5 execute action1'
+    # actions:
+      # action1:
+      # - 'give_potion_effect: REGENERATION;200;1;false'
+
+
+  cooking_time:
+    type: repetitive
+    repetitive_time: 2
+    conditions:
+    - '%servervariables_value_cooking_active% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'call_event: cooking_play'
+
+  cooking_play:
+    type: call
+    conditions:
+    - '%servervariables_value_cooking_point% == 10 execute actions3'
+    - '%servervariables_value_cooking_point% == 1 execute actions4'
+    - '%servervariables_value_cooking_point_direction% == 0 execute actions1'
+    - '%servervariables_value_cooking_point_direction% == 1 execute actions2'
+    actions:
+      actions1:
+      - 'console_command: svar add cooking_point -1 %player%'
+      - 'title: 0;40;10;&6🍖 &r%javascript_cooking_bar%&c 🔥;none'
+      - 'give_potion_effect: JUMP;100;200;false'
+      - 'give_potion_effect: SLOW;100;200;false'
+      actions2:
+      - 'console_command: svar add cooking_point 1 %player%'
+      - 'title: 0;40;10;&6🍖 &r%javascript_cooking_bar%&c 🔥;none'
+      - 'give_potion_effect: JUMP;100;200;false'
+      - 'give_potion_effect: SLOW;100;200;false'
+      actions3:
+      - 'console_command: svar set cooking_point_direction 0 %player%'
+      - 'console_command: svar add cooking_point -1 %player%'
+      - 'title: 0;40;10;&6🍖 &r%javascript_cooking_bar%&c 🔥;none'
+      - 'give_potion_effect: JUMP;100;200;false'
+      - 'give_potion_effect: SLOW;100;200;false'
+      actions4:
+      - 'console_command: svar set cooking_point_direction 1 %player%'
+      - 'console_command: svar add cooking_point 1 %player%'
+      - 'title: 0;40;10;&6🍖 &r%javascript_cooking_bar%&c 🔥;none'
+      - 'give_potion_effect: JUMP;100;200;false'
+      - 'give_potion_effect: SLOW;100;200;false'

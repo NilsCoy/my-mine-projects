@@ -1,0 +1,599 @@
+menu_title: '&6Ежедневные награды'
+open_command: daily
+open_commands:
+  - '[sound] ENTITY_PLAYER_LEVELUP 1 1.5'
+size: 9
+items:
+  'day1':
+    material: BRICK
+    slot: 1
+    priority: 3
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:36
+    display_name: '&fЯщик с едой'
+    lore:
+      - '&7Награда 1-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% < 1'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'day1_can_get':
+    material: BRICK
+    slot: 1
+    priority: 2
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:36
+    display_name: '&fЯщик с едой'
+    lore:
+      - '&7Награда 1-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% == 1'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_have% == 0'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set rewards_day_reward_have 1 %player_name%'
+      - '[console] svar add rewards_day_reward_count 1 %player_name%'
+      - '[console] ii give %player_name% case_small_eat 1'
+      - '[close]'
+  'day1_have_reward':
+    material: BARRIER
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fЯщик с едой'
+    lore:
+      - '&7Награда 1-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+      - '&7'
+      - '&fВы уже получили эту награду!'
+    view_requirement:
+      minimum_requirements: 1
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% > 1'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_have% == 1'
+          optional: true
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+
+
+
+
+  'day2':
+    material: BRICK
+    slot: 2
+    priority: 3
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:35
+    display_name: '&fЯщик с ресурсами'
+    lore:
+      - '&7Награда 2-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% < 2'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'day2_can_get':
+    material: BRICK
+    slot: 2
+    priority: 2
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - SILK_TOUCH;0
+    nbt_int: CustomModelData:35
+    display_name: '&fЯщик с ресурсами'
+    lore:
+      - '&7Награда 2-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% == 2'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_have% == 0'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set rewards_day_reward_have 1 %player_name%'
+      - '[console] svar add rewards_day_reward_count 1 %player_name%'
+      - '[console] ii give %player_name% case_small_materials 1'
+      - '[close]'
+  'day2_have_reward':
+    material: BARRIER
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:28
+    display_name: '&fЯщик с ресурсами'
+    lore:
+      - '&7Награда 2-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+      - '&7'
+      - '&fВы уже получили эту награду!'
+    view_requirement:
+      minimum_requirements: 1
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% > 2'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_have% == 1'
+          optional: true
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+
+
+
+
+  'day3':
+    material: GOLD_NUGGET
+    slot: 3
+    priority: 3
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fМонеты x250'
+    lore:
+      - '&7Награда 3-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% < 3'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'day3_can_get':
+    material: GOLD_NUGGET
+    slot: 3
+    priority: 2
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - SILK_TOUCH;0
+    #nbt_int: CustomModelData:81
+    display_name: '&fМонеты x250'
+    lore:
+      - '&7Награда 3-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% == 3'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_have% == 0'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set rewards_day_reward_have 1 %player_name%'
+      - '[console] svar add rewards_day_reward_count 1 %player_name%'
+      - '[console] svar add player_money 250 %player_name%'
+      - '[close]'
+  'day3_have_reward':
+    material: BARRIER
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fМонеты x250'
+    lore:
+      - '&7Награда 3-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+      - '&7'
+      - '&fВы уже получили эту награду!'
+    view_requirement:
+      minimum_requirements: 1
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% > 3'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_have% == 1'
+          optional: true
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+
+
+
+
+  'day4':
+    material: BRICK
+    slot: 4
+    priority: 3
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:34
+    display_name: '&fЯщик с зельями'
+    lore:
+      - '&7Награда 4-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% < 4'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'day4_can_get':
+    material: BRICK
+    slot: 4
+    priority: 2
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - SILK_TOUCH;0
+    nbt_int: CustomModelData:34
+    display_name: '&fЯщик с зельями'
+    lore:
+      - '&7Награда 4-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% == 4'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_have% == 0'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set rewards_day_reward_have 1 %player_name%'
+      - '[console] svar add rewards_day_reward_count 1 %player_name%'
+      - '[console] ii give %player_name% case_small_potion 1'
+      - '[close]'
+  'day4_have_reward':
+    material: BARRIER
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:34
+    display_name: '&fЯщик с зельями'
+    lore:
+      - '&7Награда 4-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+      - '&7'
+      - '&fВы уже получили эту награду!'
+    view_requirement:
+      minimum_requirements: 1
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% > 4'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_have% == 1'
+          optional: true
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+
+
+
+
+  'day5':
+    material: GOLD_NUGGET
+    slot: 5
+    priority: 3
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fМонеты x400'
+    lore:
+      - '&7Награда 5-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% < 5'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'day5_can_get':
+    material: GOLD_NUGGET
+    slot: 5
+    priority: 2
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - SILK_TOUCH;0
+    #nbt_int: CustomModelData:81
+    display_name: '&fМонеты x400'
+    lore:
+      - '&7Награда 5-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% == 5'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_have% == 0'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set rewards_day_reward_have 1 %player_name%'
+      - '[console] svar add rewards_day_reward_count 1 %player_name%'
+      - '[console] svar add player_money 400 %player_name%'
+      - '[close]'
+  'day5_have_reward':
+    material: BARRIER
+    slot: 5
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fМонеты x400'
+    lore:
+      - '&7Награда 5-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+      - '&7'
+      - '&fВы уже получили эту награду!'
+    view_requirement:
+      minimum_requirements: 1
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% > 5'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_have% == 1'
+          optional: true
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+
+
+
+
+  'day6':
+    material: BRICK
+    slot: 6
+    priority: 3
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fЯщик с краской'
+    lore:
+      - '&7Награда 6-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% < 6'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'day6_can_get':
+    material: BRICK
+    slot: 6
+    priority: 2
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - SILK_TOUCH;0
+    nbt_int: CustomModelData:33
+    display_name: '&fЯщик с краской'
+    lore:
+      - '&7Награда 6-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% == 6'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_have% == 0'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set rewards_day_reward_have 1 %player_name%'
+      - '[console] svar add rewards_day_reward_count 1 %player_name%'
+      - '[console] ii give %player_name% case_color 1'
+      - '[close]'
+  'day6_have_reward':
+    material: BARRIER
+    slot: 6
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fЯщик с краской'
+    lore:
+      - '&7Награда 6-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+      - '&7'
+      - '&fВы уже получили эту награду!'
+    view_requirement:
+      minimum_requirements: 1
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% > 6'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_have% == 1'
+          optional: true
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+
+
+
+
+  'day7':
+    material: BRICK
+    slot: 7
+    priority: 3
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:95
+    display_name: '&fSponsor 3 часа'
+    lore:
+      - '&7Награда 7-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% < 7'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'day7_can_get':
+    material: BRICK
+    slot: 7
+    priority: 2
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - SILK_TOUCH;0
+    nbt_int: CustomModelData:95
+    display_name: '&fSponsor 3 часа'
+    lore:
+      - '&7Награда 7-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% == 7'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_have% == 0'
+    click_commands:
+      - '[sound] BLOCK_CHEST_OPEN 1 0.5'
+      - '[console] svar set rewards_day_reward_have 1 %player_name%'
+      - '[console] svar add rewards_day_reward_count 1 %player_name%'
+      - '[console] ii give %player_name% sponsor_3 1'
+      - '[close]'
+  'day7_have_reward':
+    material: BARRIER
+    slot: 7
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fSponsor 3 часа'
+    lore:
+      - '&7Награда 7-го дня.'
+      - '&7Заходите каждый день, чтобы'
+      - '&7получать особые награды!'
+      - '&7'
+      - '&fВы уже получили эту награду!'
+    view_requirement:
+      minimum_requirements: 1
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_can% > 7'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_day_reward_have% == 1'
+          optional: true
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  
+  
+  
+  
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8]
+    display_name: ' '
+    nbt_int: CustomModelData:1

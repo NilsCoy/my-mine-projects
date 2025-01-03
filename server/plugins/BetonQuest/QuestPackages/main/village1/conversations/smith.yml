@@ -1,0 +1,164 @@
+conversations:
+  smith:
+    quester: '&aКузнец'
+    first: 'npc_node_1, npc_node_7, npc_node_9, npc_node_12, npc_node_13'
+    stop: 'true'
+    NPC_options:
+      npc_node_1:
+        text: '&7Зайдя под навес вы решаетесь заговорить с кузнецом.'
+        condition: '!smith_start'
+        event: 'smith_start'
+        pointers: player_node_1
+
+      npc_node_2:
+        text: '&7Кузнец не обращая на вас внимания продолжает работать, то ли не слыша вас, то ли специально игнорирует.'
+        condition: ''
+        event: ''
+        pointers: player_node_2
+
+      npc_node_3:
+        text: '&7Кузнец останавливается и поворачивается к вам с грозным видом.&f\n\nЧего надобно? Не видишь, я занят.'
+        condition: ''
+        event: ''
+        pointers: player_node_3
+
+      npc_node_4:
+        text: '&7Кузнец с облегчением вздохнул.&f\n\nСлушай, у меня дел не впроворот, если ты правда хочешь помочь, то держи вот эту старую кирку и пади по главной дороге до угольной шахты.\n\n&7Кузнец указывает на деревенские ворота.'
+        condition: ''
+        event: ''
+        pointers: player_node_4
+
+      npc_node_5:
+        text: 'Там сейчас стоит охрана, тебя просто так не пустят, скажи что ты от меня и тебе нужна руда. Так они тебя пропустят, а если повезёт то, будет для тебя лёгкой прогулкой туда и обратно.'
+        condition: ''
+        event: ''
+        pointers: player_node_5
+
+      npc_node_6:
+        text: 'Я разве не сказал?\n\n&7Кузнец произнес недоумевая.&f\n\nТебе нужно принести мне 20 угля. Скажем, так, это небольшая проверка, что можно тебе довериться. Ну, а теперь шагай. У меня метал стынет.'
+        condition: ''
+        event: 'give_pickaxe'
+        pointers: player_node_6
+
+      npc_node_7:
+        text: '&7Кузнец так же продолжал свою работу.'
+        condition: 'smith_quest1_item,!smith_quest1_completed,smith_quest1'
+        event: ''
+        pointers: player_node_7
+
+      npc_node_8:
+        text: 'Хорошо, ты прошел, теперь можешь считать себя подмастерьем. Однако, этого мало, если хочешь увидеть денег, то возьми эту переносную печь и выплави в ней 5 железных слитков, они как раз мне пригодятся для кое-чего.\n\n&7Кузнец хлопает по плечу и протягивает вам переносную печь.'
+        condition: ''
+        event: 'give_blast_furnace'
+        pointers: player_node_8
+
+      npc_node_9:
+        text: '&7Кузнец так же продолжал свою работу.'
+        condition: 'smith_quest2_item,!smith_quest2_completed,smith_quest2'
+        event: ''
+        pointers: player_node_9
+
+      npc_node_10:
+        text: 'Как вижу, ты неплохо освоился, учитывая того, что я не учил тебя как конкретно это делать. Поразительная находчивость!\n\n&7Кузнец почесывает голову и говорит.&f\n\nЧто же, вот последняя задача для тебя: выкуй слиток стали на этой наковальне, моим запасным молотом.\n\n&7Кузнец передает вам переносную наковальню и кузнечный молот.'
+        condition: ''
+        event: 'give_anvil,give_hammer'
+        pointers: player_node_10
+
+      npc_node_11:
+        text: 'Это поразительно! Парень, да у тебя талант к кузнечному делу. Это превосходный стальной слиток, подходящий для создания прочной брони и оружия.\n\n&7Кузнец прокашливается.&f\n\nКхм, ну думаю ты заслуживаешь награды, держи, это за проделанную работу.\n\n&7Кузнец протягивает мешок с монетами.&f\n\nЕсли тебе вдруг понадобятся ремесленные принадлежности, то можешь приобрести их у меня, а так же я могу выковать для тебя хороший меч.'
+        condition: ''
+        event: ''
+        pointers: player_node_11
+
+      npc_node_12:
+        text: '&7Кузнец так же продолжал свою работу.'
+        condition: 'smith_quest3_item,!smith_quest3_completed,smith_quest3'
+        event: ''
+        pointers: player_node_12
+
+      npc_node_13:
+        text: 'Чего желаешь странник?'
+        condition: 'smith_quest3_completed'
+        event: ''
+        pointers: player_node_13, player_node_14
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Прошу прощения, что прерываю, но... '
+        condition: ''
+        event: ''
+        pointers: npc_node_2
+
+      player_node_2:
+        text: 'Простите!'
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_3:
+        text: 'Я прошу прощения, что отвлек вас, однако хотел поинтересоваться, не найдется ли работа для меня. У меня ни гроша, а вы уважаемый кузнец. Я уверен что у вас найдется работа для такого как я.'
+        condition: ''
+        event: ''
+        pointers: npc_node_4
+
+      player_node_4:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_5
+
+      player_node_5:
+        text: 'А зачем мне туда идти?'
+        condition: ''
+        event: ''
+        pointers: npc_node_6
+
+      player_node_6:
+        text: '[ Уйти ]'
+        condition: ''
+        event: 'smith_quest1,smith_q1_compass_on,quest_objective,smith_quest_state1,quest_started'
+
+      player_node_7:
+        text: 'Я вернулся с углем, что вы просили. '
+        condition: ''
+        event: 'take_coal,smith_quest1_completed,give_exp1'
+        pointers: npc_node_8
+
+      player_node_8:
+        text: 'Хорошо, тогда скоро вернусь. [ Уйти ]'
+        condition: ''
+        event: 'smith_quest2,smith_quest_state2,quest_updated'
+
+      player_node_9:
+        text: 'Я вернулся с 5-ю слитками железа.'
+        condition: ''
+        event: 'take_iron_ingot,smith_quest2_completed,give_exp1'
+        pointers: npc_node_10
+
+      player_node_10:
+        text: 'Думаю, я смогу с этим справиться. [ Уйти ]'
+        condition: ''
+        event: 'smith_quest3,smith_quest_state3,quest_updated'
+
+      player_node_11:
+        text: 'Спасибо вам большое за то что обучили и дали денег. Я обязательно обращусь к вам если понадобится. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_12:
+        text: 'Я сделал то что вы просили. '
+        condition: ''
+        event: 'take_steel_ingot,smith_quest3_completed,give_exp2,smith_q1_compass_off,give_money1,quest_finished,smith_quest_notify'
+        pointers: npc_node_11
+
+      player_node_13:
+        text: 'Хочу прикупить кузнечные принадлежности. [ Торговля ]'
+        condition: ''
+        event: 'blacksmith'
+
+      player_node_14:
+        text: 'Я просто по пути зашел. [ Уйти ]'
+        condition: ''
+        event: ''

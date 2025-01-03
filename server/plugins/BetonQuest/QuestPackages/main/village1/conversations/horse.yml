@@ -1,0 +1,139 @@
+conversations:
+  horse:
+    quester: '&aКонюх'
+    first: 'npc_node_1, npc_node_8'
+    stop: 'true'
+    NPC_options:
+      npc_node_1:
+        text: '&7Зайдя внутрь, на вас обращает внимание мужчина.&f\n\nКто ты такой? Что тебе надо от меня?'
+        condition: '!horse_start'
+        event: 'horse_start'
+        pointers: player_node_1
+
+      npc_node_2:
+        text: 'Нечего тебе здесь делать, сам видишь, здесь лишь два осла. '
+        condition: ''
+        event: ''
+        pointers: player_node_2
+
+      npc_node_3:
+        text: 'Как стая волков объявилась, никого почти не осталось.\n\n&7Конюх указал рукой на ослов.&f\n\nА этих, я не продаю. Последние остались и они мне еще нужны. '
+        condition: ''
+        event: ''
+        pointers: player_node_3, player_node_4
+
+      npc_node_4:
+        text: '&7Мужчина издал короткий смешок.&f\n\nТы в стойлах убираться собрался или что? Ты бы лучше шел, эта работа тебе не по плечу.'
+        condition: ''
+        event: ''
+        pointers: player_node_5
+
+      npc_node_5:
+        text: 'Ты-то? Ладно, слушай сюда парень. Ты знаешь о волкодавах? Это крупные дикие волки, вожаки стаи. Если сможешь принести голову этого пса, то я подумаю о продаже осла. '
+        condition: ''
+        event: ''
+        pointers: player_node_6, player_node_7
+
+      npc_node_6:
+        text: 'Где-то в чаще леса находится окруженная холмами полянка, на которой и содержит свою стаю волкодав. Будь осторожен, он крайне опасен и его сородичи всегда рядом.'
+        condition: ''
+        event: ''
+        pointers: player_node_16
+
+      npc_node_7:
+        text: 'То-то же!'
+        condition: ''
+        event: ''
+
+      npc_node_8:
+        text: 'Ты чего вернулся? '
+        condition: 'horse_start'
+        event: ''
+        pointers: player_node_8, player_node_9, player_node_12, player_node_13
+
+      npc_node_12:
+        text: 'Правда? Не ожидал что у тебя получится. Спасибо тебе! Я думал, что придется отказаться от своего дела. Раз ты помог мне, то я не против продать тебе одного осла. '
+        condition: ''
+        event: ''
+        pointers: player_node_14, player_node_15
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Я просто осматриваюсь в деревне, решил заглянуть в стойла, вдруг можно приобрести себе жеребца. '
+        condition: ''
+        event: ''
+        pointers: npc_node_2
+
+      player_node_2:
+        text: 'Ты тут лишь ослов держишь что ли? Неужели даже коня нет? '
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_3:
+        text: 'Неужели ничего сделать нельзя? Может мне помочь с чем-то? '
+        condition: ''
+        event: ''
+        pointers: npc_node_4
+
+      player_node_4:
+        text: 'Понятно тогда я пойду. [ Уйти ] '
+        condition: ''
+        event: ''
+
+      player_node_5:
+        text: 'Пока ни попробую не узнаю, я готов взяться за работу.'
+        condition: ''
+        event: ''
+        pointers: npc_node_5
+
+      player_node_6:
+        text: 'Хорошо, жди меня, ослик! Где можно найти твоего волкодава?'
+        condition: ''
+        event: 'horse_quest,horse_quest_obj,horse_compass_on,quest_objective,horse_quest_state1,quest_started'
+        pointers: npc_node_6
+
+      player_node_7:
+        text: 'Да, ты прав, сражаться с волкодавом это слишком опасно. [ Уйти ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_7
+
+      player_node_8:
+        text: 'Я хочу приобрести ослика. [ Торговля ] '
+        condition: 'horse_quest_completed'
+        event: 'horse_menu'
+
+      player_node_9:
+        text: 'Я подготовился и хочу взяться за охоту на волкодава.'
+        condition: '!horse_quest'
+        event: ''
+        pointers: npc_node_5
+
+      player_node_12:
+        text: 'Я принес победу над волкодавом. '
+        condition: 'horse_quest_finish,!horse_quest_completed'
+        event: 'horse_quest_completed,quest_finished,horse_quest_notify,villager2_quest_item3_give'
+        pointers: npc_node_12
+
+      player_node_13:
+        text: 'Просто случайно зашел. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_14:
+        text: 'Тогда я готов его приобрести. [ Торговля ]'
+        condition: ''
+        event: 'horse_menu'
+
+      player_node_15:
+        text: 'Я чуть позже зайду. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_16:
+        text: '[ Уйти ]'
+        condition: ''
+        event: ''

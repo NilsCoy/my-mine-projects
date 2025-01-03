@@ -1,0 +1,270 @@
+menu_title: '&f七七七七七七七七グ' #'&6Задания'
+open_commands:
+  - '[sound] UI_BUTTON_CLICK 1 1'
+size: 36
+items:
+  'prologe':
+    material: PAPER
+    slot: 0
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:41
+    display_name: '&f%betonquest_main-prologue:objective.variables.prologue-name%'
+    lore:
+      - '&7%betonquest_main-prologue:objective.variables.prologue-lore1%'
+      - '&7%betonquest_main-prologue:objective.variables.prologue-lore2%'
+      - '&7%betonquest_main-prologue:objective.variables.prologue-lore3%'
+      - '&7%betonquest_main-prologue:objective.variables.prologue-lore4%'
+      - '&7%betonquest_main-prologue:objective.variables.prologue-lore5%'
+      - '&8- - - - - - - - - - - - - - - - - -'
+      - '&fЗадание в процессе выполнения!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%betonquest_main-prologue:condition.prisoner_start% == true'
+  'prologe_finished':
+    material: PAPER
+    slot: 0
+    priority: 2
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:40
+    display_name: '&f%betonquest_main-prologue:objective.variables.prologue-name%'
+    lore:
+      - '&7В процессе разведки пещер для побега,'
+      - '&7вы попадаете в заподню и погибаете.'
+      - '&7Однако некое божественное существо'
+      - '&7спасает и воскрешает вас в мире world!'
+      - '&7Что будет дальше, завист только от вас.'
+      - '&8- - - - - - - - - - - - - - - - - -'
+      - '&fЗадание успешно выполнено!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%betonquest_main-prologue:condition.pillagers_trigger% == true'
+  'freerest_smith':
+    material: PAPER
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:41
+    display_name: '&f%betonquest_main-village1:objective.variables.smith-quest-name%'
+    lore:
+      - '&7%betonquest_main-village1:objective.variables.smith-quest-lore1%'
+      - '&7%betonquest_main-village1:objective.variables.smith-quest-lore2%'
+      - '&7%betonquest_main-village1:objective.variables.smith-quest-lore3%'
+      - '&7%betonquest_main-village1:objective.variables.smith-quest-lore4%'
+      - '&7%betonquest_main-village1:objective.variables.smith-quest-lore5%'
+      - '&8- - - - - - - - - - - - - - - - - -'
+      - '&fЗадание в процессе выполнения!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%betonquest_main-village1:condition.smith_quest1% == true'
+  'freerest_smith_finished':
+    material: PAPER
+    slot: 1
+    priority: 2
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:40
+    display_name: '&f%betonquest_main-village1:objective.variables.smith-quest-name%'
+    lore:
+      - '&7В поиске работы вы находите кузнеца,'
+      - '&7которому требуется ресурсы.'
+      - '&7В процессе вы изучаете основы кузнечного'
+      - '&7дела и получаете личные предметы для'
+      - '&7ковки.'
+      - '&8- - - - - - - - - - - - - - - - - -'
+      - '&fЗадание успешно выполнено!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%betonquest_main-village1:condition.smith_quest3_completed% == true'
+  'freerest_horse':
+    material: PAPER
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:41
+    display_name: '&f%betonquest_main-village1:objective.variables.horse-quest-name%'
+    lore:
+      - '&7%betonquest_main-village1:objective.variables.horse-quest-lore1%'
+      - '&7%betonquest_main-village1:objective.variables.horse-quest-lore2%'
+      - '&7%betonquest_main-village1:objective.variables.horse-quest-lore3%'
+      - '&7%betonquest_main-village1:objective.variables.horse-quest-lore4%'
+      - '&7%betonquest_main-village1:objective.variables.horse-quest-lore5%'
+      - '&8- - - - - - - - - - - - - - - - - -'
+      - '&fЗадание в процессе выполнения!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%betonquest_main-village1:condition.horse_quest% == true'
+  'freerest_horse_finished':
+    material: PAPER
+    slot: 2
+    priority: 2
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:40
+    display_name: '&f%betonquest_main-village1:objective.variables.horse-quest-name%'
+    lore:
+      - '&7Убив волкодава, вы выполнили прозьбу'
+      - '&7конюха из Фриреста.'
+      - '&7В качестве награды вы можете купить'
+      - '&7последних ослов у него.'
+      - '&8- - - - - - - - - - - - - - - - - -'
+      - '&fЗадание успешно выполнено!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%betonquest_main-village1:condition.horse_quest_completed% == true'
+  'freerest_villager2':
+    material: PAPER
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:41
+    display_name: '&f%betonquest_main-village1:objective.variables.villager2-name%'
+    lore:
+      - '&7%betonquest_main-village1:objective.variables.villager2-lore1%'
+      - '&7%betonquest_main-village1:objective.variables.villager2-lore2%'
+      - '&7%betonquest_main-village1:objective.variables.villager2-lore3%'
+      - '&7%betonquest_main-village1:objective.variables.villager2-lore4%'
+      - '&7%betonquest_main-village1:objective.variables.villager2-lore5%'
+      - '&8- - - - - - - - - - - - - - - - - -'
+      - '&fЗадание в процессе выполнения!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%betonquest_main-village1:condition.villager2_quest% == true'
+  'freerest_villager2_finished':
+    material: PAPER
+    slot: 3
+    priority: 2
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:40
+    display_name: '&f%betonquest_main-village1:objective.variables.villager2-name%'
+    lore:
+      - '&7Насобирав достаточно ягод, вы относите'
+      - '&7их фермерше из Фриреста.'
+      - '&7В качестве награды вы получаете Ящик с'
+      - '&7едой и 100 монет.'
+      - '&8- - - - - - - - - - - - - - - - - -'
+      - '&fЗадание успешно выполнено!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%betonquest_main-village1:condition.villager2_quest_completed% == true'
+  'woodland_guild1':
+    material: PAPER
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:41
+    display_name: '&f%betonquest_main-town1:objective.variables.guild1-name%'
+    lore:
+      - '&7%betonquest_main-town1:objective.variables.guild1-lore1%'
+      - '&7%betonquest_main-town1:objective.variables.guild1-lore2%'
+      - '&7%betonquest_main-town1:objective.variables.guild1-lore3%'
+      - '&7%betonquest_main-town1:objective.variables.guild1-lore4%'
+      - '&7%betonquest_main-town1:objective.variables.guild1-lore5%'
+      - '&8- - - - - - - - - - - - - - - - - -'
+      - '&fЗадание в процессе выполнения!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%betonquest_main-town1:condition.guild_quest% == true'
+  'woodland_guild1_finished':
+    material: PAPER
+    slot: 4
+    priority: 2
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:40
+    display_name: '&f%betonquest_main-town1:objective.variables.guild1-name%'
+    lore:
+      - '&7Выйграв бой у Инструктора,'
+      - '&7вы становитесь авантюристом.'
+      - '&7Теперь вы можете сдавать задания с'
+      - '&7Доски заданий.'
+      - '&8- - - - - - - - - - - - - - - - - -'
+      - '&fЗадание успешно выполнено!'
+    view_requirement:
+      requirements:
+        req1:
+          type: 'javascript'
+          expression: '%betonquest_main-town1:condition.guild_quest_finish% == true'
+
+  # 'back':
+    # material: PAPER
+    # slot: 27
+    # priority: 4
+    # update: true
+    # hide_attributes: true
+    # nbt_int: CustomModelData:38
+    # display_name: '&fНазад'
+    # lore:
+      # - '&f[ ЛКМ ] &7чтобы посмотреть страницу.'
+    # click_commands:
+      # - '[openguimenu] battle_pass_3'
+      # - '[refresh]'
+  # 'next':
+    # material: PAPER
+    # slot: 35
+    # priority: 4
+    # update: true
+    # hide_attributes: true
+    # nbt_int: CustomModelData:39
+    # display_name: '&fВперед'
+    # lore:
+      # - '&f[ ЛКМ ] &7чтобы посмотреть страницу.'
+    # click_commands:
+      # #- '[openguimenu] battle_pass_5'
+      # - '[refresh]'
+  'info':
+    material: WRITABLE_BOOK
+    slot: 31
+    priority: 4
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:39
+    display_name: '&fИнформация'
+    lore:
+      - '&7Здесь находятся все ваши задачи'
+      - '&7полученные от NPC.'
+      - ''
+      - '&7Каждый слот отвечает за определенное'
+      - '&7задание, на нем будет отображаться'
+      - '&7название, описание задания и имя NPC'
+      - '&7от которого вы его получили.'
+    click_commands:
+      #- '[openguimenu] battle_pass_5'
+      - '[refresh]'
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    #slots: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,]
+    slots: 
+      - 0-26
+    display_name: '&fЗадание не доступно!'
+    lore:
+      - '&7Оно откроется, как только вы'
+      - '&7получите это задание.'
+    nbt_int: CustomModelData:42

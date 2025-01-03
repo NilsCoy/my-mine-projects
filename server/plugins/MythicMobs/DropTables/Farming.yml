@@ -1,0 +1,33 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+farming1:
+  TotalItems: 1
+  BonusLuckItems: 1
+  Drops:
+  - cmd{c="ii give <trigger.name> ingredient1"} 1 0.5
+  - cmd{c="ii give <trigger.name> ingredient2"} 1 0.5
+  - cmd{c="ii give <trigger.name> ingredient3"} 1 0.5
+  - cmd{c="ii give <trigger.name> ingredient4"} 1 0.2
+  - cmd{c="ii give <trigger.name> ingredient6 %rng_1,3%"} 1 1
+farming2:
+  TotalItems: 1
+  BonusLuckItems: 1
+  Drops:
+  - cmd{c="ii give <trigger.name> ingredient7"} 1 1
+  - cmd{c="ii give <trigger.name> ingredient8"} 1 1
+  - cmd{c="ii give <trigger.name> ingredient5"} 1 0.2
+farming3:
+  TotalItems: 1
+  BonusLuckItems: 1
+  Drops:
+  - cmd{c="ii give <trigger.name> ingredient9"} 1 1
+  - cmd{c="ii give <trigger.name> ingredient10"} 1 0.5
+  - cmd{c="ii give <trigger.name> ingredient12"} 1 0.2
+farming4:
+  TotalItems: 1
+  BonusLuckItems: 1
+  Drops:
+  - cmd{c="ii give <trigger.name> ingredient16"} 1 1
+  - cmd{c="ii give <trigger.name> ingredient17"} 1 1

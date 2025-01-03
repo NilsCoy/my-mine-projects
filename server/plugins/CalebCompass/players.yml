@@ -1,0 +1,368 @@
+playerdata:
+  f948b7b0-96bc-3c32-89ff-1941bf1b85da:
+    activepoints:
+      village1_smith_q1: false
+      horse1_quest: false
+      town1_guild_instructor: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  33df4bd2-977c-3f5b-bc4c-1c152339deb4:
+    activepoints:
+      village1_smith_q1: false
+      horse1_quest: false
+      town1_guild_instructor: false
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  aa0a0929-d6c9-315d-a7e1-07e1c4a01258:
+    activepoints:
+      village1_smith_q1: false
+      horse1_quest: false
+      town1_guild_instructor: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  621a894d-f4db-3ff4-8d84-2c34dca7265a:
+    activepoints:
+      village1_smith_q1: false
+      horse1_quest: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  f65cf601-66f6-35d3-b5b0-5b41d66d1300:
+    activepoints:
+      horse1_quest: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  4a24e6bd-ea3a-3318-8f49-61b87de854d0:
+    activepoints:
+      village1_smith_q1: true
+      horse1_quest: false
+      prologe2: false
+      town1_guild_instructor: false
+      prologe1: true
+      prologe3: false
+      test: true
+      save2: false
+      save1: false
+      cave1: false
+      cave2: false
+      cave3: false
+      pillagers1: false
+      pillagers2: false
+      wolf1: false
+      grave1: false
+      grave2: false
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  f535664a-5baf-369d-8c8c-0ee540cd9452:
+    activepoints:
+      horse1_quest: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  f0386677-1dc5-38a6-a1bf-c04c637d7bcb:
+    activepoints:
+      horse1_quest: true
+      village1_smith_q1: false
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  1ee366b5-0bae-3af9-a2fd-ed1a3b4527b2:
+    activepoints:
+      village1_smith_q1: true
+      horse1_quest: false
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  0cd19832-cdee-3cdc-9509-80d18eb5fe76:
+    activepoints:
+      village1_smith_q1: false
+      horse1_quest: false
+      town1_guild_instructor: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  4f14ea5c-3acb-3628-be6d-e895cb743710:
+    activepoints:
+      horse1_quest: false
+      village1_smith_q1: false
+      town1_guild_instructor: false
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  2a98fbf6-70b9-32c8-8357-1d8a6920c621:
+    activepoints:
+      village1_smith_q1: false
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  a53156c6-ce9b-3406-bf76-54af70beaebb:
+    activepoints:
+      horse1_quest: true
+      village1_smith_q1: false
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  19f1ff91-3e50-3d3c-b6cc-61b31933e967:
+    activepoints:
+      horse1_quest: true
+      village1_smith_q1: true
+      town1_guild_instructor: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  29ac9a96-e34b-3018-be5c-258e894e14a1:
+    activepoints:
+      horse1_quest: true
+      town1_guild_instructor: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  3ff94e0b-b285-3970-a4c6-08ccb2c768f9:
+    activepoints:
+      horse1_quest: true
+      village1_smith_q1: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  b1925449-97b6-316c-8c57-89f1bc9a6b2e:
+    activepoints:
+      village1_smith_q1: false
+      horse1_quest: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  7280115a-c999-3795-b207-156aa6b5d73b:
+    activepoints:
+      village1_smith_q1: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  443e12de-5ecb-3208-bf89-476077d15b30:
+    activepoints:
+      village1_smith_q1: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  c66812e9-ed95-30f0-b4fd-df45ab6a1a65:
+    activepoints:
+      village1_smith_q1: false
+      horse1_quest: true
+      town1_guild_instructor: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  88f81b54-53c5-390a-9f9d-2188dc4a1fb7:
+    activepoints:
+      horse1_quest: true
+      village1_smith_q1: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  5f163157-97b2-3ff9-9993-ef7b4f82d7e9:
+    activepoints:
+      village1_smith_q1: false
+      town1_guild_instructor: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  f1142aba-fce3-3f2f-8a97-a060192e77b9:
+    activepoints:
+      village1_smith_q1: false
+      horse1_quest: true
+      town1_guild_instructor: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  93484e76-5d47-3ca5-b185-01f64dfd4384:
+    activepoints:
+      village1_smith_q1: true
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true
+  73afbe79-f2a2-3d8a-aa28-bca7943b279b:
+    activepoints:
+      village1_smith_q1: true
+      horse1_quest: false
+    istracking: false
+    origin:
+      x: 0.5
+      y: 0
+      z: 0.5
+    target:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    viewing: true

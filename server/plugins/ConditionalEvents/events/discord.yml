@@ -1,0 +1,57 @@
+Events:
+  plugins:
+    type: player_command
+    conditions:
+    - '%main_command% == /pl and %player% != NilsCoy execute deny'
+    - '%main_command% == /plugins and %player% != NilsCoy execute deny'
+    - '%main_command% == /bukkit:pl and %player% != NilsCoy execute deny'
+    - '%main_command% == /bukkit:plugins and %player% != NilsCoy execute deny'
+    actions:
+      deny:
+      - 'cancel_event: true'
+      - 'console_command: kick %player% О чем ты думал, когда делал это?'
+  role:
+    type: player_command
+    conditions:
+    - '%main_command% == /role and %args_length% == 1 and %servervariables_value_player_role% == 0 execute pass'
+    - '%main_command% == /role and %args_length% == 0 and %servervariables_value_player_role% == 0 execute deny1'
+    - '%main_command% == /role and %servervariables_value_player_role% != 0 execute deny2'
+    actions:
+      pass:
+      - 'cancel_event: true'
+      - 'discordsrv_embed: channel:role;author_name:%player%;player_skin_name:%player%;title:Первопроходец %arg_1%;color:255,0,0'
+      - 'playsound: ENTITY_EXPERIENCE_ORB_PICKUP;1;1'
+      - 'console_command: svar set player_role 1 %player%'
+      deny1:
+      - 'cancel_event: true'
+      - 'message: &cВы не написали свой индификатор профиля Discord!'
+      - 'playsound: ENTITY_VILLAGER_NO;1;1'
+      deny2:
+      - 'cancel_event: true'
+      - 'message: &cВы уже использовали эту команду!'
+      - 'playsound: ENTITY_VILLAGER_NO;1;1'
+  sponsor:
+    type: player_command
+    conditions:
+    - '%main_command% == /sponsor and %player_has_permission_sponsor% == yes and %args_length% == 1 and %servervariables_value_player_sponsor% == 0 execute pass'
+    - '%main_command% == /sponsor and %player_has_permission_sponsor% == yes and %args_length% == 0 and %servervariables_value_player_sponsor% == 0 execute deny1'
+    - '%main_command% == /sponsor and %player_has_permission_sponsor% == yes and %servervariables_value_player_sponsor% != 0 execute deny2'
+    - '%main_command% == /sponsor and %player_has_permission_sponsor% != yes execute deny3'
+    actions:
+      pass:
+      - 'cancel_event: true'
+      - 'discordsrv_embed: channel:role;author_name:%player%;player_skin_name:%player%;title:Спонсор %arg_1%;color:255,0,0'
+      - 'playsound: ENTITY_EXPERIENCE_ORB_PICKUP;1;1'
+      - 'console_command: svar set player_sponsor 1 %player%'
+      deny1:
+      - 'cancel_event: true'
+      - 'message: &cВы не написали свой индификатор профиля Discord!'
+      - 'playsound: ENTITY_VILLAGER_NO;1;1'
+      deny2:
+      - 'cancel_event: true'
+      - 'message: &cВы уже использовали эту команду!'
+      - 'playsound: ENTITY_VILLAGER_NO;1;1'
+      deny3:
+      - 'cancel_event: true'
+      - 'message: &cУ вас недостаточно прав!'
+      - 'playsound: ENTITY_VILLAGER_NO;1;1'

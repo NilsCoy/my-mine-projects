@@ -1,0 +1,13 @@
+name: moderator
+permissions:
+- gsit.kick.*
+- gsit.kick
+- pv.mute
+- pv.mutelist
+- pv.unmute
+- weight.5
+parents:
+- default
+prefixes:
+- '&b🛡 &7| &f':
+    priority: 2

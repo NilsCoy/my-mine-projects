@@ -1,0 +1,1094 @@
+menu_title: '&6Изготовление'
+size: 45
+items:
+
+
+
+  'reagent11':
+    material: BRICK
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:52
+    display_name: '&bНепонятная слизь'
+    lore:
+      - '&fТребования:'
+      - '&7Плоть: &f3'
+      - '&7Мед мега-пчел: &f3'
+      - '&7Рыбная икра: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bРыбная икра%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bПлоть%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bМед мега-пчел%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 1 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent16':
+    material: BRICK
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:57
+    display_name: '&bВысушенные растения'
+    lore:
+      - '&fТребования:'
+      - '&7Лепесток тысячелистника: &f3'
+      - '&7Корень горькоцвета: &f3'
+      - '&7Побеги наперстянки: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЛепесток тысячелистника%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bКорень горькоцвета%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bПобеги наперстянки%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 2 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent20':
+    material: BRICK
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:61
+    display_name: '&bСветящаяся плесень в настойке'
+    lore:
+      - '&fТребования:'
+      - '&7Свето-трава: &f3'
+      - '&7Семена полыни: &f3'
+      - '&7Желтоцвет: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bСвето-трава%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bСемена полыни%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЖелтоцвет%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 3 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent30':
+    material: BRICK
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:71
+    display_name: '&bСветящаяся жидкость'
+    lore:
+      - '&fТребования:'
+      - '&7Свето-трава: &f3'
+      - '&7Костяная мука: &f3'
+      - '&7Блестящая чешуя: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bСвето-трава%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bКостяная мука%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bБлестящая чешуя%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 4 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent24':
+    material: BRICK
+    slot: 5
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:65
+    display_name: '&bВыдавленное масло'
+    lore:
+      - '&fТребования:'
+      - '&7Побеги наперстянки: &f3'
+      - '&7Странный порошок: &f1'
+      - '&7Хаустония: &f1'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bПобеги наперстянки%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bСтранный порошок%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bХаустония%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 5 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent15':
+    material: BRICK
+    slot: 6
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:56
+    display_name: '&bКопченые части монстров'
+    lore:
+      - '&fТребования:'
+      - '&7Плоть: &f3'
+      - '&7Зеленый мох: &f3'
+      - '&7Побеги наперстянки: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bПлоть%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЗеленый мох%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bПобеги наперстянки%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 6 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent21':
+    material: BRICK
+    slot: 7
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:62
+    display_name: '&bСмешанные цветы'
+    lore:
+      - '&fТребования:'
+      - '&7Блудроз: &f3'
+      - '&7Желтоцвет: &f3'
+      - '&7Корень горькоцвета: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bБлудроз%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЖелтоцвет%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bКорень горькоцвета%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 7 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent17':
+    material: BRICK
+    slot: 10
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:58
+    display_name: '&bВытолоченные внутренности'
+    lore:
+      - '&fТребования:'
+      - '&7Плоть: &f3'
+      - '&7Зеленый мох: &f3'
+      - '&7Семена полыни: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bПлоть%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЗеленый мох%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bСемена полыни%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 8 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent31':
+    material: BRICK
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:72
+    display_name: '&bЧешуйчатое зелье'
+    lore:
+      - '&fТребования:'
+      - '&7Блестящая чешуя: &f3'
+      - '&7Костяная мука: &f3'
+      - '&7Побеги наперстянки: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bБлестящая чешуя%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bКостяная мука%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bПобеги наперстянки%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 9 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent4':
+    material: BRICK
+    slot: 12
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:45
+    display_name: '&bГуща из частей монстров'
+    lore:
+      - '&fТребования:'
+      - '&7Плоть: &f3'
+      - '&7Лесные ягоды: &f6'
+      - '&7Блудроз: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bПлоть%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:SWEET_BERRIES,amt:6,nameequals:&bЛесные ягоды%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bБлудроз%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 10 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent14':
+    material: BRICK
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:55
+    display_name: '&bПепельное зелье'
+    lore:
+      - '&fТребования:'
+      - '&7Костяная мука: &f3'
+      - '&7Странный порошок: &f1'
+      - '&7Хаустония: &f1'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bКостяная мука%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bСтранный порошок%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bХаустония%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 11 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent18':
+    material: BRICK
+    slot: 14
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:59
+    display_name: '&bСерая каша'
+    lore:
+      - '&fТребования:'
+      - '&7Семена полыни: &f3'
+      - '&7Зеленый мох: &f3'
+      - '&7Мед мега-пчел: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bСемена полыни%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЗеленый мох%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bМед мега-пчел%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 12 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent23':
+    material: BRICK
+    slot: 15
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:64
+    display_name: '&bПлохо пахнущая смесь'
+    lore:
+      - '&fТребования:'
+      - '&7Хаустония: &f1'
+      - '&7Лоскут тени: &f1'
+      - '&7Рыбная икра: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bХаустония%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bЛоскут тени%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bРыбная икра%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 13 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent19':
+    material: BRICK
+    slot: 16
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:60
+    display_name: '&bКрасная настойка'
+    lore:
+      - '&fТребования:'
+      - '&7Блудроз: &f3'
+      - '&7Лесные ягоды: &f6'
+      - '&7Мед мега-пчел: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bБлудроз%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:SWEET_BERRIES,amt:6,nameequals:&bЛесные ягоды%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bМед мега-пчел%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 14 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent22':
+    material: BRICK
+    slot: 19
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:63
+    display_name: '&bФиолетовый отвар'
+    lore:
+      - '&fТребования:'
+      - '&7Грибы: &f3'
+      - '&7Лесные ягоды: &f6'
+      - '&7Костяная мука: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bГрибы%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:SWEET_BERRIES,amt:6,nameequals:&bЛесные ягоды%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bКостяная мука%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 15 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent26':
+    material: BRICK
+    slot: 20
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:67
+    display_name: '&bЭкстракт россы'
+    lore:
+      - '&fТребования:'
+      - '&7Блестящая чешуя: &f3'
+      - '&7Хаустония: &f1'
+      - '&7Странный порошок: &f1'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bБлестящая чешуя%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bХаустония%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bСтранный порошок%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 16 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent8':
+    material: BRICK
+    slot: 21
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:49
+    display_name: '&bГрибной отвар'
+    lore:
+      - '&fТребования:'
+      - '&7Грибы: &f3'
+      - '&7Побеги наперстянки: &f3'
+      - '&7Зеленый мох: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bГрибы%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bПобеги наперстянки%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЗеленый мох%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 17 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent10':
+    material: BRICK
+    slot: 22
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:51
+    display_name: '&bЦветочный настой'
+    lore:
+      - '&fТребования:'
+      - '&7Странный порошок: &f1'
+      - '&7Желтоцвет: &f3'
+      - '&7Блудроз: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bСтранный порошок%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЖелтоцвет%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bБлудроз%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 18 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent7':
+    material: BRICK
+    slot: 23
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:48
+    display_name: '&bКаловая масса'
+    lore:
+      - '&fТребования:'
+      - '&7Плоть: &f3'
+      - '&7Зеленый мох: &f3'
+      - '&7Странный порошок: &f1'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bПлоть%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЗеленый мох%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bСтранный порошок%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 19 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent6':
+    material: BRICK
+    slot: 24
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:47
+    display_name: '&bОсадок отмоченных растений'
+    lore:
+      - '&fТребования:'
+      - '&7Лепесток тысячелистника: &f3'
+      - '&7Свето-трава: &f3'
+      - '&7Семена полыни: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bСвето-трава%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЛепесток тысячелистника%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bСемена полыни%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 20 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent2':
+    material: BRICK
+    slot: 25
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:43
+    display_name: '&bМутная вода'
+    lore:
+      - '&fТребования:'
+      - '&7Корень горькоцвета: &f3'
+      - '&7Костяная мука: &f3'
+      - '&7Желтоцвет: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bКорень горькоцвета%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bКостяная мука%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЖелтоцвет%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 21 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent25':
+    material: BRICK
+    slot: 28
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:66
+    display_name: '&bЛипкая жижа'
+    lore:
+      - '&fТребования:'
+      - '&7Рыбная икра: &f3'
+      - '&7Зеленый мох: &f3'
+      - '&7Странный порошок: &f1'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bРыбная икра%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЗеленый мох%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bСтранный порошок%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 22 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent12':
+    material: BRICK
+    slot: 29
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:53
+    display_name: '&bЦветочная пыльца'
+    lore:
+      - '&fТребования:'
+      - '&7Свето-трава: &f3'
+      - '&7Хаустония: &f1'
+      - '&7Лоскут тени: &f1'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bСвето-трава%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bХаустония%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bЛоскут тени%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 23 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent5':
+    material: BRICK
+    slot: 30
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:46
+    display_name: '&bНастойка зеленого мха'
+    lore:
+      - '&fТребования:'
+      - '&7Зеленый мох: &f3'
+      - '&7Лесные ягоды: &f6'
+      - '&7Костяная мука: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЗеленый мох%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:SWEET_BERRIES,amt:6,nameequals:&bЛесные ягоды%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bКостяная мука%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 24 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent29':
+    material: BRICK
+    slot: 31
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:70
+    display_name: '&bРыбный отвар'
+    lore:
+      - '&fТребования:'
+      - '&7Блестящая чешуя: &f3'
+      - '&7Плоть: &f3'
+      - '&7Блудроз: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bБлестящая чешуя%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bПлоть%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bБлудроз%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 25 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent1':
+    material: BRICK
+    slot: 32
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:42
+    display_name: '&bЯгодная настойка'
+    lore:
+      - '&fТребования:'
+      - '&7Лесные ягоды: &f6'
+      - '&7Лепесток тысячелистника: &f3'
+      - '&7Желтоцвет: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:SWEET_BERRIES,amt:6,nameequals:&bЛесные ягоды%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЛепесток тысячелистника%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЖелтоцвет%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 26 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent9':
+    material: BRICK
+    slot: 33
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:50
+    display_name: '&bЭликсир луговых трав'
+    lore:
+      - '&fТребования:'
+      - '&7Побеги наперстянки: &f3'
+      - '&7Корень горькоцвета: &f3'
+      - '&7Мед мега-пчел: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bПобеги наперстянки%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bКорень горькоцвета%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bМед мега-пчел%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 27 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent27':
+    material: BRICK
+    slot: 34
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:68
+    display_name: '&bТень в бутылочке'
+    lore:
+      - '&fТребования:'
+      - '&7Лоскут тени: &f1'
+      - '&7Хаустония: &f1'
+      - '&7Свето-трава: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bЛоскут тени%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bХаустония%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bСвето-трава%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 28 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent3':
+    material: BRICK
+    slot: 37
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:44
+    display_name: '&bТертые растения'
+    lore:
+      - '&fТребования:'
+      - '&7Побеги наперстянки: &f3'
+      - '&7Лепесток тысячелистника: &f3'
+      - '&7Зеленый мох: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bПобеги наперстянки%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЛепесток тысячелистника%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bЗеленый мох%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 29 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+  'reagent13':
+    material: BRICK
+    slot: 38
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:54
+    display_name: '&bЖемчужный порошок'
+    lore:
+      - '&fТребования:'
+      - '&7Грибы: &f3'
+      - '&7Странный порошок: &f1'
+      - '&7Костяная мука: &f3'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы создать!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bГрибы%'
+          output: 'yes'
+        req2:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bСтранный порошок%'
+          output: 'yes'
+        req3:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:3,nameequals:&bКостяная мука%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set alchemy_craft 30 %player_name%'
+      - '[sound] BLOCK_BREWING_STAND_BREW 1 1'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,8,9,17,18,26,27,35,36,44]
+    display_name: ' '
+    nbt_int: CustomModelData:1

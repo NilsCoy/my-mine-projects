@@ -1,0 +1,12 @@
+PositiveEffect_1:
+  Name: SLOW_FALLING
+  Duraction: 200
+  Level: 0
+NegativeEffect_1:
+  Name: SLOW
+  Duraction: 300
+  Level: 0
+NegativeEffect_2:
+  Name: WEAKNESS
+  Duraction: 300
+  Level: 0

@@ -1,0 +1,28 @@
+
+npcs:
+  '65': 'prisoner_start'
+  '66': 'pillager1'
+  '68': 'pillager2'
+  '69': 'prisoner'
+  '70': 'prisoner'
+  '71': 'prisoner'
+  '90': 'pillager3'
+
+hide_npcs:
+  '66': '!pillager1'
+  '69': 'pillager2_quest_completed'
+  '70': 'pillager2_quest_completed'
+  '71': 'pillager2_quest_completed'
+  '85': '!bread_visible'
+  '86': '!bread_visible'
+  '87': '!bread_visible'
+  '88': '!bread_visible'
+  '89': '!bread_visible'
+  '84': '!bread_visible'
+  '83': '!bread_visible'
+  '90': 'prisoner_trigger2'
+
+player_hider:
+  example_hider:
+    source_player: tutotrial_jail
+    target_player: tutotrial_jail

@@ -1,0 +1,5 @@
+variables:
+  statue1_time:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0

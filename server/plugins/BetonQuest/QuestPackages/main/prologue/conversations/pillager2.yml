@@ -1,0 +1,86 @@
+conversations:
+  pillager2:
+    quester: 'Надзиратель'
+    first: 'npc_node_1,npc_node_3,npc_node_5,npc_node_6,npc_node_7,npc_node_9'
+    stop: 'true'
+    NPC_options:
+      npc_node_1:
+        text: 'А вот и новенький!\n\n&7Надзиратель кричит другим рабам, окликивая их.'
+        condition: '!pillager2'
+        event: 'pillager2_spawn,pillager1_hide,prologe1_compass_off'
+        pointers: player_node_1
+
+      npc_node_2:
+        text: 'Вот тебе кирка, по шахте разбросаны рудные жилы, их нужно копать. Принеси мне 30 угля и можешь быть свободен, пока что. \n\n&7Вам протягивают старую кирку, которую уже наверняка пользовал не один человек.'
+        condition: ''
+        event: ''
+        pointers: player_node_2
+
+      npc_node_3:
+        text: 'Смотрю ты закончил свою работу? Что же не отпускать же тебя раньше других, держи удочку.\n\n&7Вам протягивают палку с ниткой, отдаленно напоминающую инструмент для ловли рыбы.'
+        condition: 'pillager2_quest1,!pillager2_quest2_started'
+        event: 'pillager2_item1_remove,pillager2_item2_remove,pillager2_item3_give,pillager2_quest2_started,prologue_state3'
+        pointers: player_node_3
+
+      npc_node_4:
+        text: 'Тут рядом есть небольшой прудик, займись пока рыбалкой, ха-ха.'
+        condition: ''
+        event: ''
+        pointers: player_node_4
+
+      npc_node_5:
+        text: 'Чего шатаешься без дела, копай уголь раб!'
+        condition: '!pillager2_quest1,pillager2_quest1_started,!pillager2_quest2_started'
+        event: ''
+
+      npc_node_6:
+        text: 'Я все еще жду улов!'
+        condition: '!pillager2_quest2,pillager2_quest2_started,!pillager2_quest_completed'
+        event: ''
+
+      npc_node_7:
+        text: 'Ха! Ты и правда что-то выловил от туда?\n\n&7Надзиратель посмеивается над вашим упорством.'
+        condition: 'pillager2_quest2,!pillager2_quest_completed'
+        event: 'pillager2_item3_remove,pillager2_item4_remove,pillager2_quest_completed,prologue_state4,prologe3_compass_on'
+        pointers: player_node_5
+
+      npc_node_8:
+        text: 'Ладно, как видишь все уже ушли, возвращайся в главный зал, там сейчас раздают еду.'
+        condition: ''
+        event: ''
+
+      npc_node_9:
+        text: 'Я же сказал тебе идти к камерам, так чего ты еще здесь?'
+        condition: 'pillager2_quest_completed'
+        event: ''
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Да, меня направили к вам.'
+        condition: ''
+        event: ''
+        pointers: npc_node_2
+
+      player_node_2:
+        text: '[ Уйти ]'
+        condition: ''
+        event: 'pillager2,pillager2_quest1_started,pillager2_item1_give,prologue_state2,mine_notify,quest_updated'
+
+      player_node_3:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_4
+
+      player_node_4:
+        text: '[ Уйти ]'
+        condition: ''
+        event: 'fish_notify,quest_updated'
+
+      player_node_5:
+        text: 'Вы же мне и дали это задание...'
+        condition: ''
+        event: 'quest_updated'
+        pointers: npc_node_8

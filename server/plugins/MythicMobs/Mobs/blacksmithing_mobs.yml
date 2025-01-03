@@ -1,0 +1,878 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+anvil_iron_ingot:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - BRICK{model=14} HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_iron_ring:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - BRICK{model=1} HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_iron_plate:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - BRICK{model=2} HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_steel_ingot:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - BRICK{model=9} HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_steel_plate:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - BRICK{model=10} HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_cobald_ingot:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - BRICK{model=3} HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_cobald_plate:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - BRICK{model=4} HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_leather_chestplate:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - LEATHER_CHESTPLATE HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_leather_leggings:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - LEATHER_LEGGINGS HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_leather_boots:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - LEATHER_BOOTS HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_chainmail_chestplate:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - CHAINMAIL_CHESTPLATE HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_chainmail_leggings:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - CHAINMAIL_LEGGINGS HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_chainmail_boots:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - CHAINMAIL_BOOTS HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_iron_chestplate:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - IRON_CHESTPLATE HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_iron_leggings:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - IRON_LEGGINGS HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_iron_boots:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - IRON_BOOTS HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_sword3:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - IRON_SWORD HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_dagger1:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - EPICFIGHT_IRON_DAGGER HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_longsword1:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - EPICFIGHT_IRON_LONGSWORD HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_tachi1:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - EPICFIGHT_IRON_TACHI HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_spear2:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - EPICFIGHT_IRON_SPEAR HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_axe3:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - IRON_AXE HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_greatsword2:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - EPICFIGHT_IRON_GREATSWORD HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+
+anvil_cobald_chestplate:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - DIAMOND_CHESTPLATE HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_cobald_leggings:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - DIAMOND_LEGGINGS HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_cobald_boots:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - DIAMOND_BOOTS HAND
+  Pose:
+    RightArm: 0,90,0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_sword5:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - DIAMOND_SWORD HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_dagger3:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - EPICFIGHT_DIAMOND_DAGGER HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_longsword3:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - EPICFIGHT_DIAMOND_LONGSWORD HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_tachi3:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - EPICFIGHT_DIAMOND_TACHI HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_spear4:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - EPICFIGHT_DIAMOND_SPEAR HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_axe5:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - DIAMOND_AXE HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_greatsword4:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - EPICFIGHT_DIAMOND_GREATSWORD HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_greatsword1:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - EPICFIGHT_STONE_GREATSWORD HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_sword2:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - STONE_SWORD HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_glove:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - EPICFIGHT_GLOVE HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_spear1:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - EPICFIGHT_STONE_SPEAR HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+anvil_axe2:
+  Type: ARMOR_STAND
+  Display: '&7Наковальня'
+  Health: 10
+  Options:
+    Despawn: false
+    Invisible: true
+    Marker: true
+    HasGravity: false
+    HasBasePlate: false
+    CanMove: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+  Equipment:
+  - STONE_AXE HAND
+  Pose:
+    RightArm: 0,0,90
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear

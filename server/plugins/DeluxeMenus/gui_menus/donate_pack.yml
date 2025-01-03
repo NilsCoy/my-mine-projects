@@ -1,0 +1,103 @@
+menu_title: '&6Сундук со снаряжением'
+open_commands:
+  - '[sound] BLOCK_CHEST_OPEN 1 2'
+size: 9
+items:
+  'sword':
+    material: GOLDEN_SWORD
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cЗолотой меч'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы выбрать!'
+    click_commands:
+      - '[console] svar set player_get_item 1 %player_name%'
+      - '[sound] BLOCK_CHEST_CLOSE 1 2'
+      - '[close]'
+  'axe':
+    material: GOLDEN_AXE
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cЗолотой топор'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы выбрать!'
+    click_commands:
+      - '[console] svar set player_get_item 2 %player_name%'
+      - '[sound] BLOCK_CHEST_CLOSE 1 2'
+      - '[close]'
+  'greatsword':
+    material: EPICFIGHT_GOLDEN_GREATSWORD
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cЗолотой большой меч'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы выбрать!'
+    click_commands:
+      - '[console] svar set player_get_item 3 %player_name%'
+      - '[sound] BLOCK_CHEST_CLOSE 1 2'
+      - '[close]'
+  'spear':
+    material: EPICFIGHT_GOLDEN_SPEAR
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cЗолотое копье'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы выбрать!'
+    click_commands:
+      - '[console] svar set player_get_item 4 %player_name%'
+      - '[sound] BLOCK_CHEST_CLOSE 1 2'
+      - '[close]'
+  'tachi':
+    material: EPICFIGHT_GOLDEN_TACHI
+    slot: 5
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cЗолотой тати'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы выбрать!'
+    click_commands:
+      - '[console] svar set player_get_item 5 %player_name%'
+      - '[sound] BLOCK_CHEST_CLOSE 1 2'
+      - '[close]'
+  'longsword':
+    material: EPICFIGHT_GOLDEN_LONGSWORD
+    slot: 6
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cЗолотой длинный меч'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы выбрать!'
+    click_commands:
+      - '[console] svar set player_get_item 6 %player_name%'
+      - '[sound] BLOCK_CHEST_CLOSE 1 2'
+      - '[close]'
+  'dagger':
+    material: EPICFIGHT_GOLDEN_DAGGER
+    slot: 7
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&cЗолотой кинжал'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы выбрать!'
+    click_commands:
+      - '[console] svar set player_get_item 7 %player_name%'
+      - '[sound] BLOCK_CHEST_CLOSE 1 2'
+      - '[close]'

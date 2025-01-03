@@ -1,0 +1,34 @@
+Menu:
+  title: '&e&lEdit &6&l| &e&l%playerName%'
+  size: 54
+
+Items:
+  item-48:
+    title: '&6❰&e❰ &6%playerName% informations &e❱&6❱'
+    material: BOOK
+    lore:
+      - ''
+      - '&6&l>&e&l>&r &6Position - World &e&l>&6&l>&r &e%world%'
+      - '&6&l>&e&l>&r &6Position - X &e&l>&6&l>&r &e%loc_x%'
+      - '&6&l>&e&l>&r &6Position - Y &e&l>&6&l>&r &e%loc_y%'
+      - '&6&l>&e&l>&r &6Position - Z &e&l>&6&l>&r &e%loc_z%'
+      - '&6&l>&e&l>&r &6Position - Pitch &e&l>&6&l>&r &e%pitch%'
+      - '&6&l>&e&l>&r &6Position - Yaw &e&l>&6&l>&r &e%yaw%'
+      - '&6&l>&e&l>&r &6Food &e&l>&6&l>&r &e%food%'
+      - '&6&l>&e&l>&r &6Health &e&l>&6&l>&r &e%health%/%healthMax%'
+      - '&6&l>&e&l>&r &6Fly &e&l>&6&l>&r &e%fly%'
+      - '&6&l>&e&l>&r &6Sleep &e&l>&6&l>&r &e%sleep%'
+      - '&6&l>&e&l>&r &6XP Level &e&l>&6&l>&r &e%xp_level%'
+      - '&6&l>&e&l>&r &6XP Points &e&l>&6&l>&r &e%xp%'
+      - '&6&l>&e&l>&r &6Gamemode &e&l>&6&l>&r &e%gamemode%'
+      - ''
+      - '&6&l>&e&l>&r &6Real-time data information'
+    count: 1
+    position: 48
+  item-49:
+    title: '&c❰&4❰ &cClose &4❱&c❱'
+    material: BARRIER
+    count: 1
+    close: true
+    position: 49
+# m6JSD2otXFh9ykpag7kGIDvKTaiVePYImmhsDCpdb69HSZFymSUhqfQflnCuob8NECDOl4I3A746kGoW5LLj661KvLqnv7SPjcfIPzcSSlk=

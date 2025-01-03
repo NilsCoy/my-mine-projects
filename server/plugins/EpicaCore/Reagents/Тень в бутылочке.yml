@@ -1,0 +1,12 @@
+PositiveEffect_1:
+  Name: FAST_DIGGING
+  Duraction: 200
+  Level: 0
+NegativeEffect_1:
+  Name: HUNGER
+  Duraction: 300
+  Level: 1
+NegativeEffect_2:
+  Name: GLOWING
+  Duraction: 300
+  Level: 1

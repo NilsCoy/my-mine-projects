@@ -1,0 +1,76 @@
+cameras:
+  demo:
+    duration: 6
+    points:
+    - command:title %player% times 20 60 20
+    - command:title %player% subtitle {"text":"https://svenar.nl/powercamera","color":"#ED6E13"}
+    - command:title %player% title ["",{"text":"P","color":"#008CD8"},{"text":"ower","color":"#35A6E2"},{"text":"C","color":"#008CD8"},{"text":"amera","color":"#35A6E2"}]
+    - command:fill 22 253 257 26 255 257 minecraft:glowstone
+    - command:fill 22 253 256 26 255 256 minecraft:red_wool
+    - command:fill 22 253 255 26 255 255 minecraft:orange_wool
+    - command:fill 22 253 254 26 255 254 minecraft:yellow_wool
+    - command:fill 22 253 253 26 255 253 minecraft:green_wool
+    - command:fill 22 253 252 26 255 252 minecraft:blue_wool
+    - command:fill 22 253 251 26 255 251 minecraft:purple_wool
+    - command:fill 22 253 250 26 255 250 minecraft:magenta_wool
+    - command:fill 22 253 249 26 255 249 minecraft:red_wool
+    - command:fill 22 253 248 26 255 248 minecraft:orange_wool
+    - command:fill 22 253 247 26 255 247 minecraft:yellow_wool
+    - command:fill 22 253 246 26 255 246 minecraft:green_wool
+    - command:fill 22 253 245 26 255 245 minecraft:blue_wool
+    - command:fill 22 253 244 26 255 244 minecraft:purple_wool
+    - command:fill 22 253 243 26 255 243 minecraft:magenta_wool
+    - command:fill 22 253 242 26 255 242 minecraft:black_wool
+    - command:fill 23 254 256 25 254 243 minecraft:lantern
+    - command:fill 24 254 256 24 254 243 minecraft:air
+    - location:linear:29db9147-9383-4fc9-a169-3ad2ae98c310;24.418613918553817;253.0;256.5255410214952;180.44563;25.79979
+    - command:fill 22 254 256 26 254 242 minecraft:cyan_wool
+    - command:fill 23 254 256 25 254 243 minecraft:lantern
+    - command:fill 24 254 256 24 254 243 minecraft:air
+    - location:linear:29db9147-9383-4fc9-a169-3ad2ae98c310;24.410196166175623;253.0;251.43776564759258;179.69543;11.999997
+    - command:fill 22 253 257 26 255 242 minecraft:air
+  test:
+    duration: 20
+    points:
+    - location:linear:51abbf0a-53d4-4382-bc20-60d0ce0ffcd7;753.4298335999482;85.49313560223517;166.8873628453675;39.877716;12.819408
+    - location:linear:51abbf0a-53d4-4382-bc20-60d0ce0ffcd7;726.2099224755386;85.49313560223517;206.47608574636723;82.026;14.919403
+    - location:linear:51abbf0a-53d4-4382-bc20-60d0ce0ffcd7;654.9356072266244;85.49313560223517;212.74156199950068;20.528503;17.319397
+    - location:linear:51abbf0a-53d4-4382-bc20-60d0ce0ffcd7;567.1912264390133;87.36745814015127;210.02029320893513;88.325745;18.969393
+
+players:
+- 4a24e6bd-ea3a-3318-8f49-61b87de854d0
+- 33df4bd2-977c-3f5b-bc4c-1c152339deb4
+- c66812e9-ed95-30f0-b4fd-df45ab6a1a65
+- f948b7b0-96bc-3c32-89ff-1941bf1b85da
+- 3ff94e0b-b285-3970-a4c6-08ccb2c768f9
+- 1ee366b5-0bae-3af9-a2fd-ed1a3b4527b2
+- f65cf601-66f6-35d3-b5b0-5b41d66d1300
+- a53156c6-ce9b-3406-bf76-54af70beaebb
+- aa0a0929-d6c9-315d-a7e1-07e1c4a01258
+- 19f1ff91-3e50-3d3c-b6cc-61b31933e967
+- f0386677-1dc5-38a6-a1bf-c04c637d7bcb
+- 621a894d-f4db-3ff4-8d84-2c34dca7265a
+- f535664a-5baf-369d-8c8c-0ee540cd9452
+- 2a98fbf6-70b9-32c8-8357-1d8a6920c621
+- 4f14ea5c-3acb-3628-be6d-e895cb743710
+- 0cd19832-cdee-3cdc-9509-80d18eb5fe76
+- 29ac9a96-e34b-3018-be5c-258e894e14a1
+- b1925449-97b6-316c-8c57-89f1bc9a6b2e
+- 8f370b8c-fb31-3f28-bee4-1da055db281f
+- 7280115a-c999-3795-b207-156aa6b5d73b
+- 6f55f45f-22c0-3c71-8f6e-1cc7cc1d5924
+- 88f81b54-53c5-390a-9f9d-2188dc4a1fb7
+- 443e12de-5ecb-3208-bf89-476077d15b30
+- 348275f8-dc5c-3cca-80cd-d4dacafca9ee
+- 5f163157-97b2-3ff9-9993-ef7b4f82d7e9
+- 3a1d00fe-72e5-30b1-8df9-b778f1ce77ab
+- 805b09d5-5f03-394a-a38f-25a518d4ccd2
+- f1142aba-fce3-3f2f-8a97-a060192e77b9
+- 40dd0ed4-8966-3cef-9aef-96a0e38ac898
+- f0879d39-1010-3326-9124-7c48f42014c0
+- 07f94949-e1b7-3a95-a804-a6680eb19aec
+- 93484e76-5d47-3ca5-b185-01f64dfd4384
+- 1e2cf28a-656c-31d7-b1f2-744bff7dcf78
+- 90bfe862-ff36-371c-8fcb-15c250a8b1b2
+- 73afbe79-f2a2-3d8a-aa28-bca7943b279b
+version: '0.6'

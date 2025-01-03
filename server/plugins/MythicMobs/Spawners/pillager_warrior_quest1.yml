@@ -1,0 +1,14 @@
+pillager_warrior_quest1:
+  MobName: pillager_warrior_quest
+  World: world
+  X: 9516
+  Y: 87
+  Z: 10016
+  Yaw: 0.0
+  Pitch: 0.0
+  MobLevel: '1'
+  Cooldown: 1
+  ActivationRange: 100.0
+  LeashRange: 100.0
+  ActiveMobs: 1
+  Warmup: 0

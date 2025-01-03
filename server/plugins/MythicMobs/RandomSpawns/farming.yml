@@ -1,0 +1,64 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+bush1:
+  Action: ADD
+  MobType: bush
+  Chance: 0.04
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=village1,grave1,grave2,wolf1,town1,pillager_camp1,pillager_camp2,arena1} false
+  - region{r=loc1,loc2,loc3} true
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - inside false
+  - mobsinchunk{a=<1} true
+  PositionType: LAND
+flower1:
+  Action: ADD
+  MobType: flower
+  Chance: 0.03
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=village1,grave1,grave2,wolf1,town1,pillager_camp1,pillager_camp2,arena1} false
+  - region{r=loc3,loc4} true
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - inside false
+  - mobsinchunk{a=<1} true
+  PositionType: LAND
+brown_mushroom1:
+  Action: ADD
+  MobType: brown_mushroom
+  Chance: 0.08
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=village1,grave1,grave2,wolf1,town1,pillager_camp1,pillager_camp2,arena1} false
+  - region{r=mushrooms1,mushrooms2} true
+  - playernotwithin{d=8} true
+  - onblock{m=MYCELIUM} true
+  #- inside false
+  - mobsinchunk{a=<1} true
+  PositionType: LAND
+brown_mushroom2:
+  Action: ADD
+  MobType: brown_mushroom
+  Chance: 0.05
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=village1,grave1,grave2,wolf1,town1,pillager_camp1,pillager_camp2,arena1} false
+  - region{r=loc3,loc4} true
+  - playernotwithin{d=8} true
+  - onblock{m=PODZOL} true
+  - inside false
+  - mobsinchunk{a=<1} true
+  PositionType: LAND

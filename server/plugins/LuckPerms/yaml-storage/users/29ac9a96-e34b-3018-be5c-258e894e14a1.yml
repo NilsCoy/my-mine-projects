@@ -1,0 +1,8 @@
+uuid: 29ac9a96-e34b-3018-be5c-258e894e14a1
+name: DozyJazzy
+primary-group: default
+permissions:
+- promo_horizon
+- titul_17
+parents:
+- default

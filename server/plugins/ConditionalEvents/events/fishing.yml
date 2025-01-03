@@ -1,0 +1,117 @@
+Events:
+  fishing_start:
+    type: custom
+    custom_event_data:
+      event: org.bukkit.event.player.PlayerFishEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%state%;getState()'
+    conditions:
+    - '%servervariables_value_fishing_active% == 0 and %state% == CAUGHT_FISH execute actions1'
+    - '%servervariables_value_fishing_active% == 1 and %state% != BITE and %state% != FAILED_ATTEMPT and %servervariables_value_fishing_point% != %servervariables_value_fishing_finish% execute actions2'
+    - '%servervariables_value_fishing_active% == 1 and %state% != BITE and %state% != FAILED_ATTEMPT and %servervariables_value_fishing_point% == %servervariables_value_fishing_finish% and %servervariables_value_fishing_progress% != %servervariables_value_fishing_max_progress% execute actions3'
+    - '%servervariables_value_fishing_active% == 1 and %state% != BITE and %state% != FAILED_ATTEMPT and %servervariables_value_fishing_point% == %servervariables_value_fishing_finish% and %servervariables_value_fishing_progress% >= %servervariables_value_fishing_max_progress% execute actions5'
+    - '%servervariables_value_fishing_active% == 1 execute actions4'
+    actions:
+      actions1:
+      - 'cancel_event: true'
+      - 'console_command: svar set fishing_active 1 %player%'
+      - 'console_command: svar set fishing_point 1 %player%'
+      - 'console_command: svar set fishing_finish %random_2_10% %player%'
+      - 'console_command: svar set fishing_progress 0 %player%'
+      - 'console_command: svar set fishing_max_progress 2 %player%'
+      actions2:
+      - 'console_command: svar set fishing_point 0 %player%'
+      - 'console_command: svar set fishing_finish 0 %player%'
+      - 'console_command: svar set fishing_active 0 %player%'
+      - 'console_command: svar set fishing_point_direction 1 %player%'
+      - 'console_command: svar set fishing_progress 0 %player%'
+      - 'playsound: ENTITY_VILLAGER_HURT;1;1'
+      - 'remove_potion_effect: JUMP'
+      - 'remove_potion_effect: SLOW'
+      actions3:
+      - 'cancel_event: true'
+      - 'console_command: svar set fishing_finish %random_1_10% %player%'
+      - 'console_command: svar add fishing_progress 1 %player%'
+      actions5:
+      - 'console_command: svar set fishing_point 0 %player%'
+      - 'console_command: svar set fishing_finish 0 %player%'
+      - 'console_command: svar set fishing_active 0 %player%'
+      - 'console_command: svar set fishing_point_direction 1 %player%'
+      - 'console_command: svar add fishing_progress 1 %player%'
+      - 'playsound: ENTITY_PLAYER_LEVELUP;1;2'
+      - 'remove_potion_effect: JUMP'
+      - 'remove_potion_effect: SLOW'
+      - 'call_event: fishing_reward'
+      actions4:
+      - 'cancel_event: true'
+      # default:
+      # - 'message: %state%'
+
+  fishing_reward:
+    type: call
+    conditions:
+    - '%worldguard_region_name% == tutotrial_jail or %worldguard_region_name% == tutorial_cave execute tutorial'
+    - '%player_has_permission_sponsor% == yes execute action1'
+    - '%player_has_permission_sponsor% == no execute action2'
+    actions:
+      tutorial:
+      - 'player_command_as_op: mm test cast -s fishing_tutorial'
+      - 'console_command: svar add player_exp 1 %player%'
+      - 'console_command: svar add statistics_fishing 1 %player%'
+      - 'call_event: notify_fisher'
+      - 'call_event: notify_exp;%exp%=1'
+      action1:
+      - 'player_command_as_op: mm test cast -s fishing1'
+      - 'wait_ticks: 10'
+      - 'player_command_as_op: mm test cast -s fishing1'
+      - 'console_command: svar add player_exp 2 %player%'
+      - 'console_command: svar add statistics_fishing 1 %player%'
+      - 'call_event: notify_fisher'
+      - 'call_event: notify_exp;%exp%=2'
+      action2:
+      - 'player_command_as_op: mm test cast -s fishing1'
+      - 'console_command: svar add player_exp 1 %player%'
+      - 'console_command: svar add statistics_fishing 1 %player%'
+      - 'call_event: notify_fisher'
+      - 'call_event: notify_exp;%exp%=1'
+
+  fishing_time:
+    type: repetitive
+    repetitive_time: 5
+    conditions:
+    - '%servervariables_value_fishing_active% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'call_event: fishing_play'
+
+  fishing_play:
+    type: call
+    conditions:
+    - '%servervariables_value_fishing_point% == 10 execute actions3'
+    - '%servervariables_value_fishing_point% == 1 execute actions4'
+    - '%servervariables_value_fishing_point_direction% == 0 execute actions1'
+    - '%servervariables_value_fishing_point_direction% == 1 execute actions2'
+    actions:
+      actions1:
+      - 'console_command: svar add fishing_point -1 %player%'
+      - 'title: 0;40;10;&9🎣 &r%javascript_fishing_bar%&9 🌊;%javascript_fishing_progress%'
+      - 'give_potion_effect: JUMP;200;200;false'
+      - 'give_potion_effect: SLOW;200;200;false'
+      actions2:
+      - 'console_command: svar add fishing_point 1 %player%'
+      - 'title: 0;40;10;&9🎣 &r%javascript_fishing_bar%&9 🌊;%javascript_fishing_progress%'
+      - 'give_potion_effect: JUMP;200;200;false'
+      - 'give_potion_effect: SLOW;200;200;false'
+      actions3:
+      - 'console_command: svar set fishing_point_direction 0 %player%'
+      - 'console_command: svar add fishing_point -1 %player%'
+      - 'title: 0;40;10;&9🎣 &r%javascript_fishing_bar%&9 🌊;%javascript_fishing_progress%'
+      - 'give_potion_effect: JUMP;200;200;false'
+      - 'give_potion_effect: SLOW;200;200;false'
+      actions4:
+      - 'console_command: svar set fishing_point_direction 1 %player%'
+      - 'console_command: svar add fishing_point 1 %player%'
+      - 'title: 0;40;10;&9🎣 &r%javascript_fishing_bar%&9 🌊;%javascript_fishing_progress%'
+      - 'give_potion_effect: JUMP;200;200;false'
+      - 'give_potion_effect: SLOW;200;200;false'

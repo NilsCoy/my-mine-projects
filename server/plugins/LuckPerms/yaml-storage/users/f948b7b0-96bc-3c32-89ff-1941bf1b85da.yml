@@ -1,0 +1,21 @@
+uuid: f948b7b0-96bc-3c32-89ff-1941bf1b85da
+name: fofo15
+primary-group: default
+permissions:
+- mcpets.pet_horse2
+- mcpets.pet_horse3
+- promo_horizon
+- skill_dodge2
+- skill_dodge3
+- skill_strength1
+- titul_1
+- titul_11
+- titul_12
+- titul_14
+- titul_15
+- titul_17
+- titul_2
+parents:
+- sponsor:
+    expiry: 1729598460
+- default

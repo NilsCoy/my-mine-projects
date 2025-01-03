@@ -1,0 +1,224 @@
+events:
+  villager1_start: "conversation villager1"
+  villager1: "tag add villager1"
+  fisher1: "tag add fisher1"
+  fisher1_item1_give: "command ii give %player% fisher_fishing_rod"
+  fisher1_item2_give: "command ii give %player% lucky_coin"
+  fisher1_item3_remove: "take fish_rod"
+  fisher1_item4_remove: "take fish_rod_new"
+  villager2_quest_item1_remove: "take berries:30"
+  villager2_quest_item2_give: "command ii give %player% case_eat 5"
+  villager2_quest_item3_give: "command svar add player_money 500 %player%"
+  villager2_quest: "tag add villager2_quest"
+  villager2_quest_remove: "tag delete villager2_quest"
+  villager2_quest_completed: "tag add villager2_quest_completed"
+  trader1_start: "tag add trader1_start"
+  trader2_start: "tag add trader2_start"
+  quest_started: "notify &6&lВы взяли квест!\\n&7Посмотрите информацию в &lзаданиях&7. io:title"
+  quest_updated: "notify &6&lКвест обновлен!\\n&7Посмотрите информацию в &lзаданиях&7. io:title"
+  quest_finished: "notify &6&lКвест выполнен!\\n&7Посмотрите информацию в &lзаданиях&7. io:title"
+  villager2_quest_notify: "notify &fПолученные награды: \\n&7  - &bЯщик с едой &7x5 \\n&7  - &e500&6ⓒ "
+  smith_quest_notify: "notify &fПолученные награды: \\n&7  - &e1500&6ⓒ "
+  horse_quest_notify: "notify &fПолученные награды: \\n&7  - &e500&6ⓒ \\n&7  - &fВозможность купить осла. "
+  
+  quest_objective: objective add variables
+
+  villager2_name_state1: 'variable variables villager2-name "Помощь фермерше"'
+  villager2_lore1_state1: 'variable variables villager2-lore1 "Фермерша из Фриреста попросила"'
+  villager2_lore2_state1: 'variable variables villager2-lore2 "у вас помощи."'
+  villager2_lore3_state1: 'variable variables villager2-lore3 "Ей требуется принести 30 лесных"'
+  villager2_lore4_state1: 'variable variables villager2-lore4 "ягод для готовки."'
+  villager2_lore5_state1: 'variable variables villager2-lore5 ""'
+  villager2_state1: "folder villager2_name_state1,villager2_lore1_state1,villager2_lore2_state1,villager2_lore3_state1,villager2_lore4_state1,villager2_lore5_state1"
+
+
+
+  sell: command dm open menu_sell %player%
+  equip: command dm open menu_buy_equip %player%
+  eat: command dm open menu_buy_eat %player%
+  blacksmith: command dm open menu_buy_smith %player%
+  smith_start: tag add smith_start
+  smith_quest1: tag add smith_quest1
+  smith_quest1_completed: tag add smith_quest1_completed
+  smith_quest2: tag add smith_quest2
+  smith_quest2_completed: tag add smith_quest2_completed
+  smith_quest3: tag add smith_quest3
+  smith_quest3_completed: tag add smith_quest3_completed
+  take_coal: take coal:20
+  take_iron_ingot: take iron_ingot:5
+  take_steel_ingot: take steel_ingot:1
+  give_pickaxe: command ii give %player% pickaxe1 1
+  give_blast_furnace: command mm items give %player% blast_furnace
+  give_anvil: command mm items give %player% anvil
+  give_hammer: command ii give %player% hammer 1
+  give_money1: command svar add player_money 1500 %player%
+  give_exp1: command svar add player_exp 50 %player%
+  give_exp2: command svar add player_exp 100 %player%
+  smith_q1_compass_on: command calcomp toggle %player% village1_smith_q1 enable
+  smith_q1_compass_off: command calcomp toggle %player% village1_smith_q1 disable
+
+  smith_quest_name_state1: 'variable variables smith-quest-name "Добыча угля"'
+  smith_quest_lore1_state1: 'variable variables smith-quest-lore1 "Кузнец хочет проверить вас,"'
+  smith_quest_lore2_state1: 'variable variables smith-quest-lore2 "ему требуется уголь для плавки метала,"'
+  smith_quest_lore3_state1: 'variable variables smith-quest-lore3 "по-этому он попросил вас принести 20 штук."'
+  smith_quest_lore4_state1: 'variable variables smith-quest-lore4 "Добыть уголь можно в шахте,"'
+  smith_quest_lore5_state1: 'variable variables smith-quest-lore5 "что находится дальше по дороге."'
+  smith_quest_state1: "folder smith_quest_name_state1,smith_quest_lore1_state1,smith_quest_lore2_state1,smith_quest_lore3_state1,smith_quest_lore4_state1,smith_quest_lore5_state1"
+
+  smith_quest_name_state2: 'variable variables smith-quest-name "Раскаленный метал"'
+  smith_quest_lore1_state2: 'variable variables smith-quest-lore1 "Кузнец вновь подбросил вам работы,"'
+  smith_quest_lore2_state2: 'variable variables smith-quest-lore2 "ему требуется принести 5 слитков железа,"'
+  smith_quest_lore3_state2: 'variable variables smith-quest-lore3 "что можно сделать, выплавляя руду в печи,"'
+  smith_quest_lore4_state2: 'variable variables smith-quest-lore4 "которую он вам дал."'
+  smith_quest_lore5_state2: 'variable variables smith-quest-lore5 "Железо можно добыть в той же шахте."'
+  smith_quest_state2: "folder smith_quest_name_state2,smith_quest_lore1_state2,smith_quest_lore2_state2,smith_quest_lore3_state2,smith_quest_lore4_state2,smith_quest_lore5_state2"
+
+  smith_quest_name_state3: 'variable variables smith-quest-name "Куй пока горячо"'
+  smith_quest_lore1_state3: 'variable variables smith-quest-lore1 "Кузнец видит ваш интузиазм в кузнечном"'
+  smith_quest_lore2_state3: 'variable variables smith-quest-lore2 "деле, он хочет чтобы вы выковали стальной"'
+  smith_quest_lore3_state3: 'variable variables smith-quest-lore3 "слиток на наковальне с помощью молота."'
+  smith_quest_lore4_state3: 'variable variables smith-quest-lore4 "Вам потребуется пройти прошлые этапы,"'
+  smith_quest_lore5_state3: 'variable variables smith-quest-lore5 "чтобы создать свою первую сталь!"'
+  smith_quest_state3: "folder smith_quest_name_state3,smith_quest_lore1_state3,smith_quest_lore2_state3,smith_quest_lore3_state3,smith_quest_lore4_state3,smith_quest_lore5_state3"
+  
+  guard_start: tag add guard_start
+  cave1_pass: command rg addmember -w "world" cave1_pass %player%
+  
+  
+  # smith_q1_start: tag add smith_q1_start
+  # smith_q1_1: tag add smith_q1_1
+  # smith_q1_2: tag add smith_q1_2
+  # smith_q1_2_finish: tag add smith_q1_2_finish
+  # smith_q1_finish: tag add smith_q1_finish
+  # smith_q2_start: tag add smith_q2_start
+  # smith_q2_finish: tag add smith_q2_finish
+  # smith_q3_start: tag add smith_q3_start
+  # smith_q3_finish: tag add smith_q3_finish
+  # smith_q3: objective add smith_q3
+  # smith_q3_reward: tag add smith_q3
+  # guard1_q1_start: tag add guard1_q1_start
+  # guard1_q1_finish: tag add guard1_q1_finish
+  # cave1: tag add cave1
+  # smith_q1_talk: tag add smith_q1_talk
+  # take_coal: take coal:20
+  # take_iron_ingot: take iron_ingot:5
+  # take_fish: take fish:15
+  # cave1_pass: command rg addmember -w "world" cave1_pass %player%
+  # give_pickaxe1: command ii give %player% pickaxe1 1
+  # give_blast_furnace: command mm items give %player% blast_furnace
+  # give_anvil: command mm items give %player% anvil
+  # give_hammer: command ii give %player% hammer 1
+  # give_money1: command svar add player_money 100 %player%
+  # give_exp1: command svar add player_exp 50 %player%
+  # give_exp2: command svar add player_exp 100 %player%
+
+  # smith_q1_compass_on: command calcomp toggle %player% village1_smith_q1 enable
+  # smith_q1_compass_off: command calcomp toggle %player% village1_smith_q1 disable
+  # smith_q2_compass_on: command calcomp toggle %player% village1_smith_q2 enable
+  # smith_q2_compass_off: command calcomp toggle %player% village1_smith_q2 disable
+
+  # smith_quest_objective: objective add variables
+
+  # test: variable variables test-2 "Тест Тест"
+
+  # smith_quest_name_state1: 'variable variables smith-quest-name "Добыча угля"'
+  # smith_quest_lore1_state1: 'variable variables smith-quest-lore1 "Кузнец попросил у вас помощи,"'
+  # smith_quest_lore2_state1: 'variable variables smith-quest-lore2 "ему требуется уголь для плавки метала,"'
+  # smith_quest_lore3_state1: 'variable variables smith-quest-lore3 "по-этому он попросил вас принести 20 штук."'
+  # smith_quest_lore4_state1: 'variable variables smith-quest-lore4 "Добыть уголь можно в шахте,"'
+  # smith_quest_lore5_state1: 'variable variables smith-quest-lore5 "что находится дальше по дороге."'
+  # smith_quest_state1: "folder smith_quest_objective,smith_quest_name_state1,smith_quest_lore1_state1,smith_quest_lore2_state1,smith_quest_lore3_state1,smith_quest_lore4_state1,smith_quest_lore5_state1"
+
+  # smith_quest_name_state2: 'variable variables smith-quest-name "???"'
+  # smith_quest_lore1_state2: 'variable variables smith-quest-lore1 "Поговорите с кузнецом в деревне,"'
+  # smith_quest_lore2_state2: 'variable variables smith-quest-lore2 "чтобы продолжить квест."'
+  # smith_quest_lore3_state2: 'variable variables smith-quest-lore3 " "'
+  # smith_quest_lore4_state2: 'variable variables smith-quest-lore4 " "'
+  # smith_quest_lore5_state2: 'variable variables smith-quest-lore5 " "'
+  # smith_quest_state2: "folder smith_quest_name_state2,smith_quest_lore1_state2,smith_quest_lore2_state2,smith_quest_lore3_state2,smith_quest_lore4_state2,smith_quest_lore5_state2"
+
+  # smith_quest_name_state3: 'variable variables smith-quest-name "Раскаленный метал"'
+  # smith_quest_lore1_state3: 'variable variables smith-quest-lore1 "Кузнец вновь попросил у вас помощи,"'
+  # smith_quest_lore2_state3: 'variable variables smith-quest-lore2 "ему требуется принести 5 слитков железа,"'
+  # smith_quest_lore3_state3: 'variable variables smith-quest-lore3 "что можно сделать, выплавляя руду в печи,"'
+  # smith_quest_lore4_state3: 'variable variables smith-quest-lore4 "которую он вам дал."'
+  # smith_quest_lore5_state3: 'variable variables smith-quest-lore5 " "'
+  # smith_quest_state3: "folder smith_quest_name_state3,smith_quest_lore1_state3,smith_quest_lore2_state3,smith_quest_lore3_state3,smith_quest_lore4_state3,smith_quest_lore5_state3"
+
+  # smith_quest_name_state4: 'variable variables smith-quest-name "???"'
+  # smith_quest_lore1_state4: 'variable variables smith-quest-lore1 "Поговорите с кузнецом в деревне,"'
+  # smith_quest_lore2_state4: 'variable variables smith-quest-lore2 "чтобы продолжить квест."'
+  # smith_quest_lore3_state4: 'variable variables smith-quest-lore3 " "'
+  # smith_quest_lore4_state4: 'variable variables smith-quest-lore4 " "'
+  # smith_quest_lore5_state4: 'variable variables smith-quest-lore5 " "'
+  # smith_quest_state4: "folder smith_quest_name_state4,smith_quest_lore1_state4,smith_quest_lore2_state4,smith_quest_lore3_state4,smith_quest_lore4_state4,smith_quest_lore5_state4"
+
+  # smith_quest_name_state5: 'variable variables smith-quest-name "Не упокоенные души предков"'
+  # smith_quest_lore1_state5: 'variable variables smith-quest-lore1 "Кузнец рассказал вам, что в последнее время "'
+  # smith_quest_lore2_state5: 'variable variables smith-quest-lore2 "нежить стала чаще появляться на местном кладбище,"'
+  # smith_quest_lore3_state5: 'variable variables smith-quest-lore3 "нужно сходить и избавиться от нее."'
+  # smith_quest_lore4_state5: 'variable variables smith-quest-lore4 "Убей 10 скелетов."'
+  # smith_quest_lore5_state5: 'variable variables smith-quest-lore5 " "'
+  # smith_quest_state5: "folder smith_quest_name_state5,smith_quest_lore1_state5,smith_quest_lore2_state5,smith_quest_lore3_state5,smith_quest_lore4_state5,smith_quest_lore5_state5"
+
+  # smith_quest_name_state6: 'variable variables smith-quest-name "???"'
+  # smith_quest_lore1_state6: 'variable variables smith-quest-lore1 "Поговорите с кузнецом в деревне,"'
+  # smith_quest_lore2_state6: 'variable variables smith-quest-lore2 "чтобы продолжить квест."'
+  # smith_quest_lore3_state6: 'variable variables smith-quest-lore3 " "'
+  # smith_quest_lore4_state6: 'variable variables smith-quest-lore4 " "'
+  # smith_quest_lore5_state6: 'variable variables smith-quest-lore5 " "'
+  # smith_quest_state6: "folder smith_quest_name_state6,smith_quest_lore1_state6,smith_quest_lore2_state6,smith_quest_lore3_state6,smith_quest_lore4_state6,smith_quest_lore5_state6"
+
+  # guard1_quest_name_state1: 'variable variables guard1-quest-name "Пропуск в шахту"'
+  # guard1_quest_lore1_state1: 'variable variables guard1-quest-lore1 "Стражник не пускает нас в местную пещеру,"'
+  # guard1_quest_lore2_state1: 'variable variables guard1-quest-lore2 "чтобы угодить ему мы взялись принести ему рыбы."'
+  # guard1_quest_lore3_state1: 'variable variables guard1-quest-lore3 "Принеси 15 любой рыбы чтобы пройти в шахту."'
+  # guard1_quest_lore4_state1: 'variable variables guard1-quest-lore4 " "'
+  # guard1_quest_lore5_state1: 'variable variables guard1-quest-lore5 " "'
+  # guard1_quest_state1: "folder guard1_quest_name_state1,guard1_quest_lore1_state1,guard1_quest_lore2_state1,guard1_quest_lore3_state1,guard1_quest_lore4_state1,guard1_quest_lore5_state1"
+
+  # guard1_quest_name_state2: 'variable variables guard1-quest-name "???"'
+  # guard1_quest_lore1_state2: 'variable variables guard1-quest-lore1 "Поговорите со стражником в шахте,"'
+  # guard1_quest_lore2_state2: 'variable variables guard1-quest-lore2 "чтобы продолжить квест."'
+  # guard1_quest_lore3_state2: 'variable variables guard1-quest-lore3 " "'
+  # guard1_quest_lore4_state2: 'variable variables guard1-quest-lore4 " "'
+  # guard1_quest_lore5_state2: 'variable variables guard1-quest-lore5 " "'
+  # guard1_quest_state2: "folder guard1_quest_name_state2,guard1_quest_lore1_state2,guard1_quest_lore2_state2,guard1_quest_lore3_state2,guard1_quest_lore4_state2,guard1_quest_lore5_state2"
+  
+  
+  
+  
+  
+  
+  # fisher_first_talk: tag add fisher_first_talk
+  fisher: command dm open menu_sell_fish %player%
+  
+  # trader2_first_talk: tag add trader2_first_talk
+  hats: command dm open menu_buy_hats %player%
+  
+  horse_start: tag add horse_start
+  horse_menu: command dm open menu_buy_horse %player%
+  horse_quest: tag add horse_quest
+  horse_quest_finish: tag add horse_quest_finish
+  horse_quest_completed: tag add horse_quest_completed
+  horse_quest_obj: objective add horse_quest
+  horse: tag add horse
+  
+  horse_compass_on: command calcomp toggle %player% horse1_quest enable
+  horse_compass_off: command calcomp toggle %player% horse1_quest disable
+
+  horse_quest_name_state1: 'variable variables horse-quest-name "Царь леса"'
+  horse_quest_lore1_state1: 'variable variables horse-quest-lore1 "Конюх попросил вас убить волкодава,"'
+  horse_quest_lore2_state1: 'variable variables horse-quest-lore2 "вожака местных волков, чтобы получить"'
+  horse_quest_lore3_state1: 'variable variables horse-quest-lore3 "возможность купить ездового осла."'
+  horse_quest_lore4_state1: 'variable variables horse-quest-lore4 "Волкодава можно найти в чаще леса,"'
+  horse_quest_lore5_state1: 'variable variables horse-quest-lore5 "окруженном холмами."'
+  horse_quest_state1: "folder horse_quest_name_state1,horse_quest_lore1_state1,horse_quest_lore2_state1,horse_quest_lore3_state1,horse_quest_lore4_state1,horse_quest_lore5_state1"
+
+  horse_quest_name_state2: 'variable variables horse-quest-name "Царь леса"'
+  horse_quest_lore1_state2: 'variable variables horse-quest-lore1 "Вернитесь к конюху в деревне"'
+  horse_quest_lore2_state2: 'variable variables horse-quest-lore2 "и расскажите о своих успехах"'
+  horse_quest_lore3_state2: 'variable variables horse-quest-lore3 "в победе над волкодавом"'
+  horse_quest_lore4_state2: 'variable variables horse-quest-lore4 " "'
+  horse_quest_lore5_state2: 'variable variables horse-quest-lore5 " "'
+  horse_quest_state2: "folder horse_quest_name_state2,horse_quest_lore1_state2,horse_quest_lore2_state2,horse_quest_lore3_state2,horse_quest_lore4_state2,horse_quest_lore5_state2"

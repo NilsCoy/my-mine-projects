@@ -1,0 +1,38 @@
+variables:
+  rewards_day_reward_can:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 1
+  rewards_day_reward_have:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  rewards_day_reward_stack:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 1
+  rewards_day_reward_count:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  rewards_day_reward_last:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+
+  rewards_battle_pass_level:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  rewards_battle_pass_level_last:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  rewards_battle_pass_xp:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  rewards_battle_pass_max_xp:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 100

@@ -1,0 +1,27 @@
+chest1_3:
+  World: world
+  X: 1676
+  Y: 86
+  Z: -112
+  Yaw: 0.0
+  Pitch: 0.0
+  Breakable: false
+  MobName: chest1
+  Radius: 0.0
+  RadiusY: 0.0
+  UseTimer: true
+  MaxMobs: '1'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 600
+  Warmup: 0
+  ActivationRange: 50.0
+  ScalingRange: 25.0
+  LeashRange: 32.0
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  CheckForPlayers: true
+  ShowFlames: false
+  Conditions: &id003 []
+  SpawnConditions: *id003
+  CooldownTimer: 1

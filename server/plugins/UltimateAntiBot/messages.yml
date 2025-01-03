@@ -1,0 +1,189 @@
+version: 4.4
+prefix: "&4&LU&c&LA&4&LB&r &7» "
+onping: #<-- works only on bungeecord!
+  normal: "&c&l◆ &f&l$1&7/&c&l$2"
+  ready: "&f&l◆ &c&lVERIFIED!"
+commands:
+  perms: "&fYou dont have &cpermission&f to do this!"
+  cleared: "&c$1&f has been &ccleared! "
+  added: "&c$1&f has been added in the &c$2"
+  removed: "&c$1&f has been removed from the &c$2"
+  wrong-args: "&fInvalid argument! Use &c/uab help!"
+  no-blacklist: "&cThis ID does not appear to be associated with anything!"
+  invalid-log-value: "&cThe provided value is not associated to a log!"
+  reload: "&fThe config and messages have been reloaded! This command is not recommended and could cause problems, a server restart is suggested!"
+analyzer:
+  increase: "&a↑ &7- &f%old% &c➜ &f%new% &7- &c%perc%%"
+  decrease: "&c↓ &7- &f%old% &c➜ &f%new% &7- &c%perc%%"
+notifications:
+  action: "&aToggled ActionBar notifications!"
+  title: "&aToggled Title notifications!"
+  bossbar: "&aToggled BossBar notifications"
+#(!) PLACEHOLDERS (!)
+#These placeholder can be used in the actionbar,title  and stats section below!
+#%bots% - return botpersecond
+#%queue% - return queue
+#%pings% - return pingpersecond
+#%whitelist% - return whitelist size
+#%blacklist% - return blacklist size
+#%type% - return current attacktype
+#%checks% - return checkspersecond
+#%latency% - return server latency (require latency thread enabled)
+#%packets% - return packetspersecond
+#%totalpackets% - return totalpackets
+#%totalbots% - return totalbots
+#%totalpings% - return totalpings
+#%prefix% - return prefix
+#%underverification% - returns player under verification
+#%attack-types% - return a list of detected attack types (beta)
+actionbar:
+  offline: "%prefix%&cJoin&7/&cPing &f%bots%&7/&f%pings% &4- &cVerify &f%underverification% &4- &cWhitelist &f%whitelist% » &c&l%type%"
+  antibot: "%prefix%&cBot&7/&cPing &f%bots%&7/&f%pings% &4- &cBlacklist&7/&cQueue&7/&cWhitelist &f%blacklist%&7/&f%queue%&7/&f%whitelist% &4- &cVerify &f%underverification% » &c&l%type%"
+  packets: "%prefix%&cPackets &f%packets%/sec &4- &cBlocked &f%totalpackets% &4- &cVerify &f%underverification% » &c&l%type%"
+title:
+  title: "&f%totalbots% &cBlocked Bots"
+  subtitle: "&f%blacklist% &cCurrent Blacklist"
+stats:
+  - "&cCurrent Session Stats:"
+  - ""
+  - "&cBot Blocked &f%totalbots%"
+  - "&cTotal Ping &f%totalpings%"
+  - "&cTotal Packets &f%totalpackets%"
+  - "&cWhitelisted IP &f%whitelist%"
+  - "&cBlacklisted IP &f%blacklist%"
+  - "&cCurrent Attacks &f%attack-types%"
+  - ""
+  - "&cCurrent server latency is &f%latency%"
+reason:
+  names: "Слишком много ников с вашего IP."
+  joins: "Слишком много подключений с вашего IP."
+  pings: "Слишком много пингов с вашего IP."
+  strange: "Подозрительный игрок."
+  vpn: "Вы используете VPN/PROXY."
+  admin: "Администратор внес вас в черный список."
+  check: "Слишком много проверок завершается неудачно!"
+help:
+  - ""
+  - "&c/uab &chelp &7- &fShows this message"
+  - "&c/uab &ctoggle &factionbar/title/bossbar &7- &fEnables notifications"
+  - "&c/uab &cstats &7- &fShows antibot stats"
+  - "&c/uab &cclear &fblacklist/whitelist &7- &fClear blacklist or whitelist"
+  - "&c/uab &cwhitelist &fadd/remove &f<ip> &7- &fManage whitelist"
+  - "&c/uab &cblacklist &fadd/remove &f<ip/name>&7- &fManage blacklist"
+  - "&c/uab logs list <amount> &7- &ffShows last <amount> attacks"
+  - "&c/uab logs info <id> &7- &fShows last attack info"
+  - "&c/uab cache status/clear &7- &fManage UAB cache"
+  - "&c/uab profile <nick> &7- &fCheck connection info"
+  - "&c/uab &cfirewall &7- &fShows some firewall info"
+  - "&c/uab &ccheck &f<id> &7- &fCheck for blacklisted player"
+  - "&c/uab &creload &7- &fReloads the config & messages"
+  - "&c/uab &cdump &7- &fUseful info to provide to support!"
+attack-log:
+  - "&cAttack ID&f %id%"
+  - "&cAttack date&f %attack%"
+  - "&cBlacklisted IPs &f%blacklist%"
+  - "&cBlocked bots &f%bots%"
+  - "&cBlocked pings &f%pings%"
+  - "&cBlocked Packets &f%packets%"
+  - "&cAverage CPS &f%avg%"
+  - "&cAttack Power &f%power%"
+  - "&cDuration &f%duration%"
+firewall:
+  - "&cFirewall status: %status%"
+  - ""
+  - "&cIP in queue: %queue%"
+  - "&cIP blacklisted: %blacklist%"
+  - ""
+  - "&cThese are the UAB firewall stats that will only work if you have it enabled in the config!"
+  - "&cThe attack will be mitigated when all IPs have been blocked!"
+antibotmode:
+  - "&cworld"
+  - ""
+  - "&7Защита от ботов теперь активна!"
+  - "&7Он будет оставаться активным до тех пор, пока &c$1%&7 из IP-адресов, занесенных в черный список"
+  - "&7Текущий черный список - это &c$2%"
+  - ""
+  - "&fDiscord &f-> &f&ndiscord.gg/anFmNG48Bp"
+  - ""
+  - "&cmc-epica.ru"
+first_join:
+  - "&cworld"
+  - ""
+  - "&7Мы анализируем ваше подключение!"
+  - "&7Теперь вы можете снова присоединиться."
+  - ""
+  - "&fDiscord &f-> &f&ndiscord.gg/anFmNG48Bp"
+  - ""
+  - "&cmc-epica.ru"
+safe_mode:
+  - "&cworld"
+  - ""
+  - "&7Мы не смогли вовремя проверить вас!"
+  - "&7Сервер подвергся атаке бота, и вы были отключены."
+  - "&fВозвращайся через несколько минут."
+  - ""
+  - "&fDiscord &f-> &f&ndiscord.gg/anFmNG48Bp"
+  - ""
+  - "&cmc-epica.ru"
+account-online:
+  - "&cworld"
+  - ""
+  - "&7У вас на сервере одновременно подключено слишком много учетных записей!"
+  - ""
+  - "&fDiscord &f-> &f&ndiscord.gg/anFmNG48Bp"
+  - ""
+  - "&cmc-epica.ru"
+ping:
+  - "&cworld"
+  - ""
+  - "&7Пропингуйте сервер ровно &f$1&7 раз и присоединяйтесь."
+  - ""
+  - "&fDiscord &f-> &f&ndiscord.gg/anFmNG48Bp"
+  - ""
+  - "&cmc-epica.ru"
+timer:
+  - "&cworld"
+  - ""
+  - "&7Повторно войдите на сервер точно через &c$1&7 секундю."
+  - ""
+  - "&fDiscord &f-> &f&ndiscord.gg/anFmNG48Bp"
+  - ""
+  - "&cmc-epica.ru"
+blacklisted:
+  - "&cworld"
+  - ""
+  - "&7Вы были занесены в черный список системой защиты от ботов."
+  - "&7Свяжитесь с нами в discord, предоставив свой &fid&7, чтобы иметь возможность играть!"
+  - ""
+  - "&fПричина &f-> &c$1"
+  - "&fID &f-> &c$2"
+  - ""
+  - "&fDiscord &f-> &f&ndiscord.gg/anFmNG48Bp"
+  - ""
+  - "&cmc-epica.ru"
+wait:
+  - "&cworld"
+  - ""
+  - "&7Вы делаете слишком много попыток! Подождите 10 секунд."
+  - ""
+  - "&fDiscord &f-> &f&ndiscord.gg/anFmNG48Bp"
+  - ""
+  - "&cmc-epica.ru"
+fastjoin-queue:
+  - "&cworld"
+  - ""
+  - "&7Вы поставлены в очередь на проверку! Предполагаемое время - &c3/5&7 секунд!"
+  - ""
+  - "&fDiscord &f-> &f&ndiscord.gg/anFmNG48Bp"
+  - ""
+  - "&cmc-epica.ru"
+
+bossbar_idle_message: "&fОжидает нападения."
+blacklist_info:
+  - "&c&lBLACKLIST INFO:"
+  - ""
+  - "&cReason &7» &c$reason"
+  - "&cIP &7» &c$ip"
+  - "&cNickName &7» &c$nick"
+  - "&cID &7» &c$id"
+  - ""

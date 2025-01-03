@@ -1,0 +1,129 @@
+conversations:
+  fisher:
+    quester: '&aРыбак'
+    first: 'npc_node_1, npc_node_2'
+    stop: 'false'
+    NPC_options:
+      npc_node_1:
+        text: 'Здарова Бельчонок!'
+        condition: '!fisher_first_talk'
+        event: ''
+        pointers: player_node_1
+
+      npc_node_2:
+        text: 'Здарова Бельчонок!'
+        condition: 'fisher_first_talk'
+        event: ''
+        pointers: player_node_4, player_node_5, player_node_6
+
+      npc_node_3:
+        text: 'А к кому же еще? Я же видел, как ты по дереву полз, чтоб через реку перебраться.'
+        condition: ''
+        event: ''
+        pointers: player_node_2
+
+      npc_node_4:
+        text: 'Да, вот. Сижу. Не видно что-ли? Ха-ха, шучу, рыбак я! Рыбу ловлю, да ценности всякие вылавливаю. Ты если хош, то можешь нести мне всякое, что выловишь, а я тебе отплачу.'
+        condition: ''
+        event: ''
+        pointers: player_node_3
+
+      npc_node_5:
+        text: 'Задавай свои вопросы. Я послушаю тебя.'
+        condition: ''
+        event: ''
+        pointers: player_node_7, player_node_8, player_node_9
+
+      npc_node_6:
+        text: 'Да, вот. Сижу. Не видно что-ли? Ха-ха, шучу, рыбак я! Рыбу ловлю, да ценности всякие вылавливаю. Ты если хош, то можешь нести мне всякое, что выловишь, а я тебе отплачу.'
+        condition: ''
+        event: ''
+        pointers: player_node_8, player_node_9, player_node_11
+
+      npc_node_7:
+        text: 'Это деревня Фрирест, что находится в северных землях ярла Нордвея. Местные жители здесь занимаются выращиванием и лесным промыслом, а еще рыбалкой конечно же. Недавно здесь обнаружили ценные минералы и теперь сюда стекаются разные работники.'
+        condition: ''
+        event: ''
+        pointers: player_node_10
+
+      npc_node_8:
+        text: 'Что же, для этого тебе удочка нужна! Ее можно у приезжего торгаша купить, что у кузни свою повозку оставил, или сходи к лесорубам, может они тебе могут чем помочь.'
+        condition: ''
+        event: ''
+        pointers: player_node_7, player_node_8, player_node_11
+
+      npc_node_9:
+        text: 'Они что-то вроде наемников, но занимаются разносортным трудом. Берутся за все, что им предложат.'
+        condition: ''
+        event: ''
+        pointers: player_node_7, player_node_9, player_node_11
+
+      npc_node_10:
+        text: 'Не за что, если чего надо будет, спрашивай Бельчонок!'
+        condition: ''
+        event: ''
+        pointers: player_node_4, player_node_6
+
+    player_options:
+      player_node_1:
+        text: 'Бельчонок? Ты это так ко мне обращаешься?'
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_2:
+        text: 'Чем ты здесь занимаешься?'
+        condition: ''
+        event: ''
+        pointers: npc_node_4
+
+      player_node_3:
+        text: 'Понятно, спасибо. [ Уйти ]'
+        condition: ''
+        event: 'fisher_first_talk'
+
+      player_node_4:
+        text: 'Здарова, посмотришь, что я принес? [ Продажа ]'
+        condition: ''
+        event: 'fisher'
+
+      player_node_5:
+        text: 'У меня есть пару вопросов к тебе, ответишь?'
+        condition: ''
+        event: ''
+        pointers: npc_node_5
+
+      player_node_6:
+        text: 'Прости, не сейчас. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_7:
+        text: 'Чем ты здесь занимаешься?'
+        condition: ''
+        event: ''
+        pointers: npc_node_6
+
+      player_node_8:
+        text: 'Что это за место?'
+        condition: ''
+        event: ''
+        pointers: npc_node_7
+
+      player_node_9:
+        text: 'Я хочу заняться рыбалкой, что мне для этого нужно?'
+        condition: ''
+        event: ''
+        pointers: npc_node_8
+
+      player_node_10:
+        text: 'Работники?'
+        condition: ''
+        event: ''
+        pointers: npc_node_9
+
+      player_node_11:
+        text: 'Спасибо, у меня больше нет вопросов.'
+        condition: ''
+        event: ''
+        pointers: npc_node_10

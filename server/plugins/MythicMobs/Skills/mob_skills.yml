@@ -1,0 +1,268 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+chest_idle:
+  Conditions:
+  - variableEquals{var=caster.idle;value="yes"} true
+  Skills:
+  - effect:particles{particle=CRIT;amount=20;hS=0.3;vS=0.3;speed=0;y=0.5} @SelfLocation
+  - variableadd{var=caster.life_time;amount=1}
+  - skill{s=chest_despawn} @self
+chest_open:
+  Conditions:
+  - variableEquals{var=caster.idle;value="yes"} true
+  Skills:
+  - setvariable{var=caster.idle;value="no";type=STRING}
+  - effect:particles{particle=CRIT_MAGIC;amount=50;hS=0.3;vS=0.3;speed=0;y=0.5} @SelfLocation
+  - delay 10
+  - sound{s=block.chest.open;p=0.7} @SelfLocation
+  - state{mid=chest;s=open} @self
+  - delay 10
+  - effect:itemspray{item=gold_nugget;amount=20;velocity=0.2;yv=1;d=60} @self
+  - sound{s=entity.player.levelup;p=2} @SelfLocation
+  - dropitem{i=Chest1,Chest1_bonus} @self
+  - delay 3
+  - sound{s=entity.player.levelup;p=2} @SelfLocation
+  - delay 3
+  - sound{s=entity.player.levelup;p=2} @SelfLocation
+  - delay 20
+  - command{c="svar add player_opened_chest 1 <target.name>"} @trigger
+  - remove @self
+chest_open2:
+  Conditions:
+  - variableEquals{var=caster.idle;value="yes"} true
+  Skills:
+  - setvariable{var=caster.idle;value="no";type=STRING}
+  - effect:particles{particle=CRIT_MAGIC;amount=50;hS=0.3;vS=0.3;speed=0;y=0.5} @SelfLocation
+  - delay 10
+  - sound{s=block.chest.open;p=0.7} @SelfLocation
+  - state{mid=chest;s=open} @self
+  - delay 10
+  - effect:itemspray{item=gold_nugget;amount=20;velocity=0.2;yv=1;d=60} @self
+  - sound{s=entity.player.levelup;p=2} @SelfLocation
+  - dropitem{i=ChestTutorial1} @self
+  - delay 1
+  - dropitem{i=ChestTutorial2} @self
+  - delay 1
+  - dropitem{i=ChestTutorial3} @self
+  - delay 1
+  - dropitem{i=ChestTutorial4} @self
+  - delay 3
+  - sound{s=entity.player.levelup;p=2} @SelfLocation
+  - delay 3
+  - sound{s=entity.player.levelup;p=2} @SelfLocation
+  - delay 20
+  - command{c="svar add player_opened_chest 1 <target.name>"} @trigger
+  - remove @self
+chest_spawn:
+  Skills:
+  - setrotation{relative=true;yaw=%randomnumber_value_0_180%} @self
+  - model{m=chest;n=nametag;d=false} @self
+  - effect:particles{particle=block;m=rooted_dirt;amount=50;hS=0.5;vS=0.1;speed=0} @SelfLocation
+  - sound{s=block.grass.break;p=0.7} @SelfLocation
+  - delay 10
+  - effect:particles{particle=block;m=rooted_dirt;amount=50;hS=0.5;vS=0.1;speed=0} @SelfLocation
+  - sound{s=block.grass.break;p=0.7} @SelfLocation
+  - delay 10
+  - effect:particles{particle=block;m=rooted_dirt;amount=50;hS=0.5;vS=0.1;speed=0} @SelfLocation
+  - sound{s=block.grass.break;p=0.7} @SelfLocation
+  - delay 10
+  - effect:particles{particle=block;m=rooted_dirt;amount=50;hS=0.5;vS=0.1;speed=0} @SelfLocation
+  - sound{s=block.grass.break;p=0.7} @SelfLocation
+  - setvariable{var=caster.idle;value="yes";type=STRING}
+  - setvariable{var=caster.life_time;value="0";type=INTEGER}
+chest_despawn:
+  Conditions:
+  - variableInRange{var=caster.life_time;value=>600} true
+  Skills:
+  - remove @self
+
+
+
+
+mob_default_skills:
+  Skills:
+  - skill{s=savezone_remove} @self
+  - skill{s=dungeons_remove} @self
+  - skill{s=despawn} @self
+  - skill{s=light_check} @target
+  #- command{c="svar set stealth_visible 1 <target.name>"} @PIR{r=5}
+
+savezone_remove:
+  Conditions:
+  - region{r=village1,tutorial1,arena1,town1} true
+  Skills:
+  - remove @self
+
+dungeons_remove:
+  Conditions:
+  - region{r=world_dungeon1} true
+  Skills:
+  - remove @self
+
+despawn:
+  Conditions:
+  - playernotwithin{d=100} true
+  Skills:
+  # - command{c="svar add mob_active -1"} @self
+  - remove @self
+
+light_check:
+  Conditions:
+  - wearing{slot=OFFHAND;m=LANTERN} true
+  - playerwithin{d=4} true
+  TargetConditions:
+  - stringequals{val1="%servervariables_value_stealth_state%";val2="1"} true
+  Skills:
+  - command{c="svar set stealth_visible 1 <target.name>"} @PIR{r=4}
+
+# mob_cap:
+  # TargetConditions:
+  # - stringequals{val1="%parseother_unsafe_{<target.name>}_{javascript_mob_cap}%";val2="false"} true
+  # Skills:
+  # #- message{m="<target.name>"}
+  # #- command{c="svar add mob_cap -1 <target.name>"}
+  # - remove @self
+
+# mob_cap_remove:
+  # Conditions:
+  # - playernotwithin{d=100} true
+  # Skills:
+  # - command{c="svar add mob_cap -1 <target.name>"}
+
+# spawn:
+  # Skills:
+  # - command{c="svar add mob_cap 1 <target.name>"} @PIR{r=120}
+  # - skill{s=mob_cap} @PIR{r=120}
+  # - skill{s=mob_cap_remove} @PIR{r=120}
+  
+  
+  
+  
+  
+  
+# spawn:
+  # Skills:
+  # - skill{s=mob_cap} @PIR{r=300}
+  # - skill{s=mob_cap_add} @PIR{r=300}
+# mob_cap:
+  # TargetConditions:
+  # - stringequals{val1="%parseother_unsafe_{<target.name>}_{javascript_mob_cap}%";val2="false"} true
+  # Skills:
+  # - command{c="svar add mob_active -1"} @self
+  # - remove @self
+# mob_cap_add:
+  # TargetConditions:
+  # - stringequals{val1="%parseother_unsafe_{<target.name>}_{javascript_mob_cap}%";val2="true"} true
+  # Skills:
+  # - command{c="svar add mob_active 1"} @self
+
+
+
+
+mob_leap1:
+  Cooldown: 10
+  Conditions:
+  - onground true
+  - targetinlineofsight true
+  Skills:
+  - leap{velocity=400} @target
+  - effect:particles{particle=cloud;amount=20;hS=0.5;vS=0.5;speed=0} @self
+FailSignal:
+  Skills:
+  - signal{s=Fail}
+
+
+
+shadow_sound1:
+  Skills:
+  - sound{s=entity.allay.item_given;v=2;p=0.1} @SelfLocation
+shadow_sound2:
+  Skills:
+  - sound{s=entity.allay.item_taken;v=2;p=0.1} @SelfLocation
+shadow_atack:
+  Skills:
+  - state{mid=shadow;s=attack;li=3;lo=3} @self
+  - sound{s=entity.allay.death;v=2;p=0.1} @SelfLocation
+  - delay 20
+  - effect:particles{p=reddust;color=#000000;a=200;y=0.5;hs=0.5;vs=0.5;speed=1} @SelfLocation
+  - remove @self
+shadow_light1:
+  TargetConditions:
+  - wearing{slot=OFFHAND;m=LANTERN} true
+  Skills:
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=fleeplayers} @self
+  - effect:particles{p=Soul_Fire_Flame;a=25;y=0;hs=0.5;vs=0.2} @self
+shadow_light2:
+  TargetConditions:
+  - wearing{slot=HAND;m=LANTERN} true
+  Skills:
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=fleeplayers} @self
+  - effect:particles{p=Soul_Fire_Flame;a=25;y=0;hs=0.5;vs=0.2} @self
+shadow_unlight:
+  Conditions:
+  - playerwithin{d=6} false
+  Skills:
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=meleeattack} @self
+  
+
+
+
+boss_level_drop:
+  Skills:
+  - skill{s=boss_level_drop_1} @self
+  - skill{s=boss_level_drop_2} @self
+  - skill{s=boss_level_drop_3} @self
+  - skill{s=boss_level_drop_4} @self
+  - skill{s=boss_level_drop_5} @self
+
+boss_level_drop_1:
+  Conditions:
+  - level{l=1}
+  Skills:
+  - dropitem{i=cobald_raw 2} @self
+  - dropitem{i=boss_1 1} @self
+boss_level_drop_2:
+  Conditions:
+  - level{l=2}
+  Skills:
+  - dropitem{i=cobald_raw 4} @self
+  - dropitem{i=boss_2 1} @self
+boss_level_drop_3:
+  Conditions:
+  - level{l=3}
+  Skills:
+  - dropitem{i=cobald_raw 6} @self
+  - dropitem{i=boss_3 1} @self
+boss_level_drop_4:
+  Conditions:
+  - level{l=4}
+  Skills:
+  - dropitem{i=cobald_raw 8} @self
+  - dropitem{i=boss_4 1} @self
+boss_level_drop_5:
+  Conditions:
+  - level{l=5}
+  Skills:
+  - dropitem{i=cobald_raw 10} @self
+  - dropitem{i=boss_5 1} @self
+
+traveling_merchant_summon:
+  Skills:
+  - randomskill{skills=traveling_merchant_summon1,traveling_merchant_summon2,traveling_merchant_summon3,traveling_merchant_summon4} @self
+traveling_merchant_summon1:
+  Skills:
+  - summon{type=traveling_merchant1;amount=1;radius=1} @self
+traveling_merchant_summon2:
+  Skills:
+  - summon{type=traveling_merchant2;amount=1;radius=1} @self
+traveling_merchant_summon3:
+  Skills:
+  - summon{type=traveling_merchant3;amount=1;radius=1} @self
+traveling_merchant_summon4:
+  Skills:
+  - summon{type=traveling_merchant4;amount=1;radius=1} @self

@@ -1,0 +1,4 @@
+
+set_item:
+  Skills:
+  - setname{name=newmobname} @self ~onDamaged 1

@@ -1,0 +1,144 @@
+menu_title: '&6Справочник: Боссы (1)'
+open_commands:
+  - '[sound] ITEM_BOOK_PAGE_TURN 1 1'
+size: 36
+items:
+  'sword_master_random_boss':
+    material: SKELETON_SPAWN_EGG
+    slot: 0
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fВосставший мастер меча'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Земли Тетры'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Кобальтовая руда, Монеты,'
+      - '  &7Монета странника.'
+  'summoner_random_boss':
+    material: ZOMBIE_SPAWN_EGG
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fВосставший владыка мертвых'
+    lore:
+      - '&fПоведение: &7Бегство'
+      - '&fМесто обитания: &7Земли Тетры'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Кобальтовая руда, Монеты,'
+      - '  &7Монета странника.'
+  'hunter_random_boss':
+    material: STRAY_SPAWN_EGG
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fВосставший охотник льда'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Земли Тетры'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Кобальтовая руда, Монеты,'
+      - '  &7Монета странника.'
+  'slime_random_boss':
+    material: SLIME_SPAWN_EGG
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fВеномий и Инферий'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Земли Тетры'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Кобальтовая руда, Монеты,'
+      - '  &7Монета странника.'
+  'pillager_boss':
+    material: PILLAGER_SPAWN_EGG
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fГлаварь разбойников'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Лагерь разбойников'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Облик "Авторитет".'
+  'key_guard':
+    material: WITHER_SKELETON_SPAWN_EGG
+    slot: 5
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fСтраж ключа'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Разрушенная башня'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Облик "Ключ-меч".'
+
+
+
+  'home':
+    material: PAPER
+    slot: 27
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:13
+    display_name: '&fВернуться назад'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы вернуться.'
+    click_commands:
+      - '[openguimenu] manual_bestiary'
+      - '[refresh]'
+  # 'back':
+    # material: PAPER
+    # slot: 30
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # nbt_int: CustomModelData:11
+    # display_name: '&fПролистать назад'
+    # lore:
+      # - '&f[ ЛКМ ] &7для взаимодействия.'
+    # click_commands:
+      # - '[openguimenu] manual_bestiary_mobs1'
+      # - '[refresh]'
+  # 'next':
+    # material: PAPER
+    # slot: 32
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # nbt_int: CustomModelData:12
+    # display_name: '&fПролистать вперед'
+    # lore:
+      # - '&f[ ЛКМ ] &7для взаимодействия.'
+    # click_commands:
+      # - '[openguimenu] manual_bestiary_mobs1'
+      # - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [27,28,29,30,31,32,33,34,35]
+    display_name: ' '
+    nbt_int: CustomModelData:1

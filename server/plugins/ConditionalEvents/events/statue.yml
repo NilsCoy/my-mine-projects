@@ -1,0 +1,28 @@
+Events:
+
+  statue_time:
+    type: repetitive
+    repetitive_time: 20
+    allow_math_formulas_in_conditions: true
+    conditions:
+    - '%player_is_sneaking% == yes and %player_x% > 969-10 and %player_x% < 969+5 and %player_y% > 78-5 and %player_y% < 78+5 and %player_z% > -65-5 and %player_z% < -65+5 execute action1'
+    actions:
+      action1:
+      - 'console_command: svar add statue1_time 1 %player%'
+
+  statue_effect:
+    type: custom
+    custom_event_data:
+      event: svar.ajneb97.api.VariableChangeEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%variable_type%;getVariable().getVariableType()'
+      - '%variable_name%;getVariable().getName()'
+      - '%new_value%;getNewValue()'
+    conditions:
+    - '%variable_name% == statue1_time and %new_value% >= 10 execute action1'
+    actions:
+      action1:
+      - 'give_potion_effect: REGENERATION;200;1;false'
+      - 'give_potion_effect: DAMAGE_RESISTANCE;3600;0;false'
+      - 'console_command: svar set statue1_time 0 %player%'

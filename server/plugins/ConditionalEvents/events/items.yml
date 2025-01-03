@@ -1,0 +1,177 @@
+Events:
+  # item_announcement:
+    # type: player_command
+    # conditions:
+    # - '%main_command% == item_announcement_treasure execute announcement_treasure'
+    # actions:
+      # announcement_treasure:
+      # - 'console_command: ii give %arg_1% treasure5 %arg_2%'
+      # - 'to_all: message: &c%arg_1% выловил &bСундук с сокровищами&c!'
+  get_item:
+    type: custom
+    custom_event_data:
+      event: svar.ajneb97.api.VariableChangeEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%variable_type%;getVariable().getVariableType()'
+      - '%variable_name%;getVariable().getName()'
+      - '%new_value%;getNewValue()'
+    conditions:
+    - "%variable_name% == player_get_item and %new_value% == 1 execute item1"
+    - "%variable_name% == player_get_item and %new_value% == 2 execute item2"
+    - "%variable_name% == player_get_item and %new_value% == 3 execute item3"
+    - "%variable_name% == player_get_item and %new_value% == 4 execute item4"
+    - "%variable_name% == player_get_item and %new_value% == 5 execute item5"
+    - "%variable_name% == player_get_item and %new_value% == 6 execute item6"
+    - "%variable_name% == player_get_item and %new_value% == 7 execute item7"
+    - "%variable_name% == player_get_item and %new_value% == 8 execute item8"
+    - "%variable_name% == player_get_item and %new_value% != 0"
+    actions:
+      default:
+      - 'console_command: svar set player_get_item 0 %player_name%'
+
+      item1:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bСундук со снаряжением%'
+      - 'player_command_as_op: mm test cast -s donate_pack1'
+      item2:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bСундук со снаряжением%'
+      - 'player_command_as_op: mm test cast -s donate_pack2'
+      item3:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bСундук со снаряжением%'
+      - 'player_command_as_op: mm test cast -s donate_pack3'
+      item4:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bСундук со снаряжением%'
+      - 'player_command_as_op: mm test cast -s donate_pack4'
+      item5:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bСундук со снаряжением%'
+      - 'player_command_as_op: mm test cast -s donate_pack5'
+      item6:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bСундук со снаряжением%'
+      - 'player_command_as_op: mm test cast -s donate_pack6'
+      item7:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bСундук со снаряжением%'
+      - 'player_command_as_op: mm test cast -s donate_pack7'
+
+  cases:
+    type: item_interact
+    conditions:
+    - '%checkitem_mat:BRICK,nameequals:&bМалый ящик с едой,inhand:main% == yes execute small_eat_case'
+    - '%checkitem_mat:BRICK,nameequals:&bМалый ящик с ресурсами,inhand:main% == yes execute small_materials_case'
+    - '%checkitem_mat:BRICK,nameequals:&bМалый ящик с зельями,inhand:main% == yes execute small_potion_case'
+    - '%checkitem_mat:BRICK,nameequals:&bЯщик с едой,inhand:main% == yes execute eat_case'
+    - '%checkitem_mat:BRICK,nameequals:&bЯщик с ресурсами,inhand:main% == yes execute materials_case'
+    - '%checkitem_mat:BRICK,nameequals:&bЯщик с зельями,inhand:main% == yes execute potion_case'
+    - '%checkitem_mat:BRICK,nameequals:&bЯщик с краской,inhand:main% == yes execute color_case'
+    - '%checkitem_mat:BRICK,nameequals:&bСундук с сокровищами,inhand:main% == yes execute treasure_case'
+    - '%checkitem_mat:BRICK,nameequals:&bСундук со скинами,inhand:main% == yes execute skin_case'
+    - '%checkitem_mat:BRICK,nameequals:&bТокен,inhand:main% == yes execute token'
+    - '%checkitem_mat:BRICK,nameequals:&bМешок с ресурсами,inhand:main% == yes execute bag_materials'
+    - '%checkitem_mat:BRICK,nameequals:&bМешок с травами,inhand:main% == yes execute bag_ingredients'
+    - '%checkitem_mat:BRICK,nameequals:&bМешок с едой,inhand:main% == yes execute bag_eat'
+    - '%checkitem_mat:CAMEL_SPAWN_EGG,nameequals:&bПризыв верблюда,inhand:main% == yes execute pet1'
+    - '%checkitem_mat:BRICK,nameequals:&bСчастливая монета,inhand:main% == yes execute lucky_coin'
+    - '%checkitem_mat:FISHING_ROD,nameequals:&bСломанная удачка рыбака,inhand:main% == yes execute fisher_fishing_rod'
+    - '%checkitem_mat:FISHING_ROD,nameequals:&bСломанная удачка рыбака,inhand:off% == yes execute fisher_fishing_rod'
+    - '%checkitem_mat:BRICK,nameequals:&bСундук со снаряжением,inhand:main% == yes execute donate_pack'
+    - '%checkitem_mat:BRICK,nameequals:&bМешок с монетами,inhand:main% == yes execute bag_of_coins'
+    actions:
+      bag_of_coins:
+      - 'console_command: svar add player_money %random_20_100% %player%'
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bМешок с монетами%'
+      - 'playsound: BLOCK_AMETHYST_BLOCK_HIT;1;2'
+      - 'wait_ticks: 1'
+      - 'playsound: BLOCK_AMETHYST_BLOCK_HIT;1;2'
+      - 'wait_ticks: 1'
+      - 'playsound: BLOCK_AMETHYST_BLOCK_HIT;1;2'
+      donate_pack:
+      #- 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bСундук со снаряжением%'
+      - 'player_command_as_op: dm open donate_pack'
+      - 'playsound: BLOCK_CHEST_OPEN;1;1.5'
+      fisher_fishing_rod:
+      - 'message: &cЭтот предмет невозможно использовать!'
+      - 'cancel_event: true'
+      lucky_coin:
+      - 'call_event: coin_event'
+      - 'playsound: BLOCK_AMETHYST_BLOCK_HIT;1;2'
+      small_eat_case:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bМалый ящик с едой%'
+      - 'player_command_as_op: mm test cast -s small_eat_case'
+      - 'playsound: BLOCK_CHEST_OPEN;1;1.5'
+      small_materials_case:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bМалый ящик с ресурсами%'
+      - 'player_command_as_op: mm test cast -s small_materials_case'
+      - 'playsound: BLOCK_CHEST_OPEN;1;1.5'
+      small_potion_case:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bМалый ящик с зельями%'
+      - 'player_command_as_op: mm test cast -s small_potion_case'
+      - 'playsound: BLOCK_CHEST_OPEN;1;1.5'
+      eat_case:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bЯщик с едой%'
+      - 'player_command_as_op: mm test cast -s eat_case'
+      - 'playsound: BLOCK_CHEST_OPEN;1;1.5'
+      materials_case:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bЯщик с ресурсами%'
+      - 'player_command_as_op: mm test cast -s materials_case'
+      - 'playsound: BLOCK_CHEST_OPEN;1;1.5'
+      potion_case:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bЯщик с зельями%'
+      - 'player_command_as_op: mm test cast -s potion_case'
+      - 'playsound: BLOCK_CHEST_OPEN;1;1.5'
+      color_case:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bЯщик с краской%'
+      - 'player_command_as_op: mm test cast -s color_case'
+      - 'playsound: BLOCK_CHEST_OPEN;1;1.5'
+      treasure_case:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bСундук с сокровищами%'
+      - 'player_command_as_op: mm test cast -s treasure_case'
+      - 'playsound: BLOCK_CHEST_OPEN;1;1.5'
+      skin_case:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bСундук со скинами%'
+      - 'player_command_as_op: mm test cast -s skin_case'
+      - 'playsound: BLOCK_CHEST_OPEN;1;1.5'
+      token:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bТокен%'
+      - 'console_command: svar add player_skill_point 1 %player%'
+      - 'playsound: ENTITY_PLAYER_LEVELUP;1;2'
+      bag_materials:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bМешок с ресурсами%'
+      - 'player_command_as_op: mm test cast -s bag_materials'
+      - 'playsound: ITEM_ARMOR_EQUIP_LEATHER;1;1'
+      bag_ingredients:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bМешок с травами%'
+      - 'player_command_as_op: mm test cast -s bag_ingredients'
+      - 'playsound: ITEM_ARMOR_EQUIP_LEATHER;1;1'
+      bag_eat:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bМешок с едой%'
+      - 'player_command_as_op: mm test cast -s bag_eat'
+      - 'playsound: ITEM_ARMOR_EQUIP_LEATHER;1;1'
+      pet1:
+      - 'cancel_event: true'
+      - 'remove_item: %checkitem_remove_mat:CAMEL_SPAWN_EGG,amt:1,nameequals:&bПризыв верблюда%'
+      - 'console_command: lp user %player% permission set mcpets.pet_horse4 true'
+      - 'playsound: ENTITY_CAMEL_SADDLE;1;1'
+  sponsors:
+    type: item_interact
+    conditions:
+    - '%checkitem_mat:BRICK,nameequals:&bSponsor 1 час,inhand:main% == yes execute sponsor_1h'
+    - '%checkitem_mat:BRICK,nameequals:&bSponsor 3 часа,inhand:main% == yes execute sponsor_3h'
+    actions:
+      sponsor_1h:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bSponsor 1 час%'
+      - 'playsound: ENTITY_PLAYER_LEVELUP;1;1.5'
+      - 'console_command: lp user %player% parent addtemp sponsor-item 1h'
+      sponsor_3h:
+      - 'remove_item: %checkitem_remove_mat:BRICK,amt:1,nameequals:&bSponsor 3 часа%'
+      - 'playsound: ENTITY_PLAYER_LEVELUP;1;1.5'
+      - 'console_command: lp user %player% parent addtemp sponsor-item 3h'
+  
+  coin_event:
+    type: call
+    conditions:
+    - '%randomnumber_value_0_2% == 0 execute actions1'
+    - '%randomnumber_value_0_2% == 1 execute actions2'
+    actions:
+      actions1:
+      - 'to_range: 10;true: message: &f%player% &7бросил счастливую монету и ему выпала &eРешка&7!'
+      actions2:
+      - 'to_range: 10;true: message: &f%player% &7бросил счастливую монету и ему выпал &eОрел&7!'

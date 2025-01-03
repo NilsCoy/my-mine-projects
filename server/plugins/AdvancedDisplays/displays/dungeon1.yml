@@ -1,0 +1,72 @@
+type: TEXT
+permission: none
+hide-permission: none
+view-distance: 0.0
+location:
+  world: world
+  x: 655.5
+  y: 75.0
+  z: -78.5
+rotationType: FIXED
+brightness:
+  block: 0
+  sky: 15
+shadow:
+  radius: 5.0
+  strength: 1.0
+transformation:
+  translation:
+    x: 0.0
+    y: 1.0
+    z: 0.5
+  leftRotation:
+    x: 0.0
+    angle: 0.0
+    y: 0.0
+    z: 0.0
+  scale:
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  rightRotation:
+    x: 0.0
+    angle: 0.0
+    y: 0.0
+    z: 0.0
+rotation:
+  yaw: 270.0
+  pitch: 0.0
+glow:
+  glowing: false
+  color: 255;170;0
+# Displays don't have hitboxes of their own, so to have click actions independent entities have to be created.
+# These settings allow you to control the hitbox of the display.
+# (Use F3 + B to see the hitboxes)
+hitbox:
+  override: true
+  width: 1.0
+  height: 0.0
+actions:
+  ANY:
+    messagePlayer:
+      type: message
+      message: You clicked me, %player_name%!
+      delay: 20 # In ticks
+      global: false
+      global-placeholders: true
+settings:
+  texts:
+    text:
+    - <gold>Лисья пещера
+    - ''
+    - '<white>Сложность: <yellow>☠'
+    - '<white>Открытие через: <yellow>%servervariables_globalvalue_dungeon1_cooldown%'
+  refreshTime: 10
+  animationTime: 20
+  alignment: CENTER
+  backgroundColor: 255;165;0;0
+  lineWidth: 250
+  textOpacity: -1
+  defaultBackground: false
+  seeThrough: false
+  shadowed: true

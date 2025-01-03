@@ -1,0 +1,215 @@
+conversations:
+  prisoner_start:
+    quester: '&aЗаключенный'
+    first: 'npc_node_1, npc_node_7, npc_node_12, npc_node_17'
+    stop: 'true'
+    NPC_options:
+      npc_node_1:
+        text: '&7Вы находитесь в легкой панике и дезориентации из-за головной боли и непривычной обстановки.&f\n\nОпа, очнулся таки? Сильно же тебя пришибли. &7\n\n( Используйте Пробел для выбора ответа. )'
+        condition: '!prisoner_start'
+        event: ''
+        pointers: player_node_1
+
+      npc_node_2:
+        text: 'Ты находишься в шахте - тюрьме, братец по несчастью. &7\n\n( Используйте Пробел для выбора ответа. )'
+        condition: ''
+        event: ''
+        pointers: player_node_2
+
+      npc_node_3:
+        text: 'Видимо тебя схватили как раба. Ты попал в передрягу, они решили тебя забрать собой в качестве рабочей силы на шахте. &7\n\n( Используйте Пробел для выбора ответа. )'
+        condition: ''
+        event: ''
+        pointers: player_node_3
+
+      npc_node_4:
+        text: 'Такой же, как ты - раб. Однако я тут дольше твоего. &7\n\n( Используйте Пробел для выбора ответа. )'
+        condition: ''
+        event: ''
+        pointers: player_node_4
+
+      npc_node_5:
+        text: 'Слушай, если ты хочешь тут выжить, то дам пару советов, не провоцируй охрану и слушайся их. Если будешь выполнять свою работу, то сможешь есть и пить. В ином случае, тебе тут долго не протянуть. &7\n( Используйте Пробел для выбора ответа. )'
+        condition: ''
+        event: ''
+        pointers: player_node_5
+
+      npc_node_6:
+        text: '&7Ваш диалог прерывает внезапный звук металлической двери.'
+        condition: ''
+        event: 'open_door'
+
+      npc_node_7:
+        text: '&7Вы подходите к заключенному, которого встретили в начале. Он сидит на том же месте и ест хлеб, который недавно раздавали.'
+        condition: 'bread,!prisoner_trigger1'
+        event: ''
+        pointers: player_node_6
+
+      npc_node_8:
+        text: '&7Заключенный поднимает взгляд на вас.&f\n\nНу да, не считая дни когда они поднимаются наверх.'
+        condition: ''
+        event: ''
+        pointers: player_node_7
+
+      npc_node_9:
+        text: 'Брось это дело. Если попытаешься, то тебя отправят вглубь шахты без еды и воды. Единственный путь наружу, это подняться по подъемнику, который ты недавно видел.'
+        condition: ''
+        event: ''
+        pointers: player_node_8
+
+      npc_node_10:
+        text: '&7Заключенный нахмурился.&f\n\nЯ видел как другие до тебя пытались, но все безуспешно.'
+        condition: ''
+        event: ''
+        pointers: player_node_9
+
+      npc_node_11:
+        text: '&7Вы слышите шаги за дверью и стук по двери.&7\n\nВаш разговор прерывается.'
+        condition: ''
+        event: 'prisoner_trigger1,knock'
+
+      npc_node_12:
+        text: '&7Заключенный что-то бормочет себе под нос.&7\n\nВыход...'
+        condition: 'prisoner_trigger1,!prisoner_trigger2'
+        event: ''
+        pointers: player_node_10
+
+      npc_node_13:
+        text: '&7Заключенный вполголоса произносит:&f\n\nЕсли он и есть, то только через пещеры. Иного выхода нет, всех кого туда уводят, не возвращаются. Если ты сможешь попасть туда и вернуться, то узнаешь, есть там выход или нет.\n\n&7Мужчина достает из своего ботинка самодельную отмычку.'
+        condition: ''
+        event: ''
+        pointers: player_node_11
+
+      npc_node_14:
+        text: 'Пока ложись спать, ночью как наступит момент я разбужу тебя и открою дверь.'
+        condition: ''
+        event: ''
+        pointers: player_node_12
+
+      npc_node_15:
+        text: '&7Вы ложитесь на настил из сухих трав и засыпаете.'
+        condition: ''
+        event: 'prisoner_effect_add'
+        pointers: player_node_13
+
+      npc_node_16:
+        text: '&7Через несколько часов вас будят.'
+        condition: ''
+        event: 'prisoner_trigger2'
+        pointers: player_node_14
+
+      npc_node_17:
+        text: '&7Мужчина шепотом говорит вам:&f\n\nВремя пришло, сейчас буду сменяться наблюдатели. Это идеальное время покинуть камеру. Я открою дверь, а ты должен пробраться вглубь шахты. Не лезь на рожон, в шахтах темно, используй это в свою пользу.'
+        condition: 'prisoner_trigger2'
+        event: 'prisoner_effect_remove,prologue_state5'
+        pointers: player_node_15
+
+      npc_node_18:
+        text: '&7Вас похлопывают рукой по плечу.&f\n\nБуду надеяться на твой успех!\n\n&7Заключенный достает своего старого ботинка отмычку и легкими движениями открывает камеру через решетку двери.'
+        condition: ''
+        event: ''
+        pointers: player_node_16
+
+      npc_node_19:
+        text: '&7Чуть приоткрыв дверь он машет вам рукой, как бы указывая, что нужно идти.'
+        condition: ''
+        event: 'pillager1_teleport,open_door,prologe2_compass_on,stealth_notify1,stealth_notify2,quest_updated'
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Где я?'
+        condition: ''
+        event: ''
+        pointers: npc_node_2
+
+      player_node_2:
+        text: 'Что происходит?'
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_3:
+        text: 'Кто ты?'
+        condition: ''
+        event: ''
+        pointers: npc_node_4
+
+      player_node_4:
+        text: 'Что же мне теперь делать?'
+        condition: ''
+        event: ''
+        pointers: npc_node_5
+
+      player_node_5:
+        text: '[ ... ]'
+        condition: ''
+        event: 'prisoner_start,pillager1_visible,quest_objective,quest_started'
+        pointers: npc_node_6
+
+      player_node_6:
+        text: 'Вы так каждый день проводите?'
+        condition: ''
+        event: ''
+        pointers: npc_node_8
+
+      player_node_7:
+        text: 'Неужели нет способа сбежать?'
+        condition: ''
+        event: ''
+        pointers: npc_node_9
+
+      player_node_8:
+        text: 'Неужели ты сдался?'
+        condition: ''
+        event: ''
+        pointers: npc_node_10
+
+      player_node_9:
+        text: 'Я не собираюсь умирать здесь, ты можешь и дальше тут сидеть, но я буду искать выход, он наверняка...'
+        condition: ''
+        event: ''
+        pointers: npc_node_11
+
+      player_node_10:
+        text: 'Что?'
+        condition: ''
+        event: ''
+        pointers: npc_node_13
+
+      player_node_11:
+        text: 'Неужели?'
+        condition: ''
+        event: ''
+        pointers: npc_node_14
+
+      player_node_12:
+        text: 'Спасибо тебе большое!'
+        condition: ''
+        event: ''
+        pointers: npc_node_15
+
+      player_node_13:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_16
+
+      player_node_14:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_17
+
+      player_node_15:
+        text: 'Я вернусь, не забуду того, что ты для меня сделал.'
+        condition: ''
+        event: ''
+        pointers: npc_node_18
+
+      player_node_16:
+        text: 'Пора!'
+        condition: ''
+        event: ''
+        pointers: npc_node_19

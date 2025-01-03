@@ -1,0 +1,330 @@
+menu_title: '&6Покупка'
+open_commands:
+  - '[sound] ENTITY_VILLAGER_TRADE 1 0.8'
+size: 9
+items:
+
+
+
+  'horse1':
+    material: SADDLE
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсел'
+    lore:
+      - '&7Медленная скорость и малый грузоподъем.'
+      - ''
+      - '&fЦена покупки: &e10 000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 10000'
+        anything_here_2:
+          type: '!has permission'
+          permission: mcpets.pet_horse1
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет или вы уже его приобрили!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -10000 %player_name%'
+      - '[console] lp user %player_name% permission set mcpets.pet_horse1 true'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'horse1_open':
+    material: SADDLE
+    slot: 1
+    priority: 3
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсел'
+    lore:
+      - '&7Медленная скорость и малый грузоподъем.'
+      - ''
+      - '&fВы уже приобрили этот товар.'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_mcpets.pet_horse1%'
+          output: 'yes'
+
+  'horse2':
+    material: SADDLE
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fМул'
+    lore:
+      - '&7Средняя скорость и средний грузоподъем.'
+      - ''
+      - '&fЦена покупки: &e20 000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 20000'
+        anything_here_2:
+          type: '!has permission'
+          permission: mcpets.pet_horse2
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет или вы уже его приобрили!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -20000 %player_name%'
+      - '[console] lp user %player_name% permission set mcpets.pet_horse2 true'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'horse2_open':
+    material: SADDLE
+    slot: 2
+    priority: 3
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    #nbt_int: CustomModelData:1
+    display_name: '&fМул'
+    lore:
+      - '&7Средняя скорость и средний грузоподъем.'
+      - ''
+      - '&fВы уже приобрили этот товар.'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_mcpets.pet_horse2%'
+          output: 'yes'
+
+  'horse3':
+    material: SADDLE
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fЛошадь'
+    lore:
+      - '&7Большая скорость и никакого грузоподъема.'
+      - ''
+      - '&fЦена покупки: &e30 000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 30000'
+        anything_here_2:
+          type: '!has permission'
+          permission: mcpets.pet_horse3
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет или вы уже его приобрили!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -30000 %player_name%'
+      - '[console] lp user %player_name% permission set mcpets.pet_horse3 true'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'horse3_open':
+    material: SADDLE
+    slot: 3
+    priority: 3
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    #nbt_int: CustomModelData:1
+    display_name: '&fЛошадь'
+    lore:
+      - '&7Большая скорость и никакого грузоподъема.'
+      - ''
+      - '&fВы уже приобрили этот товар.'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_mcpets.pet_horse3%'
+          output: 'yes'
+
+  'horse4':
+    material: SADDLE
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fВерблюд'
+    lore:
+      - '&7Малая скорость и средний грузоподъем,'
+      - '&7однако можно ездить вдвоем и делать'
+      - '&7рывки.'
+      - ''
+      - '&fНевозможно купить, только у'
+      - '&fстранствующего торговца.'
+  'horse4_open':
+    material: SADDLE
+    slot: 4
+    priority: 3
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    #nbt_int: CustomModelData:1
+    display_name: '&fВерблюд'
+    lore:
+      - '&7Малая скорость и средний грузоподъем,'
+      - '&7однако можно ездить вдвоем и делать'
+      - '&7рывки.'
+      - ''
+      - '&fВы уже приобрили этот товар.'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_mcpets.pet_horse5%'
+          output: 'yes'
+
+  'horse5':
+    material: SADDLE
+    slot: 5
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fБарб'
+    lore:
+      - '&7Боевая лошадь.'
+      - '&7Большая скорость и никакого грузоподъема.'
+      - '&7Легкая броня.'
+      - ''
+      - '&fЗдесь невозможно купить.'
+  'horse5_open':
+    material: SADDLE
+    slot: 5
+    priority: 3
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    #nbt_int: CustomModelData:1
+    display_name: '&fБарб'
+    lore:
+      - '&7Боевая лошадь.'
+      - '&7Большая скорость и никакого грузоподъема.'
+      - '&7Легкая броня.'
+      - ''
+      - '&fВы уже приобрили этот товар.'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_mcpets.pet_horse6%'
+          output: 'yes'
+
+  'horse6':
+    material: SADDLE
+    slot: 6
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fСкиф'
+    lore:
+      - '&7Боевая лошадь.'
+      - '&7Средняя скорость и никакого грузоподъема.'
+      - '&7Средняя броня.'
+      - ''
+      - '&fЗдесь невозможно купить.'
+  'horse6_open':
+    material: SADDLE
+    slot: 6
+    priority: 3
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    #nbt_int: CustomModelData:1
+    display_name: '&fСкиф'
+    lore:
+      - '&7Боевая лошадь.'
+      - '&7Средняя скорость и никакого грузоподъема.'
+      - '&7Средняя броня.'
+      - ''
+      - '&fВы уже приобрили этот товар.'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_mcpets.pet_horse7%'
+          output: 'yes'
+
+  'horse7':
+    material: SADDLE
+    slot: 7
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fМустанг'
+    lore:
+      - '&7Боевая лошадь.'
+      - '&7Малая скорость и никакого грузоподъема.'
+      - '&7Тяжелая броня.'
+      - ''
+      - '&fЗдесь невозможно купить.'
+  'horse7_open':
+    material: SADDLE
+    slot: 7
+    priority: 3
+    update: true
+    hide_attributes: false
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    #nbt_int: CustomModelData:1
+    display_name: '&fМустанг'
+    lore:
+      - '&7Боевая лошадь.'
+      - '&7Малая скорость и никакого грузоподъема.'
+      - '&7Тяжелая броня.'
+      - ''
+      - '&fВы уже приобрили этот товар.'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_mcpets.pet_horse8%'
+          output: 'yes'
+
+
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8]
+    display_name: ' '
+    nbt_int: CustomModelData:1

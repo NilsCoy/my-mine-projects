@@ -1,0 +1,298 @@
+menu_title: '&6Справочник: Существа (1)'
+open_commands:
+  - '[sound] ITEM_BOOK_PAGE_TURN 1 1'
+size: 36
+items:
+  'wild_chicken':
+    material: CHICKEN_SPAWN_EGG
+    slot: 0
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fДикая курица'
+    lore:
+      - '&fПоведение: &7Бегство'
+      - '&fМесто обитания: &7Земли Тетры'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Сырое мясо, Кости, Плоть.'
+  'wild_rabbit':
+    material: RABBIT_SPAWN_EGG
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fДикий кролик'
+    lore:
+      - '&fПоведение: &7Бегство'
+      - '&fМесто обитания: &7Земли Тетры'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Сырое мясо, Кости, Плоть.'
+  'wild_kobane':
+    material: PIG_SPAWN_EGG
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fДикий кабан'
+    lore:
+      - '&fПоведение: &7Бегство'
+      - '&fМесто обитания: &7Земли Тетры'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Сырое мясо, Кости, Маленькая шкура,'
+      - '  &7Клык кабана, Плоть.'
+  'wild_sheep':
+    material: SHEEP_SPAWN_EGG
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fДикая овца'
+    lore:
+      - '&fПоведение: &7Бегство'
+      - '&fМесто обитания: &7Земли Тетры'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Сырое мясо, Кости, Маленькая шкура,'
+      - '  &7Плоть.'
+  'wild_cow':
+    material: COW_SPAWN_EGG
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fДикая корова'
+    lore:
+      - '&fПоведение: &7Бегство'
+      - '&fМесто обитания: &7Земли Тетры'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Сырое мясо, Кости, Средняя шкура,'
+      - '  &7Плоть.'
+  'wild_wolf':
+    material: WOLF_SPAWN_EGG
+    slot: 5
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fДикий волк'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Земли Тетры'
+      - '&fВремя появления: &7Ночь'
+      - '&fДроп:'
+      - '  &7Сырое мясо, Кости, Средняя шкура,'
+      - '  &7Плоть.'
+  'wild_hog':
+    material: HOGLIN_SPAWN_EGG
+    slot: 6
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fБоров'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Земли Тетры'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Сырое мясо, Кости, Большая шкура,'
+      - '  &7Плоть.'
+  'coal_rat':
+    material: SILVERFISH_SPAWN_EGG
+    slot: 7
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fУгольная крыса'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Шахта Фриреста'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Уголь.'
+  'iron_rat':
+    material: SILVERFISH_SPAWN_EGG
+    slot: 8
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fЖелезная крыса'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Железная шахта Вудленда'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Железная руда.'
+  'mushrooman':
+    material: MOOSHROOM_SPAWN_EGG
+    slot: 9
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fГрибомен'
+    lore:
+      - '&fПоведение: &7Бегство'
+      - '&fМесто обитания: &7Земли Тетры'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Свето-трава, Зеленый мох, Грибы,'
+      - '  &7Шляпа гриб.'
+  'skelet':
+    material: SKELETON_SPAWN_EGG
+    slot: 10
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fВосставший скелет'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Земли Тетры, Кладбища'
+      - '&fВремя появления: &7Ночь'
+      - '&fДроп:'
+      - '  &7Кости.'
+  'pillager_warrior':
+    material: PILLAGER_SPAWN_EGG
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fРазбойник'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Лагеря разбойников'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Мешок с монетами.'
+  'pillager_archer':
+    material: PILLAGER_SPAWN_EGG
+    slot: 12
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fРазбойник-арбалетчик'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Лагеря разбойников'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Мешок с монетами.'
+  'pillager_guard':
+    material: PILLAGER_SPAWN_EGG
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fРазбойник-страж'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Лагеря разбойников'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Мешок с монетами.'
+  'pillager_executioner':
+    material: PILLAGER_SPAWN_EGG
+    slot: 14
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fРазбойник-палач'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Лагеря разбойников'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Мешок с монетами.'
+  'ghost':
+    material: SNOW_GOLEM_SPAWN_EGG
+    slot: 15
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fПризрак'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Разрушенная башня'
+      - '&fВремя появления: &7Всегда'
+  'wild_bee':
+    material: BEE_SPAWN_EGG
+    slot: 16
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fМега-пчела'
+    lore:
+      - '&fПоведение: &7Агрессия'
+      - '&fМесто обитания: &7Земли Тетры'
+      - '&fВремя появления: &7Всегда'
+      - '&fДроп:'
+      - '  &7Мед мега-пчел.'
+
+
+
+  'home':
+    material: PAPER
+    slot: 27
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:13
+    display_name: '&fВернуться назад'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы вернуться.'
+    click_commands:
+      - '[openguimenu] manual_bestiary'
+      - '[refresh]'
+  # 'back':
+    # material: PAPER
+    # slot: 30
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # nbt_int: CustomModelData:11
+    # display_name: '&fПролистать назад'
+    # lore:
+      # - '&f[ ЛКМ ] &7для взаимодействия.'
+    # click_commands:
+      # - '[openguimenu] manual_bestiary_mobs1'
+      # - '[refresh]'
+  # 'next':
+    # material: PAPER
+    # slot: 32
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # nbt_int: CustomModelData:12
+    # display_name: '&fПролистать вперед'
+    # lore:
+      # - '&f[ ЛКМ ] &7для взаимодействия.'
+    # click_commands:
+      # - '[openguimenu] manual_bestiary_mobs1'
+      # - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [27,28,29,30,31,32,33,34,35]
+    display_name: ' '
+    nbt_int: CustomModelData:1

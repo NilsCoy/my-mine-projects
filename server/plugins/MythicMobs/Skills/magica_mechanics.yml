@@ -1,0 +1,34 @@
+remove_spell:
+  Skills:
+  - delay 30
+  - remove @self
+
+magica_cast_self:
+  Skills:
+  #- message{m="%checkitem_getinfo:mainhand_nbtstrings:PublicBukkitValues..magica:action=0%"} @self
+  - summon{type=spell2} @SelfLocation
+  - effect:particles{p=totem_of_undying;amount=20;speed=0;hS=0.5;vS=0.5;y=1} @SelfLocation
+  - sound{s=entity.illusioner.cast_spell;p=<random.float.0.5to1.5>} @SelfLocation
+  - vskill{s="%checkitem_getinfo:mainhand_nbtstrings:magica:action=0%"} @self
+
+magica_cast_projectile:
+  Skills:
+  - sound{s=entity.illusioner.cast_spell;p=<random.float.0.5to1.5>} @SelfLocation
+  - projectile{onStart=magica_cast_projectile-Start;onTick=magica_cast_projectile-Tick;onHit=magica_cast_projectile-Hit;v=25;i=1;hR=1;vR=1;hnp=true;syo=1;sso=<random.float.-2to2>;eso=-<random.float.-2to2>;sE=false} @TargetLocation
+magica_cast_projectile-Start:
+  Skills:
+  - summon{type=spell1}
+magica_cast_projectile-Tick:
+  Skills:
+  - effect:particles{p=dust_color_transition;amount=20;speed=0;hS=0.05;vS=0.05}
+magica_cast_projectile-Hit:
+  Skills:
+  - vskill{s="%checkitem_getinfo:mainhand_nbtstrings:magica:action=0%"}
+
+magica_skill_heal:
+  Skills:
+  - heal{amount=%checkitem_getinfo:mainhand_nbtstrings:magica:attribures..heal=0%}
+
+magica_skill_damage:
+  Skills:
+  - damage{amount=%checkitem_getinfo:mainhand_nbtstrings:magica:attribures..damage=0%}

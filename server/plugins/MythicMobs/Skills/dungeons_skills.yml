@@ -1,0 +1,142 @@
+
+dungeon_chest_idle:
+  Conditions:
+  - variableEquals{var=caster.idle;value="yes"} true
+  Skills:
+  - effect:particles{particle=CRIT;amount=20;hS=0.3;vS=0.3;speed=0;y=0.5} @SelfLocation
+dungeon_chest_open:
+  Conditions:
+  - variableEquals{var=caster.idle;value="yes"} true
+  Skills:
+  - setvariable{var=caster.idle;value="no";type=STRING}
+  - effect:particles{particle=CRIT_MAGIC;amount=50;hS=0.3;vS=0.3;speed=0;y=0.5} @SelfLocation
+  - delay 10
+  - sound{s=block.chest.open;p=0.7} @SelfLocation
+  - state{mid=chest;s=open} @self
+  - delay 10
+  - effect:itemspray{item=gold_nugget;amount=20;velocity=0.2;yv=1;d=60} @self
+  - sound{s=entity.player.levelup;p=2} @SelfLocation
+  - dropitem{i=Chest1,Chest1_bonus} @self
+  - delay 3
+  - sound{s=entity.player.levelup;p=2} @SelfLocation
+  - delay 3
+  - sound{s=entity.player.levelup;p=2} @SelfLocation
+  - delay 20
+  - command{c="svar add player_opened_chest 1 <target.name>"} @trigger
+  - remove @self
+reward_fox_chest_open:
+  Conditions:
+  - variableEquals{var=caster.idle;value="yes"} true
+  Skills:
+  - setvariable{var=caster.idle;value="no";type=STRING}
+  - effect:particles{particle=CRIT_MAGIC;amount=50;hS=0.3;vS=0.3;speed=0;y=0.5} @SelfLocation
+  - delay 10
+  - sound{s=block.chest.open;p=0.7} @SelfLocation
+  - state{mid=dungeon_chest;s=open} @self
+  - delay 10
+  - effect:itemspray{item=gold_nugget;amount=20;velocity=0.2;yv=1;d=60} @self
+  - sound{s=entity.player.levelup;p=2} @SelfLocation
+  - dropitem{i=Chest1,Chest1_bonus} @self
+  - delay 3
+  - sound{s=entity.player.levelup;p=2} @SelfLocation
+  - delay 3
+  - sound{s=entity.player.levelup;p=2} @SelfLocation
+  - delay 20
+  - command{c="svar add player_opened_chest 1 <target.name>"} @trigger
+  - message{m="&cВы покините данж через 15 секунд!"} @PlayersInRadius{r=60}
+  - delay 240
+  - message{m="&cВы покините данж через 3!"} @PlayersInRadius{r=60}
+  - delay 20
+  - message{m="&cВы покините данж через 2!"} @PlayersInRadius{r=60}
+  - delay 20
+  - message{m="&cВы покините данж через 1!"} @PlayersInRadius{r=60}
+  - delay 20
+  - sound{s=block.wooden_door.open;p=1} @PlayersInRadius{r=60}
+  - command{c="svar set dungeon1_cooldown 15"} @PlayersInRadius{r=60}
+  - command{c="ce call dungeon_close %dungeon_id%=1"} @PlayersInRadius{r=60}
+  - command{c="execute positioned <caster.l.x> <caster.l.y> <caster.l.z> run tp @a[distance=..10] 658.5 74 -75.5 180 0"} @target @PlayersInRadius{r=50}
+  - remove @self
+reward_chest_spawn:
+  Skills:
+  - setrotation{relative=true;yaw=%randomnumber_value_0_180%} @self
+  - model{m=dungeon_chest;n=nametag;d=false} @self
+  - effect:particles{particle=block;m=rooted_dirt;amount=50;hS=0.5;vS=0.1;speed=0} @SelfLocation
+  - sound{s=block.grass.break;p=0.7} @SelfLocation
+  - delay 10
+  - effect:particles{particle=block;m=rooted_dirt;amount=50;hS=0.5;vS=0.1;speed=0} @SelfLocation
+  - sound{s=block.grass.break;p=0.7} @SelfLocation
+  - delay 10
+  - effect:particles{particle=block;m=rooted_dirt;amount=50;hS=0.5;vS=0.1;speed=0} @SelfLocation
+  - sound{s=block.grass.break;p=0.7} @SelfLocation
+  - delay 10
+  - effect:particles{particle=block;m=rooted_dirt;amount=50;hS=0.5;vS=0.1;speed=0} @SelfLocation
+  - sound{s=block.grass.break;p=0.7} @SelfLocation
+  - setvariable{var=caster.idle;value="yes";type=STRING}
+  - setvariable{var=caster.life_time;value="0";type=INTEGER}
+dungeon_chest_spawn:
+  Skills:
+  - setrotation{relative=true;yaw=%randomnumber_value_0_180%} @self
+  - model{m=chest;n=nametag;d=false} @self
+  - effect:particles{particle=block;m=rooted_dirt;amount=50;hS=0.5;vS=0.1;speed=0} @SelfLocation
+  - sound{s=block.grass.break;p=0.7} @SelfLocation
+  - delay 10
+  - effect:particles{particle=block;m=rooted_dirt;amount=50;hS=0.5;vS=0.1;speed=0} @SelfLocation
+  - sound{s=block.grass.break;p=0.7} @SelfLocation
+  - delay 10
+  - effect:particles{particle=block;m=rooted_dirt;amount=50;hS=0.5;vS=0.1;speed=0} @SelfLocation
+  - sound{s=block.grass.break;p=0.7} @SelfLocation
+  - delay 10
+  - effect:particles{particle=block;m=rooted_dirt;amount=50;hS=0.5;vS=0.1;speed=0} @SelfLocation
+  - sound{s=block.grass.break;p=0.7} @SelfLocation
+  - setvariable{var=caster.idle;value="yes";type=STRING}
+  - setvariable{var=caster.life_time;value="0";type=INTEGER}
+
+dungeon_default_fox_attack:
+  Skills:
+  - state{mid=default_fox;s=attack} @self
+  - delay 22
+  - damage{a=3} @PIR{r=3}
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=fleeplayers} @self
+  - runaigoalselector{goal=randomstroll} @self
+  - runaigoalselector{goal=float} @self
+  - delay 30
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=meleeattack} @self
+  - runaigoalselector{goal=randomstroll} @self
+  - runaigoalselector{goal=float} @self
+
+dungeon_black_fox_attack:
+  Skills:
+  - state{mid=default_fox;s=attack} @self
+  - delay 22
+  - damage{a=5} @PIR{r=3}
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=fleeplayers} @self
+  - runaigoalselector{goal=randomstroll} @self
+  - runaigoalselector{goal=float} @self
+  - delay 30
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=meleeattack} @self
+  - runaigoalselector{goal=randomstroll} @self
+  - runaigoalselector{goal=float} @self
+
+dungeon_black_fox_skill_cast:
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - setAI{ai=false} @self
+  - particleorbital{p=reddust;color=#FFEF00;r=0.8;points=16;t=40;i=1;vy=15;y=2.3} @self
+  - delay 50
+  - setAI{ai=true} @self
+  - randomskill{skills=dungeon_black_fox_skill1,dungeon_black_fox_skill1}
+
+dungeon_black_fox_skill1:
+  Conditions:
+  - targetwithin{d=40} true
+  Skills:
+  - setAI{ai=false} @self
+  - particleorbital{p=reddust;color=#FFEF00;r=0.8;points=16;t=40;i=1;vy=15;y=2.3} @self
+  - delay 50
+  - setAI{ai=true} @self
+  - randomskill{skills=dungeon_black_fox_skill1,dungeon_black_fox_skill1}

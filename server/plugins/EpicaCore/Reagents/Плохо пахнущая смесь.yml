@@ -1,0 +1,8 @@
+PositiveEffect_1:
+  Name: DAMAGE_RESISTANCE
+  Duraction: 200
+  Level: 0
+NegativeEffect_1:
+  Name: DARKNESS
+  Duraction: 300
+  Level: 0

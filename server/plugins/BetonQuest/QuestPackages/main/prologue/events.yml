@@ -1,0 +1,94 @@
+events:
+  prisoner_start: "tag add prisoner_start"
+  pillager1_visible: "tag add pillager1_visible"
+  pillager1_hide: "tag delete pillager1_visible"
+  pillager1_teleport: "teleport 9515.5;88;10024.5;world;-90;0"
+  pillager2: "tag add pillager2"
+  pillager2_quest1_started: "tag add pillager2_quest1_started"
+  pillager2_item1_give: "command ii give %player% pickaxe1"
+  pillager2_item1_remove: "take pickaxe"
+  pillager2_item2_remove: "take coal:999"
+  pillager2_item3_give: "command ii give %player% fishing_rod"
+  pillager2_item3_remove: "take fish_rod"
+  pillager2_item4_remove: "take fish:999"
+  pillager2_quest2_started: "tag add pillager2_quest2_started"
+  pillager2_quest_completed: "tag add pillager2_quest_completed"
+  pillager2_spawn: "command spawnpoint %player% 9463 81 10066 -90"
+  bread_teleport: "teleport 9514.5;88;10024.5;world;90;0"
+  bread_item_give: "command ii give %player% bread 16"
+  bread_start: "conversation bread"
+  bread: "tag add bread"
+  bread_spawn: "command spawnpoint %player% 9513 88 10026"
+  prisoner_trigger1: "tag add prisoner_trigger1"
+  prisoner_trigger2: "tag add prisoner_trigger2"
+  prisoner_effect_add: "effect BLINDNESS 999 1 ambient icon"
+  prisoner_effect_remove: "deleffect BLINDNESS"
+  open_door: "notify io:sound sound:block.iron_door.open"
+  pickaxe: "notify io:sound sound:block.stone.break"
+  knock: "notify io:sound sound:block.anvil.use"
+  hit: "notify io:sound sound:epicfight:entity.hit.blade"
+  pillager3_start: "conversation pillager3"
+  pillager3_teleport: "teleport 9505.5;82;10043.5;world;-90;0"
+  pillagers_start: "conversation pillagers"
+  pillagers_trigger: "tag add pillagers_trigger"
+  pillagers_teleport: "teleport 10000.5;15.00;9886.5;world;180;0"
+  god_start: "conversation god"
+  god_effect: "effect BLINDNESS 15 1 ambient icon"
+  god_teleport: "teleport 68.5;68.00;181.5;world;100;0"
+  god_spawn: "command spawnpoint %player% 68 68 181 100"
+  mine_notify: "notify &6&l! ! !\\n&7Используйте &fПКМ&7 с киркой в руках, чтобы копать руду! io:title"
+  fish_notify: "notify &6&l! ! !\\n&7Попадите в рыбалке 3 раза по метке, чтобы выловить рыбу! io:title"
+  stealth_notify1: "notify &6&l! ! !\\n&7Используйте &fSHIFT&7, чтобы войти в режим скрытности! io:title"
+  stealth_notify2: "notify &fХодите в темных местах, где мало света, чтобы вас не заметили!"
+  quest_started: "notify &6&lВы взяли квест!\\n&7Посмотрите информацию в &lзаданиях&7. io:title"
+  quest_updated: "notify &6&lКвест обновлен!\\n&7Посмотрите информацию в &lзаданиях&7. io:title"
+  quest_finished: "notify &6&lКвест выполнен!\\n&7Посмотрите информацию в &lзаданиях&7. io:title"
+  
+  prologe1_compass_on: command calcomp toggle %player% prologe1 enable
+  prologe1_compass_off: command calcomp toggle %player% prologe1 disable
+  prologe2_compass_on: command calcomp toggle %player% prologe2 enable
+  prologe2_compass_off: command calcomp toggle %player% prologe2 disable
+  prologe3_compass_on: command calcomp toggle %player% prologe3 enable
+  prologe3_compass_off: command calcomp toggle %player% prologe3 disable
+
+  quest_objective: objective add variables
+
+  prologue_name_state1: 'variable variables prologue-name "Пролог"'
+  prologue_lore1_state1: 'variable variables prologue-lore1 "Видимо вы попали в передрягу и"'
+  prologue_lore2_state1: 'variable variables prologue-lore2 "проснулись в какой-то тюрьме."'
+  prologue_lore3_state1: 'variable variables prologue-lore3 "Один из стражников приказал вам"'
+  prologue_lore4_state1: 'variable variables prologue-lore4 "идти к надзирателю, который находится"'
+  prologue_lore5_state1: 'variable variables prologue-lore5 "в пещере."'
+  prologue_state1: "folder prologue_name_state1,prologue_lore1_state1,prologue_lore2_state1,prologue_lore3_state1,prologue_lore4_state1,prologue_lore5_state1"
+
+  prologue_name_state2: 'variable variables prologue-name "Пролог"'
+  prologue_lore1_state2: 'variable variables prologue-lore1 "Надзиратель дал вам кирку для"'
+  prologue_lore2_state2: 'variable variables prologue-lore2 "добычи угля. Вам нужно принести"'
+  prologue_lore3_state2: 'variable variables prologue-lore3 "30 штук, после чего ваш работчий"'
+  prologue_lore4_state2: 'variable variables prologue-lore4 "день закончится."'
+  prologue_lore5_state2: 'variable variables prologue-lore5 ""'
+  prologue_state2: "folder prologue_name_state2,prologue_lore1_state2,prologue_lore2_state2,prologue_lore3_state2,prologue_lore4_state2,prologue_lore5_state2"
+
+  prologue_name_state3: 'variable variables prologue-name "Пролог"'
+  prologue_lore1_state3: 'variable variables prologue-lore1 "Вы закончили свою работу раньше"'
+  prologue_lore2_state3: 'variable variables prologue-lore2 "остальных, однако надзиратель не"'
+  prologue_lore3_state3: 'variable variables prologue-lore3 "желает вас отпускать. Вам дали"'
+  prologue_lore4_state3: 'variable variables prologue-lore4 "удочку и, указав на пруд в пещере,"'
+  prologue_lore5_state3: 'variable variables prologue-lore5 "сказали выловить рыбу."'
+  prologue_state3: "folder prologue_name_state3,prologue_lore1_state3,prologue_lore2_state3,prologue_lore3_state3,prologue_lore4_state3,prologue_lore5_state3"
+
+  prologue_name_state4: 'variable variables prologue-name "Пролог"'
+  prologue_lore1_state4: 'variable variables prologue-lore1 "Остальные рабы уже ушли в главный зал,"'
+  prologue_lore2_state4: 'variable variables prologue-lore2 "вам стоит идти туда быстрее, если"'
+  prologue_lore3_state4: 'variable variables prologue-lore3 "не хотите остаться сегодня без еды."'
+  prologue_lore4_state4: 'variable variables prologue-lore4 ""'
+  prologue_lore5_state4: 'variable variables prologue-lore5 ""'
+  prologue_state4: "folder prologue_name_state4,prologue_lore1_state4,prologue_lore2_state4,prologue_lore3_state4,prologue_lore4_state4,prologue_lore5_state4"
+
+  prologue_name_state5: 'variable variables prologue-name "Пролог"'
+  prologue_lore1_state5: 'variable variables prologue-lore1 "Поговорив с заключенным, вы решаетесь"'
+  prologue_lore2_state5: 'variable variables prologue-lore2 "покинуть камеру пока никто не видит и"'
+  prologue_lore3_state5: 'variable variables prologue-lore3 "разведать дальние шахты."'
+  prologue_lore4_state5: 'variable variables prologue-lore4 "Учтите, что вас не должны заметить!"'
+  prologue_lore5_state5: 'variable variables prologue-lore5 ""'
+  prologue_state5: "folder prologue_name_state5,prologue_lore1_state5,prologue_lore2_state5,prologue_lore3_state5,prologue_lore4_state5,prologue_lore5_state5"

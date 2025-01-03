@@ -1,0 +1,172 @@
+points:
+  village1_smith_q1:
+    world: world
+    x: 598
+    y: 84
+    z: -465
+    symbol_regular: '&e&l?'
+    symbol_hovered: '&6&l?'
+    global: false
+    range: 0
+  village1_smith_q2:
+    world: world
+    x: 877
+    y: 87
+    z: 52
+    symbol_regular: '&e&l?'
+    symbol_hovered: '&6&l?'
+    global: false
+    range: 0
+  horse1_quest:
+    world: world
+    x: 473
+    y: 110
+    z: -19
+    symbol_regular: '&e&l?'
+    symbol_hovered: '&6&l?'
+    global: false
+    range: 0
+  town1_guild_instructor:
+    world: world
+    x: 1370
+    y: 76
+    z: -1152
+    symbol_regular: '&e&l?'
+    symbol_hovered: '&6&l?'
+    global: false
+    range: 0
+  prologe1:
+    world: world
+    x: 9465
+    y: 83
+    z: 10067
+    symbol_regular: '&e&l?'
+    symbol_hovered: '&6&l?'
+    global: false
+    range: 0
+  prologe2:
+    world: world
+    x: 9422
+    y: 106
+    z: 10062
+    symbol_regular: '&e&l?'
+    symbol_hovered: '&6&l?'
+    global: false
+    range: 0
+  prologe3:
+    world: world
+    x: 9518
+    y: 92
+    z: 10013
+    symbol_regular: '&e&l?'
+    symbol_hovered: '&6&l?'
+    global: false
+    range: 0
+  save2:
+    world: world
+    x: 1573
+    y: 95
+    z: -1247
+    symbol_regular: '&c❌'
+    symbol_hovered: '&c❌'
+    global: false
+    range: 0
+  save1:
+    world: world
+    x: 745
+    y: 86
+    z: 195
+    symbol_regular: '&c❌'
+    symbol_hovered: '&c❌'
+    global: false
+    range: 0
+  cave1:
+    world: world
+    x: 598
+    y: 85
+    z: -469
+    symbol_regular: '&c❌'
+    symbol_hovered: '&c❌'
+    global: false
+    range: 0
+  cave2:
+    world: world
+    x: 1757
+    y: 86
+    z: -681
+    symbol_regular: '&c❌'
+    symbol_hovered: '&c❌'
+    global: false
+    range: 0
+  cave3:
+    world: world
+    x: 580
+    y: 85
+    z: -2062
+    symbol_regular: '&c❌'
+    symbol_hovered: '&c❌'
+    global: false
+    range: 0
+  pillagers1:
+    world: world
+    x: 788
+    y: 99
+    z: -968
+    symbol_regular: '&c❌'
+    symbol_hovered: '&c❌'
+    global: false
+    range: 0
+  pillagers2:
+    world: world
+    x: 86
+    y: 88
+    z: -547
+    symbol_regular: '&c❌'
+    symbol_hovered: '&c❌'
+    global: false
+    range: 0
+  wolf1:
+    world: world
+    x: 470
+    y: 96
+    z: -20
+    symbol_regular: '&c❌'
+    symbol_hovered: '&c❌'
+    global: false
+    range: 0
+  grave1:
+    world: world
+    x: 879
+    y: 84
+    z: 52
+    symbol_regular: '&c❌'
+    symbol_hovered: '&c❌'
+    global: false
+    range: 0
+  grave2:
+    world: world
+    x: 1340
+    y: 87
+    z: -1524
+    symbol_regular: '&c❌'
+    symbol_hovered: '&c❌'
+    global: false
+    range: 0
+  storage1:
+    world: world
+    x: 760
+    y: 75
+    z: 193
+    symbol_regular: '&f✉'
+    symbol_hovered: '&f✉'
+    global: true
+    range: 50
+  potion1:
+    world: world
+    x: 1699
+    y: 76
+    z: -1284
+    symbol_regular: '&f🧪'
+    symbol_hovered: '&f🧪'
+    global: true
+    range: 50

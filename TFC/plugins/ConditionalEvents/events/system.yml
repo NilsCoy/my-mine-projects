@@ -1,0 +1,29 @@
+Events:
+  player_nickname:
+    type: entity_interact
+    conditions:
+    - '%entity% == PLAYER'
+    actions:
+      default:
+      - 'actionbar: &6%target:player%;60'
+
+  player_default_skills:
+    type: player_join
+    conditions:
+    - '%servervariables_value_player_first_join% == 0'
+    actions:
+      default:
+      - 'console_command: epicfight skill add %player% guard epicfight:guard'
+      - 'console_command: epicfight skill add %player% dodge epicfight:roll'
+      - 'console_command: svar set player_first_join 1 %player%'
+
+  item_use:
+    type: item_interact
+    conditions:
+    - '%item% == COMPASS execute compass'
+    - '%item% == CLOCK execute clock'
+    actions:
+      compass:
+      - 'actionbar: &f%player_x% %player_y% %player_z%;100'
+      clock:
+      - 'actionbar: &f%player_world_time_24%;100'

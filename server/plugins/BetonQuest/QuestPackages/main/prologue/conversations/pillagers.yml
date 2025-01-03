@@ -1,0 +1,103 @@
+conversations:
+  pillagers:
+    quester: ''
+    first: 'npc_node_1'
+    stop: 'true'
+    NPC_options:
+      npc_node_1:
+        text: '&7Вас случайно встречает отряд разбойников.&e\n\nПервый разбойник:&f\nРебята, вы только посмотрите кто к нам выплыл!'
+        condition: ''
+        event: ''
+        pointers: player_node_1
+
+      npc_node_2:
+        text: '&eВторой разбойник:&f\n\nРыба-беглец!'
+        condition: ''
+        event: ''
+        pointers: player_node_2
+
+      npc_node_3:
+        text: '&eНадзиратель:&f\n\nИ что нам с тобой делать?'
+        condition: ''
+        event: ''
+        pointers: player_node_3
+
+      npc_node_4:
+        text: '&eПервый разбойник:&f\n\nТы же знаешь что мы делаем с беглецами, давайте просто убьем его.'
+        condition: ''
+        event: ''
+        pointers: player_node_4
+
+      npc_node_5:
+        text: '&eВторой разбойник:&f\n\nКакой же ты скучный, можно же было с ним немного поиграться.'
+        condition: ''
+        event: ''
+        pointers: player_node_5
+
+      npc_node_6:
+        text: '&eНадзиратель:&f\n\nКрисс прав, нет смысла с ним церемониться, лучше просто убить.'
+        condition: ''
+        event: ''
+        pointers: player_node_6
+
+      npc_node_7:
+        text: '&7Разбойники обнажают свои мечи и нападают на вас.\n\nРазбойники за пару минут расправляются с безоружным рабом и вы чувствуете как жизнь покидает вас.'
+        condition: ''
+        event: 'hit,prisoner_effect_add,pillagers_trigger'
+        pointers: player_node_7
+
+      npc_node_8:
+        text: '&7Спускаясь в пучину сознания вы не замечаете как обстановка вокруг меняется и вы вновь открываете глаза.'
+        condition: ''
+        event: ''
+        pointers: player_node_8
+
+
+
+    player_options:
+      player_node_1:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_2
+
+      player_node_2:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_3:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_4
+
+      player_node_4:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_5
+
+      player_node_5:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_6
+
+      player_node_6:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_7
+
+      player_node_7:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_8
+
+      player_node_8:
+        text: '[ ... ]'
+        condition: ''
+        event: 'pillagers_teleport,prisoner_effect_remove,god_start,prologe2_compass_off'

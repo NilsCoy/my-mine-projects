@@ -1,0 +1,1377 @@
+menu_title: '&f七七七七七七七七丑' #'&6Титулы'
+open_commands:
+  - '[sound] UI_BUTTON_CLICK 1 1'
+size: 36
+items:
+  'titul_1':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 0
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fПервопроходец'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за участие в Альфа тесте.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&5 Первопроходец &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_1%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 1'
+    click_commands:
+      - '[console] svar set player_titul_active 1 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_1_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 0
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fПервопроходец'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за участие в Альфа тесте.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 1'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_1_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 0
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fПервопроходец'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за участие в Альфа тесте.'
+
+
+
+  'titul_2':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 1
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fОхотник'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за убийство мобов.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&8 Охотник &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_2%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 2'
+    click_commands:
+      - '[console] svar set player_titul_active 2 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_2_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 1
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fОхотник'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за убийство мобов.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 2'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_2_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 1
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fОхотник'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за убийство мобов.'
+
+
+
+  'titul_3':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 2
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fЕгерь'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за убийство мобов.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&2 Егерь &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_3%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 3'
+    click_commands:
+      - '[console] svar set player_titul_active 3 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_3_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 2
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fЕгерь'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за убийство мобов.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 3'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_3_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 2
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fЕгерь'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за убийство мобов.'
+
+
+
+  'titul_4':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 3
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fЗверобой'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за убийство мобов.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&a Зверобой &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_4%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 4'
+    click_commands:
+      - '[console] svar set player_titul_active 4 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_4_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 3
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fЗверобой'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за убийство мобов.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 4'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_4_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 3
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fЗверобой'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за убийство мобов.'
+
+
+
+  'titul_5':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 4
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fРазбойник'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за убийство игроков.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&8 Разбойник &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_5%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 5'
+    click_commands:
+      - '[console] svar set player_titul_active 5 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_5_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 4
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fРазбойник'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за убийство игроков.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 5'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_5_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 4
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fРазбойник'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за убийство игроков.'
+
+
+
+  'titul_6':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 5
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fУбийца'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за убийство игроков.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&c Убийца &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_6%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 6'
+    click_commands:
+      - '[console] svar set player_titul_active 6 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_6_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 5
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fУбийца'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за убийство игроков.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 6'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_6_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 5
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fУбийца'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за убийство игроков.'
+
+
+
+  'titul_7':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 6
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fПалач'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за убийство игроков.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&4 Палач &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_7%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 7'
+    click_commands:
+      - '[console] svar set player_titul_active 7 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_7_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 6
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fПалач'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за убийство игроков.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 7'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_7_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 6
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fПалач'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за убийство игроков.'
+
+
+
+  'titul_8':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 7
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fМаньяк'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за убийство игроков.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&4 Маньяк &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_8%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 8'
+    click_commands:
+      - '[console] svar set player_titul_active 8 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_8_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 7
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fМаньяк'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за убийство игроков.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 8'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_8_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 7
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fМаньяк'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за убийство игроков.'
+
+
+
+  'titul_9':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 8
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fНенавистник флоры'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за собирательство.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&2 Ненавистник флоры &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_9%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 9'
+    click_commands:
+      - '[console] svar set player_titul_active 9 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_9_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 8
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fНенавистник фауны'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за собирательство.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 9'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_9_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 8
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fНенавистник фауны'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за собирательство.'
+
+
+
+  'titul_10':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 9
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fЭрхиус'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается в наградах сезонного'
+      - '&7пропуска.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&d Эрхиус &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_10%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 10'
+    click_commands:
+      - '[console] svar set player_titul_active 10 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_10_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 9
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fЭрхиус'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается в наградах сезонного'
+      - '&7пропуска.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 10'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_10_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 9
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fЭрхиус'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается в наградах сезонного'
+      - '&7пропуска.'
+
+
+
+  'titul_11':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 10
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fРыболюбец'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за ловлю рыбы.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&8 Рыболюбец &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_11%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 11'
+    click_commands:
+      - '[console] svar set player_titul_active 11 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_11_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 10
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fРыболюбец'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за ловлю рыбы.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 11'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_11_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 10
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fРыболюбец'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за ловлю рыбы.'
+
+
+
+  'titul_12':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 11
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fЛовец'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за ловлю рыбы.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&3 Ловец &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_12%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 12'
+    click_commands:
+      - '[console] svar set player_titul_active 12 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_12_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 11
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fЛовец'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за ловлю рыбы.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 12'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_12_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 11
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fЛовец'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за ловлю рыбы.'
+
+
+
+  'titul_13':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 12
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fМестный Нептун'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за ловлю рыбы.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&b Местный Нептун &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_13%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 13'
+    click_commands:
+      - '[console] svar set player_titul_active 13 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_13_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 12
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fМестный Нептун'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за ловлю рыбы.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 13'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_13_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 12
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fМестный Нептун'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за ловлю рыбы.'
+
+
+
+  'titul_14':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 13
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fРудокоп'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за добычу руды.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&8 Рудокоп &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_14%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 14'
+    click_commands:
+      - '[console] svar set player_titul_active 14 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_14_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 13
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fРудокоп'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за добычу руды.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 14'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_14_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 13
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fРудокоп'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за добычу руды.'
+
+
+
+  'titul_15':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 14
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fГорняк'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за добычу руды.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&e Горняк &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_15%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 15'
+    click_commands:
+      - '[console] svar set player_titul_active 15 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_15_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 14
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fГорняк'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за добычу руды.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 15'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_15_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 14
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fГорняк'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за добычу руды.'
+
+
+
+  'titul_16':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 15
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fСтаратель'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за добычу руды.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&6 Старатель &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_16%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 16'
+    click_commands:
+      - '[console] svar set player_titul_active 16 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_16_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 15
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fСтаратель'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за добычу руды.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 16'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_16_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 15
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fСтаратель'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за добычу руды.'
+
+
+
+  'titul_17':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 16
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fII поколение'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за промокод в честь'
+      - '&7открытия.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&6 II поколение &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_17%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 17'
+    click_commands:
+      - '[console] svar set player_titul_active 17 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_17_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 16
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fII поколение'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за промокод в честь'
+      - '&7открытия.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 17'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_17_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 16
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fII поколение'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за промокод в честь'
+      - '&7открытия.'
+
+
+
+  'titul_18':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 17
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fМастер'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за достижение'
+      - '&7100 уровня.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&d Мастер &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_18%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 18'
+    click_commands:
+      - '[console] svar set player_titul_active 18 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_18_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 17
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fМастер'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за достижение'
+      - '&7100 уровня.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 18'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_18_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 17
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fМастер'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за достижение'
+      - '&7100 уровня.'
+
+
+
+  'titul_19':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 18
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&fГрандмастер'
+    lore:
+      - '&8> &7Статус: &aМожно взять'
+      - ''
+      - '&7Получается за достижение'
+      - '&7200 уровня.'
+      - ''
+      - '&8> &7Отображение в чате:'
+      - '&7[&5 Грандмастер &7] &f%player_name%'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: string equals
+          input: '%player_has_permission_titul_19%'
+          output: 'yes'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% != 19'
+    click_commands:
+      - '[console] svar set player_titul_active 19 %player_name%'
+      - '[message] &eВы успешно установили титул.'
+      - '[refresh]'
+  'titul_19_use':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 18
+    priority: 1
+    update: true
+    hide_enchantments: true
+    enchantments:
+    - 'ARROW_DAMAGE;1'
+    hide_attributes:  true
+    display_name: '&fГрандмастер'
+    lore:
+      - '&8> &7Статус: &6Используется'
+      - ''
+      - '&7Получается за достижение'
+      - '&7200 уровня.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы снять!'
+    view_requirement:
+      requirements:
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_player_titul_active% == 19'
+    click_commands:
+      - '[console] svar set player_titul_active 0 %player_name%'
+      - '[message] &eВы успешно сняли титул.'
+      - '[refresh]'
+  'titul_19_block':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjg2NmE3N2I0NzJjNzJmNTEzMTE5MWM2ZDUyMWVkNmEzMWY3ZTU2MjBlNzcyZjE5NDRjNDJjMTFhOTBlYTZkZCJ9fX0=
+    slot: 18
+    priority: 3
+    update: true
+    hide_attributes:  true
+    display_name: '&fГрандмастер'
+    lore:
+      - '&8> &7Статус: &cЗаблокировано'
+      - '&7Вы еще не получили этот титул!'
+      - ''
+      - '&7Получается за достижение'
+      - '&7200 уровня.'
+
+
+
+
+  # 'back':
+    # material: PAPER
+    # slot: 9
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # nbt_int: CustomModelData:13
+    # display_name: '&fНазад'
+    # lore:
+      # - '&f[ ЛКМ ] &7чтобы посмотреть страницу.'
+    # click_commands:
+      # - '[openguimenu] battle_pass_'
+      # - '[refresh]'
+
+  # 'next':
+    # material: PAPER
+    # slot: 17
+    # priority: 4
+    # update: true
+    # hide_attributes: true
+    # nbt_int: CustomModelData:12
+    # display_name: '&fВперед'
+    # lore:
+      # - '&f[ ЛКМ ] &7чтобы посмотреть страницу.'
+    # click_commands:
+      # - '[openguimenu] battle_pass_2'
+      # - '[refresh]'
+  'info':
+    material: WRITABLE_BOOK
+    slot: 31
+    priority: 4
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:39
+    display_name: '&fИнформация'
+    lore:
+      - '&7Здесь находятся все существующие'
+      - '&7титулы сервера.'
+      - ''
+      - '&7Каждый слот отвечает за определенный'
+      - '&7титул, чтобы получить один из таких,'
+      - '&7вам нужно проявить себя в разных задачах.'
+      - ''
+      - '&7Титулы не несут в себе функционала, они'
+      - '&7нужны только как элемент внешности персонажа.'
+    click_commands:
+      #- '[openguimenu] battle_pass_5'
+      - '[refresh]'

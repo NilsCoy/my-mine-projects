@@ -1,0 +1,329 @@
+menu_title: '&6Кузня > Крафт материалов'
+open_commands:
+  - '[sound] BLOCK_ANVIL_LAND 1 1.5'
+size: 45
+items:
+
+
+
+  'iron_ingot':
+    material: IRON_INGOT
+    slot: 10
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&bЖелезный слиток'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &bУголь &f- 2'
+      - '&f● &bЖелезная руда &f- 1'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 2
+        anything_here_2:
+          type: has item
+          material: 'RAW_IRON'
+          name: '&bЖелезная руда'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 201 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+  'iron_plate':
+    material: EMERALD
+    slot: 19
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:2
+    display_name: '&bЖелезная пластина'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &bУголь &f- 1'
+      - '&f● &bЖелезный слиток &f- 2'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 1
+        anything_here_2:
+          type: has item
+          material: 'IRON_INGOT'
+          name: '&bЖелезный слиток'
+          amount: 2
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 202 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+  'iron_ring':
+    material: EMERALD
+    slot: 28
+    priority: 4
+    update: true
+    amount: 3
+    hide_attributes: false
+    nbt_int: CustomModelData:1
+    display_name: '&bЖелезное колечко'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &bУголь &f- 1'
+      - '&f● &bЖелезный слиток &f- 1'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 1
+        anything_here_2:
+          type: has item
+          material: 'IRON_INGOT'
+          name: '&bЖелезный слиток'
+          amount: 1
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 203 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+  'steel_ingot':
+    material: IRON_INGOT
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&bСтальной слиток'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &bУголь &f- 3'
+      - '&f● &bЖелезный слиток &f- 2'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 3
+        anything_here_2:
+          type: has item
+          material: 'IRON_INGOT'
+          name: '&bЖелезный слиток'
+          amount: 2
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 204 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+  'steel_plate':
+    material: EMERALD
+    slot: 20
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:2
+    display_name: '&bЖелезная пластина'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &bУголь &f- 2'
+      - '&f● &bСтальной слиток &f- 2'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 2
+        anything_here_2:
+          type: has item
+          material: 'IRON_INGOT'
+          name: '&bСтальной слиток'
+          amount: 2
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 205 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+  'cobalt_ingot':
+    material: EMERALD
+    slot: 12
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:3
+    display_name: '&bКобальтовый слиток'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &bУголь &f- 6'
+      - '&f● &bКобальтовая руда &f- 2'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 6
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bКобальтовая руда'
+          amount: 2
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 206 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+  'cobalt_plate':
+    material: EMERALD
+    slot: 21
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:4
+    display_name: '&bКобальтовая пластина'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &bУголь &f- 3'
+      - '&f● &bКобальтовый слиток &f- 2'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 3
+        anything_here_2:
+          type: has item
+          material: 'EMERALD'
+          name: '&bКобальтовый слиток'
+          amount: 2
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 207 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+  'ancient_ingot':
+    material: NETHERITE_INGOT
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:3
+    display_name: '&bДревний слиток'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &bУголь &f- 6'
+      - '&f● &bДревний лом &f- 2'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 10
+        anything_here_2:
+          type: has item
+          material: 'NETHERITE_SCRAP'
+          name: '&bДревний лом'
+          amount: 2
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 208 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+  'ancient_plate':
+    material: EMERALD
+    slot: 22
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:5
+    display_name: '&bДревняя пластина'
+    lore:
+      - '&f&lТребуется:'
+      - '&f● &bУголь &f- 5'
+      - '&f● &bДревний слиток &f- 2'
+      - ''
+      - '&7[ЛКМ] чтобы создать!'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: has item
+          material: 'COAL'
+          name: '&bУголь'
+          amount: 5
+        anything_here_2:
+          type: has item
+          material: 'NETHERITE_INGOT'
+          name: '&bДревний слиток'
+          amount: 2
+      deny_commands:
+        - '[message] &cУ вас недостаточно русурсов!'
+        - '[sound] BLOCK_ANVIL_DESTROY 1 0.9'
+    click_commands:
+      - '[console] svar set player_craft_item 209 %player_name%'
+      - '[sound] BLOCK_ANVIL_USE 1 0.9'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,37,38,39,40,41,42,43,44]
+    display_name: ' '
+    nbt_int: CustomModelData:1

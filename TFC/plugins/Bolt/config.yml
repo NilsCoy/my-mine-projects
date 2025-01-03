@@ -1,0 +1,125 @@
+version: 0
+language: ru
+settings:
+  use-action-bar: true
+  per-player-locale: true
+database:
+  type: sqlite
+  hostname: ""
+  database: ""
+  username: ""
+  password: ""
+  prefix: ""
+  properties: [ ]
+protections:
+  private:
+    default: true
+    require-permission: false
+    allows: [ "redstone" ]
+  display:
+    require-permission: false
+    allows: [ "redstone", "interact", "open" ]
+  deposit:
+    require-permission: false
+    allows: [ "redstone", "interact", "open", "deposit" ]
+  withdrawal:
+    require-permission: false
+    allows: [ "redstone", "interact", "open", "withdraw" ]
+  public:
+    require-permission: false
+    allows: [ "redstone", "interact", "open", "deposit", "withdraw", "mount" ]
+access:
+  normal:
+    default: true
+    require-permission: false
+    allows: [ "redstone", "interact", "open", "deposit", "withdraw", "mount" ]
+  admin:
+    require-permission: true
+    allows: [ "redstone", "interact", "open", "deposit", "withdraw", "mount", "edit" ]
+sources:
+  player:
+    require-permission: false
+  group:
+    require-permission: false
+  password:
+    require-permission: false
+  permission:
+    require-permission: true
+blocks:
+  chest:
+    autoProtect: private
+  trapped_chest:
+    autoProtect: private
+  furnace:
+    autoProtect: private
+  blast_furnace:
+    autoProtect: private
+  smoker:
+    autoProtect: private
+  dispenser:
+    autoProtect: private
+  dropper:
+    autoProtect: private
+  barrel:
+    autoProtect: private
+  brewing_stand:
+    autoProtect: private
+  composter:
+    autoProtect: private
+  beacon:
+    autoProtect: private
+  jukebox:
+    autoProtect: private
+  note_block:
+    autoProtect: private
+  lectern:
+    autoProtect: private
+  chiseled_bookshelf:
+    autoProtect: private
+  hopper:
+    autoProtect: private
+  decorated_pot:
+    autoProtect: private
+  crafter:
+    autoProtect: private
+  '#shulker_boxes':
+    autoProtect: private
+  '#anvil':
+    autoProtect: private
+  '#cauldrons':
+    autoProtect: private
+  ender_chest:
+    autoProtect: public
+  '#standing_signs':
+    autoProtect: false
+  '#wall_signs':
+    autoProtect: false
+  '#all_hanging_signs':
+    autoProtect: false
+  '#doors':
+    autoProtect: false
+  '#trapdoors':
+    autoProtect: false
+  '#fence_gates':
+    autoProtect: false
+  '#banners':
+    autoProtect: false
+entities:
+  armor_stand:
+    autoProtect: private
+  item_frame:
+    autoProtect: private
+  glow_item_frame:
+    autoProtect: private
+  painting:
+    autoProtect: private
+  leash_hitch:
+    autoProtect: private
+  chest_boat:
+    autoProtect: private
+  minecart_chest:
+    autoProtect: private
+  minecart_furnace:
+    autoProtect: private
+  minecart_hopper:
+    autoProtect: private

@@ -1,0 +1,40 @@
+events:
+  sell: command dm open menu_sell %player%
+  equip: command dm open menu_buy_equip %player%
+  eat: command dm open menu_buy_eat %player%
+  fisher: command dm open menu_sell_fish %player%
+  blacksmith: command dm open menu_buy_smith %player%
+  horse: command dm open menu_buy_horse2 %player%
+  guild_start: tag add guild_start
+  guild_quest: tag add guild_quest
+  guild_quest_remove: tag delete guild_quest
+  guild_quest_finish: tag add guild_quest_finish
+  guild_quest_completed: tag add guild_quest_completed
+  guild_quest_failed: tag add guild_quest_failed
+  guild_quest_failed_remove: tag delete guild_quest_failed
+  adventurer: globaltag add global_adventurer
+  instructor_start: tag add instructor_start
+  instructor_quest: tag add instructor_quest
+  instructor_quest_command1: command svar set duel_npc 1 %player%
+  instructor_quest_command2: command core array add DuelListNpc %player%
+  instructor_quest_command4: "notify &eВы встали в очередь на дуэль, ожидайте. io:chat"
+  instructor_compass_on: command calcomp toggle %player% town1_guild_instructor enable
+  instructor_compass_off: command calcomp toggle %player% town1_guild_instructor disable
+  cornerman_add_array: command core array add DuelList %player%
+  #cornerman_remove_array: command core array remove DuelList %player%
+  cornerman_array: tag add cornerman_array
+  cornerman_array_remove: tag delete cornerman_array
+  cornerman_start: tag add cornerman_start
+  quest_started: "notify &6&lВы взяли квест!\\n&7Посмотрите информацию в &lзаданиях&7. io:title"
+  quest_updated: "notify &6&lКвест обновлен!\\n&7Посмотрите информацию в &lзаданиях&7. io:title"
+  quest_finished: "notify &6&lКвест выполнен!\\n&7Посмотрите информацию в &lзаданиях&7. io:title"
+  
+  quest_objective: objective add variables
+
+  guild1_name_state1: 'variable variables guild1-name "Экзамен на звание авантюриста"'
+  guild1_lore1_state1: 'variable variables guild1-lore1 "Вы решаетесь стать авантюристом,"'
+  guild1_lore2_state1: 'variable variables guild1-lore2 "однако просто это не выйдет."'
+  guild1_lore3_state1: 'variable variables guild1-lore3 "Вам нужно пройти особую проверку"'
+  guild1_lore4_state1: 'variable variables guild1-lore4 "у инструктора."'
+  guild1_lore5_state1: 'variable variables guild1-lore5 "Экзаменатора можно найти на Ристалище."'
+  guild1_state1: "folder guild1_name_state1,guild1_lore1_state1,guild1_lore2_state1,guild1_lore3_state1,guild1_lore4_state1,guild1_lore5_state1"

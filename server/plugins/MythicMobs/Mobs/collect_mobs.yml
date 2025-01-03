@@ -1,0 +1,324 @@
+
+
+
+chest1:
+  Type: IRON_GOLEM
+  Display: '&fСундук'
+  Health: 100
+  Skills:
+  - skill{s=chest_spawn} @self ~onSpawn
+  - skill{s=chest_open} @self ~onDamaged
+  - skill{s=chest_idle} @self ~onTimer:10
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+    MaxCombatDistance: 256
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+
+
+
+kill_mob:
+  Type: silverfish
+  Display: '&7Убийца руды'
+  Health: 1
+  Skills:
+  - model{m=air;n=nametag;d=false} @self ~onSpawn
+  - remove @MobsInRadius{r=1;types=coal_ore,iron_ore,kill_mob,big_coal_ore,big_iron_ore,bush,flower,brown_mushroom,gift_box1,gift_box2,gift_box3} ~onSpawn
+  - remove @self ~onSpawn
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  
+  
+  
+big_iron_ore:
+  Type: silverfish
+  Display: '&7Крупная руда железа'
+  Health: 10000
+  Skills:
+  - setrotation{relative=true;yaw=%randomnumber_value_0_180%} @self ~onSpawn
+  - model{m=big_iron_ore;n=nametag;d=false} @self ~onSpawn
+  - effect:particles{particle=CRIT;amount=10;hS=0.2;vS=0.2;speed=0;y=0.2;vd=16} @SelfLocation ~onTimer:10
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - summon{type=iron_ore;amount=<random.2to4>;radius=2;onSurface=true;yr=0} @self ~onSpawn
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+big_coal_ore:
+  Type: silverfish
+  Display: '&7Крупная руда угля'
+  Health: 10000
+  Skills:
+  - setrotation{relative=true;yaw=%randomnumber_value_0_180%} @self ~onSpawn
+  - model{m=big_coal_ore;n=nametag;d=false} @self ~onSpawn
+  - effect:particles{particle=CRIT;amount=10;hS=0.2;vS=0.2;speed=0;y=0.2;vd=16} @SelfLocation ~onTimer:10
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - summon{type=coal_ore;amount=<random.2to4>;radius=2;onSurface=true;yr=0} @self ~onSpawn
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  
+  
+  
+iron_ore:
+  Type: silverfish
+  Display: '&7Руда железа'
+  Health: 10000
+  Skills:
+  - setrotation{relative=true;yaw=%randomnumber_value_0_180%} @self ~onSpawn
+  - model{m=iron_ore;n=nametag;d=false} @self ~onSpawn
+  - effect:particles{particle=CRIT;amount=10;hS=0.15;vS=0.15;speed=0;y=0.2;vd=16} @SelfLocation ~onTimer:10
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+coal_ore:
+  Type: silverfish
+  Display: '&7Руда угля'
+  Health: 10000
+  Skills:
+  - setrotation{relative=true;yaw=%randomnumber_value_0_180%} @self ~onSpawn
+  - model{m=coal_ore;n=nametag;d=false} @self ~onSpawn
+  - effect:particles{particle=CRIT;amount=10;hS=0.15;vS=0.15;speed=0;y=0.2;vd=16} @SelfLocation ~onTimer:10
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+ 
+ 
+ 
+bush:
+  Type: silverfish
+  Disguise: FALLING_BLOCK setBlock SWEET_BERRY_BUSH
+  Display: '&7Куст'
+  Health: 10000
+  Skills:
+  - setrotation{relative=true;yaw=%randomnumber_value_0_180%} @self ~onSpawn
+  - effect:particles{particle=CRIT;amount=10;hS=0.15;vS=0.15;speed=0;y=0.2;vd=16} @SelfLocation ~onTimer:10
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  
+flower:
+  Type: silverfish
+  Disguise: FALLING_BLOCK setBlock AZURE_BLUET
+  Display: '&7Цветок'
+  Health: 10000
+  Skills:
+  - setrotation{relative=true;yaw=%randomnumber_value_0_180%} @self ~onSpawn
+  - effect:particles{particle=CRIT;amount=10;hS=0.15;vS=0.15;speed=0;y=0.2;vd=16} @SelfLocation ~onTimer:10
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  
+brown_mushroom:
+  Type: silverfish
+  Disguise: FALLING_BLOCK setBlock BROWN_MUSHROOM
+  Display: '&7Коричневый гриб'
+  Health: 10000
+  Skills:
+  - setrotation{relative=true;yaw=%randomnumber_value_0_180%} @self ~onSpawn
+  - effect:particles{particle=CRIT;amount=10;hS=0.15;vS=0.15;speed=0;y=0.2;vd=16} @SelfLocation ~onTimer:10
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  
+  
+  
+gift_box_spawner:
+  Type: silverfish
+  Display: '&7Подарок'
+  Health: 1
+  Faction: npc
+  Skills:
+  - model{m=air;n=nametag;d=false} @self ~onSpawn
+  - skill{s=gift_box_spawner} @self ~onSpawn
+  - remove @self ~onSpawn
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+gift_box1:
+  Type: silverfish
+  Display: '&7Подарок'
+  Health: 10000
+  Skills:
+  - setrotation{relative=true;yaw=%randomnumber_value_0_180%} @self ~onSpawn
+  - model{m=gift_box1;n=nametag;d=false} @self ~onSpawn
+  - effect:particles{particle=CRIT;amount=10;hS=0.2;vS=0.2;speed=0;y=0.2;vd=16} @SelfLocation ~onTimer:10
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - sound{s=block.amethyst_block.chime;p=1;v=8} @self ~onTimer:200
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+gift_box2:
+  Type: silverfish
+  Display: '&7Подарок'
+  Health: 10000
+  Skills:
+  - setrotation{relative=true;yaw=%randomnumber_value_0_180%} @self ~onSpawn
+  - model{m=gift_box2;n=nametag;d=false} @self ~onSpawn
+  - effect:particles{particle=CRIT;amount=10;hS=0.2;vS=0.2;speed=0;y=0.2;vd=16} @SelfLocation ~onTimer:10
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - sound{s=block.amethyst_block.chime;p=1;v=8} @self ~onTimer:200
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+gift_box3:
+  Type: silverfish
+  Display: '&7Подарок'
+  Health: 10000
+  Skills:
+  - setrotation{relative=true;yaw=%randomnumber_value_0_180%} @self ~onSpawn
+  - model{m=gift_box3;n=nametag;d=false} @self ~onSpawn
+  - effect:particles{particle=CRIT;amount=10;hS=0.2;vS=0.2;speed=0;y=0.2;vd=16} @SelfLocation ~onTimer:10
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - sound{s=block.amethyst_block.chime;p=1;v=8} @self ~onTimer:200
+  Options:
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear

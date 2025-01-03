@@ -1,0 +1,66 @@
+Events:
+  tutorial_sword_equip:
+    type: player_sneak
+    conditions:
+    - '%is_sneaking% == true and %player_world% == world and %player_y% == 73 and %player_x% < 28 and %player_x% > 24 and %player_z% < 176 and %player_z% > 172 and %servervariables_value_player_tutorial_sword_equip% == 0 execute action1'
+    actions:
+      action1:
+      - 'console_command: svar set player_tutorial_sword_equip 1 %player%'
+      - 'give_potion_effect: JUMP;200;200;false'
+      - 'give_potion_effect: SLOW;200;200;false'
+      - 'playsound: BLOCK_GRASS_BREAK;1;2'
+      - 'player_command_as_op: mm test cast -s tutorial_sword_equip_effect'
+      - 'wait: 1'
+      - 'playsound: BLOCK_GRASS_BREAK;1;2'
+      - 'player_command_as_op: mm test cast -s tutorial_sword_equip_effect'
+      - 'wait: 1'
+      - 'playsound: BLOCK_GRASS_BREAK;1;2'
+      - 'player_command_as_op: mm test cast -s tutorial_sword_equip_effect'
+      - 'console_command: ii give %player% sword1 1'
+      - 'remove_potion_effect: JUMP'
+      - 'remove_potion_effect: SLOW'
+      - 'playsound: ENTITY_ITEM_PICKUP;1;1'
+
+  tutorial_sword_visible:
+    type: wgevents_region_enter
+    conditions:
+    - '%region% == tutorial_sword and %servervariables_value_player_tutorial_sword_equip% == 0 execute action1'
+    - '%region% == tutorial_area4 execute action2'
+    actions:
+      action1:
+      - 'title: 20;60;20;&6&l! ! !;&7Нажмите &fSHIFT &7около меча.'
+      - 'message: &6Нажмите &fSHIFT &6около меча.'
+      action2:
+      - 'title: 20;60;20;&6&l! ! !;&7Нажмите &fSHIFT &72 раза, чтобы лечь.'
+      - 'message: &6Нажмите &fSHIFT &62 раза, чтобы лечь.'
+
+  tutorial_home_enter:
+    type: wgevents_region_enter
+    conditions:
+    - '%region% == tutorial_home and %servervariables_value_player_opened_chest% == 0 execute action1'
+    actions:
+      action1:
+      - 'title: 20;60;20;&6&l!;&7Ударьте по сундуку.'
+      - 'player_command_as_op: mm test cast -s tutorial_home_chest'
+      - 'console_command: svar add player_opened_chest 1 %player%'
+
+  mob_interact:
+    type: entity_interact
+    conditions:
+    - '%entity_name% == Таинственный торговец 1 execute traveling_merchant1'
+    - '%entity_name% == Таинственный торговец 2 execute traveling_merchant2'
+    - '%entity_name% == Таинственный торговец 3 execute traveling_merchant3'
+    - '%entity_name% == Таинственный торговец 4 execute traveling_merchant4'
+    actions:
+      traveling_merchant1:
+      - 'console_command: shopkeeper open f8de3824-14ea-45cf-8e79-d39a8b70bfee %player%'
+      - 'playsound: ENTITY_VILLAGER_TRADE;1;0.6'
+      traveling_merchant2:
+      - 'console_command: shopkeeper open 3d33913a-afe1-4b8a-8528-6948d22a7900 %player%'
+      - 'playsound: ENTITY_VILLAGER_TRADE;1;0.6'
+      traveling_merchant3:
+      - 'console_command: shopkeeper open f6923f4a-a43f-457f-9423-71c175153766 %player%'
+      - 'playsound: ENTITY_VILLAGER_TRADE;1;0.6'
+      traveling_merchant4:
+      - 'console_command: shopkeeper open 9ba81707-7c34-4856-9395-9598d42c3f1c %player%'
+      - 'playsound: ENTITY_VILLAGER_TRADE;1;0.6'

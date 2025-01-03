@@ -1,0 +1,438 @@
+Events:
+  selling:
+    type: custom
+    custom_event_data:
+      event: svar.ajneb97.api.VariableChangeEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%variable_type%;getVariable().getVariableType()'
+      - '%variable_name%;getVariable().getName()'
+      - '%new_value%;getNewValue()'
+    conditions:
+    - "%variable_name% == player_selled_item and %new_value% == 1 execute id1_one"
+    - "%variable_name% == player_selled_item and %new_value% == 2 execute id1_full"
+    - "%variable_name% == player_selled_item and %new_value% == 3 execute id2_one"
+    - "%variable_name% == player_selled_item and %new_value% == 4 execute id2_full"
+    - "%variable_name% == player_selled_item and %new_value% == 5 execute id3_one"
+    - "%variable_name% == player_selled_item and %new_value% == 6 execute id3_full"
+    - "%variable_name% == player_selled_item and %new_value% == 7 execute id4_one"
+    - "%variable_name% == player_selled_item and %new_value% == 8 execute id4_full"
+    - "%variable_name% == player_selled_item and %new_value% == 9 execute id5_one"
+    - "%variable_name% == player_selled_item and %new_value% == 10 execute id5_full"
+    - "%variable_name% == player_selled_item and %new_value% == 11 execute id6_one"
+    - "%variable_name% == player_selled_item and %new_value% == 12 execute id6_full"
+    - "%variable_name% == player_selled_item and %new_value% == 13 execute id7_one"
+    - "%variable_name% == player_selled_item and %new_value% == 14 execute id7_full"
+    - "%variable_name% == player_selled_item and %new_value% == 15 execute id8_one"
+    - "%variable_name% == player_selled_item and %new_value% == 16 execute id8_full"
+    - "%variable_name% == player_selled_item and %new_value% == 17 execute id9_one"
+    - "%variable_name% == player_selled_item and %new_value% == 18 execute id9_full"
+    - "%variable_name% == player_selled_item and %new_value% == 19 execute id10_one"
+    - "%variable_name% == player_selled_item and %new_value% == 20 execute id10_full"
+    - "%variable_name% == player_selled_item and %new_value% == 21 execute id11_one"
+    - "%variable_name% == player_selled_item and %new_value% == 22 execute id11_full"
+    - "%variable_name% == player_selled_item and %new_value% == 23 execute id12_one"
+    - "%variable_name% == player_selled_item and %new_value% == 24 execute id12_full"
+    - "%variable_name% == player_selled_item and %new_value% == 25 execute id13_one"
+    - "%variable_name% == player_selled_item and %new_value% == 26 execute id13_full"
+    - "%variable_name% == player_selled_item and %new_value% == 27 execute id14_one"
+    - "%variable_name% == player_selled_item and %new_value% == 28 execute id14_full"
+    - "%variable_name% == player_selled_item and %new_value% == 29 execute id15_one"
+    - "%variable_name% == player_selled_item and %new_value% == 30 execute id15_full"
+    - "%variable_name% == player_selled_item and %new_value% == 31 execute id16_one"
+    - "%variable_name% == player_selled_item and %new_value% == 32 execute id16_full"
+    - "%variable_name% == player_selled_item and %new_value% == 33 execute id17_one"
+    - "%variable_name% == player_selled_item and %new_value% == 34 execute id17_full"
+    - "%variable_name% == player_selled_item and %new_value% == 35 execute id18_one"
+    - "%variable_name% == player_selled_item and %new_value% == 36 execute id18_full"
+    - "%variable_name% == player_selled_item and %new_value% == 37 execute id19_one"
+    - "%variable_name% == player_selled_item and %new_value% == 38 execute id19_full"
+    - "%variable_name% == player_selled_item and %new_value% == 39 execute id20_one"
+    - "%variable_name% == player_selled_item and %new_value% == 40 execute id20_full"
+    - "%variable_name% == player_selled_item and %new_value% == 41 execute id21_one"
+    - "%variable_name% == player_selled_item and %new_value% == 42 execute id21_full"
+    - "%variable_name% == player_selled_item and %new_value% == 43 execute id22_one"
+    - "%variable_name% == player_selled_item and %new_value% == 44 execute id22_full"
+    - "%variable_name% == player_selled_item and %new_value% == 45 execute id23_one"
+    - "%variable_name% == player_selled_item and %new_value% == 46 execute id23_full"
+    - "%variable_name% == player_selled_item and %new_value% == 47 execute id24_one"
+    - "%variable_name% == player_selled_item and %new_value% == 48 execute id24_full"
+    - "%variable_name% == player_selled_item and %new_value% == 49 execute id25_one"
+    - "%variable_name% == player_selled_item and %new_value% == 50 execute id25_full"
+    - "%variable_name% == player_selled_item and %new_value% == 51 execute id26_one"
+    - "%variable_name% == player_selled_item and %new_value% == 52 execute id26_full"
+    - "%variable_name% == player_selled_item and %new_value% == 53 execute id27_one"
+    - "%variable_name% == player_selled_item and %new_value% == 54 execute id27_full"
+    - "%variable_name% == player_selled_item and %new_value% == 55 execute id28_one"
+    - "%variable_name% == player_selled_item and %new_value% == 56 execute id28_full"
+    - "%variable_name% == player_selled_item and %new_value% == 57 execute id29_one"
+    - "%variable_name% == player_selled_item and %new_value% == 58 execute id29_full"
+    - "%variable_name% == player_selled_item and %new_value% == 59 execute id30_one"
+    - "%variable_name% == player_selled_item and %new_value% == 60 execute id30_full"
+    - "%variable_name% == player_selled_item and %new_value% == 61 execute id31_one"
+    - "%variable_name% == player_selled_item and %new_value% == 62 execute id31_full"
+    - "%variable_name% == player_selled_item and %new_value% == 63 execute id32_one"
+    - "%variable_name% == player_selled_item and %new_value% == 64 execute id32_full"
+    - "%variable_name% == player_selled_item and %new_value% == 65 execute id33_one"
+    - "%variable_name% == player_selled_item and %new_value% == 66 execute id33_full"
+    - "%variable_name% == player_selled_item and %new_value% == 67 execute id34_one"
+    - "%variable_name% == player_selled_item and %new_value% == 68 execute id34_full"
+    - "%variable_name% == player_selled_item and %new_value% == 69 execute id35_one"
+    - "%variable_name% == player_selled_item and %new_value% == 70 execute id35_full"
+    - "%variable_name% == player_selled_item and %new_value% == 71 execute id36_one"
+    - "%variable_name% == player_selled_item and %new_value% == 72 execute id36_full"
+    - "%variable_name% == player_selled_item and %new_value% == 73 execute id37_one"
+    - "%variable_name% == player_selled_item and %new_value% == 74 execute id37_full"
+    - "%variable_name% == player_selled_item and %new_value% == 75 execute id38_one"
+    - "%variable_name% == player_selled_item and %new_value% == 76 execute id38_full"
+    - "%variable_name% == player_selled_item and %new_value% == 77 execute id39_one"
+    - "%variable_name% == player_selled_item and %new_value% == 78 execute id39_full"
+    - "%variable_name% == player_selled_item and %new_value% == 79 execute id40_one"
+    - "%variable_name% == player_selled_item and %new_value% == 80 execute id40_full"
+    - "%variable_name% == player_selled_item and %new_value% == 81 execute id41_one"
+    - "%variable_name% == player_selled_item and %new_value% == 82 execute id41_full"
+    - "%variable_name% == player_selled_item and %new_value% == 83 execute id42_one"
+    - "%variable_name% == player_selled_item and %new_value% == 84 execute id42_full"
+    - "%variable_name% == player_selled_item and %new_value% == 85 execute id43_one"
+    - "%variable_name% == player_selled_item and %new_value% == 86 execute id43_full"
+    - "%variable_name% == player_selled_item and %new_value% == 87 execute id44_one"
+    - "%variable_name% == player_selled_item and %new_value% == 88 execute id44_full"
+    - "%variable_name% == player_selled_item and %new_value% == 89 execute id45_one"
+    - "%variable_name% == player_selled_item and %new_value% == 90 execute id45_full"
+    - "%variable_name% == player_selled_item and %new_value% == 91 execute id46_one"
+    - "%variable_name% == player_selled_item and %new_value% == 92 execute id46_full"
+    - "%variable_name% == player_selled_item and %new_value% == 93 execute id47_one"
+    - "%variable_name% == player_selled_item and %new_value% == 94 execute id47_full"
+    - "%variable_name% == player_selled_item"
+    actions:
+      default:
+      - 'console_command: svar set player_selled_item 0 %player_name%'
+
+      id1_one:
+      - 'remove_item: BRICK;1;name: Уголь'
+      - 'console_command: svar add player_money 6 %player_name%'
+      id1_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bУголь}*6% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bУголь%;name: Уголь'
+
+      id2_one:
+      - 'remove_item: BRICK;1;name: Железная руда'
+      - 'console_command: svar add player_money 9 %player_name%'
+      id2_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bЖелезная руда}*9% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bЖелезная руда%;name: Железная руда'
+
+      id3_one:
+      - 'remove_item: BRICK;1;name: Кобальтовая руда'
+      - 'console_command: svar add player_money 100 %player_name%'
+      id3_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bКобальтовая руда}*100% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bКобальтовая руда%;name: Кобальтовая руда'
+
+      id4_one:
+      - 'remove_item: BRICK;1;name: Древний лом'
+      - 'console_command: svar add player_money 500 %player_name%'
+      id4_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bДревний лом}*500% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bДревний лом%;name: Древний лом'
+
+      id5_one:
+      - 'remove_item: BRICK;1;name: Клык кабана'
+      - 'console_command: svar add player_money 25 %player_name%'
+      id5_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bКлык кабана}*25% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bКлык кабана%;name: Клык кабана'
+
+      id6_one:
+      - 'remove_item: BRICK;1;name: Ожерелье из костей'
+      - 'console_command: svar add player_money 15 %player_name%'
+      id6_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bОжерелье из костей}*15% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bОжерелье из костей%;name: Ожерелье из костей'
+
+      id7_one:
+      - 'remove_item: BRICK;1;name: Маленькая шкура'
+      - 'console_command: svar add player_money 12 %player_name%'
+      id7_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bМаленькая шкура}*12% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bМаленькая шкура%;name: Маленькая шкура'
+
+      id8_one:
+      - 'remove_item: BRICK;1;name: Средняя шкура'
+      - 'console_command: svar add player_money 24 %player_name%'
+      id8_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bСредняя шкура}*24% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bСредняя шкура%;name: Средняя шкура'
+
+      id9_one:
+      - 'remove_item: BRICK;1;name: Большая шкура'
+      - 'console_command: svar add player_money 48 %player_name%'
+      id9_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bБольшая шкура}*48% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bБольшая шкура%;name: Большая шкура'
+
+      id10_one:
+      - 'remove_item: MUTTON;1;name: Сырое мясо'
+      - 'console_command: svar add player_money 6 %player_name%'
+      id10_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:MUTTON,nameequals:&bСырое мясо}*6% %player_name%'
+      - 'remove_item: MUTTON;%checkitem_amount_mat:MUTTON,nameequals:&bСырое мясо%;name: Сырое мясо'
+
+      id11_one:
+      - 'remove_item: BRICK;1;name: Кость'
+      - 'console_command: svar add player_money 3 %player_name%'
+      id11_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bКость}*3% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bКость%;name: Кость'
+
+      id12_one:
+      - 'remove_item: SALMON;1;name: Амур белый'
+      - 'console_command: svar add player_money 10 %player_name%'
+      id12_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:SALMON,nameequals:&bАмур белый}*10% %player_name%'
+      - 'remove_item: SALMON;%checkitem_amount_mat:SALMON,nameequals:&bАмур белый%;name: Амур белый'
+
+      id13_one:
+      - 'remove_item: SALMON;1;name: Амур черный'
+      - 'console_command: svar add player_money 10 %player_name%'
+      id13_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:SALMON,nameequals:&bАмур черный}*10% %player_name%'
+      - 'remove_item: SALMON;%checkitem_amount_mat:SALMON,nameequals:&bАмур черный%;name: Амур черный'
+
+      id14_one:
+      - 'remove_item: SALMON;1;name: Рыба-усач'
+      - 'console_command: svar add player_money 10 %player_name%'
+      id14_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:SALMON,nameequals:&bРыба-усач}*10% %player_name%'
+      - 'remove_item: SALMON;%checkitem_amount_mat:SALMON,nameequals:&bРыба-усач%;name: Рыба-усач'
+
+      id15_one:
+      - 'remove_item: SALMON;1;name: Рыба-нил'
+      - 'console_command: svar add player_money 10 %player_name%'
+      id15_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:SALMON,nameequals:&bРыба-нил}*10% %player_name%'
+      - 'remove_item: SALMON;%checkitem_amount_mat:SALMON,nameequals:&bРыба-нил%;name: Рыба-нил'
+
+      id16_one:
+      - 'remove_item: SALMON;1;name: Вьюн'
+      - 'console_command: svar add player_money 25 %player_name%'
+      id16_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:SALMON,nameequals:&bВьюн}*25% %player_name%'
+      - 'remove_item: SALMON;%checkitem_amount_mat:SALMON,nameequals:&bВьюн%;name: Вьюн'
+
+      id17_one:
+      - 'remove_item: SALMON;1;name: Обычный карп'
+      - 'console_command: svar add player_money 25 %player_name%'
+      id17_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:SALMON,nameequals:&bОбычный карп}*25% %player_name%'
+      - 'remove_item: SALMON;%checkitem_amount_mat:SALMON,nameequals:&bОбычный карп%;name: Обычный карп'
+
+      id18_one:
+      - 'remove_item: SALMON;1;name: Голый карп'
+      - 'console_command: svar add player_money 25 %player_name%'
+      id18_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:SALMON,nameequals:&bГолый карп}*25% %player_name%'
+      - 'remove_item: SALMON;%checkitem_amount_mat:SALMON,nameequals:&bГолый карп%;name: Голый карп'
+
+      id19_one:
+      - 'remove_item: SALMON;1;name: Карп - красный'
+      - 'console_command: svar add player_money 25 %player_name%'
+      id19_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:SALMON,nameequals:&bКарп - красный}*25% %player_name%'
+      - 'remove_item: SALMON;%checkitem_amount_mat:SALMON,nameequals:&bКарп - красный%;name: Карп - красный'
+
+      id20_one:
+      - 'remove_item: SALMON;1;name: Рыба-скелет'
+      - 'console_command: svar add player_money 25 %player_name%'
+      id20_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:SALMON,nameequals:&bРыба-скелет}*25% %player_name%'
+      - 'remove_item: SALMON;%checkitem_amount_mat:SALMON,nameequals:&bРыба-скелет%;name: Рыба-скелет'
+
+      id21_one:
+      - 'remove_item: SALMON;1;name: Карп - призрак'
+      - 'console_command: svar add player_money 50 %player_name%'
+      id21_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:SALMON,nameequals:&bКарп - призрак}*50% %player_name%'
+      - 'remove_item: SALMON;%checkitem_amount_mat:SALMON,nameequals:&bКарп - призрак%;name: Карп - призрак'
+
+      id22_one:
+      - 'remove_item: SALMON;1;name: Кунджа'
+      - 'console_command: svar add player_money 50 %player_name%'
+      id22_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:SALMON,nameequals:&bКунджа}*50% %player_name%'
+      - 'remove_item: SALMON;%checkitem_amount_mat:SALMON,nameequals:&bКунджа%;name: Кунджа'
+
+      id23_one:
+      - 'remove_item: BRICK;1;name: Рыболовная леска'
+      - 'console_command: svar add player_money 10 %player_name%'
+      id23_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bРыболовная леска}*10% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bРыболовная леска%;name: Рыболовная леска'
+
+      id24_one:
+      - 'remove_item: BRICK;1;name: Коралл'
+      - 'console_command: svar add player_money 10 %player_name%'
+      id24_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bКоралл}*10% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bКоралл%;name: Коралл'
+
+      id25_one:
+      - 'remove_item: BRICK;1;name: Необычная раковина'
+      - 'console_command: svar add player_money 30 %player_name%'
+      id25_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bНеобычная раковина}*30% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bНеобычная раковина%;name: Необычная раковина'
+
+      id26_one:
+      - 'remove_item: BRICK;1;name: Старинная монета'
+      - 'console_command: svar add player_money 20 %player_name%'
+      id26_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bСтаринная монета}*20% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bСтаринная монета%;name: Старинная монета'
+
+      id27_one:
+      - 'remove_item: BRICK;1;name: Сундук с сокровищами'
+      - 'console_command: svar add player_money 400 %player_name%'
+      id27_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bСундук с сокровищами}*400% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bСундук с сокровищами%;name: Сундук с сокровищами'
+
+      id28_one:
+      - 'remove_item: BRICK;1;name: Картошка'
+      - 'console_command: svar add player_money 50 %player_name%'
+      id28_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bКартошка}*50% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bКартошка%;name: Картошка'
+
+      id29_one:
+      - 'remove_item: BRICK;1;name: Лепесток тысячелистника'
+      - 'console_command: svar add player_money 24 %player_name%'
+      id29_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bЛепесток тысячелистникаи}*24% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bЛепесток тысячелистника%;name: Лепесток тысячелистника'
+
+      id30_one:
+      - 'remove_item: BRICK;1;name: Корень горькоцвета'
+      - 'console_command: svar add player_money 24 %player_name%'
+      id30_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bКорень горькоцвета}*24% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bКорень горькоцвета%;name: Корень горькоцвета'
+
+      id31_one:
+      - 'remove_item: BRICK;1;name: Семена полыни'
+      - 'console_command: svar add player_money 24 %player_name%'
+      id31_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bСемена полыни}*24% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bСемена полыни%;name: Семена полыни'
+
+      id32_one:
+      - 'remove_item: BRICK;1;name: Побеги наперстянки'
+      - 'console_command: svar add player_money 72 %player_name%'
+      id32_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bПобеги наперстянки}*72% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bПобеги наперстянки%;name: Побеги наперстянки'
+
+      id33_one:
+      - 'remove_item: BRICK;1;name: Хаустония'
+      - 'console_command: svar add player_money 96 %player_name%'
+      id33_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bХаустония}*96% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bХаустония%;name: Хаустония'
+
+      id34_one:
+      - 'remove_item: SWEET_BERRIES;1;name: Лесные ягоды'
+      - 'console_command: svar add player_money 12 %player_name%'
+      id34_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:SWEET_BERRIES,nameequals:&bЛесные ягоды}*12% %player_name%'
+      - 'remove_item: SWEET_BERRIES;%checkitem_amount_mat:SWEET_BERRIES,nameequals:&bЛесные ягоды%;name: Лесные ягоды'
+
+      id35_one:
+      - 'remove_item: BRICK;1;name: Блудроз'
+      - 'console_command: svar add player_money 48 %player_name%'
+      id35_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bБлудроз}*48% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bБлудроз%;name: Блудроз'
+
+      id36_one:
+      - 'remove_item: BRICK;1;name: Желтоцвет'
+      - 'console_command: svar add player_money 48 %player_name%'
+      id36_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bЖелтоцвет}*48% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bЖелтоцвет%;name: Желтоцвет'
+
+      id37_one:
+      - 'remove_item: BRICK;1;name: Грибы'
+      - 'console_command: svar add player_money 48 %player_name%'
+      id37_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bГрибы}*48% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bГрибы%;name: Грибы'
+
+      id38_one:
+      - 'remove_item: BRICK;1;name: Свето-трава'
+      - 'console_command: svar add player_money 60 %player_name%'
+      id38_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bСвето-трава}*60% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bСвето-трава%;name: Свето-трава'
+
+      id39_one:
+      - 'remove_item: BRICK;1;name: Мед мега-пчел'
+      - 'console_command: svar add player_money 60 %player_name%'
+      id39_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bМед мега-пчел}*60% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bМед мега-пчел%;name: Мед мега-пчел'
+
+      id40_one:
+      - 'remove_item: BRICK;1;name: Зеленый мох'
+      - 'console_command: svar add player_money 48 %player_name%'
+      id40_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bЗеленый мох}*48% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bЗеленый мох%;name: Зеленый мох'
+
+      id41_one:
+      - 'remove_item: BRICK;1;name: Костяная мука'
+      - 'console_command: svar add player_money 60 %player_name%'
+      id41_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bКостяная мука}*60% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bКостяная мука%;name: Костяная мука'
+
+      id42_one:
+      - 'remove_item: BRICK;1;name: Плоть'
+      - 'console_command: svar add player_money 24 %player_name%'
+      id42_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bПлоть}*24% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bПлоть%;name: Плоть'
+
+      id43_one:
+      - 'remove_item: BRICK;1;name: Лоскут тени'
+      - 'console_command: svar add player_money 192 %player_name%'
+      id43_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bЛоскут тени}*192% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bЛоскут тени%;name: Лоскут тени'
+
+      id44_one:
+      - 'remove_item: BRICK;1;name: Рыбная икра'
+      - 'console_command: svar add player_money 48 %player_name%'
+      id44_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bРыбная икра}*48% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bРыбная икра%;name: Рыбная икра'
+
+      id45_one:
+      - 'remove_item: BRICK;1;name: Блестящая чешуя'
+      - 'console_command: svar add player_money 48 %player_name%'
+      id45_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bБлестящая чешуя}*48% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bБлестящая чешуя%;name: Блестящая чешуя'
+
+      id46_one:
+      - 'remove_item: BRICK;1;name: Странный порошок'
+      - 'console_command: svar add player_money 192 %player_name%'
+      id46_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bСтранный порошок}*192% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bСтранный порошок%;name: Странный порошок'
+
+      id47_one:
+      - 'remove_item: BRICK;1;name: Драгоценные камни'
+      - 'console_command: svar add player_money 96 %player_name%'
+      id47_full:
+      - 'console_command: svar add player_money %math_0:CEILING_{checkitem_amount_mat:BRICK,nameequals:&bДрагоценные камни}*96% %player_name%'
+      - 'remove_item: BRICK;%checkitem_amount_mat:BRICK,nameequals:&bДрагоценные камни%;name: Драгоценные камни'

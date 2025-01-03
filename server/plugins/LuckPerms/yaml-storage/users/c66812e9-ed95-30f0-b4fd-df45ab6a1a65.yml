@@ -1,0 +1,20 @@
+uuid: c66812e9-ed95-30f0-b4fd-df45ab6a1a65
+name: MOHOLITH
+primary-group: default
+permissions:
+- mcpets.pet_horse2
+- promo_horizon
+- skill_guard2
+- skill_strength1
+- skill_strength2
+- titul_11
+- titul_12
+- titul_14
+- titul_15
+- titul_17
+- titul_2
+- titul_3
+parents:
+- sponsor:
+    expiry: 1729734913
+- default

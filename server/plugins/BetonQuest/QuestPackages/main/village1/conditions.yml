@@ -1,0 +1,58 @@
+conditions:
+  villager1: "tag villager1"
+  fisher1: "tag fisher1"
+  fisher1_item3: "item fish"
+  fisher1_item4: "item fish"
+  hide: "tag hide"
+  villager2_quest: "tag villager2_quest"
+  villager2_quest_completed: "tag villager2_quest_completed"
+  villager2_quest_item1: "item berries:30"
+  hide: "tag hide"
+  trader1_start: "tag trader1_start"
+  trader2_start: "tag trader2_start"
+  smith_start: tag smith_start
+  smith_quest1: tag smith_quest1
+  smith_quest1_completed: tag smith_quest1_completed
+  smith_quest1_item: item coal:20
+  smith_quest2: tag smith_quest2
+  smith_quest2_completed: tag smith_quest2_completed
+  smith_quest2_item: item iron_ingot:5
+  smith_quest3: tag smith_quest3
+  smith_quest3_completed: tag smith_quest3_completed
+  smith_quest3_item: item steel_ingot:1
+  guard_start: tag guard_start
+
+
+
+
+  # smith_q1_start: tag smith_q1_start
+  # smith_q1: item coal:20
+  # smith_q1_1: tag smith_q1_1
+  # smith_q1_2: tag smith_q1_2
+  # smith_q1_2_finish: tag smith_q1_2_finish
+  # smith_q1_finish: tag smith_q1_finish
+  # smith_q2_start: tag smith_q2_start
+  # smith_q2: item iron_ingot:5
+  # smith_q2_finish: tag smith_q2_finish
+  # smith_q3_start: tag smith_q3_start
+  # smith_q3: tag smith_q3
+  # smith_q3_finish: tag smith_q3_finish
+  # guard1_q1: item fish:15
+  # guard1_q1_start: tag guard1_q1_start
+  # guard1_q1_finish: tag guard1_q1_finish
+  # cave1: tag cave1
+  # smith_q1_talk: tag smith_q1_talk
+  
+  
+  
+  
+  
+  
+  
+  fisher_first_talk: tag fisher_first_talk
+  trader2_first_talk: tag trader2_first_talk
+  
+  horse_start: tag horse_start
+  horse_quest: tag horse_quest
+  horse_quest_finish: tag horse_quest_finish
+  horse_quest_completed: tag horse_quest_completed

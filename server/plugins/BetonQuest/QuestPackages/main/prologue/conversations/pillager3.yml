@@ -1,0 +1,25 @@
+conversations:
+  pillager3:
+    quester: 'Разбойник'
+    first: 'npc_node_1'
+    stop: 'true'
+    NPC_options:
+      npc_node_1:
+        text: '&7Разбойник останавливает вас рукой.\n\n&fТебе сюда нельзя, разворачивайся!'
+        condition: ''
+        event: ''
+        pointers: player_node_1
+
+      npc_node_2:
+        text: '&7Мужчина толкает вас.\n\n&аЕсли не хочешь проблем, катись от сюда.'
+        condition: ''
+        event: ''
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Что там?'
+        condition: ''
+        event: 'pillager3_teleport'
+        pointers: npc_node_2

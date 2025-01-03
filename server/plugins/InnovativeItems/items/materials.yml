@@ -1,0 +1,856 @@
+coal:
+  material: 'BRICK'
+  display-name: '&bУголь'
+  custom-model-data: 13
+  update-item: true
+  lore:
+    - '&7Используется в плавке руды'
+    - '&7в плавильной печи.'
+iron_raw:
+  material: 'BRICK'
+  display-name: '&bЖелезная руда'
+  custom-model-data: 28
+  update-item: true
+  lore:
+    - '&7Используется в плавильной печи'
+    - '&7для создания железных слитков.'
+iron_ingot:
+  material: 'BRICK'
+  display-name: '&bЖелезный слиток'
+  custom-model-data: 14
+  update-item: true
+  lore:
+    - '&7Используется для создания снаряжения'
+    - '&7на наковальне.'
+hardened_iron_ingot:
+  material: 'BRICK'
+  display-name: '&bЗакаленный железный слиток'
+  custom-model-data: 14
+  update-item: true
+  lore:
+    - '&7Используется для создания снаряжения'
+    - '&7на наковальне.'
+iron_ring:
+  material: 'BRICK'
+  display-name: '&bЖелезное колечко'
+  custom-model-data: 1
+  update-item: true
+  lore:
+    - '&7Используется для создания снаряжения'
+    - '&7на наковальне.'
+iron_plate:
+  material: 'BRICK'
+  display-name: '&bЖелезная пластина'
+  custom-model-data: 2
+  update-item: true
+  lore:
+    - '&7Используется для создания снаряжения'
+    - '&7на наковальне.'
+steel_ingot:
+  material: 'BRICK'
+  display-name: '&bСтальной слиток'
+  custom-model-data: 9
+  update-item: true
+  lore:
+    - '&7Используется для создания снаряжения'
+    - '&7на наковальне.'
+steel_plate:
+  material: 'BRICK'
+  display-name: '&bСтальная пластина'
+  custom-model-data: 10
+  update-item: true
+  lore:
+    - '&7Используется для создания снаряжения'
+    - '&7на наковальне.'
+cobald_raw:
+  material: 'BRICK'
+  display-name: '&bКобальтовая руда'
+  custom-model-data: 6
+  update-item: true
+  lore:
+    - '&7Используется в плавильной печи'
+    - '&7для создания кобальтовых слитков.'
+cobald_ingot:
+  material: 'BRICK'
+  display-name: '&bКобальтовый слиток'
+  custom-model-data: 3
+  update-item: true
+  lore:
+    - '&7Используется для создания снаряжения'
+    - '&7на наковальне.'
+cobald_plate:
+  material: 'BRICK'
+  display-name: '&bКобальтовая пластина'
+  custom-model-data: 4
+  update-item: true
+  lore:
+    - '&7Используется для создания снаряжения'
+    - '&7на наковальне.'
+ancient_scrap:
+  material: 'BRICK'
+  display-name: '&bДревний лом'
+  custom-model-data: 15
+  update-item: true
+  lore:
+    - '&7Используется в плавильной печи'
+    - '&7для создания древних слитков.'
+ancient_ingot:
+  material: 'BRICK'
+  display-name: '&bДревний слиток'
+  custom-model-data: 30
+  update-item: true
+  lore:
+    - '&7Используется для создания снаряжения'
+    - '&7на наковальне.'
+ancient_plate:
+  material: 'BRICK'
+  display-name: '&bДревняя пластина'
+  custom-model-data: 5
+  update-item: true
+  lore:
+    - '&7Используется для создания снаряжения'
+    - '&7на наковальне.'
+pigfang:
+  material: 'BRICK'
+  display-name: '&bКлык кабана'
+  custom-model-data: 7
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+ork_amulet:
+  material: 'BRICK'
+  display-name: '&bОжерелье из костей'
+  custom-model-data: 8
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+pig_skin:
+  material: 'BRICK'
+  display-name: '&bКабанья шкура'
+  custom-model-data: 16
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+cow_skin:
+  material: 'BRICK'
+  display-name: '&bКоровья шкура'
+  custom-model-data: 16
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+sheep_skin:
+  material: 'BRICK'
+  display-name: '&bОвечья шкура'
+  custom-model-data: 16
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+bone:
+  material: 'BRICK'
+  display-name: '&bКость'
+  custom-model-data: 27
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+pig_meat:
+  material: 'PORKCHOP'
+  display-name: '&bСырое мясо кабана'
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+cow_meat:
+  material: 'BEEF'
+  display-name: '&bСырое мясо коровы'
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+sheep_meat:
+  material: 'MUTTON'
+  display-name: '&bСырое мясо овцы'
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+gold_coin:
+  material: 'GOLD_NUGGET'
+  display-name: '&eМонета'
+  update-item: true
+stick:
+  material: 'STICK'
+  display-name: '&bДрова'
+  update-item: true
+  lore:
+    - '&7Требуется для розжига костра.'
+arrow:
+  material: 'ARROW'
+  display-name: '&bСтрела'
+  update-item: true
+  lore:
+    - '&7Требуется для стрельбы из'
+    - '&7лука или арбалета.'
+fish1:
+  material: 'SALMON'
+  display-name: '&bАмур белый'
+  custom-model-data: 4
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+fish2:
+  material: 'SALMON'
+  display-name: '&bАмур черный'
+  custom-model-data: 5
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+fish3:
+  material: 'SALMON'
+  display-name: '&bРыба-усач'
+  custom-model-data: 6
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+fish4:
+  material: 'SALMON'
+  display-name: '&bВьюн'
+  custom-model-data: 9
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+fish5:
+  material: 'SALMON'
+  display-name: '&bРыба-нил'
+  custom-model-data: 2
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+fish6:
+  material: 'SALMON'
+  display-name: '&bОбычный карп'
+  custom-model-data: 11
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+fish7:
+  material: 'SALMON'
+  display-name: '&bГолый карп'
+  custom-model-data: 3
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+fish8:
+  material: 'SALMON'
+  display-name: '&bКарп - красный'
+  custom-model-data: 7
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+fish9:
+  material: 'SALMON'
+  display-name: '&bКарп - призрак'
+  custom-model-data: 8
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+fish10:
+  material: 'SALMON'
+  display-name: '&bКунджа'
+  custom-model-data: 10
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+fish11:
+  material: 'SALMON'
+  display-name: '&bРыба-скелет'
+  custom-model-data: 1
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+treasure1:
+  material: 'BRICK'
+  display-name: '&bСтаринная монета'
+  update-item: true
+  custom-model-data: 17
+  lore:
+    - '&7Можно продать.'
+treasure2:
+  material: 'BRICK'
+  display-name: '&bНеобычная раковина'
+  custom-model-data: 20
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+treasure3:
+  material: 'BRICK'
+  display-name: '&bРыболовная леска'
+  custom-model-data: 18
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+treasure4:
+  material: 'BRICK'
+  display-name: '&bКоралл'
+  custom-model-data: 19
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+treasure5:
+  material: 'BRICK'
+  display-name: '&bСундук с сокровищами'
+  custom-model-data: 32
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'
+treasure6:
+  material: 'BRICK'
+  display-name: '&bКартошка'
+  custom-model-data: 29
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+little_skin:
+  material: 'BRICK'
+  display-name: '&bМаленькая шкура'
+  custom-model-data: 16
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+mid_skin:
+  material: 'BRICK'
+  display-name: '&bСредняя шкура'
+  custom-model-data: 16
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+big_skin:
+  material: 'BRICK'
+  display-name: '&bБольшая шкура'
+  custom-model-data: 16
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+meat:
+  material: 'MUTTON'
+  display-name: '&bСырое мясо'
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+ingredient1:
+  material: 'BRICK'
+  display-name: '&bЛепесток тысячелистника'
+  custom-model-data: 24
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient2:
+  material: 'BRICK'
+  display-name: '&bКорень горькоцвета'
+  custom-model-data: 75
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient3:
+  material: 'BRICK'
+  display-name: '&bСемена полыни'
+  custom-model-data: 21
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient4:
+  material: 'BRICK'
+  display-name: '&bПобеги наперстянки'
+  custom-model-data: 77
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient5:
+  material: 'BRICK'
+  display-name: '&bХаустония'
+  custom-model-data: 85
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient6:
+  material: 'SWEET_BERRIES'
+  display-name: '&bЛесные ягоды'
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient7:
+  material: 'BRICK'
+  display-name: '&bБлудроз'
+  custom-model-data: 87
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient8:
+  material: 'BRICK'
+  display-name: '&bЖелтоцвет'
+  custom-model-data: 86
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient9:
+  material: 'BRICK'
+  display-name: '&bГрибы'
+  custom-model-data: 76
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient10:
+  material: 'BRICK'
+  display-name: '&bСвето-трава'
+  custom-model-data: 84
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient11:
+  material: 'BRICK'
+  display-name: '&bМед мега-пчел'
+  custom-model-data: 79
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient12:
+  material: 'BRICK'
+  display-name: '&bЗеленый мох'
+  custom-model-data: 73
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient13:
+  material: 'BRICK'
+  display-name: '&bКостяная мука'
+  custom-model-data: 81
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient14:
+  material: 'BRICK'
+  display-name: '&bПлоть'
+  custom-model-data: 82
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient15:
+  material: 'BRICK'
+  display-name: '&bЛоскут тени'
+  custom-model-data: 74
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient16:
+  material: 'BRICK'
+  display-name: '&bРыбная икра'
+  custom-model-data: 83
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient17:
+  material: 'BRICK'
+  display-name: '&bБлестящая чешуя'
+  custom-model-data: 80
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+ingredient18:
+  material: 'BRICK'
+  display-name: '&bСтранный порошок'
+  custom-model-data: 78
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7алхимических реагентов.'
+    - '&7Можно продать.'
+reagent1:
+  material: 'BRICK'
+  display-name: '&bЯгодная настойка'
+  custom-model-data: 42
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent2:
+  material: 'BRICK'
+  display-name: '&bМутная вода'
+  custom-model-data: 43
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent3:
+  material: 'BRICK'
+  display-name: '&bТертые растения'
+  custom-model-data: 44
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent4:
+  material: 'BRICK'
+  display-name: '&bГуща из частей монстров'
+  custom-model-data: 45
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent5:
+  material: 'BRICK'
+  display-name: '&bНастойка зеленого мха'
+  custom-model-data: 46
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent6:
+  material: 'BRICK'
+  display-name: '&bОсадок отмоченных растений'
+  custom-model-data: 47
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent7:
+  material: 'BRICK'
+  display-name: '&bКаловая масса'
+  custom-model-data: 48
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent8:
+  material: 'BRICK'
+  display-name: '&bГрибной отвар'
+  custom-model-data: 49
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent9:
+  material: 'BRICK'
+  display-name: '&bЭликсир луговых трав'
+  custom-model-data: 50
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent10:
+  material: 'BRICK'
+  display-name: '&bЦветочный настой'
+  custom-model-data: 51
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent11:
+  material: 'BRICK'
+  display-name: '&bНепонятная слизь'
+  custom-model-data: 52
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent12:
+  material: 'BRICK'
+  display-name: '&bЦветочная пыльца'
+  custom-model-data: 53
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent13:
+  material: 'BRICK'
+  display-name: '&bЖемчужный порошок'
+  custom-model-data: 54
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent14:
+  material: 'BRICK'
+  display-name: '&bПепельное зелье'
+  custom-model-data: 55
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent15:
+  material: 'BRICK'
+  display-name: '&bКопченые части монстров'
+  custom-model-data: 56
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent16:
+  material: 'BRICK'
+  display-name: '&bВысушенные растения'
+  custom-model-data: 57
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent17:
+  material: 'BRICK'
+  display-name: '&bВытолоченные внутренности'
+  custom-model-data: 58
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent18:
+  material: 'BRICK'
+  display-name: '&bСерая каша'
+  custom-model-data: 59
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent19:
+  material: 'BRICK'
+  display-name: '&bКрасная настойка'
+  custom-model-data: 60
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent20:
+  material: 'BRICK'
+  display-name: '&bСветящаяся плесень в настойке'
+  custom-model-data: 61
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent21:
+  material: 'BRICK'
+  display-name: '&bСмешанные цветы'
+  custom-model-data: 62
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent22:
+  material: 'BRICK'
+  display-name: '&bФиолетовый отвар'
+  custom-model-data: 63
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent23:
+  material: 'BRICK'
+  display-name: '&bПлохо пахнущая смесь'
+  custom-model-data: 64
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent24:
+  material: 'BRICK'
+  display-name: '&bВыдавленное масло'
+  custom-model-data: 65
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent25:
+  material: 'BRICK'
+  display-name: '&bЛипкая жижа'
+  custom-model-data: 66
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent26:
+  material: 'BRICK'
+  display-name: '&bЭкстракт россы'
+  custom-model-data: 67
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent27:
+  material: 'BRICK'
+  display-name: '&bТень в бутылочке'
+  custom-model-data: 68
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent28: #тут ----------------------------------------------------
+  material: 'BRICK'
+  display-name: '&bЖемчужный порошок'
+  custom-model-data: 69
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent29:
+  material: 'BRICK'
+  display-name: '&bРыбный отвар'
+  custom-model-data: 70
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent30:
+  material: 'BRICK'
+  display-name: '&bСветящаяся жидкость'
+  custom-model-data: 71
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+reagent31:
+  material: 'BRICK'
+  display-name: '&bЧешуйчатое зелье'
+  custom-model-data: 72
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+gems:
+  material: 'BRICK'
+  display-name: '&bДрагоценные камни'
+  custom-model-data: 88
+  update-item: true
+  lore:
+    - '&7Можно продать.'
+bag_materials:
+  material: 'BRICK'
+  display-name: '&bМешок с ресурсами'
+  custom-model-data: 89
+  update-item: true
+  lore:
+    - '&f[ ПКМ ] &7чтобы использовать!'
+bag_ingredients:
+  material: 'BRICK'
+  display-name: '&bМешок с травами'
+  custom-model-data: 90
+  update-item: true
+  lore:
+    - '&f[ ПКМ ] &7чтобы использовать!'
+bag_eat:
+  material: 'BRICK'
+  display-name: '&bМешок с едой'
+  custom-model-data: 91
+  update-item: true
+  lore:
+    - '&f[ ПКМ ] &7чтобы использовать!'
+bottle:
+  material: 'GLASS_BOTTLE'
+  display-name: '&bБутылочка'
+  update-item: true
+  lore:
+    - '&7Используется для создания'
+    - '&7зелий.'
+writable_book:
+  material: 'WRITABLE_BOOK'
+  display-name: '&bРукопись'
+  update-item: false
+  lore:
+    - '&7Используется для написания'
+    - '&7книг игроками.'
+pet1:
+  material: 'CAMEL_SPAWN_EGG'
+  display-name: '&bПризыв верблюда'
+  update-item: true
+  lore:
+    - '&7Открываем вам питомца: Верблюд'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'
+coin_boss:
+  material: 'BRICK'
+  display-name: '&bМонета странника'
+  custom-model-data: 92
+  update-item: true
+  lore:
+    - '&7Используется для торговли.'
+donate_pack:
+  material: 'BRICK'
+  display-name: '&bСундук со снаряжением'
+  custom-model-data: 93
+  update-item: true
+  lore:
+    - '&7Содержит в себе набор золотого'
+    - '&7снаряжения.'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'
+bag_of_coins:
+  material: 'BRICK'
+  display-name: '&bМешок с монетами'
+  custom-model-data: 94
+  update-item: true
+  lore:
+    - '&7Чей-то кошель с монетами.'
+    - '&7Выдает вам небольшое кол-во'
+    - '&7монет при открытии.'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'
+leather_parts:
+  material: 'BRICK'
+  display-name: '&bЛоскуты кожи'
+  custom-model-data: 96
+  update-item: true
+  lore:
+    - '&7Используется для создания снаряжения'
+    - '&7на наковальне.'
+flux:
+  material: 'BRICK'
+  display-name: '&bОбычный флюс'
+  custom-model-data: 97
+  update-item: true
+  lore:
+    - '&7Используется для создания снаряжения'
+    - '&7на наковальне.'
+flux_qartz:
+  material: 'BRICK'
+  display-name: '&bКварцевый флюс'
+  custom-model-data: 98
+  update-item: true
+  lore:
+    - '&7Используется для создания снаряжения'
+    - '&7на наковальне.'
+flux_graphite:
+  material: 'BRICK'
+  display-name: '&bГрафитовый флюс'
+  custom-model-data: 99
+  update-item: true
+  lore:
+    - '&7Используется для создания снаряжения'
+    - '&7на наковальне.'

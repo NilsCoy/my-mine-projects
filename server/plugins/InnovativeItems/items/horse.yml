@@ -1,0 +1,10 @@
+horse:
+  material: SADDLE
+  display-name: §cПризыв коня
+  lore:
+  - §7[ПКМ] для использования.
+  unbreakable: false
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: true

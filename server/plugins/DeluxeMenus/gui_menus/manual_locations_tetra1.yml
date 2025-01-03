@@ -1,0 +1,237 @@
+menu_title: '&6Справочник: Тетра (1)'
+open_commands:
+  - '[sound] ITEM_BOOK_PAGE_TURN 1 1'
+size: 36
+items:
+  'village1':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTBkOGJhNjY0N2ZjMmJjZTU5ZDgyY2NmMjJjNTRjMWJmMTBjNDg3NzNkMDQ3ZDgyNDkxMGI4NTA4NGE0NjM5NSJ9fX0=
+    slot: 0
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fФрирест'
+    lore:
+      - '&fТип: &7Точка сохранения'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы поставить метку!'
+      - '&f[ ПКМ ] &7чтобы убрать метку!'
+    left_click_commands:
+      - '[console] calcomp toggle %player_name% save1 enable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+    right_click_commands:
+      - '[console] calcomp toggle %player_name% save1 disable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+  'grave1':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjdjYWI1NmM4MmNiODFiZGI5OTc5YTQ2NGJjOWQzYmEzZTY3MjJiYTEyMmNmNmM1Mjg3MzAxMGEyYjU5YWVmZSJ9fX0=
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fКладбище Фриреста'
+    lore:
+      - '&fТип: &7Точка интереса'
+      - '&fПротивник: &7Восставший скелет'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы поставить метку!'
+      - '&f[ ПКМ ] &7чтобы убрать метку!'
+    left_click_commands:
+      - '[console] calcomp toggle %player_name% grave1 enable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+    right_click_commands:
+      - '[console] calcomp toggle %player_name% grave1 disable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+  'cave1':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmRjMzE3MmMzMWJjY2YwNjg0N2Q2Nzk0NDBkMjMyNTlkNTAxNDc5ZWU5ZTEzZGI0ODU5NDUzNTRiM2YifX19
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fШахта Фриреста'
+    lore:
+      - '&fТип: &7Точка интереса'
+      - '&fРесурсы: &7Уголь, Железная руда'
+      - '&fПротивник: &7Угольная крыса'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы поставить метку!'
+      - '&f[ ПКМ ] &7чтобы убрать метку!'
+    left_click_commands:
+      - '[console] calcomp toggle %player_name% cave1 enable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+    right_click_commands:
+      - '[console] calcomp toggle %player_name% cave1 disable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+  'wolf':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTc0Mjg4NWRiNjgwM2FiMzY4MGNhNTBhYzJiOTdiMDhiZGRjMjRlMWFkMzA5NWRhOTE0Njc3ZjUyNGE2YjFhNiJ9fX0=
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fВолчье логово'
+    lore:
+      - '&fТип: &7Точка интереса'
+      - '&fПротивник: &7Дикий волк, Волкодав'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы поставить метку!'
+      - '&f[ ПКМ ] &7чтобы убрать метку!'
+    left_click_commands:
+      - '[console] calcomp toggle %player_name% wolf1 enable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+    right_click_commands:
+      - '[console] calcomp toggle %player_name% wolf1 disable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+  'town1':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTBkOGJhNjY0N2ZjMmJjZTU5ZDgyY2NmMjJjNTRjMWJmMTBjNDg3NzNkMDQ3ZDgyNDkxMGI4NTA4NGE0NjM5NSJ9fX0=
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fВудленд'
+    lore:
+      - '&fТип: &7Точка сохранения'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы поставить метку!'
+      - '&f[ ПКМ ] &7чтобы убрать метку!'
+    left_click_commands:
+      - '[console] calcomp toggle %player_name% save2 enable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+    right_click_commands:
+      - '[console] calcomp toggle %player_name% save2 disable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+  'grave2':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjdjYWI1NmM4MmNiODFiZGI5OTc5YTQ2NGJjOWQzYmEzZTY3MjJiYTEyMmNmNmM1Mjg3MzAxMGEyYjU5YWVmZSJ9fX0=
+    slot: 5
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fКладбище Вудленда'
+    lore:
+      - '&fТип: &7Точка интереса'
+      - '&fПротивник: &7Восставший скелет'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы поставить метку!'
+      - '&f[ ПКМ ] &7чтобы убрать метку!'
+    left_click_commands:
+      - '[console] calcomp toggle %player_name% grave2 enable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+    right_click_commands:
+      - '[console] calcomp toggle %player_name% grave2 disable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+  'cave2':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmRjMzE3MmMzMWJjY2YwNjg0N2Q2Nzk0NDBkMjMyNTlkNTAxNDc5ZWU5ZTEzZGI0ODU5NDUzNTRiM2YifX19
+    slot: 6
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fУгольная шахта'
+    lore:
+      - '&fТип: &7Точка интереса'
+      - '&fРесурсы: &7Уголь'
+      - '&fПротивник: &7Угольная крыса'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы поставить метку!'
+      - '&f[ ПКМ ] &7чтобы убрать метку!'
+    left_click_commands:
+      - '[console] calcomp toggle %player_name% cave2 enable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+    right_click_commands:
+      - '[console] calcomp toggle %player_name% cave2 disable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+  'cave3':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmRjMzE3MmMzMWJjY2YwNjg0N2Q2Nzk0NDBkMjMyNTlkNTAxNDc5ZWU5ZTEzZGI0ODU5NDUzNTRiM2YifX19
+    slot: 7
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fШахта Вудленда'
+    lore:
+      - '&fТип: &7Точка интереса'
+      - '&fРесурсы: &7Железная руда, Уголь'
+      - '&fПротивник: &7Железная крыса'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы поставить метку!'
+      - '&f[ ПКМ ] &7чтобы убрать метку!'
+    left_click_commands:
+      - '[console] calcomp toggle %player_name% cave3 enable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+    right_click_commands:
+      - '[console] calcomp toggle %player_name% cave3 disable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+  'pillager1':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTc0Mjg4NWRiNjgwM2FiMzY4MGNhNTBhYzJiOTdiMDhiZGRjMjRlMWFkMzA5NWRhOTE0Njc3ZjUyNGE2YjFhNiJ9fX0=
+    slot: 8
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fЛагерь разбойников'
+    lore:
+      - '&fТип: &7Точка интереса'
+      - '&fПротивник: &7Все виды разбойников'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы поставить метку!'
+      - '&f[ ПКМ ] &7чтобы убрать метку!'
+    left_click_commands:
+      - '[console] calcomp toggle %player_name% pillagers1 enable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+    right_click_commands:
+      - '[console] calcomp toggle %player_name% pillagers1 disable'
+      - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 0.5'
+
+
+
+  'home':
+    material: PAPER
+    slot: 27
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:13
+    display_name: '&fВернуться назад'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы вернуться.'
+    click_commands:
+      - '[openguimenu] manual_locations'
+      - '[refresh]'
+  # 'back':
+    # material: PAPER
+    # slot: 30
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # nbt_int: CustomModelData:11
+    # display_name: '&fПролистать назад'
+    # lore:
+      # - '&f[ ЛКМ ] &7для взаимодействия.'
+    # click_commands:
+      # - '[openguimenu] manual_locations_tetra1'
+      # - '[refresh]'
+  # 'next':
+    # material: PAPER
+    # slot: 32
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # nbt_int: CustomModelData:12
+    # display_name: '&fПролистать вперед'
+    # lore:
+      # - '&f[ ЛКМ ] &7для взаимодействия.'
+    # click_commands:
+      # - '[openguimenu] manual_locations_tetra1'
+      # - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [27,28,29,30,31,32,33,34,35]
+    display_name: ' '
+    nbt_int: CustomModelData:1

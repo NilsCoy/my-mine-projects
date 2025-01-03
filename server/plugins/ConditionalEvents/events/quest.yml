@@ -1,0 +1,29 @@
+Events:
+  world_edit_enter:
+    type: wgevents_region_enter
+    conditions:
+    - '%region% == village1_area1 and %betonquest_main-village1:condition.villager1% == false execute villager1'
+    - '%region% == tutorial_area and %betonquest_main-prologue:condition.prisoner_trigger2% == false execute teleport'
+    - '%region% == tutorial_area2 and %betonquest_main-prologue:condition.pillager2_quest_completed% == true and %betonquest_main-prologue:condition.bread% == false execute bread'
+    - '%region% == tutorial_area3 execute pillagers'
+    actions:
+      villager1:
+      - 'console_command: bq event %player% main-village1.villager1_start'
+      pillagers:
+      - 'console_command: bq event %player% main-prologue.pillagers_start'
+      - 'title: 20;60;20;&6&l! ! !;&7Нажмите &fПробел&7, чтобы ответить.'
+      teleport:
+      - 'console_command: bq event %player% main-prologue.pillager3_start'
+      bread:
+      - 'console_command: bq event %player% main-prologue.bread_start'
+      - 'title: 20;60;20;&6&l! ! !;&7Нажмите &fПробел&7, чтобы ответить.'
+  pickaxe_sound1:
+    type: repetitive
+    repetitive_time: 35
+    conditions:
+    - '%betonquest_main-prologue:condition.pillager2_quest_completed% == false'
+    actions:
+      default:
+      - 'playsound: BLOCK_STONE_BREAK;4;1;9441,82,10080,world'
+      - 'wait_ticks: 10'
+      - 'playsound: BLOCK_STONE_BREAK;4;1;9417,82,10041,world'

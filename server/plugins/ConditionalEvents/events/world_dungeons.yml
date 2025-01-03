@@ -1,0 +1,105 @@
+Events:
+  dungeon_load:
+    type: server_start
+    actions:
+      default:
+      - 'call_event: dungeon_open;%dungeon_id%=0'
+      
+  dungeon_open:
+    type: call
+    conditions:
+    - '%dungeon_id% == 0 execute all'
+    - '%dungeon_id% == 1 execute dungeon1'
+    actions:
+      all:
+      - 'call_event: dungeon_open;%dungeon_id%=1'
+      dungeon1:
+      - 'console_command: setblock 655 33 -28 minecraft:air'
+      - 'console_command: clone 641 71 -77 637 75 -73 656 73 -72'
+      - 'console_command: setblock 643 70 -79 minecraft:emerald_block'
+      - 'console_command: setblock 643 71 -79 minecraft:redstone_block'
+      - 'console_command: svar set dungeon1_cooldown 0'
+      - 'playsound: ENTITY_ZOMBIE_BREAK_WOODEN_DOOR;8;1;658,74,-70,world'
+      
+  dungeon_close:
+    type: call
+    conditions:
+    - '%dungeon_id% == 1 execute dungeon1'
+    actions:
+      dungeon1:
+      - 'console_command: clone 648 71 -77 644 75 -73 656 73 -72 masked'
+      - 'console_command: setblock 643 70 -79 minecraft:redstone_block'
+      - 'console_command: setblock 643 71 -79 minecraft:redstone_block'
+      - 'console_command: setblock 655 33 -28 minecraft:redstone_block'
+      
+  dungeon_mob_spawn:
+    type: call
+    conditions:
+    - '%dungeon_id% == 1 execute dungeon1'
+    actions:
+      dungeon1:
+      - 'console_command: spawnmob dungeon_default_fox 1 world,662,63,-34'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,642,62,-38'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,633,62,-63'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,630,62,-51'
+      - 'console_command: spawnmob dungeon_fox_mob1 2 world,619,62,-62'
+      - 'console_command: spawnmob dungeon_fox_mob1 2 world,678,55,-46'
+      - 'console_command: spawnmob dungeon_fox_mob1 2 world,675,56,-30'
+      
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,602,33,-31'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,618,39,-23'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,629,38,-11'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,637,32,9'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,634,32,3'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,618,36,-1'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,597,35,-19'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,600 35 -3'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,647,35,-13'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,610,36,-40'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,621,38,-45'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,617,38,-49'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,605,39,-56'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,600,39,-51'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,594,39,-59'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,598,34,-47'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,591,34,-43'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,590,36,-6'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,649,33,17'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,661,34,10'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,662,34,-12'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,635,35,-25'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,642,35,-36'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,646,35,-44'
+      - 'console_command: spawnmob dungeon_fox_chest 1 world,622.5,39,-62.5'
+      
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,669,36,-53'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,677,36,-46'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,671,32,-35'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,667,32,-29'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,661,35,-45'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,656,36,-44'
+      - 'console_command: spawnmob dungeon_fox_mob1 1 world,659,37,-58'
+      - 'console_command: spawnmob dungeon_fox_boss 1 world,677,36,-53'
+      
+      #- 'console_command: spawnmob dungeon_fox_mob1 1 world,'
+
+  dungeon_start:
+    type: wgevents_region_enter
+    conditions:
+    - '%region% == world_dungeon1_enter and %block_at_643_70_-79_world% == EMERALD_BLOCK and %block_at_643_71_-79_world% == REDSTONE_BLOCK execute dungeon1'
+    actions:
+      dungeon1:
+      - 'call_event: dungeon_mob_spawn;%dungeon_id%=1'
+      - 'console_command: setblock 643 71 -79 minecraft:emerald_block'
+
+  dungeon_cooldown:
+    type: repetitive_server
+    repetitive_time: 20
+    conditions:
+    - '%servervariables_globalvalue_dungeon1_cooldown% > 0 execute dungeon1_cooldown'
+    - '%servervariables_globalvalue_dungeon1_cooldown% == 0 and %block_at_643_70_-79_world% == REDSTONE_BLOCK execute dungeon1_open'
+    actions:
+      dungeon1_cooldown:
+      - 'console_command: svar add dungeon1_cooldown -1'
+      dungeon1_open:
+      - 'call_event: dungeon_open;%dungeon_id%=1'

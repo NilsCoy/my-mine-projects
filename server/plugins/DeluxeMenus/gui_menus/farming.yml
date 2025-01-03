@@ -1,0 +1,717 @@
+menu_title: '&6Собирательство'
+open_commands:
+  - '[sound] ITEM_BOOK_PAGE_TURN 1 1'
+  - '[console] svar set farming_start 1 %player_name%'
+  - '[console] svar set farming_slot1 -1 %player_name%'
+  - '[console] svar set farming_slot2 -1 %player_name%'
+  - '[console] svar set farming_slot3 -1 %player_name%'
+size: 27
+items:
+  'slot0':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 0
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 0'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 0'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 0'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot1':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 1
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 1'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 1'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 1'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot2':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 2
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 2'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 2'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 2'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot3':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 3
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 3'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 3'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 3'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot4':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 4
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 4'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 4'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 4'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot5':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 5
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 5'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 5'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 5'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot6':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 6
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 6'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 6'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 6'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot7':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 7
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 7'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 7'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 7'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot8':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 8
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 8'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 8'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 8'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot9':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 9
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 9'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 9'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 9'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot10':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 10
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 10'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 10'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 10'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot11':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 11
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 11'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 11'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 11'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot12':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 12
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 12'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 12'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 12'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot13':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 13
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 13'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 13'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 13'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot14':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 14
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 14'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 14'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 14'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot15':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 15
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 15'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 15'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 15'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot16':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 16
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 16'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 16'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 16'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot17':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 17
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 17'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 17'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 17'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot18':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 18
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 18'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 18'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 18'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot19':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 19
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 19'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 19'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 19'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot20':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 20
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 20'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 20'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 20'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot21':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 21
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 21'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 21'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 21'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot22':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 22
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 22'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 22'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 22'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot23':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 23
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 23'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 23'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 23'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot24':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 24
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 24'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 24'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 24'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot25':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 25
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 25'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 25'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 25'
+          optional: true
+    click_commands:
+      - '[refresh]'
+  'slot26':
+    material: placeholder-%string_random_POPPY,BLUE_ORCHID,AZURE_BLUET,PINK_TULIP%
+    slot: 26
+    priority: 4
+    hide_attributes: false
+    #nbt_int: CustomModelData:1
+    display_name: '&fОсмотреть?'
+    view_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot1% == 26'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot2% == 26'
+          optional: true
+        anything_here_3:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == 26'
+          optional: true
+    click_commands:
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+    display_name: '&fОсмотреть?'
+    nbt_int: CustomModelData:1
+    click_requirement:
+      minimum_requirements: 1
+      stop_at_success: true
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% == -1'
+          optional: true
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_farming_slot3% != -1'
+          optional: true
+          success_commands:
+          - '[refresh]'
+          - '[close]<delay=20>'
+          - '[console] svar set farming_start 0 %player_name%'
+          - '[console] svar set farming_slot1 -1 %player_name%'
+          - '[console] svar set farming_slot2 -1 %player_name%'
+          - '[console] svar set farming_slot3 -1 %player_name%'
+          - '[console] ce call farming_reward player:%player_name%'
+    click_commands:
+      - '[refresh]'
+      

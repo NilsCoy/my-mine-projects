@@ -1,0 +1,13 @@
+variables:
+  stealth_state:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  stealth_visible:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  stealth_enable:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 1

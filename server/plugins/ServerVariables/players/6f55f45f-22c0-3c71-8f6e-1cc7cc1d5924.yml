@@ -1,0 +1,9 @@
+name: Sigma
+variables:
+  player_first_join: '1'
+  rewards_day_reward_last: '266'
+  rewards_day_reward_can: '1'
+  rewards_day_reward_have: '0'
+  rewards_day_reward_stack: '1'
+  music_state: '2'
+  player_protect: '10725'

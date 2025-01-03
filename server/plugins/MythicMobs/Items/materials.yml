@@ -1,0 +1,289 @@
+
+
+bone1:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2975
+    type: BONE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Кость"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGFgScrPS2VmUMOnLKW0KDEpMyezpJIBCBgZpPEoZmQAAPYfrv53AAAA
+pig_meet:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2975
+    type: PORKCHOP
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Сырое
+        мясо кабана"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgKMhMj89NTSxhZlDDpzSltCgxKTMns6SSAQgYGaTxKGZkAABTrh+8ewAAAA==
+pig_fang:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2975
+    type: BRICK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Клык
+        кабана"}],"text":""}'
+      custom-model-data: 7
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGFgL8hMT0vMS2dmUMOnMqW0KDEpMyezpJIBCBgZpPEoZmQAACRBqKh6AAAA
+pig_skin:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2975
+    type: LEATHER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Кабанья
+        шкура"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgKMhMjy/OzsxjZlDDpzSltCgxKTMns6SSAQgYGaTxKGZkAAD06DlYewAAAA==
+cow_meat:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2975
+    type: BEEF
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Сырое
+        мясо коровы"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgSM4vj89NTSxhZlDDpzSltCgxKTMns6SSAQgYGaTxKGZkAADDiAV4ewAAAA==
+cow_skin:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2975
+    type: LEATHER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Коровья
+        шкура"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgSM4vjy/OzsxjZlDDpzSltCgxKTMns6SSAQgYGaTxKGZkAABkziOcewAAAA==
+sheep_meat:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2975
+    type: MUTTON
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Сырое
+        мясо овцы"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgKs5ITS2Iz01NLGFmUMOnOKW0KDEpMyezpJIBCBgZpPEoZmQAAFdv1Jx9AAAA
+sheep_skin:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2975
+    type: LEATHER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Овечья
+        шкура"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgKs5ITS2IL87OzGNmUMOnOKW0KDEpMyezpJIBCBgZpPEoZmQAAPAp8nh9AAAA
+ork_amulet:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 2975
+    type: BRICK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Ожерелье
+        из костей"}],"text":""}'
+      custom-model-data: 8
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgyi/Kjk/MLc1JLWFmUMOnOKW0KDEpMyezpJIBCBgZpPEoZmQAAJ6+Ua99AAAA
+coin:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: GOLD_NUGGET
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Монета"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM/PSYlPzs/MY2ZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAXaKW1XwAAAA=
+little_skin:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: LEATHER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Маленькая
+        шкура"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgzsksKclJjS/OzsxjZlDDpzqltCgxKROovpIBCBgZpPEoZmQAAPJ/6ud+AAAA
+mid_skin:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: LEATHER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Средняя
+        шкура"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgyM1MiS/OzsxjZlDDpzSltCgxKTMns6SSAQgYGaTxKGZkAABrFyyTewAAAA==
+big_skin:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: LEATHER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Большая
+        шкура"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgSMpMjy/OzsxjZlDDpzSltCgxKTMns6SSAQgYGaTxKGZkAADmmSf3ewAAAA==
+meat:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: MUTTON
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Сырое
+        мясо"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGFgyU1NLGFmUMOnLKW0KDEpMyezpJIBCBgZpPEoZmQAAPcEqRh3AAAA
+cobald_raw:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: BRICK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Кобальтовая
+        руда"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+        в плавильной печи"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"для
+        создания кобальтовых слитков."}],"text":""}'
+      custom-model-data: 6
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgSs5PSsxJiS9KLGdmUMOnOKW0KDEpMyezpJIBCBgZpPEoZmQAAHz9NRV9AAAA
+gems:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: BRICK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Драгоценные
+        камни"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Можно
+        продать."}],"text":""}'
+      custom-model-data: 88
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGFgSU/NLWZmUMOnLKW0KDEpMyezpJIBCBgZpPEoZmQAAH2W8EB3AAAA
+bag_materials:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: BRICK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Мешок
+        с ресурсами"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"[
+        ПКМ ] "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"чтобы
+        использовать!"}],"text":""}'
+      custom-model-data: 89
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTUpMj89NLEktykzMKWZmUMOnPqW0KDEpMyezpJIBCBgZpPEoZmQAAB8TqvyAAAAA
+bag_ingredients:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: BRICK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Мешок
+        с травами"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"[
+        ПКМ ] "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"чтобы
+        использовать!"}],"text":""}'
+      custom-model-data: 90
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgT0pMj8/MSy9KTclMzSspZmZQw6cjpbQoMSkzJ7OkkgEIGBmk8ShmZAAAf0PEcYIAAAA=
+bag_eat:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: BRICK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Мешок
+        с едой"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"[
+        ПКМ ] "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"чтобы
+        использовать!"}],"text":""}'
+      custom-model-data: 91
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGFgT0pMj09NLGFmUMOnMqW0KDEpMyezpJIBCBgZpPEoZmQAAFXs7+h6AAAA
+coin_boss:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: BRICK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+        странника"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+        для торговли."}],"text":""}'
+      custom-model-data: 92
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+bag_of_coins:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: BRICK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Мешок
+        с монетами"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Чей-то
+        кошель с монетами."}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Выдает
+        вам небольшое кол-во"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"монет
+        при открытии."}],"text":""}'
+      - '{"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"[
+        ПКМ ] "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"чтобы
+        использовать!"}],"text":""}'
+      custom-model-data: 94
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgSUpMj89Pi0/Oz8wrZmZQw6c8pbQoMSkzJ7OkkgEIGBmk8ShmZAAAdCUDen8AAAA=
+arrows:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: ARROW
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Стрела"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Требуется
+        для стрельбы из"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"лука
+        или арбалета."}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGFgTSwqyi9nZlDDpy6ltCgxKTMns6SSAQgYGaTxKGZkAABejUsqeAAAAA==

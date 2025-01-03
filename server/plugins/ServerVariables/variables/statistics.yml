@@ -1,0 +1,17 @@
+variables:
+  statistics_mining:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  statistics_fishing:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  statistics_farming:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  statistics_cooking:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0

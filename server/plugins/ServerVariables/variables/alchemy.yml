@@ -1,0 +1,9 @@
+variables:
+  alchemy_craft:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  alchemy_craft_count:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0

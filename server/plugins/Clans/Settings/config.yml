@@ -1,0 +1,53 @@
+ClanNameLength: 5
+ChatFormatEnabled: false
+ChatFormat: '%clan% &8* %player%&7: &f%message%'
+CustomChatFormatEnabled: false
+PermissionEnabled: true
+PermissionClanCreate: clans.create
+PermissionClanInvite: clans.invite
+PermissionClanAccept: clans.accept
+PermissionClanKick: clans.kick
+PermissionClanStats: clans.stats
+PermissionClanTopStats: clans.topstats
+PermissionClanBase: clans.base
+PermissionClanSetBase: clans.setbase
+PermissionClanLeave: clans.leave
+PermissionClanDelete: clans.delete
+PermissionClanList: clans.list
+PermissionClansReload: clans.reload
+DamageEnabled: false
+SelfDamageEnabled: false
+ClanColors:
+- 0-25:&a
+- 25-50:&2
+- 50-100:&e
+- 100-300:&6
+- 300-600:&c
+- 600:&4
+BaseTeleportEnabled: false
+BaseTeleportMoveEnabled: false
+SetBaseEnabled: false
+BaseTeleportCooldown: 5
+SetBaseCooldown: 0
+ClanLimitEnabled: true
+ClanLimit: 5
+ClanNameMatcher: ^[a-zA-Z0-9]*$
+VaultSupport:
+  Enabled: false
+  ClanCreatePrice: 100.0
+Sounds:
+  Enabled: true
+  ClanEnter: BLOCK_IRON_DOOR_OPEN
+  ClanLeave: BLOCK_IRON_DOOR_CLOSE
+  ClanRankup: ENTITY_PLAYER_LEVELUP
+  BaseTeleport: BLOCK_PORTAL_AMBIENT
+SpecificWorlds:
+  Enabled: false
+  List:
+  - world
+  - world/DIM1
+  - world/DIM-1
+BlacklistedClanNames:
+- racist
+- fuck
+OnlineMode: true

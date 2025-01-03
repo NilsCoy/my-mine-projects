@@ -1,0 +1,84 @@
+menu_title: '&6Наковальня'
+open_commands:
+  - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+size: 27
+items:
+  'iron_ring':
+    material: BRICK
+    amount: 4
+    slot: 0
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:1
+    display_name: '&bЖелезное колечко x4'
+    lore:
+      - '&fТребования:'
+      - '&7Железный слиток: &f1'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:1,nameequals:&bЖелезный слиток%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 1 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'
+  'iron_plate':
+    material: BRICK
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:2
+    display_name: '&bЖелезная пластина'
+    lore:
+      - '&fТребования:'
+      - '&7Железный слиток: &f2'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:2,nameequals:&bЖелезный слиток%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 2 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'
+  'steel_ingot':
+    material: BRICK
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:9
+    display_name: '&bСтальной слиток'
+    lore:
+      - '&fТребования:'
+      - '&7Железный слиток: &f2'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы начать ковку!'
+    left_click_requirement:
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%checkitem_mat:BRICK,amt:2,nameequals:&bЖелезный слиток%'
+          output: 'yes'
+      deny_commands:
+        - '[message] &cУ вас не хватает предметов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar set anvil_item 3 %player_name%'
+      - '[sound] BLOCK_GRINDSTONE_USE 1 1'
+      - '[close]'

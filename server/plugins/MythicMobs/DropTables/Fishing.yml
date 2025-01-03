@@ -1,0 +1,31 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+ 
+
+fish_tutorial:
+  TotalItems: 1
+  BonusLuckItems: 1
+  Drops:
+  - cmd{c="ii give <trigger.name> fish11 1"} 1 1
+fish1:
+  TotalItems: 1
+  BonusLuckItems: 1
+  Drops:
+  - cmd{c="ii give <trigger.name> fish1 1"} 1 1
+  - cmd{c="ii give <trigger.name> fish2 1"} 1 1
+  - cmd{c="ii give <trigger.name> fish3 1"} 1 1
+  - cmd{c="ii give <trigger.name> fish4 1"} 1 0.5
+  - cmd{c="ii give <trigger.name> fish5 1"} 1 1
+  - cmd{c="ii give <trigger.name> fish6 1"} 1 0.5
+  - cmd{c="ii give <trigger.name> fish7 1"} 1 0.5
+  - cmd{c="ii give <trigger.name> fish8 1"} 1 0.5
+  - cmd{c="ii give <trigger.name> fish9 1"} 1 0.25
+  - cmd{c="ii give <trigger.name> fish10 1"} 1 0.25
+  - cmd{c="ii give <trigger.name> fish11 1"} 1 0.5
+  - cmd{c="ii give <trigger.name> treasure1 %rng_1,5%"} 1 0.5
+  - cmd{c="ii give <trigger.name> treasure2 1"} 1 0.5
+  - cmd{c="ii give <trigger.name> treasure3 %rng_1,3%"} 1 1
+  - cmd{c="ii give <trigger.name> treasure4 %rng_1,3%"} 1 1
+  - cmd{c="ii give <trigger.name> treasure5 1"} 1 0.25
+  - cmd{c="ii give <trigger.name> treasure6 1"} 1 0.5
+  - farming4 1 0.5

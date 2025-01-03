@@ -1,0 +1,13 @@
+uuid: 621a894d-f4db-3ff4-8d84-2c34dca7265a
+name: Kurunka
+primary-group: default
+permissions:
+- promo_horizon
+- skill_guard3
+- titul_1
+- titul_11
+- titul_14
+- titul_17
+- titul_2
+parents:
+- default

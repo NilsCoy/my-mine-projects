@@ -1,0 +1,124 @@
+inventory_pets_menu: §6Питомцы
+inventory_pets_menu_interactions: §6Питомец
+mount_item_name: §6Верховое животное
+mount_item_description: §7Нажмите, чтобы оседлать вашего питомца
+rename_item_name: §6Переименовать
+rename_item_description: §7Нажмите, чтобы переименовать вашего питомца
+back_to_petmenu_item_name: §cВернуться в меню
+back_to_petmenu_item_description: §7Нажмите, чтобы вернуться в меню
+inventory_item_name: §6Инвентарь
+inventory_item_description: §7Нажмите, чтобы открыть инвентарь питомца
+skins_item_name: §6Скины
+skins_item_description: §7Нажмите, чтобы изменить скин вашего питомца
+equipment_item_name: §6Экипировка
+equipment_description: §7Нажмите, чтобы открыть экипировку вашего питомца
+turnpage_item_name: §6Следующая страница §7(§e%currentPage%§8/§7%maxPage%)
+turnpage_item_description: "§eПравый клик§7 для перехода вперед \n§aЛевый клик§7 д\
+  ля перехода назад"
+nickname: '§9Никнейм: §7%nickname%'
+nickname_item_lore: §cНажмите здесь, чтобы отозвать вашего питомца
+summoned: §7Питомец был призван!
+revoked: §7Ваш питомец был отозван.
+revoked_for_new_one: §7Ваш предыдущий питомец был отозван для призыва нового.
+revoked_unknown: |-
+  §cПитомец не может быть призван по следующим причинам:
+  §7- Указанный §cMythicMob в конфигурации питомца не существует§7 (попробуйте призвать его через /mm m spawn)§7.
+  §7- Мир находится в режиме §cpeaceful или easy§7.
+  §7- Регион §cпредотвращает появление моба§7 (якорь, скорее всего, агрессивный моб).
+  §7- У вас есть §cплагин защиты от спавна§7, попробуйте призвать моба в другом мире или далеко от спавна.
+  §7- Существуют другие питомцы с §cтем же идентификатором§7. Убедитесь, что у вас уникальные идентификаторы.
+mythicmob_null: §cЭтот питомец не может быть призван. Связанная сущность или файл
+  MythicMob пуст или был удален.
+no_mob_match: §cЭтот питомец не может быть призван. Связанный mythicmob не зарегистрирован
+  в MythicMobs.
+not_allowed: §cВам не разрешено призвать этого питомца.
+owner_not_found: §cЭтот питомец не может быть призван. Призыватель не найден.
+revoked_before_changes: §cВаш питомец был отозван до того, как внесены изменения.
+not_mountable: §cУ этого питомца нет точки для верховой езды.
+already_mounting: §cВы уже на чем-то едете. Пожалуйста, слезьте, прежде чем повторить
+  попытку.
+not_mountable_here: §cВы не можете ездить на питомце в этой области.
+cant_mount_pet_yet: §cУ вас нет разрешения на верховую езду на этом питомце.
+cant_follow_here: §cВаш питомец не может следовать за вами в этой области.
+type_name_in_chat: §aНапишите в чат имя вашего питомца.
+if_wish_to_remove_name: §aЕсли вы хотите удалить его, напишите §c%tag%§a в чат.
+nickname_changed_successfuly: §aНикнейм успешно изменен!
+nickname_not_changed: §cНикнейм не может быть изменен из-за пустой строки. Пожалуйста,
+  попробуйте еще раз.
+tag_to_remove_name: None
+already_inside_vehicule: §7Вы уже сидите на чем-то. Пожалуйста, слезьте с текущего
+  средства перед использованием этой функции.
+pet_doesnt_exist: §cЭтот питомец не существует. Пожалуйста, проверьте идентификатор.
+player_not_connected: §cИгрок §6%player%§c не подключен.
+blacklisted_word: §cОперация переименования была отменена. Слово %word% не разрешено
+  в имени питомца.
+no_active_pet: §cУ вас нет активного питомца.
+signal_stick_given: §aВы получили палку приказов. Щелкните правой кнопкой мыши, чтобы
+  использовать команду, и левой кнопкой мыши, чтобы изменить приказы.
+signal_stick_signal: '§6Активный приказ: §e%signal%'
+loop_spawn: §cВаш питомец был отозван, потому что, похоже, он испытывает трудности
+  с многочисленными телепортациями.
+requires_item_in_hand: §cВы должны держать предмет в руке, чтобы обновить его в конфигурации.
+item_updated: '§aПредмет успешно обновлен с ключом: §e%key%'
+item_doesnt_exist: §aПредмет с ключом §e%key%§c не существует. Если вы хотите его
+  добавить, вы можете использовать аргумент §eadd§c вместо этого.
+key_doesnt_exist: §cУказанный ключ не зарегистрирован.
+key_removed: §aПредмет-ключ успешно удален.
+key_already_exists: §cЭтот ключ уже зарегистрирован. Используйте его, чтобы заменить
+  текущий предмет.
+key_added: §aКлюч успешно добавлен с соответствующим предметом.
+key_list: '§aДоступные ключи:'
+reload_success: §aУспешно перезагружено.
+how_many_pets_loaded: §a%numberofpets% были успешно зарегистрированы.
+requires_modelengine: §cЭтот плагин требует ModelEngine r2.3.1. Похоже, что это требование
+  не выполнено.
+usage: "§cЭтой команды не существует. \n§7Ознакомьтесь с вики: §nhttps://alexandre-chaussard.gitbook.io/mcpets/tutorials/plugin-features/commands"
+no_perm: §cВам не разрешено использовать эту команду.
+blacklisted_world: §cMCPets отключен в этом мире.
+category_pet_amount: §e%petAmount% §6зарегистрировано
+category_menu_title: §0☀ §4Питомцы §8- Выберите категорию §0☀
+category_doesnt_exist: §cЭта категория не существует.
+pet_inventory_title: §0☀ §4%pet% §8- §0Инвентарь §0☀
+pet_skins_title: §0☀ §4%pet% §8- §0Скины §0☀
+skin_could_not_apply: §cСкин не может быть применен к питомцу.
+skin_applied: §aСкин успешно изменен!
+global_respawn_timer_running: §cЭтот питомец не может быть призван. Вам нужно подождать
+  %timeLeft%s/%cooldown%s.
+respawn_timer_running: §cЭтот питомец не может быть призван. Он еще восстанавливается
+  после полученных ран. Вам нужно подождать %timeLeft% сек. # /%cooldown%сек.
+revoke_timer_running: §cЭтот питомец не может быть призван. Он еще восстанавливается
+  после полученных ран. Вам нужно подождать %timeLeft% сек. # /%cooldown%сек.
+player_or_pet_doesnt_exist: §cЭтот питомец не существует, или этот игрок никогда не
+  играл на вашем сервере.
+stats_cleared: §aВсе статистические данные успешно очищены!
+stats_cleared_for_pet_for_player: §aВсе статистические данные успешно очищены для
+  питомца %petId% для игрока %player%.
+stats_cleared_for_pet: §aВсе статистические данные успешно очищены для питомца %petId%.
+pet_taming_progress: §7Прогресс приручения §a%progress%% §7- %progressbar%
+pet_could_not_evolve: §7Ваш питомец не может эволюционировать, потому что §cвы уже
+  владеете этой эволюцией§7.
+petfood_doesnt_exist: §cЭто корм для питомцев не существует.
+petunlock_noperm: §cВам не разрешено использовать этот предмет для разблокировки питомца.
+petunlocked: §aВы разблокировали питомца %petName%, поздравляю!
+petunlocked_already: §cВы уже владеете питомцем §6%petName%§c.
+pet_already_tamed: §cЭтот питомец уже приручен.
+pet_doesnt_eat: §cЭтот питомец не может есть этот корм.
+pet_status_alive: §fДоступен
+pet_status_revoked: §fНедоступен §7(осталось %timeleft%s)
+pet_status_dead: §fМертв §7(осталось %timeleft%s)
+# pet_stats: "§fИнформация о питомце:\n§7  ● Статус: %status%\n§7  ● Уровень §7- §6%levelname%\n\
+# \ \n§f%health%§7/§f%maxhealth% §c❤\n§7Регенерация: %regeneration% ❤/с\n§7Модифик\
+# атор урона: §f%damagemodifier%%\n§7Модификатор сопротивления: §f%resistancemodifier%%\n\
+# §7Мощность: §f%power%%\n \n§7Опыт: §a%experience%/%threshold% xp\n%progressbar%"
+# pet_stats: "§fИнформация о питомце:\n§7  ● Статус: §f%status%\n§7  ● Уровень: §f%levelname%\n\
+# \ \n§7  ● Здоровье: §f%health%§7/§f%maxhealth% ❤\n§7  ● Регенерация: §f%regeneration%\
+# \ ❤/с\n§7  ● Модификатор урона: §f%damagemodifier%%\n§7  ● Модификатор сопротивл\
+# ения: §f%resistancemodifier%%\n§7  ● Мощность: §f%power%%\n \n§7 - Опыт: §f%experience%§\
+# 7/§f%threshold% §7-\n%progressbar%"
+pet_stats: |-
+  §fИнформация о питомце:
+  §7  ● Статус: §f%status%
+  §7  ● Здоровье: §f%health%§7/§f%maxhealth% ❤
+  §7  ● Регенерация: §f%regeneration% ❤
+debugger_joining: §aОтладчик включен. Теперь вы слушаете его.
+debugger_leave: §aОтладчик §7выключен§a. Вы больше не будете слушать его.

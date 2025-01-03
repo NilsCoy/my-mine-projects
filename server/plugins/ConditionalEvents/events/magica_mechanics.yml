@@ -1,0 +1,22 @@
+Events:
+  magica_action:
+    type: item_interact
+    conditions:
+    - '%item% == BLAZE_ROD and %item_name% == Магическая палочка and %action_type% == RIGHT_CLICK and %checkitem_getinfo:mainhand_nbtstrings:magica:select=0% == self and %servervariables_value_magica_mechanics_cooldown% == 0 execute cast_self'
+    - '%item% == BLAZE_ROD and %item_name% == Магическая палочка and %action_type% == RIGHT_CLICK and %checkitem_getinfo:mainhand_nbtstrings:magica:select=0% == projectile and %servervariables_value_magica_mechanics_cooldown% == 0 execute cast_projectile'
+    - '%item% == BLAZE_ROD and %item_name% == Магическая палочка and %action_type% == RIGHT_CLICK and %servervariables_value_magica_mechanics_cooldown% == 1 execute error'
+    actions:
+      cast_self:
+      - 'cancel_event: true'
+      - 'console_command: svar set magica_mechanics_cooldown 1 %player%'
+      - 'player_command_as_op: mm test cast -s magica_cast_self'
+      - 'wait_ticks: %checkitem_getinfo:mainhand_nbtstrings:magica:attribures..cooldown=0%'
+      - 'console_command: svar set magica_mechanics_cooldown 0 %player%'
+      cast_projectile:
+      - 'cancel_event: true'
+      - 'console_command: svar set magica_mechanics_cooldown 1 %player%'
+      - 'player_command_as_op: mm test cast -s magica_cast_projectile'
+      - 'wait_ticks: %checkitem_getinfo:mainhand_nbtstrings:magica:attribures..cooldown=0%'
+      - 'console_command: svar set magica_mechanics_cooldown 0 %player%'
+      error:
+      - 'actionbar: &cПерезарядка!;60'

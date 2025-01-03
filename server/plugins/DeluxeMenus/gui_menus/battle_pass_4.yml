@@ -1,0 +1,1431 @@
+menu_title: '&6Сезонные награды (4)'
+size: 36
+open_commands:
+  - '[sound] UI_BUTTON_CLICK 1 1'
+items:
+  'reward_61':
+    material: GOLD_NUGGET
+    slot: 1
+    priority: 5
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 61-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_61_open':
+    material: GOLD_NUGGET
+    slot: 1
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 61-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 61'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 60'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] svar add player_money 150 %player_name%'
+      - '[refresh]'
+  'reward_61_block':
+    material: BARRIER
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 61-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 61'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+  'reward_62':
+    material: GOLD_NUGGET
+    slot: 2
+    priority: 5
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 62-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_62_open':
+    material: GOLD_NUGGET
+    slot: 2
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 62-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 62'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 61'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] svar add player_money 150 %player_name%'
+      - '[refresh]'
+  'reward_62_block':
+    material: BARRIER
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 62-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 62'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+  'reward_63':
+    material: BRICK
+    slot: 3
+    priority: 5
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:38
+    display_name: '&fЯщик с едой'
+    lore:
+      - '&7Награда 63-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_63_open':
+    material: BRICK
+    slot: 3
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:38
+    display_name: '&fЯщик с едой'
+    lore:
+      - '&7Награда 63-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 63'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 62'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] ii give %player_name% case_eat 1'
+      - '[refresh]'
+  'reward_63_block':
+    material: BARRIER
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&fЯщик с едой'
+    lore:
+      - '&7Награда 63-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 63'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+
+
+
+  'reward_64':
+    material: GOLD_NUGGET
+    slot: 10
+    priority: 5
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 64-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_64_open':
+    material: GOLD_NUGGET
+    slot: 10
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 64-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 64'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 63'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] svar add player_money 150 %player_name%'
+      - '[refresh]'
+  'reward_64_block':
+    material: BARRIER
+    slot: 10
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 64-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 64'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+  'reward_65':
+    material: AMETHYST_SHARD
+    slot: 11
+    priority: 5
+    update: true
+    hide_attributes: true
+    #nbt_int: CustomModelData:36
+    #rgb: 45, 192, 206
+    display_name: '&bКраска "Аметистовый"'
+    lore:
+      - '&7Награда 65-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_65_open':
+    material: AMETHYST_SHARD
+    slot: 11
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    #nbt_int: CustomModelData:36
+    #rgb: 45, 192, 206
+    display_name: '&bКраска "Аметистовый"'
+    lore:
+      - '&7Награда 65-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 65'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 64'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] ii give %player_name% color_amethyst 1'
+      - '[refresh]'
+  'reward_65_block':
+    material: BARRIER
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&bКраска "Аметистовый"'
+    lore:
+      - '&7Награда 65-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 65'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+  'reward_66':
+    material: BRICK
+    slot: 12
+    priority: 5
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:39
+    display_name: '&fЯщик с ресурсами'
+    lore:
+      - '&7Награда 66-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_66_open':
+    material: BRICK
+    slot: 12
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:39
+    display_name: '&fЯщик с ресурсами'
+    lore:
+      - '&7Награда 66-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 66'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 65'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] ii give %player_name% case_materials 1'
+      - '[refresh]'
+  'reward_66_block':
+    material: BARRIER
+    slot: 12
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&fЯщик с ресурсами'
+    lore:
+      - '&7Награда 66-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 66'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+
+
+  'reward_67':
+    material: GOLD_NUGGET
+    slot: 19
+    priority: 5
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 67-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_67_open':
+    material: GOLD_NUGGET
+    slot: 19
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 67-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 67'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 66'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] svar add player_money 150 %player_name%'
+      - '[refresh]'
+  'reward_67_block':
+    material: BARRIER
+    slot: 19
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 67-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 67'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+  'reward_68':
+    material: SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 20
+    priority: 5
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:37
+    display_name: '&bОблик "Страж"'
+    lore:
+      - '&7Награда 68-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_68_open':
+    material: SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 20
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:37
+    display_name: '&bОблик "Страж"'
+    lore:
+      - '&7Награда 68-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 68'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 67'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] ii give %player_name% skin_armor_guard 1'
+      - '[refresh]'
+  'reward_68_block':
+    material: BARRIER
+    slot: 20
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&bОблик "Страж"'
+    lore:
+      - '&7Награда 68-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 68'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+  'reward_69':
+    material: GOLD_NUGGET
+    slot: 21
+    priority: 5
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 69-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_69_open':
+    material: GOLD_NUGGET
+    slot: 21
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    #nbt_int: CustomModelData:36
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 69-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 69'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 68'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] svar add player_money 150 %player_name%'
+      - '[refresh]'
+  'reward_69_block':
+    material: BARRIER
+    slot: 21
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 69-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 69'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+
+
+  'reward_70':
+    material: EPICFIGHT_IRON_GREATSWORD
+    slot: 29
+    priority: 5
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:6
+    display_name: '&bОблик "Аметистовый большой меч"'
+    hide_attributes: true
+    lore:
+      - '&7Награда 70-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_50_open':
+    material: EPICFIGHT_IRON_GREATSWORD
+    slot: 29
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:6
+    display_name: '&bОблик "Аметистовый большой меч"'
+    lore:
+      - '&7Награда 70-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 70'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 69'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] ii give %player_name% skin_greatsword_amethist_greatsword 1'
+      - '[refresh]'
+  'reward_70_block':
+    material: BARRIER
+    slot: 29
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&bОблик "Аметистовый большой меч"'
+    lore:
+      - '&7Награда 70-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 70'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  'reward_71':
+    material: GOLD_NUGGET
+    slot: 5
+    priority: 5
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 71-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_71_open':
+    material: GOLD_NUGGET
+    slot: 5
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 71-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 71'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 70'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] svar add player_money 150 %player_name%'
+      - '[refresh]'
+  'reward_71_block':
+    material: BARRIER
+    slot: 5
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 71-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 71'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+  'reward_72':
+    material: GOLD_NUGGET
+    slot: 6
+    priority: 5
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 72-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_72_open':
+    material: GOLD_NUGGET
+    slot: 6
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 72-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 72'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 71'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] svar add player_money 150 %player_name%'
+      - '[refresh]'
+  'reward_72_block':
+    material: BARRIER
+    slot: 6
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 72-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 72'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+  'reward_73':
+    material: BRICK
+    slot: 7
+    priority: 5
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:38
+    display_name: '&fЯщик с едой'
+    lore:
+      - '&7Награда 73-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_73_open':
+    material: BRICK
+    slot: 7
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:38
+    display_name: '&fЯщик с едой'
+    lore:
+      - '&7Награда 73-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 73'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 72'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] ii give %player_name% case_eat 1'
+      - '[refresh]'
+  'reward_73_block':
+    material: BARRIER
+    slot: 7
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&fЯщик с едой'
+    lore:
+      - '&7Награда 73-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 73'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+
+
+
+  'reward_74':
+    material: GOLD_NUGGET
+    slot: 14
+    priority: 5
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 74-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_74_open':
+    material: GOLD_NUGGET
+    slot: 14
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 74-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 74'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 73'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] svar add player_money 150 %player_name%'
+      - '[refresh]'
+  'reward_74_block':
+    material: BARRIER
+    slot: 14
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 74-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 74'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+  'reward_75':
+    material: AMETHYST_SHARD
+    slot: 15
+    priority: 5
+    update: true
+    hide_attributes: true
+    #nbt_int: CustomModelData:36
+    rgb: 45, 192, 206
+    display_name: '&bКраска "Аметистовый"'
+    lore:
+      - '&7Награда 75-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_75_open':
+    material: AMETHYST_SHARD
+    slot: 15
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    #nbt_int: CustomModelData:36
+    rgb: 45, 192, 206
+    display_name: '&bКраска "Аметистовый"'
+    lore:
+      - '&7Награда 75-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 75'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 74'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] ii give %player_name% color_amethyst 1'
+      - '[refresh]'
+  'reward_75_block':
+    material: BARRIER
+    slot: 15
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&bКраска "Аметистовый"'
+    lore:
+      - '&7Награда 75-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 75'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+  'reward_76':
+    material: BRICK
+    slot: 16
+    priority: 5
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:39
+    display_name: '&fЯщик с ресурсами'
+    lore:
+      - '&7Награда 76-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_76_open':
+    material: BRICK
+    slot: 16
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:39
+    display_name: '&fЯщик с ресурсами'
+    lore:
+      - '&7Награда 76-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 76'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 75'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] ii give %player_name% case_materials 1'
+      - '[refresh]'
+  'reward_76_block':
+    material: BARRIER
+    slot: 16
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&fЯщик с ресурсами'
+    lore:
+      - '&7Награда 76-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 76'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+
+
+  'reward_77':
+    material: GOLD_NUGGET
+    slot: 23
+    priority: 5
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 77-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_77_open':
+    material: GOLD_NUGGET
+    slot: 23
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 77-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 77'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 76'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] svar add player_money 150 %player_name%'
+      - '[refresh]'
+  'reward_77_block':
+    material: BARRIER
+    slot: 23
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 77-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 77'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+  'reward_78':
+    material: SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 24
+    priority: 5
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:37
+    display_name: '&bОблик "Страж"'
+    lore:
+      - '&7Награда 78-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_78_open':
+    material: SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE
+    slot: 24
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:37
+    display_name: '&bОблик "Страж"'
+    lore:
+      - '&7Награда 78-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 78'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 77'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] ii give %player_name% skin_armor_guard 1'
+      - '[refresh]'
+  'reward_78_block':
+    material: BARRIER
+    slot: 24
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&bОблик "Страж"'
+    lore:
+      - '&7Награда 78-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 78'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+  'reward_79':
+    material: GOLD_NUGGET
+    slot: 25
+    priority: 5
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 79-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_79_open':
+    material: GOLD_NUGGET
+    slot: 25
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    #nbt_int: CustomModelData:36
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 79-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 79'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 78'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] svar add player_money 150 %player_name%'
+      - '[refresh]'
+  'reward_79_block':
+    material: BARRIER
+    slot: 25
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&fМонеты x150'
+    lore:
+      - '&7Награда 79-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 79'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+
+
+  'reward_80':
+    material: EPICFIGHT_IRON_TACHI
+    slot: 33
+    priority: 5
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:1
+    display_name: '&bОблик "Неоновый тати"'
+    hide_attributes: true
+    lore:
+      - '&7Награда 80-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    click_commands:
+      - '[message] &cВы пока не можете получить эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+  'reward_80_open':
+    material: EPICFIGHT_IRON_TACHI
+    slot: 33
+    priority: 2
+    update: true
+    hide_attributes: true
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    nbt_int: CustomModelData:1
+    display_name: '&bОблик "Неоновый тати"'
+    lore:
+      - '&7Награда 80-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+      - '&7'
+      - '&f[ ЛКМ ] &7чтобы получить!'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level% >= 80'
+        anything_here_2:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% == 79'
+    click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP 1 2'
+      - '[console] svar add rewards_battle_pass_level_last 1 %player_name%'
+      - '[console] ii give %player_name% skin_tachi_neon_tachi 1'
+      - '[refresh]'
+  'reward_80_block':
+    material: BARRIER
+    slot: 33
+    priority: 4
+    update: true
+    hide_attributes: true
+    display_name: '&bОблик "Неоновый тати"'
+    lore:
+      - '&7Награда 80-го уровня.'
+      - '&7'
+      - '&fВаш текущий уровень: %servervariables_value_rewards_battle_pass_level%'
+      - '&fВаш текущий опыт: %servervariables_value_rewards_battle_pass_xp% &8/ &7%servervariables_value_rewards_battle_pass_max_xp%'
+    view_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_rewards_battle_pass_level_last% >= 80'
+    click_commands:
+      - '[message] &cВы уже получили эту награду!'
+      - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  'back':
+    material: PAPER
+    slot: 9
+    priority: 4
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:11
+    display_name: '&fНазад'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы посмотреть страницу.'
+    click_commands:
+      - '[openguimenu] battle_pass_3'
+      - '[refresh]'
+
+  'next':
+    material: PAPER
+    slot: 17
+    priority: 4
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:12
+    display_name: '&fВперед'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы посмотреть страницу.'
+    click_commands:
+      - '[openguimenu] battle_pass_5'
+      - '[refresh]'
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35]
+    display_name: ' '
+    nbt_int: CustomModelData:1

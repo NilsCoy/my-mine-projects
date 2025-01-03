@@ -1,0 +1,53 @@
+Events:
+
+  savezone_tp:
+    type: item_consume
+    conditions:
+    - '%item% == POTION and %item_name% == Зелье возврата execute action1'
+    actions:
+      action1:
+      - 'playsound: BLOCK_PORTAL_TRIGGER;1;1'
+      - 'wait: 5'
+      - 'playsound: BLOCK_PORTAL_TRAVEL;1;1.3'
+      - 'console_command: tp %player% %servervariables_value_player_spawn_x% %servervariables_value_player_spawn_y% %servervariables_value_player_spawn_z%'
+
+  savezone_enter:
+    type: wgevents_region_enter
+    conditions:
+    - '%region% == tutorial1 execute action1'
+    - '%region% == village1 execute action1'
+    - '%region% == town1 execute action1'
+    actions:
+      action1:
+      - 'give_potion_effect: DAMAGE_RESISTANCE;999999999;100;false'
+
+  savezone_leave:
+    type: wgevents_region_leave
+    conditions:
+    - '%region% == tutorial1 execute action1'
+    - '%region% == village1 execute action1'
+    - '%region% == town1 execute action1'
+    actions:
+      action1:
+      - 'remove_potion_effect: DAMAGE_RESISTANCE'
+
+  spawnpoints:
+    type: wgevents_region_enter
+    conditions:
+    - '%region% == village1 and %servervariables_value_player_spawn% != 1 execute village1'
+    - '%region% == town1 and %servervariables_value_player_spawn% != 2 execute town1'
+    actions:
+      village1:
+      - 'console_command: spawnpoint %player% 752 74 192 50'
+      - 'console_command: svar set player_spawn 1 %player%'
+      - 'console_command: svar set player_spawn_x 752 %player%'
+      - 'console_command: svar set player_spawn_y 74 %player%'
+      - 'console_command: svar set player_spawn_z 192 %player%'
+      - 'call_event: notify_spawnpoints'
+      town1:
+      - 'console_command: spawnpoint %player% 1664 76 -1314 0'
+      - 'console_command: svar set player_spawn 2 %player%'
+      - 'console_command: svar set player_spawn_x 1664 %player%'
+      - 'console_command: svar set player_spawn_y 76 %player%'
+      - 'console_command: svar set player_spawn_z -1314 %player%'
+      - 'call_event: notify_spawnpoints'

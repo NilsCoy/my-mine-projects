@@ -1,0 +1,493 @@
+menu_title: '&6Покупка'
+open_commands:
+  - '[sound] ENTITY_VILLAGER_TRADE 1 0.8'
+size: 45
+items:
+
+
+
+  'hat1':
+    material: CARVED_PUMPKIN
+    slot: 10
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:1
+    display_name: '&fЗолотой нимб'
+    lore:
+      - '&7By NilsCoy'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat1 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'hat2':
+    material: CARVED_PUMPKIN
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:2
+    display_name: '&fБелый нимб'
+    lore:
+      - '&7By NilsCoy'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat2 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'hat3':
+    material: CARVED_PUMPKIN
+    slot: 12
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:3
+    display_name: '&fЦилиндр'
+    lore:
+      - '&7By NilsCoy'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat3 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'hat4':
+    material: CARVED_PUMPKIN
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:4
+    display_name: '&fРогатый шлем'
+    lore:
+      - '&7By N1XER__'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat4 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'hat5':
+    material: CARVED_PUMPKIN
+    slot: 14
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:5
+    display_name: '&fСоломенная шляпа'
+    lore:
+      - '&7By PepoDisc'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat5 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'hat6':
+    material: CARVED_PUMPKIN
+    slot: 15
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:6
+    display_name: '&fШлем-бочка'
+    lore:
+      - '&7By N1XER__'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat6 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'hat8':
+    material: CARVED_PUMPKIN
+    slot: 19
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:8
+    display_name: '&fРога'
+    lore:
+      - '&7By NilsCoy'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat8 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'hat9':
+    material: CARVED_PUMPKIN
+    slot: 20
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:9
+    display_name: '&fКрылатый шлем'
+    lore:
+      - '&7By N1XER__'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat9 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'hat10':
+    material: CARVED_PUMPKIN
+    slot: 21
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:10
+    display_name: '&fМедвежья шапка'
+    lore:
+      - '&7By N1XER__'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat10 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'hat11':
+    material: CARVED_PUMPKIN
+    slot: 22
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:11
+    display_name: '&fРунический шлем'
+    lore:
+      - '&7By N1XER__'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat11 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  # 'hat12':
+    # material: CARVED_PUMPKIN
+    # slot: 23
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # nbt_int: CustomModelData:12
+    # display_name: '&fШляпа гриб'
+    # lore:
+      # - '&7By N1XER__'
+      # - ''
+      # - '&fЦена покупки: &d1Ⓢ'
+      # - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      # - ''
+      # - '&7[ЛКМ] чтобы купить'
+    # left_click_requirement:
+      # requirements:
+        # anything_here_1:
+          # type: javascript
+          # expression: '%servervariables_value_player_skill_point% >= 1'
+      # deny_commands:
+        # - '[message] &cУ вас недостаточно токенов!'
+        # - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    # left_click_commands:
+      # - '[console] svar add player_skill_point -1 %player_name%'
+      # - '[console] ii give %player_name% hat12 1'
+      # - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      # - '[refresh]'
+  'hat13':
+    material: CARVED_PUMPKIN
+    slot: 23
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:13
+    display_name: '&fКолпак колдуна'
+    lore:
+      - '&7By N1XER__'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat13 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'hat14':
+    material: CARVED_PUMPKIN
+    slot: 24
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:14
+    display_name: '&fКрасный гало'
+    lore:
+      - '&7By NilsCoy'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat14 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'hat15':
+    material: CARVED_PUMPKIN
+    slot: 25
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:15
+    display_name: '&fДвухцветный нимб'
+    lore:
+      - '&7By NilsCoy'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat15 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'hat16':
+    material: CARVED_PUMPKIN
+    slot: 16
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:16
+    display_name: '&fПовязка на глаза'
+    lore:
+      - '&7By NilsCoy'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat16 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  'hat25':
+    material: CARVED_PUMPKIN
+    slot: 28
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:25
+    display_name: '&fПШлем викинга'
+    lore:
+      - '&7By N1XER__'
+      - ''
+      - '&fЦена покупки: &d1Ⓢ'
+      - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      - ''
+      - '&7[ЛКМ] чтобы купить'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_skill_point% >= 1'
+      deny_commands:
+        - '[message] &cУ вас недостаточно токенов!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_skill_point -1 %player_name%'
+      - '[console] ii give %player_name% hat25 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+  # 'hat18':
+    # material: CARVED_PUMPKIN
+    # slot: 29
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # nbt_int: CustomModelData:18
+    # display_name: '&fШляпа синий гриб'
+    # lore:
+      # - '&7By N1XER__'
+      # - ''
+      # - '&fЦена покупки: &d1Ⓢ'
+      # - '&fВаши токены: &d%servervariables_value_player_skill_point%Ⓢ'
+      # - ''
+      # - '&7[ЛКМ] чтобы купить'
+    # left_click_requirement:
+      # requirements:
+        # anything_here_1:
+          # type: javascript
+          # expression: '%servervariables_value_player_skill_point% >= 1'
+      # deny_commands:
+        # - '[message] &cУ вас недостаточно токенов!'
+        # - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    # left_click_commands:
+      # - '[console] svar add player_skill_point -1 %player_name%'
+      # - '[console] ii give %player_name% hat18 1'
+      # - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      # - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,37,38,39,40,41,42,43,44]
+    display_name: ' '
+    nbt_int: CustomModelData:1

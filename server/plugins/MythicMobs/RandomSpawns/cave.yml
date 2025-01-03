@@ -1,0 +1,170 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+tutorial_coal_ore:
+  Action: ADD
+  MobType: coal_ore
+  Chance: 1
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=tutorial_cave} true
+  - onblock{m=STONE,ANDESITE,COBBLESTONE} true
+  - inside true
+  PositionType: LAND
+coal_ore1:
+  Action: ADD
+  MobType: coal_ore
+  Chance: 0.5
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=cave1} true
+  - playernotwithin{d=8} true
+  - onblock{m=STONE,ANDESITE,COBBLESTONE} true
+  - inside true
+  - mobsinchunk{a=<1} true
+  PositionType: LAND
+coal_ore2:
+  Action: ADD
+  MobType: coal_ore
+  Chance: 0.7
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=cave2} true
+  - playernotwithin{d=8} true
+  - onblock{m=STONE,ANDESITE,COBBLESTONE} true
+  - inside true
+  - mobsinchunk{a=<1} true
+  PositionType: LAND
+coal_ore3:
+  Action: ADD
+  MobType: coal_ore
+  Chance: 0.3
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=cave3} true
+  - playernotwithin{d=8} true
+  - onblock{m=STONE,ANDESITE,COBBLESTONE} true
+  - inside true
+  - mobsinchunk{a=<1} true
+  PositionType: LAND
+big_coal_ore1:
+  Action: ADD
+  MobType: big_coal_ore
+  Chance: 0.1
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=cave1} true
+  - playernotwithin{d=8} true
+  - onblock{m=STONE,ANDESITE,COBBLESTONE} true
+  - inside true
+  - mobsinchunk{a=<1} true
+  PositionType: LAND
+big_coal_ore2:
+  Action: ADD
+  MobType: big_coal_ore
+  Chance: 0.3
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=cave2} true
+  - playernotwithin{d=8} true
+  - onblock{m=STONE,ANDESITE,COBBLESTONE} true
+  - inside true
+  - mobsinchunk{a=<1} true
+  PositionType: LAND
+iron_ore1:
+  Action: ADD
+  MobType: iron_ore
+  Chance: 0.2
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=cave1} true
+  - playernotwithin{d=8} true
+  - onblock{m=STONE,ANDESITE,COBBLESTONE} true
+  - inside true
+  - mobsinchunk{a=<1} true
+  PositionType: LAND
+iron_ore2:
+  Action: ADD
+  MobType: iron_ore
+  Chance: 0.5
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=cave3} true
+  - playernotwithin{d=8} true
+  - onblock{m=STONE,ANDESITE,COBBLESTONE} true
+  - inside true
+  - mobsinchunk{a=<1} true
+  PositionType: LAND
+big_iron_ore1:
+  Action: ADD
+  MobType: big_iron_ore
+  Chance: 0.1
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=cave3} true
+  - playernotwithin{d=8} true
+  - onblock{m=STONE,ANDESITE,COBBLESTONE} true
+  - inside true
+  - mobsinchunk{a=<1} true
+  PositionType: LAND
+coal_rat1:
+  Action: ADD
+  MobType: coal_rat
+  Chance: 0.3
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=cave1} true
+  - playernotwithin{d=8} true
+  - onblock{m=STONE,ANDESITE,COBBLESTONE} true
+  - inside true
+  - mobsinchunk{a=<1} true
+  PositionType: LAND
+coal_rat2:
+  Action: ADD
+  MobType: coal_rat
+  Chance: 0.5
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=cave2} true
+  - playernotwithin{d=8} true
+  - onblock{m=STONE,ANDESITE,COBBLESTONE} true
+  - inside true
+  - mobsinchunk{a=<1} true
+  PositionType: LAND
+iron_rat1:
+  Action: ADD
+  MobType: iron_rat
+  Chance: 0.3
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - region{r=cave3} true
+  - playernotwithin{d=8} true
+  - onblock{m=STONE,ANDESITE,COBBLESTONE} true
+  - inside true
+  - mobsinchunk{a=<1} true
+  PositionType: LAND

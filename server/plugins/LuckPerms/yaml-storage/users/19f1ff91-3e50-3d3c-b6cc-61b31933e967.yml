@@ -1,0 +1,16 @@
+uuid: 19f1ff91-3e50-3d3c-b6cc-61b31933e967
+name: W1ldGoR
+primary-group: default
+permissions:
+- promo_horizon
+- skill_guard3
+- skill_strength1
+- skill_strength2
+- titul_11
+- titul_14
+- titul_17
+- titul_2
+parents:
+- sponsor:
+    expiry: 1729629594
+- default

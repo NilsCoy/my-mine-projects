@@ -1,0 +1,588 @@
+# This file is not intended to be manually modified! If you want to manually edit this file anyway, ensure that the server is not running currently and that you have prepared a backup of this file.
+
+data-version: 3|2|3465
+'1':
+  uniqueId: f8de3824-14ea-45cf-8e79-d39a8b70bfee
+  world: world
+  x: 70
+  y: 11
+  z: 86
+  yaw: 163.16643
+  type: admin
+  name: Shop
+  object:
+    type: villager
+    baby: false
+    profession: minecraft:none
+    villagerType: minecraft:plains
+    villagerLevel: 1
+  recipes:
+    '1':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: EPICFIGHT_IRON_DAGGER
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Облик
+            \"Кинжал песков\""}],"text":""}'
+          lore:
+          - '{"extra":[{"text":" "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Невозможно
+            использовать"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Оружие:"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"
+            Кинжал"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Накладывается
+            в инвентаре"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"на
+            оружие."}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"После
+            снятия удаляется."}],"text":""}'
+          custom-model-data: 6
+          ItemFlags:
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          Unbreakable: true
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGGQLM7OzItPSUxPTy2KT0ktTi0qgfKYGdTw6U0pLUpMyszJLKlkYGD4xcggjUcxIwMAjs5dF4wAAAA=
+          forgeCaps: H4sIAAAAAAAA/+NiYGAAAHg/+U4EAAAA
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        amount: 3
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+            странника"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+            для торговли."}],"text":""}'
+          custom-model-data: 92
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+    '2':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: CARVED_PUMPKIN
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Маска
+            Татануа"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"By
+            N1XER__"}],"text":""}'
+          custom-model-data: 22
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGFgzUgsMTJiZlDDpy6ltCgxKTMns6SSAQgYGaTxKGZkAACtqpRKeAAAAA==
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        amount: 5
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+            странника"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+            для торговли."}],"text":""}'
+          custom-model-data: 92
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+    '3':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: EPICFIGHT_IRON_GREATSWORD
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Облик
+            \"Большой меч песков\""}],"text":""}'
+          lore:
+          - '{"extra":[{"text":" "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Невозможно
+            использовать"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Оружие:"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"
+            Большой меч"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Накладывается
+            в инвентаре"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"на
+            оружие."}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"После
+            снятия удаляется."}],"text":""}'
+          custom-model-data: 11
+          ItemFlags:
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          Unbreakable: true
+          internal: H4sIAAAAAAAA/33MsQqAIBRG4V9aolcIgpY2n0ksL3KpNPRq9OpNrU2uh48zAD0mDiFWK1zpOornoLeSJZ4sdGp2mPPOwfhEVvIdkzOOMiX5lQ5L6+FKsisfLA+AV2FsYIUPbhCwvJQAAAA=
+          forgeCaps: H4sIAAAAAAAA/+NiYGAAAHg/+U4EAAAA
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        amount: 5
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+            странника"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+            для торговли."}],"text":""}'
+          custom-model-data: 92
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+    '4':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        amount: 12
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Мешок
+            с едой"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"[
+            ПКМ ] "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"чтобы
+            использовать!"}],"text":""}'
+          custom-model-data: 91
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGFgT0pMj09NLGFmUMOnMqW0KDEpMyezpJIBCBgZpPEoZmQAAFXs7+h6AAAA
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+            странника"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+            для торговли."}],"text":""}'
+          custom-model-data: 92
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+  snapshots: []
+'2':
+  uniqueId: 3d33913a-afe1-4b8a-8528-6948d22a7900
+  world: world
+  x: 70
+  y: 11
+  z: 88
+  yaw: 155.67206
+  type: admin
+  name: Shop
+  object:
+    type: villager
+    baby: false
+    profession: minecraft:none
+    villagerType: minecraft:plains
+    villagerLevel: 1
+  recipes:
+    '1':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: EPICFIGHT_IRON_LONGSWORD
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Облик
+            \"Длинный меч песков\""}],"text":""}'
+          lore:
+          - '{"extra":[{"text":" "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Невозможно
+            использовать"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Оружие:"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"
+            Длинный меч"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Накладывается
+            в инвентаре"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"на
+            оружие."}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"После
+            снятия удаляется."}],"text":""}'
+          custom-model-data: 11
+          ItemFlags:
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          Unbreakable: true
+          internal: H4sIAAAAAAAA/33MMQqAMBAF0S824hUE7exyJolukMVkI8km4tWtLO1sh8f0QIeRRWK1ytWdvuwsZitZY2B1wTBhygfL4qPs+YqJFnLZJf1Ci/nvQCXZlT3rDeBpMPzgBi8NpZmakgAAAA==
+          forgeCaps: H4sIAAAAAAAA/+NiYGAAAHg/+U4EAAAA
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        amount: 5
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+            странника"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+            для торговли."}],"text":""}'
+          custom-model-data: 92
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+    '2':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: CARVED_PUMPKIN
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Маска
+            Татануа"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"By
+            N1XER__"}],"text":""}'
+          custom-model-data: 21
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGFgzUgsMTJkZlDDpy6ltCgxKTMns6SSAQgYGaTxKGZkAACDlgCXeAAAAA==
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        amount: 5
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+            странника"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+            для торговли."}],"text":""}'
+          custom-model-data: 92
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+    '3':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: IRON_AXE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Облик
+            \"Топор песков\""}],"text":""}'
+          lore:
+          - '{"extra":[{"text":" "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Невозможно
+            использовать"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Оружие:"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"
+            Топор"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Накладывается
+            в инвентаре"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"на
+            оружие."}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"После
+            снятия удаляется."}],"text":""}'
+          custom-model-data: 6
+          ItemFlags:
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          Unbreakable: true
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGEQLs7OzItPrEiNT0ktTi0qATGZGdTw6UopLUpMyszJLKlkYGD4xcggjUcxIwMAMKUdtoYAAAA=
+          forgeCaps: H4sIAAAAAAAA/+NiYGAAAHg/+U4EAAAA
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        amount: 5
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+            странника"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+            для торговли."}],"text":""}'
+          custom-model-data: 92
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+  snapshots: []
+'3':
+  uniqueId: f6923f4a-a43f-457f-9423-71c175153766
+  world: world
+  x: 70
+  y: 11
+  z: 90
+  yaw: 68.79984
+  type: admin
+  name: Shop
+  object:
+    type: villager
+    baby: false
+    profession: minecraft:none
+    villagerType: minecraft:plains
+    villagerLevel: 1
+  recipes:
+    '1':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: IRON_SWORD
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Облик
+            \"Меч песков\""}],"text":""}'
+          lore:
+          - '{"extra":[{"text":" "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Невозможно
+            использовать"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Оружие:"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"
+            Меч"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Накладывается
+            в инвентаре"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"на
+            оружие."}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"После
+            снятия удаляется."}],"text":""}'
+          custom-model-data: 7
+          ItemFlags:
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          Unbreakable: true
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGEQL87OzIsvLs8vSolPSS1OLSqBcJgZ1PDpTCktSkzKzMksqWRgYPjFyCCNRzEjAwDHzIiBigAAAA==
+          forgeCaps: H4sIAAAAAAAA/+NiYGAAAHg/+U4EAAAA
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        amount: 3
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+            странника"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+            для торговли."}],"text":""}'
+          custom-model-data: 92
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+    '2':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: CARVED_PUMPKIN
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Маска
+            Татануа"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"By
+            N1XER__"}],"text":""}'
+          custom-model-data: 20
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGFgzUgsMTJgZlDDpy6ltCgxKTMns6SSAQgYGaTxKGZkAACmgKNqeAAAAA==
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        amount: 5
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+            странника"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+            для торговли."}],"text":""}'
+          custom-model-data: 92
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+    '3':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: EPICFIGHT_IRON_TACHI
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Облик
+            \"Тати песков\""}],"text":""}'
+          lore:
+          - '{"extra":[{"text":" "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Невозможно
+            использовать"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Оружие:"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"
+            Тати"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Накладывается
+            в инвентаре"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"на
+            оружие."}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"После
+            снятия удаляется."}],"text":""}'
+          custom-model-data: 5
+          ItemFlags:
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          Unbreakable: true
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGEQL87OzIsvSUzOyIxPSS1OLSqBcJgZ1PDpTCktSkzKzMksqWRgYPjFyCCNRzEjAwBQxVZ6igAAAA==
+          forgeCaps: H4sIAAAAAAAA/+NiYGAAAHg/+U4EAAAA
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        amount: 5
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+            странника"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+            для торговли."}],"text":""}'
+          custom-model-data: 92
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+    '4':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        amount: 8
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Мешок
+            с ресурсами"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"[
+            ПКМ ] "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"чтобы
+            использовать!"}],"text":""}'
+          custom-model-data: 89
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTUpMj89NLEktykzMKWZmUMOnPqW0KDEpMyezpJIBCBgZpPEoZmQAAB8TqvyAAAAA
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+            странника"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+            для торговли."}],"text":""}'
+          custom-model-data: 92
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+  snapshots: []
+'4':
+  uniqueId: 9ba81707-7c34-4856-9395-9598d42c3f1c
+  world: world
+  x: 70
+  y: 11
+  z: 92
+  yaw: 32.688896
+  type: admin
+  name: Shop
+  object:
+    type: villager
+    baby: false
+    profession: minecraft:none
+    villagerType: minecraft:plains
+    villagerLevel: 1
+  recipes:
+    '1':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: EPICFIGHT_IRON_SPEAR
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Облик
+            \"Копье песков\""}],"text":""}'
+          lore:
+          - '{"extra":[{"text":" "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Невозможно
+            использовать"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Оружие:"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"
+            Копье"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Накладывается
+            в инвентаре"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"на
+            оружие."}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"После
+            снятия удаляется."}],"text":""}'
+          custom-model-data: 7
+          ItemFlags:
+          - HIDE_ATTRIBUTES
+          - HIDE_UNBREAKABLE
+          Unbreakable: true
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGEQL87OzIsvLkhNLIpPSS1OLSqBcJgZ1PDpTCktSkzKzMksqWRgYPjFyCCNRzEjAwC02XmSigAAAA==
+          forgeCaps: H4sIAAAAAAAA/+NiYGAAAHg/+U4EAAAA
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        amount: 5
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+            странника"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+            для торговли."}],"text":""}'
+          custom-model-data: 92
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+    '2':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: CAMEL_SPAWN_EGG
+        meta:
+          ==: ItemMeta
+          meta-type: SPAWN_EGG
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Призыв
+            верблюда"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Открываем
+            вам питомца: Верблюд"}],"text":""}'
+          - '{"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"[
+            ПКМ ] "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"чтобы
+            использовать!"}],"text":""}'
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGFgKUgtMWRmUMOnLKW0KDEpMyezpJIBCBgZpPEoZmQAAHEpiRB3AAAA
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        amount: 10
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+            странника"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+            для торговли."}],"text":""}'
+          custom-model-data: 92
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+    '3':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        amount: 8
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Мешок
+            с травами"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"[
+            ПКМ ] "},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"чтобы
+            использовать!"}],"text":""}'
+          custom-model-data: 90
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgT0pMj8/MSy9KTclMzSspZmZQw6cjpbQoMSkzJ7OkkgEIGBmk8ShmZAAAf0PEcYIAAAA=
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BRICK
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Монета
+            странника"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Используется
+            для торговли."}],"text":""}'
+          custom-model-data: 92
+          internal: H4sIAAAAAAAA/+NiYOBgkMvMy8svSyzJLEstyClNz8zTTS4tLsnPzSxJzdXNTGHgTM7PzItPyi8uZmZQw6c2pbQoMSkzJ7OkkgEIGBmk8ShmZAAAggurT3wAAAA=
+  snapshots: []

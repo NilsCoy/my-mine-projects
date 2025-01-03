@@ -1,0 +1,105 @@
+conversations:
+  horse:
+    quester: '&aКонюх'
+    first: 'npc_node_1'
+    stop: 'false'
+    NPC_options:
+      npc_node_1:
+        text: '&7Зайдя в конюшню вы встречаете коневода.&f\n\nЗдравствуйте, чего желаете?'
+        condition: ''
+        event: ''
+        pointers: player_node_1, player_node_2, player_node_3
+
+      npc_node_2:
+        text: 'Тебе интересны мои лошади?'
+        condition: ''
+        event: ''
+        pointers: player_node_4, player_node_5, player_node_6
+
+      npc_node_3:
+        text: 'Я держу у себя разную живность, например ослов, лошадей из породы резвоногих, и мулов.'
+        condition: ''
+        event: ''
+        pointers: player_node_7
+
+      npc_node_4:
+        text: 'Таких не продаем. По приказу, коневоды должны продавать их бойцам ярла.'
+        condition: ''
+        event: ''
+
+      npc_node_5:
+        text: 'Ты выглядишь довольно крепким, думаю ты можешь стать авантюристом. Молодежь туда все время рвутся, однако не каждый может осилить их проверку.'
+        condition: ''
+        event: ''
+        pointers: player_node_8
+
+      npc_node_6:
+        text: 'Да, авантюристы занимаются разной работой, помогают людям или сражаются с монстрами, так что для во избежание лишних смертей они проводят небольшое испытание.'
+        condition: ''
+        event: ''
+        pointers: player_node_9
+
+      npc_node_7:
+        text: 'Это простое сражение с бывшим наемником проверяет, справится ли испытуемый с трудностями, которые ждут его впереди.'
+        condition: ''
+        event: ''
+
+      npc_node_8:
+        text: '&7Коневод призадумался.&f\n\nХм, слышал, что на кладбище недавно было восстание мертвецов, но благодаря бравым воинам их смогли усмирить, слыхал что такое происходит повсеместно, но причин никто не знает.'
+        condition: ''
+        event: ''
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Вы держите лошадей? Хочу приобрести себе жеребца. [ Торговля ]'
+        condition: ''
+        event: 'horse'
+
+      player_node_2:
+        text: 'Хочу задать пару вопросов. '
+        condition: ''
+        event: ''
+        pointers: npc_node_2
+
+      player_node_3:
+        text: 'Ничего, я просто осматриваюсь. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_4:
+        text: 'Да, у вас есть породистые?'
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_5:
+        text: 'Мне больше интересно, где найти себе работу, может вы чего посоветуете?'
+        condition: ''
+        event: ''
+        pointers: npc_node_5
+
+      player_node_6:
+        text: 'Хочу узнать не происходит ли чего странного в городе?'
+        condition: ''
+        event: ''
+        pointers: npc_node_8
+
+      player_node_7:
+        text: 'А боевые лошади?'
+        condition: ''
+        event: ''
+        pointers: npc_node_4
+
+      player_node_8:
+        text: 'Проверку?'
+        condition: ''
+        event: ''
+        pointers: npc_node_6
+
+      player_node_9:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_7

@@ -1,0 +1,84 @@
+conversations:
+  trader1:
+    quester: '&aТорговец'
+    first: 'npc_node_1'
+    stop: 'false'
+    NPC_options:
+      npc_node_1:
+        text: 'Приветствую тебя, покупатель! Чего желаешь?\n\n&7Странствующий торговец радостно зазывает вас.'
+        condition: ''
+        event: ''
+        pointers: player_node_1, player_node_7, player_node_5, player_node_6, player_node_8, player_node_4
+
+      npc_node_2:
+        text: '&7Торговец указывает на повозку.&f\n\nВсякой всячиной, у меня есть снаряжение для охоты, инструменты, еда и даже зелья! '
+        condition: ''
+        event: 'trader1_start'
+        pointers: player_node_2
+
+      npc_node_3:
+        text: 'Если у тебя есть что-то ценное, то я готов это у тебя купить за разумные цены. Как ни как это не единственное место, где я продаю свои товары. '
+        condition: ''
+        event: ''
+        pointers: player_node_3, player_node_4
+
+      npc_node_4:
+        text: 'Смотря что тебя интересует.'
+        condition: ''
+        event: ''
+        pointers: player_node_7, player_node_5, player_node_6
+
+      npc_node_5:
+        text: 'Хорошо! Давай посмотрим...'
+        condition: ''
+        event: ''
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Чем торгуешь?'
+        condition: '!trader1_start'
+        event: ''
+        pointers: npc_node_2
+
+      player_node_2:
+        text: 'А ты случаем не покупаешь ресурсы?'
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_3:
+        text: 'Тогда покажи ассортимент.'
+        condition: ''
+        event: ''
+        pointers: npc_node_4
+
+      player_node_4:
+        text: 'Прости, но мне пора идти. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_5:
+        text: 'Покажи мне снаряжение. [ Торговля ]'
+        condition: 'trader1_start'
+        event: 'equip'
+        pointers: npc_node_5
+
+      player_node_6:
+        text: 'Хочу прикупить еды. [ Торговля ]'
+        condition: 'trader1_start'
+        event: 'eat'
+        pointers: npc_node_5
+
+      player_node_7:
+        text: 'У меня есть то, что тебя заинтересует. [ Торговля ]'
+        condition: 'trader1_start'
+        event: 'sell'
+        pointers: npc_node_5
+
+      player_node_8:
+        text: 'Я хочу продать рыбу. [ Торговля ]'
+        condition: 'trader1_start'
+        event: 'fisher'
+        pointers: npc_node_5

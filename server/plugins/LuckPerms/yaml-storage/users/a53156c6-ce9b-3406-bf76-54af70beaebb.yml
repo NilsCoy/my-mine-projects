@@ -1,0 +1,14 @@
+uuid: a53156c6-ce9b-3406-bf76-54af70beaebb
+name: MemnyiKiller
+primary-group: default
+permissions:
+- promo_horizon
+- skill_dodge2
+- titul_1
+- titul_11
+- titul_17
+- titul_2
+parents:
+- sponsor:
+    expiry: 1729629951
+- default

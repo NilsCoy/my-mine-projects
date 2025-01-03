@@ -1,0 +1,13 @@
+variables:
+  cooking_point_direction:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  cooking_point:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  cooking_active:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0

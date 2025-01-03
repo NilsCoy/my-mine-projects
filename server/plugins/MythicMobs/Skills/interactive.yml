@@ -1,0 +1,173 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+      # entitySkill=[
+        # - actionmessage{m="&6<trigger.name>"} @self
+      # ];
+
+eye_raycast:
+  Skills:
+  - raytrace{
+      entitySkill=[
+        - skill{s=raycast_target} @EIR{r=1}
+      ];
+      ip=false;
+      distance=5
+      } @SelfEyeLocation
+raycast_target:
+  Skills:
+  - actionmessage{m="&6<target.type.name>"} @self
+
+
+tutorial_sword_equip_effect:
+  Skills:
+  - effect:particles{particle=block;m=rooted_dirt;amount=10;hS=0.1;vS=0.1;speed=0} @SelfLocation
+tutorial_home_chest:
+  Skills:
+  - summon{type=chest_tutorial;amount=1;radius=0} @Location{location=39,78,34,0,0}
+fishing1:
+  Skills:
+  - giveitem{i=fish1 1} @self
+fishing_tutorial:
+  Skills:
+  - giveitem{i=fish_tutorial 1} @self
+farming1:
+  Skills:
+  - giveitem{i=farming1 1} @self
+farming2:
+  Skills:
+  - giveitem{i=farming2 1} @self
+farming3:
+  Skills:
+  - giveitem{i=farming3 1} @self
+
+small_eat_case:
+  Skills:
+  - giveitem{i=small_eat_case 1} @self
+small_materials_case:
+  Skills:
+  - giveitem{i=small_materials_case 1} @self
+small_potion_case:
+  Skills:
+  - giveitem{i=small_potion_case 1} @self
+eat_case:
+  Skills:
+  - giveitem{i=eat_case 1} @self
+materials_case:
+  Skills:
+  - giveitem{i=materials_case 1} @self
+potion_case:
+  Skills:
+  - giveitem{i=potion_case 1} @self
+color_case:
+  Skills:
+  - giveitem{i=color_case 1} @self
+treasure_case:
+  Skills:
+  - giveitem{i=treasure_case 1} @self
+skin_case:
+  Skills:
+  - giveitem{i=skin_case 1} @self
+bag_materials:
+  Skills:
+  - giveitem{i=bag_materials_drop 1} @self
+bag_ingredients:
+  Skills:
+  - giveitem{i=bag_ingredients_drop 1} @self
+bag_eat:
+  Skills:
+  - giveitem{i=bag_eat_drop 1} @self
+donate_pack1:
+  Skills:
+  - giveitem{i=donate_pack1 1} @self
+  - delay 1
+  - giveitem{i=golden1 1} @self
+  - delay 1
+  - giveitem{i=golden2 1} @self
+  - delay 1
+  - giveitem{i=golden3 1} @self
+  - delay 1
+  - giveitem{i=donate_pack8 1} @self
+donate_pack2:
+  Skills:
+  - giveitem{i=donate_pack2 1} @self
+  - delay 1
+  - giveitem{i=golden1 1} @self
+  - delay 1
+  - giveitem{i=golden2 1} @self
+  - delay 1
+  - giveitem{i=golden3 1} @self
+  - delay 1
+  - giveitem{i=donate_pack8 1} @self
+donate_pack3:
+  Skills:
+  - giveitem{i=donate_pack3 1} @self
+  - delay 1
+  - giveitem{i=golden1 1} @self
+  - delay 1
+  - giveitem{i=golden2 1} @self
+  - delay 1
+  - giveitem{i=golden3 1} @self
+  - delay 1
+  - giveitem{i=donate_pack8 1} @self
+donate_pack4:
+  Skills:
+  - giveitem{i=donate_pack4 1} @self
+  - delay 1
+  - giveitem{i=golden1 1} @self
+  - delay 1
+  - giveitem{i=golden2 1} @self
+  - delay 1
+  - giveitem{i=golden3 1} @self
+  - delay 1
+  - giveitem{i=donate_pack8 1} @self
+donate_pack5:
+  Skills:
+  - giveitem{i=donate_pack5 1} @self
+  - delay 1
+  - giveitem{i=golden1 1} @self
+  - delay 1
+  - giveitem{i=golden2 1} @self
+  - delay 1
+  - giveitem{i=golden3 1} @self
+  - delay 1
+  - giveitem{i=donate_pack8 1} @self
+donate_pack6:
+  Skills:
+  - giveitem{i=donate_pack6 1} @self
+  - delay 1
+  - giveitem{i=golden1 1} @self
+  - delay 1
+  - giveitem{i=golden2 1} @self
+  - delay 1
+  - giveitem{i=golden3 1} @self
+  - delay 1
+  - giveitem{i=donate_pack8 1} @self
+donate_pack7:
+  Skills:
+  - giveitem{i=donate_pack7 1} @self
+  - delay 1
+  - giveitem{i=donate_pack7 1} @self
+  - delay 1
+  - giveitem{i=golden1 1} @self
+  - delay 1
+  - giveitem{i=golden2 1} @self
+  - delay 1
+  - giveitem{i=golden3 1} @self
+  - delay 1
+  - giveitem{i=donate_pack8 1} @self
+
+
+
+gift_box_spawner:
+  Skills:
+  - randomskill{skills=gift_box_spawner1,gift_box_spawner2,gift_box_spawner3} @self
+gift_box_spawner1:
+  Skills:
+  - summon{type=gift_box1;amount=1;radius=0} @self
+gift_box_spawner2:
+  Skills:
+  - summon{type=gift_box2;amount=1;radius=0} @self
+gift_box_spawner3:
+  Skills:
+  - summon{type=gift_box3;amount=1;radius=0} @self

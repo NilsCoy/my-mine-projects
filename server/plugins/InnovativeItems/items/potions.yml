@@ -1,0 +1,60 @@
+
+heal1:
+  material: 'POTION'
+  potion:
+    rgb: '245,66,158'
+    color: 'RED'
+    effects:
+      - 'REGENERATION 200 2'
+  display-name: '&aРазбавленное зелье здоровья'
+  lore:
+    - ''
+    - '&7Восстанавлиает 16 здоровья за 10 сек.'
+  flags:
+    - 'hide_effects'
+heal2:
+  material: 'POTION'
+  potion:
+    rgb: '245,66,158'
+    color: 'RED'
+    effects:
+      - 'REGENERATION 100 3'
+  display-name: '&aСлабое зелье здоровья'
+  lore:
+    - ''
+    - '&7Восстанавлиает 16 здоровья за 5 сек.'
+heal3:
+  material: 'POTION'
+  potion:
+    rgb: '245,66,158'
+    color: 'RED'
+    effects:
+      - 'REGENERATION 200 3'
+  display-name: '&aЗелье здоровья'
+  lore:
+    - ''
+    - '&7Восстанавлиает 30 здоровья за 10 сек.'
+heal4:
+  material: 'POTION'
+  potion:
+    rgb: '245,66,158'
+    color: 'RED'
+    effects:
+      - 'REGENERATION 100 4'
+  display-name: '&aХорошее зелье здоровья'
+  lore:
+    - ''
+    - '&7Восстанавлиает MAX здоровья за 5 сек.'
+
+recall:
+  material: 'POTION'
+  potion:
+    rgb: '45,192,206'
+    effects:
+      - 'DARKNESS 200 0'
+      - 'CONFUSION 400 0'
+  display-name: '&aЗелье возврата'
+  lore:
+    - ''
+    - '&7Телепортирует вас на точку сохранения.'
+

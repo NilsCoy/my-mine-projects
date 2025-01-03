@@ -1,0 +1,1058 @@
+color_bronze:
+  material: 'COPPER_INGOT'
+  display-name: '&bКраска "Бронзовый"'
+  #custom-model-data: 13
+  update-item: false
+  lore:
+    - '&7Накладывается на столе кузнеца'
+    - '&7на броню с использованием шаблона.'
+    - '&cПосле замены на броне удаляется.'
+color_iron:
+  material: 'IRON_INGOT'
+  display-name: '&bКраска "Железный"'
+  #custom-model-data: 13
+  update-item: false
+  lore:
+    - '&7Накладывается на столе кузнеца'
+    - '&7на броню с использованием шаблона.'
+    - '&cПосле замены на броне удаляется.'
+color_gold:
+  material: 'GOLD_INGOT'
+  display-name: '&bКраска "Золотой"'
+  #custom-model-data: 13
+  update-item: false
+  lore:
+    - '&7Накладывается на столе кузнеца'
+    - '&7на броню с использованием шаблона.'
+    - '&cПосле замены на броне удаляется.'
+color_netherite:
+  material: 'NETHERITE_INGOT'
+  display-name: '&bКраска "Древний"'
+  #custom-model-data: 13
+  update-item: false
+  lore:
+    - '&7Накладывается на столе кузнеца'
+    - '&7на броню с использованием шаблона.'
+    - '&cПосле замены на броне удаляется.'
+color_quartz:
+  material: 'QUARTZ'
+  display-name: '&bКраска "Кварцевый"'
+  #custom-model-data: 13
+  update-item: false
+  lore:
+    - '&7Накладывается на столе кузнеца'
+    - '&7на броню с использованием шаблона.'
+    - '&cПосле замены на броне удаляется.'
+color_lapis:
+  material: 'LAPIS_LAZULI'
+  display-name: '&bКраска "Лазуритовый"'
+  #custom-model-data: 13
+  update-item: false
+  lore:
+    - '&7Накладывается на столе кузнеца'
+    - '&7на броню с использованием шаблона.'
+    - '&cПосле замены на броне удаляется.'
+color_redstone:
+  material: 'REDSTONE'
+  display-name: '&bКраска "Редстоуновый"'
+  #custom-model-data: 13
+  update-item: false
+  lore:
+    - '&7Накладывается на столе кузнеца'
+    - '&7на броню с использованием шаблона.'
+    - '&cПосле замены на броне удаляется.'
+color_amethyst:
+  material: 'AMETHYST_SHARD'
+  display-name: '&bКраска "Аметистовый"'
+  #custom-model-data: 13
+  update-item: false
+  lore:
+    - '&7Накладывается на столе кузнеца'
+    - '&7на броню с использованием шаблона.'
+    - '&cПосле замены на броне удаляется.'
+color_emerald:
+  material: 'EMERALD'
+  display-name: '&bКраска "Изумрудный"'
+  #custom-model-data: 13
+  update-item: false
+  lore:
+    - '&7Накладывается на столе кузнеца'
+    - '&7на броню с использованием шаблона.'
+    - '&cПосле замены на броне удаляется.'
+color_diamond:
+  material: 'DIAMOND'
+  display-name: '&bКраска "Алмазный"'
+  #custom-model-data: 13
+  update-item: false
+  lore:
+    - '&7Накладывается на столе кузнеца'
+    - '&7на броню с использованием шаблона.'
+    - '&cПосле замены на броне удаляется.'
+
+
+
+
+
+
+skin_armor_guard:
+  material: 'SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE'
+  display-name: '&bОблик "Страж"'
+  update-item: false
+  lore:
+    - '&7Накладывается на столе кузнеца'
+    - '&7на броню с использованием краски.'
+    - '&cПосле замены на броне удаляется.'
+
+
+
+
+
+
+
+
+skin_tachi_neon_tachi:
+  material: 'EPICFIGHT_IRON_TACHI'
+  display-name: '&bОблик "Неоновый тати"'
+  custom-model-data: 1
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Тати'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_tachi_crimson_tachi:
+  material: 'EPICFIGHT_IRON_TACHI'
+  display-name: '&bОблик "Багровый тати"'
+  custom-model-data: 2
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Тати'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_tachi_amethist_tachi:
+  material: 'EPICFIGHT_IRON_TACHI'
+  display-name: '&bОблик "Аметистовый тати"'
+  custom-model-data: 3
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Тати'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_tachi_gardeness_tachi:
+  material: 'EPICFIGHT_IRON_TACHI'
+  display-name: '&bОблик "Лотос"'
+  custom-model-data: 4
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Тати'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_tachi_desert_tachi:
+  material: 'EPICFIGHT_IRON_TACHI'
+  display-name: '&bОблик "Тати песков"'
+  custom-model-data: 5
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Тати'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_tachi_prismarine_tachi:
+  material: 'EPICFIGHT_IRON_TACHI'
+  display-name: '&bОблик "Затонувшее призмариновое тати"'
+  custom-model-data: 6
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Тати'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_tachi_ice_tachi:
+  material: 'EPICFIGHT_IRON_TACHI'
+  display-name: '&bОблик "Ледяное тати"'
+  custom-model-data: 7
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Тати'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+
+
+
+skin_dagger_riddik:
+  material: 'EPICFIGHT_IRON_DAGGER'
+  display-name: '&bОблик "Фурьянский кинжал"'
+  custom-model-data: 1
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Кинжал'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_dagger_bronze_dagger:
+  material: 'EPICFIGHT_IRON_DAGGER'
+  display-name: '&bОблик "Бронзовый кинжал"'
+  custom-model-data: 2
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Кинжал'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_dagger_overgrown_dagger:
+  material: 'EPICFIGHT_IRON_DAGGER'
+  display-name: '&bОблик "Заросший кинжал"'
+  custom-model-data: 3
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Кинжал'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_dagger_amethist_dagger:
+  material: 'EPICFIGHT_IRON_DAGGER'
+  display-name: '&bОблик "Аметистовый кинжал"'
+  custom-model-data: 4
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Кинжал'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_dagger_lotos_dagger:
+  material: 'EPICFIGHT_IRON_DAGGER'
+  display-name: '&bОблик "Лотос"'
+  custom-model-data: 5
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Кинжал'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_dagger_desert_dagger:
+  material: 'EPICFIGHT_IRON_DAGGER'
+  display-name: '&bОблик "Кинжал песков"'
+  custom-model-data: 6
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Кинжал'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_dagger_copper_dagger:
+  material: 'EPICFIGHT_IRON_DAGGER'
+  display-name: '&bОблик "Затонувший медный кинжал"'
+  custom-model-data: 7
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Кинжал'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_dagger_ice_dagger:
+  material: 'EPICFIGHT_IRON_DAGGER'
+  display-name: '&bОблик "Ледяной кинжал"'
+  custom-model-data: 8
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Кинжал'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+
+
+
+skin_spear_dyo_naginata:
+  material: 'EPICFIGHT_IRON_SPEAR'
+  display-name: '&bОблик "Двухсторонняя нагината"'
+  custom-model-data: 1
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Копье'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_spear_icicle:
+  material: 'EPICFIGHT_IRON_SPEAR'
+  display-name: '&bОблик "Сосульчатый"'
+  custom-model-data: 2
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Копье'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_spear_copper_spear:
+  material: 'EPICFIGHT_IRON_SPEAR'
+  display-name: '&bОблик "Затонувшее медное копье"'
+  custom-model-data: 3
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Копье'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_spear_crimson_spear:
+  material: 'EPICFIGHT_IRON_SPEAR'
+  display-name: '&bОблик "Багровое копье"'
+  custom-model-data: 5
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Копье'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_spear_amethist_spear:
+  material: 'EPICFIGHT_IRON_SPEAR'
+  display-name: '&bОблик "Аметистовое копье"'
+  custom-model-data: 4
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Копье'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_spear_black_dildo:
+  material: 'EPICFIGHT_IRON_SPEAR'
+  display-name: '&bОблик "Черное копье"'
+  custom-model-data: 6
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Копье'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_spear_desert_spear:
+  material: 'EPICFIGHT_IRON_SPEAR'
+  display-name: '&bОблик "Копье песков"'
+  custom-model-data: 7
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Копье'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+
+
+
+skin_longsword_zweichander:
+  material: 'EPICFIGHT_IRON_LONGSWORD'
+  display-name: '&bОблик "Цвайхендер"'
+  custom-model-data: 1
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Длинный меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_longsword_flame_sword:
+  material: 'EPICFIGHT_IRON_LONGSWORD'
+  display-name: '&bОблик "Пламенный меч"'
+  custom-model-data: 2
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Длинный меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_longsword_raider_longsword:
+  material: 'EPICFIGHT_IRON_LONGSWORD'
+  display-name: '&bОблик "Авторитет"'
+  custom-model-data: 3
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Длинный меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_longsword_sea_claw:
+  material: 'EPICFIGHT_IRON_LONGSWORD'
+  display-name: '&bОблик "Морской клык"'
+  custom-model-data: 4
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Длинный меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_longsword_guard_longsword:
+  material: 'EPICFIGHT_IRON_LONGSWORD'
+  display-name: '&bОблик "Страж"'
+  custom-model-data: 5
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Длинный меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_longsword_crimson_longsword:
+  material: 'EPICFIGHT_IRON_LONGSWORD'
+  display-name: '&bОблик "Багровый длинный меч"'
+  custom-model-data: 7
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Длинный меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_longsword_amethist_longsword:
+  material: 'EPICFIGHT_IRON_LONGSWORD'
+  display-name: '&bОблик "Аметистовый длинный меч"'
+  custom-model-data: 6
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Длинный меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_longsword_prism_longsword:
+  material: 'EPICFIGHT_IRON_LONGSWORD'
+  display-name: '&bОблик "Призма"'
+  custom-model-data: 8
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Длинный меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_longsword_void_longsword:
+  material: 'EPICFIGHT_IRON_LONGSWORD'
+  display-name: '&bОблик "Пустотный длинный меч"'
+  custom-model-data: 9
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Длинный меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_longsword_desert_longsword:
+  material: 'EPICFIGHT_IRON_LONGSWORD'
+  display-name: '&bОблик "Длинный меч песков"'
+  custom-model-data: 11
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Длинный меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+
+
+
+skin_greatsword_guts:
+  material: 'EPICFIGHT_IRON_GREATSWORD'
+  display-name: '&bОблик "Убийца драконов"'
+  custom-model-data: 1
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Большой меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_greatsword_great_axe:
+  material: 'EPICFIGHT_IRON_GREATSWORD'
+  display-name: '&bОблик "Секира"'
+  custom-model-data: 2
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Большой меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_greatsword_holy_sword:
+  material: 'EPICFIGHT_IRON_GREATSWORD'
+  display-name: '&bОблик "Святой меч"'
+  custom-model-data: 3
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Большой меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_greatsword_ice_scythe:
+  material: 'EPICFIGHT_IRON_GREATSWORD'
+  display-name: '&bОблик "Ледяная коса"'
+  custom-model-data: 4
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Большой меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_greatsword_copper_greatsword:
+  material: 'EPICFIGHT_IRON_GREATSWORD'
+  display-name: '&bОблик "Затонувшый медный большой меч"'
+  custom-model-data: 5
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Большой меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_greatsword_amethist_greatsword:
+  material: 'EPICFIGHT_IRON_GREATSWORD'
+  display-name: '&bОблик "Аметистовый большой меч"'
+  custom-model-data: 6
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Большой меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_greatsword_divine_reaper:
+  material: 'EPICFIGHT_IRON_GREATSWORD'
+  display-name: '&bОблик "Божественный жнец"'
+  custom-model-data: 7
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Большой меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_greatsword_bone_scythe:
+  material: 'EPICFIGHT_IRON_GREATSWORD'
+  display-name: '&bОблик "Апокалипсис"'
+  custom-model-data: 8
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Большой меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_greatsword_ruby_scythe:
+  material: 'EPICFIGHT_IRON_GREATSWORD'
+  display-name: '&bОблик "Рубиновая коса"'
+  custom-model-data: 9
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Большой меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_greatsword_key_sword:
+  material: 'EPICFIGHT_IRON_GREATSWORD'
+  display-name: '&bОблик "Ключ-меч"'
+  custom-model-data: 10
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Большой меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_greatsword_desert_greatsword:
+  material: 'EPICFIGHT_IRON_GREATSWORD'
+  display-name: '&bОблик "Большой меч песков"'
+  custom-model-data: 11
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Большой меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+
+
+
+skin_sword_amethist_sword:
+  material: 'IRON_SWORD'
+  display-name: '&bОблик "Аметистовый меч"'
+  custom-model-data: 1
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_sword_ruby_sword:
+  material: 'IRON_SWORD'
+  display-name: '&bОблик "Рубиновый меч"'
+  custom-model-data: 2
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_sword_sakura_sword:
+  material: 'IRON_SWORD'
+  display-name: '&bОблик "Сакура"'
+  custom-model-data: 3
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_sword_void_sword:
+  material: 'IRON_SWORD'
+  display-name: '&bОблик "Пустотный меч"'
+  custom-model-data: 4
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_sword_murderous_cleaver:
+  material: 'IRON_SWORD'
+  display-name: '&bОблик "Убийственный тесак"'
+  custom-model-data: 5
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_sword_glass_sword:
+  material: 'IRON_SWORD'
+  display-name: '&bОблик "Стеклянный меч"'
+  custom-model-data: 6
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_sword_desert_sword:
+  material: 'IRON_SWORD'
+  display-name: '&bОблик "Меч песков"'
+  custom-model-data: 7
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_sword_prismarine_sword:
+  material: 'IRON_SWORD'
+  display-name: '&bОблик "Затонувшый призмариновый меч"'
+  custom-model-data: 8
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Меч'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+
+
+
+skin_axe_amethist_axe:
+  material: 'IRON_AXE'
+  display-name: '&bОблик "Аметистовый топор"'
+  custom-model-data: 1
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Топор'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_axe_golden_axe:
+  material: 'IRON_AXE'
+  display-name: '&bОблик "Позолоченный топор"'
+  custom-model-data: 2
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Топор'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_axe_topaz_axe:
+  material: 'IRON_AXE'
+  display-name: '&bОблик "Топазовый топор"'
+  custom-model-data: 3
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Топор'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_axe_in_axe:
+  material: 'IRON_AXE'
+  display-name: '&bОблик "Топор инь"'
+  custom-model-data: 4
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Топор'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_axe_yan_axe:
+  material: 'IRON_AXE'
+  display-name: '&bОблик "Топор янь"'
+  custom-model-data: 5
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Топор'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_axe_desert_axe:
+  material: 'IRON_AXE'
+  display-name: '&bОблик "Топор песков"'
+  custom-model-data: 6
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Топор'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'
+skin_axe_seaclaw_axe:
+  material: 'IRON_AXE'
+  display-name: '&bОблик "Морской клык"'
+  custom-model-data: 7
+  unbreakable: true
+  soulbound: true
+  wearable: false
+  lore:
+    - ' &8Невозможно использовать'
+    - '&7Оружие:&f Топор'
+    - '&7Накладывается в инвентаре'
+    - '&7на оружие.'
+    - '&cПосле снятия удаляется.'
+  flags:
+    - 'HIDE_ATTRIBUTES'
+    - 'HIDE_UNBREAKABLE'

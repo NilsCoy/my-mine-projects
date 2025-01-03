@@ -1,0 +1,95 @@
+conversations:
+  tavern:
+    quester: '&aТрактирщица'
+    first: 'npc_node_1'
+    stop: 'false'
+    NPC_options:
+      npc_node_1:
+        text: '&7Вы видите перед собой девушку стоящую у стойки.&f\n\nПриветствую вас в нашей таверне, хотите чем подкрепиться?'
+        condition: ''
+        event: ''
+        pointers: player_node_1, player_node_2, player_node_3, player_node_4
+
+      npc_node_2:
+        text: 'На данный момент все комнаты заняты, в последнее время сюда приехало много гостей, даже паладины из церкви света есть.'
+        condition: ''
+        event: ''
+
+      npc_node_3:
+        text: 'Я не против ответить на твои вопросы, но только не долго, мне еще работать надо.'
+        condition: ''
+        event: ''
+        pointers: player_node_5, player_node_6, player_node_7, player_node_8, player_node_7, player_node_5, player_node_5, player_node_6, player_node_7, player_node_8
+
+      npc_node_4:
+        text: 'Наш город производит отличное вино, благодаря своим полям винограда, однако тут также выращивают пшеницу, поэтому хлеба здесь всегда в достатке.'
+        condition: ''
+        event: ''
+        pointers: player_node_6, player_node_7, player_node_8, player_node_7, player_node_6, player_node_7, player_node_6
+
+      npc_node_5:
+        text: 'За городом находится ристалище, там время от времени проводят дуэли, а так же проверяют авантюристов на их способности. Некоторые едут поглазеть, а кто-то по личным делам в город.  '
+        condition: ''
+        event: ''
+        pointers: player_node_5, player_node_5, player_node_7, player_node_8
+
+      npc_node_6:
+        text: 'В общем все по старому, однако меня удивило что приехали служители из церкви, у нас есть своя, но извне редко приезжают к нам. Наверное с важным делом к ярлу.'
+        condition: ''
+        event: ''
+        pointers: player_node_6, player_node_8, player_node_5, player_node_5, player_node_6, player_node_6
+
+      npc_node_7:
+        text: 'Хорошо, тогда чего желаешь?'
+        condition: ''
+        event: ''
+        pointers: player_node_5, player_node_6, player_node_7
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Было бы славно. [ Торговля ]'
+        condition: ''
+        event: 'eat'
+
+      player_node_2:
+        text: 'А у вас разве нельзя снять комнату для ночлега?'
+        condition: ''
+        event: ''
+        pointers: npc_node_2
+
+      player_node_3:
+        text: 'Можно задать пару вопросов?'
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_4:
+        text: 'Нет, я просто посмотреть зашел. [ Уйти ] '
+        condition: ''
+        event: ''
+
+      player_node_5:
+        text: 'Можешь немного рассказать о городе?'
+        condition: ''
+        event: ''
+        pointers: npc_node_4
+
+      player_node_6:
+        text: 'Почему приехало столько новых людей в город?'
+        condition: ''
+        event: ''
+        pointers: npc_node_5
+
+      player_node_7:
+        text: 'Ничего странного не происходило в последнее время? '
+        condition: ''
+        event: ''
+        pointers: npc_node_6
+
+      player_node_8:
+        text: 'Давай закончим с вопросами.'
+        condition: ''
+        event: ''
+        pointers: npc_node_7

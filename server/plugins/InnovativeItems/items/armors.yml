@@ -1,0 +1,237 @@
+leather1:
+  display-name: '&cКожаная куртка'
+  material: 'LEATHER_CHESTPLATE'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+0.75 Защита от оглушения'
+    - '&9+3 Вес'
+leather2:
+  display-name: '&cКожаные штаны'
+  material: 'LEATHER_LEGGINGS'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+0.5 Защита от оглушения'
+    - '&9+2 Вес'
+leather3:
+  display-name: '&cКожаные ботинки'
+  material: 'LEATHER_BOOTS'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+0.25 Защита от оглушения'
+    - '&9+1 Вес'
+
+chainmail1:
+  display-name: '&cКольчуга'
+  material: 'CHAINMAIL_CHESTPLATE'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+2 Защита от оглушения'
+    - '&9+10 Вес'
+chainmail2:
+  display-name: '&cКольчужные поножи'
+  material: 'CHAINMAIL_LEGGINGS'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+1.6 Защита от оглушения'
+    - '&9+8 Вес'
+chainmail3:
+  display-name: '&cКольчужные ботинки'
+  material: 'CHAINMAIL_BOOTS'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+0.4 Защита от оглушения'
+    - '&9+2 Вес'
+
+iron1:
+  display-name: '&cСтальной нагрудник'
+  material: 'IRON_CHESTPLATE'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+3 Защита от оглушения'
+    - '&9+18 Вес'
+iron2:
+  display-name: '&cСтальные поножи'
+  material: 'IRON_LEGGINGS'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+2.5 Защита от оглушения'
+    - '&9+15 Вес'
+iron3:
+  display-name: '&cСтальные ботинки'
+  material: 'IRON_BOOTS'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+1 Защита от оглушения'
+    - '&9+6 Вес'
+
+golden1:
+  display-name: '&cЗолотой нагрудник'
+  material: 'GOLDEN_CHESTPLATE'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  attributes:
+    CHEST:
+      GENERIC_ARMOR: 6
+      GENERIC_ARMOR_TOUGHNESS: 1
+  lore:
+    - '&9+1.5 Защита от оглушения'
+    - '&9+10 Вес'
+golden2:
+  display-name: '&cЗолотые поножи'
+  material: 'GOLDEN_LEGGINGS'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  attributes:
+    CHEST:
+      GENERIC_ARMOR: 5
+      GENERIC_ARMOR_TOUGHNESS: 1
+  lore:
+    - '&9+0.9 Защита от оглушения'
+    - '&9+6 Вес'
+golden3:
+  display-name: '&cЗолотые ботинки'
+  material: 'GOLDEN_BOOTS'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  attributes:
+    CHEST:
+      GENERIC_ARMOR: 2
+      GENERIC_ARMOR_TOUGHNESS: 1
+  lore:
+    - '&9+0.3 Защита от оглушения'
+    - '&9+2 Вес'
+
+diamond1:
+  display-name: '&cКобальтовый нагрудник'
+  material: 'DIAMOND_CHESTPLATE'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+4.8 Защита от оглушения'
+    - '&9+24 Вес'
+diamond2:
+  display-name: '&cКобальтовые поножи'
+  material: 'DIAMOND_LEGGINGS'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+3.6 Защита от оглушения'
+    - '&9+18 Вес'
+diamond3:
+  display-name: '&cКобальтовые ботинки'
+  material: 'DIAMOND_BOOTS'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+1.8 Защита от оглушения'
+    - '&9+9 Вес'
+
+netherite1:
+  display-name: '&cДревний нагрудник'
+  material: 'NETHERITE_CHESTPLATE'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+6 Защита от оглушения'
+    - '&9+25 Вес'
+netherite2:
+  display-name: '&cДревние поножи'
+  material: 'NETHERITE_LEGGINGS'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+4.5 Защита от оглушения'
+    - '&9+19 Вес'
+netherite3:
+  display-name: '&cДревние ботинки'
+  material: 'NETHERITE_BOOTS'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+2.25 Защита от оглушения'
+    - '&9+9 Вес'
+
+start1:
+  display-name: '&cРваная рубаха'
+  material: 'EPICFIGHT_STRAY_ROBE'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+0.6 Защита от оглушения'
+    - '&9+2 Вес'
+start2:
+  display-name: '&cРваные штаны'
+  material: 'EPICFIGHT_STRAY_PANTS'
+  unbreakable: true
+  placeable: false
+  soulbound: true
+  wearable: true
+  update-item: false
+  lore:
+    - '&9+0.4 Защита от оглушения'
+    - '&9+1.3 Вес'

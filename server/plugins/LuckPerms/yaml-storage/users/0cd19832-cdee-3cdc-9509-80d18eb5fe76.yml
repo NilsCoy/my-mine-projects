@@ -1,0 +1,12 @@
+uuid: 0cd19832-cdee-3cdc-9509-80d18eb5fe76
+name: Aldikosh23
+primary-group: default
+permissions:
+- mcpets.pet_horse1
+- promo_horizon
+- titul_1
+- titul_11
+- titul_17
+- titul_2
+parents:
+- default

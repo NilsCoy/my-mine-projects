@@ -1,0 +1,41 @@
+regular:
+  north: '&7N'
+  # north-east: '&7NE'
+  east: '&7E'
+  # south-east: '&7SE'
+  south: '&7S'
+  # south-west: '&7SW'
+  west: '&7W'
+  # north-west: '&7NW'
+  waypoint: '&e&l?'
+  filled: '&8◆'
+  tracker: '&a !!! '
+  north-east: '&8◆'
+  south-east: '&8◆'
+  south-west: '&8◆'
+  north-west: '&8◆'
+
+hovered:
+  north: '&f&lN'
+  # north-east: '&f&lNE'
+  east: '&f&lE'
+  # south-east: '&f&lSE'
+  south: '&f&lS'
+  # south-west: '&f&lSW'
+  west: '&f&lW'
+  # north-west: '&f&lNW'
+  filled: '&f&l◆'
+  tracker: '&f&l !!! '
+  waypoint: '&6&l?'
+  north-east: '&f&l◆'
+  south-east: '&f&l◆'
+  south-west: '&f&l◆'
+  north-west: '&f&l◆'
+
+symbol-start: '&7&l❮'
+symbol-end: '&7&l❯'
+
+bar-color: white
+bar-style: solid
+
+focus-item: NOITEM

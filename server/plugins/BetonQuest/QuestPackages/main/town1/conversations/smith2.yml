@@ -1,0 +1,77 @@
+conversations:
+  smith2:
+    quester: '&aКузнец'
+    first: 'npc_node_1'
+    stop: 'false'
+    NPC_options:
+      npc_node_1:
+        text: '&7Перед вами мужчина, активно обрабатывающий металл.&f\n\nЗдравствуй, чего вам надобно в моей кузне?'
+        condition: ''
+        event: ''
+        pointers: player_node_1, player_node_2, player_node_3
+
+      npc_node_2:
+        text: 'Я конечно занят, но если не долго, то валяй.'
+        condition: ''
+        event: ''
+        pointers: player_node_4, player_node_5, player_node_6
+
+      npc_node_3:
+        text: 'Кобальт... Это невероятно прочный металл. Найти такой невероятная удача, хотя я слышал, что дворфы, проживающие на севере, добывают его в своих шахтах.'
+        condition: ''
+        event: ''
+        pointers: player_node_7
+
+      npc_node_4:
+        text: 'Хм, если так подумать, я слышал что на равнинах сейчас не спокойно. Там участились грабежи, это пока все что я слышал.'
+        condition: ''
+        event: ''
+        pointers: player_node_4, player_node_6
+
+      npc_node_5:
+        text: 'Однако ко мне в руки не попадало этой руды, но я на своем веку видел оружие созданное из кобальта.'
+        condition: ''
+        event: ''
+        pointers: player_node_5, player_node_6
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Я хочу чтобы ты сковал мне кое-что. [ Торговля ]'
+        condition: ''
+        event: 'blacksmith'
+
+      player_node_2:
+        text: 'Хочу задать вам пару вопросов.'
+        condition: ''
+        event: ''
+        pointers: npc_node_2
+
+      player_node_3:
+        text: 'Ничего, я просто мимо проходил, вот мне и стало интересно. [ Уйти ]\n'
+        condition: ''
+        event: ''
+
+      player_node_4:
+        text: 'Вы можете рассказать о таком металле как кобальт?'
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_5:
+        text: 'Что в последнее время происходило странного?'
+        condition: ''
+        event: ''
+        pointers: npc_node_4
+
+      player_node_6:
+        text: 'Давайте на этом закончим. [ Уйти ]'
+        condition: ''
+        event: ''
+
+      player_node_7:
+        text: '[ ... ]'
+        condition: ''
+        event: ''
+        pointers: npc_node_5

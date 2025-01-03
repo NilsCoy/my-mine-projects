@@ -1,0 +1,10 @@
+variables:
+  player_tutorial_sword_equip:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+  player_opened_chest:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0
+

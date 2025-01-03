@@ -1,0 +1,179 @@
+Events:
+
+  notify_time:
+    type: repetitive
+    repetitive_time: 15
+    conditions:
+    - '%player_world_time_24% == 05:15 and %player_world% == world and %servervariables_value_notify_cycle_enable% == 1 execute day'
+    - '%player_world_time_24% == 19:00 and %player_world% == world and %servervariables_value_notify_cycle_enable% == 1 execute night'
+    actions:
+      day:
+      - 'to_all: title: 20;120;20;&7[ &e☀ &7];&7Силы ночи угасают.'
+      - 'to_all: playsound: BLOCK_NOTE_BLOCK_GUITAR;1;0.5'
+      night:
+      - 'to_all: title: 20;120;20;&7[ &b&l☾ &7];&7Ночные существа вышли на охоту.'
+      - 'to_all: playsound: BLOCK_NOTE_BLOCK_CHIME;1;0.5'
+      
+  notify_level:
+    type: custom
+    custom_event_data:
+      event: svar.ajneb97.api.VariableChangeEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%variable_type%;getVariable().getVariableType()'
+      - '%variable_name%;getVariable().getName()'
+      - '%new_value%;getNewValue()'
+    conditions:
+    - '%servervariables_value_notify_level_enable% == 1 and %variable_name% == player_level execute actions2'
+    #- '%servervariables_value_notify_enable% == 1 and %variable_name% == player_skill_point execute actions3'
+    actions:
+      actions2:
+      - 'message: &f'
+      - 'message: &eВы получили &6%servervariables_value_player_level% &eуровень!'
+      - 'message: &f'
+      #actions3:
+      #- 'message: &f'
+      #- 'message: &eВы получили новый токен!'
+      #- 'message: &f'
+  notify_exp:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_xp_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &eВы получили %exp% опыта!'
+  notify_skill_point:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_level_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &f'
+      - 'message: &eВы получили новый токен!'
+      - 'message: &f'
+
+
+
+
+  notify_battle_pass_level_up:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_level_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &f'
+      - 'message: &eВы получили &6%servervariables_value_rewards_battle_pass_level% &eуровень сезонного пропуска!'
+      - 'message: &f'
+
+
+
+  notify_farming:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_xp_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &eВы собрали растения.'
+
+  notify_gift_box:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_xp_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &eВы открыли подарок!'
+
+  notify_fisher:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_xp_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &eВы выловили рыбу.'
+
+  notify_protect:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_other_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &cВы находитесь под защитой новичка!'
+  notify_protect_other:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_other_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &cЦель находится под защитой новичка!'
+
+  notify_campfire:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_other_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &cКостер исчезнет через 60 секунд!'
+  notify_campfire_fire:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_other_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &eВы добавили +30 секунд к горению костра.'
+
+  notify_mining_coal:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_xp_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &eВы добыли уголь.'
+  notify_mining_iron:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_xp_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &eВы добыли железо.'
+
+  notify_spawnpoints:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_other_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &eВаша точка спавна была изменена.'
+
+  notify_titul:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_other_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &f'
+      - 'message: &6Вы получили новый титул!'
+      - 'message: &f'
+      
+  notify_cooking_mutton:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_other_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &eВы приготовили еду на костре.'
+      
+  notify_cooking_close:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_other_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &eВы отменили готовку еды.'
+      
+  notify_cooking_falied:
+    type: call
+    conditions:
+    - '%servervariables_value_notify_other_enable% == 1 execute actions1'
+    actions:
+      actions1:
+      - 'message: &eВы сожгли еду, которую готовили.'

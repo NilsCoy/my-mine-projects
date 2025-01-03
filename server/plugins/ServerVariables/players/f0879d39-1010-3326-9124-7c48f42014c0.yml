@@ -1,0 +1,15 @@
+name: Detective2010
+variables:
+  player_first_join: '1'
+  rewards_day_reward_last: '268'
+  rewards_day_reward_can: '1'
+  rewards_day_reward_have: '0'
+  rewards_day_reward_stack: '1'
+  music_state: '3'
+  player_protect: '10011'
+  player_sneak: '0'
+  stealth_state: '0'
+  stealth_visible: '0'
+  is_mining: '0'
+  player_exp: '22'
+  statistics_mining: '16'

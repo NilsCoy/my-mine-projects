@@ -1,0 +1,329 @@
+Events:
+  level_check:
+    type: custom
+    custom_event_data:
+      event: svar.ajneb97.api.VariableChangeEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%variable_type%;getVariable().getVariableType()'
+      - '%variable_name%;getVariable().getName()'
+      - '%new_value%;getNewValue()'
+    allow_math_formulas_in_conditions: true
+    conditions:
+    - '%variable_name% == player_exp and %new_value% >= %servervariables_value_player_max_exp% execute action2'
+    - '%variable_name% == player_level and %math_1:UNNECESSARY_{servervariables_value_player_level}/5% - %math_0:UNNECESSARY_{servervariables_value_player_level}/5% == 0 execute action3'
+    - '%variable_name% == player_level execute action1'
+    actions:
+      action1:
+      - 'call_event: level_set'
+      action2:
+      - 'call_event: level_set'
+      - 'console_command: svar add player_level 1 %player%'
+      - 'console_command: svar set player_exp %math_0:UNNECESSARY_{servervariables_value_player_exp}-{servervariables_value_player_max_exp}% %player%'
+      - 'console_command: svar set player_max_exp %math_0:HALF-EVEN_{servervariables_value_player_max_exp}/100*5+{servervariables_value_player_max_exp}% %player%'
+      action3:
+      - 'call_event: level_set'
+      - 'call_event: notify_skill_point'
+      - 'console_command: svar add player_skill_point 1 %player%'
+  level_stable:
+    type: player_levelup
+    actions:
+      default:
+      - 'call_event: level_set'
+  level_set:
+    type: call
+    # conditions:
+    # - ' execute actions1'
+    actions:
+      default:
+      - 'console_command: experience set %player% %servervariables_value_player_level% levels'
+      - 'console_command: experience set %player% 0 points'
+  level_get:
+    type: player_kill
+    conditions:
+    - '%victim% == PLAYER and %player_has_permission_sponsor% == yes execute sponsor_player'
+    - '%victim% == PLAYER execute player'
+    
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 1 ]% == yes and %player_has_permission_sponsor% == yes execute sponsor_boss_rank_1'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 1 ]% == yes execute boss_rank_1'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 2 ]% == yes and %player_has_permission_sponsor% == yes execute sponsor_boss_rank_2'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 2 ]% == yes execute boss_rank_2'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 3 ]% == yes and %player_has_permission_sponsor% == yes execute sponsor_boss_rank_3'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 3 ]% == yes execute boss_rank_3'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 4 ]% == yes and %player_has_permission_sponsor% == yes execute sponsor_boss_rank_4'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 4 ]% == yes execute boss_rank_4'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 5 ]% == yes and %player_has_permission_sponsor% == yes execute sponsor_boss_rank_5'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 5 ]% == yes execute boss_rank_5'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 6 ]% == yes and %player_has_permission_sponsor% == yes execute sponsor_boss_rank_6'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 6 ]% == yes execute boss_rank_6'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 7 ]% == yes and %player_has_permission_sponsor% == yes execute sponsor_boss_rank_7'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 7 ]% == yes execute boss_rank_7'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 8 ]% == yes and %player_has_permission_sponsor% == yes execute sponsor_boss_rank_8'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 8 ]% == yes execute boss_rank_8'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 9 ]% == yes and %player_has_permission_sponsor% == yes execute sponsor_boss_rank_9'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 9 ]% == yes execute boss_rank_9'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 10 ]% == yes and %player_has_permission_sponsor% == yes execute sponsor_boss_rank_10'
+    - '%victim% != PLAYER and %string_contains_{victim_name}_[ 10 ]% == yes execute boss_rank_10' #string_containsIgnoreCase_
+    
+    - '%victim% != PLAYER and %victim_name% == Дикий кабан and %player_has_permission_sponsor% == yes execute sponsor_rank_1'
+    - '%victim% != PLAYER and %victim_name% == Дикий кабан execute rank_1'
+    - '%victim% != PLAYER and %victim_name% == Дикая курица and %player_has_permission_sponsor% == yes execute sponsor_rank_1'
+    - '%victim% != PLAYER and %victim_name% == Дикая курица execute rank_1'
+    - '%victim% != PLAYER and %victim_name% == Дикий кролик and %player_has_permission_sponsor% == yes execute sponsor_rank_1'
+    - '%victim% != PLAYER and %victim_name% == Дикий кролик execute rank_1'
+    - '%victim% != PLAYER and %victim_name% == Угольная крыса and %player_has_permission_sponsor% == yes execute sponsor_rank_1'
+    - '%victim% != PLAYER and %victim_name% == Угольная крыса execute rank_1'
+    - '%victim% != PLAYER and %victim_name% == Восставший скелет and %player_has_permission_sponsor% == yes execute sponsor_rank_2'
+    - '%victim% != PLAYER and %victim_name% == Восставший скелет execute rank_2'
+    - '%victim% != PLAYER and %victim_name% == Дикая корова and %player_has_permission_sponsor% == yes execute sponsor_rank_2'
+    - '%victim% != PLAYER and %victim_name% == Дикая корова execute rank_2'
+    - '%victim% != PLAYER and %victim_name% == Дикая овца and %player_has_permission_sponsor% == yes execute sponsor_rank_2'
+    - '%victim% != PLAYER and %victim_name% == Дикая овца execute rank_2'
+    - '%victim% != PLAYER and %victim_name% == Мега-пчела and %player_has_permission_sponsor% == yes execute sponsor_rank_2'
+    - '%victim% != PLAYER and %victim_name% == Мега-пчела execute rank_2'
+    - '%victim% != PLAYER and %victim_name% == Дикий волк and %player_has_permission_sponsor% == yes execute sponsor_rank_2'
+    - '%victim% != PLAYER and %victim_name% == Дикий волк execute rank_2'
+    - '%victim% != PLAYER and %victim_name% == Боров and %player_has_permission_sponsor% == yes execute sponsor_rank_3'
+    - '%victim% != PLAYER and %victim_name% == Боров execute rank_3'
+    - '%victim% != PLAYER and %victim_name% == Грибочел and %player_has_permission_sponsor% == yes execute sponsor_rank_2'
+    - '%victim% != PLAYER and %victim_name% == Грибочел execute rank_2'
+    - '%victim% != PLAYER and %victim_name% == Тень and %player_has_permission_sponsor% == yes execute sponsor_rank_3'
+    - '%victim% != PLAYER and %victim_name% == Тень execute rank_3'
+    - '%victim% != PLAYER and %victim_name% == Разбойник and %player_has_permission_sponsor% == yes execute sponsor_rank_3'
+    - '%victim% != PLAYER and %victim_name% == Разбойник execute rank_3'
+    - '%victim% != PLAYER and %victim_name% == Разбойник-арбалетчик and %player_has_permission_sponsor% == yes execute sponsor_rank_3'
+    - '%victim% != PLAYER and %victim_name% == Разбойник-арбалетчик execute rank_3'
+    - '%victim% != PLAYER and %victim_name% == Разбойник-страж and %player_has_permission_sponsor% == yes execute sponsor_rank_4'
+    - '%victim% != PLAYER and %victim_name% == Разбойник-страж execute rank_4'
+    - '%victim% != PLAYER and %victim_name% == Разбойник-палач and %player_has_permission_sponsor% == yes execute sponsor_rank_4'
+    - '%victim% != PLAYER and %victim_name% == Разбойник-палач execute rank_4'
+    - '%victim% != PLAYER and %victim_name% == Главарь разбойников and %player_has_permission_sponsor% == yes execute sponsor_boss_rank_2'
+    - '%victim% != PLAYER and %victim_name% == Главарь разбойников execute boss_rank_2'
+    - '%victim% != PLAYER and %victim_name% == Страж ключа and %player_has_permission_sponsor% == yes execute sponsor_boss_rank_2'
+    - '%victim% != PLAYER and %victim_name% == Страж ключа execute boss_rank_2'
+    
+    #- '%victim% != PLAYER and %player_has_permission_sponsor% == yes execute sponsor_none'
+    #- '%victim% != PLAYER execute none'
+    actions:
+      sponsor_player:
+      - 'console_command: svar add player_exp 20 %player%'
+      - 'call_event: notify_exp;%exp%=20'
+      player:
+      - 'console_command: svar add player_exp 10 %player%'
+      - 'call_event: notify_exp;%exp%=10'
+      
+      
+      sponsor_rank_1:
+      - 'console_command: svar add player_exp 4 %player%'
+      - 'call_event: notify_exp;%exp%=4'
+      rank_1:
+      - 'console_command: svar add player_exp 2 %player%'
+      - 'call_event: notify_exp;%exp%=2'
+      
+      sponsor_rank_2:
+      - 'console_command: svar add player_exp 8 %player%'
+      - 'call_event: notify_exp;%exp%=8'
+      rank_2:
+      - 'console_command: svar add player_exp 4 %player%'
+      - 'call_event: notify_exp;%exp%=4'
+      
+      sponsor_rank_3:
+      - 'console_command: svar add player_exp 12 %player%'
+      - 'call_event: notify_exp;%exp%=12'
+      rank_3:
+      - 'console_command: svar add player_exp 6 %player%'
+      - 'call_event: notify_exp;%exp%=6'
+      
+      sponsor_rank_4:
+      - 'console_command: svar add player_exp 16 %player%'
+      - 'call_event: notify_exp;%exp%=16'
+      rank_4:
+      - 'console_command: svar add player_exp 8 %player%'
+      - 'call_event: notify_exp;%exp%=8'
+      
+      sponsor_rank_5:
+      - 'console_command: svar add player_exp 20 %player%'
+      - 'call_event: notify_exp;%exp%=20'
+      rank_5:
+      - 'console_command: svar add player_exp 10 %player%'
+      - 'call_event: notify_exp;%exp%=10'
+      
+      sponsor_rank_6:
+      - 'console_command: svar add player_exp 24 %player%'
+      - 'call_event: notify_exp;%exp%=24'
+      rank_6:
+      - 'console_command: svar add player_exp 12 %player%'
+      - 'call_event: notify_exp;%exp%=12'
+      
+      sponsor_rank_7:
+      - 'console_command: svar add player_exp 28 %player%'
+      - 'call_event: notify_exp;%exp%=28'
+      rank_7:
+      - 'console_command: svar add player_exp 14 %player%'
+      - 'call_event: notify_exp;%exp%=14'
+      
+      sponsor_rank_8:
+      - 'console_command: svar add player_exp 32 %player%'
+      - 'call_event: notify_exp;%exp%=32'
+      rank_8:
+      - 'console_command: svar add player_exp 16 %player%'
+      - 'call_event: notify_exp;%exp%=16'
+      
+      sponsor_rank_9:
+      - 'console_command: svar add player_exp 36 %player%'
+      - 'call_event: notify_exp;%exp%=36'
+      rank_9:
+      - 'console_command: svar add player_exp 18 %player%'
+      - 'call_event: notify_exp;%exp%=18'
+      
+      sponsor_rank_10:
+      - 'console_command: svar add player_exp 40 %player%'
+      - 'call_event: notify_exp;%exp%=40'
+      rank_10:
+      - 'console_command: svar add player_exp 20 %player%'
+      - 'call_event: notify_exp;%exp%=20'
+
+
+
+      sponsor_rank_11:
+      - 'console_command: svar add player_exp 44 %player%'
+      - 'call_event: notify_exp;%exp%=44'
+      rank_11:
+      - 'console_command: svar add player_exp 22 %player%'
+      - 'call_event: notify_exp;%exp%=22'
+      
+      sponsor_rank_12:
+      - 'console_command: svar add player_exp 48 %player%'
+      - 'call_event: notify_exp;%exp%=48'
+      rank_12:
+      - 'console_command: svar add player_exp 24 %player%'
+      - 'call_event: notify_exp;%exp%=24'
+      
+      sponsor_rank_13:
+      - 'console_command: svar add player_exp 52 %player%'
+      - 'call_event: notify_exp;%exp%=52'
+      rank_13:
+      - 'console_command: svar add player_exp 26 %player%'
+      - 'call_event: notify_exp;%exp%=26'
+      
+      sponsor_rank_14:
+      - 'console_command: svar add player_exp 56 %player%'
+      - 'call_event: notify_exp;%exp%=56'
+      rank_14:
+      - 'console_command: svar add player_exp 28 %player%'
+      - 'call_event: notify_exp;%exp%=28'
+      
+      sponsor_rank_15:
+      - 'console_command: svar add player_exp 60 %player%'
+      - 'call_event: notify_exp;%exp%=60'
+      rank_15:
+      - 'console_command: svar add player_exp 30 %player%'
+      - 'call_event: notify_exp;%exp%=30'
+      
+      sponsor_rank_16:
+      - 'console_command: svar add player_exp 64 %player%'
+      - 'call_event: notify_exp;%exp%=64'
+      rank_16:
+      - 'console_command: svar add player_exp 32 %player%'
+      - 'call_event: notify_exp;%exp%=32'
+      
+      sponsor_rank_17:
+      - 'console_command: svar add player_exp 68 %player%'
+      - 'call_event: notify_exp;%exp%=68'
+      rank_17:
+      - 'console_command: svar add player_exp 34 %player%'
+      - 'call_event: notify_exp;%exp%=34'
+      
+      sponsor_rank_18:
+      - 'console_command: svar add player_exp 72 %player%'
+      - 'call_event: notify_exp;%exp%=72'
+      rank_18:
+      - 'console_command: svar add player_exp 36 %player%'
+      - 'call_event: notify_exp;%exp%=36'
+      
+      sponsor_rank_19:
+      - 'console_command: svar add player_exp 76 %player%'
+      - 'call_event: notify_exp;%exp%=76'
+      rank_19:
+      - 'console_command: svar add player_exp 38 %player%'
+      - 'call_event: notify_exp;%exp%=38'
+      
+      sponsor_rank_20:
+      - 'console_command: svar add player_exp 80 %player%'
+      - 'call_event: notify_exp;%exp%=80'
+      rank_20:
+      - 'console_command: svar add player_exp 40 %player%'
+      - 'call_event: notify_exp;%exp%=40'
+      
+      sponsor_none:
+      #- 'message: %victim_name%'
+      - 'console_command: svar add player_exp 4 %player%'
+      - 'call_event: notify_exp;%exp%=4'
+      none:
+      #- 'message: %victim_name%'
+      - 'console_command: svar add player_exp 2 %player%'
+      - 'call_event: notify_exp;%exp%=2'
+      
+      
+      
+      sponsor_boss_rank_1:
+      - 'console_command: svar add player_exp 40 %player%'
+      - 'call_event: notify_exp;%exp%=40'
+      boss_rank_1:
+      - 'console_command: svar add player_exp 20 %player%'
+      - 'call_event: notify_exp;%exp%=20'
+      sponsor_boss_rank_2:
+      - 'console_command: svar add player_exp 60 %player%'
+      - 'call_event: notify_exp;%exp%=40'
+      boss_rank_2:
+      - 'console_command: svar add player_exp 30 %player%'
+      - 'call_event: notify_exp;%exp%=20'
+      sponsor_boss_rank_3:
+      - 'console_command: svar add player_exp 90 %player%'
+      - 'call_event: notify_exp;%exp%=40'
+      boss_rank_3:
+      - 'console_command: svar add player_exp 45 %player%'
+      - 'call_event: notify_exp;%exp%=20'
+      sponsor_boss_rank_4:
+      - 'console_command: svar add player_exp 134 %player%'
+      - 'call_event: notify_exp;%exp%=40'
+      boss_rank_4:
+      - 'console_command: svar add player_exp 67 %player%'
+      - 'call_event: notify_exp;%exp%=20'
+      sponsor_boss_rank_5:
+      - 'console_command: svar add player_exp 202 %player%'
+      - 'call_event: notify_exp;%exp%=40'
+      boss_rank_5:
+      - 'console_command: svar add player_exp 101 %player%'
+      - 'call_event: notify_exp;%exp%=20'
+      sponsor_boss_rank_6:
+      - 'console_command: svar add player_exp 304 %player%'
+      - 'call_event: notify_exp;%exp%=40'
+      boss_rank_6:
+      - 'console_command: svar add player_exp 152 %player%'
+      - 'call_event: notify_exp;%exp%=20'
+      sponsor_boss_rank_7:
+      - 'console_command: svar add player_exp 456 %player%'
+      - 'call_event: notify_exp;%exp%=40'
+      boss_rank_7:
+      - 'console_command: svar add player_exp 228 %player%'
+      - 'call_event: notify_exp;%exp%=20'
+      sponsor_boss_rank_8:
+      - 'console_command: svar add player_exp 684 %player%'
+      - 'call_event: notify_exp;%exp%=40'
+      boss_rank_8:
+      - 'console_command: svar add player_exp 342 %player%'
+      - 'call_event: notify_exp;%exp%=20'
+      sponsor_boss_rank_9:
+      - 'console_command: svar add player_exp 1024 %player%'
+      - 'call_event: notify_exp;%exp%=40'
+      boss_rank_9:
+      - 'console_command: svar add player_exp 512 %player%'
+      - 'call_event: notify_exp;%exp%=20'
+      sponsor_boss_rank_10:
+      - 'console_command: svar add player_exp 1538 %player%'
+      - 'call_event: notify_exp;%exp%=40'
+      boss_rank_10:
+      - 'console_command: svar add player_exp 769 %player%'
+      - 'call_event: notify_exp;%exp%=20'
+      

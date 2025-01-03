@@ -1,0 +1,75 @@
+[15:38:18.334][INFO][CraftTweaker-EarlyInit]: CraftTweaker is running on a Minecraft 1.20.1 production server modded with platform Forge
+[15:38:18.396][INFO][CraftTweaker-EarlyInit]: Successfully injected RecipeFS file system
+[15:38:18.561][INFO][CraftTweaker-Plugins]: Successfully identified and loaded plugin farmersdelight:crafttweaker_plugin
+[15:38:18.654][INFO][CraftTweaker-Plugins]: Successfully identified and loaded plugin crafttweaker:builtin
+[15:38:18.659][INFO][CraftTweaker-Plugins]: Successfully identified and loaded plugin crafttweaker:builtin_forge
+[15:38:20.222][INFO][CraftTweaker]: The following mods have explicit CraftTweaker support through the default plugin:
+[15:38:20.224][INFO][CraftTweaker]: - 'crafttweaker' at version '14.0.36'
+[15:38:20.225][INFO][CraftTweaker]: - 'farmersdelight' at version '1.20.1-1.2.4'
+[15:38:33.153][INFO][CraftTweaker-ZenCode]: Started loading scripts for loader 'initialize'
+[15:38:33.651][INFO][CraftTweaker-ZenCode]: Compiling and executing scripts
+[15:38:33.724][INFO][CraftTweaker-ZenCode]: Successfully initialized modules [crafttweaker, expansions]
+[15:38:33.874][INFO][CraftTweaker-ZenCode]: Execution for loader 'initialize' completed successfully
+[15:38:54.166][INFO][CraftTweaker-ZenCode]: Started loading scripts for loader 'tags'
+[15:38:54.199][INFO][CraftTweaker-ZenCode]: Compiling and executing scripts
+[15:38:54.236][INFO][CraftTweaker-ZenCode]: Successfully initialized modules [crafttweaker, expansions]
+[15:38:54.249][INFO][CraftTweaker-ZenCode]: Execution for loader 'tags' completed successfully
+[15:38:55.301][INFO][CraftTweaker]: crafttweaker.reload.start
+[15:38:55.335][INFO][CraftTweaker-ZenCode]: Started loading scripts for loader 'crafttweaker'
+[15:38:55.382][INFO][CraftTweaker-ZenCode]: Compiling and executing scripts
+[15:38:56.474][INFO][CraftTweaker-ZenCode]: Successfully initialized modules [mods, crafttweaker, expansions]
+[15:38:56.489][INFO][CraftTweaker-ZenCode]: Loading file 'coins.zs' with priority 0
+[15:38:56.493][INFO][CraftTweaker-ZenCode]: Loading file 'signs.zs' with priority 0
+[15:38:56.561][INFO][CraftTweaker]: Removing "minecraft:crafting" recipes with modid: "coinsje"
+[15:38:56.569][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:copper_coin' that outputs: '<item:coinsje:copper_coin> * 4'
+[15:38:56.570][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:copper_coin_stack' that outputs: '<item:coinsje:copper_coin> * 9'
+[15:38:56.570][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:iron_coin_stack' that outputs: '<item:coinsje:iron_coin> * 9'
+[15:38:56.571][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:gold_coin_stack' that outputs: '<item:coinsje:gold_coin> * 9'
+[15:38:56.572][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:diamond_coin_stack' that outputs: '<item:coinsje:diamond_coin> * 9'
+[15:38:56.572][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:iron_coin' that outputs: '<item:coinsje:iron_coin>'
+[15:38:56.572][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:gold_coin' that outputs: '<item:coinsje:gold_coin>'
+[15:38:56.573][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:diamond_coin' that outputs: '<item:coinsje:diamond_coin>'
+[15:38:56.573][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:netherite_coin' that outputs: '<item:coinsje:netherite_coin>'
+[15:38:56.574][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table1' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.574][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_2' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.574][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_3' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.574][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_4' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.575][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_5' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.575][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_6' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.575][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_7' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.575][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_8' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.575][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_9' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.575][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_10' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.575][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_11' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.575][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_12' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.575][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_13' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.576][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_14' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.576][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_15' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.576][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_16' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.577][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_17' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.577][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_18' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.577][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_19' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.578][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shaped", with name: 'crafttweaker:fletching_table_20' that outputs: '<item:minecraft:fletching_table>'
+[15:38:56.578][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing1' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.578][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing2' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.579][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing3' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.579][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing4' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.579][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing5' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.579][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing6' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.579][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing7' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.580][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing8' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.580][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing9' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.580][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing10' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.580][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing11' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.580][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing12' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.581][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing13' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.581][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing14' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.581][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing15' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.581][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing16' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.581][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing17' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.582][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing18' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.582][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing19' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.582][INFO][CraftTweaker]: Adding 'minecraft:crafting' recipe, of type: "shapeless", with name: 'crafttweaker:sing20' that outputs: '<item:minecraft:oak_sign>'
+[15:38:56.582][INFO][CraftTweaker-ZenCode]: Execution for loader 'crafttweaker' completed successfully
+[15:38:56.585][INFO][CraftTweaker]: crafttweaker.reload.complete
+[15:38:56.585][INFO][CraftTweaker]: This reload was made possible by DreamThorn and more! Become a patron at https://patreon.com/jaredlll08?s=crtmod

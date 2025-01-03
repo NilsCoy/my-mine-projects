@@ -1,0 +1,224 @@
+menu_title: '&6Кузнец'
+open_commands:
+  - '[sound] ENTITY_VILLAGER_TRADE 1 0.8'
+size: 36
+items:
+  'skin_dagger_bronze_dagger':
+    material: EPICFIGHT_IRON_DAGGER
+    slot: 0
+    priority: 4
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:2
+    display_name: '&bОблик "Бронзовый кинжал"'
+    lore:
+      - ' &8Невозможно использовать'
+      - '&7Оружие:&f Кинжал'
+      - '&7Накладывается в инвентаре'
+      - '&7на оружие.'
+      - '&cПосле снятия удаляется.'
+      - ''
+      - '&fЦена покупки: &c3000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы купить.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 3000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] svar add player_money -3000 %player_name%'
+      - '[console] ii give %player_name% skin_dagger_bronze_dagger 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'skin_dagger_riddik':
+    material: EPICFIGHT_IRON_DAGGER
+    slot: 1
+    priority: 4
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:1
+    display_name: '&bОблик "Фурьянский кинжал"'
+    lore:
+      - ' &8Невозможно использовать'
+      - '&7Оружие:&f Кинжал'
+      - '&7Накладывается в инвентаре'
+      - '&7на оружие.'
+      - '&cПосле снятия удаляется.'
+      - ''
+      - '&fЦена покупки: &c3000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы купить.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 3000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] svar add player_money -3000 %player_name%'
+      - '[console] ii give %player_name% skin_dagger_riddik 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'skin_spear_dyo_naginata':
+    material: EPICFIGHT_IRON_SPEAR
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:1
+    display_name: '&bОблик "Двухсторонняя нагината"'
+    lore:
+      - ' &8Невозможно использовать'
+      - '&7Оружие:&f Копье'
+      - '&7Накладывается в инвентаре'
+      - '&7на оружие.'
+      - '&cПосле снятия удаляется.'
+      - ''
+      - '&fЦена покупки: &c3000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы купить.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 3000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] svar add player_money -3000 %player_name%'
+      - '[console] ii give %player_name% skin_spear_dyo_naginata 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'skin_longsword_zweichander':
+    material: EPICFIGHT_IRON_LONGSWORD
+    slot: 3
+    priority: 4
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:1
+    display_name: '&bОблик "Цвайхендер"'
+    lore:
+      - ' &8Невозможно использовать'
+      - '&7Оружие:&f Длинный меч'
+      - '&7Накладывается в инвентаре'
+      - '&7на оружие.'
+      - '&cПосле снятия удаляется.'
+      - ''
+      - '&fЦена покупки: &c3000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы купить.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 3000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] svar add player_money -3000 %player_name%'
+      - '[console] ii give %player_name% skin_longsword_zweichander 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'skin_greatsword_guts':
+    material: EPICFIGHT_IRON_GREATSWORD
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:1
+    display_name: '&bОблик "Убийца драконов"'
+    lore:
+      - ' &8Невозможно использовать'
+      - '&7Оружие:&f Большой меч'
+      - '&7Накладывается в инвентаре'
+      - '&7на оружие.'
+      - '&cПосле снятия удаляется.'
+      - ''
+      - '&fЦена покупки: &c3000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы купить.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 3000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] svar add player_money -3000 %player_name%'
+      - '[console] ii give %player_name% skin_greatsword_guts 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'skin_axe_golden_axe':
+    material: IRON_AXE
+    slot: 5
+    priority: 4
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:2
+    display_name: '&bОблик "Позолоченный топор"'
+    lore:
+      - ' &8Невозможно использовать'
+      - '&7Оружие:&f Топор'
+      - '&7Накладывается в инвентаре'
+      - '&7на оружие.'
+      - '&cПосле снятия удаляется.'
+      - ''
+      - '&fЦена покупки: &c3000Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы купить.'
+    click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 3000'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    click_commands:
+      - '[console] svar add player_money -3000 %player_name%'
+      - '[console] ii give %player_name% skin_axe_golden_axe 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+
+  'back':
+    material: PAPER
+    slot: 27
+    priority: 4
+    update: true
+    hide_attributes: true
+    nbt_int: CustomModelData:13
+    display_name: '&fВернуться назад'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы вернуться.'
+    click_commands:
+      - '[openguimenu] menu_buy_smith'
+      - '[refresh]'
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [27,28,29,30,31,32,33,34,35]
+    display_name: ' '
+    nbt_int: CustomModelData:1

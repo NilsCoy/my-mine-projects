@@ -1,0 +1,103 @@
+case_small_eat:
+  material: 'BRICK'
+  display-name: '&bМалый ящик с едой'
+  custom-model-data: 36
+  update-item: true
+  lore:
+    - '&7Хранит в себе набор с едой.'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'
+case_small_materials:
+  material: 'BRICK'
+  display-name: '&bМалый ящик с ресурсами'
+  custom-model-data: 35
+  update-item: true
+  lore:
+    - '&7Хранит в себе набор с ресурсами.'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'
+case_small_potion:
+  material: 'BRICK'
+  display-name: '&bМалый ящик с зельями'
+  custom-model-data: 34
+  update-item: true
+  lore:
+    - '&7Хранит в себе набор с зельями.'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'
+case_eat:
+  material: 'BRICK'
+  display-name: '&bЯщик с едой'
+  custom-model-data: 38
+  update-item: true
+  lore:
+    - '&7Хранит в себе набор с едой.'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'
+case_materials:
+  material: 'BRICK'
+  display-name: '&bЯщик с ресурсами'
+  custom-model-data: 39
+  update-item: true
+  lore:
+    - '&7Хранит в себе набор с ресурсами.'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'
+case_potion:
+  material: 'BRICK'
+  display-name: '&bЯщик с зельями'
+  custom-model-data: 40
+  update-item: true
+  lore:
+    - '&7Хранит в себе набор с зельями.'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'
+case_color:
+  material: 'BRICK'
+  display-name: '&bЯщик с краской'
+  custom-model-data: 33
+  update-item: true
+  lore:
+    - '&7Хранит в себе набор с краской.'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'
+sponsor_1:
+  material: 'BRICK'
+  display-name: '&bSponsor 1 час'
+  custom-model-data: 95
+  update-item: true
+  lore:
+    - '&7Дает вам статус Sponsor'
+    - '&7на 1 час.'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'
+sponsor_3:
+  material: 'BRICK'
+  display-name: '&bSponsor 3 часа'
+  custom-model-data: 95
+  update-item: true
+  lore:
+    - '&7Дает вам статус Sponsor'
+    - '&7на 3 часa.'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'
+case_skin:
+  material: 'BRICK'
+  display-name: '&bСундук со скинами'
+  custom-model-data: 41
+  update-item: true
+  lore:
+    - '&7Хранит в себе набор скинов'
+    - '&7для оружия.'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'
+token:
+  material: 'BRICK'
+  display-name: '&bТокен'
+  custom-model-data: 37
+  update-item: true
+  lore:
+    - '&7Используется для разблокировки'
+    - '&7навыков и покупки косметики.'
+    - ''
+    - '&f[ ПКМ ] &7чтобы использовать!'

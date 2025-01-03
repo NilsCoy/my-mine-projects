@@ -1,0 +1,18 @@
+uuid: 4a24e6bd-ea3a-3318-8f49-61b87de854d0
+name: NilsCoy
+primary-group: default
+permissions:
+- mcpets.pet_horse3
+- promo_horizon
+- titul_1
+- titul_14
+- titul_17
+- titul_2
+- titul_3
+parents:
+- default
+- owner
+- sponsor
+meta:
+- lp-editor-key:
+    value: 99+rb523bYoR7OMcUAKwEQ47pkQ=

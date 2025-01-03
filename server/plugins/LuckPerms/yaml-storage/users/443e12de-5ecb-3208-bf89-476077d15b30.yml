@@ -1,0 +1,8 @@
+uuid: 443e12de-5ecb-3208-bf89-476077d15b30
+name: XuliGuns
+primary-group: default
+permissions:
+- promo_horizon
+- titul_17
+parents:
+- default

@@ -1,0 +1,20 @@
+uuid: 33df4bd2-977c-3f5b-bc4c-1c152339deb4
+name: N1XER__
+primary-group: default
+permissions:
+- mcpets.pet_horse1
+- mcpets.pet_horse2
+- promo_horizon
+- skill_dodge2
+- skill_strength1
+- skill_strength2
+- titul_1
+- titul_11
+- titul_12
+- titul_14
+- titul_15
+- titul_17
+- titul_2
+- titul_5
+parents:
+- default

@@ -1,0 +1,5 @@
+variables:
+  magica_mechanics_cooldown:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 0

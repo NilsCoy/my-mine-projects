@@ -1,0 +1,11 @@
+uuid: 5f163157-97b2-3ff9-9993-ef7b4f82d7e9
+name: hishimori8
+primary-group: default
+permissions:
+- promo_horizon
+- skill_strength1
+- titul_11
+- titul_14
+- titul_17
+parents:
+- default

@@ -1,0 +1,973 @@
+menu_title: '&f七七七七七七七七爱' # 七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七七&8Доска заданий
+open_commands:
+  - '[sound] BLOCK_WOOD_FALL 1 1'
+size: 27
+items:
+  'quest_1':
+    material: PAPER
+    slot: 25
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fТребуется убить сильную нежить'
+      - ''
+      - '&7Найти и уничтожить:'
+      - '&7 ● Восставший мастер меча'
+      - ''
+      - '&7Награда: &e5000Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:objective.boss1_kill.left%'
+          output: ''
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.boss1_kill_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 1'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 1'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 1'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 1'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 1'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 1'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table1 1'
+      - '[console] bq event %player_name% main-quest_table.boss1_kill'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_2':
+    material: PAPER
+    slot: 12
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fТребуется убить сильную нежить'
+      - ''
+      - '&7Найти и уничтожить:'
+      - '&7 ● Восставший владыка мертвых'
+      - ''
+      - '&7Награда: &e5000Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:objective.boss2_kill.left%'
+          output: ''
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.boss2_kill_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 2'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 2'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 2'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 2'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 2'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 2'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table2 1'
+      - '[console] bq event %player_name% main-quest_table.boss2_kill'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_3':
+    material: PAPER
+    slot: 19
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fТребуется убить сильную нежить'
+      - ''
+      - '&7Найти и уничтожить:'
+      - '&7 ● Восставший охотник льда'
+      - ''
+      - '&7Награда: &e5000Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:objective.boss3_kill.left%'
+          output: ''
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.boss3_kill_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 3'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 3'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 3'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 3'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 3'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 3'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table3 1'
+      - '[console] bq event %player_name% main-quest_table.boss3_kill'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_4':
+    material: PAPER
+    slot: 15
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fВ последнее время развелось'
+      - '&fмного животных...'
+      - ''
+      - '&7Поохотиться на живность:'
+      - '&7 ● Дикий кабан x30'
+      - ''
+      - '&7Награда: &e800Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:objective.animal1_kill.left%'
+          output: ''
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.animal1_kill_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 4'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 4'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 4'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 4'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 4'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 4'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table4 1'
+      - '[console] bq event %player_name% main-quest_table.animal1_kill'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_5':
+    material: PAPER
+    slot: 24
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fВ последнее время развелось'
+      - '&fмного животных...'
+      - ''
+      - '&7Поохотиться на живность:'
+      - '&7 ● Дикая корова x30'
+      - ''
+      - '&7Награда: &e800Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:objective.animal2_kill.left%'
+          output: ''
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.animal2_kill_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 5'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 5'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 5'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 5'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 5'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 5'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table5 1'
+      - '[console] bq event %player_name% main-quest_table.animal2_kill'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_6':
+    material: PAPER
+    slot: 20
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fВ последнее время развелось'
+      - '&fмного животных...'
+      - ''
+      - '&7Поохотиться на живность:'
+      - '&7 ● Дикая овца x30'
+      - ''
+      - '&7Награда: &e800Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:objective.animal3_kill.left%'
+          output: ''
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.animal3_kill_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 6'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 6'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 6'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 6'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 6'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 6'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table6 1'
+      - '[console] bq event %player_name% main-quest_table.animal3_kill'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_7':
+    material: PAPER
+    slot: 8
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fВ последнее время развелось'
+      - '&fмного животных...'
+      - ''
+      - '&7Поохотиться на живность:'
+      - '&7 ● Дикий волк x30'
+      - ''
+      - '&7Награда: &e1500Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:objective.animal4_kill.left%'
+          output: ''
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.animal4_kill_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 7'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 7'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 7'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 7'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 7'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 7'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table7 1'
+      - '[console] bq event %player_name% main-quest_table.animal4_kill'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_8':
+    material: PAPER
+    slot: 22
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fНа горизонте появился внезапный'
+      - '&fвраг...'
+      - ''
+      - '&7Избавиться от противников:'
+      - '&7 ● Восставший скелет x30'
+      - ''
+      - '&7Награда: &e1000Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:objective.mob1_kill.left%'
+          output: ''
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.mob1_kill_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 8'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 8'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 8'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 8'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 8'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 8'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table8 1'
+      - '[console] bq event %player_name% main-quest_table.mob1_kill'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_9':
+    material: PAPER
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fНа горизонте появился внезапный'
+      - '&fвраг...'
+      - ''
+      - '&7Избавиться от противников:'
+      - '&7 ● Разбойник x30'
+      - ''
+      - '&7Награда: &e3000Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:objective.mob2_kill.left%'
+          output: ''
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.mob2_kill_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 9'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 9'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 9'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 9'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 9'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 9'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table9 1'
+      - '[console] bq event %player_name% main-quest_table.mob2_kill'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_10':
+    material: PAPER
+    slot: 16
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fАлхимику требуется ингридиенты...'
+      - ''
+      - '&7Насобирать трав:'
+      - '&7 ● Лепесток тысячелистника x16'
+      - ''
+      - '&7Награда: &e1000Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.farming1_done_condition%'
+          output: 'false'
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.farming1_reward_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 10'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 10'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 10'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 10'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 10'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 10'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table10 1'
+      - '[console] bq event %player_name% main-quest_table.farming1_done_add'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_11':
+    material: PAPER
+    slot: 2
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fАлхимику требуется ингридиенты...'
+      - ''
+      - '&7Насобирать трав:'
+      - '&7 ● Корень горькоцвета x16'
+      - ''
+      - '&7Награда: &e1000Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.farming2_done_condition%'
+          output: 'false'
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.farming2_reward_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 11'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 11'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 11'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 11'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 11'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 11'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table11 1'
+      - '[console] bq event %player_name% main-quest_table.farming2_done_add'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_12':
+    material: PAPER
+    slot: 17
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fАлхимику требуется ингридиенты...'
+      - ''
+      - '&7Насобирать трав:'
+      - '&7 ● Семена полыни x16'
+      - ''
+      - '&7Награда: &e1000Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.farming3_done_condition%'
+          output: 'false'
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.farming3_reward_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 12'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 12'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 12'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 12'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 12'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 12'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table12 1'
+      - '[console] bq event %player_name% main-quest_table.farming3_done_add'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_13':
+    material: PAPER
+    slot: 9
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fАлхимику требуется ингридиенты...'
+      - ''
+      - '&7Насобирать цветов:'
+      - '&7 ● Блудроз x16'
+      - ''
+      - '&7Награда: &e1500Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.farming4_done_condition%'
+          output: 'false'
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.farming4_reward_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 13'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 13'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 13'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 13'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 13'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 13'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table14 1'
+      - '[console] bq event %player_name% main-quest_table.farming4_done_add'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_14':
+    material: PAPER
+    slot: 4
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fАлхимику требуется ингридиенты...'
+      - ''
+      - '&7Насобирать цветов:'
+      - '&7 ● Желтоцвет x16'
+      - ''
+      - '&7Награда: &e1500Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.farming5_done_condition%'
+          output: 'false'
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.farming5_reward_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 14'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 14'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 14'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 14'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 14'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 14'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table13 1'
+      - '[console] bq event %player_name% main-quest_table.farming5_done_add'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_15':
+    material: PAPER
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fКузнецу нужны ресурсы для'
+      - '&fковки...'
+      - ''
+      - '&7Добыть руду:'
+      - '&7 ● Уголь x32'
+      - ''
+      - '&7Награда: &e800Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.mining1_done_condition%'
+          output: 'false'
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.mining1_reward_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 15'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 15'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 15'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 15'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 15'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 15'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table15 1'
+      - '[console] bq event %player_name% main-quest_table.mining1_done_add'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'
+  'quest_16':
+    material: PAPER
+    slot: 14
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:33
+    display_name: '&fВывеска на доске'
+    lore:
+      - '&fКузнецу нужны ресурсы для'
+      - '&fковки...'
+      - ''
+      - '&7Добыть руду:'
+      - '&7 ● Железная руда x32'
+      - ''
+      - '&7Награда: &e800Ⓒ'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы взять задание!'
+    view_requirement:
+      minimum_requirements: 3
+      stop_at_success: true
+      requirements:
+        req1:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.mining2_done_condition%'
+          output: 'false'
+          optional: false
+        req2:
+          type: 'string equals'
+          input: '%betonquest_main-quest_table:condition.mining2_reward_condition%'
+          output: 'false'
+          optional: false
+        req3:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_1.amount% == 16'
+          optional: true
+        req4:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_2.amount% == 16'
+          optional: true
+        req5:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_3.amount% == 16'
+          optional: true
+        req6:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_4.amount% == 16'
+          optional: true
+        req7:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_5.amount% == 16'
+          optional: true
+        req8:
+          type: 'javascript'
+          expression: '%betonquest_main-quest_table:globalpoint.daily_quest_6.amount% == 16'
+          optional: true
+    click_commands:
+      - '[console] ii give %player_name% quest_table16 1'
+      - '[console] bq event %player_name% main-quest_table.mining2_done_add'
+      - '[sound] ITEM_BOOK_PAGE_TURN 1 1.5'
+      - '[refresh]'

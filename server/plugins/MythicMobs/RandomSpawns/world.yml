@@ -1,0 +1,290 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+ 
+
+# bush:
+  # Action: ADD
+  # MobType: bush
+  # Chance: 0.1
+  # Priority: 2
+  # Worlds: world
+  # Conditions:
+  # - inblock{b=WATER,LAVA} false
+  # - playernotwithin{d=8} true
+  # - onblock{m=GRASS_BLOCK} true
+  # - region{r=village1,grave1,wolf1} false
+  # - mobsinchunk{a=<1} true
+  # # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  # PositionType: LAND
+# flower:
+  # Action: ADD
+  # MobType: flower
+  # Chance: 0.1
+  # Priority: 2
+  # Worlds: world
+  # Conditions:
+  # - inblock{b=WATER,LAVA} false
+  # - playernotwithin{d=8} true
+  # - onblock{m=GRASS_BLOCK} true
+  # - region{r=village1,grave1,wolf1} false
+  # - mobsinchunk{a=<1} true
+  # # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  # PositionType: LAND
+# brown_mushroom:
+  # Action: ADD
+  # MobType: brown_mushroom
+  # Chance: 0.1
+  # Priority: 2
+  # Worlds: world
+  # Conditions:
+  # - inblock{b=WATER,LAVA} false
+  # - playernotwithin{d=8} true
+  # - onblock{m=GRASS_BLOCK} true
+  # - region{r=village1,grave1,wolf1} false
+  # - mobsinchunk{a=<1} true
+  # # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  # PositionType: LAND
+chest1:
+  Action: ADD
+  MobType: chest1
+  Chance: 0.0025
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,tutorial1,grave1,wolf1,town1,arena1} false
+  - mobsinchunk{a=<1} true
+  # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  PositionType: LAND
+boss_spawner:
+  Action: ADD
+  MobType: boss_spawner
+  Chance: 0.00008
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,tutorial1,grave1,wolf1,town1,arena1} false
+  - mobsinchunk{a=<1} true
+  - inside false
+  PositionType: LAND
+blue_mushrooman:
+  Action: ADD
+  MobType: blue_mushrooman
+  Chance: 0.0005
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,tutorial1,grave1,wolf1,town1,arena1} false
+  - mobsinchunk{a=<1} true
+  # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  PositionType: LAND
+mushrooman:
+  Action: ADD
+  MobType: mushrooman
+  Chance: 0.002
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,tutorial1,grave1,wolf1,town1,arena1} false
+  - mobsinchunk{a=<1} true
+  # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  PositionType: LAND
+wild_bee:
+  Action: ADD
+  MobType: wild_bee
+  Chance: 0.004
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,tutorial1,grave1,wolf1,town1,arena1} false
+  - mobsinchunk{a=<1} true
+  # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  PositionType: LAND
+traveling_merchant:
+  Action: ADD
+  MobType: traveling_merchant
+  Chance: 0.0002
+  Priority: 1
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,tutorial1,grave1,wolf1,town1,arena1} false
+  - mobsinchunk{a=<1} true
+  PositionType: LAND
+skelet:
+  Action: ADD
+  MobType: skelet_leader
+  Chance: 0.02
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,tutorial1,town1,arena1} false
+  - region{r=loc2,loc3,loc4} true
+  - night true
+  - mobsinchunk{a=<1} true
+  - inside false
+  # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  PositionType: LAND
+wild_wolf:
+  Action: ADD
+  MobType: wild_wolf_leader
+  Chance: 0.02
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,tutorial1,town1,arena1} false
+  - region{r=loc2,loc3,loc4} true
+  - night true
+  - mobsinchunk{a=<1} true
+  - inside false
+  # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  PositionType: LAND
+wild_boar:
+  Action: ADD
+  MobType: wild_boar_leader
+  Chance: 0.02
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,grave1,grave2,wolf1,town1,pillager_camp1,pillager_camp2,arena1} false
+  - region{r=loc1,loc3} true
+  - mobsinchunk{a=<1} true
+  # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  PositionType: LAND
+wild_cow:
+  Action: ADD
+  MobType: wild_cow_leader
+  Chance: 0.02
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,grave1,grave2,wolf1,town1,pillager_camp1,pillager_camp2,arena1} false
+  - region{r=loc2,loc3,loc4} true
+  - mobsinchunk{a=<1} true
+  - inside false
+  # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  PositionType: LAND
+wild_sheep:
+  Action: ADD
+  MobType: wild_sheep_leader
+  Chance: 0.02
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,grave1,grave2,wolf1,town1,pillager_camp1,pillager_camp2,arena1} false
+  - region{r=loc2,loc3,loc4} true
+  - mobsinchunk{a=<1} true
+  - inside false
+  # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  PositionType: LAND
+wild_chicken:
+  Action: ADD
+  MobType: wild_chicken_leader
+  Chance: 0.02
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,grave1,grave2,wolf1,town1,pillager_camp1,pillager_camp2,arena1} false
+  - region{r=loc1} true
+  - mobsinchunk{a=<1} true
+  - inside false
+  # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  PositionType: LAND
+wild_rabbit:
+  Action: ADD
+  MobType: wild_rabbit_leader
+  Chance: 0.02
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,grave1,grave2,wolf1,town1,pillager_camp1,pillager_camp2,arena1} false
+  - region{r=loc1} true
+  - mobsinchunk{a=<1} true
+  - inside false
+  # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  PositionType: LAND
+wild_hog:
+  Action: ADD
+  MobType: wild_hog_leader
+  Chance: 0.005
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,grave1,grave2,wolf1,town1,pillager_camp1,pillager_camp2,arena1} false
+  - region{r=loc2,loc3,loc4} true
+  - mobsinchunk{a=<1} true
+  - inside false
+  # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  PositionType: LAND
+shadow:
+  Action: ADD
+  MobType: shadow
+  Chance: 0.008
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,grave1,grave2,wolf1,town1,pillager_camp1,pillager_camp2,arena1} false
+  - mobsinchunk{a=<1} true
+  - inside false
+  - night true
+  # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  PositionType: LAND
+pillager_warrior:
+  Action: ADD
+  MobType: pillager_warrior_leader
+  Chance: 0.001
+  Priority: 2
+  Worlds: world
+  Conditions:
+  - inblock{b=WATER,LAVA} false
+  - playernotwithin{d=8} true
+  - onblock{m=GRASS_BLOCK} true
+  - region{r=village1,grave1,grave2,wolf1,town1,pillager_camp1,pillager_camp2,arena1} false
+  - region{r=loc2,loc3,loc4} true
+  - mobsinchunk{a=<1} true
+  - inside false
+  # - stringequals{val1="%javascript_mob_cap%!";val2="ssss"} true
+  PositionType: LAND

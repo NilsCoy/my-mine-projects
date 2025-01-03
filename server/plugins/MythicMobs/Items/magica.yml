@@ -1,0 +1,11 @@
+magica:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3465
+    type: BLAZE_ROD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Магическая
+        палочка"}],"text":""}'
+      internal: H4sIAAAAAAAA/+NiYOBg4M1NTM9MTrRKTC7JzM9jEIZw44uzM3Ny4lMSgdxUhKLi1JzU5BIGroKi/CwgIzMnlQEADoiV20UAAAA=

@@ -1,0 +1,91 @@
+## Cartographer 2 Main Configuration
+
+# # Cartographer 2 Main Configuration
+# A list of IDs that are not allowed to become minimaps
+skip-ids:
+- 107
+
+# Whether or not the map rotates by default
+rotate-by-default: false
+# Whether or not the map shows the player's name by default
+showname-by-default: false
+
+# A list of blacklisted inventories that maps are not allowed to be put into,
+# such as the crafting table, anvil, and cartographer table
+# Find the full list here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html
+blacklisted-inventories:
+- ANVIL
+- WORKBENCH
+- CARTOGRAPHY
+
+# Enable this if you're making a palette and would like to get detailed warnings in the config about invalid materials
+palette-debug: false
+
+# The delay in ticks between map rendering. A value of 1 means it will render every tick. A value of 20 means it will render once every 20 ticks.
+render-delay: 3
+
+# How low the tps can get until Cartographer2 starts delaying some of its functions, such as map loading and chunk processing.
+# For example, if the limit is 16, Cartographer will keep operating until the tps drops below 16
+tick-limit: 18
+
+# Delay between updating blocks that change on the map, like water flowing and blocks growing.
+block-update:
+  # Change this to 0 if you want to disable updating for block physics events.
+  tick-delay: 4
+  update-amount: 200
+
+# Determines whether the player should be allowed to drop the minimap
+prevent-drop: true
+# Whether or not to use packets or the item drop event
+use-drop-packet: true
+
+chunk:
+  # Regular chunk processing
+  # Delay in ticks between each update
+  update-delay: 1
+  # Amount of chunks that get cached per update, if they're loaded
+  cache-per-update: 5
+
+  # Whether or not forced loading of chunks should happen
+  # If set to true, then the server will attempt to load ALL chunks that are missing on a minimap
+  # If set to false, then the server will only load chunks that have been naturally loaded
+  # Force loading chunks is highly server resource intensive, and should only be used if pre-loading the map
+  # It is equivalent to using Worldborder to load the entire world, or rendering with Dynmap
+  # Note that this does not mean your server will be lagging all the time, only when there are chunks that need loading
+  force-load: false
+
+  # These two only apply if force-load is enabled
+  # Amount of chunks that get loaded per update, if they exist but aren't loaded
+  load-per-update: 5
+  # Amount of chunks that get generated per update, if they don't exist
+  generate-per-update: 1
+
+# The images for Cartographer
+# Their location is relative to the plugin folder
+# It's recommended to keep them in a folder, like "images/" or something
+images:
+  # The overlay image that goes on top of the map
+  overlay: images/epica.png
+  # The background image, very last thing that players will normally see
+  background: images/empty.png
+  # The missing map image, when a minimap does not exist for a particular map
+  missing: images/missing.png
+  # The disabled image, when the minimap is blacklisted in a world
+  disabled: images/disabled.png
+
+# Whether or not to dither the missing map image. Works best with images of real things
+dither-missing: false
+
+# The default locale
+# 'default' is always present
+default-locale: default
+
+# Options pertaining to the renderer
+renderer:
+  # Async options
+  multithread:
+    # Whether to use async or not
+    enabled: true
+    # How many threads
+    threads: 8
+  use-subtasks: true

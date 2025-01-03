@@ -1,0 +1,8 @@
+name: sponsor
+permissions:
+- weight.2
+parents:
+- sponsor-item
+prefixes:
+- '&e🍪 &7| &f':
+    priority: 2

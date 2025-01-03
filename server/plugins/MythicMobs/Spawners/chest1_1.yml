@@ -1,0 +1,14 @@
+chest1_1:
+  MobName: chest1
+  World: world
+  X: 1032
+  Y: 106
+  Z: -852
+  Yaw: 0.0
+  Pitch: 0.0
+  MobLevel: '1'
+  Cooldown: 600
+  ActivationRange: 50.0
+  CooldownTimer: 1
+  SpawnerGroup: chest
+  Warmup: 0

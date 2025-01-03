@@ -1,0 +1,232 @@
+﻿
+pet_horse1:
+  Type: DONKEY
+  Display: '&aОсел'
+  Health: 10
+  Faction: animal
+  Options: 
+    CarryingChest: true
+    Saddled: true
+    MovementSpeed: 0.23
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Despawn: true
+    Collidable: false
+    Invincible: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+
+pet_horse2:
+  Type: MULE
+  Display: '&aМул'
+  Health: 20
+  Faction: animal
+  Options: 
+    CarryingChest: true
+    Saddled: true
+    MovementSpeed: 0.26
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Despawn: true
+    Collidable: false
+    Invincible: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+
+pet_horse3:
+  Type: HORSE
+  Display: '&aЛошадь'
+  Health: 15
+  Faction: animal
+  Options: 
+    Saddled: true
+    HorseStyle: BLACK_DOTS
+    HorseColor: BROWN
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Despawn: true
+    Collidable: false
+    Invincible: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+
+pet_horse4:
+  Type: CAMEL
+  Display: '&aВерблюд'
+  Health: 20
+  Faction: animal
+  Options: 
+    CarryingChest: true
+    Saddled: true
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Despawn: true
+    Collidable: false
+    Invincible: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+
+pet_horse5:
+  Type: HORSE
+  Disguise: POLAR_BEAR
+  Display: '&aМедведь'
+  Health: 20
+  Faction: animal
+  Options: 
+    CarryingChest: true
+    Saddled: true
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Despawn: true
+    Collidable: false
+    Invincible: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+
+boat1:
+  Type: PIG
+  Display: '&aЛодка'
+  Health: 10
+  Options: 
+    CarryingChest: true
+    Saddled: true
+    MovementSpeed: 0.1
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Despawn: true
+    Collidable: true
+    Invincible: false
+    Interactable: true
+  Skills:
+  - model{m=boat;usm=true;drive=true;ride=false;n=nametag;h=false} @self ~onSpawn
+  - mountmodel{mid=boat;m=Walking;dmg=true} @trigger ~onDamaged
+  AIGoalSelectors:
+  - 0 clear
+  - 1 float
+  AITargetSelectors:
+  - 0 clear
+
+pet_horse6:
+  Type: HORSE
+  Display: '&aБоевая лошадь'
+  Health: 30
+  Faction: animal
+  Options:
+    Saddled: true
+    HorseStyle: BLACK_DOTS
+    HorseColor: BROWN
+    HorseArmor: iron
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    Despawn: true
+    Collidable: false
+    Invincible: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  
+pet_horse7:
+  Type: HORSE
+  Display: '&aБоевая лошадь'
+  Health: 45
+  Faction: animal
+  Options:
+    HorseArmor: gold
+    Saddled: true
+    HorseStyle: BLACK_DOTS
+    HorseColor: BROWN
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    Despawn: true
+    Collidable: false
+    Invincible: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  
+pet_horse8:
+  Type: HORSE
+  Display: '&aБоевая лошадь'
+  Health: 60
+  Faction: animal
+  Options:
+    HorseArmor: diamond
+    Saddled: true
+    HorseStyle: BLACK_DOTS
+    HorseColor: BROWN
+    MovementSpeed: 0.15
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    Despawn: true
+    Collidable: false
+    Invincible: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear

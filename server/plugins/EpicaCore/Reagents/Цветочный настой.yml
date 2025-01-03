@@ -1,0 +1,8 @@
+PositiveEffect_1:
+  Name: SPEED
+  Duraction: 200
+  Level: 1
+NegativeEffect_1:
+  Name: CONFUSION
+  Duraction: 600
+  Level: 0

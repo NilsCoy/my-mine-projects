@@ -1,0 +1,26 @@
+{
+  "guid": "2977b827-4658-4cb3-a89a-2d07c092bf60",
+  "serverTypeGuid": "f738fb40-223e-4010-bd07-af4caabdf3dd",
+  "name": "Venus",
+  "description": "",
+  "creationDate": "2024-10-24T11:19:11.6633923+03:00",
+  "autostart": false,
+  "forceSaveOnStop": true,
+  "stopPrevention": "None",
+  "startupMethode": "JavaStartupLine",
+  "allocatedMemory": 40960,
+  "allocatedMemorySuffix": "GB",
+  "startupLine": "java -Xms256M -Xmx[RAM]M -jar purpur.jar",
+  "startupBatFilename": null,
+  "serverFileChecksum": "d95e92082a83ac999695e07968f2acbf288243bc410cdd807b8f043b17fbe39e",
+  "serverFileVersion": "1.18.2",
+  "javaPathOverride": "",
+  "tasks": {
+    "scheduledTasks": []
+  },
+  "backups": {
+    "backupTemplates": [],
+    "backupHistory": []
+  },
+  "subServers": []
+}

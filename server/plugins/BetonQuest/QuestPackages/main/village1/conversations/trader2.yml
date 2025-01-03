@@ -1,0 +1,48 @@
+conversations:
+  trader2:
+    quester: '&dШляпник'
+    first: 'npc_node_1'
+    stop: 'false'
+    NPC_options:
+      npc_node_1:
+        text: '&7Перед вами некто в черном плаще с цветными вкраплениями.\n\n&fПриветствую вас в своем маленьком магазинчике по продаже элегантных косметических товаров.'
+        condition: ''
+        event: ''
+        pointers: player_node_1, player_node_4
+
+      npc_node_2:
+        text: 'Мы, сеть магазинов, что продают шляпы на любой стиль. Хотите казаться грозным воином? Возьмите "Рогатый шлем". А может вам нравиться казаться более статным и современным, то обязательно попробуйте приобрести "Цилиндр"!'
+        condition: ''
+        event: ''
+        pointers: player_node_2
+
+      npc_node_3:
+        text: 'Это значит что мы есть в каждом городе, и мы продолжаем расширяться и небольшие поселения, ведь наши товары исключительны.'
+        condition: ''
+        event: ''
+        pointers: player_node_3
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Что это за магазин такой?'
+        condition: '!trader2_start'
+        event: 'trader2_start'
+        pointers: npc_node_2
+
+      player_node_2:
+        text: 'Что означает эта твоя "Сеть магазинов"? '
+        condition: ''
+        event: ''
+        pointers: npc_node_3
+
+      player_node_3:
+        text: 'Что же, давай поглядим, что ты продаешь. [ Торговля ]'
+        condition: ''
+        event: 'hats'
+
+      player_node_4:
+        text: 'Я хочу взглянуть на шляпы. [ Торговля ]'
+        condition: 'trader2_start'
+        event: 'hats'

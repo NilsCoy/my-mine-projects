@@ -1,0 +1,303 @@
+menu_title: '&6Покупка'
+open_commands:
+  - '[sound] ENTITY_VILLAGER_TRADE 1 0.8'
+size: 27
+items:
+
+
+  'cookie':
+    material: COOKIE
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&aПеченье'
+    lore:
+      - '&fЦена покупки: &c15Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить 1 шт.'
+      - '&7[ЛКМ + Shift] чтобы купить 32 шт.'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 15'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 480'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -15 %player_name%'
+      - '[console] ii give %player_name% cookie 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar add player_money -480 %player_name%'
+      - '[console] ii give %player_name% cookie 32'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'bread':
+    material: BREAD
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&aХлеб'
+    lore:
+      - '&fЦена покупки: &c30Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить 1 шт.'
+      - '&7[ЛКМ + Shift] чтобы купить 32 шт.'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 30'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 960'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -30 %player_name%'
+      - '[console] ii give %player_name% bread 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar add player_money -960 %player_name%'
+      - '[console] ii give %player_name% bread 32'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  'beef':
+    material: COOKED_BEEF
+    slot: 15
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&aСтейк'
+    lore:
+      - '&fЦена покупки: &c60Ⓒ'
+      - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      - ''
+      - '&7[ЛКМ] чтобы купить 1 шт.'
+      - '&7[ЛКМ + Shift] чтобы купить 32 шт.'
+    left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 60'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    shift_left_click_requirement:
+      requirements:
+        anything_here_1:
+          type: javascript
+          expression: '%servervariables_value_player_money% >= 1920'
+      deny_commands:
+        - '[message] &cУ вас недостаточно монет!'
+        - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    left_click_commands:
+      - '[console] svar add player_money -60 %player_name%'
+      - '[console] ii give %player_name% beef 1'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+    shift_left_click_commands:
+      - '[console] svar add player_money -1920 %player_name%'
+      - '[console] ii give %player_name% beef 32'
+      - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      - '[refresh]'
+
+  # 'golden_apple':
+    # material: GOLDEN_APPLE
+    # slot: 31
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # #nbt_int: CustomModelData:81
+    # display_name: '&aЗолотое яблоко'
+    # lore:
+      # - '&fЦена покупки: &c150Ⓒ'
+      # - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      # - ''
+      # - '&7[ЛКМ] чтобы купить 1 шт.'
+      # - '&7[ЛКМ + Shift] чтобы купить 32 шт.'
+    # left_click_requirement:
+      # requirements:
+        # anything_here_1:
+          # type: javascript
+          # expression: '%servervariables_value_player_money% >= 150'
+      # deny_commands:
+        # - '[message] &cУ вас недостаточно монет!'
+        # - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    # shift_left_click_requirement:
+      # requirements:
+        # anything_here_1:
+          # type: javascript
+          # expression: '%servervariables_value_player_money% >= 4800'
+      # deny_commands:
+        # - '[message] &cУ вас недостаточно монет!'
+        # - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    # left_click_commands:
+      # - '[console] svar add player_money -150 %player_name%'
+      # - '[console] ii give %player_name% golden_apple 1'
+      # - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      # - '[refresh]'
+    # shift_left_click_commands:
+      # - '[console] svar add player_money -4800 %player_name%'
+      # - '[console] ii give %player_name% golden_apple 32'
+      # - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      # - '[refresh]'
+      
+  # 'heal1':
+    # material: POTION
+    # rgb: '245,66,158'
+    # slot: 28
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # hide_effects: true
+    # #nbt_int: CustomModelData:81
+    # display_name: '&aРазбавленное зелье здоровья'
+    # lore:
+      # - '&7Восстанавлиает 16 здоровья за 10 сек.'
+      # - ''
+      # - '&fЦена покупки: &c150Ⓒ'
+      # - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      # - ''
+      # - '&7[ЛКМ] чтобы купить 1 шт.'
+    # left_click_requirement:
+      # requirements:
+        # anything_here_1:
+          # type: javascript
+          # expression: '%servervariables_value_player_money% >= 150'
+      # deny_commands:
+        # - '[message] &cУ вас недостаточно монет!'
+        # - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    # left_click_commands:
+      # - '[console] svar add player_money -150 %player_name%'
+      # - '[console] ii give %player_name% heal1 1'
+      # - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      # - '[refresh]'
+
+  # 'heal2':
+    # material: POTION
+    # rgb: '245,66,158'
+    # slot: 30
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # hide_effects: true
+    # #nbt_int: CustomModelData:81
+    # display_name: '&aСлабое зелье здоровья'
+    # lore:
+      # - '&7Восстанавлиает 16 здоровья за 5 сек.'
+      # - ''
+      # - '&fЦена покупки: &c300Ⓒ'
+      # - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      # - ''
+      # - '&7[ЛКМ] чтобы купить 1 шт.'
+    # left_click_requirement:
+      # requirements:
+        # anything_here_1:
+          # type: javascript
+          # expression: '%servervariables_value_player_money% >= 300'
+      # deny_commands:
+        # - '[message] &cУ вас недостаточно монет!'
+        # - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    # left_click_commands:
+      # - '[console] svar add player_money -300 %player_name%'
+      # - '[console] ii give %player_name% heal2 1'
+      # - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      # - '[refresh]'
+
+  # 'heal3':
+    # material: POTION
+    # rgb: '245,66,158'
+    # slot: 32
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # hide_effects: true
+    # #nbt_int: CustomModelData:81
+    # display_name: '&aЗелье здоровья'
+    # lore:
+      # - '&7Восстанавлиает 30 здоровья за 10 сек.'
+      # - ''
+      # - '&fЦена покупки: &c600Ⓒ'
+      # - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      # - ''
+      # - '&7[ЛКМ] чтобы купить 1 шт.'
+    # left_click_requirement:
+      # requirements:
+        # anything_here_1:
+          # type: javascript
+          # expression: '%servervariables_value_player_money% >= 600'
+      # deny_commands:
+        # - '[message] &cУ вас недостаточно монет!'
+        # - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    # left_click_commands:
+      # - '[console] svar add player_money -600 %player_name%'
+      # - '[console] ii give %player_name% heal3 1'
+      # - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      # - '[refresh]'
+
+  # 'heal4':
+    # material: POTION
+    # rgb: '245,66,158'
+    # slot: 34
+    # priority: 4
+    # update: true
+    # hide_attributes: false
+    # hide_effects: true
+    # #nbt_int: CustomModelData:81
+    # display_name: '&aХорошее зелье здоровья'
+    # lore:
+      # - '&7Восстанавлиает MAX здоровья за 5 сек.'
+      # - ''
+      # - '&fЦена покупки: &c1200Ⓒ'
+      # - '&fВаши монеты: &e%servervariables_value_player_money%Ⓒ'
+      # - ''
+      # - '&7[ЛКМ] чтобы купить 1 шт.'
+    # left_click_requirement:
+      # requirements:
+        # anything_here_1:
+          # type: javascript
+          # expression: '%servervariables_value_player_money% >= 1200'
+      # deny_commands:
+        # - '[message] &cУ вас недостаточно монет!'
+        # - '[sound] ENTITY_VILLAGER_NO 1 0.8'
+    # left_click_commands:
+      # - '[console] svar add player_money -1200 %player_name%'
+      # - '[console] ii give %player_name% heal4 1'
+      # - '[sound] ENTITY_VILLAGER_YES 1 0.8'
+      # - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,8,9,17,18,26]
+    display_name: ' '
+    nbt_int: CustomModelData:1

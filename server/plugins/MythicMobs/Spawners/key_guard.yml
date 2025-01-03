@@ -1,0 +1,15 @@
+key_guard:
+  MobName: key_guard
+  Cooldown: 900
+  Warmup: 0
+  World: world
+  X: 1723
+  Y: 73
+  Z: -241
+  Yaw: 0.0
+  Pitch: 0.0
+  MobLevel: '1'
+  ActivationRange: 100.0
+  LeashRange: 100.0
+  CooldownTimer: 1
+  ActiveMobs: 1

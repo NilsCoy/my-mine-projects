@@ -1,0 +1,15 @@
+tutorial_skelet:
+  MobName: tutorial_skelet
+  Cooldown: 60
+  Warmup: 0
+  World: world
+  X: 1
+  Y: 75
+  Z: 52
+  Yaw: 0.0
+  Pitch: 0.0
+  MobLevel: '1'
+  MaxMobs: '1'
+  ActivationRange: 100.0
+  LeashRange: 100.0
+  CooldownTimer: 1

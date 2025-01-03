@@ -1,0 +1,8 @@
+uuid: 93484e76-5d47-3ca5-b185-01f64dfd4384
+name: kakapinet
+primary-group: default
+permissions:
+- promo_horizon
+- titul_17
+parents:
+- default

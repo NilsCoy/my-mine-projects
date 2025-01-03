@@ -1,0 +1,8 @@
+PositiveEffect_1:
+  Name: WATER_BREATHING
+  Duraction: 200
+  Level: 0
+NegativeEffect_1:
+  Name: CONFUSION
+  Duraction: 300
+  Level: 0

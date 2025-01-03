@@ -1,0 +1,11 @@
+objectives:
+  # boss1_kill: "mmobkill skelet amount:1 persistent events:boss1_kill"
+  boss1_kill: "mmobkill sword_master_random_boss amount:1 events:boss1_kill_add,quest_complete_notify"
+  boss2_kill: "mmobkill summoner_random_boss amount:1 events:boss2_kill_add,quest_complete_notify"
+  boss3_kill: "mmobkill hunter_random_boss amount:1 events:boss3_kill_add,quest_complete_notify"
+  animal1_kill: "mmobkill wild_boar amount:30 events:animal1_kill_add,quest_complete_notify"
+  animal2_kill: "mmobkill wild_cow amount:30 events:animal2_kill_add,quest_complete_notify"
+  animal3_kill: "mmobkill wild_sheep amount:30 events:animal3_kill_add,quest_complete_notify"
+  animal4_kill: "mmobkill wild_wolf amount:30 events:animal4_kill_add,quest_complete_notify"
+  mob1_kill: "mmobkill skelet amount:30 events:mob1_kill_add,quest_complete_notify"
+  mob2_kill: "mmobkill pillager_warrior,pillager_warrior_leader,pillager_archer,pillager_guard,pillager_executioner amount:30 events:mob2_kill_add,quest_complete_notify"

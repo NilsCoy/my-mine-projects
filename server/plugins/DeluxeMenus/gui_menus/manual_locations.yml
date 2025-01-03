@@ -1,0 +1,67 @@
+menu_title: '&6Справочник: Карта'
+open_commands:
+  - '[sound] ITEM_BOOK_PAGE_TURN 1 1'
+size: 27
+items:
+  'tetra':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Y0MDk0MmYzNjRmNmNiY2VmZmNmMTE1MTc5NjQxMDI4NmE0OGIxYWViYTc3MjQzZTIxODAyNmMwOWNkMSJ9fX0=
+    slot: 11
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fТетра'
+    lore:
+      - '&7Мир смертных, где в основном проживают люди,'
+      - '&7животные, а также монстры.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы открыть страницу!'
+    click_commands:
+      - '[openguimenu] manual_locations_tetra1'
+      - '[refresh]'
+  'void':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmVlMDYzMjFiY2NhNThlYWRjNzhhZWFmZWYxODhiYjYxM2EyYTgyYzNjMjdmZjIyYWVmNDVjNGRmMmIzZDgifX19
+    slot: 15
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fБездна'
+    lore:
+      - '&7Обратный мир, где "другие" скрывают свое'
+      - '&7существование.'
+      - '&7&kПристанище богов или разных невообразимых существ, '
+      - '&7&kкоторые либо скрываются там, либо запечатаны.'
+      - '&7&kМетоды попадания в бездну разные, ведь там могут'
+      - '&7&kсуществовать "чужие миры", а также их осколки,'
+      - '&7&kкоторые могут служить связующим элементом.'
+      - ''
+      - '&f&k[ ЛКМ ] &7&kчтобы открыть страницу!'
+    click_commands:
+      #- '[openguimenu] manual_locations_void1'
+      - '[refresh]'
+
+
+
+  'home':
+    material: PAPER
+    slot: 18
+    priority: 4
+    update: true
+    hide_attributes: false
+    nbt_int: CustomModelData:13
+    display_name: '&fВернуться назад'
+    lore:
+      - '&f[ ЛКМ ] &7чтобы вернуться.'
+    click_commands:
+      - '[openguimenu] manual'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+    display_name: ' '
+    nbt_int: CustomModelData:1

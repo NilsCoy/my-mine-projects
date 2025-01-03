@@ -1,0 +1,8 @@
+PositiveEffect_1:
+  Name: INVISIBILITY
+  Duraction: 400
+  Level: 0
+NegativeEffect_1:
+  Name: WITHER
+  Duraction: 300
+  Level: 0

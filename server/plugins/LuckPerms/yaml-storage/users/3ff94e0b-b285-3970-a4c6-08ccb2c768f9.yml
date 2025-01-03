@@ -1,0 +1,9 @@
+uuid: 3ff94e0b-b285-3970-a4c6-08ccb2c768f9
+name: Nike73
+primary-group: default
+permissions:
+- promo_horizon
+- titul_1
+- titul_17
+parents:
+- default

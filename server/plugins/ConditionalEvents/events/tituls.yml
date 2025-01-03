@@ -1,0 +1,81 @@
+Events:
+  titul_repetitive:
+    type: player_kill
+    #repetitive_time: 1200
+    conditions:
+    - '%statistic_mob_kills% >= 100 and %player_has_permission_titul_2% != yes execute actions1'
+    - '%statistic_mob_kills% >= 1000 and %player_has_permission_titul_3% != yes execute actions2'
+    - '%statistic_mob_kills% >= 10000 and %player_has_permission_titul_4% != yes execute actions3'
+    actions:
+      actions1:
+      - 'console_command: lp user %player_name% permission set titul_2'
+      - 'call_event: notify_titul'
+      actions2:
+      - 'console_command: lp user %player_name% permission set titul_3'
+      - 'call_event: notify_titul'
+      actions3:
+      - 'console_command: lp user %player_name% permission set titul_4'
+      - 'call_event: notify_titul'
+  titul_kills_fishing_mining:
+    type: custom
+    custom_event_data:
+      event: svar.ajneb97.api.VariableChangeEvent
+      player_variable: getPlayer()
+      variables_to_capture:
+      - '%variable_type%;getVariable().getVariableType()'
+      - '%variable_name%;getVariable().getName()'
+      - '%new_value%;getNewValue()'
+    conditions:
+    - '%variable_name% == player_kills and %servervariables_value_player_kills% >= 5 and %player_has_permission_titul_5% != yes execute actions1'
+    - '%variable_name% == player_kills and %servervariables_value_player_kills% >= 50 and %player_has_permission_titul_6% != yes execute actions2'
+    - '%variable_name% == player_kills and %servervariables_value_player_kills% >= 500 and %player_has_permission_titul_7% != yes execute actions3'
+    - '%variable_name% == player_kills and %servervariables_value_player_kills% >= 5000 and %player_has_permission_titul_8% != yes execute actions4'
+    - '%variable_name% == statistics_fishing and %servervariables_value_statistics_fishing% >= 20 and %player_has_permission_titul_11% != yes execute actions5'
+    - '%variable_name% == statistics_fishing and %servervariables_value_statistics_fishing% >= 200 and %player_has_permission_titul_12% != yes execute actions6'
+    - '%variable_name% == statistics_fishing and %servervariables_value_statistics_fishing% >= 2000 and %player_has_permission_titul_13% != yes execute actions7'
+    - '%variable_name% == statistics_mining and %servervariables_value_statistics_mining% >= 100 and %player_has_permission_titul_14% != yes execute actions8'
+    - '%variable_name% == statistics_mining and %servervariables_value_statistics_mining% >= 1000 and %player_has_permission_titul_15% != yes execute actions9'
+    - '%variable_name% == statistics_mining and %servervariables_value_statistics_mining% >= 10000 and %player_has_permission_titul_16% != yes execute actions10'
+    - '%variable_name% == statistics_farming and %servervariables_value_statistics_farming% >= 100 and %player_has_permission_titul_9% != yes execute actions11'
+    - '%variable_name% == player_level and %new_value% >= 100 and %player_has_permission_titul_18% != yes execute actions12'
+    - '%variable_name% == player_level and %new_value% >= 200 and %player_has_permission_titul_19% != yes execute actions13'
+    actions:
+      actions1:
+      - 'console_command: lp user %player_name% permission set titul_5'
+      - 'call_event: notify_titul'
+      actions2:
+      - 'console_command: lp user %player_name% permission set titul_6'
+      - 'call_event: notify_titul'
+      actions3:
+      - 'console_command: lp user %player_name% permission set titul_7'
+      - 'call_event: notify_titul'
+      actions4:
+      - 'console_command: lp user %player_name% permission set titul_8'
+      - 'call_event: notify_titul'
+      actions5:
+      - 'console_command: lp user %player_name% permission set titul_11'
+      - 'call_event: notify_titul'
+      actions6:
+      - 'console_command: lp user %player_name% permission set titul_12'
+      - 'call_event: notify_titul'
+      actions7:
+      - 'console_command: lp user %player_name% permission set titul_13'
+      - 'call_event: notify_titul'
+      actions8:
+      - 'console_command: lp user %player_name% permission set titul_14'
+      - 'call_event: notify_titul'
+      actions9:
+      - 'console_command: lp user %player_name% permission set titul_15'
+      - 'call_event: notify_titul'
+      actions10:
+      - 'console_command: lp user %player_name% permission set titul_16'
+      - 'call_event: notify_titul'
+      actions11:
+      - 'console_command: lp user %player_name% permission set titul_9'
+      - 'call_event: notify_titul'
+      actions12:
+      - 'console_command: lp user %player_name% permission set titul_18'
+      - 'call_event: notify_titul'
+      actions13:
+      - 'console_command: lp user %player_name% permission set titul_19'
+      - 'call_event: notify_titul'

@@ -1,0 +1,186 @@
+
+dungeon_skelet:
+  Type: SKELETON
+  Display: '&eВосставший скелет'
+  Health: 15
+  #Damage: 8
+  Faction: undead
+  Drops:
+  - bone1 1-5 1
+  - cmd{c="ii give <trigger.name> ingredient13"} 1 0.15
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 20
+    PreventSunburn: true
+    MaxCombatDistance: 256
+  Skills:
+  - skill{s=mob_default_skills} @self ~onTimer:10
+  - command{c="svar set dungeon1_cooldown 15"} ~onDeath
+  - command{c="ce call dungeon_close %dungeon_id%=1"} ~onDeath
+  - command{c="execute positioned <caster.l.x> <caster.l.y> <caster.l.z> run tp @a[distance=..10] 658.5 74 -75.5 180 0"} @target ~onDeath
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - WOODEN_SWORD HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - gotoparent
+  #- randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  Modules:
+    ThreatTable: true
+
+dungeon_fox_mob1:
+  Type: ZOMBIE
+  Disguise: silverfish
+  Display: '&eРыжая лиса'
+  Health: 15
+  Damage: 1
+  Faction: animal
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    Despawn: false
+    PreventVanillaDamage: true
+    Silent: true
+  #Drops:
+  #- cmd{c="ii give <trigger.name> coal 1"} 1 1
+  Skills:
+  #- skill{s=mob_default_skills} @self ~onTimer:10
+  - model{m=default_fox;n=false} @self ~onSpawn
+  - skill{s=dungeon_default_fox_attack} ~onAttack
+  - CancelEvent{sync=true} ~onAttack
+  - sound{s=entity.fox.ambient;v=1;p=1} @self ~onTimer:120
+  - sound{s=entity.fox.death;v=1;p=1} @self ~onDeath
+  - sound{s=entity.fox.hurt;v=1;p=1} @self ~onDamaged
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction undead
+  Modules:
+    ThreatTable: true
+
+dungeon_fox_boss:
+  Type: ZOMBIE
+  Disguise: silverfish
+  Display: '&eЧерная лиса'
+  Health: 15
+  Damage: 1
+  Faction: animal
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    FollowRange: 50
+    PreventSunburn: true
+    MaxCombatDistance: 256
+    Despawn: false
+    Silent: true
+  #Drops:
+  #- cmd{c="ii give <trigger.name> coal 1"} 1 1
+  Skills:
+  #- skill{s=mob_default_skills} @self ~onTimer:10
+  - skill{s=dungeon_black_fox_attack} ~onAttack
+  - CancelEvent{sync=true} ~onAttack
+  - model{m=black_fox;n=false} @self ~onSpawn
+  - state{mid=black_fox;s=attack} @self ~onAttack
+  - sound{s=entity.fox.ambient;v=1;p=0.5} @self ~onTimer:120
+  - sound{s=entity.fox.death;v=1;p=0.5} @self ~onDeath
+  - sound{s=entity.fox.hurt;v=1;p=0.5} @self ~onDamaged
+  - summon{type=dungeon_fox_reward;amount=1;radius=0} @self ~onDeath
+  Equipment:
+  - STONE_BUTTON HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction pillager
+  - SpecificFaction guard
+  - SpecificFaction undead
+  Modules:
+    ThreatTable: true
+
+dungeon_fox_chest:
+  Type: IRON_GOLEM
+  Display: '&fСундук'
+  Health: 100
+  Skills:
+  - skill{s=dungeon_chest_spawn} @self ~onSpawn
+  - skill{s=dungeon_chest_open} @self ~onDamaged
+  - skill{s=dungeon_chest_idle} @self ~onTimer:10
+  #- skill{s=mob_default_skills} @self ~onTimer:10
+  Options:
+    Silent: true
+    Despawn: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+    MaxCombatDistance: 256
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+
+dungeon_fox_reward:
+  Type: IRON_GOLEM
+  Display: '&fСундук'
+  Health: 100
+  Skills:
+  - skill{s=reward_chest_spawn} @self ~onSpawn
+  - skill{s=reward_fox_chest_open} @self ~onDamaged
+  - skill{s=dungeon_chest_idle} @self ~onTimer:10
+  #- skill{s=mob_default_skills} @self ~onTimer:10
+  Options:
+    Silent: true
+    Despawn: false
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    FollowRange: 1
+    PreventSunburn: true
+    NoAI: true
+    MovementSpeed: 0
+    KnockbackResistance: 1
+    MaxCombatDistance: 256
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear

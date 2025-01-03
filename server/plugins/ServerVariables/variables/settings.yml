@@ -1,0 +1,31 @@
+variables:
+  music_state:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 1
+
+  # notify_enable:
+    # variable_type: PLAYER
+    # value_type: INTEGER
+    # initial_value: 1
+  notify_xp_enable:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 1
+  notify_level_enable:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 1
+  notify_cycle_enable:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 1
+  notify_other_enable:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 1
+
+  protect_enable:
+    variable_type: PLAYER
+    value_type: INTEGER
+    initial_value: 1

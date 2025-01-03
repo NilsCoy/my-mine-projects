@@ -1,0 +1,41 @@
+conversations:
+  seller:
+    quester: '&aТорговец'
+    first: 'npc_node_1'
+    stop: 'false'
+    NPC_options:
+      npc_node_1:
+        text: '&7Заглянув в необычную лавку, перед вами предстает скупщик.&f\n\nДобрый день, посетитель! Вы в моей особой лавке, у вас есть что мне предложить?'
+        condition: ''
+        event: ''
+        pointers: player_node_1, player_node_4, player_node_2, player_node_3
+
+      npc_node_2:
+        text: 'Прошу прощения, но я человек занятой, поэтому воздержусь от ответа.'
+        condition: ''
+        event: ''
+        pointers: player_node_1, player_node_3
+
+
+
+    player_options:
+      player_node_1:
+        text: 'Я хочу продать некоторые ценности. [ Торговля ]'
+        condition: ''
+        event: 'sell'
+        
+      player_node_4:
+        text: 'Я хочу продать рыбу. [ Торговля ]'
+        condition: ''
+        event: 'fisher'
+
+      player_node_2:
+        text: 'Я хочу задать пару вопросов.'
+        condition: ''
+        event: ''
+        pointers: npc_node_2
+
+      player_node_3:
+        text: 'Я просто осматриваюсь. [ Уйти ]'
+        condition: ''
+        event: ''

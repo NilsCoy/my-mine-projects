@@ -1,0 +1,62 @@
+menu_title: '&6Справочник'
+open_commands:
+  - '[sound] ITEM_BOOK_PAGE_TURN 1 1'
+size: 27
+items:
+  'locations':
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjZlNjY5NmI2MzczOGJiY2M1ZmQ5NzM3MDllYTkwOTk3MjE1YjBjZmVlY2UyMGIyNjU5Y2I3YjM1ZjFiZjAifX19
+    slot: 10
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fКарта'
+    lore:
+      - '&7Посмотреть список локаций?'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы открыть страницу!'
+    click_commands:
+      - '[openguimenu] manual_locations'
+      - '[refresh]'
+  'bestiary':
+    material: PUFFERFISH_SPAWN_EGG
+    slot: 13
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fБестиарий'
+    lore:
+      - '&7Посмотреть список существ?'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы открыть страницу!'
+    click_commands:
+      - '[openguimenu] manual_bestiary'
+      - '[refresh]'
+  'faq':
+    material: WRITABLE_BOOK
+    slot: 16
+    priority: 4
+    update: true
+    hide_attributes: false
+    #nbt_int: CustomModelData:81
+    display_name: '&fFAQ'
+    lore:
+      - '&7Часто задаваемые вопросы.'
+      - '&7Здесь содержится информация.'
+      - '&7о механиках, нюансах игры и'
+      - '&7ответы на некоторые ваши вопросы.'
+      - ''
+      - '&f[ ЛКМ ] &7чтобы открыть страницу!'
+    click_commands:
+      - '[openguimenu] manual_faq'
+      - '[refresh]'
+
+
+
+  'filler_item':
+    material: PAPER
+    priority: 10
+    slots: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+    display_name: ' '
+    nbt_int: CustomModelData:1

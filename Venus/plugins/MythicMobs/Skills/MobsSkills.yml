@@ -1,0 +1,179 @@
+attack1:
+  Conditions:
+  - playerwithin{d=30} true
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=attack1-Tick;onHit=attack1-Hit;v=70;i=0.1;hR=1;vR=1;hnp=false;StartYOffset=1.3;StartFOffset=1} @TargetLocation
+  - effect:sound{s=block.beacon.deactivate;p=2} @SelfLocation
+attack2:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=attack1-Tick;onHit=attack1-Hit;v=70;i=0.1;hR=1;vR=1;hnp=true;StartYOffset=1.3;StartFOffset=1} @TargetLocation
+  - effect:sound{s=block.beacon.deactivate;p=2} @SelfLocation
+attack1-Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#8736C7;amount=20;speed=0;hS=0.1;vS=0.1}
+attack1-Hit:
+  Skills:
+  - damage{a=5;preventknockback=true}
+  - effect:sound{s=entity.shulker.shoot;p=1} @TargetLocation
+  #- effect:firework{t=BURST;d=0}
+attack_fail:
+  Skills:
+  - signal{s=A}
+
+
+
+
+money_drop:
+  Skills:
+  - setvar{var=skill.moneydrop;type=INTEGER;val="random(20, 100)"} @target
+  - message{m="&7Вы получили &d<skill.var.moneydrop> &7credits"} @target
+  - currencygive{amount=<skill.var.moneydrop>} @target
+money_drop_boss:
+  Skills:
+  - setvar{var=skill.moneydrop;type=INTEGER;val="random(500, 2000)"} @target
+  - message{m="&7Вы получили &d<skill.var.moneydrop> &7credits"} @target
+  - currencygive{amount=<skill.var.moneydrop>} @target
+
+
+
+show_name:
+  Skills:
+  - setvar{var=caster.nickname;type=STRING;val=" "} @self
+  - setname{name=<caster.var.nickname>} @self
+
+
+
+venus_boss_attack:
+  Conditions:
+  - playerwithin{d=30} true
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=attack1-Tick;onHit=venus_boss_attack-Hit;v=70;i=0.1;hR=1;vR=1;hnp=false;StartYOffset=1.3;StartFOffset=1} @TargetLocation
+  - effect:sound{s=block.beacon.deactivate;p=2} @SelfLocation
+venus_boss_attack-Hit:
+  Skills:
+  - damage{a=20;preventknockback=true}
+  - effect:sound{s=entity.shulker.shoot;p=1} @TargetLocation
+  #- effect:firework{t=BURST;d=0}
+
+venus_boss_skillcast:
+  Conditions:
+  - playerwithin{d=30} true
+  - targetinlineofsight true
+  Cooldown: 10
+  Skills:
+  - setspeed{speed=0;type=walking} @self
+  - effect:particleorbital{r=0.5;points=16;t=40;i=1;vy=20;particle=CRIT;oy=2} @self
+  - delay 40
+  - setspeed{speed=2;type=walking} @self
+  - randomskill{s=venus_boss_skill1_1 2, venus_boss_skill2_1 2, venus_boss_skill3 1, venus_boss_skill4 1} >50%
+  - randomskill{s=venus_boss_skill1_2 1, venus_boss_skill2_2 1, venus_boss_skill3 2, venus_boss_skill4 2} <50%
+
+venus_boss_skill1:
+  Skills:
+  - jump{velocity=1} @self
+  - delay 5
+  - jump{velocity=-1} @self
+  - delay 5
+  - effect:explosion @self
+  - damage{amount=15} @PIR{r=10}
+  - effect:particlering{particle=block_crack;material=STONE;radius=3;points=32;amount=1;hS=1;vS=0;y=0.1} @self
+  - delay 1
+  - effect:particlering{particle=block_crack;material=STONE;radius=4;points=32;amount=1;hS=1;vS=0;y=0.1} @self
+  - delay 1
+  - effect:particlering{particle=block_crack;material=STONE;radius=5;points=32;amount=1;hS=1;vS=0;y=0.1} @self
+  - delay 1
+  - effect:particlering{particle=block_crack;material=STONE;radius=6;points=32;amount=1;hS=1;vS=0;y=0.1} @self
+venus_boss_skill2:
+  Skills:
+  - effect:sound{s=entity.bat.takeoff;p=1} @self
+  - lunge{velocity=15;velocityY=1} @Self
+  - effect:particles{particle=flame;amount=10;hS=0.1;vS=0.1;speed=0.01;y=0.2} @self
+  - delay 1
+  - damage{amount=5} @PIR{r=5}
+  - effect:sound{s=entity.player.attack.sweep;p=1} @self
+  - effect:particles{particle=flame;amount=10;hS=0.1;vS=0.1;speed=0.01;y=0.2} @self
+  - delay 1
+  - damage{amount=5} @PIR{r=5}
+  - effect:sound{s=entity.player.attack.sweep;p=1} @self
+  - effect:particles{particle=flame;amount=10;hS=0.1;vS=0.1;speed=0.01;y=0.2} @self
+  - delay 1
+  - damage{amount=5} @PIR{r=5}
+  - effect:sound{s=entity.player.attack.sweep;p=1} @self
+  - effect:particles{particle=flame;amount=10;hS=0.1;vS=0.1;speed=0.01;y=0.2} @self
+  - delay 1
+  - damage{amount=5} @PIR{r=5}
+  - effect:sound{s=entity.player.attack.sweep;p=1} @self
+  - effect:particles{particle=flame;amount=10;hS=0.1;vS=0.1;speed=0.01;y=0.2} @self
+  - jump{velocity=-10} @self
+  - delay 1
+  - damage{amount=5} @PIR{r=5}
+  - effect:sound{s=entity.player.attack.sweep;p=1} @self
+  - effect:particles{particle=flame;amount=10;hS=0.1;vS=0.1;speed=0.01;y=0.2} @self
+  - delay 1
+  - damage{amount=5} @PIR{r=5}
+  - effect:sound{s=entity.player.attack.sweep;p=1} @self
+  - effect:particles{particle=flame;amount=10;hS=0.1;vS=0.1;speed=0.01;y=0.2} @self
+  - delay 1
+  - damage{amount=5} @PIR{r=5}
+  - effect:sound{s=entity.player.attack.sweep;p=1} @self
+  - effect:particles{particle=flame;amount=10;hS=0.1;vS=0.1;speed=0.01;y=0.2} @self
+  - delay 1
+  - damage{amount=5} @PIR{r=5}
+  - effect:sound{s=entity.player.attack.sweep;p=1} @self
+  - effect:particles{particle=flame;amount=10;hS=0.1;vS=0.1;speed=0.01;y=0.2} @self
+  - delay 1
+  - effect:sound{s=entity.player.attack.crit;p=1} @self
+  - effect:particles{particle=flame;amount=50;hS=0.5;vS=0.5;speed=0.1;y=1} @self
+  - damage{amount=10} @PIR{r=10}
+
+venus_boss_skill3:
+  Cooldown: 15
+  Skills:
+  - setspeed{speed=0;type=walking} @self
+  - equip{e=mmoitems{type=WEAPONS;id=WEAPON4} HAND} @self
+  - equip{e=AIR OFFHAND} @self
+  - delay 40
+  - skill{s=venus_boss_attack} @self
+  - delay 20
+  - equip{e=mmoitems{type=SWORD;id=SWORD1} HAND} @self
+  - equip{e=mmoitems{type=SWORD;id=SWORD1} OFFHAND} @self
+  - setspeed{speed=2;type=walking} @self
+
+venus_boss_skill4:
+  Cooldown: 15
+  Skills:
+  - setNoDamageTicks{ticks=200;delay=1}
+  - Aura{auraName=barrier;onTick=barrier-tick;interval=5;duration=200} @self
+barrier-tick:
+  Skills:
+  - effect:particlesphere{particle=reddust;color=#8736C7;amount=100;y=0.5;radius=1.5} @self
+
+venus_boss_skill1_1:
+  Cooldown: 15
+  Skills:
+  - skill{s=venus_boss_skill1}
+venus_boss_skill1_2:
+  Cooldown: 15
+  Skills:
+  - skill{s=venus_boss_skill1}
+  - delay 20
+  - skill{s=venus_boss_skill1}
+  - delay 20
+  - skill{s=venus_boss_skill1}
+
+venus_boss_skill2_1:
+  Cooldown: 15
+  Skills:
+  - skill{s=venus_boss_skill2}
+venus_boss_skill2_2:
+  Cooldown: 15
+  Skills:
+  - skill{s=venus_boss_skill2}
+  - delay 20
+  - skill{s=venus_boss_skill2}
+  - delay 20
+  - skill{s=venus_boss_skill2}

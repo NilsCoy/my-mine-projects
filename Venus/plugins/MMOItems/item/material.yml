@@ -1,0 +1,214 @@
+CRYSTAL1:
+  base:
+    name: '&bСиний кристалл'
+    custom-model-data: 1.0
+    material: AMETHYST_SHARD
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+    - '&7Можно продать.'
+CRYSTAL2:
+  base:
+    name: '&bЗеленый кристалл'
+    custom-model-data: 2.0
+    material: AMETHYST_SHARD
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+    - '&7Можно продать.'
+CRYSTAL3:
+  base:
+    name: '&bЖелтый кристалл'
+    custom-model-data: 3.0
+    material: AMETHYST_SHARD
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+    - '&7Можно продать.'
+CRYSTAL4:
+  base:
+    name: '&bКрасный кристалл'
+    custom-model-data: 4.0
+    material: AMETHYST_SHARD
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+    - '&7Можно продать.'
+CRYSTAL5:
+  base:
+    name: '&bЧерный кристалл'
+    custom-model-data: 5.0
+    material: AMETHYST_SHARD
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+MATERIAL1:
+  base:
+    name: '&fУкрепленная металлическая пластина'
+    lore:
+    - '&7Используются в крафте.'
+    custom-model-data: 6.0
+    material: STICK
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+MATERIAL2:
+  base:
+    name: '&fДетали'
+    lore:
+    - '&7Используются в крафте.'
+    custom-model-data: 7.0
+    material: STICK
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+MATERIAL3:
+  base:
+    name: '&fМалые шестерни'
+    lore:
+    - '&7Используются в крафте.'
+    custom-model-data: 8.0
+    material: STICK
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+MATERIAL4:
+  base:
+    name: '&fБольшая шестерня'
+    lore:
+    - '&7Используются в крафте.'
+    custom-model-data: 9.0
+    material: STICK
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+MATERIAL5:
+  base:
+    name: '&fПровода'
+    lore:
+    - '&7Используются в крафте.'
+    custom-model-data: 10.0
+    material: STICK
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+MATERIAL6:
+  base:
+    name: '&fБолты'
+    lore:
+    - '&7Используются в крафте.'
+    custom-model-data: 11.0
+    material: STICK
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+MATERIAL7:
+  base:
+    name: '&fЭнерго-ядро'
+    lore:
+    - '&7Используются в крафте.'
+    custom-model-data: 12.0
+    material: STICK
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+MATERIAL8:
+  base:
+    name: '&fХуйня навязанная разработчиком'
+    lore:
+    - '&7Используются в крафте.'
+    custom-model-data: 13.0
+    material: STICK
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+MATERIAL9:
+  base:
+    name: '&bОграненный синий кристалл'
+    lore:
+    - '&7Используются в крафте.'
+    custom-model-data: 14.0
+    material: STICK
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+MATERIAL10:
+  base:
+    name: '&bОграненный зеленый кристалл'
+    lore:
+    - '&7Используются в крафте.'
+    custom-model-data: 15.0
+    material: STICK
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+MATERIAL11:
+  base:
+    name: '&bОграненный желтый кристалл'
+    lore:
+    - '&7Используются в крафте.'
+    custom-model-data: 16.0
+    material: STICK
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+MATERIAL12:
+  base:
+    name: '&bОграненный красный кристалл'
+    lore:
+    - '&7Используются в крафте.'
+    custom-model-data: 17.0
+    material: STICK
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+MATERIAL13:
+  base:
+    name: '&fМеталлическая пластина'
+    lore:
+    - '&7Используются в крафте.'
+    custom-model-data: 18.0
+    material: STICK
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true

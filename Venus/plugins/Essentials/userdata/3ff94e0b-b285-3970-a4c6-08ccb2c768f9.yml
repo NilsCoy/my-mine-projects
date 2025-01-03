@@ -1,0 +1,22 @@
+lastAccountName: Nike73
+timestamps:
+  login: 1690990193733
+  logout: 1690990721489
+  lastteleport: 1690990291934
+ipAddress: 2.134.113.140
+lastlocation:
+  world: world
+  x: 154.10363397292144
+  y: 43.0
+  z: 159.22968639833613
+  yaw: -121.61168
+  pitch: 37.20026
+godmode: false
+money: '3630.0'
+logoutlocation:
+  world: world
+  x: 107.23792018336586
+  y: 43.0
+  z: 160.7771175394768
+  yaw: 172.3919
+  pitch: 25.199945

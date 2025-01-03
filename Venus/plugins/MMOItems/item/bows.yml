@@ -1,0 +1,4 @@
+TEST:
+  base:
+    material: WOODEN_SWORD
+    custom-model-data: 1.0

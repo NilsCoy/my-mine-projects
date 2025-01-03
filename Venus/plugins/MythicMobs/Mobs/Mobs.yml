@@ -1,0 +1,306 @@
+
+
+venus_raider_boss:
+  Type: zombie
+  Display: '&cНалетчик-капитан'
+  Disguise: rader_boss
+  Health: 500
+  Damage: 5
+  Faction: people
+  # Drops:
+  # - ItemDrops1_1
+  BossBar:
+    Enabled: true
+    Title: '&cНалетчик-капитан'
+    Range: 20
+    Color: RED
+    Style: SOLID
+    CreateFog: false
+    DarkenSky: false
+    PlayMusic: false
+  Skills:
+  - sound{s=entity.vindicator.death;p=1} @self ~onDeath
+  - sound{s=entity.vindicator.hurt;p=1} @self ~onDamaged
+  - sound{s=entity.vindicator.celebrate;p=1} @self ~onEnterCombat
+  - skill{s=money_drop_boss} @target ~onDeath
+  - skill{s=venus_boss_skillcast} @self ~onTimer:20
+  Options:
+    MovementSpeed: 0.4
+    PreventOtherDrops: true
+    FollowRange: 30
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - mmoitems{type=SWORD;id=SWORD1} HAND
+  - mmoitems{type=SWORD;id=SWORD1} OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction monster
+
+
+droid1_leader:
+  Type: zombie
+#  Display: '&cВражеский дроид-лидер'
+  Disguise: astr1
+  Health: 30
+  Damage: 5
+  Faction: people
+  # Drops:
+  # - ItemDrops1_1
+  Skills:
+  - sound{s=entity.iron_golem.death;p=1} @self ~onDeath
+  - sound{s=entity.iron_golem.repair;p=1} @self ~onDamaged
+  - sound{s=entity.iron_golem.step;p=0.5} @self ~onTimer:100
+  - randomskill{s=attack1 1, attack_fail 2} @self ~onTimer:20
+  - randomskill{s=attack2 1, attack_fail 2} @MobsInRadius{r=30} ~onTimer:20
+  - summon{type=droid1;amount=4;radius=2} @self ~onSpawn
+  - skill{s=money_drop} @target ~onDeath
+  - skill{s=show_name} @self ~onSpawn
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 30
+    Silent: true
+    PreventSunburn: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - mmoitems{type=WEAPONS;id=WEAPON2} HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - lookatplayers
+  - fleeConditional{distance=5;speed=1;safespeed=1;conditions=[ - inlineofsight true ]}
+  - randomstroll
+  - opendoors
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction monster
+
+droid1:
+  Type: zombie
+#  Display: '&cВражеский дроид'
+  Disguise: astr1
+  Health: 30
+  Damage: 5
+  Faction: people
+  # Drops:
+  # - ItemDrops1_1
+  Skills:
+  - sound{s=entity.iron_golem.death;p=1} @self ~onDeath
+  - sound{s=entity.iron_golem.repair;p=1} @self ~onDamaged
+  - sound{s=entity.iron_golem.step;p=0.5} @self ~onTimer:100
+  - randomskill{s=attack1 1, attack_fail 2} @self ~onTimer:20
+  - randomskill{s=attack2 1, attack_fail 2} @MobsInRadius{r=30} ~onTimer:20
+  - skill{s=money_drop} @target ~onDeath
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 30
+    Silent: true
+    PreventSunburn: true
+    AlwaysShowName: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - mmoitems{type=WEAPONS;id=WEAPON2} HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - lookatplayers
+  - fleeConditional{distance=5;speed=1;safespeed=1;conditions=[ - inlineofsight true ]}
+  - randomstroll
+  - opendoors
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction monster
+
+raider1_leader:
+  Type: zombie
+#  Display: '&cНалетчик-стрелок-лидер'
+  Disguise: raider
+  Health: 30
+  Damage: 5
+  Faction: people
+  # Drops:
+  # - ItemDrops1_1
+  Skills:
+  - sound{s=entity.vindicator.death;p=1} @self ~onDeath
+  - sound{s=entity.vindicator.hurt;p=1} @self ~onDamaged
+  - sound{s=entity.vindicator.celebrate;p=1} @self ~onEnterCombat
+  - randomskill{s=attack1 1, attack_fail 2} @self ~onTimer:20
+  - randomskill{s=attack2 1, attack_fail 2} @MobsInRadius{r=30} ~onTimer:20
+  - summon{type=raider1;amount=2;radius=1} @self ~onSpawn
+  - summon{type=raider2;amount=2;radius=1} @self ~onSpawn
+  - skill{s=money_drop} @target ~onDeath
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 30
+    Silent: true
+    PreventSunburn: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - mmoitems{type=WEAPONS;id=WEAPON2} HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - lookatplayers
+  - fleeConditional{distance=5;speed=1;safespeed=1;conditions=[ - inlineofsight true ]}
+  - randomstroll
+  - opendoors
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction monster
+
+raider1:
+  Type: zombie
+#  Display: '&cНалетчик-стрелок'
+  Disguise: raider
+  Health: 30
+  Damage: 5
+  Faction: people
+  # Drops:
+  # - ItemDrops1_1
+  Skills:
+  - sound{s=entity.vindicator.death;p=1} @self ~onDeath
+  - sound{s=entity.vindicator.hurt;p=1} @self ~onDamaged
+  - sound{s=entity.vindicator.celebrate;p=1} @self ~onEnterCombat
+  - randomskill{s=attack1 1, attack_fail 2} @self ~onTimer:20
+  - randomskill{s=attack2 1, attack_fail 2} @MobsInRadius{r=30} ~onTimer:20
+  - skill{s=money_drop} @target ~onDeath
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    FollowRange: 30
+    Silent: true
+    PreventSunburn: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - mmoitems{type=WEAPONS;id=WEAPON2} HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - lookatplayers
+  - fleeConditional{distance=5;speed=1;safespeed=1;conditions=[ - inlineofsight true ]}
+  - randomstroll
+  - opendoors
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction monster
+
+raider2:
+  Type: zombie
+#  Display: '&cНалетчик-воин'
+  Disguise: raider
+  Health: 30
+  Damage: 5
+  Faction: people
+  # Drops:
+  # - ItemDrops1_1
+  Skills:
+  - sound{s=entity.vindicator.death;p=1} @self ~onDeath
+  - sound{s=entity.vindicator.hurt;p=1} @self ~onDamaged
+  - sound{s=entity.vindicator.celebrate;p=1} @self ~onEnterCombat
+  - skill{s=money_drop} @target ~onDeath
+  Options:
+    MovementSpeed: 0.4
+    PreventOtherDrops: true
+    FollowRange: 30
+    Silent: true
+    PreventSunburn: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - mmoitems{type=SWORD;id=SWORD1} HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction monster
+
+venus_mob1:
+  Type: zombie
+#  Display: '&cМонстр'
+  Disguise: strider
+  Health: 20
+  Damage: 5
+  Faction: monster
+  # Drops:
+  # - ItemDrops1_1
+  Skills:
+  - sound{s=entity.strider.death;p=1} @self ~onDeath
+  - sound{s=entity.strider.hurt;p=1} @self ~onDamaged
+  - sound{s=entity.strider.ambient;p=1} @self ~onTimer:100
+  Options:
+    MovementSpeed: 0.4
+    PreventOtherDrops: true
+    FollowRange: 30
+    Silent: true
+    PreventSunburn: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - AIR HEAD
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  - AIR HAND
+  - AIR OFFHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - float
+  AITargetSelectors:
+  - clear
+  - players
+  - SpecificFaction people

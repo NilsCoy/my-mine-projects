@@ -1,0 +1,102 @@
+name: 'Преобразование (#page#/#max#)'
+max-queue-size: 3
+sound: ENTITY_EXPERIENCE_ORB_PICKUP
+layout: item
+items:
+    fill:
+        material: AIR
+    no-recipe:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&a'
+    no-queue-item:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aПусто'
+
+# Station recipes
+recipes:
+    crystal1:
+        output:
+            type: MATERIAL
+            id: MATERIAL9
+            amount: 1
+        conditions:
+        - 'money{amount=1500}'
+        crafting-time: 30
+        ingredients:
+        - mmoitem{type=MATERIAL,id=CRYSTAL1,amount=256}
+    crystal2:
+        output:
+            type: MATERIAL
+            id: MATERIAL10
+            amount: 1
+        conditions:
+        - 'money{amount=3000}'
+        crafting-time: 30
+        ingredients:
+        - mmoitem{type=MATERIAL,id=CRYSTAL2,amount=256}
+    crystal3:
+        output:
+            type: MATERIAL
+            id: MATERIAL11
+            amount: 1
+        conditions:
+        - 'money{amount=4500}'
+        crafting-time: 30
+        ingredients:
+        - mmoitem{type=MATERIAL,id=CRYSTAL3,amount=256}
+    crystal4:
+        output:
+            type: MATERIAL
+            id: MATERIAL12
+            amount: 1
+        conditions:
+        - 'money{amount=6000}'
+        crafting-time: 30
+        ingredients:
+        - mmoitem{type=MATERIAL,id=CRYSTAL4,amount=256}
+    material1:
+        output:
+            type: MATERIAL
+            id: MATERIAL8
+            amount: 1
+        conditions:
+        - 'money{amount=10000}'
+        crafting-time: 30
+        ingredients:
+        - mmoitem{type=MATERIAL,id=MATERIAL9,amount=1}
+        - mmoitem{type=MATERIAL,id=MATERIAL10,amount=1}
+        - mmoitem{type=MATERIAL,id=MATERIAL11,amount=1}
+        - mmoitem{type=MATERIAL,id=MATERIAL12,amount=1}
+    armor1:
+        output:
+            type: ARMOR
+            id: ARMOR2
+            amount: 1
+        conditions:
+        - 'money{amount=10000}'
+        crafting-time: 120
+        ingredients:
+        - mmoitem{type=ARMOR,id=ARMOR1,amount=1}
+        - mmoitem{type=MATERIAL,id=MATERIAL13,amount=20}
+        - mmoitem{type=MATERIAL,id=MATERIAL7,amount=1}
+        - mmoitem{type=MATERIAL,id=MATERIAL2,amount=50}
+        - mmoitem{type=MATERIAL,id=MATERIAL6,amount=20}
+        - mmoitem{type=MATERIAL,id=MATERIAL3,amount=10}
+        - mmoitem{type=MATERIAL,id=MATERIAL5,amount=10}
+    armor2:
+        output:
+            type: ARMOR
+            id: ARMOR3
+            amount: 1
+        conditions:
+        - 'money{amount=10000}'
+        crafting-time: 120
+        ingredients:
+        - mmoitem{type=ARMOR,id=ARMOR1,amount=1}
+        - mmoitem{type=MATERIAL,id=MATERIAL1,amount=25}
+        - mmoitem{type=MATERIAL,id=MATERIAL7,amount=1}
+        - mmoitem{type=MATERIAL,id=MATERIAL2,amount=50}
+        - mmoitem{type=MATERIAL,id=MATERIAL6,amount=20}
+        - mmoitem{type=MATERIAL,id=MATERIAL3,amount=10}
+        - mmoitem{type=MATERIAL,id=MATERIAL4,amount=5}
+        - mmoitem{type=MATERIAL,id=MATERIAL5,amount=15}

@@ -1,0 +1,79 @@
+stars-health:
+  layers:
+    health-text:
+      text: "<white>%fill-value% <gray>/ <white>%fill-max%"
+      font: "default"
+      outlined: true
+      align: center
+      offset:
+        x: 90
+        y: -5
+    fill:
+      texture:
+        path: assets/stars/hp_bar.png
+      offset:
+        x: 0
+        y: 0
+      function:
+        listener: health
+        increment: 20
+        orientation: horizontal
+    outline:
+      texture:
+        path: assets/stars/hp_bar_outline.png
+stars-energy:
+  layers:
+    energy-text:
+      text: "<gold>En"
+      font: "default"
+      outlined: true
+      align: center
+      offset:
+        x: 138
+        y: -2
+    fill:
+      texture:
+        path: assets/stars/energy_bar.png
+      offset:
+        x: 0
+        y: 0
+      function:
+        listener: mana
+        increment: 10
+        orientation: horizontal
+    outline:
+      texture:
+        path: assets/stars/energy_bar_outline.png
+stars-oxygen:
+  layers:
+    oxygen-text:
+      text: "<blue>Ox"
+      font: "default"
+      outlined: true
+      align: center
+      offset:
+        x: 91
+        y: -2
+    fill:
+      texture:
+        path: assets/stars/oxygen_bar.png
+      offset:
+        x: 0
+        y: 0
+      function:
+        listener: oxygen
+        increment: 10
+        orientation: horizontal
+    outline:
+      texture:
+        path: assets/stars/oxygen_bar_outline.png
+stars-money:
+  layers:
+    oxygen-text:
+      text: "<dark_purple>Credits: <light_purple>%vault_eco_balance%"
+      font: "default"
+      outlined: true
+      align: right
+      offset:
+        x: 0
+        y: 0

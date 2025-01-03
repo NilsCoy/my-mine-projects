@@ -1,0 +1,31 @@
+display:
+    name: 'Human'
+options:
+    default: true
+    display: false
+    needs-permission: false
+    off-combat-health-regen: false
+    off-combat-mana-regen: false
+exp-curve: levels
+max-level: 1
+max-bound-active-skills: 5
+max-bound-passive-skills: 3
+attributes:
+    max-mana:
+        base: 100
+        per-level: 0
+    mana-regeneration:
+        base: 1
+        per-level: 0
+    max-health:
+        base: 20
+        per-level: 0
+    health-regeneration:
+        base: 0.05
+        per-level: 0
+    food-regeneration:
+        base: 1
+        per-level: 0
+main-exp-sources:
+- 'killmob{type=ZOMBIE;amount=1-3}'
+- 'killmob{type=ENDERMAN;amount=6-9}'

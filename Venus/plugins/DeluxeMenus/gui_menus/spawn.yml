@@ -1,0 +1,36 @@
+#  A DeluxeMenus advanced configuration guide
+#=========================================================
+menu_title: '&9Вернуться на корабль?'
+#open_command:
+#  - profile
+open_commands:
+  - '[sound] BLOCK_NOTE_BLOCK_BIT 1 1'
+#close_commands:
+#  - '[sound] ITEM_BOOK_PAGE_TURN'
+size: 27
+items:
+  '1':
+    material: GREEN_CONCRETE
+    slot: 11
+    priority: 1
+    update: false
+    hide_attributes: true
+    display_name: '&dВернуться'
+    nbt_int: CustomModelData:1
+    click_commands:
+      - '[console] warp spawn %player_name%'
+  '2':
+    material: RED_CONCRETE
+    slot: 15
+    priority: 1
+    update: false
+    hide_attributes: true
+    display_name: '&dОстаться'
+    nbt_int: CustomModelData:1
+    click_commands:
+      - '[close]'
+  'filler_item':
+    material: BARRIER
+    slots: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+    display_name: ' '
+    nbt_int: CustomModelData:1

@@ -1,0 +1,22 @@
+lastAccountName: Astrill3r
+timestamps:
+  login: 1690982307584
+  logout: 1690986941038
+  lastteleport: 1690985854735
+ipAddress: 77.222.119.175
+lastlocation:
+  world: world
+  x: 153.22038079742944
+  y: 43.0
+  z: 159.40813521943988
+  yaw: -126.10874
+  pitch: 16.649977
+logoutlocation:
+  world: world
+  x: 123.7696520924734
+  y: 43.0
+  z: 145.89661584982878
+  yaw: -111.557755
+  pitch: 11.699996
+godmode: false
+money: '3547.0'

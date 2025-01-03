@@ -1,0 +1,13 @@
+TOOL1:
+  base:
+    name: '&dБур'
+    custom-model-data: 1.0
+    material: DIAMOND_PICKAXE
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    disable-death-drop: true
+    custom-nbt:
+    - CanDestroy [minecraft:small_amethyst_bud,minecraft:medium_amethyst_bud,minecraft:large_amethyst_bud,minecraft:amethyst_cluster]

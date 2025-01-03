@@ -1,0 +1,110 @@
+Events:
+  unequip_armor_unoxygen:
+    type: repetitive
+    repetitive_time: 1
+    conditions:
+    - '%objective_score_{armor_equip}% == 0'
+    - '%player_world% != world'
+    - '%player_gamemode% == ADVENTURE'
+    actions:
+      default:
+      - 'console_command: scoreboard players remove %player% oxygen 1'
+
+  oxygen_restore:
+    type: repetitive
+    repetitive_time: 1
+    conditions:
+    - '%player_world% == world'
+    - '%player_gamemode% == ADVENTURE'
+    - '%objective_score_{oxygen}% < 100'
+    actions:
+      default:
+      - 'console_command: scoreboard players add %player% oxygen 1'
+
+  oxygen_remover:
+    type: repetitive
+    repetitive_time: 120
+    conditions:
+    - '%player_world% != world'
+    - '%player_gamemode% == ADVENTURE'
+    actions:
+      default:
+      - 'console_command: scoreboard players remove %player% oxygen 1'
+
+  oxygen_check:
+    type: repetitive
+    repetitive_time: 120
+    conditions:
+    - '%player_world% != world'
+    - '%player_gamemode% == ADVENTURE'
+    - '%objective_score_{oxygen}% <= 0'
+    actions:
+      default:
+      - 'console_command: kill %player%'
+      - 'console_command: scoreboard players set %player% oxygen 100'
+
+  oxygen_ad:
+    type: repetitive
+    repetitive_time: 10
+    conditions:
+    - '%player_gamemode% == ADVENTURE'
+    - '%objective_score_{oxygen}% <= 20'
+    actions:
+      default:
+      - 'playsound: BLOCK_NOTE_BLOCK_IRON_XYLOPHONE;1;2' #ITEM_SPYGLASS_USE BLOCK_WOODEN_PRESSURE_PLATE_CLICK_ON
+
+  mana_ad:
+    type: repetitive
+    repetitive_time: 10
+    conditions:
+    - '%player_gamemode% == ADVENTURE'
+    - '%mmocore_mana% <= 10'
+    actions:
+      default:
+      - 'playsound: BLOCK_NOTE_BLOCK_DIDGERIDOO;1;2'
+
+  combat_system_activate_attack:
+    type: player_attack
+    conditions:
+    - '%objective_score_{combat_system_wait}% == 0'
+    - '%player_gamemode% == ADVENTURE'
+    - '%player_world% != world'
+    actions:
+      default:
+      - 'console_command: scoreboard players set %player% combat_system_wait 1'
+      - 'actionbar: &cВы вошли в режим PVP! Не выходите в течении 15 секунд.;240'
+      - 'wait: 15'
+      - 'console_command: scoreboard players set %player% combat_system_wait 0'
+      - 'actionbar: &cВы вышли из режима PVP!;240'
+
+  combat_system_activate_damage:
+    type: player_damage
+    conditions:
+    - '%objective_score_{combat_system_wait}% == 0'
+    - '%player_gamemode% == ADVENTURE'
+    - '%player_world% != world'
+    actions:
+      default:
+      - 'console_command: scoreboard players set %player% combat_system_wait 1'
+      - 'actionbar: &cВы вошли в режим PVP! Не выходите в течении 15 секунд.;240'
+      - 'wait: 15'
+      - 'console_command: scoreboard players set %player% combat_system_wait 0'
+      - 'actionbar: &cВы вышли из режима PVP!;240'
+
+  combat_system_detect:
+    type: player_leave
+    conditions:
+    - '%objective_score_{combat_system_wait}% == 1'
+    actions:
+      default:
+      - 'console_command: scoreboard players set %player% combat_system_detect 1'
+      - 'console_command: scoreboard players set %player% combat_system_wait 0'
+
+  combat_system_kill:
+    type: player_join
+    conditions:
+    - '%objective_score_{combat_system_detect}% == 1'
+    actions:
+      default:
+      - 'console_command: scoreboard players set %player% combat_system_detect 0'
+      - 'console_command: kill %player%'

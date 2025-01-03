@@ -1,0 +1,179 @@
+# If you can't see comments in the config, you can always find them here: https://github.com/GamerJoep/MinetopiaVehicles/blob/master/src/main/resources/config.yml
+
+# ---------------------------------------------------------------------------
+# MTVehicles - Spigot/Paper plugin, available at https://mtvehicles.nl
+# For support, visit our official discord server: https://discord.gg/vehicle
+# ---------------------------------------------------------------------------
+
+
+# Leave this on true if you want to be up-to-date!
+# Turn it off and you will not get any messages for updates.
+# Auto-update message will show on server join if you have the permission 'mtvehicles.update'.
+# If set on false the /vehicle update command will not work either.
+# IMPORTANT: If this is enabled, the plugin WILL CONTACT OUR SERVERS to get the latest version and to download it. If you do not wish for this to happen, set this option to false.
+autoUpdate: true
+
+
+# --- General ---
+
+# How many rows the /vehicle menu has. Must be between 3 and 6.
+# Default: 3 (If your input is not valid, the default shall be used.)
+vehicleMenuSize: 3
+
+# If set to true, helicopter blades will always stay on top of the helicopter.
+# If set to false they will only appear when you get in the vehicle and remove when you get out.
+helicopterBladesAlwaysOn: true
+
+# If set to true you can't pick up the vehicle after ridden on water, else you will need the permission 'mtvehicles.anwb'.
+disablePickupFromWater: false
+
+# If set to false you will not be able to open the trunk.
+trunkEnabled: true
+
+# Give players the ability put themselves owner.
+putOneselfAsOwner: false
+
+# Turn on if you do not want players to be able to pickup vehicles. Use cautiously.
+carPickup: false
+
+
+# --- Steering ---
+
+# By default, vehicles are steered by pressing the WASD keys.
+# If you turn this option on (= set to true), instead of pressing A and D, the vehicle turns wherever the driver is facing.
+# BEWARE: By enabling this feature, rotation speed of vehicles is no longer used.
+# THIS IS A BETA FEATURE.
+usePlayerFacing: false
+
+
+# --- Vehicle Health and Damage ---
+
+# Whether vehicles can be damaged.
+damageEnabled: false
+
+# Multiplier of the damage to ALL vehicles. Works similarly to fuelMultiplier.
+# Must be between 0.1 and 5.0 (Beware: 3 will not work, 3.0 will). Default: 0.5 (If lower/higher, the default will be used.)
+damageMultiplier: 0.5
+
+
+# --- Helicopters & Planes
+
+# Maximum flying height for HELICOPTERS AND PLANES.
+maxFlyingHeight: 150
+
+# Minimum speed FOR PLANES to take off (must be higher than 0)
+takeOffSpeed: 0.4
+
+# If set to true and HELICOPTER's out of fuel in the air, it will fall directly to the ground. (This does not affect airplanes, they simply glide to the ground)
+# All passengers in survival/adventure will take damage (specified by helicopterFallDamage below).
+# If damageEnabled = true, the fall will also result in the breakage of the vehicle.
+extremeHelicopterFall: false
+
+# Damage taken by all passengers when a helicopter falls 'extremely' fast (must be higher than 0). Beware: 10 will not work, 10.0 will
+helicopterFallDamage: 40.0
+
+
+# --- Gas ---
+
+# Whether gasoline is used for ALL cars.
+fuelEnabled: true
+
+# Multiplier of the fuel consumption of ALL vehicles. (2 means 2× faster consumption, 0.5 means 2× slower, etc...)
+# Must be between 0.1 and 10. Default: 1 (If lower/higher, the default will be used.)
+fuelMultiplier: 1
+
+# Jerrycan size for in the /vehicle benzine menu.
+jerrycans:
+  - 25
+  - 50
+  - 75
+
+
+# --- Horn ---
+
+# Cooldown for horn in seconds.
+hornCooldown: 5
+
+# Type of horn, later will be added that you can change the types for each car
+# This is just added as beta function to find bugs or problems
+hornType: "minetopiaclassic.horn1"
+
+
+# --- Tanks ---
+
+# Whether tanks shoot TNTs.
+tankTNT: false
+
+# Tank shooting cooldown (Beware: 10.0 will not work, just 10 will)
+tankCooldown: 10
+
+
+# --- Driving ---
+
+# Whether the vehicles should be able to drive up hills by slabs ('slabs'), full blocks ('blocks') or both ('both').
+# Default: 'both' (If your input is not recognized, the default shall be used.)
+driveUp: 'both'
+
+# Whether the vehicles are able to drive up carpets.
+driveOnCarpets: true
+
+
+# --- Blocks and worlds ---
+
+# A list of allowed blocks to place a car on. If enabled is false, vehicles can be placed on every block.
+blockWhitelist:
+  enabled: false
+  list:
+    - GRAY_CONCRETE
+
+# Provide a list of worlds where using vehicles is disabled.
+disabledWorlds: []
+
+
+# ----- OPTIONS BELOW REQUIRE SOFT-DEPENDENCIES -----
+
+
+# Enables WorldGuard region based gas stations.
+# If you do not have WORLDGUARD installed, this is automatically DISABLED.
+
+# If enabled = false, stuff bellow will be ignored.
+# Set 'canUseJerryCanOutsideOfGasStation' to false and players will only be able to use jerry cans in gas station regions. (Gas Stations must be enabled!)
+# If this option is true, players still CAN'T use jerrycans in regions with flag "mtv-gasstation=deny".
+
+# The 'fillJeryCans' option enables players to fill their JerryCans by right clicking on a lever/tripwire hook. This lever/tripwire hook HAS TO BE INSIDE A GAS STATION REGION.
+# Shift and right click to fill the whole jerrycan.
+# If needPermission inside fillJeryCan is set to true, players need to have the 'mtvehicles.filljerrycans' permission. Otherwise everyone can do it.
+
+# The 'price' option may ONLY be used if you have VAULT installed. (If that is not the case, it is automatically DISABLED).
+# Price MUST always be greater than 0. Otherwise, default (30.0) shall be used. (Beware: 10 will not work, 10.0 will)
+# Players with permission 'mtvehicles.filljerrycansforfree' do not pay.
+# BEWARE: If needPermission = true, players STILL NEED permission to even use this feature. Even if they have to pay.
+
+# All the regions MUST have WorldGuard flag "mtv-gasstation=allow".
+gasStations:
+  enabled: true
+  canUseJerryCanOutsideOfGasStation: true
+  fillJerryCans:
+    enabled: true
+    needPermission: false
+    playSound: true
+    lever: true
+    tripwireHook: false
+    price:
+      enabled: true
+      pricePerLitre: 30.0
+
+
+# Whether vehicles can/can't be used in certain regions.
+# If you do not have WorldGuard installed, this is automatically DISABLED.
+# The PICKUP section is quite hazardous. You might not be able to pick up vehicles freely. Use cautiously.
+
+# Acceptable inputs:
+# - 'disabled' (default) -> players can place/enter/pick up vehicles wherever they want
+# - 'blacklist' -> players CAN'T place/enter/pick up vehicles in regions where flags 'mtv-place', 'mtv-enter', and 'mtv-pickup' are DENIED.
+# - 'whitelist' -> players CAN ONLY place/enter/pick up vehicles in region where flags 'mtv-place', 'mtv-enter', and 'mtv-pickup' are ALLOWED.
+# (If your input is not recognized, the default shall be used.)
+regionActions:
+  place: 'disabled'
+  enter: 'disabled'
+  pickup: 'disabled'

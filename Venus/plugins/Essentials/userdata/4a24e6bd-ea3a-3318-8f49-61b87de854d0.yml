@@ -1,0 +1,22 @@
+lastAccountName: NilsCoy
+timestamps:
+  login: 1729784936232
+  logout: 1729786354829
+  lastteleport: 1729785294002
+ipAddress: 0:0:0:0:0:0:0:1
+lastlocation:
+  world: venus
+  x: 470.11842263013426
+  y: 69.0
+  z: -21.69999998807907
+  yaw: -176.06946
+  pitch: 28.349714
+logoutlocation:
+  world: world
+  x: 153.22643370627245
+  y: 43.0
+  z: 158.91281607647358
+  yaw: -111.25989
+  pitch: 4.79992
+godmode: false
+money: '3000'

@@ -1,0 +1,149 @@
+armor:
+  title: §9Магазин брони
+  command: none
+  permission: none
+  default-shop: buy
+  buy-shop-enabled: true
+  sell-shop-enabled: false
+  trade-shop-enabled: false
+  logging-enabled: true
+  close-after-purchase: false
+  confirmation-window-enabled: false
+  pages:
+    page-0:
+      size: 36
+      page-name: '&9Страница 1'
+      page-permission: ''
+      buy-items:
+        item-12:
+          id: 62
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: DIAMOND_CHESTPLATE
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"Броня
+                кадета"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Здоровье:
+                "},{"italic":false,"color":"white","text":"+10"}],"text":""}'
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              - HIDE_UNBREAKABLE
+              Unbreakable: true
+              internal: H4sIAAAAAAAA/+NiYOBgEPX19fcMcfUNjneJ9HP09XSO9/EPcmVQiFZS0lFSM78w/cKWC/suNlzYd2HTxZ4LW60U1NK0DQ2UYjkYhOA6QWR8SGSAKwOrY5CvfxAHgwCqnKcLAxtYxpCDgRcuBbTOlUFSLeXCRLD5ey/2K1zYdWED0MKtF5subGBkkEa4zTPY0cnHNd7Vz9nD0S/E08+dkYNBEC4NFQ5mYIqOZWMQhov7OkbEe7g6+oR4OKgwgAEHA5dHcEhQJMRy/2ql4JLEEiUrJRAX6GF/9+CS/KJKJavoaiUUd8Yf3lhcUgRUiNO5SrWxtYwMkhhODvZ19QE7GJt/XFwdQzziXYL8Axix6XUOcnSD6pXCkAxyDXD0DILIYrPWM8QDJMkAAKZVu3PnAQAA
+          display-lore:
+          - §f
+          - '§7Здоровье: §f+10'
+          show-description: false
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give ARMOR ARMOR1 %player% 1
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 10/08/2023 18:13:11
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 10/08/2023 18:13:11
+          show-price: true
+          trade-price: 1000.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-14:
+          id: 60
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: DIAMOND_CHESTPLATE
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"Комбинезон
+                «Ученый»"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Здоровье:
+                "},{"italic":false,"color":"white","text":"+10"}],"text":""}'
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              - HIDE_UNBREAKABLE
+              Unbreakable: true
+              internal: H4sIAAAAAAAA/+NiYOBgEPX19fcMcfUNjneJ9HP09XSO9/EPcmVQiFZS0lFSM78w/cKWC/suNlzYd2HTxZ4LW60U1NK0DQ2UYjkYhOA6QWR8SGSAKwOrY5CvfxAHgwCqnKcLAxtYxoSDgRcuBbTOlUFdLeXCLKDpey5svLDjwt4LWy9sB/L2KhxafWHxxXYgd+/F7gs7D+1mZJBGuNQz2NHJxzXe1c/Zw9EvxNPPnZGDQRAuDRUOZmCKjmVjEIaL+zpGxHu4OvqEeDioMIABBwOXR3BIUCTEKbHVSsEliSVKVkogLtD7/u7BJflFlUpW0dVKKK6OP7yxuKQIqJBIxyvVxtYyMkhieCDY19UH7HxsvnNxdQzxiHcJ8g9gxKbXOcjRDapXCkMyyDXA0TMIIovNWs8QD5AkAwDjaaNNAwIAAA==
+          display-lore:
+          - §f
+          - '§7Здоровье: §f+10'
+          show-description: false
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give ARMOR ARMOR4 %player% 1
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 10/08/2023 18:12:10
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 10/08/2023 18:12:10
+          show-price: true
+          trade-price: 25000.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false

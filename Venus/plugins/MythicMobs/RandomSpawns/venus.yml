@@ -1,0 +1,214 @@
+
+
+
+Venus_MainBaza1_droid1:
+  Action: ADD
+  Type: droid1_leader
+  Worlds: venus
+  Chance: 0.05
+  Priority: 1
+  Cooldown: 15
+  Conditions:
+#  - outside true
+  - inblock{b=WATER,LAVA} false
+  - region{r=venus_main_baza1} true
+  - playernotwithin{d=8} true
+  - onblock{m=SAND,SANDSTONE,SMOOTH_SANDSTONE,END_STONE} true
+  PositionType: LAND
+Venus_MainBaza1_raider1:
+  Action: ADD
+  Type: raider1_leader
+  Worlds: venus
+  Chance: 1
+  Priority: 1
+  Cooldown: 5
+  Conditions:
+  - inside true
+  - inblock{b=WATER,LAVA} false
+  - region{r=venus_main_baza1} true
+  - playernotwithin{d=8} true
+  - onblock{m=SMOOTH_QUARTZ} true
+  PositionType: LAND
+Venus_MainBaza2_raider1:
+  Action: ADD
+  Type: raider1_leader
+  Worlds: venus
+  Chance: 0.25
+  Priority: 2
+  Cooldown: 10
+  Conditions:
+  - inside true
+  - inblock{b=WATER,LAVA} false
+  - region{r=venus_main_baza2} true
+  - playernotwithin{d=8} true
+  - onblock{m=SMOOTH_STONE} true
+  PositionType: LAND
+Venus_MainBaza2_droid1:
+  Action: ADD
+  Type: droid1_leader
+  Worlds: venus
+  Chance: 0.25
+  Priority: 1
+  Cooldown: 10
+  Conditions:
+  - inside true
+  - inblock{b=WATER,LAVA} false
+  - region{r=venus_main_baza2} true
+  - playernotwithin{d=8} true
+  - onblock{m=SMOOTH_STONE} true
+  PositionType: LAND
+
+
+
+Venus_RuinShip1_droid1:
+  Action: ADD
+  Type: droid1_leader
+  Worlds: venus
+  Chance: 0.1
+  Priority: 1
+  Cooldown: 15
+  Conditions:
+  - outside true
+  - inblock{b=WATER,LAVA} false
+  - region{r=venus_ruin_ship1} true
+  - playernotwithin{d=8} true
+  - onblock{m=SAND,SANDSTONE,SMOOTH_SANDSTONE} true
+  PositionType: LAND
+Venus_RuinShip2_raider1:
+  Action: ADD
+  Type: raider1_leader
+  Worlds: venus
+  Chance: 0.5
+  Priority: 1
+  Cooldown: 5
+  Conditions:
+#  - inside true
+  - inblock{b=WATER,LAVA} false
+  - region{r=venus_ruin_ship2} true
+  - playernotwithin{d=8} true
+  - onblock{m=LIGHT_GRAY_CONCRETE,SAND} true
+  PositionType: LAND
+
+
+
+Venus_Baza1_droid1:
+  Action: ADD
+  Type: droid1_leader
+  Worlds: venus
+  Chance: 0.2
+  Priority: 1
+  Cooldown: 15
+  Conditions:
+#  - outside true
+  - inblock{b=WATER,LAVA} false
+  - region{r=venus_baza1} true
+  - playernotwithin{d=8} true
+  - onblock{m=SAND,SANDSTONE,SMOOTH_SANDSTONE,END_STONE} true
+  PositionType: LAND
+Venus_Baza1_raider1:
+  Action: ADD
+  Type: raider1_leader
+  Worlds: venus
+  Chance: 1
+  Priority: 1
+  Cooldown: 5
+  Conditions:
+  - inside true
+  - inblock{b=WATER,LAVA} false
+  - region{r=venus_baza1} true
+  - playernotwithin{d=8} true
+  - onblock{m=SMOOTH_QUARTZ} true
+  PositionType: LAND
+
+
+
+Venus_Cave1_droid1:
+  Action: ADD
+  Type: droid1_leader
+  Worlds: venus
+  Chance: 0.2
+  Priority: 1
+  Cooldown: 15
+  Conditions:
+#  - outside true
+  - inblock{b=WATER,LAVA} false
+  - region{r=venus_cave1} true
+  - playernotwithin{d=8} true
+  - onblock{m=SAND,SANDSTONE,SMOOTH_SANDSTONE,END_STONE} true
+  PositionType: LAND
+Venus_Cave1_raider1:
+  Action: ADD
+  Type: raider1_leader
+  Worlds: venus
+  Chance: 1
+  Priority: 1
+  Cooldown: 5
+  Conditions:
+  - inside true
+  - inblock{b=WATER,LAVA} false
+  - region{r=venus_cave1} true
+  - playernotwithin{d=8} true
+  - onblock{m=SMOOTH_QUARTZ} true
+  PositionType: LAND
+Venus_Cave2_raider1:
+  Action: ADD
+  Type: raider1_leader
+  Worlds: venus
+  Chance: 0.2
+  Priority: 1
+  Cooldown: 15
+  Conditions:
+#  - outside true
+  - inblock{b=WATER,LAVA} false
+  - region{r=venus_cave2} true
+  - playernotwithin{d=8} true
+  - onblock{m=SAND,SANDSTONE,SMOOTH_SANDSTONE,POLISHED_ANDESITE} true
+  PositionType: LAND
+
+
+
+Venus_Lab1_droid1:
+  Action: ADD
+  Type: droid1_leader
+  Worlds: venus
+  Chance: 0.2
+  Priority: 1
+  Cooldown: 15
+  Conditions:
+#  - outside true
+  - inblock{b=WATER,LAVA} false
+  - region{r=venus_lab1} true
+  - playernotwithin{d=8} true
+  - onblock{m=SAND,SANDSTONE,SMOOTH_SANDSTONE,END_STONE} true
+  PositionType: LAND
+Venus_Lab2_raider1:
+  Action: ADD
+  Type: raider1_leader
+  Worlds: venus
+  Chance: 0.5
+  Priority: 2
+  Cooldown: 5
+  Conditions:
+  - inside true
+  - inblock{b=WATER,LAVA} false
+  - region{r=venus_lab2} true
+  - playernotwithin{d=8} true
+  - onblock{m=SMOOTH_BASALT} true
+  PositionType: LAND
+
+
+
+Venus_mob1:
+  Action: ADD
+  Type: venus_mob1
+  Worlds: venus
+  Chance: 0.3
+  Priority: 1
+  Cooldown: 5
+  Conditions:
+  - outside true
+  - inblock{b=WATER,LAVA} false
+  - region{r=venus} true
+  - playernotwithin{d=8} true
+  - onblock{m=SAND,SANDSTONE,SMOOTH_SANDSTONE} true
+  PositionType: LAND

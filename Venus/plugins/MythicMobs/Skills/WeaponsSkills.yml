@@ -1,0 +1,16 @@
+weapon:
+  Skills:
+  - projectile{onTick=weapon-Tick;onHit=weapon-Hit;v=70;i=1;hR=1;vR=1;hnp=true;StartYOffset=1.5;StartFOffset=-1;d=800} @TargetLocation
+  - effect:sound{s=block.beacon.deactivate;p=2} @SelfLocation
+weapon-Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#8736C7;amount=20;speed=0;hS=0.1;vS=0.1}
+weapon-Hit:
+  Skills:
+  - damage{a="<modifier.damage>";preventknockback=true}
+  - effect:sound{s=entity.shulker.shoot;p=1} @TargetLocation
+  #- effect:firework{t=BURST;d=0}
+
+test:
+  Skills:
+  - effect:sound{s=entity.shulker.shoot;p=1} @SelfLocation

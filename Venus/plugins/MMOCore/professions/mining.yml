@@ -1,0 +1,46 @@
+name: Mining
+experience:
+    base: 20
+    per-level: 3
+exp-curve: mining
+on-mine:
+    ametist1:
+        material: vanilla{type=SMALL_AMETHYST_BUD}
+        drop-table:
+            items:
+            - 'mmoitem{type=material;id=CRYSTAL1} 1 1-5'
+        options:
+            vanilla-drops: false
+        regen:
+            time: 6000
+            temp-block: vanilla{type=AIR}
+    ametist2:
+        material: vanilla{type=MEDIUM_AMETHYST_BUD}
+        drop-table:
+            items:
+            - 'mmoitem{type=material;id=CRYSTAL2} 1 1-5'
+        options:
+            vanilla-drops: false
+        regen:
+            time: 6000
+            temp-block: vanilla{type=AIR}
+    ametist3:
+        material: vanilla{type=LARGE_AMETHYST_BUD}
+        drop-table:
+            items:
+            - 'mmoitem{type=material;id=CRYSTAL3} 1 1-5'
+        options:
+            vanilla-drops: false
+        regen:
+            time: 6000
+            temp-block: vanilla{type=AIR}
+    ametist4:
+        material: vanilla{type=AMETHYST_CLUSTER}
+        drop-table:
+            items:
+            - 'mmoitem{type=material;id=CRYSTAL4} 1 1-5'
+        options:
+            vanilla-drops: false
+        regen:
+            time: 6000
+            temp-block: vanilla{type=AIR}

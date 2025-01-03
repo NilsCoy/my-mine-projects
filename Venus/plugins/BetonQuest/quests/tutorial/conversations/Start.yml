@@ -1,0 +1,124 @@
+quester: '&6Бронто'
+first: 'npc_node_1,npc_node_9'
+stop: 'true'
+NPC_options:
+  npc_node_1:
+    text: 'Опа, новичок как погляжу! Ты случаем не потерялся?'
+    condition: '!tutorial_finished'
+    event: ''
+    objective: ''
+    pointers: player_node_1
+
+  npc_node_2:
+    text: 'Да я тут всех знаю! \n 
+    А тебя я первый раз вижу. \n
+    Раз ты новенький, то давай проведу экскурсию по этому кораблю.'
+    condition: ''
+    event: ''
+    objective: ''
+    pointers: player_node_2
+
+  npc_node_3:
+    text: 'Там же есть спуск в грузовой отсек, в котором есть складской, у него можно хранить свои вещи, их ни кто не заберет, так что не боись.'
+    condition: ''
+    event: ''
+    objective: ''
+    pointers: player_node_4
+
+  npc_node_4:
+    text: 'Ну для начала смотри, здесь есть магазины, за твоей спиной, тут ты можешь купить себе расходники, оружие и броню, а также продать найденные предметы в вылазках.'
+    condition: ''
+    event: ''
+    objective: ''
+    pointers: player_node_3
+
+  npc_node_5:
+    text: 'В передней части корабля есть комната управления, где сидит капитан, у которого иногда можно взять задания.'
+    condition: ''
+    event: ''
+    objective: ''
+    pointers: player_node_5
+
+  npc_node_6:
+    text: 'Если ты решился покинуть корабль, или отправиться на вылазку на одну из планет, то тебе в заднюю часть корабля, там есть свободный пилот космолета, он тебя доставит на точку, а также заберет тебя в случае успешного выноса.'
+    condition: ''
+    event: ''
+    objective: ''
+    pointers: player_node_6
+
+  npc_node_7:
+    text: 'Ну вроде на это все, но ты же не собираешься голожепым бегать? \n
+    Тебе нужно снаряжение! Вот, возьми эти деньги и купи себе броню, оружие и расходники. Отдашь долг, как только подрастешь до более стоящего солдата.'
+    condition: ''
+    event: 'tutorial_revard1,tutorial_finish'
+    objective: ''
+    pointers: player_node_7
+
+  npc_node_8:
+    text: 'Ты меня совсем не слушал? Ну да ладно, сам найдешь, все равно у каждого места стоят голограммы с информацией. Все, иди, жужжи перед глазами!'
+    condition: ''
+    event: ''
+    objective: ''
+
+  npc_node_9:
+    text: 'Чего тебе еще? Иди давай!'
+    condition: 'tutorial_finished'
+    event: ''
+    objective: ''
+    pointers: player_node_8
+
+player_options:
+  player_node_1:
+    text: 'Откуда тебе знать? Потерялся я или нет?'
+    condition: ''
+    event: ''
+    objective: ''
+    pointers: npc_node_2
+
+  player_node_2:
+    text: 'Ну давай, валяй.'
+    condition: ''
+    event: ''
+    objective: ''
+    pointers: npc_node_4
+
+  player_node_3:
+    text: '[ … ]'
+    condition: ''
+    event: ''
+    objective: ''
+    pointers: npc_node_3
+
+  player_node_4:
+    text: '[ … ]'
+    condition: ''
+    event: ''
+    objective: ''
+    pointers: npc_node_5
+
+  player_node_5:
+    text: '[ … ]'
+    condition: ''
+    event: ''
+    objective: ''
+    pointers: npc_node_6
+
+  player_node_6:
+    text: 'Что-то еще?'
+    condition: ''
+    event: ''
+    objective: ''
+    pointers: npc_node_7
+
+  player_node_7:
+    text: 'Спасибо большое, но где найти торговцев?'
+    condition: ''
+    event: ''
+    objective: ''
+    pointers: npc_node_8
+
+  player_node_8:
+    text: '[ Уйти ]'
+    condition: ''
+    event: ''
+    objective: ''

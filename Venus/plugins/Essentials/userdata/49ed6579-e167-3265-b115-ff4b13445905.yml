@@ -1,0 +1,21 @@
+lastAccountName: Logan_Cortez
+timestamps:
+  login: 1690982344734
+  logout: 1690982588448
+ipAddress: 109.120.10.66
+lastlocation:
+  world: venus
+  x: -345.4943183010668
+  y: 62.0
+  z: 210.87046943720316
+  yaw: -47.490295
+  pitch: 38.999535
+logoutlocation:
+  world: world
+  x: 121.37890055646349
+  y: 43.0
+  z: 160.53626558612692
+  yaw: 90.49219
+  pitch: 0.9000148
+money: '4364.0'
+godmode: false

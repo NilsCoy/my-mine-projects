@@ -1,0 +1,41 @@
+condition:
+  class:
+    positive: '&a✔ Required Class: #class#'
+    negative: '&c✖ Required Class: #class#'
+  food:
+    positive: '&a✔ Requires #food# Food'
+    negative: '&c✖ Requires #food# Food'
+  level:
+    positive: '&a✔ Requires Level #level#'
+    negative: '&c✖ Requires Level #level#'
+  stamina:
+    positive: '&a✔ Requires #stamina# Stamina'
+    negative: '&c✖ Requires #stamina# Stamina'
+  mana:
+    positive: '&a✔ Requires #mana# Mana'
+    negative: '&c✖ Requires #mana# Mana'
+  money:
+    positive: '&a✔ Требуется ©#money#'
+    negative: '&c✖ Требуется ©#money#'
+  profession:
+    positive: '&a✔ Требуется #profession# уровень #level#'
+    negative: '&c✖ Требуется #profession# уровень #level#'
+  attribute:
+    positive: '&a✔ Requires #points# #attribute#'
+    negative: '&c✖ Requires #points# #attribute#'
+  stellium:
+    positive: '&a✔ Requires #stellium# Stellium'
+    negative: '&c✖ Requires #stellium# Stellium'
+  permission:
+    positive: '&a✔ #display#'
+    negative: '&c✖ #display#'
+  placeholder:
+    positive: '&a✔ #display#'
+    negative: '&c✖ #display#'
+ingredient:
+  mmoitem:
+    positive: '&8✔ &7#amount# #level##item#'
+    negative: '&c✖ &7#amount# #level##item#'
+  vanilla:
+    positive: '&8✔ &7#amount# #item#'
+    negative: '&c✖ &7#amount# #item#'

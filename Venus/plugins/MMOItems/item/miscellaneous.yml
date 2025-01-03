@@ -1,0 +1,7 @@
+LIGHT:
+  base:
+    material: STICK
+    commands:
+      cmd0:
+        format: lightning
+        delay: 0.0

@@ -1,0 +1,106 @@
+totem-first: true
+relivingTime: 5
+itemSteal: false
+disbleWorldsEnable: true
+enableWorldsEnable: false
+disableWorlds:
+- world1
+- world2
+- world3
+enableWorlds:
+- world1
+- world2
+- world3
+info:
+  scoreboard: false
+  title: true
+  chat: false(not implemented)
+messages:
+  reliving:
+    player: '&aВы поднимаете &2<VICTIM>.'
+    victim: '&a<PLAYER> поднимает вас.'
+  revivedSuccessfully:
+    player: '&aВы подняли &2<VICTIM>.'
+    victim: '&aВас поднял &2<PLAYER>.'
+  cancelReliving:
+    player: '&cВы прекратили поднимать &4<VICTIM>.'
+    victim: '&c<PLAYER> прекратил поднимать вас.'
+  shotDown:
+    player: '&aВы положили <VICTIM>'
+    victim: '&c<PLAYER> положил вас.'
+  reload: '&aThe configuration was successfully reloaded.'
+  blockedCommand: '&cYou cannot use this command in your current state.'
+  noPermission: '&cyou do not have the permission <PERMISSION>'
+permissions:
+  revivePlayerEnablePermission: false
+  reviveVictimEnablePermission: false
+  itemStealPlayer: false
+  itemStealVictim: false
+sounds:
+  reliving: 1
+  noPermission: ENTITY_VILLAGER_NO
+  revivedSuccessfully: ENTITY_MAGMA_CUBE_JUMP
+commands-blacklist:
+- sethome
+- createhome
+- tpahere
+- tpaccept
+- tpyes
+- tpa
+- call
+- tpask
+- ehome
+- ehomes
+- esethome
+- ecreatehome
+- etpahere
+- etpaccept
+- etpyes
+- etpa
+- ecall
+- etpask
+- essentials:sethome
+- essentials:createhome
+- essentials:tpahere
+- essentials:tpaccept
+- essentials:tpyes
+- essentials:tpa
+- essentials:call
+- essentials:tpask
+- wtp
+- uspawn
+- utp
+- mtp
+- ftp
+scoreboard:
+  title: '&6Asterium &f->'
+  status: '&fСтатус: '
+  waiting: '&cОжидание'
+  reliving: '&aПоднятие...'
+  deathIn: '&fСмерть через &a<TIME> сек'
+  invulnerableFor: '&fБессмерите &a<TIME> сек'
+  vulnerable: '&cУязвим'
+playersConfig:
+  speed: 0.04
+title:
+  title: '&fСтатус : <STATUS>'
+  subTitle: '&fСмерть через: &a<DEATHTIME> &f<INVULNERABILITY>'
+potion:
+  enable: true
+  effect: BLINDNESS
+  level: 1
+delays:
+  deathDelay: 90
+  invulnerabilityDelay: 3
+relivedHealth: 0.5
+CitizensCompatibility:
+  enable: false
+  damagedNpc: false
+CrackShotCompatibility:
+  enable: false
+  useWeaponIfDamaged: false
+EnableForceDeath: true
+QualityArmoryCompatibility:
+  enable: false
+  useWeaponIfDamaged: false
+newVersionPremiumMessageDisable: true

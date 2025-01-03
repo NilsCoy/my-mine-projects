@@ -1,0 +1,4 @@
+WEAPON:
+    mythicmobs-skill-id: weapon
+    modifiers:
+    - damage

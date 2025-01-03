@@ -1,0 +1,47 @@
+Events:
+  venus_particle:
+    type: repetitive
+    repetitive_time: 1
+    conditions:
+    - '%player_world% == venus'
+    - '%player_gamemode% == ADVENTURE'
+    actions:
+      default:
+      - 'player_command_as_op: particle minecraft:white_ash ~ ~ ~ 5 5 5 0 100 normal %player%'
+  venus_gravity:
+    type: repetitive
+    repetitive_time: 1
+    conditions:
+    - '%player_world% == venus'
+    - '%player_gamemode% == ADVENTURE'
+    actions:
+      default:
+      - 'give_potion_effect: SLOW_FALLING;5;0;false'
+      - 'give_potion_effect: JUMP;5;2;false'
+  venus_ambient:
+    type: repetitive
+    repetitive_time: 840
+    conditions:
+    - '%player_world% == venus'
+    - '%player_gamemode% == ADVENTURE'
+    actions:
+      default:
+      - 'playsound: AMBIENT_BASALT_DELTAS_LOOP;1;1'
+  venus_ambient_sound1:
+    type: repetitive
+    repetitive_time: 500
+    conditions:
+    - '%player_world% == venus'
+    - '%player_gamemode% == ADVENTURE'
+    actions:
+      default:
+      - 'playsound: AMBIENT_BASALT_DELTAS_ADDITIONS;1;1'
+  venus_ambient_sound2:
+    type: repetitive
+    repetitive_time: 1200
+    conditions:
+    - '%player_world% == venus'
+    - '%player_gamemode% == ADVENTURE'
+    actions:
+      default:
+      - 'playsound: AMBIENT_BASALT_DELTAS_MOOD;1;1'

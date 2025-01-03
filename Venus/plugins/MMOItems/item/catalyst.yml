@@ -1,0 +1,9 @@
+BINOCULARS:
+  base:
+    material: SPYGLASS
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    handworn: true

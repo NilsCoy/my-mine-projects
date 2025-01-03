@@ -1,0 +1,22 @@
+lastAccountName: MemnyiKiller
+timestamps:
+  login: 1690987548719
+  logout: 1690991681687
+  lastteleport: 1690991532434
+ipAddress: 188.187.197.18
+lastlocation:
+  world: world
+  x: 155.5255423932429
+  y: 43.0
+  z: 159.41178030522153
+  yaw: 120.00528
+  pitch: 16.726105
+money: '934.000'
+logoutlocation:
+  world: world
+  x: 109.22411327816774
+  y: 43.0
+  z: 159.8271950953712
+  yaw: -85.60382
+  pitch: 2.6326187
+godmode: false

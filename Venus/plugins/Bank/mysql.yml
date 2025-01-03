@@ -1,0 +1,7 @@
+SQL:
+  user: u38509_vd7pj16gyD
+  password: b715J8j^skHia+2tho8TiNl9
+  host: 65.109.23.34
+  port: '3306'
+  database: s38509_basic
+  extra: ?useUnicode=true&characterEncoding=utf-8

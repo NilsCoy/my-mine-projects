@@ -1,0 +1,329 @@
+miner:
+  title: miner
+  command: none
+  permission: none
+  default-shop: sell
+  buy-shop-enabled: true
+  sell-shop-enabled: true
+  trade-shop-enabled: false
+  logging-enabled: true
+  close-after-purchase: false
+  confirmation-window-enabled: false
+  pages:
+    page-0:
+      size: 36
+      page-name: '&9Страница 1'
+      page-permission: ''
+      sell-items:
+        item-10:
+          id: 35
+          type: tradable
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: AMETHYST_SHARD
+            amount: 8
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"aqua","text":"Синий
+                кристалл"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Можно
+                продать."}],"text":""}'
+              custom-model-data: 1
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              internal: H4sIAAAAAAAA/4WRwUoDMRCGZ/USCoIKHlSEEqEnETwJvcXd2A1sdksSD8tSgr6AUPcipaA9+whefIMKIqvFevAFZt/ItNW1paiXwPDNz3yTqQEQ2JIyEYZLbYM0ZlL4NkoUh/2M0gPaOMZ7HOMzvuG4ju/ljSuecFgOyrtD2iGwWYUnrzVpmwORzHAlWERgfRGLAIivUm1YdERgrYJuLIe9xgU+YOEmFfhSx1c3qyhvywEOcYQjD3Z/PIVmJxG3PPZDFhsRt7xV2Kmwf6ZNIq1MAh7ZgBkGAB6BjarhK6dhJXMr1EJtVDpz0D2q8/OcNumkdPsnLZ1fdq9pM+vRBV378XiVd13jn9a03+l7sL1kriWPpt7enPc3VLzNhJrR5aiv2Kn5DWopTDiB8787PWc9++eW8Ak+I8cfDQIAAA==
+          show-lore: true
+          display-lore:
+          - §f
+          - §7Можно продать.
+          show-description: true
+          description: []
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 30/07/2023 23:31:52
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 30/07/2023 23:31:52
+          show-price: true
+          trade-price: 10.0
+          custom-input-enabled: true
+          stack-sale-enabled: true
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          permission: ''
+          logging-enabled: true
+          close-after-purchase: false
+        item-12:
+          id: 36
+          type: tradable
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: AMETHYST_SHARD
+            amount: 8
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"aqua","text":"Зеленый
+                кристалл"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Можно
+                продать."}],"text":""}'
+              custom-model-data: 2
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              internal: H4sIAAAAAAAA/4WRwUoDMRBAZ+slFAQVPKiXGqEn8eBF6C3uxjaw2S1JRJalBP0Boe5FSkF71bsXP6KCilpaD/7A7B+Ztrq2FOkhgcmbYV5mygAENqWMheFS2yCJmBS+DWPFYS+ldJ9Wj/ARR/iKQxxV8DO/ccEz9vNefn9AWwQ2iuLxbU3S5EAkM1wJFhJYm8ciAOKrRBsWHhJYLaBry2G3eoEP+IIDd4b5Hb5X8MP1e8tv8x723fPAg50/V6HZccgtj/wGi4yI6t4KbBfYP9UmllbGAQ9twAwDgBKB9SLhp05DKXXfKDe0UcnU46xDdXae0Rodh24GcV1nl+1rWks7dE7Zfj1dZW2XuNScdltdD7YW7LXk4cTdm3H/hYo3mVBTuljqK3Zi/oNaCtMYw9kpT9ZaSZfsFL4B95+6BRUCAAA=
+          show-lore: true
+          display-lore:
+          - §f
+          - §7Можно продать.
+          show-description: true
+          description: []
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 30/07/2023 23:33:45
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 30/07/2023 23:33:45
+          show-price: true
+          trade-price: 20.0
+          custom-input-enabled: true
+          stack-sale-enabled: true
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          permission: ''
+          logging-enabled: true
+          close-after-purchase: false
+        item-14:
+          id: 37
+          type: tradable
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: AMETHYST_SHARD
+            amount: 8
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"aqua","text":"Желтый
+                кристалл"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Можно
+                продать."}],"text":""}'
+              custom-model-data: 3
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              internal: H4sIAAAAAAAA/4WRsUoDQRBA50yzBAQVLNTCsEIqsbEQ0q13a7Jwexd2N8VxhEV/QIjXSAhoWq2t/IgEVNRgLPyBuT9yk+iZECTNwvBmdt7MlAEIbEsZC8OltkESMSl8G8aKw0FK6SGtnuAjjvEFP3Bcwc/8xgVPOMj7+f0RbRPYKoonrzVJkwORzHAlWEhgYxGLAIivEm1YeExgvYCuLYf96gU+4DOO3Od3+FbBd9ftNb/N+zjAEY482PszFZqdhtzyyG+wyIio7pVgt8B+S5tYWhkHPLQBMwwASgQ2i4SfOg1rqRui3NBGJTOLVpfq7DyjNToJ3Qbius4uO9e0lnbpgrD9Gl5lHZe4wpv22j0PdpbcteTh1NybM/+FijeZUDO6XOordmb+g1oK05jA+Q1PT1pJV9wTvgFQJ2qbEQIAAA==
+          show-lore: true
+          display-lore:
+          - §f
+          - §7Можно продать.
+          show-description: true
+          description: []
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 30/07/2023 23:33:52
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 30/07/2023 23:33:52
+          show-price: true
+          trade-price: 30.0
+          custom-input-enabled: true
+          stack-sale-enabled: true
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          permission: ''
+          logging-enabled: true
+          close-after-purchase: false
+        item-16:
+          id: 38
+          type: tradable
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: AMETHYST_SHARD
+            amount: 8
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"aqua","text":"Красный
+                кристалл"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Можно
+                продать."}],"text":""}'
+              custom-model-data: 4
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              internal: H4sIAAAAAAAA/4WRwUoDMRCGZ9VDKAgqeFAvNUJP4kkQeou7sQ1sdksSkWUpQV9AqHuRUrC96hOID1FBRC2tB19g8kZuW11bivQS+PlmmC8zJQAC21LGwnCpbZBETArfhrHicJBSekgrJ/iEI3zFIY7K+Onu8vCCfddzD0e0SWCraB6/1iQNDkQyw5VgIYGNeSwCIL5KtGHhMYH1AuZjOexXrvAxH9B3XRy6e3wv40ce31zX9bCPAxx4sPfnKjQ7DbnlkV9nkRFRzVuF3QL759rE0so44KENmGEAsEZgsyj46dOwkubfKNW1UcnU46JNdXaZ0Sodx3wHcU1n161bWk3bdE7Zfj3fZK28cKk57TQ7Huws2GvJw4m7N+P+CxVvMKGmdLHVV+zM/Ae1FKY+hrNbnpy1nC65KXwDKALJaRUCAAA=
+          show-lore: true
+          display-lore:
+          - §f
+          - §7Можно продать.
+          show-description: true
+          description: []
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 30/07/2023 23:33:59
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 30/07/2023 23:33:59
+          show-price: true
+          trade-price: 40.0
+          custom-input-enabled: true
+          stack-sale-enabled: true
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          permission: ''
+          logging-enabled: true
+          close-after-purchase: false
+      buy-items:
+        item-13:
+          id: 40
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: DIAMOND_PICKAXE
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"Бур"}],"text":""}'
+              custom-model-data: 1
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              CanDestroy:
+              - minecraft:amethyst_cluster
+              - minecraft:large_amethyst_bud
+              - minecraft:medium_amethyst_bud
+              - minecraft:small_amethyst_bud
+              internal: H4sIAAAAAAAA/8WSy0rDQBSGT7zAUBG8rKwbmYWrbtx2IUyTsQlkMiUzgiWEIbZRC0kLyXRRSkHwCXwUn8EXsG9k0tpotV27GZj5zsD5z3dqAAacMcYdSZlQliNIy6VKMOpKx2sbCE4qWJ5KdjsU9iTnLoKjdeRYsF+CKwSHFfEIo4Au+x+v85f5M4LTipi3QnKmvJY0DgJsRkMrznU2mlwE6WAY97LoQTfzNEoSFaWxfprkWt2P+41vmMb9wTjdRpMoe4y3weq5l4xzHWchbmB6J5mj/ruP0IDzPzqoZ9rEWwjZhfrvCTJuUVdZRBIobCI4rgq+/gnYCUIENVtIv7s0cj3FQkcaN3F5LdLzttCjbIKbwRSvyVPvb8U4isKVQzwLZ5uatCiRtrJ83jE2rZTpk5tFAuNHghX0aYc4/pJu2kZH2iWETwfoYnivAgAA
+          display-lore: []
+          show-description: false
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give TOOL TOOL1 %player% 1
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 30/07/2023 23:36:36
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 30/07/2023 23:36:36
+          show-price: true
+          trade-price: 10000.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false

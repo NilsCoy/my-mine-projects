@@ -1,0 +1,7 @@
+
+TOOL?TOOL1:
+    can-mine:
+    - vanilla{type=SMALL_AMETHYST_BUD}
+    - vanilla{type=MEDIUM_AMETHYST_BUD}
+    - vanilla{type=LARGE_AMETHYST_BUD}
+    - vanilla{type=AMETHYST_CLUSTER}

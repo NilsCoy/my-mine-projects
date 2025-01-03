@@ -1,0 +1,57 @@
+SWORD1:
+  base:
+    material: DIAMOND_SWORD
+    custom-model-data: 1.0
+    ability:
+      ability1:
+        type: BLIND
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: '&dНео-клинок'
+    attack-damage: 10.0
+    attack-speed: 1.5
+    disable-death-drop: true
+    unbreakable: true
+    disable-attack-passive: true
+    movement-speed: 0.05
+SWORD2:
+  base:
+    material: DIAMOND_SWORD
+    custom-model-data: 2.0
+    ability:
+      ability1:
+        type: BLIND
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: '&dСмирительная палка'
+    attack-damage: 7.0
+    attack-speed: 1.5
+    disable-death-drop: true
+    unbreakable: true
+    disable-attack-passive: true
+    movement-speed: 0.03
+SWORD3:
+  base:
+    material: DIAMOND_SWORD
+    custom-model-data: 3.0
+    ability:
+      ability1:
+        type: BLIND
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: '&dЭнерго-катана'
+    attack-damage: 15.0
+    attack-speed: 2.0
+    disable-death-drop: true
+    unbreakable: true
+    disable-attack-passive: true
+    movement-speed: 0.07

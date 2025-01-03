@@ -1,0 +1,25 @@
+# The size of the gui. Must be
+# between 9 and 54 and must be a multiple of 9.
+slots: 54
+
+layout:
+
+  # The slots that display the station's recipes.
+  recipe-slots: [2, 11, 20, 29, 3, 12, 21, 30, 4, 13, 22, 31, 5, 14, 23, 32, 6, 15, 24, 33]
+
+  # The slots that display the station's queue slots.
+  queue-slots: [48, 49, 50]
+
+  # The slots that display the arrows to navigate
+  # the station's recipes.
+  # Only shows when it can be used.
+  recipe-previous-slot: [0, 9, 18, 27]
+
+  recipe-next-slot: [8, 16, 24, 32]
+
+  # The slots that display the arrows to navigate
+  # the station's queue.
+  # Only shows when it can be used.
+  queue-previous-slot: 37
+
+  queue-next-slot: 43

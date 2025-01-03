@@ -1,0 +1,61 @@
+OXYGEN:
+  base:
+    material: STICK
+    name: '&bБаллон с сжатым воздухом'
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    commands:
+      cmd0:
+        format: scoreboard players set %player_name% oxygen 100
+        delay: 0.0
+        op: true
+    lore:
+    - '&7Восстанавливает &fвесь &7кислород в костюме.'
+    - '&7Нажмите &fПКМ &7для использования.'
+    custom-model-data: 4.0
+    sounds:
+      on-consume:
+        sound: entity.generic.burn
+        volume: 1.0
+        pitch: 1.0
+ENERGY:
+  base:
+    material: STICK
+    name: '&bСменный аккумулятор'
+    disable-crafting: true
+    disable-smelting: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-repairing: true
+    lore:
+    - '&7Восстанавливает &f50 &7энергии.'
+    - '&7Нажмите &fПКМ &7для использования.'
+    custom-model-data: 5.0
+    restore-mana: 50.0
+    sounds:
+      on-consume:
+        sound: block.beacon.activate
+        volume: 1.0
+        pitch: 2.0
+HEAL1:
+  base:
+    material: STICK
+    custom-model-data: 1.0
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: '&bАптечка'
+    lore:
+    - '&7Восстанавливает &f20 &7здоровья.'
+    - '&7Нажмите &fПКМ &7для использования.'
+    restore-health: 20.0
+    sounds:
+      on-consume:
+        sound: entity.bee.sting
+        volume: 1.0
+        pitch: 0.5

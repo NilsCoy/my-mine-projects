@@ -1,0 +1,647 @@
+misc:
+  title: §9Магазин расходников
+  command: none
+  permission: none
+  default-shop: buy
+  buy-shop-enabled: true
+  sell-shop-enabled: false
+  trade-shop-enabled: false
+  logging-enabled: true
+  close-after-purchase: false
+  confirmation-window-enabled: false
+  pages:
+    page-0:
+      size: 36
+      page-name: '&9Страница 1'
+      page-permission: ''
+      buy-items:
+        item-2:
+          id: 16
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: STICK
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"aqua","text":"Баллон
+                с сжатым воздухом"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Восстанавливает
+                "},{"italic":false,"color":"white","text":"весь "},{"italic":false,"color":"gray","text":"кислород
+                в костюме."}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Нажмите
+                "},{"italic":false,"color":"white","text":"ПКМ "},{"italic":false,"color":"gray","text":"для
+                использования."}],"text":""}'
+              custom-model-data: 4
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              internal: H4sIAAAAAAAA/81Sz4vTQBSeqkgoCCp4UC/DwPa01HoScovJ2AaaZEmyYCklZN1ZL22zJFmwLAVb8eTiogdBUfwXamndYrv14D/w5j/ypd1tXdyLN0kymffrm+978/KEKOSOZTmmzy0vMGq2Zpl6UHVcTj7WGdtkhUfwHuayh08fBnCK3xCmMMF1AGPZp4U93I4xfEQx9wdMZA/jc/kS5jCiMKToy+r78i3MYFxcYn7B6u9oTxB1nGF8hU/wOUMYwVQe0wXMT4SYyiM4wf9wcfhEHhdZQyE3V5SzNTANct15WitzWyE3ViHUwsmDwg68w9ppRgpOqezhi0cPkNAbmCFBdJ/ASL6Sr3E3U8itFQC39Ypm+x65Um9cJfdWfn3b8x0rsByDVwND8zVCyLUcub/uo+lpj6v8HMC0yzmF5Cue79aWrMQh89IwZSrLTGyJU/bSKO4wtX7ILggIfn1L0hgT/1EH6za6OXL3L0qeZfqVjNBlQd3VnpyxXXdBdyxLsw2PCOSmR61W2N5FPsmzKBY7URjv0v1m2BFxQhOR0o2lEbTDltig0YvOc9GmD0sl1GgIDDG1VCxtIk47iZqCqXthMxGof5+paXwguo3cH40+5+XyLc10l8RuX7x6v7bFSV53bG/bynIv18yrZ7LW07GY8Q/1/3LAyW+lrkeKmAMAAA==
+          display-name: §bБалон с сжатым воздухом §fx1
+          display-lore:
+          - §f
+          - §7Восстанавливает §fвесь §7кислород в костюме.
+          - §7Нажмите §fПКМ §7для использования.
+          show-description: true
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give CONSUMABLE OXYGEN %player% 1
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 22/07/2023 14:49:59
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 22/07/2023 14:49:59
+          show-price: true
+          trade-price: 10.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-4:
+          id: 17
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: STICK
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"aqua","text":"Аптечка"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Восстанавливает
+                "},{"italic":false,"color":"white","text":"20 "},{"italic":false,"color":"gray","text":"здоровья."}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Нажмите
+                "},{"italic":false,"color":"white","text":"ПКМ "},{"italic":false,"color":"gray","text":"для
+                использования."}],"text":""}'
+              custom-model-data: 1
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              internal: H4sIAAAAAAAA/8VSTUsCQRh+LYpFCCyIyC4yB08RFUHgqW0d3YX9kJ3xICJLHboG5iWkSC9dBKNjFP0FEy3J1EN/4N1/1LtKK6b3ZpiBmedjnnlnogAKbFqWY0huCS9dsFXL0DzTcTnUioztsuQxPuLQr1GvYwsHNNrYxx7NLez69UTy4nA/QawP7BDvDofY9ht+c2+ifSHWO35hj9Rd4uIrPuFzwO9g328mCKjhiER9v0EWw7HtgHbJoKRALIwWzJ6RhhWdq+aBAmshQpE5xJLn+ICj4BT/Hj+xpcB6yOC2pqu2FLBULC1DPNzX8kI6lmc5aW56aVWqABCJwM60HoZQT03+a2DY2cgqbIWwy0nvci+IJPWTIxg3BaK6kG5hEixTZaJyVmEpFiypKE5WVC7L1yxVrLKZO3jfb1eVMhH/XoXdlG4isD2XSnPVzDjTIlBYhtQnYHwOdHlONdwAVWBjtsSykOMQ1Rxb5K2Au9ibm3Kinj7D+M/cFv/1w8APQgl7JNACAAA=
+          display-name: §bАптечка §fx1
+          display-lore:
+          - §f
+          - §7Восстанавливает §f20 §7здоровья.
+          - §7Нажмите §fПКМ §7для использования.
+          show-description: true
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give CONSUMABLE HEAL1 %player% 1
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 22/07/2023 14:50:58
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 22/07/2023 14:50:58
+          show-price: true
+          trade-price: 20.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-6:
+          id: 18
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: STICK
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"aqua","text":"Сменный
+                аккумулятор"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Восстанавливает
+                "},{"italic":false,"color":"white","text":"50 "},{"italic":false,"color":"gray","text":"энергии."}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Нажмите
+                "},{"italic":false,"color":"white","text":"ПКМ "},{"italic":false,"color":"gray","text":"для
+                использования."}],"text":""}'
+              custom-model-data: 5
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              internal: H4sIAAAAAAAA/8VSsUoDQRCdKMoREFSwUJtji9iI2Ihg5XpZk4PsXbg9ixDCoYWtoNeIihpLlYClKOIfxOhpjBoLf2D2j5zcYUzQws5ddpbd92bm7eykAQyYkNK1fSFVkC05XNpWUHA9AYdlxmZZZhEvsK2PaVaxjm+0GviCTbJ1jHTVzGwuzJuZRX1OWKSP8J6w5lzieU2cR3zFJvlGxMQbvMQrYuMDvuiaScAxvmObDmf4RHsjTtHUtTlWMWC0K6xjAzsLw8IRXq5kwEgXIsUCZjIbeEuJIvJ+06f4bFKgFrb0Cb7SolykoK2PDBjrOgrHynPHVzBQrgzCVPfeWlO+KwPpZkUhyHKfA8BQCqa/q2QrvlIQXwFsJ5cyIJ1XvldK1FT2mArXQ7bEOkcqhZtT4db2Llsq77E+4cHH3U64TcQ/6mcHlYMUTP6QYnl8NRbyG6ik7ecTcOoH6Ikit73kDeP99fZLRQFpy3XUmuxwf48tCnHi4Z428gRV0BOB5A5ftiEevV8Wt9d++R97Cz4BT68lQ/kCAAA=
+          display-name: §bСменный аккумулятор §fx1
+          display-lore:
+          - §f
+          - §7Восстанавливает §f50 §7энергии.
+          - §7Нажмите §fПКМ §7для использования.
+          show-description: true
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give CONSUMABLE ENERGY %player% 1
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 22/07/2023 14:51:24
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 22/07/2023 14:51:24
+          show-price: true
+          trade-price: 15.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-11:
+          id: 22
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: STICK
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"aqua","text":"Баллон
+                с сжатым воздухом"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Восстанавливает
+                "},{"italic":false,"color":"white","text":"весь "},{"italic":false,"color":"gray","text":"кислород
+                в костюме."}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Нажмите
+                "},{"italic":false,"color":"white","text":"ПКМ "},{"italic":false,"color":"gray","text":"для
+                использования."}],"text":""}'
+              custom-model-data: 4
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              internal: H4sIAAAAAAAA/81Sz4vTQBSeqkgoCCp4UC/DwPa01HoScovJ2AaaZEmyYCklZN1ZL22zJFmwLAVb8eTiogdBUfwXamndYrv14D/w5j/ypd1tXdyLN0kymffrm+978/KEKOSOZTmmzy0vMGq2Zpl6UHVcTj7WGdtkhUfwHuayh08fBnCK3xCmMMF1AGPZp4U93I4xfEQx9wdMZA/jc/kS5jCiMKToy+r78i3MYFxcYn7B6u9oTxB1nGF8hU/wOUMYwVQe0wXMT4SYyiM4wf9wcfhEHhdZQyE3V5SzNTANct15WitzWyE3ViHUwsmDwg68w9ppRgpOqezhi0cPkNAbmCFBdJ/ASL6Sr3E3U8itFQC39Ypm+x65Um9cJfdWfn3b8x0rsByDVwND8zVCyLUcub/uo+lpj6v8HMC0yzmF5Cue79aWrMQh89IwZSrLTGyJU/bSKO4wtX7ILggIfn1L0hgT/1EH6za6OXL3L0qeZfqVjNBlQd3VnpyxXXdBdyxLsw2PCOSmR61W2N5FPsmzKBY7URjv0v1m2BFxQhOR0o2lEbTDltig0YvOc9GmD0sl1GgIDDG1VCxtIk47iZqCqXthMxGof5+paXwguo3cH40+5+XyLc10l8RuX7x6v7bFSV53bG/bynIv18yrZ7LW07GY8Q/1/3LAyW+lrkeKmAMAAA==
+          display-name: §bБаллон с сжатым воздухом §fx10
+          display-lore:
+          - §f
+          - §7Восстанавливает §fвесь §7кислород в костюме.
+          - §7Нажмите §fПКМ §7для использования.
+          show-description: true
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give CONSUMABLE OXYGEN %player% 10
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 22/07/2023 14:52:34
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 22/07/2023 14:52:34
+          show-price: true
+          trade-price: 100.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-13:
+          id: 23
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: STICK
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"aqua","text":"Аптечка"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Восстанавливает
+                "},{"italic":false,"color":"white","text":"20 "},{"italic":false,"color":"gray","text":"здоровья."}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Нажмите
+                "},{"italic":false,"color":"white","text":"ПКМ "},{"italic":false,"color":"gray","text":"для
+                использования."}],"text":""}'
+              custom-model-data: 1
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              internal: H4sIAAAAAAAA/8VSTUsCQRh+LYpFCCyIyC4yB08RFUHgqW0d3YX9kJ3xICJLHboG5iWkSC9dBKNjFP0FEy3J1EN/4N1/1LtKK6b3ZpiBmedjnnlnogAKbFqWY0huCS9dsFXL0DzTcTnUioztsuQxPuLQr1GvYwsHNNrYxx7NLez69UTy4nA/QawP7BDvDofY9ht+c2+ifSHWO35hj9Rd4uIrPuFzwO9g328mCKjhiER9v0EWw7HtgHbJoKRALIwWzJ6RhhWdq+aBAmshQpE5xJLn+ICj4BT/Hj+xpcB6yOC2pqu2FLBULC1DPNzX8kI6lmc5aW56aVWqABCJwM60HoZQT03+a2DY2cgqbIWwy0nvci+IJPWTIxg3BaK6kG5hEixTZaJyVmEpFiypKE5WVC7L1yxVrLKZO3jfb1eVMhH/XoXdlG4isD2XSnPVzDjTIlBYhtQnYHwOdHlONdwAVWBjtsSykOMQ1Rxb5K2Au9ibm3Kinj7D+M/cFv/1w8APQgl7JNACAAA=
+          display-name: §bАптечка §fx10
+          display-lore:
+          - §f
+          - §7Восстанавливает §f20 §7здоровья.
+          - §7Нажмите §fПКМ §7для использования.
+          show-description: true
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give CONSUMABLE HEAL1 %player% 10
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 22/07/2023 14:53:15
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 22/07/2023 14:53:15
+          show-price: true
+          trade-price: 200.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-15:
+          id: 24
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: STICK
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"aqua","text":"Сменный
+                аккумулятор"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Восстанавливает
+                "},{"italic":false,"color":"white","text":"50 "},{"italic":false,"color":"gray","text":"энергии."}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Нажмите
+                "},{"italic":false,"color":"white","text":"ПКМ "},{"italic":false,"color":"gray","text":"для
+                использования."}],"text":""}'
+              custom-model-data: 5
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              internal: H4sIAAAAAAAA/8VSsUoDQRCdKMoREFSwUJtji9iI2Ihg5XpZk4PsXbg9ixDCoYWtoNeIihpLlYClKOIfxOhpjBoLf2D2j5zcYUzQws5ddpbd92bm7eykAQyYkNK1fSFVkC05XNpWUHA9AYdlxmZZZhEvsK2PaVaxjm+0GviCTbJ1jHTVzGwuzJuZRX1OWKSP8J6w5lzieU2cR3zFJvlGxMQbvMQrYuMDvuiaScAxvmObDmf4RHsjTtHUtTlWMWC0K6xjAzsLw8IRXq5kwEgXIsUCZjIbeEuJIvJ+06f4bFKgFrb0Cb7SolykoK2PDBjrOgrHynPHVzBQrgzCVPfeWlO+KwPpZkUhyHKfA8BQCqa/q2QrvlIQXwFsJ5cyIJ1XvldK1FT2mArXQ7bEOkcqhZtT4db2Llsq77E+4cHH3U64TcQ/6mcHlYMUTP6QYnl8NRbyG6ik7ecTcOoH6Ikit73kDeP99fZLRQFpy3XUmuxwf48tCnHi4Z428gRV0BOB5A5ftiEevV8Wt9d++R97Cz4BT68lQ/kCAAA=
+          display-name: §bСменный аккумулятор §fx10
+          display-lore:
+          - §f
+          - §7Восстанавливает §f50 §7энергии.
+          - §7Нажмите §fПКМ §7для использования.
+          show-description: true
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give CONSUMABLE ENERGY %player% 10
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 22/07/2023 14:53:27
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 22/07/2023 14:53:27
+          show-price: true
+          trade-price: 150.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-20:
+          id: 28
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: STICK
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"aqua","text":"Баллон
+                с сжатым воздухом"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Восстанавливает
+                "},{"italic":false,"color":"white","text":"весь "},{"italic":false,"color":"gray","text":"кислород
+                в костюме."}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Нажмите
+                "},{"italic":false,"color":"white","text":"ПКМ "},{"italic":false,"color":"gray","text":"для
+                использования."}],"text":""}'
+              custom-model-data: 4
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              internal: H4sIAAAAAAAA/81Sz4vTQBSeqkgoCCp4UC/DwPa01HoScovJ2AaaZEmyYCklZN1ZL22zJFmwLAVb8eTiogdBUfwXamndYrv14D/w5j/ypd1tXdyLN0kymffrm+978/KEKOSOZTmmzy0vMGq2Zpl6UHVcTj7WGdtkhUfwHuayh08fBnCK3xCmMMF1AGPZp4U93I4xfEQx9wdMZA/jc/kS5jCiMKToy+r78i3MYFxcYn7B6u9oTxB1nGF8hU/wOUMYwVQe0wXMT4SYyiM4wf9wcfhEHhdZQyE3V5SzNTANct15WitzWyE3ViHUwsmDwg68w9ppRgpOqezhi0cPkNAbmCFBdJ/ASL6Sr3E3U8itFQC39Ypm+x65Um9cJfdWfn3b8x0rsByDVwND8zVCyLUcub/uo+lpj6v8HMC0yzmF5Cue79aWrMQh89IwZSrLTGyJU/bSKO4wtX7ILggIfn1L0hgT/1EH6za6OXL3L0qeZfqVjNBlQd3VnpyxXXdBdyxLsw2PCOSmR61W2N5FPsmzKBY7URjv0v1m2BFxQhOR0o2lEbTDltig0YvOc9GmD0sl1GgIDDG1VCxtIk47iZqCqXthMxGof5+paXwguo3cH40+5+XyLc10l8RuX7x6v7bFSV53bG/bynIv18yrZ7LW07GY8Q/1/3LAyW+lrkeKmAMAAA==
+          display-name: §bБаллон с сжатым воздухом §fx64
+          display-lore:
+          - §f
+          - §7Восстанавливает §fвесь §7кислород в костюме.
+          - §7Нажмите §fПКМ §7для использования.
+          show-description: true
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give CONSUMABLE OXYGEN %player% 64
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 22/07/2023 14:54:07
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 22/07/2023 14:54:07
+          show-price: true
+          trade-price: 640.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-22:
+          id: 29
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: STICK
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"aqua","text":"Аптечка"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Восстанавливает
+                "},{"italic":false,"color":"white","text":"20 "},{"italic":false,"color":"gray","text":"здоровья."}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Нажмите
+                "},{"italic":false,"color":"white","text":"ПКМ "},{"italic":false,"color":"gray","text":"для
+                использования."}],"text":""}'
+              custom-model-data: 1
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              internal: H4sIAAAAAAAA/8VSTUsCQRh+LYpFCCyIyC4yB08RFUHgqW0d3YX9kJ3xICJLHboG5iWkSC9dBKNjFP0FEy3J1EN/4N1/1LtKK6b3ZpiBmedjnnlnogAKbFqWY0huCS9dsFXL0DzTcTnUioztsuQxPuLQr1GvYwsHNNrYxx7NLez69UTy4nA/QawP7BDvDofY9ht+c2+ifSHWO35hj9Rd4uIrPuFzwO9g328mCKjhiER9v0EWw7HtgHbJoKRALIwWzJ6RhhWdq+aBAmshQpE5xJLn+ICj4BT/Hj+xpcB6yOC2pqu2FLBULC1DPNzX8kI6lmc5aW56aVWqABCJwM60HoZQT03+a2DY2cgqbIWwy0nvci+IJPWTIxg3BaK6kG5hEixTZaJyVmEpFiypKE5WVC7L1yxVrLKZO3jfb1eVMhH/XoXdlG4isD2XSnPVzDjTIlBYhtQnYHwOdHlONdwAVWBjtsSykOMQ1Rxb5K2Au9ibm3Kinj7D+M/cFv/1w8APQgl7JNACAAA=
+          display-name: §bАптечка §fx64
+          display-lore:
+          - §f
+          - §7Восстанавливает §f20 §7здоровья.
+          - §7Нажмите §fПКМ §7для использования.
+          show-description: true
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give CONSUMABLE HEAL1 %player% 64
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 22/07/2023 14:54:40
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 22/07/2023 14:54:40
+          show-price: true
+          trade-price: 1280.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-24:
+          id: 30
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: STICK
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"aqua","text":"Сменный
+                аккумулятор"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Восстанавливает
+                "},{"italic":false,"color":"white","text":"50 "},{"italic":false,"color":"gray","text":"энергии."}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Нажмите
+                "},{"italic":false,"color":"white","text":"ПКМ "},{"italic":false,"color":"gray","text":"для
+                использования."}],"text":""}'
+              custom-model-data: 5
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              internal: H4sIAAAAAAAA/8VSsUoDQRCdKMoREFSwUJtji9iI2Ihg5XpZk4PsXbg9ixDCoYWtoNeIihpLlYClKOIfxOhpjBoLf2D2j5zcYUzQws5ddpbd92bm7eykAQyYkNK1fSFVkC05XNpWUHA9AYdlxmZZZhEvsK2PaVaxjm+0GviCTbJ1jHTVzGwuzJuZRX1OWKSP8J6w5lzieU2cR3zFJvlGxMQbvMQrYuMDvuiaScAxvmObDmf4RHsjTtHUtTlWMWC0K6xjAzsLw8IRXq5kwEgXIsUCZjIbeEuJIvJ+06f4bFKgFrb0Cb7SolykoK2PDBjrOgrHynPHVzBQrgzCVPfeWlO+KwPpZkUhyHKfA8BQCqa/q2QrvlIQXwFsJ5cyIJ1XvldK1FT2mArXQ7bEOkcqhZtT4db2Llsq77E+4cHH3U64TcQ/6mcHlYMUTP6QYnl8NRbyG6ik7ecTcOoH6Ikit73kDeP99fZLRQFpy3XUmuxwf48tCnHi4Z428gRV0BOB5A5ftiEevV8Wt9d++R97Cz4BT68lQ/kCAAA=
+          display-name: §bСменный аккумулятор §fx64
+          display-lore:
+          - §f
+          - §7Восстанавливает §f50 §7энергии.
+          - §7Нажмите §fПКМ §7для использования.
+          show-description: true
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give CONSUMABLE ENERGY %player% 64
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 22/07/2023 14:54:53
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 22/07/2023 14:54:53
+          show-price: true
+          trade-price: 960.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false

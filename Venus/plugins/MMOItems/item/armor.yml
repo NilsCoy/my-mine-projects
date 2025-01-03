@@ -1,0 +1,58 @@
+ARMOR1:
+  base:
+    material: DIAMOND_CHESTPLATE
+    name: '&dБроня кадета'
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    disable-death-drop: true
+    unbreakable: true
+    max-health: 10.0
+  1DECORE:
+    base:
+      material: IRON_CHESTPLATE
+ARMOR2:
+  base:
+    material: DIAMOND_CHESTPLATE
+    name: '&dБроня разведчика'
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    disable-death-drop: true
+    unbreakable: true
+    max-health: 10.0
+    movement-speed: 0.05
+ARMOR3:
+  base:
+    material: DIAMOND_CHESTPLATE
+    name: '&dБроня штурмовика'
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    disable-death-drop: true
+    unbreakable: true
+    max-health: 20.0
+    movement-speed: -0.02
+ARMOR4:
+  base:
+    material: DIAMOND_CHESTPLATE
+    name: '&dКомбинезон «Ученый»'
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    disable-death-drop: true
+    unbreakable: true
+    max-health: 10.0
+TEST:
+  base:
+    material: DIAMOND_BOOTS
+    custom-nbt:
+    - tag 4

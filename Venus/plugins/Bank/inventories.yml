@@ -1,0 +1,87 @@
+# This config file handles all inventory sizes and titles for this plugin allowing all items to be dynamically changed
+#
+# Inventory Node parameters
+# Required: Size, Title
+# Extra: Permission
+Bank:
+  Items:
+    Size: 54
+    Title: Хранилище
+    Permission: bank.open.items
+    Add:
+      Size: 9
+      Title: Положить в хранилище
+      Permission: bank.items.add
+    Remove:
+      Size: 9
+      Title: Забрать из хранилища
+      Permission: bank.items.remove
+    Sort:
+      Size: 9
+      Title: Сортировка
+      Permission: bank.items.sort
+    Trashcan:
+      Size: 9
+      Title: Удаление
+      Permission: bank.items.trashcan
+    Buy:
+      Tabs:
+        Size: 9
+        Title: Покупка страницы
+        Permission: bank.items.tabs.buy
+      Slots:
+        Size: 9
+        Title: Покупка слота
+        Permission: bank.items.tabs.slot
+  Main:
+    Menu:
+      Size: 9
+      Title: Главное меню
+  Exp:
+    Size: 9
+    Title: Bank Exp
+    Permission: bank.open.exp
+  Money:
+    Size: 9
+    Title: Bank Money
+    Permission: bank.open.money
+  Pin:
+    Menu:
+      Size: 9
+      Title: Bank Pin
+      Permission: bank.open.pin
+    Set:
+      Size: 54
+      Title: Bank Pin Set
+      Permission: bank.pin.set
+    Enter:
+      Size: 54
+      Title: Bank Pin Enter
+  Loans:
+    Size: 9
+    Title: Bank Loans
+    Permission: bank.open.loans
+  Loan:
+    View:
+      Size: 9
+      Title: Bank View Loan
+      Permission: bank.open.loans.view
+    Take:
+      Out:
+        Size: 9
+        Title: Bank Take Out Loan
+        Permission: bank.open.loans.takeout
+  Admin:
+    Permission:
+      History:
+        Size: 54
+        Title: Bank Admin Permission History
+        Permission: bank.admin.permission.history
+    Blacklist:
+      Size: 54
+      Title: Bank Admin Blacklist
+      Permission: bank.admin.blacklist.open
+      Item:
+        Size: 9
+        Title: Bank Admin Blacklist Item Editor
+        Permission: bank.admin.blacklist.edit

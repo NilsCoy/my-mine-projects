@@ -1,0 +1,3 @@
+tutorial_finish: "tag add tutorial_finished"
+q1_started: "command qa give %player% Помощь Терезе из Ривелвилла"
+tutorial_revard1: "command eco give %player% 3000"

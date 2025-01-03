@@ -1,0 +1,58 @@
+Events:
+  unequip_armor:
+    type: player_armor
+    conditions:
+    - '%armor_type% == CHESTPLATE'
+    - '%equip_type% == UNEQUIP'
+    actions:
+      default:
+      - 'console_command: cosmin dequip ALL %player%'
+      - 'console_command: scoreboard players set %player% armor_equip 0'
+  1_equip:
+    type: player_armor
+    conditions:
+    - '%armor_type% == CHESTPLATE'
+    - '%equip_type% == EQUIP'
+    - '%item_name% == Броня кадета'
+    actions:
+      default:
+      - 'console_command: cosmin equip HEAD 1-helmet %player%'
+      - 'console_command: cosmin equip LEGS 1-leggings %player%'
+      - 'console_command: cosmin equip FEET 1-boots %player%'
+      - 'console_command: scoreboard players set %player% armor_equip 1'
+  2_equip:
+    type: player_armor
+    conditions:
+    - '%armor_type% == CHESTPLATE'
+    - '%equip_type% == EQUIP'
+    - '%item_name% == Броня разведчика'
+    actions:
+      default:
+      - 'console_command: cosmin equip HEAD 2-helmet %player%'
+      - 'console_command: cosmin equip LEGS 2-leggings %player%'
+      - 'console_command: cosmin equip FEET 2-boots %player%'
+      - 'console_command: scoreboard players set %player% armor_equip 1'
+  3_equip:
+    type: player_armor
+    conditions:
+    - '%armor_type% == CHESTPLATE'
+    - '%equip_type% == EQUIP'
+    - '%item_name% == Броня штурмовика'
+    actions:
+      default:
+      - 'console_command: cosmin equip HEAD 3-helmet %player%'
+      - 'console_command: cosmin equip LEGS 3-leggings %player%'
+      - 'console_command: cosmin equip FEET 3-boots %player%'
+      - 'console_command: scoreboard players set %player% armor_equip 1'
+  4_equip:
+    type: player_armor
+    conditions:
+    - '%armor_type% == CHESTPLATE'
+    - '%equip_type% == EQUIP'
+    - '%item_name% == Комбинезон «Ученый»'
+    actions:
+      default:
+      - 'console_command: cosmin equip HEAD 4-helmet %player%'
+      - 'console_command: cosmin equip LEGS 4-leggings %player%'
+      - 'console_command: cosmin equip FEET 4-boots %player%'
+      - 'console_command: scoreboard players set %player% armor_equip 1'

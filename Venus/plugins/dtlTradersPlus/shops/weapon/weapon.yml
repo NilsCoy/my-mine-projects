@@ -1,0 +1,530 @@
+weapon:
+  title: §9Магазин оружия
+  command: none
+  permission: none
+  default-shop: buy
+  buy-shop-enabled: true
+  sell-shop-enabled: false
+  trade-shop-enabled: false
+  logging-enabled: true
+  close-after-purchase: false
+  confirmation-window-enabled: false
+  pages:
+    page-0:
+      size: 54
+      page-name: '&9Страница 1'
+      page-permission: ''
+      buy-items:
+        item-10:
+          id: 46
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: CROSSBOW
+            meta:
+              ==: ItemMeta
+              meta-type: CROSSBOW
+              display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"Пистолет
+                LittleStrength"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Урон:
+                "},{"italic":false,"color":"white","text":"7"}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Скорость
+                стрельбы: "},{"italic":false,"color":"white","text":"0.5"}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Расход
+                энергии: "},{"italic":false,"color":"white","text":"5"}],"text":""}'
+              custom-model-data: 1
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              - HIDE_UNBREAKABLE
+              Unbreakable: true
+              internal: H4sIAAAAAAAA/72T3WoTQRTHz+qFoSD4gRdWwXUuclVKexECezfZHbOD+xF2RmpYwrC42yTQZmGzIBICteCV9RlUfAGLFoKlvfEFZt/I2WxNrAl4581+nPM/Z37/MzMbADV44Lo+5cRlwup62KWmcPyAwCBEaAvVm/JLcSQv5YWh1/ebVeSz/CEvy2jxtjguTvT560ieyfPiRJ4W70vpznajEn+SX1X+nWrxXS8+yAt5pqTf5EzOSlkD9WpwZ0FQPgW14NYewR3f29Xg8ZKOMtxyiKAeJwE2OfU9rQa3F3nFTuBpPZYf5awkUiueq8WOdWeY5wcJy7Nk1M8HNbi/KDFfMO67wmtxeBIicxBl/STWdxU4ecldKpYRRXl3UUY808YeZ3Aj7N2Ezb/bub5FHGFhjgFA0+DRioWrBtRrKwcbNuNBt8LfmyCWRzkyUPmrOPw2y9PsDTLCCbrmVPw8HeeZEv7TMJr2pho8XIEwA/xsjrCO0CKY28IK/I62rpa5lNtV7eZKMiAdTIPK3L3rW8u7HfJ7c9n6xsS5msvyVOAWdSjvglBDoLHyXDVQ4zGjce6mcaJiAW3bXJgONZ+rhAoO94dJNkbGBMXRYdRXmub2zhY6jEYRMhrl56s0PYjT1yNkqNM6nfb+PE3zO5CE/+MCwC/tRxBthwMAAA==
+              charged: true
+          display-lore:
+          - §f
+          - '§7Урон: §f7'
+          - '§7Скорость стрельбы: §f0.5'
+          - '§7Расход энергии: §f5'
+          show-description: false
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give WEAPONS WEAPON1 %player% 1
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 30/07/2023 23:41:27
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 30/07/2023 23:41:27
+          show-price: true
+          trade-price: 1000.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-12:
+          id: 53
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: CROSSBOW
+            meta:
+              ==: ItemMeta
+              meta-type: CROSSBOW
+              display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"Винтовка
+                AutoShoot"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Урон:
+                "},{"italic":false,"color":"white","text":"10"}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Скорость
+                стрельбы: "},{"italic":false,"color":"white","text":"0.3"}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Расход
+                энергии: "},{"italic":false,"color":"white","text":"3"}],"text":""}'
+              custom-model-data: 2
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              - HIDE_UNBREAKABLE
+              Unbreakable: true
+              internal: H4sIAAAAAAAA/72SzWoTURTHz9SFoSD4gQtrweEusiolMQthdjcz18zF+QgzVzQM4To4SRuwHUhGREKgFlxZNz6B4gu0aqEo6cYXuPNGnsnUxJrg0s18nPM///M79551gArcdl2fC+aG0up41OWmdPyAwSAiZItUH6jP+YE6V1NDr/brtTL0SX1X50U4f5Mf5kf67HWgTtWP/Eid5O8KbW27UYo/qmPMv0WPb3r+Xk3VKUq/qjN1VsgapFuB63OE4im5BVefMNr2vfsabC7weEibDpPcEyygpuC+p1Xg2jyP8Aw2q4n6gObT/BA7fkHQY52+zNJwN02zCtyaq83HofBd6TUF3IuIuRsPd3qJXkdm9lS4XC4iCHhjXsY806aeCGEt6l6Bjb/tXN9ijrSooACwpsHdJfoLA+61EH7dDkXQKcmDMQmzOCMGKX6Rw2+FWTp8TYxoTC4NKX+ejLIhCv81K5l0JxrcWepvBvThrPsqOItRYUsr8NvaqtrQ5cIuazeWkgFrUx6Uc928fKGi02a/rzRcbcyciyNZ7AJtcoeLDjzD+XmC45YGeDJmPMrcNOlhLOAtW0jT4eYjTGBw0B/0hiNijEkS78U7qKnXtmtbZC/ej4nRKD6fp+mLJH21Twxc0smk++cSzXa/H/2XxYdfbZ8Ka4ADAAA=
+              charged: true
+          display-lore:
+          - §f
+          - '§7Урон: §f10'
+          - '§7Скорость стрельбы: §f0.3'
+          - '§7Расход энергии: §f3'
+          show-description: true
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give WEAPONS WEAPON2 %player% 1
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 30/07/2023 23:52:58
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 30/07/2023 23:52:58
+          show-price: true
+          trade-price: 15000.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-14:
+          id: 48
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: CROSSBOW
+            meta:
+              ==: ItemMeta
+              meta-type: CROSSBOW
+              display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"Пистолет
+                Avenger"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Урон:
+                "},{"italic":false,"color":"white","text":"15"}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Скорость
+                стрельбы: "},{"italic":false,"color":"white","text":"0.7"}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Расход
+                энергии: "},{"italic":false,"color":"white","text":"10"}],"text":""}'
+              custom-model-data: 3
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              - HIDE_UNBREAKABLE
+              Unbreakable: true
+              internal: H4sIAAAAAAAA/72S32vTUBTHT9yDZTDwBz5YB4b70KcxWmQM+nabXJuL+UVyRUsoIZisTlwDaVCkFObAJ+ffoOI/4NBBcWwv/gM3/5EnzWydra++JPee873f8zn3nnWAGtyxLIcLZvmh3rOpxbXQdDwGLwJCtkhjV34pDuWFPG+rjb3WThX6LH/IizJcvC2OimN19juUp/KsOJYnxftS29zercSf5FfMv0OP72rxQZ7LU5R+k1M5nVk2Sb8GN+YM5TfkOlx/wqjr2A8U2FzwcZ92TBZyWzCPaoI7tlKDjXke6RnUG7H8KKclEpY8w2pHKn2VDAdJVoPbc6322BeOFdodAfcDoj2PskESqy1EZk+FxcNFBPFuzo8xWzOoLXy4FvTXoP63neXozAx1KigArClwb4n90oDbXURfN3zh9Spud0z8PMpJm5Rb5HC6fp5mb0g7GJMrLYY/T0Z5hsJ/d0om/YkCd5eqax59OKu9Ck1nVBih7jmusuqsb3FhVGfrS0mPuZR7VVe3rj6m6Lns93P6q42ZeXkhizmgHW5y0YMIu+cxNlsZ4L1o0Si30jjBmMe7hgg1k2uPMIHB/b39JBuR9pjE0UE0QE1rZ7u5RQ6iYYTrZrl+lqYv4/T1kLRxRCeT/p8TNJv8QfB/xh5+AQTeOch/AwAA
+              charged: true
+          display-lore:
+          - §f
+          - '§7Урон: §f15'
+          - '§7Скорость стрельбы: §f0.7'
+          - '§7Расход энергии: §f10'
+          show-description: false
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give WEAPONS WEAPON3 %player% 1
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 30/07/2023 23:42:00
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 30/07/2023 23:42:00
+          show-price: true
+          trade-price: 25000.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-16:
+          id: 54
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: CROSSBOW
+            meta:
+              ==: ItemMeta
+              meta-type: CROSSBOW
+              display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"Винтовка
+                BigDaddy"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Урон:
+                "},{"italic":false,"color":"white","text":"20"}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Скорость
+                стрельбы: "},{"italic":false,"color":"white","text":"1.5"}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Расход
+                энергии: "},{"italic":false,"color":"white","text":"25"}],"text":""}'
+              custom-model-data: 4
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              - HIDE_UNBREAKABLE
+              Unbreakable: true
+              internal: H4sIAAAAAAAA/72S3WoTQRTHz6pgKAh+4IWt4DIXuSolLQZh7ya7Y3ZwP+LuiIYlDIubxojtQrIgJQRqwSvrjU+g+AKtWihKeuMLzL6RZ7M1sSZ46c3uzDn/85/fmTkrABW47bo+F8wNpdX2qMtN6fgBg5cRIeuk+kB9zvfVmZoYenV7q1aGPqnv6qwI52/yg/xQn/721Yn6kR+q4/xdod3cqJfij+oI82/R45uev1cTdYLSr+pUnU4t66RTgeszhuIruQVXnzLa8r37Gtyd8/GQNhwmuSdYQE3BfU+rwLVZHukZrFUT9QHdJ/kBHvkFSY/0Rr9nxUmyV4FbM7H5JBS+K72GgHsRMV/Eg1430TeRmT0TLpfzCPLdmJUxz7SpJ0K4FHUuw+rfdq5vMUdaVFAAuKLB2gL8uQH3msi+YociaJfgj0ckzOKMGKTYIoffDLN0sEeMaEQu9Ch/Hg+zAQr/0SoZd8Ya3Fk43gzow+nhy9gsRoUtrcBvactqQ5cLu6xdXUgGrEV5ULZ18+JzinaL/X7QcLkxc85vZD4JtMEdLtoQY/s8wW5LA7wYMx5mbpp0MRbwpi2k6XDzESYw2N/udwdDYoxIEu/EPdRs1TZq62Qn3o1xXS/Wz9P0VZK+3iUGDul43Plzhqaz34v+z+DDL3r2LweBAwAA
+              charged: true
+          display-lore:
+          - §f
+          - '§7Урон: §f20'
+          - '§7Скорость стрельбы: §f1.5'
+          - '§7Расход энергии: §f25'
+          show-description: true
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give WEAPONS WEAPON4 %player% 1
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 30/07/2023 23:53:29
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 30/07/2023 23:53:29
+          show-price: true
+          trade-price: 30000.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-29:
+          id: 57
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: DIAMOND_SWORD
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"Смирительная
+                палка"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Урон:
+                "},{"italic":false,"color":"white","text":"7"}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Скорость
+                атаки: "},{"italic":false,"color":"white","text":"1.5"}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Скорость
+                передвижения: "},{"italic":false,"color":"white","text":"+3"}],"text":""}'
+              custom-model-data: 2
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              - HIDE_UNBREAKABLE
+              Unbreakable: true
+              internal: H4sIAAAAAAAA/41S3UojMRQ+rViKIOiCij+4JWBvVgQVEXqjcRLbYZuZcRKVUsogiLfLam9EBC14J/gGgvgCVbYy6La92Bc48xz7Al5uplNnqa1gICE533eS73w5IwApmBTCNhUX0qNKUeO7x6igeb45B52Rgon3BOlwzjZeIzwNYzEerp7JICX3bZetpGE0hiwqOCxkD/EOf6MfXOhZwwa+BNfYxHpwk8E21vEFn7GehvE4jVtGgVpKQrJcScFUHBf2HhfcUl0tt/7O36t5fwhmYoaxK5UtNJHxoi5JUa01mYDZmMBMSbeK/O0J08on0jBSkMotRWrLZ0RWD6okR8IjWSR2XlZ/HJ+SnEZ6CvP+PJxUjzXxU/WR88p5Aqb7hBgu3e7IGKSScaoKHnNtJzEoVwpTFaLcmT7Q5Q413ajAL72fpUoOh+HOdw2+lhe7kr72gd1ucKiU5h7Xd/9vFFbStpiGV7RdDj/LRJuXXcd7bUsLm7lM9mg9itxpP1phNLgMasF1RjtV0zY9ox+SlpfWPqC1saGPDfyFj+jjk941teE3YdK3VVKBf84VLSLZAgAA
+          display-lore:
+          - §f
+          - '§7Урон: §f7'
+          - '§7Скорость атаки: §f1.5'
+          - '§7Скорость передвижения: §f+3'
+          show-description: false
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give SWORD SWORD2 %player% 1
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 10/08/2023 18:06:37
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 10/08/2023 18:06:37
+          show-price: true
+          trade-price: 5000.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-31:
+          id: 50
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: DIAMOND_SWORD
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"Нео-клинок"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Урон:
+                "},{"italic":false,"color":"white","text":"10"}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Скорость
+                атаки: "},{"italic":false,"color":"white","text":"1.5"}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Скорость
+                передвижения: "},{"italic":false,"color":"white","text":"+5"}],"text":""}'
+              custom-model-data: 1
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              - HIDE_UNBREAKABLE
+              Unbreakable: true
+              internal: H4sIAAAAAAAA/3VSv0vDQBR+UQxBEFRQUQfLIV38gR2K0EXP3NkGe0nInUopJQjiKtQuUgraWXBWcBAntypWSqV18B+4/DeOXpoa0dYbjnvv+96P770bB9BhljHHEpRxHwuBzT2fYIazdHsZekeHmb8E7lJKtj4j3IDJGA9v3yKg80PHIykDJmLIxozCTPJY3smm7K7JtnyTLdmRXdk2YCqmUdvMYVtwGCmWdJiL/cw5oIzaol/78SY8t6OwEDPMfS4cpoiE5pUEgVVvmgaLMYFYHO/k6XcJy85qBoznuPAKUXd7VcQrRxWUQaGJVpGT5ZXT8jnKFKvolxD/4+msUlbEoXpQrVTTYH6gsOnh3V7ZYV0RikXOJ57jasNiObNELopdGAA96mLLiwRN/16GKLgUxnrrGJ6W5vstLQ2A/W27mHPrgKrcPx+BFNQYLNPPOx6FchGpYSU35UNwofR3MonkSWojct2rwXRDd3AZ1IOrhGwEddlQzlaPtZ7+h/Yum8psyhf5rMb6ql4d2Qquw6CVNCrBF2Y6I/C6AgAA
+          display-lore:
+          - §f
+          - '§7Урон: §f10'
+          - '§7Скорость атаки: §f1.5'
+          - '§7Скорость передвижения: §f+5'
+          show-description: false
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give SWORD SWORD1 %player% 1
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 30/07/2023 23:43:05
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 30/07/2023 23:43:05
+          show-price: true
+          trade-price: 25000.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false
+        item-33:
+          id: 58
+          type: commands
+          item:
+            ==: org.bukkit.inventory.ItemStack
+            v: 2975
+            type: DIAMOND_SWORD
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"Энерго-катана"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Урон:
+                "},{"italic":false,"color":"white","text":"15"}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Скорость
+                атаки: "},{"italic":false,"color":"white","text":"2"}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Скорость
+                передвижения: "},{"italic":false,"color":"white","text":"+7"}],"text":""}'
+              custom-model-data: 3
+              attribute-modifiers:
+                GENERIC_ATTACK_SPEED:
+                - ==: org.bukkit.attribute.AttributeModifier
+                  amount: 0.0
+                  name: mmoitemsDecoy
+                  uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+                  operation: 0
+              ItemFlags:
+              - HIDE_ATTRIBUTES
+              - HIDE_UNBREAKABLE
+              Unbreakable: true
+              internal: H4sIAAAAAAAA/31Sy0oDMRS9tViKIKigYgtasujGB6iI0I3GSewMNjPjJCqllEEQt4p2I6WgBXeC3yCuhfqkFFoX/kDmO/QjzMzUEW01i5Dcc27uuedmCCABE4xZhqCMu1gIrG25BDOcp+sLEKwEjP8mcJtSsh7CkISRCPd31yCQ4HuWQ5aTMBxBJmYU0tkDeSfb8tk7l4+yMy9bsuHVZUOFGkkYjcjU1HRsCg4DpXICJqM4s3Ypo6YIFazdv19ON7c/4pCKGNoOFxZTREILqhGBlcJ4DNIRgRgcbxToVwnDzMeSMKRz4RRDjdtVxCv7FZRD/hXNISvPK0cnZyhXqqIf7bhv96eVE0X8pytUK9diMNVTXnPwZlC8nzZCsdBd4lh2rF8uZ4bQw9xUD+hQGxtO2NbYz8GIok1hMBhN/2dpoStppgfsTt7GnBu7VL39/SlIUZlhaG7Bcigcl5CyLLsqb5UZHdnOZbKHiyth6EYZ0/HD3oVX964yXZdasumzlv4gvQa+Pssn+SCb8kWd2rLpXfsps6uoDJ81+aicxAIAAA==
+          display-lore:
+          - §f
+          - '§7Урон: §f15'
+          - '§7Скорость атаки: §f2'
+          - '§7Скорость передвижения: §f+7'
+          show-description: false
+          description: []
+          run-mode: BUY_AND_RUN
+          commands:
+            '0':
+              executor: CONSOLE
+              command: mi give SWORD SWORD3 %player% 1
+          Discount:
+            discount-enabled: false
+            discount-percentage: 0.0
+            show-discount-price: false
+            discount-price: 0.0
+            show-discount-start: false
+            discount-start: 10/08/2023 18:07:30
+            show-discount-duration: false
+            discount-duration: 0
+            show-discount-end: false
+            discount-end: 10/08/2023 18:07:30
+          show-price: true
+          trade-price: 45000.0
+          custom-input-enabled: false
+          stack-sale-enabled: false
+          show-trade-limit: false
+          trade-limit: -1
+          show-limit-time: false
+          limit-reset-seconds: -1
+          show-broadcast-message: false
+          broadcast-message: ''
+          drop-item-on-full-inventory: false
+          sell-all-when-not-enough-items: true
+          permission: ''
+          logging-enabled: true
+          custom-display-text-enabled: false
+          custom-display-text: []
+          close-inventory: false

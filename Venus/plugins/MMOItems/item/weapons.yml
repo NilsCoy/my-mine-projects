@@ -1,0 +1,134 @@
+WEAPON1:
+  base:
+    name: '&dПистолет LittleStrength'
+    lore:
+    - '&7Урон: &f7'
+    - '&7Скорость стрельбы: &f0.5'
+    - '&7Расход энергии: &f5'
+    custom-model-data: 1.0
+    ability:
+      ability1:
+        type: WEAPON
+        mode: RIGHT_CLICK
+        damage: 7.0
+        mana: 5.0
+        cooldown: 0.5
+    material: CROSSBOW
+    custom-nbt:
+    - Charged 1
+    disable-interaction: true
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    disable-death-drop: true
+    unbreakable: true
+WEAPON2:
+  base:
+    name: '&dВинтовка AutoShoot'
+    lore:
+    - '&7Урон: &f10'
+    - '&7Скорость стрельбы: &f0.3'
+    - '&7Расход энергии: &f3'
+    custom-model-data: 2.0
+    ability:
+      ability1:
+        type: WEAPON
+        mode: RIGHT_CLICK
+        damage: 10.0
+        cooldown: 0.3
+        mana: 3.0
+    material: CROSSBOW
+    custom-nbt:
+    - Charged 1
+    disable-interaction: true
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    disable-death-drop: true
+    unbreakable: true
+WEAPON3:
+  base:
+    name: '&dПистолет Avenger'
+    lore:
+    - '&7Урон: &f15'
+    - '&7Скорость стрельбы: &f0.7'
+    - '&7Расход энергии: &f10'
+    custom-model-data: 3.0
+    ability:
+      ability1:
+        type: WEAPON
+        mode: RIGHT_CLICK
+        damage: 15.0
+        cooldown: 0.7
+        mana: 10.0
+    material: CROSSBOW
+    custom-nbt:
+    - Charged 1
+    disable-interaction: true
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    disable-death-drop: true
+    unbreakable: true
+WEAPON4:
+  base:
+    name: '&dВинтовка BigDaddy'
+    lore:
+    - '&7Урон: &f20'
+    - '&7Скорость стрельбы: &f1.5'
+    - '&7Расход энергии: &f25'
+    custom-model-data: 4.0
+    ability:
+      ability1:
+        type: WEAPON
+        mode: RIGHT_CLICK
+        damage: 20.0
+        cooldown: 1.5
+        mana: 25.0
+    material: CROSSBOW
+    custom-nbt:
+    - Charged 1
+    disable-interaction: true
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    disable-death-drop: true
+    unbreakable: true
+WEAPON5:
+  base:
+    name: '&dВинтовка BigDaddy'
+    lore:
+    - '&7Урон: &f20'
+    - '&7Скорость стрельбы: &f1.5'
+    - '&7Расход энергии: &f25'
+    custom-model-data: 5.0
+    ability:
+      ability1:
+        type: WEAPON
+        mode: RIGHT_CLICK
+        damage: 20.0
+        cooldown: 1.5
+        mana: 25.0
+    material: CROSSBOW
+    custom-nbt:
+    - Charged 1
+    disable-interaction: true
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    disable-death-drop: true
+    unbreakable: true
+'123':
+  base:
+    material: CROSSBOW
+    custom-model-data: 2.0

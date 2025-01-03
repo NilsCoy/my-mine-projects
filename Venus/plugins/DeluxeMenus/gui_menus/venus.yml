@@ -1,0 +1,64 @@
+#  A DeluxeMenus advanced configuration guide
+#=========================================================
+menu_title: '&9Выберите место высадки:'
+#open_command:
+#  - profile
+open_commands:
+  - '[sound] BLOCK_NOTE_BLOCK_BIT 1 1'
+#close_commands:
+#  - '[sound] ITEM_BOOK_PAGE_TURN'
+size: 27
+items:
+  '1':
+    material: NETHER_STAR
+    slot: 10
+    priority: 1
+    update: false
+    hide_attributes: true
+    display_name: '&dСломанный корабль'
+    nbt_int: CustomModelData:1
+    lore:
+      - ''
+    click_commands:
+      - '[console] warp venus1 %player_name%'
+  '2':
+    material: NETHER_STAR
+    slot: 13
+    priority: 1
+    update: false
+    hide_attributes: true
+    display_name: '&dМесторождение кристаллов'
+    nbt_int: CustomModelData:1
+    lore:
+      - ''
+    click_commands:
+      - '[console] warp venus2 %player_name%'
+  '3':
+    material: NETHER_STAR
+    slot: 16
+    priority: 1
+    update: false
+    hide_attributes: true
+    display_name: '&dЗахваченная обсерватория'
+    nbt_int: CustomModelData:1
+    lore:
+      - ''
+    click_commands:
+      - '[console] warp venus3 %player_name%'
+  'back':
+    material: ARROW
+    slot: 22
+    priority: 1
+    update: false
+    hide_attributes: true
+    display_name: '&dВернуться назад'
+    nbt_int: CustomModelData:1
+    lore:
+      - ''
+    click_commands:
+      - '[openguimenu] travel_menu'
+  'filler_item':
+    material: BARRIER
+    slots: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 17, 18, 19, 20, 21, 23, 24, 25, 26]
+    display_name: ' '
+    nbt_int: CustomModelData:1
